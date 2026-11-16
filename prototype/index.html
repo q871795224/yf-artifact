@@ -12,11 +12,11 @@
       rel="icon"
       href="../references/artifact-classic/assets/ingame_image/10020.png"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css?v=2" />
     <script src="cards.js" defer></script>
     <script src="runtime-config.js" defer></script>
     <script src="engine-client.js" defer></script>
-    <script src="app.js" defer></script>
+    <script src="app.js?v=2" defer></script>
   </head>
   <body>
     <svg
@@ -131,11 +131,20 @@
             alt="军团指挥官"
           /><span class="team-dot enemy-dot"></span>
         </button>
-        <div class="round-info">
-          <span class="round-number" id="round-label">单路战场</span
-          ><span class="turn-label"
-            ><span id="turn-text">正在连接</span><span class="turn-spark"></span
-          ></span>
+        <div class="fort enemy-fort">
+          <svg><use href="#i-tower" /></svg
+          ><span class="fort-caption">敌塔</span
+          ><span class="fort-meter"><i style="width: 100%"></i></span
+          ><b>40<span>/40</span></b>
+        </div>
+        <div class="enemy-resources" aria-label="敌方资源">
+          <div class="resource mana" aria-label="敌方法力">
+            <svg><use href="#i-mana" /></svg
+            ><b id="enemy-mana-value">—</b>
+          </div>
+          <div class="resource gold" aria-label="敌方金币">
+            <svg><use href="#i-coin" /></svg><b id="enemy-gold-value">—</b>
+          </div>
         </div>
         <button
           class="menu-button"
@@ -145,20 +154,6 @@
         >
           <span></span><span></span><span></span>
         </button>
-        <div class="forts">
-          <div class="fort enemy-fort">
-            <svg><use href="#i-tower" /></svg
-            ><span class="fort-caption">敌方</span
-            ><span class="fort-meter"><i style="width: 100%"></i></span
-            ><b>40<span>/40</span></b>
-          </div>
-          <div class="fort ally-fort">
-            <svg><use href="#i-tower" /></svg
-            ><span class="fort-caption">我方</span
-            ><span class="fort-meter"><i style="width: 100%"></i></span
-            ><b>40<span>/40</span></b>
-          </div>
-        </div>
       </header>
 
       <section class="battlefield" aria-label="六列八排战场">
@@ -173,6 +168,18 @@
           <span class="middle-mark left" aria-hidden="true"></span
           ><span class="middle-mark right" aria-hidden="true"></span>
         </div>
+        <div class="battle-status">
+          <div class="fort ally-fort">
+            <svg><use href="#i-tower" /></svg
+            ><span class="fort-caption">我塔</span
+            ><span class="fort-meter"><i style="width: 100%"></i></span
+            ><b>40<span>/40</span></b>
+          </div>
+          <div class="round-info" role="status">
+            <span class="round-number" id="round-label"></span>
+            <span class="turn-label"><span id="turn-text">准备中</span></span>
+          </div>
+        </div>
       </section>
 
       <section
@@ -182,6 +189,15 @@
       ></section>
 
       <section class="hand-section" aria-label="手牌">
+        <div
+          class="hand"
+          id="hand"
+          role="tabpanel"
+          aria-labelledby="tab-cards"
+        ></div>
+      </section>
+
+      <footer class="resource-bar">
         <div class="hand-header" role="tablist" aria-label="手牌类型">
           <button
             id="tab-cards"
@@ -205,17 +221,7 @@
           >
             物品 <span>3</span>
           </button>
-          <span class="deck-count" id="deck-count">牌库 21</span>
         </div>
-        <div
-          class="hand"
-          id="hand"
-          role="tabpanel"
-          aria-labelledby="tab-cards"
-        ></div>
-      </section>
-
-      <footer class="resource-bar">
         <div class="resource mana" aria-label="法力">
           <svg><use href="#i-mana" /></svg
           ><b id="mana-value">1 <span>/ 1</span></b>
@@ -256,6 +262,7 @@
         <p class="sheet-note" id="match-summary">
           三名英雄，单路战场。先破塔，再摧毁基地。
         </p>
+        <p class="deck-count" id="deck-count"></p>
         <button class="scene-option" data-menu="roster">
           <span>阵容与返场<small>查看在场英雄、冷却和返场时间</small></span
           ><b>♙</b>
