@@ -321,6 +321,8 @@ function render(previous) {
           : "对局结束";
   $("#mana-value").innerHTML = `${view.mana} <span>/ ${view.maxMana}</span>`;
   $("#gold-value").textContent = view.gold;
+  $("#enemy-mana-value").innerHTML = `${view.opponent.mana}<span>/${view.maxMana}</span>`;
+  $("#enemy-gold-value").textContent = view.opponent.gold;
   view.forts.forEach((f) => {
     const el = $(f.team === 0 ? ".ally-fort" : ".enemy-fort");
     el.querySelector("b").innerHTML = `${f.hp}<span>/${f.maxHp}</span>`;
