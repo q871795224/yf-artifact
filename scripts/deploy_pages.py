@@ -59,7 +59,13 @@ def main():
         with tempfile.NamedTemporaryFile(mode='w', suffix='.json') as body:
             json.dump({'build_type': 'legacy', 'source': {'branch': 'gh-pages', 'path': '/'}}, body)
             body.flush()
-            settings = run(['gh', 'api', '--method', 'POST', f'repos/{args.repo}/pages', '--input', body.name], capture=True)
+            created = run(['gh', 'api', '--method', 'POST', f'repos/{args.repo}/pages', '--input', body.name], capture=True, check=False)
+            # A failed response can still mean GitHub accepted the request.
+            # Read the resulting state before reporting failure or retrying.
+            settings = created if not created.returncode else run(
+                ['gh', 'api', f'repos/{args.repo}/pages'], capture=True, check=False)
+            if settings.returncode:
+                raise RuntimeError(created.stderr or settings.stderr)
     published = json.loads(settings.stdout)
     print(f"GitHub Pages: {published['html_url']}", flush=True)
     print('The Pages build may take a few minutes; check gh run list for deployment status.', flush=True)
