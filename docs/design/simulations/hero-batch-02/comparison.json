@@ -1,0 +1,94 @@
+[
+  {
+    "targeting": "arrows",
+    "mode": "heroes-only",
+    "games": 1200,
+    "units": {
+      "hero": {
+        "opportunities": 50138,
+        "attacks": 0.3456061270892337,
+        "arrow_misses": 0.4247277514061191,
+        "out_of_range": 0.22966612150464719
+      },
+      "creep": {
+        "opportunities": 129577,
+        "attacks": 0.17516225873418895,
+        "arrow_misses": 0.3376756677496778,
+        "out_of_range": 0.4871620735161333
+      }
+    },
+    "hero_deaths_per_team": 1.4908333333333332,
+    "creep_deaths_per_team": 6.075,
+    "survivors_per_team": 12.559166666666666,
+    "hero_moves_per_team": 10.96625
+  },
+  {
+    "targeting": "arrows",
+    "mode": "probes",
+    "games": 1200,
+    "units": {
+      "hero": {
+        "opportunities": 48135,
+        "attacks": 0.36806897268100136,
+        "arrow_misses": 0.38857380284616183,
+        "out_of_range": 0.2433572244728368
+      },
+      "creep": {
+        "opportunities": 110330,
+        "attacks": 0.16556693555696547,
+        "arrow_misses": 0.3224055107405058,
+        "out_of_range": 0.5120275537025287
+      }
+    },
+    "hero_deaths_per_team": 1.7583333333333333,
+    "creep_deaths_per_team": 7.6970833333333335,
+    "survivors_per_team": 10.899583333333334,
+    "hero_moves_per_team": 13.001666666666667
+  },
+  {
+    "targeting": "aggro",
+    "mode": "heroes-only",
+    "games": 1200,
+    "units": {
+      "hero": {
+        "opportunities": 47801,
+        "attacks": 0.7142109997698793,
+        "arrow_misses": 0.0,
+        "out_of_range": 0.2857890002301207
+      },
+      "creep": {
+        "opportunities": 91714,
+        "attacks": 0.4979283424558955,
+        "arrow_misses": 0.0,
+        "out_of_range": 0.5020716575441045
+      }
+    },
+    "hero_deaths_per_team": 2.5241666666666664,
+    "creep_deaths_per_team": 11.670416666666666,
+    "survivors_per_team": 6.749583333333334,
+    "hero_moves_per_team": 15.745416666666667
+  },
+  {
+    "targeting": "aggro",
+    "mode": "probes",
+    "games": 1200,
+    "units": {
+      "hero": {
+        "opportunities": 45113,
+        "attacks": 0.7197925210028151,
+        "arrow_misses": 0.0,
+        "out_of_range": 0.28020747899718484
+      },
+      "creep": {
+        "opportunities": 82284,
+        "attacks": 0.4306669583394098,
+        "arrow_misses": 0.0,
+        "out_of_range": 0.5693330416605902
+      }
+    },
+    "hero_deaths_per_team": 2.774583333333333,
+    "creep_deaths_per_team": 11.764166666666666,
+    "survivors_per_team": 6.593333333333334,
+    "hero_moves_per_team": 15.765416666666667
+  }
+]

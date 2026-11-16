@@ -1,0 +1,899 @@
+{
+  "source": "Artifact Classic API snapshot 2018-12-22; all original values kept here; gameplay adaptations documented separately; expanded experiment pool 02, additions retain original source values",
+  "items": [
+    {
+      "card_id": 3003,
+      "card_name": {
+        "english": "Healing Salve",
+        "schinese": "治疗药膏"
+      },
+      "card_type": "Item",
+      "sub_type": "Consumable",
+      "colors": [],
+      "gold_cost": 3,
+      "card_text": {
+        "english": "Heal a unit 6.",
+        "schinese": "对一个单位进行6治疗。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-00.json",
+        "set_id": 0
+      },
+      "category": "consumable",
+      "tier": "basic"
+    },
+    {
+      "card_id": 3006,
+      "card_name": {
+        "english": "Town Portal Scroll",
+        "schinese": "回城卷轴"
+      },
+      "card_type": "Item",
+      "sub_type": "Consumable",
+      "colors": [],
+      "gold_cost": 3,
+      "card_text": {
+        "english": "Return an allied hero to the Fountain.",
+        "schinese": "将一名友方英雄召回泉水。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-00.json",
+        "set_id": 0
+      },
+      "category": "consumable",
+      "tier": "basic"
+    },
+    {
+      "card_id": 3004,
+      "card_name": {
+        "english": "Fountain Flask",
+        "schinese": "泉水烧瓶"
+      },
+      "card_type": "Item",
+      "sub_type": "Consumable",
+      "colors": [],
+      "gold_cost": 4,
+      "card_text": {
+        "english": "Fully heal a unit.",
+        "schinese": "完整治疗一个单位。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-00.json",
+        "set_id": 0
+      },
+      "category": "consumable",
+      "tier": "medium"
+    },
+    {
+      "card_id": 3005,
+      "card_name": {
+        "english": "Potion of Knowledge",
+        "schinese": "知识魔药"
+      },
+      "card_type": "Item",
+      "sub_type": "Consumable",
+      "colors": [],
+      "gold_cost": 5,
+      "card_text": {
+        "english": "Draw a card.",
+        "schinese": "抽一张牌。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-00.json",
+        "set_id": 0
+      },
+      "category": "consumable",
+      "tier": "medium"
+    },
+    {
+      "card_id": 10216,
+      "card_name": {
+        "english": "Golden Ticket",
+        "schinese": "金奖券"
+      },
+      "card_type": "Item",
+      "sub_type": "Consumable",
+      "colors": [],
+      "gold_cost": 9,
+      "card_text": {
+        "english": "Get a random item from the Secret Shop.",
+        "schinese": "从神秘商店获得一件随机物品。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "category": "consumable",
+      "tier": "advanced"
+    },
+    {
+      "card_id": 10211,
+      "card_name": {
+        "english": "Obliterating Orb",
+        "schinese": "抹灭法球"
+      },
+      "card_type": "Item",
+      "sub_type": "Consumable",
+      "colors": [],
+      "gold_cost": 10,
+      "card_text": {
+        "english": "Condemn an improvement.",
+        "schinese": "惩处一个强化。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "category": "consumable",
+      "tier": "advanced"
+    },
+    {
+      "card_id": 3002,
+      "card_name": {
+        "english": "Short Sword",
+        "schinese": "短剑"
+      },
+      "card_type": "Item",
+      "sub_type": "Weapon",
+      "colors": [],
+      "gold_cost": 3,
+      "card_text": {
+        "english": "Equipped hero has +2 Attack.",
+        "schinese": "装备此物品的英雄+2攻击。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-00.json",
+        "set_id": 0
+      },
+      "category": "equipment",
+      "tier": "basic"
+    },
+    {
+      "card_id": 3001,
+      "card_name": {
+        "english": "Leather Armor",
+        "schinese": "皮革护甲"
+      },
+      "card_type": "Item",
+      "sub_type": "Armor",
+      "colors": [],
+      "gold_cost": 3,
+      "card_text": {
+        "english": "Equipped hero has +1 Armor.",
+        "schinese": "装备此物品的英雄+1护甲。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-00.json",
+        "set_id": 0
+      },
+      "category": "equipment",
+      "tier": "basic"
+    },
+    {
+      "card_id": 10215,
+      "card_name": {
+        "english": "Broadsword",
+        "schinese": "阔剑"
+      },
+      "card_type": "Item",
+      "sub_type": "Weapon",
+      "colors": [],
+      "gold_cost": 7,
+      "card_text": {
+        "english": "Equipped hero has +4 Attack.",
+        "schinese": "装备此物品的英雄+4攻击。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "category": "equipment",
+      "tier": "medium"
+    },
+    {
+      "card_id": 10213,
+      "card_name": {
+        "english": "Fur-lined Mantle",
+        "schinese": "皮袄斗篷"
+      },
+      "card_type": "Item",
+      "sub_type": "Accessory",
+      "colors": [],
+      "gold_cost": 7,
+      "card_text": {
+        "english": "Equipped hero has +8 Health.",
+        "schinese": "装备此物品的英雄+8生命 。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "category": "equipment",
+      "tier": "medium"
+    },
+    {
+      "card_id": 10238,
+      "card_name": {
+        "english": "Claymore",
+        "schinese": "大剑"
+      },
+      "card_type": "Item",
+      "sub_type": "Weapon",
+      "colors": [],
+      "gold_cost": 15,
+      "card_text": {
+        "english": "Equipped hero has +8 Attack.",
+        "schinese": "装备此物品的英雄+8攻击。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "category": "equipment",
+      "tier": "advanced"
+    },
+    {
+      "card_id": 10236,
+      "card_name": {
+        "english": "Hero's Cape",
+        "schinese": "英雄披风"
+      },
+      "card_type": "Item",
+      "sub_type": "Accessory",
+      "colors": [],
+      "gold_cost": 15,
+      "card_text": {
+        "english": "Equipped hero has +16 Health.",
+        "schinese": "装备此物品的英雄+16生命 。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "category": "equipment",
+      "tier": "advanced"
+    },
+    {
+      "card_id": 3000,
+      "card_name": {
+        "english": "Traveler's Cloak",
+        "schinese": "旅者斗篷"
+      },
+      "card_type": "Item",
+      "sub_type": "Accessory",
+      "colors": [],
+      "gold_cost": 3,
+      "card_text": {
+        "english": "Equipped hero has +4 Health.",
+        "schinese": "装备此物品的英雄+4生命 。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-00.json",
+        "set_id": 0
+      },
+      "category": "equipment",
+      "role": "初级生命装备",
+      "tier": "basic"
+    },
+    {
+      "card_id": 10214,
+      "card_name": {
+        "english": "Chainmail",
+        "schinese": "锁子甲"
+      },
+      "card_type": "Item",
+      "sub_type": "Armor",
+      "colors": [],
+      "gold_cost": 7,
+      "card_text": {
+        "english": "Equipped hero has +2 Armor.",
+        "schinese": "装备此物品的英雄+2护甲。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "category": "equipment",
+      "role": "中级护甲装备",
+      "tier": "medium"
+    },
+    {
+      "card_id": 10212,
+      "card_name": {
+        "english": "Blade of the Vigil",
+        "schinese": "守夜大剑"
+      },
+      "card_type": "Item",
+      "sub_type": "Weapon",
+      "colors": [],
+      "gold_cost": 7,
+      "card_text": {
+        "english": "Equipped hero has +2 Attack and +2 Cleave.",
+        "schinese": "装备此物品的英雄+2攻击和+2顺势。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "category": "equipment",
+      "role": "清兵顺势",
+      "tier": "medium"
+    },
+    {
+      "card_id": 10223,
+      "card_name": {
+        "english": "Red Mist Maul",
+        "schinese": "红雾巨锤"
+      },
+      "card_type": "Item",
+      "sub_type": "Weapon",
+      "colors": [],
+      "gold_cost": 10,
+      "card_text": {
+        "english": "Equipped hero has +2 Attack and +5 Siege.",
+        "schinese": "装备此物品的英雄+2攻击和+5攻城。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "category": "equipment",
+      "role": "攻城",
+      "tier": "medium"
+    },
+    {
+      "card_id": 10252,
+      "card_name": {
+        "english": "Stonehall Pike",
+        "schinese": "石堂城长枪"
+      },
+      "card_type": "Item",
+      "sub_type": "Weapon",
+      "colors": [],
+      "gold_cost": 6,
+      "card_text": {
+        "english": "Equipped hero has +2 Attack. Modify Stonehall Pike with \"Equipped hero has +1 Attack\" after the combat phase.",
+        "schinese": "装备此物品的英雄+2攻击。战斗阶段后，修改石堂城长枪，使其获得“装备此物品的英雄+1攻击”。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "category": "equipment",
+      "role": "持续攻击成长",
+      "tier": "medium"
+    },
+    {
+      "card_id": 10256,
+      "card_name": {
+        "english": "Jasper Daggers",
+        "schinese": "碧玉匕首"
+      },
+      "card_type": "Item",
+      "sub_type": "Weapon",
+      "colors": [],
+      "gold_cost": 5,
+      "card_text": {
+        "english": "Equipped hero has +2 Attack and Pierce.\n\nEquip Effect:  Purge your opponent's effects from equipped hero.",
+        "schinese": "装备此物品的英雄+2攻击并获得透甲。\n\n装备效果： 净化装备此物品的英雄上的所有对手效果。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "category": "equipment",
+      "role": "透甲与驱散",
+      "tier": "basic"
+    }
+  ],
+  "ordinary_cards": [
+    {
+      "card_id": 10313,
+      "card_name": {
+        "english": "Poised to Strike",
+        "schinese": "如箭在弦"
+      },
+      "card_type": "Spell",
+      "colors": [
+        "red"
+      ],
+      "mana_cost": 1,
+      "card_text": {
+        "english": "Give a red hero +4 Attack this round.",
+        "schinese": "在本回合使一名红色英雄+4攻击。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      }
+    },
+    {
+      "card_id": 10297,
+      "card_name": {
+        "english": "Defensive Stance",
+        "schinese": "防御架势"
+      },
+      "card_type": "Spell",
+      "colors": [
+        "red"
+      ],
+      "mana_cost": 2,
+      "card_text": {
+        "english": "Give a hero +3 Armor this round.",
+        "schinese": "在本回合使一名英雄+3护甲。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      }
+    },
+    {
+      "card_id": 10104,
+      "card_name": {
+        "english": "Bronze Legionnaire",
+        "schinese": "古铜军团士兵"
+      },
+      "card_type": "Creep",
+      "colors": [
+        "red"
+      ],
+      "mana_cost": 2,
+      "attack": 4,
+      "armor": 2,
+      "hit_points": 2,
+      "card_text": {
+        "english": "",
+        "schinese": ""
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      }
+    },
+    {
+      "card_id": 10352,
+      "card_name": {
+        "english": "Lightning Strike",
+        "schinese": "闪电一击"
+      },
+      "card_type": "Spell",
+      "colors": [
+        "blue"
+      ],
+      "mana_cost": 2,
+      "card_text": {
+        "english": "Deal 6 damage to the enemy tower.",
+        "schinese": "对敌方塔造成6伤害。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      }
+    },
+    {
+      "card_id": 10402,
+      "card_name": {
+        "english": "Tower Barrage",
+        "schinese": "塔防炮火"
+      },
+      "card_type": "Spell",
+      "colors": [
+        "blue"
+      ],
+      "mana_cost": 3,
+      "card_text": {
+        "english": "Deal 2 damage to each enemy.",
+        "schinese": "对每个敌人造成2伤害。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      }
+    },
+    {
+      "card_id": 10355,
+      "card_name": {
+        "english": "Dimensional Portal",
+        "schinese": "次元传送门"
+      },
+      "card_type": "Spell",
+      "colors": [
+        "blue"
+      ],
+      "mana_cost": 4,
+      "card_text": {
+        "english": "Summon three Melee Creeps.",
+        "schinese": "召唤三名近战小兵。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      }
+    },
+    {
+      "card_id": 10111,
+      "card_name": {
+        "english": "Satyr Duelist",
+        "schinese": "萨特决斗家"
+      },
+      "card_type": "Creep",
+      "colors": [
+        "green"
+      ],
+      "mana_cost": 4,
+      "attack": 3,
+      "hit_points": 5,
+      "card_text": {
+        "english": "Modify Satyr Duelist with +2 Attack after the combat phase.",
+        "schinese": "战斗阶段后，修改萨特决斗家，使其+2攻击。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      }
+    },
+    {
+      "card_id": 10368,
+      "card_name": {
+        "english": "Avernus' Blessing",
+        "schinese": "魔霭福泽"
+      },
+      "card_type": "Spell",
+      "colors": [
+        "green"
+      ],
+      "mana_cost": 3,
+      "card_text": {
+        "english": "Modify a unit with +2 Attack.",
+        "schinese": "修改一个单位，使其+2攻击。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      }
+    },
+    {
+      "card_id": 10169,
+      "card_name": {
+        "english": "Mist of Avernus",
+        "schinese": "魔霭迷雾"
+      },
+      "card_type": "Improvement",
+      "colors": [
+        "green"
+      ],
+      "mana_cost": 3,
+      "card_text": {
+        "english": "Modify allies with +1 Attack before the action phase.",
+        "schinese": "行动阶段前，修改友方单位，使其+1攻击。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      }
+    },
+    {
+      "card_id": 10270,
+      "card_name": {
+        "english": "Grazing Shot",
+        "schinese": "擦肩之矢"
+      },
+      "card_type": "Spell",
+      "colors": [
+        "black"
+      ],
+      "mana_cost": 1,
+      "card_text": {
+        "english": "Deal 2 damage to a unit in any lane.",
+        "schinese": "对任意兵线上的一个单位造成2伤害。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      }
+    },
+    {
+      "card_id": 10322,
+      "card_name": {
+        "english": "Payday",
+        "schinese": "发薪日"
+      },
+      "card_type": "Spell",
+      "colors": [
+        "black"
+      ],
+      "mana_cost": 3,
+      "card_text": {
+        "english": "Double your gold.",
+        "schinese": "你的金钱加倍。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      }
+    },
+    {
+      "card_id": 10128,
+      "card_name": {
+        "english": "Untested Grunt",
+        "schinese": "未经考验的士兵"
+      },
+      "card_type": "Creep",
+      "colors": [
+        "black"
+      ],
+      "mana_cost": 2,
+      "attack": 4,
+      "hit_points": 2,
+      "card_text": {
+        "english": "",
+        "schinese": ""
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      }
+    },
+    {
+      "card_id": 10344,
+      "card_name": {
+        "english": "Clear the Deck",
+        "schinese": "一扫而空"
+      },
+      "card_type": "Spell",
+      "colors": [
+        "red"
+      ],
+      "mana_cost": 4,
+      "card_text": {
+        "english": "Give allied heroes +4 Cleave this round.",
+        "schinese": "在本回合使所有友方英雄+4顺势。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "role": "红色清兵"
+    },
+    {
+      "card_id": 10127,
+      "card_name": {
+        "english": "Ogre Conscript",
+        "schinese": "食人魔士兵"
+      },
+      "card_type": "Creep",
+      "colors": [
+        "red"
+      ],
+      "mana_cost": 6,
+      "attack": 7,
+      "armor": 2,
+      "hit_points": 7,
+      "card_text": {
+        "english": "",
+        "schinese": ""
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "role": "红色中后期单位"
+    },
+    {
+      "card_id": 10425,
+      "card_name": {
+        "english": "Time of Triumph",
+        "schinese": "胜利时刻"
+      },
+      "card_type": "Spell",
+      "colors": [
+        "red"
+      ],
+      "mana_cost": 8,
+      "card_text": {
+        "english": "Modify allied heroes with +4 Attack, +4 Armor, +4 Health, +4 Cleave, +4 Retaliate, and +4 Siege.",
+        "schinese": "修改友方英雄，使其+4攻击、+4护甲、+4生命、+4顺势、+4反伤和+4攻城。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "role": "红色终结强化"
+    },
+    {
+      "card_id": 10307,
+      "card_name": {
+        "english": "Foresight",
+        "schinese": "先见之明"
+      },
+      "card_type": "Spell",
+      "colors": [
+        "blue"
+      ],
+      "mana_cost": 4,
+      "card_text": {
+        "english": "Draw 2 cards.",
+        "schinese": "抽两张牌。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "role": "蓝色补牌"
+    },
+    {
+      "card_id": 10412,
+      "card_name": {
+        "english": "Thunderstorm",
+        "schinese": "雷霆风暴"
+      },
+      "card_type": "Spell",
+      "colors": [
+        "blue"
+      ],
+      "mana_cost": 6,
+      "card_text": {
+        "english": "Deal 4 damage to each enemy.",
+        "schinese": "对每个敌人造成4伤害。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "role": "蓝色清场"
+    },
+    {
+      "card_id": 10353,
+      "card_name": {
+        "english": "Bolt of Damocles",
+        "schinese": "达摩克斯霹雳"
+      },
+      "card_type": "Spell",
+      "colors": [
+        "blue"
+      ],
+      "mana_cost": 10,
+      "card_text": {
+        "english": "Deal 20 damage to the enemy tower.",
+        "schinese": "对敌方塔造成20伤害。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "role": "蓝色终结直伤"
+    },
+    {
+      "card_id": 10311,
+      "card_name": {
+        "english": "Arm the Rebellion",
+        "schinese": "武装叛军"
+      },
+      "card_type": "Spell",
+      "colors": [
+        "green"
+      ],
+      "mana_cost": 4,
+      "card_text": {
+        "english": "Modify allied creeps with +2 Attack and +1 Armor.",
+        "schinese": "修改友方小兵，使其+2攻击和+1护甲。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "role": "绿色铺场强化"
+    },
+    {
+      "card_id": 10102,
+      "card_name": {
+        "english": "Thunderhide Pack",
+        "schinese": "雷肤兽群"
+      },
+      "card_type": "Creep",
+      "colors": [
+        "green"
+      ],
+      "mana_cost": 8,
+      "attack": 14,
+      "hit_points": 14,
+      "card_text": {
+        "english": "Siege 6.",
+        "schinese": "攻城6。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "role": "绿色攻城单位"
+    },
+    {
+      "card_id": 10108,
+      "card_name": {
+        "english": "Thunderhide Alpha",
+        "schinese": "雷肤兽领袖"
+      },
+      "card_type": "Creep",
+      "colors": [
+        "green"
+      ],
+      "mana_cost": 9,
+      "attack": 25,
+      "hit_points": 25,
+      "card_text": {
+        "english": "",
+        "schinese": ""
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "role": "绿色后期单位"
+    },
+    {
+      "card_id": 10410,
+      "card_name": {
+        "english": "Slay",
+        "schinese": "杀戮"
+      },
+      "card_type": "Spell",
+      "colors": [
+        "black"
+      ],
+      "mana_cost": 3,
+      "card_text": {
+        "english": "Condemn a creep.",
+        "schinese": "惩处一名小兵。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "role": "黑色单位移除"
+    },
+    {
+      "card_id": 10354,
+      "card_name": {
+        "english": "Pick Off",
+        "schinese": "逐一击破"
+      },
+      "card_type": "Spell",
+      "colors": [
+        "black"
+      ],
+      "mana_cost": 4,
+      "card_text": {
+        "english": "Deal 4 damage to a unit in any lane.",
+        "schinese": "对任意兵线上的一个单位造成4伤害。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "role": "黑色定点爆发"
+    },
+    {
+      "card_id": 10085,
+      "card_name": {
+        "english": "Assassin's Shadow",
+        "schinese": "刺客暗影"
+      },
+      "card_type": "Creep",
+      "colors": [
+        "black"
+      ],
+      "mana_cost": 7,
+      "attack": 15,
+      "hit_points": 5,
+      "card_text": {
+        "english": "Siege 5. Assassin's Shadow has -2 Attack for each ally.",
+        "schinese": "攻城5。每有一个友方单位，刺客暗影-2攻击。"
+      },
+      "source": {
+        "path": "raw/api-2018/set-01.json",
+        "set_id": 1
+      },
+      "role": "黑色攻城单位"
+    }
+  ]
+}

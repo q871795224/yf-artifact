@@ -1,0 +1,162 @@
+[
+  {
+    "pool": "first",
+    "policy": "greedy",
+    "games": 108,
+    "finished": 44,
+    "timeouts": 64,
+    "mean_finished_rounds": 16.568181818181817,
+    "gold_remaining_per_team": 44.84722222222222,
+    "gold_spent_per_team": 50.09722222222222,
+    "cards_played_per_team": 17.060185185185187,
+    "equipment_equipped_per_team": 4.49537037037037,
+    "building_damage_per_team": 44.004629629629626,
+    "siege_damage_per_team": 0.0,
+    "round_snapshots": {
+      "6": {
+        "gold": 14.13888888888889,
+        "spent": 14.62037037037037,
+        "deck": 2.5046296296296298,
+        "hand": 6.199074074074074,
+        "equipment": 1.3657407407407407,
+        "building_damage": 5.212962962962963
+      },
+      "9": {
+        "gold": 22.564814814814813,
+        "spent": 22.078703703703702,
+        "deck": 0.0,
+        "hand": 2.7685185185185186,
+        "equipment": 2.009259259259259,
+        "building_damage": 11.930555555555555
+      },
+      "12": {
+        "gold": 26.633333333333333,
+        "spent": 31.82857142857143,
+        "deck": 0.0,
+        "hand": 0.9571428571428572,
+        "equipment": 2.761904761904762,
+        "building_damage": 19.761904761904763
+      }
+    }
+  },
+  {
+    "pool": "first",
+    "policy": "push",
+    "games": 108,
+    "finished": 46,
+    "timeouts": 62,
+    "mean_finished_rounds": 17.456521739130434,
+    "gold_remaining_per_team": 48.717592592592595,
+    "gold_spent_per_team": 50.486111111111114,
+    "cards_played_per_team": 17.050925925925927,
+    "equipment_equipped_per_team": 4.550925925925926,
+    "building_damage_per_team": 49.467592592592595,
+    "siege_damage_per_team": 0.0,
+    "round_snapshots": {
+      "6": {
+        "gold": 13.898148148148149,
+        "spent": 14.773148148148149,
+        "deck": 2.509259259259259,
+        "hand": 6.268518518518518,
+        "equipment": 1.375,
+        "building_damage": 7.657407407407407
+      },
+      "9": {
+        "gold": 23.166666666666668,
+        "spent": 22.083333333333332,
+        "deck": 0.0,
+        "hand": 2.814814814814815,
+        "equipment": 2.0,
+        "building_damage": 15.217592592592593
+      },
+      "12": {
+        "gold": 27.7311320754717,
+        "spent": 31.52358490566038,
+        "deck": 0.0,
+        "hand": 1.0,
+        "equipment": 2.740566037735849,
+        "building_damage": 22.212264150943398
+      }
+    }
+  },
+  {
+    "pool": "expanded",
+    "policy": "greedy",
+    "games": 108,
+    "finished": 89,
+    "timeouts": 19,
+    "mean_finished_rounds": 16.49438202247191,
+    "gold_remaining_per_team": 54.717592592592595,
+    "gold_spent_per_team": 35.71296296296296,
+    "cards_played_per_team": 27.12962962962963,
+    "equipment_equipped_per_team": 4.606481481481482,
+    "building_damage_per_team": 75.18518518518519,
+    "siege_damage_per_team": 13.523148148148149,
+    "round_snapshots": {
+      "6": {
+        "gold": 13.791666666666666,
+        "spent": 12.532407407407407,
+        "deck": 20.88888888888889,
+        "hand": 8.63425925925926,
+        "equipment": 1.9305555555555556,
+        "building_damage": 3.6944444444444446
+      },
+      "9": {
+        "gold": 23.63425925925926,
+        "spent": 19.59722222222222,
+        "deck": 14.648148148148149,
+        "hand": 9.62962962962963,
+        "equipment": 2.8703703703703702,
+        "building_damage": 8.12037037037037
+      },
+      "12": {
+        "gold": 34.05607476635514,
+        "spent": 25.313084112149532,
+        "deck": 8.336448598130842,
+        "hand": 9.72429906542056,
+        "equipment": 3.7289719626168223,
+        "building_damage": 32.350467289719624
+      }
+    }
+  },
+  {
+    "pool": "expanded",
+    "policy": "push",
+    "games": 108,
+    "finished": 89,
+    "timeouts": 19,
+    "mean_finished_rounds": 16.325842696629213,
+    "gold_remaining_per_team": 52.77777777777778,
+    "gold_spent_per_team": 35.81481481481482,
+    "cards_played_per_team": 25.46759259259259,
+    "equipment_equipped_per_team": 4.643518518518518,
+    "building_damage_per_team": 73.54629629629629,
+    "siege_damage_per_team": 14.0,
+    "round_snapshots": {
+      "6": {
+        "gold": 14.26388888888889,
+        "spent": 12.49074074074074,
+        "deck": 20.925925925925927,
+        "hand": 8.699074074074074,
+        "equipment": 1.9351851851851851,
+        "building_damage": 5.537037037037037
+      },
+      "9": {
+        "gold": 22.949074074074073,
+        "spent": 19.421296296296298,
+        "deck": 14.851851851851851,
+        "hand": 10.157407407407407,
+        "equipment": 2.888888888888889,
+        "building_damage": 12.185185185185185
+      },
+      "12": {
+        "gold": 33.96666666666667,
+        "spent": 25.133333333333333,
+        "deck": 8.538095238095238,
+        "hand": 10.823809523809524,
+        "equipment": 3.7333333333333334,
+        "building_damage": 31.804761904761904
+      }
+    }
+  }
+]

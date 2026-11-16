@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "downloaded_at": "2026-11-11T13:39:15.904757+00:00",
+  "scope": "Artifact Classic; API numeric snapshot 2018-12-22; separate client localization snapshot 2021-04-21 (build 6500791). Not Foundry.",
+  "sources": [
+    {
+      "repository": "https://github.com/nminchow/Artifactoid",
+      "commit": "e4d7fd3254bf07ea046e327178477a5c4ea49489",
+      "upstream_date": "2018-12-22",
+      "url": "https://raw.githubusercontent.com/nminchow/Artifactoid/e4d7fd3254bf07ea046e327178477a5c4ea49489/Artifact/RawSets/set_0.json",
+      "path": "raw/api-2018/set-00.json",
+      "kind": "valve-api-snapshot",
+      "bytes": 147595,
+      "sha256": "792398c87b66506e4035d1f666c24085180c64d0d65ec79bb29eafc1092b473e"
+    },
+    {
+      "repository": "https://github.com/nminchow/Artifactoid",
+      "commit": "e4d7fd3254bf07ea046e327178477a5c4ea49489",
+      "upstream_date": "2018-12-22",
+      "url": "https://raw.githubusercontent.com/nminchow/Artifactoid/e4d7fd3254bf07ea046e327178477a5c4ea49489/Artifact/RawSets/set_1.json",
+      "path": "raw/api-2018/set-01.json",
+      "kind": "valve-api-snapshot",
+      "bytes": 2621338,
+      "sha256": "8b6c02c751ed4687204f84e13a5cacf728096b5b81229037a020eaeb99b64159"
+    },
+    {
+      "repository": "https://github.com/nminchow/Artifactoid",
+      "commit": "e4d7fd3254bf07ea046e327178477a5c4ea49489",
+      "upstream_date": "2018-12-22",
+      "url": "https://raw.githubusercontent.com/nminchow/Artifactoid/e4d7fd3254bf07ea046e327178477a5c4ea49489/LICENSE.md",
+      "path": "raw/api-2018/LICENSE.md",
+      "kind": "mirror-license",
+      "bytes": 1054,
+      "sha256": "54bce5638b0135d1b7ae790a48cadfb1167f0cffad52c65d89f22ad17abb4021"
+    },
+    {
+      "repository": "https://github.com/SteamTracking/GameTracking-Artifact",
+      "commit": "e2e4f8371324e66bc815b8199c0c2743a4331b10",
+      "upstream_date": "2021-04-21",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Artifact/e2e4f8371324e66bc815b8199c0c2743a4331b10/game/dcg/resource/card_set_00_english.txt",
+      "path": "raw/client-2021/card_set_00_english.txt",
+      "kind": "client-card-localization",
+      "bytes": 8356,
+      "sha256": "6c4b7d90df3a5115fad75ce86840af8a8925b1d6950cbc782570be6ea3f5787f"
+    },
+    {
+      "repository": "https://github.com/SteamTracking/GameTracking-Artifact",
+      "commit": "e2e4f8371324e66bc815b8199c0c2743a4331b10",
+      "upstream_date": "2021-04-21",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Artifact/e2e4f8371324e66bc815b8199c0c2743a4331b10/game/dcg/panorama/localization/dcg_lore_set_00_english.txt",
+      "path": "raw/client-2021/dcg_lore_set_00_english.txt",
+      "kind": "client-lore",
+      "bytes": 3028,
+      "sha256": "e3222a495b2a43a576ec37d8bf6f5f7f7d739bdd00ee699bcbcbb2eb3a44ae71"
+    },
+    {
+      "repository": "https://github.com/SteamTracking/GameTracking-Artifact",
+      "commit": "e2e4f8371324e66bc815b8199c0c2743a4331b10",
+      "upstream_date": "2021-04-21",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Artifact/e2e4f8371324e66bc815b8199c0c2743a4331b10/game/dcg/resource/card_set_00_schinese.txt",
+      "path": "raw/client-2021/card_set_00_schinese.txt",
+      "kind": "client-card-localization",
+      "bytes": 6044,
+      "sha256": "29893c258398f60a13b20296714be837c939f8b7be637233025fccf19e1ca56d"
+    },
+    {
+      "repository": "https://github.com/SteamTracking/GameTracking-Artifact",
+      "commit": "e2e4f8371324e66bc815b8199c0c2743a4331b10",
+      "upstream_date": "2021-04-21",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Artifact/e2e4f8371324e66bc815b8199c0c2743a4331b10/game/dcg/panorama/localization/dcg_lore_set_00_schinese.txt",
+      "path": "raw/client-2021/dcg_lore_set_00_schinese.txt",
+      "kind": "client-lore",
+      "bytes": 3024,
+      "sha256": "dcb6d2f051f94a09692b769a38b5651810f9f8d8cea4d81fdeafb5f354889eb5"
+    },
+    {
+      "repository": "https://github.com/SteamTracking/GameTracking-Artifact",
+      "commit": "e2e4f8371324e66bc815b8199c0c2743a4331b10",
+      "upstream_date": "2021-04-21",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Artifact/e2e4f8371324e66bc815b8199c0c2743a4331b10/game/dcg/resource/card_set_01_english.txt",
+      "path": "raw/client-2021/card_set_01_english.txt",
+      "kind": "client-card-localization",
+      "bytes": 74809,
+      "sha256": "07ed53f831ca4ebe205074106367521d2c1026ce4561522797d6e80f70311bf1"
+    },
+    {
+      "repository": "https://github.com/SteamTracking/GameTracking-Artifact",
+      "commit": "e2e4f8371324e66bc815b8199c0c2743a4331b10",
+      "upstream_date": "2021-04-21",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Artifact/e2e4f8371324e66bc815b8199c0c2743a4331b10/game/dcg/panorama/localization/dcg_lore_set_01_english.txt",
+      "path": "raw/client-2021/dcg_lore_set_01_english.txt",
+      "kind": "client-lore",
+      "bytes": 76771,
+      "sha256": "7865f28f5034fafd680a93e51e1326de45da9a1b12967c1976cf988ec80f1690"
+    },
+    {
+      "repository": "https://github.com/SteamTracking/GameTracking-Artifact",
+      "commit": "e2e4f8371324e66bc815b8199c0c2743a4331b10",
+      "upstream_date": "2021-04-21",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Artifact/e2e4f8371324e66bc815b8199c0c2743a4331b10/game/dcg/resource/card_set_01_schinese.txt",
+      "path": "raw/client-2021/card_set_01_schinese.txt",
+      "kind": "client-card-localization",
+      "bytes": 75573,
+      "sha256": "aa79707ef4e720ec14c4b3c05227a30479417ec897465477928349cdf8497bbc"
+    },
+    {
+      "repository": "https://github.com/SteamTracking/GameTracking-Artifact",
+      "commit": "e2e4f8371324e66bc815b8199c0c2743a4331b10",
+      "upstream_date": "2021-04-21",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Artifact/e2e4f8371324e66bc815b8199c0c2743a4331b10/game/dcg/panorama/localization/dcg_lore_set_01_schinese.txt",
+      "path": "raw/client-2021/dcg_lore_set_01_schinese.txt",
+      "kind": "client-lore",
+      "bytes": 73541,
+      "sha256": "b019786f1c6241d7cf1e4d12da2cdb8ac969801409286f580691f020614d6fd9"
+    },
+    {
+      "repository": "https://github.com/SteamTracking/GameTracking-Artifact",
+      "commit": "e2e4f8371324e66bc815b8199c0c2743a4331b10",
+      "upstream_date": "2021-04-21",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Artifact/e2e4f8371324e66bc815b8199c0c2743a4331b10/game/dcg/panorama/localization/dcg_glossary_english.txt",
+      "path": "raw/client-2021/dcg_glossary_english.txt",
+      "kind": "client-glossary",
+      "bytes": 16815,
+      "sha256": "da51cda4ad255b1bb7beeb198dc2c4a522157a302568d260ddd1bbfb3c66de73"
+    },
+    {
+      "repository": "https://github.com/SteamTracking/GameTracking-Artifact",
+      "commit": "e2e4f8371324e66bc815b8199c0c2743a4331b10",
+      "upstream_date": "2021-04-21",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Artifact/e2e4f8371324e66bc815b8199c0c2743a4331b10/game/dcg/panorama/localization/dcg_glossary_schinese.txt",
+      "path": "raw/client-2021/dcg_glossary_schinese.txt",
+      "kind": "client-glossary",
+      "bytes": 15756,
+      "sha256": "cd307f0a64948e5d6fc23743d42b52a84e90e462e5b65d0b42de5170eb68dd6e"
+    },
+    {
+      "repository": "https://github.com/SteamTracking/GameTracking-Artifact",
+      "commit": "e2e4f8371324e66bc815b8199c0c2743a4331b10",
+      "upstream_date": "2021-04-21",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Artifact/e2e4f8371324e66bc815b8199c0c2743a4331b10/game/dcg/pak01_dir/scripts/card_remap.txt",
+      "path": "raw/client-2021/card_remap.txt",
+      "kind": "client-metadata",
+      "bytes": 132,
+      "sha256": "afa242188b6fa0d58b0095a172a9aa70b9f541e35cdb9dd2329ea7fabece4b76"
+    },
+    {
+      "repository": "https://github.com/SteamTracking/GameTracking-Artifact",
+      "commit": "e2e4f8371324e66bc815b8199c0c2743a4331b10",
+      "upstream_date": "2021-04-21",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Artifact/e2e4f8371324e66bc815b8199c0c2743a4331b10/game/dcg/pak01_dir/scripts/card_sets.txt",
+      "path": "raw/client-2021/card_sets.txt",
+      "kind": "client-metadata",
+      "bytes": 961,
+      "sha256": "4e15e8490ae4b442106e57d67305401d1adbfcedc2d3a008b919989d2b2aadb6"
+    },
+    {
+      "repository": "https://github.com/SteamTracking/GameTracking-Artifact",
+      "commit": "e2e4f8371324e66bc815b8199c0c2743a4331b10",
+      "upstream_date": "2021-04-21",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Artifact/e2e4f8371324e66bc815b8199c0c2743a4331b10/game/dcg/steam.inf",
+      "path": "raw/client-2021/steam.inf",
+      "kind": "client-metadata",
+      "bytes": 139,
+      "sha256": "2475acd0e6abe75c60c33532421b9498efc6748ad08b1dbdd41e98344455d12d"
+    },
+    {
+      "repository": "https://github.com/SteamTracking/GameTracking-Artifact",
+      "commit": "e2e4f8371324e66bc815b8199c0c2743a4331b10",
+      "upstream_date": "2021-04-21",
+      "url": "https://raw.githubusercontent.com/SteamTracking/GameTracking-Artifact/e2e4f8371324e66bc815b8199c0c2743a4331b10/game/thirdpartylegalnotices.txt",
+      "path": "raw/client-2021/thirdpartylegalnotices.txt",
+      "kind": "client-metadata",
+      "bytes": 77800,
+      "sha256": "bc9e995965a03acaba4ea2b2ed436b2c314546366cea143f1116a6662252ec64"
+    },
+    {
+      "repository": "https://github.com/ValveSoftware/ArtifactDeckCode",
+      "commit": "c4a1611c554273339755eee549c4d7b780021d59",
+      "upstream_date": "2018-11-17",
+      "url": "https://raw.githubusercontent.com/ValveSoftware/ArtifactDeckCode/c4a1611c554273339755eee549c4d7b780021d59/README.md",
+      "path": "raw/api-spec/README.md",
+      "kind": "official-api-spec",
+      "bytes": 5015,
+      "sha256": "d4778850e439222142c1aa937cdeb331e32c36db80e1863c494370c978f18821"
+    },
+    {
+      "repository": "https://github.com/ValveSoftware/ArtifactDeckCode",
+      "commit": "c4a1611c554273339755eee549c4d7b780021d59",
+      "upstream_date": "2018-11-17",
+      "url": "https://raw.githubusercontent.com/ValveSoftware/ArtifactDeckCode/c4a1611c554273339755eee549c4d7b780021d59/LICENSE",
+      "path": "raw/api-spec/LICENSE",
+      "kind": "official-api-spec-license",
+      "bytes": 1514,
+      "sha256": "d23fb1a2d83ae6437b66abb631d960d5c55062c2e372b3f5e03a2a59b2c90ecf"
+    }
+  ]
+}

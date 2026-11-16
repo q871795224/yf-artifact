@@ -1,0 +1,166 @@
+[
+  {
+    "policy": "greedy",
+    "games": 108,
+    "team_round_snapshots": 3802,
+    "at_least_15_gold": 2184,
+    "high_gold_reasons": {
+      "empty_item_hand": 1373,
+      "consumables_not_wanted": 517,
+      "equipment_not_wanted": 191,
+      "mixed_not_wanted": 86,
+      "no_hero_for_affordable_items": 17
+    },
+    "high_gold_item_reasons": {
+      "no_enemy_improvement": 437,
+      "no_lethal_retreat_by_ai": 56,
+      "no_upgrade_by_ai": 275,
+      "ordinary_deck_empty": 124,
+      "no_hero_in_field": 23,
+      "no_wounded_friend": 11
+    },
+    "same_round": {
+      "6": {
+        "samples": 216,
+        "gold": 10.925925925925926,
+        "income": 23.458333333333332,
+        "spent": 12.532407407407407,
+        "drawn_items": 3.0,
+        "drawn_item_value": 15.666666666666666,
+        "minimum_gold_if_all_drawn_items_bought": 8.75,
+        "drawn_equipment": 2.1666666666666665,
+        "occupied_slots": 1.9074074074074074,
+        "heroes_with_weapon": 1.1388888888888888,
+        "reasons": {
+          "empty_item_hand": 124,
+          "unaffordable_only": 47,
+          "consumables_not_wanted": 41,
+          "no_hero_for_affordable_items": 2,
+          "equipment_not_wanted": 2
+        }
+      },
+      "9": {
+        "samples": 216,
+        "gold": 19.925925925925927,
+        "income": 39.523148148148145,
+        "spent": 19.59722222222222,
+        "drawn_items": 4.0,
+        "drawn_item_value": 22.666666666666668,
+        "minimum_gold_if_all_drawn_items_bought": 17.22222222222222,
+        "drawn_equipment": 3.0,
+        "occupied_slots": 2.8425925925925926,
+        "heroes_with_weapon": 1.5925925925925926,
+        "reasons": {
+          "consumables_not_wanted": 46,
+          "empty_item_hand": 137,
+          "unaffordable_only": 23,
+          "equipment_not_wanted": 1,
+          "no_hero_for_affordable_items": 8,
+          "mixed_not_wanted": 1
+        }
+      },
+      "12": {
+        "samples": 214,
+        "gold": 30.238317757009344,
+        "income": 55.55140186915888,
+        "spent": 25.313084112149532,
+        "drawn_items": 5.0,
+        "drawn_item_value": 27.85981308411215,
+        "minimum_gold_if_all_drawn_items_bought": 27.69626168224299,
+        "drawn_equipment": 3.663551401869159,
+        "occupied_slots": 3.6448598130841123,
+        "heroes_with_weapon": 1.9953271028037383,
+        "reasons": {
+          "consumables_not_wanted": 43,
+          "empty_item_hand": 148,
+          "equipment_not_wanted": 14,
+          "no_hero_for_affordable_items": 5,
+          "unaffordable_only": 1,
+          "mixed_not_wanted": 3
+        }
+      }
+    }
+  },
+  {
+    "policy": "push",
+    "games": 108,
+    "team_round_snapshots": 3764,
+    "at_least_15_gold": 2169,
+    "high_gold_reasons": {
+      "consumables_not_wanted": 524,
+      "empty_item_hand": 1349,
+      "equipment_not_wanted": 203,
+      "no_hero_for_affordable_items": 22,
+      "mixed_not_wanted": 71
+    },
+    "high_gold_item_reasons": {
+      "no_enemy_improvement": 481,
+      "no_upgrade_by_ai": 276,
+      "no_lethal_retreat_by_ai": 38,
+      "no_hero_in_field": 24,
+      "no_wounded_friend": 15,
+      "ordinary_deck_empty": 67
+    },
+    "same_round": {
+      "6": {
+        "samples": 216,
+        "gold": 11.462962962962964,
+        "income": 23.953703703703702,
+        "spent": 12.49074074074074,
+        "drawn_items": 3.0,
+        "drawn_item_value": 15.666666666666666,
+        "minimum_gold_if_all_drawn_items_bought": 9.101851851851851,
+        "drawn_equipment": 2.1666666666666665,
+        "occupied_slots": 1.9074074074074074,
+        "heroes_with_weapon": 1.125,
+        "reasons": {
+          "empty_item_hand": 124,
+          "unaffordable_only": 42,
+          "consumables_not_wanted": 39,
+          "no_hero_for_affordable_items": 6,
+          "equipment_not_wanted": 4,
+          "mixed_not_wanted": 1
+        }
+      },
+      "9": {
+        "samples": 216,
+        "gold": 19.453703703703702,
+        "income": 38.875,
+        "spent": 19.421296296296298,
+        "drawn_items": 4.0,
+        "drawn_item_value": 22.666666666666668,
+        "minimum_gold_if_all_drawn_items_bought": 16.52777777777778,
+        "drawn_equipment": 3.0,
+        "occupied_slots": 2.8518518518518516,
+        "heroes_with_weapon": 1.5925925925925926,
+        "reasons": {
+          "consumables_not_wanted": 55,
+          "unaffordable_only": 19,
+          "empty_item_hand": 136,
+          "equipment_not_wanted": 1,
+          "no_hero_for_affordable_items": 5
+        }
+      },
+      "12": {
+        "samples": 210,
+        "gold": 29.847619047619048,
+        "income": 54.98095238095238,
+        "spent": 25.133333333333333,
+        "drawn_items": 5.0,
+        "drawn_item_value": 27.833333333333332,
+        "minimum_gold_if_all_drawn_items_bought": 27.15714285714286,
+        "drawn_equipment": 3.6666666666666665,
+        "occupied_slots": 3.676190476190476,
+        "heroes_with_weapon": 2.019047619047619,
+        "reasons": {
+          "consumables_not_wanted": 45,
+          "empty_item_hand": 144,
+          "no_hero_for_affordable_items": 5,
+          "equipment_not_wanted": 11,
+          "unaffordable_only": 2,
+          "mixed_not_wanted": 3
+        }
+      }
+    }
+  }
+]

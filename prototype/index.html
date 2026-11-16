@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#181d20" />
+    <title>单路 · 战场</title>
+    <link
+      rel="icon"
+      href="../references/artifact-classic/assets/ingame_image/10020.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="cards.js" defer></script>
+    <script src="runtime-config.js" defer></script>
+    <script src="engine-client.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <svg
+      class="icon-library"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <symbol id="i-sword" viewBox="0 0 24 24">
+        <path
+          d="m14 3 7-1-1 7-9 9-5-5zM5 12l7 7M8 16l-5 5M2 19l3 3"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24">
+        <path
+          d="M12 21S2 15 2 8a5.5 5.5 0 0 1 10-3 5.5 5.5 0 0 1 10 3c0 7-10 13-10 13"
+          fill="currentColor"
+        />
+      </symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24">
+        <path
+          d="M3 4 12 1l9 3v8c0 5-9 10-9 10S3 17 3 12z"
+          fill="currentColor"
+        />
+        <path d="M12 4v14" stroke="#303537" stroke-width="1.5" />
+      </symbol>
+      <symbol id="i-mana" viewBox="0 0 24 24">
+        <path d="m12 1 8 7-2 11-6 4-6-4L4 8z" fill="currentColor" />
+        <path
+          d="m12 1-2 8 2 14M4 8l6 1 10-1M10 9l8 10"
+          fill="none"
+          stroke="#c7f3ff"
+          stroke-width="1"
+        />
+      </symbol>
+      <symbol id="i-coin" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" fill="currentColor" />
+        <circle cx="12" cy="12" r="7" stroke="#82602f" fill="none" />
+        <path
+          d="m14 7-5 5h5l-4 5"
+          fill="none"
+          stroke="#82602f"
+          stroke-width="1.5"
+        />
+      </symbol>
+      <symbol id="i-move" viewBox="0 0 24 24">
+        <path
+          d="M12 2v20M2 12h20M8 6l4-4 4 4M8 18l4 4 4-4M6 8l-4 4 4 4M18 8l4 4-4 4"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-fissure" viewBox="0 0 24 24">
+        <path d="m1 18 6-9 4 3 4-9 8 15-8-3-4 6 1-7-5 1z" fill="currentColor" />
+      </symbol>
+      <symbol id="i-tower" viewBox="0 0 24 24">
+        <path
+          d="M4 2h4v4h3V2h3v4h3V2h3v8l-3 3 2 9H5l2-9-3-3z"
+          fill="currentColor"
+        />
+        <path d="M10 22v-7h4v7" fill="#20272a" />
+      </symbol>
+      <symbol id="i-fountain" viewBox="0 0 24 24">
+        <path
+          d="M12 2v9M8 4l4 3 4-3M3 14h18l-4 4H7zM8 22h8M12 18v4"
+          stroke="currentColor"
+          stroke-width="1.5"
+          fill="none"
+        />
+        <path
+          d="M5 12c-1-6 4-7 7-3 3-4 8-3 7 3"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+        />
+      </symbol>
+      <symbol id="i-close" viewBox="0 0 24 24">
+        <path
+          d="m6 6 12 12M6 18 18 6"
+          stroke="currentColor"
+          stroke-width="1.7"
+          fill="none"
+        />
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path
+          d="M12 21V3M6 9l6-6 6 6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+    </svg>
+
+    <main class="game" aria-label="单路卡牌战场">
+      <header class="match-header">
+        <button
+          class="opponent-medallion"
+          id="enemy-info"
+          aria-label="查看敌方英雄"
+        >
+          <img
+            src="../references/artifact-classic/assets/mini_image/10069.png"
+            alt="军团指挥官"
+          /><span class="team-dot enemy-dot"></span>
+        </button>
+        <div class="round-info">
+          <span class="round-number" id="round-label">单路战场</span
+          ><span class="turn-label"
+            ><span id="turn-text">正在连接</span><span class="turn-spark"></span
+          ></span>
+        </div>
+        <button
+          class="menu-button"
+          id="menu-button"
+          aria-label="对局菜单"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <div class="forts">
+          <div class="fort enemy-fort">
+            <svg><use href="#i-tower" /></svg
+            ><span class="fort-caption">敌方</span
+            ><span class="fort-meter"><i style="width: 100%"></i></span
+            ><b>40<span>/40</span></b>
+          </div>
+          <div class="fort ally-fort">
+            <svg><use href="#i-tower" /></svg
+            ><span class="fort-caption">我方</span
+            ><span class="fort-meter"><i style="width: 100%"></i></span
+            ><b>40<span>/40</span></b>
+          </div>
+        </div>
+      </header>
+
+      <section class="battlefield" aria-label="六列八排战场">
+        <div class="board-frame">
+          <div class="board" id="board" role="group" aria-label="棋盘"></div>
+          <span class="tower-mark tower-mark-top" aria-hidden="true"
+            ><svg><use href="#i-tower" /></svg
+          ></span>
+          <span class="tower-mark tower-mark-bottom" aria-hidden="true"
+            ><svg><use href="#i-tower" /></svg
+          ></span>
+          <span class="middle-mark left" aria-hidden="true"></span
+          ><span class="middle-mark right" aria-hidden="true"></span>
+        </div>
+      </section>
+
+      <section
+        class="unit-panel"
+        id="unit-panel"
+        aria-label="选中单位"
+      ></section>
+
+      <section class="hand-section" aria-label="手牌">
+        <div class="hand-header" role="tablist" aria-label="手牌类型">
+          <button
+            id="tab-cards"
+            class="hand-tab active"
+            role="tab"
+            aria-controls="hand"
+            aria-selected="true"
+            tabindex="0"
+            data-tab="cards"
+          >
+            普通牌 <span>5</span>
+          </button>
+          <button
+            id="tab-items"
+            class="hand-tab"
+            role="tab"
+            aria-controls="hand"
+            aria-selected="false"
+            tabindex="-1"
+            data-tab="items"
+          >
+            物品 <span>3</span>
+          </button>
+          <span class="deck-count" id="deck-count">牌库 21</span>
+        </div>
+        <div
+          class="hand"
+          id="hand"
+          role="tabpanel"
+          aria-labelledby="tab-cards"
+        ></div>
+      </section>
+
+      <footer class="resource-bar">
+        <div class="resource mana" aria-label="法力">
+          <svg><use href="#i-mana" /></svg
+          ><b id="mana-value">1 <span>/ 1</span></b>
+        </div>
+        <div class="resource gold" aria-label="金币">
+          <svg><use href="#i-coin" /></svg><b id="gold-value">0</b>
+        </div>
+        <button class="pass-button" id="pass-button" disabled>
+          让过<svg><use href="#i-arrow" /></svg>
+        </button>
+      </footer>
+
+      <dialog
+        id="detail-dialog"
+        class="detail-dialog"
+        aria-labelledby="detail-title"
+      >
+        <button class="close-button" id="close-detail" aria-label="关闭详情">
+          <svg><use href="#i-close" /></svg>
+        </button>
+        <div id="detail-body"></div>
+      </dialog>
+      <dialog
+        id="scene-dialog"
+        class="scene-dialog"
+        aria-labelledby="scene-title"
+      >
+        <div class="sheet-heading">
+          <h2 id="scene-title">对局菜单</h2>
+          <button
+            class="close-button"
+            id="close-scene"
+            aria-label="关闭对局菜单"
+          >
+            <svg><use href="#i-close" /></svg>
+          </button>
+        </div>
+        <p class="sheet-note" id="match-summary">
+          三名英雄，单路战场。先破塔，再摧毁基地。
+        </p>
+        <button class="scene-option" data-menu="roster">
+          <span>阵容与返场<small>查看在场英雄、冷却和返场时间</small></span
+          ><b>♙</b>
+        </button>
+        <button class="scene-option" data-menu="log">
+          <span>行动记录<small>回看出牌、交战、阵亡与金币变化</small></span
+          ><b>≡</b>
+        </button>
+        <button class="scene-option" data-menu="help">
+          <span>玩法说明<small>行动、资源、装备与胜负</small></span
+          ><b>?</b>
+        </button>
+        <button class="scene-option" data-menu="export">
+          <span>导出对局记录<small>保留这局的操作，方便回看和反馈</small></span
+          ><b>↓</b>
+        </button>
+        <button class="reset-button" id="new-game-button">开始新一局</button>
+        <button class="quiet-button" id="concede-button">认输并结束本局</button>
+        <p class="prototype-note">
+          试玩版 · 刷新页面可继续，停止服务后对局清空
+        </p>
+      </dialog>
+      <div class="toast" id="toast" role="status" hidden></div>
+    </main>
+    <noscript>请启用 JavaScript 以查看战场。</noscript>
+  </body>
+</html>

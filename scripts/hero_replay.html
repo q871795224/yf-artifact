@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>英雄能力推演 · 逐步回放</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,"PingFang SC",sans-serif;background:#10161c;color:#e6e9ec}*{box-sizing:border-box}body{max-width:1080px;margin:auto;padding:24px}h1{font-size:25px;margin:0 0 8px}p{color:#a7b5bf;line-height:1.7}select,button{background:#22303d;border:1px solid #465564;color:inherit;padding:9px;border-radius:6px}select{max-width:100%;width:100%;margin:12px 0}button{cursor:pointer}button:disabled{opacity:.4}input{width:100%;margin:14px 0}.layout{display:grid;grid-template-columns:minmax(0,650px) 1fr;gap:22px}.board{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:4px}.cell{min-height:76px;padding:5px;background:#1b2630;border:1px solid #33404a;border-radius:5px;position:relative}.cell.fountain{background:#242d38}.cell.mid{border-top:3px solid #9aa7a6}.unit{height:100%;border-left:3px solid var(--color);padding-left:5px;font-size:12px}.name{font-weight:700;font-size:13px;display:block}.sideA{color:#ffb573}.sideB{color:#7cd8ef}.detail{color:#b9c4cc;font-size:11px;display:block;margin-top:4px}.arrow{float:right;font-size:19px;color:#fff}.stun{color:#ffe097}.status{display:flex;justify-content:space-between;margin:12px 0;font-size:13px}.controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.badge{font-family:monospace;color:#b7cbd5}.events{background:#17212a;border:1px solid #33404a;padding:14px;min-height:220px;border-radius:6px;line-height:1.8;font-size:13px}.events p{color:#e6e9ec;margin:0 0 10px;overflow-wrap:anywhere}.legend{font-size:12px;line-height:1.8;color:#a7b5bf}.note{border-top:1px solid #33404a;margin-top:20px;padding-top:14px;font-size:13px}@media(max-width:750px){body{padding:12px}.layout{grid-template-columns:1fr}.cell{min-height:73px;padding:3px}.unit{padding-left:3px}.name{font-size:11px}.detail{font-size:10px}.events{min-height:120px}}
+</style>
+<h1 id="title">英雄能力推演</h1>
+<p id="description">逐步观察走位、技能与交战。</p>
+<label for="game">选择样本</label><select id="game"></select>
+<div class="controls"><button id="previous">← 上一步</button><button id="play">播放</button><button id="next">下一步 →</button><span id="phase" class="badge"></span></div>
+<input id="step" type="range" min="0" value="0" aria-label="回放步骤">
+<div class="layout"><section><div id="status" class="status"></div><div id="forts" class="legend"></div><div id="board" class="board"></div><p id="legend" class="legend"></p></section><aside><h3>本步发生了什么</h3><div id="events" class="events"></div><p id="lineups" class="legend"></p><div id="hands" class="legend"></div></aside></div>
+<p id="note" class="note"></p>
+<script>
+const games=/* REPLAY_DATA */[];
+const $=id=>document.getElementById(id), escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const colors={10020:'#dc7563',10069:'#dc7563',10054:'#dc7563',10065:'#6aaff3',10064:'#6aaff3',10033:'#6aaff3',10017:'#82c38a',10014:'#82c38a',10036:'#82c38a',10023:'#af92ca',10047:'#af92ca',10060:'#af92ca'};
+let timer=null;
+function heroName(g,id){for(const f of g.frames){const u=f.units.find(x=>x.hero===id);if(u)return u.name}return id}
+games.forEach((g,i)=>{const option=document.createElement('option');option.value=i;const scene=g.tower_attack===undefined?'':` · 塔 ${g.tower_attack}／基地 ${2*g.tower_attack} · 保护${g.protection?'开':'关'}`;const experiment=g.pool?` · ${g.pool==='expanded'?'扩展':'初始'}牌池 · ${g.policy==='push'?'推进':'原始'} AI`:'';const finishers=g.mana_finishers===undefined?'':` · 法力终端${g.mana_finishers?'开':'关'}／金币终端${g.gold_finishers?'开':'关'}`;option.textContent=`${i+1}. ${g.rosters.map(r=>r.map(id=>heroName(g,id)).join('／')).join(' 对 ')} · ${g.targeting==='aggro'?'自动索敌':'随机箭头'} · ${g.mode}${scene}${experiment}${finishers} · seed ${g.seed}`;$('game').append(option)});
+function stop(){clearInterval(timer);timer=null;$('play').textContent='播放'}
+function render(){
+  const g=games[Number($('game').value)||0];if(!g)return;
+  const frames=g.frames;$('step').max=frames.length-1;
+  const n=Math.min(Number($('step').value),frames.length-1),f=frames[n];
+  const full=Boolean(f.structures);
+  $('title').textContent=full?'完整对局推演':'英雄能力推演';
+  $('description').textContent=full?'塔与基地、普通牌库、装备及消耗品已纳入；同场景切换可比较建筑伤害和保护仇恨。':'有限回合战场实验；不含建筑、装备与正式牌库，不判推塔胜负。';
+  $('phase').textContent=`${g.targeting==='aggro'?'自动索敌':'随机箭头'} · 第 ${f.round} 轮 · ${f.phase} · ${n+1}/${frames.length}`;
+  if(full&&n===frames.length-1){const ending=g.outcome==='A'?'A 获胜':g.outcome==='B'?'B 获胜':g.outcome==='simultaneous'?'双方基地同时摧毁，平局':'到达回合上限，未判胜负';$('phase').textContent+=' · '+ending;}
+  $('previous').disabled=n===0;$('next').disabled=n===frames.length-1;
+  $('status').innerHTML=`<span class="sideA">A 金币 ${f.gold[0]} · 法力 ${f.mana[0]}</span><span class="sideB">B 金币 ${f.gold[1]} · 法力 ${f.mana[1]}</span>`;
+  $('forts').innerHTML=full?f.structures.map(s=>`${'AB'[s.team]} ${s.id} ${s.stage==='tower'?'塔':'基地'}：${s.hp}/${s.max_hp} 血 · 攻击 ${s.attack} · ${s.ready?'目标 '+escape(s.target||'无'):'本轮免伤／不攻击'}`).join('<br>'):'';
+  let html='';
+  for(let r=0;r<8;r++)for(let c=0;c<6;c++){
+    const u=f.units.find(x=>x.r===r&&x.c===c);
+    html+=`<div class="cell ${r===0||r===7?'fountain':''} ${r===4?'mid':''}" ${full&&(r===1||r===7)?'style="border-top:3px solid #c69c58"':''}>`;
+    if(u){
+      const cd=u.hero?` · CD ${u.cd}`:'';
+      const gear=(u.equipment?.length?' · 装备 '+u.equipment.join('、'):'')+(u.cleave?' · 顺势 '+u.cleave:'')+(u.siege?' · 攻城 '+u.siege:'')+(u.pierce?' · 透甲':'')+(u.pike_growth?' · 长枪成长 '+u.pike_growth:'')+(u.item_cooldowns?Object.entries(u.item_cooldowns).map(([name,cd])=>' · '+name+' CD '+cd).join(''):'');
+      html+=`<div class="unit" style="--color:${colors[u.hero]||'#75818b'}" title="${escape(u.id)} · (${r+1},${c+1})${escape(gear)}"><span class="arrow">${u.arrow}</span><span class="name side${'AB'[u.team]}">${'AB'[u.team]} ${escape(u.name)}</span><span class="detail">血 ${u.hp}/${u.max_hp}</span><span class="detail">攻 ${u.attack} · 甲 ${u.armor}</span><span class="detail ${u.stunned?'stun':''}">${u.stunned?'眩晕':''}${cd}</span><span class="detail">${escape(u.id)} → ${escape(u.target||'—')}</span></div>`;
+    }
+    html+='</div>';
+  }
+  $('board').innerHTML=html;
+  $('events').innerHTML=f.events.length?f.events.map(e=>`<p>${escape(e)}</p>`).join(''):'<p>棋盘与攻击意图已公开。</p>';
+  $('lineups').innerHTML=g.rosters.map((r,i)=>`${'AB'[i]}：${r.map(id=>escape(heroName(g,id))).join('／')}`).join('<br>');
+  $('legend').textContent='A 为下方阵营，B 为上方阵营。箭头显示攻击意图，· 表示无目标；首尾深色排为泉水。'+(full?'金色横线是塔／基地的位置。侵入敌方泉水每轮受 10 点普通伤害。':'本样本不结算泉水伤害。');
+  $('hands').innerHTML=full?f.players.map((p,i)=>`<details><summary>${'AB'[i]} 手牌 ${p.hand.length} · 牌库剩余 ${p.deck} · 强化 ${p.improvements}</summary><p>普通牌：${p.hand.map(escape).join('、')||'无'}</p><p>物品：${p.items.map(escape).join('、')||'无'}</p></details>`).join(''):'';
+  $('note').textContent=full?`双方使用同一套${g.policy==='push'?'推进策略，含静态棋盘下的两步移动预估':'贪心策略，评分包含攻建筑和预见建筑伤害'}。牌库${g.pool==='expanded'?36:18}张、起手5张、之后每轮抽2，物品开局及第3、6、9等轮发放。此为流程实验，不是完整平衡结论。`: '双方使用同一套确定性贪心策略。自动索敌保持合法旧目标，不自动追击。出生、争格、赏金等使用固定种子。测试法术模式每轮双方各有一张1费打2与一张1费治疗2的假想牌。';
+}
+function advance(delta){const max=Number($('step').max);$('step').value=Math.max(0,Math.min(max,Number($('step').value)+delta));render();if(Number($('step').value)===max)stop()}
+$('game').onchange=()=>{stop();$('step').value=0;render()};$('step').oninput=()=>{stop();render()};$('previous').onclick=()=>{stop();advance(-1)};$('next').onclick=()=>{stop();advance(1)};$('play').onclick=()=>{if(timer){stop();return}if(Number($('step').value)===Number($('step').max))$('step').value=0;timer=setInterval(()=>advance(1),650);$('play').textContent='暂停'};render();
+</script>
+</html>
