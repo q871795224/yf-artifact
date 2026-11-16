@@ -10,13 +10,13 @@
     <title>单路 · 战场</title>
     <link
       rel="icon"
-      href="../references/artifact-classic/assets/ingame_image/10020.png"
+      href="../references/artifact-classic/assets/mobile/ingame_image/10020.webp"
     />
-    <link rel="stylesheet" href="style.css?v=2" />
+    <link rel="stylesheet" href="style.css?v=3" />
     <script src="cards.js" defer></script>
     <script src="runtime-config.js" defer></script>
-    <script src="engine-client.js" defer></script>
-    <script src="app.js?v=2" defer></script>
+    <script src="engine-client.js?v=3" defer></script>
+    <script src="app.js?v=3" defer></script>
   </head>
   <body>
     <svg
@@ -127,7 +127,7 @@
           aria-label="查看敌方英雄"
         >
           <img
-            src="../references/artifact-classic/assets/mini_image/10069.png"
+            src="../references/artifact-classic/assets/mobile/mini_image/10069.webp"
             alt="军团指挥官"
           /><span class="team-dot enemy-dot"></span>
         </button>
@@ -159,6 +159,8 @@
       <section class="battlefield" aria-label="六列八排战场">
         <div class="board-frame">
           <div class="board" id="board" role="group" aria-label="棋盘"></div>
+          <svg class="board-overlay target-overlay" id="target-overlay" viewBox="0 0 600 800" preserveAspectRatio="none" aria-hidden="true"></svg>
+          <svg class="board-overlay battle-effects" id="battle-effects" viewBox="0 0 600 800" preserveAspectRatio="none" aria-hidden="true"></svg>
           <span class="tower-mark tower-mark-top" aria-hidden="true"
             ><svg><use href="#i-tower" /></svg
           ></span>

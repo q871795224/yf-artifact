@@ -3,6 +3,18 @@
   const browserMode = window.ARTIFACT_RUNTIME === "browser";
   const saveKey = "yf-artifact-browser-save-v1";
   const pending = new Map();
+  const cacheReady = browserMode && "serviceWorker" in navigator
+    ? Promise.race([
+        navigator.serviceWorker.register(new URL("../runtime-cache.js?v=3", document.baseURI))
+          .then(() => navigator.serviceWorker.ready)
+          .then(() => navigator.serviceWorker.controller || new Promise((resolve) => {
+            const done = () => { navigator.serviceWorker.removeEventListener("controllerchange", done); resolve(); };
+            navigator.serviceWorker.addEventListener("controllerchange", done);
+            setTimeout(done, 1000);
+          })).catch(() => {}),
+        new Promise((resolve) => setTimeout(resolve, 1500)),
+      ])
+    : Promise.resolve();
   let worker,
     sequence = 0,
     memorySave = null,
@@ -27,7 +39,9 @@
   }
   function engineWorker() {
     if (worker) return worker;
-    worker = new Worker(new URL("engine-worker.js", document.baseURI), {
+    const url = new URL("engine-worker.js?v=3", document.baseURI);
+    url.searchParams.set("engine", window.ARTIFACT_ENGINE_VERSION || "local");
+    worker = new Worker(url, {
       type: "module",
     });
     worker.onmessage = ({ data }) => {
@@ -84,6 +98,7 @@
         clearTimeout(timer);
       }
     }
+    await cacheReady;
     const id = ++sequence;
     const random = crypto.getRandomValues(new Uint32Array(1))[0];
     const bytes = crypto.getRandomValues(new Uint8Array(16));

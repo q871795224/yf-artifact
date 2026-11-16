@@ -6,15 +6,16 @@ async function runtime() {
   if (!runtimePromise)
     runtimePromise = (async () => {
       progress("正在加载战场，首次打开需要片刻…");
-      const pyodide = await loadPyodide({
-        indexURL: new URL("../vendor/pyodide/", import.meta.url).href,
+      const bundleURL = new URL("engine-files.json", import.meta.url);
+      bundleURL.search = new URL(import.meta.url).search;
+      const bundlePromise = fetch(bundleURL).then((response) => {
+        if (!response.ok) throw new Error("游戏资料没有加载完成，请重试。");
+        return response.json();
       });
+      const [pyodide, bundle] = await Promise.all([loadPyodide({
+        indexURL: new URL("../vendor/pyodide/", import.meta.url).href,
+      }), bundlePromise]);
       progress("正在准备英雄与牌库…");
-      const response = await fetch(
-        new URL("engine-files.json", import.meta.url),
-      );
-      if (!response.ok) throw new Error("游戏资料没有加载完成，请重试。");
-      const bundle = await response.json();
       for (const file of bundle.files) {
         const path = "/artifact/" + file.path;
         pyodide.FS.mkdirTree(path.slice(0, path.lastIndexOf("/")));
