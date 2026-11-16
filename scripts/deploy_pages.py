@@ -49,7 +49,8 @@ def main():
         changes = run(['git', 'diff', '--cached', '--quiet'], checkout, check=False).returncode
         if changes:
             run(['git', 'commit', '--quiet', '-m', 'Deploy playable static game'], checkout)
-            run(['git', '-c', 'credential.helper=', '-c', 'credential.helper=!gh auth git-credential',
+            run(['git', '-c', 'http.postBuffer=157286400', '-c', 'http.version=HTTP/1.1',
+                 '-c', 'credential.helper=', '-c', 'credential.helper=!gh auth git-credential',
                  'push', 'origin', 'gh-pages'], checkout)
         else:
             print('Published files already match this build.', flush=True)
