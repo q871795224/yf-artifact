@@ -69,7 +69,10 @@ async function checkMobilePrototype(page) {
   await page.screenshot({ path: "output/playwright/live-card-detail.png" });
   await page.locator("#close-detail").click();
 
-  await page.getByRole("button", { name: "移动", exact: true }).click();
+  await page.locator('.cell.hero[data-team="ally"]').first().click();
+  check(await page.locator(".reachable").count() > 0, "Tapping an allied hero directly reveals legal movement");
+  check(await page.locator('[data-action="skill"]').isVisible(), "Skills remain available while choosing movement");
+  check(await page.locator('.target-ray').count() > 0, "Attack intentions are visible without selecting a target");
   check(
     await page.locator(".reachable").evaluateAll((cells) =>
       cells.every((cell) => {
@@ -171,9 +174,7 @@ async function checkMobilePrototype(page) {
       step.kind === "chen"
     ) {
       await page.locator(`.cell[data-unit="${step.actor}"]`).click();
-      await page
-        .locator(`[data-action="${step.kind === "move" ? "move" : "skill"}"]`)
-        .click();
+      if (step.kind !== "move") await page.locator('[data-action="skill"]').click();
       if (step.kind === "stun") {
         const pos = await page
           .locator(`.cell[data-unit="${step.actor}"]`)
@@ -293,7 +294,7 @@ async function checkMobilePrototype(page) {
   const download = await downloadPromise;
   await download.saveAs("output/playwright/browser-match-export.json");
   check(
-    download.suggestedFilename().includes("artifact-13-round-24"),
+    download.suggestedFilename().includes(`artifact-${plan.seed}-round-${plan.round}`),
     "The real match can be exported for feedback",
   );
   await page.locator("#result-new").click();

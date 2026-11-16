@@ -32,3 +32,7 @@
 [Source 2 Viewer](https://s2v.app/) 支持读取 VPK、提取资源及将纹理导出为 PNG，并提供 macOS Apple Silicon 命令行版本。找到客户端后，可以先浏览目录并导出少量 UI 图标／卡框作验证，再按手机原型需要补充资源。工具可行性已查证；本项目尚未执行客户端 VPK 提取。
 
 Valve [官方 API 说明](https://github.com/ValveSoftware/ArtifactDeckCode#card-set-api) 说明了 `mini_image`、`large_image` 与 `ingame_image` 等字段。历史 API 索引的来源及版本见[参考库说明](../README.md)。素材归属沿用参考库记录。
+
+## 手机版派生资源
+
+`mobile/` 保留低分辨率 WebP 副本及校验清单，由 `python3 scripts/compress_assets.py` 使用 cwebp 生成。头像宽 128、完整卡面宽 352、游戏图标宽 96 像素；130 张图片合计 1,133,930 字节，原 PNG 合计 43,018,613 字节。原始文件与来源不变，Pages 仅发布这些压缩副本。

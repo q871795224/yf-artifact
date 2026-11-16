@@ -68,12 +68,18 @@ class StaticBuildTests(unittest.TestCase):
             out = Path(temp) / 'site'
             first = build(out)
             self.assertGreater(first['bytes'], 10000000)
+            self.assertLess(first['bytes'], 18000000)
             self.assertIn('"browser"', (out/'prototype/runtime-config.js').read_text())
             bundle = json.loads((out/'prototype/engine-files.json').read_text())
             engine = next(f for f in bundle['files'] if f['path'] == 'scripts/playable_match.py')
             self.assertEqual(engine['content'], (ROOT/'scripts/playable_match.py').read_text())
+            for file in bundle['files']:
+                if file['path'].endswith('.json'):
+                    self.assertEqual(json.loads(file['content']), json.loads((ROOT/file['path']).read_text()))
             self.assertTrue((out/'vendor/pyodide/pyodide.asm.wasm').is_file())
-            self.assertTrue((out/'references/artifact-classic/assets/mini_image/10020.png').is_file())
+            self.assertTrue((out/'references/artifact-classic/assets/mobile/mini_image/10020.webp').is_file())
+            self.assertFalse(list((out/'references/artifact-classic/assets').rglob('*.png')))
+            self.assertTrue((out/'runtime-cache.js').is_file())
             self.assertFalse((out/'output').exists())
             self.assertTrue((out/'.nojekyll').is_file())
             self.assertEqual(build(out)['engine_version'], first['engine_version'])

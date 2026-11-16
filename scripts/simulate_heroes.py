@@ -436,9 +436,10 @@ class Game:
                 dr, dc = map(int, target_id.split(','))
                 targets = [u for u in self.field(1-team) if u.pos in ((actor.pos[0]+dr, actor.pos[1]+dc), (actor.pos[0]+2*dr, actor.pos[1]+2*dc))]
                 for u in targets:
+                    u.hp -= max(0, 2-u.armor)
                     u.stunned = True
                 self.stats[team]["stuns"] += len(targets)
-                self.record(f"{'AB'[team]}行动：{actor.uid}沟壑方向 ({dr},{dc})，眩晕 {','.join(u.uid for u in targets)}；评分 {value:.2f}")
+                self.record(f"{'AB'[team]}行动：{actor.uid}沟壑方向 ({dr},{dc})，2 点普通伤害并眩晕 {','.join(u.uid for u in targets)}；评分 {value:.2f}")
             self.cleanup()
         else:
             self.spells[team].remove(kind)

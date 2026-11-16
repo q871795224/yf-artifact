@@ -36,16 +36,28 @@ def build(out):
         data = (ROOT / 'vendor/pyodide' / name).read_bytes()
         if hashlib.sha256(data).hexdigest() != expected[name]['sha256']:
             raise ValueError(f'Runtime checksum mismatch: {name}')
-    shutil.copytree(ROOT / 'prototype', out / 'prototype', ignore=shutil.ignore_patterns('README.md'))
+    shutil.copytree(ROOT / 'prototype', out / 'prototype', ignore=shutil.ignore_patterns('README.md', 'runtime-cache.js'))
     shutil.copytree(ROOT / 'vendor/pyodide', out / 'vendor/pyodide')
-    shutil.copytree(ROOT / 'references/artifact-classic/assets', out / 'references/artifact-classic/assets')
+    mobile = ROOT / 'references/artifact-classic/assets/mobile'
+    art = json.loads((mobile / 'manifest.json').read_text())
+    for entry in art['files']:
+        if hashlib.sha256((mobile / entry['path']).read_bytes()).hexdigest() != entry['sha256']:
+            raise ValueError(f"Mobile art checksum mismatch: {entry['path']}")
+    shutil.copytree(mobile, out / 'references/artifact-classic/assets/mobile')
+    shutil.copy2(ROOT / 'references/artifact-classic/assets/README.md', out / 'references/artifact-classic/assets/README.md')
     (out / 'scripts/fixtures').mkdir(parents=True)
     shutil.copy2(ROOT / 'scripts/fixtures/playthrough-13.json', out / 'scripts/fixtures/playthrough-13.json')
     files = [{'path': path, 'content': (ROOT / path).read_text()} for path in ENGINE_FILES]
     version = hashlib.sha256(json.dumps(files, ensure_ascii=False).encode()).hexdigest()
+    # Only JSON whitespace changes; the rules fingerprint retains source semantics.
+    for file in files:
+        if file['path'].endswith('.json'):
+            file['content'] = json.dumps(json.loads(file['content']), ensure_ascii=False, separators=(',', ':'))
     bundle = {'schema_version': 1, 'engine_version': version, 'files': files}
     (out / 'prototype/engine-files.json').write_text(json.dumps(bundle, ensure_ascii=False, separators=(',', ':')))
-    (out / 'prototype/runtime-config.js').write_text('window.ARTIFACT_RUNTIME = "browser";\n')
+    (out / 'prototype/runtime-config.js').write_text('window.ARTIFACT_RUNTIME = "browser";\n' +
+        f'window.ARTIFACT_ENGINE_VERSION = "{version}";\n')
+    (out / 'runtime-cache.js').write_text((ROOT / 'prototype/runtime-cache.js').read_text().replace('__RUNTIME_VERSION__', manifest['version']))
     (out / 'index.html').write_text(
         '<!doctype html><html lang="zh-CN"><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width,initial-scale=1">'

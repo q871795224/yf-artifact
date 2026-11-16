@@ -214,7 +214,8 @@ class PlayableTests(unittest.TestCase):
             else:
                 key = 'pass'
             s.apply(s.version, key)
-        self.assertEqual((s.phase, s.game.round, s.game.winner), ('finished', 24, 0))
+        # Golden replay updated after Fissure gained two armor-reduced damage.
+        self.assertEqual((s.phase, s.game.round, s.game.winner), ('finished', 16, 1))
         replay = PlaySession(13)
         for command in s.export()['commands']:
             replay.apply(command['version'], command['action_id'])

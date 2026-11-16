@@ -138,6 +138,31 @@ class HeroSimulationTests(unittest.TestCase):
         self.assertTrue(enemy.stunned)
         self.assertEqual(game.actions(1), [])
 
+    def test_fissure_deals_two_normal_damage_and_stuns_both_squares(self):
+        game = empty_game()
+        ox = hero('ox', 0, 10033, (4, 2))
+        first = Unit('first', 1, None, 4, (3, 3))
+        armored = hero('armored', 1, 10069, (2, 4))
+        untouched = Unit('outside', 1, None, 4, (3, 2))
+        game.units = [ox, first, armored, untouched]
+        game.take_action((1, 'stun', 'ox', '-1,1'), 0)
+        self.assertEqual((first.hp, armored.hp, untouched.hp), (2, 7, 4))
+        self.assertTrue(first.stunned and armored.stunned)
+        self.assertFalse(untouched.stunned)
+        self.assertEqual(ox.hp, ox.max_hp)  # Spell damage does not trigger retaliation.
+
+    def test_fissure_armor_can_prevent_damage_but_not_stun_and_lethal_awards_gold(self):
+        game = empty_game()
+        ox = hero('ox', 0, 10033, (4, 2))
+        axe = hero('axe', 1, 10020, (3, 2))
+        creep = Unit('creep', 1, None, 2, (2, 2))
+        game.units = [ox, axe, creep]
+        game.take_action((1, 'stun', 'ox', '-1,0'), 0)
+        self.assertEqual(axe.hp, axe.max_hp)
+        self.assertTrue(axe.stunned)
+        self.assertIsNone(creep.pos)
+        self.assertEqual(game.gold[0], 1)
+
     def test_conversion_preserves_state_and_does_not_award_bounty(self):
         game = empty_game()
         chen = hero("h", 0, 10017, (4, 2))

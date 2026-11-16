@@ -516,23 +516,124 @@ img {
   left: 50%;
   transform: translateX(-50%);
   color: #f8d382;
-  font-size: 14px;
-  line-height: 1;
+  font-size: 11px;
+  line-height: 16px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #d4b65c;
+  border-radius: 50%;
+  background: #30261de8;
   text-shadow: 0 0 5px #000;
 }
-.intent {
+.board-overlay {
   position: absolute;
-  left: calc(50% - 5px);
-  top: -13px;
-  width: 10px;
-  height: 18px;
-  color: #c3eff5;
-  filter: drop-shadow(0 1px 2px #000);
+  inset: 4px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
   pointer-events: none;
+  overflow: visible;
+  z-index: 4;
 }
-.intent svg {
-  width: 100%;
-  height: 100%;
+.target-ray {
+  fill: none;
+  stroke-width: 1.5px;
+  vector-effect: non-scaling-stroke;
+  filter: drop-shadow(0 1px 1px #000);
+  opacity: 0.85;
+}
+.target-ray.ally, .combat-trail.ally, .combat-impact.ally {
+  stroke: #edc47c;
+}
+.target-ray.enemy, .combat-trail.enemy, .combat-impact.enemy {
+  stroke: #89d0eb;
+}
+.target-ray.ranged {
+  stroke-dasharray: 3 3;
+}
+.target-ray.focused {
+  stroke-width: 2.5px;
+  opacity: 1;
+}
+.battle-effects {
+  z-index: 7;
+}
+.is-fighting {
+  box-shadow: 0 0 0 2px #ba9c68, 0 0 16px #c394434a;
+}
+.combat-trail {
+  fill: none;
+  stroke-width: 3px;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 1;
+  animation: attack-stroke 0.6s ease-out both;
+  filter: drop-shadow(0 0 3px #f6d895);
+}
+.combat-impact {
+  fill: none;
+  stroke-width: 2px;
+  opacity: 0;
+  animation: impact-ring 0.4s 0.2s ease-out both;
+}
+.combat-projectile {
+  fill: #fff1b9;
+  filter: drop-shadow(0 0 4px #e4bf78);
+}
+.combat-projectile.enemy {
+  fill: #d2f5ff;
+}
+.combat-slash {
+  fill: none;
+  stroke: #fff1bd;
+  stroke-width: 3px;
+  vector-effect: non-scaling-stroke;
+  filter: drop-shadow(0 0 3px #edc47c);
+  animation: melee-slash 0.45s 0.12s ease-out both;
+}
+.combat-slash.enemy {
+  stroke: #d9f9ff;
+}
+.fissure-tile {
+  fill: #bf9a4b33;
+  stroke: #e8c77c;
+  stroke-width: 1;
+  animation: fissure-flash 0.7s ease-out both;
+}
+.fissure-ridge, .fissure-crack {
+  fill: none;
+  vector-effect: non-scaling-stroke;
+  stroke-linejoin: bevel;
+}
+.fissure-ridge {
+  stroke: #342316;
+  stroke-width: 8px;
+}
+.fissure-crack {
+  stroke: #ffde8b;
+  stroke-width: 3px;
+  stroke-dasharray: 1;
+  animation: attack-stroke 0.6s ease-out both;
+  filter: drop-shadow(0 0 4px #efa847);
+}
+.move-hint {
+  color: #b6dce0;
+  font: 10px var(--body);
+}
+@keyframes attack-stroke {
+  from { stroke-dashoffset: 1; opacity: 0.5; }
+  to { stroke-dashoffset: 0; opacity: 1; }
+}
+@keyframes melee-slash {
+  from { opacity: 0; stroke-dasharray: 0 100; }
+  25% { opacity: 1; stroke-dasharray: 100 0; }
+  to { opacity: 0; stroke-dasharray: 100 0; }
+}
+@keyframes impact-ring {
+  from { r: 7px; opacity: 1; }
+  to { r: 30px; opacity: 0; }
+}
+@keyframes fissure-flash {
+  from { fill: #e5b65d44; }
+  to { fill: #bf9a4b11; }
 }
 .tower-mark {
   position: absolute;
@@ -1504,6 +1605,9 @@ dialog::backdrop {
 }
 .unit-hit {
   animation: damage-pulse 0.55s ease-out;
+}
+.fort-hit {
+  animation: damage-pulse 0.8s ease-out;
 }
 .unit-healed {
   animation: heal-pulse 0.55s ease-out;

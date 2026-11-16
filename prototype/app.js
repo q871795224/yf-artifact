@@ -1,6 +1,6 @@
 /* The Python match engine is authoritative. This file only presents its state. */
 "use strict";
-const ASSETS = "../references/artifact-classic/assets/";
+const ASSETS = "../references/artifact-classic/assets/mobile/";
 const $ = (selector) => document.querySelector(selector);
 const icon = (name) => `<svg aria-hidden="true"><use href="#i-${name}"/></svg>`;
 const esc = (value) =>
@@ -12,7 +12,7 @@ const esc = (value) =>
       ],
   );
 const cardName = (id) => CARDS[id]?.card_name.schinese || "未知卡牌";
-const image = (id, kind = "mini_image") => `${ASSETS}${kind}/${id}.png`;
+const image = (id, kind = "mini_image") => `${ASSETS}${kind}/${id}.webp`;
 const identity = (id) => CARDS[id]?.colors?.[0] || "neutral";
 const pip = (id) =>
   `<i class="color-pip identity-${identity(id)}" aria-hidden="true"></i>`;
@@ -31,7 +31,7 @@ const HEROES = {
   10033: {
     skill: "沟壑",
     kind: "stun",
-    text: "八个方向中选择一个，眩晕该直线前两格敌人，持续本回合。冷却 4 回合，不花费法力。",
+    text: "八个方向中选择一个，对该直线前两格敌人造成 2 点普通伤害（受护甲减免），并眩晕至本回合结束。冷却 4 回合，不花费法力。",
   },
   10017: {
     skill: "劝化",
@@ -154,6 +154,76 @@ function targetAt(row, col) {
     return unit && a.target === unit.key;
   });
 }
+const unitPoint = (u) => ({ x: (u.col + 0.5) * 100, y: (u.row + 0.5) * 100 });
+const fortPoint = (key, col = 2.5) => ({ x: (col + 0.5) * 100, y: key === "AF" ? 700 : 100 });
+function targetPoint(u) {
+  const target = view.units.find((v) => v.key === u.target);
+  return target ? unitPoint(target) : ["AF", "BF"].includes(u.target) ? fortPoint(u.target, u.col) : null;
+}
+function ray(from, to, inset = 33, side = 0) {
+  const dx = to.x - from.x, dy = to.y - from.y;
+  const length = Math.hypot(dx, dy);
+  const pad = Math.min(inset, length * 0.3);
+  const ox = length ? -dy / length * side : 0;
+  const oy = length ? dx / length * side : 0;
+  return `M${from.x + dx / length * pad + ox},${from.y + dy / length * pad + oy} L${to.x - dx / length * pad + ox},${to.y - dy / length * pad + oy}`;
+}
+function renderTargets() {
+  const markers = ["ally", "enemy"].map((team) => `<marker id="arrow-${team}" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="${team === "ally" ? "#edc47c" : "#89d0eb"}"/></marker>`).join("");
+  $("#target-overlay").innerHTML = `<defs>${markers}</defs>` + view.units.map((u) => {
+    const to = targetPoint(u);
+    if (!to || u.stunned) return "";
+    return `<path class="target-ray ${u.team} ${u.range > 1 ? "ranged" : ""} ${u.key === selected ? "focused" : ""}" data-origin="${u.key}" data-target="${u.target}" d="${ray(unitPoint(u), to, 34, 7)}" marker-end="url(#arrow-${u.team})"><title>${esc(cardName(u.id) + "：" + targetDescription(u))}</title></path>`;
+  }).join("");
+}
+async function animateCombat() {
+  const shots = view.units.filter((u) => u.target && !u.stunned).map((u) => ({
+    from: unitPoint(u), to: targetPoint(u), team: u.team, actor: u.key, ranged: u.range > 1,
+  }));
+  for (const fort of view.forts) {
+    const victim = view.units.find((u) => u.key === fort.target);
+    if (fort.ready && fort.attack && victim) shots.push({
+      from: fortPoint(fort.team === 0 ? "AF" : "BF", victim.col), to: unitPoint(victim),
+      team: fort.team === 0 ? "ally" : "enemy", ranged: true,
+    });
+  }
+  $(".board-frame").classList.add("is-fighting");
+  $("#battle-effects").innerHTML = shots.filter((s) => s.to).map((s) => {
+    const path = ray(s.from, s.to, 15);
+    if (s.actor && !reducedMotion()) {
+      const cell = $(`.cell[data-unit="${s.actor}"]`);
+      const dx = Math.sign(s.to.x - s.from.x) * 7, dy = Math.sign(s.to.y - s.from.y) * 7;
+      cell?.animate([{ transform: "translate(0,0)" }, { transform: `translate(${dx}px,${dy}px)`, offset: 0.45 }, { transform: "translate(0,0)" }], { duration: 550 });
+    }
+    return `<path class="combat-trail ${s.team}" d="${path}" pathLength="1"/><circle class="combat-impact ${s.team}" cx="${s.to.x}" cy="${s.to.y}" r="19"/>${!s.ranged ? `<path class="combat-slash ${s.team}" d="M${s.to.x - 18},${s.to.y + 21} L${s.to.x + 18},${s.to.y - 21} M${s.to.x - 4},${s.to.y + 22} L${s.to.x + 25},${s.to.y - 8}"/>` : !reducedMotion() ? `<circle class="combat-projectile ${s.team}" r="5"><animateMotion dur="0.55s" path="${path}" fill="freeze"/></circle>` : ""}`;
+  }).join("");
+  await delay(620);
+  $("#battle-effects").innerHTML = "";
+  $(".board-frame").classList.remove("is-fighting");
+}
+async function animateFissure(previous, command) {
+  let caster = previous?.units.find((u) => u.key === command?.actor && command.kind === "stun");
+  let dr = command?.dr, dc = command?.dc;
+  if (!caster) {
+    caster = previous?.units.find((u) => u.id === 10033 && u.cooldown === 0 && view.units.some((v) => v.key === u.key && v.cooldown === 4));
+    const victim = view.units.find((u) => u.stunned && previous?.units.some((v) => v.key === u.key && !v.stunned));
+    if (!caster || !victim) return false;
+    dr = Math.sign(victim.row - caster.row); dc = Math.sign(victim.col - caster.col);
+  }
+  const cells = [1, 2].map((n) => ({ row: caster.row + dr * n, col: caster.col + dc * n }))
+    .filter((p) => p.row >= 0 && p.row < 8 && p.col >= 0 && p.col < 6);
+  if (!cells.length) return false;
+  const start = unitPoint(caster), end = unitPoint(cells.at(-1));
+  const dx = end.x - start.x, dy = end.y - start.y, length = Math.hypot(dx, dy);
+  const crack = Array.from({ length: 13 }, (_, i) => {
+    const offset = i === 0 || i === 12 ? 0 : i % 2 ? 10 : -10;
+    return `${i ? "L" : "M"}${start.x + dx * i / 12 - dy / length * offset},${start.y + dy * i / 12 + dx / length * offset}`;
+  }).join(" ");
+  $("#battle-effects").innerHTML = cells.map((p) => `<rect class="fissure-tile" x="${p.col * 100 + 4}" y="${p.row * 100 + 4}" width="92" height="92" rx="4"/>`).join("") + `<path class="fissure-ridge" d="${crack}"/><path class="fissure-crack" d="${crack}" pathLength="1"/>`;
+  await delay(720);
+  $("#battle-effects").innerHTML = "";
+  return true;
+}
 function renderBoard(previous) {
   if (!view) return;
   const cells = [];
@@ -179,17 +249,7 @@ function renderBoard(previous) {
           u.stunned ? "stunned" : "",
           focus?.target === u.key ? "current-target" : "",
         );
-        content = `<img class="unit-art" src="${image(u.id)}" alt=""><span class="unit-vignette"></span><span class="allegiance"></span>${u.hero ? pip(u.id) : ""}<span class="unit-stats">${stats(u)}</span>${u.armor ? `<span class="armor-badge">${icon("shield")}${u.armor}</span>` : ""}${u.stunned ? '<span class="stun-badge">✦</span>' : ""}`;
-        if (u.key === selected && u.arrow && !mode) {
-          const rotations = { "↑": 0, "↓": 180, "←": -90, "→": 90 };
-          const positions = {
-            "↑": "left:calc(50% - 5px);top:-10px",
-            "↓": "left:calc(50% - 5px);top:calc(100% - 7px)",
-            "←": "left:-9px;top:calc(50% - 9px)",
-            "→": "left:calc(100% - 1px);top:calc(50% - 9px)",
-          };
-          content += `<span class="intent" style="${positions[u.arrow]};transform:rotate(${rotations[u.arrow]}deg)">${icon("arrow")}</span>`;
-        }
+        content = `<img class="unit-art" src="${image(u.id)}" alt=""><span class="unit-vignette"></span><span class="allegiance"></span>${u.hero ? pip(u.id) : ""}<span class="unit-stats">${stats(u)}</span>${u.armor ? `<span class="armor-badge">${icon("shield")}${u.armor}</span>` : ""}${u.stunned ? '<span class="stun-badge">晕</span>' : ""}`;
       }
       const possible = targetAt(row, col);
       if (possible.length)
@@ -218,16 +278,17 @@ function renderBoard(previous) {
         if (dead)
           content += `<span class="death-marker"><img src="${image(dead.id)}" alt=""><b>阵亡</b></span>`;
       }
-      const label = `第${row + 1}排第${col + 1}列${u ? `，${u.team === "ally" ? "我方" : "敌方"}${cardName(u.id)}，攻击${u.attack}，生命${u.hp}${u.stunned ? "，眩晕" : ""}` : "，空位"}`;
+      const label = `第${row + 1}排第${col + 1}列${u ? `，${u.team === "ally" ? "我方" : "敌方"}${cardName(u.id)}，攻击${u.attack}，生命${u.hp}${u.stunned ? "，眩晕" : ""}，${targetDescription(u)}` : "，空位"}`;
       cells.push(
         `<button class="${classes.filter(Boolean).join(" ")}" data-row="${row}" data-col="${col}" ${u ? `data-unit="${u.key}" data-team="${u.team}" aria-pressed="${u.key === selected}"` : ""} aria-label="${label}">${content}</button>`,
       );
     }
   $("#board").innerHTML = cells.join("");
+  renderTargets();
 }
 function renderUnit() {
   const u = selectedUnit();
-  if (mode) {
+  if (mode && mode.kind !== "move") {
     const id = mode.choices[0].card_id || u?.id || 10020;
     $("#unit-panel").innerHTML =
       `<img class="selected-portrait" src="${image(id)}" alt=""><div class="target-instructions" role="status"><b>选择${mode.kind === "move" ? "移动位置" : "目标"}</b><span>${esc(mode.hint)}</span></div><button class="cancel-target" data-action="cancel">取消</button>`;
@@ -245,9 +306,9 @@ function renderUnit() {
   let controls =
     '<button class="view-unit-button" data-action="detail">查看详情</button>';
   if (mine)
-    controls = `<div class="unit-actions"><button class="action-button ${mode?.kind === "move" ? "active" : ""}" data-action="move" ${move.length ? "" : "disabled"} aria-label="${u.moved ? "本回合已移动" : "移动"}">${icon("move")}<span>${u.moved ? "已移动" : "移动"}</span></button><button class="action-button ${mode?.kind === "skill" ? "active" : ""}" data-action="skill" ${skill.length ? "" : "disabled"} aria-label="${meta?.skill || "无主动技能"}">${u.cooldown ? `<small class="cooldown">${u.cooldown}</small>` : ""}${icon("fissure")}<span>${meta?.skill || "被动"}</span></button><button class="action-button" data-action="equipment">${icon("shield")}<span>装备${u.equipment.length ? ` ${u.equipment.length}` : ""}</span></button></div>`;
+    controls = `<div class="unit-actions"><button class="action-button ${mode?.kind === "move" ? "active" : ""}" data-action="move" ${move.length ? "" : "disabled"} aria-label="${mode?.kind === "move" ? "取消" : u.moved ? "本回合已移动" : "移动"}">${icon("move")}<span>${mode?.kind === "move" ? "取消" : u.moved ? "已移动" : "移动"}</span></button><button class="action-button ${mode?.kind === "skill" ? "active" : ""}" data-action="skill" ${skill.length ? "" : "disabled"} aria-label="${meta?.skill || "无主动技能"}">${u.cooldown ? `<small class="cooldown">${u.cooldown}</small>` : ""}${icon("fissure")}<span>${meta?.skill || "被动"}</span></button><button class="action-button" data-action="equipment">${icon("shield")}<span>装备${u.equipment.length ? ` ${u.equipment.length}` : ""}</span></button></div>`;
   $("#unit-panel").innerHTML =
-    `<button class="selected-portrait ${u.row === null ? "dead-portrait" : ""}" data-action="detail" aria-label="查看${cardName(u.id)}详情"><img src="${image(u.id)}" alt=""></button><div class="unit-summary"><div class="unit-name">${u.hero ? pip(u.id) : ""}${cardName(u.id)}</div><div class="summary-stats">${u.row === null ? `<span class="return-label">第 ${u.due} 回合登场</span>` : stats(u)}</div></div>${controls}`;
+    `<button class="selected-portrait ${u.row === null ? "dead-portrait" : ""}" data-action="detail" aria-label="查看${cardName(u.id)}详情"><img src="${image(u.id)}" alt=""></button><div class="unit-summary"><div class="unit-name">${u.hero ? pip(u.id) : ""}${cardName(u.id)}</div><div class="summary-stats">${mode?.kind === "move" ? `<span class="move-hint">${u.firstMove ? "首次可走两格" : "点高亮格移动"}</span>` : u.row === null ? `<span class="return-label">第 ${u.due} 回合登场</span>` : stats(u)}</div></div>${controls}`;
 }
 function unavailableReason(id, isItem, index) {
   if (view.phase !== "action")
@@ -331,6 +392,8 @@ function render(previous) {
     el.querySelector(".fort-caption").textContent =
       `${f.team === 0 ? "我" : "敌"}${f.stage === "tower" ? "塔" : "基地"}`;
     el.classList.toggle("fort-immune", !f.ready);
+    const old = previous?.forts.find((p) => p.team === f.team);
+    el.classList.toggle("fort-hit", !!old && (old.hp > f.hp || old.stage !== f.stage));
     el.setAttribute(
       "aria-label",
       `${f.team === 0 ? "我方" : "敌方"}${f.stage === "tower" ? "防御塔" : "基地"}，生命${f.hp}，攻击${f.attack}${f.ready ? "" : "，下回合激活"}`,
@@ -498,7 +561,7 @@ function unitAction(kind) {
         "skill",
         choices,
         u.id === 10033
-          ? "沟壑 · 八向选一，直线前两格"
+          ? "沟壑 · 直线两格，2 点普通伤害并眩晕"
           : `${HEROES[u.id].skill} · 选择目标`,
       );
   }
@@ -512,7 +575,7 @@ function cellClick(row, col) {
   if (!view) return;
   if (busy) return;
   const u = view.units.find((x) => x.row === row && x.col === col);
-  if (mode) {
+  if (mode && !(mode.kind === "move" && u)) {
     const choices = targetAt(row, col);
     if (choices.length) {
       mode = null;
@@ -521,7 +584,13 @@ function cellClick(row, col) {
     return;
   }
   if (u) {
+    const cancel = mode?.kind === "move" && selected === u.key;
+    mode = null;
     selected = u.key;
+    if (!cancel && u.team === "ally" && u.hero && actionFor("move", u.key).length) {
+      setMode("move", actionFor("move", u.key), u.firstMove ? "首次移动 · 最多两格，不能穿过单位" : "移动 · 选择相邻空格");
+      return;
+    }
     renderBoard();
     renderUnit();
   }
@@ -556,7 +625,7 @@ function showLog() {
 }
 function showHelp() {
   openDetail(
-    `<h2 id="detail-title" class="detail-heading">单路战场</h2><div class="help-copy"><p><b>行动：</b>打牌、移动英雄、使用技能、穿戴或使用装备，每次占一个行动，随后由对手回应。普通攻击自动进行，无需手动选择攻击。</p><p><b>交战：</b>双方连续让过后，所有单位与建筑同时结算攻击。交战后可查看损伤，点击“下一回合”继续。</p><p><b>移动：</b>英雄每回合移动一次，平时八邻一格；从泉水出生／返场后的首次移动最多两格，不能穿过单位。小兵自动向前推进。</p><p><b>出牌：</b>普通牌需要对应颜色英雄在场；眩晕仍提供颜色。法力每回合刷新并增加一点，最高 10。</p><p><b>金币：</b>无工资，敌方小兵死亡 +1，英雄死亡 +5。物品花金币；开局发一张，此后每三回合再发一张。</p><p><b>装备：</b>武器、护甲、饰品各一件，同类替换。主动效果不花资源，有冷却，阵亡后装备保留。</p><p><b>胜负：</b>先摧毁 40 血防御塔，再摧毁同位置的 80 血基地。基地下一回合激活。塔攻击 4，基地攻击 8；进入敌方泉水会受到 10 点范围伤害。</p><p>当前固定阵容与候选牌池，双方交替获得每回合先手。右上角可查看记录和导出本局。</p></div>`,
+    `<h2 id="detail-title" class="detail-heading">单路战场</h2><div class="help-copy"><p><b>行动：</b>打牌、移动英雄、使用技能、穿戴或使用装备，每次占一个行动，随后由对手回应。普通攻击自动进行，无需手动选择攻击。</p><p><b>交战：</b>双方连续让过后，所有单位与建筑同时结算攻击。交战后可查看损伤，点击“下一回合”继续。</p><p><b>移动：</b>点己方英雄直接显示可移动格，可随时改选技能或装备；取消不占行动。英雄每回合移动一次，平时八邻一格；从泉水出生／返场后的首次移动最多两格，不能穿过单位。小兵自动向前推进。</p><p><b>仇恨与箭头：</b>金色为我方，蓝色为敌方；远程虚线指向具体目标。英雄优先保持仍在射程内的旧目标，否则选择四向最近的敌人，同距离按固定顺序；没有单位可打时才攻击建筑。英雄不自动保护转火，这条只作用于小兵和建筑。</p><p><b>出牌：</b>普通牌需要对应颜色英雄在场；眩晕仍提供颜色。法力每回合刷新并增加一点，最高 10。</p><p><b>金币：</b>无工资，敌方小兵死亡 +1，英雄死亡 +5。物品花金币；开局发一张，此后每三回合再发一张。</p><p><b>装备：</b>武器、护甲、饰品各一件，同类替换。主动效果不花资源，有冷却，阵亡后装备保留。</p><p><b>胜负：</b>先摧毁 40 血防御塔，再摧毁同位置的 80 血基地。基地下一回合激活。塔攻击 4，基地攻击 8；进入敌方泉水会受到 10 点范围伤害。</p><p>当前固定阵容与候选牌池，双方交替获得每回合先手。右上角可查看记录和导出本局。</p></div>`,
   );
 }
 function showResult() {
@@ -601,17 +670,21 @@ function confirmConcede() {
     `<h2 id="detail-title" class="detail-heading">认输并结束本局？</h2><p class="sheet-note">本局会记为失利，仍可查看和导出对局记录。</p><button class="detail-action" id="confirm-concede">确认认输</button><button class="quiet-button" id="keep-playing">继续战斗</button>`,
   );
 }
-async function applyPacket(packet, animate = false) {
+async function applyPacket(packet, animate = false, command = null) {
   gameId = packet.game_id;
   rememberId(gameId);
   mode = null;
   if (animate)
-    for (const frame of packet.frames) {
+    for (const [index, frame] of packet.frames.entries()) {
       const previous = view;
       view = { ...packet.state, ...frame, actions: [] };
       render(previous);
       toast(frame.label);
-      await delay(frame.phase === "combat" ? 700 : 330);
+      if (frame.phase === "combat") await animateCombat();
+      else {
+        const fissure = await animateFissure(previous, index === 0 ? command : null);
+        if (!fissure) await delay(previous?.phase === "combat" ? 1100 : 330);
+      }
     }
   const previous = view;
   view = packet.state;
@@ -623,6 +696,7 @@ async function applyPacket(packet, animate = false) {
 }
 async function perform(id) {
   if (busy || !view) return;
+  const command = view.actions.find((a) => a.id === id);
   clearTimeout(toastTimer);
   $("#toast").hidden = true;
   busy = true;
@@ -634,7 +708,7 @@ async function perform(id) {
       version: view.version,
       action_id: id,
     });
-    if (sequence === requestSequence) await applyPacket(packet, true);
+    if (sequence === requestSequence) await applyPacket(packet, true, command);
   } catch (error) {
     try {
       if (gameId) {
