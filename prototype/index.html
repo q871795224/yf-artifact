@@ -7,16 +7,18 @@
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
     <meta name="theme-color" content="#181d20" />
-    <title>单路 · 战场</title>
+    <title>V0.2 · 单路战场</title>
     <link
       rel="icon"
       href="../references/artifact-classic/assets/mobile/ingame_image/10020.webp"
     />
-    <link rel="stylesheet" href="style.css?v=3" />
+    <link rel="stylesheet" href="style.css?v=0.2" />
     <script src="cards.js" defer></script>
-    <script src="runtime-config.js" defer></script>
-    <script src="engine-client.js?v=3" defer></script>
-    <script src="app.js?v=3" defer></script>
+    <script src="runtime-config.js?v=0.2" defer></script>
+    <script src="engine-client.js?v=0.2" defer></script>
+    <script src="effects.js?v=0.2" defer></script>
+    <script src="game-effects.js?v=0.2" defer></script>
+    <script src="app.js?v=0.2" defer></script>
   </head>
   <body>
     <svg
@@ -156,11 +158,11 @@
         </button>
       </header>
 
-      <section class="battlefield" aria-label="六列八排战场">
+      <section class="battlefield" aria-label="五列八排战场">
         <div class="board-frame">
           <div class="board" id="board" role="group" aria-label="棋盘"></div>
-          <svg class="board-overlay target-overlay" id="target-overlay" viewBox="0 0 600 800" preserveAspectRatio="none" aria-hidden="true"></svg>
-          <svg class="board-overlay battle-effects" id="battle-effects" viewBox="0 0 600 800" preserveAspectRatio="none" aria-hidden="true"></svg>
+          <svg class="board-overlay target-overlay" id="target-overlay" viewBox="0 0 500 800" preserveAspectRatio="none" aria-hidden="true"></svg>
+          <svg class="board-overlay battle-effects" id="battle-effects" viewBox="0 0 500 800" preserveAspectRatio="none" aria-hidden="true"></svg>
           <span class="tower-mark tower-mark-top" aria-hidden="true"
             ><svg><use href="#i-tower" /></svg
           ></span>
