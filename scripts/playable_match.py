@@ -14,6 +14,9 @@ from simulate_match import CARDS
 from simulate_heroes import EIGHT, ARROWS, distance, valid
 
 
+RELEASE_VERSION = '0.2'
+BOARD_COLUMNS = 5
+
 PLAYER_ROSTER = (10020, 10033, 10014)
 ENEMY_ROSTER = (10069, 10064, 10047)
 SKILLS = {"stun": "沟壑", "chen": "神圣劝化", "lion": "死亡之指",
@@ -49,7 +52,7 @@ def legal_actions(game, team=0):
         if hero.cd == 0:
             if hero.hero == 10033:
                 for dr, dc in EIGHT:
-                    if any(valid((hero.pos[0]+dr*n, hero.pos[1]+dc*n)) for n in (1, 2)):
+                    if any(valid((hero.pos[0]+dr*n, hero.pos[1]+dc*n), game.columns) for n in (1, 2)):
                         add('stun', hero.uid, f'{dr},{dc}')
             elif hero.hero in (10017, 10060):
                 for foe in foes:
@@ -110,21 +113,21 @@ def legal_actions(game, team=0):
             targets = ['ticket']
         elif item == 3006:
             occupied = {u.pos for u in game.field()}
-            if any((7 if team == 0 else 0, c) not in occupied for c in range(6)):
+            if any((7 if team == 0 else 0, c) not in occupied for c in range(game.columns)):
                 targets = [h.uid for h in heroes]
         for target in targets:
             add('item', index, target)
     return result
 
 
-def action_view(game, action, version):
+def action_view(game, action, version, team=0):
     _, kind, actor, target = action
     key = f'{version}:{kind}:{actor}:{target}'
     view = {'id': hashlib.sha256(key.encode()).hexdigest()[:20],
-            'kind': kind, 'actor': actor, 'target': target}
+            'kind': kind, 'actor': actor, 'target': target, 'team': team}
     if kind in ('card', 'item'):
         index = int(actor)
-        card_id = game.hand[0][index] if kind == 'card' else game.item_hand[0][index][0]
+        card_id = game.hand[team][index] if kind == 'card' else game.item_hand[team][index][0]
         view.update(index=index, card_id=card_id)
     if kind in ('move', 'horn') or (kind == 'card' and ',' in target):
         view['row'], view['col'] = map(int, target.split(','))
@@ -136,7 +139,7 @@ def action_view(game, action, version):
 class PlaySession:
     def __init__(self, seed=13):
         self.seed = seed
-        self.game = FinisherMatch(PLAYER_ROSTER, ENEMY_ROSTER, seed, 4, True, trace=True)
+        self.game = FinisherMatch(PLAYER_ROSTER, ENEMY_ROSTER, seed, 4, True, trace=True, columns=BOARD_COLUMNS)
         self.version = 0
         self.phase = 'action'
         self.side = 0
@@ -206,10 +209,12 @@ class PlaySession:
         choices = self.game.actions(1)
         if choices:
             action = max(choices, key=lambda a: (round(a[0], 8), a[1], a[2], a[3]))
+            visual = action_view(self.game, action, self.version, team=1)
             self.last_label = self._describe(action, 1)
             self.game.take_action(action, 1)
             self.passes = 0
         else:
+            visual = None
             self.last_label = '敌方让过'
             self.game.record('B让过')
             self.passes += 1
@@ -218,7 +223,7 @@ class PlaySession:
         self._drain_events()
         self._finish_if_needed()
         self.side = 0
-        frames.append(self._frame(self.last_label))
+        frames.append(self._frame(self.last_label, action=visual))
         if self.passes == 2 and self.phase != 'finished':
             self._combat(frames)
 
@@ -260,19 +265,21 @@ class PlaySession:
         if action_id != 'pass' and action_id not in choices:
             raise InvalidAction('该操作现在不可用，请重新选择目标。')
         frames = []
+        visual = None
         if action_id == 'pass':
             self.passes += 1
             self.last_label = '我方让过'
             self.game.record('A让过')
         else:
             action = choices[action_id]
+            visual = action_view(self.game, action, self.version)
             self.last_label = self._describe(action, 0)
             self.game.take_action(action, 0)
             self.passes = 0
         self.game.check()
         self._drain_events()
         self._finish_if_needed()
-        frames.append(self._frame(self.last_label))
+        frames.append(self._frame(self.last_label, action=visual))
         if self.phase != 'finished':
             if self.passes == 2:
                 self._combat(frames)
@@ -302,9 +309,10 @@ class PlaySession:
                 'regeneration': self.game.regeneration(u) if u.pos else 0,
                 'target': target.uid if target else fort.uid if fort else None, 'arrow': arrow}
 
-    def _frame(self, label, phase=None):
+    def _frame(self, label, phase=None, action=None):
         g = self.game
         return {'round': g.round, 'phase': phase or self.phase, 'label': label,
+                'release': RELEASE_VERSION, 'columns': g.columns, 'rows': 8, 'action': action,
                 'units': [self._unit_view(u) for u in g.field()],
                 'heroes': [self._unit_view(u) for u in g.units if u.hero],
                 'mana': g.mana[0], 'maxMana': min(10, g.round), 'gold': g.gold[0],
@@ -330,7 +338,7 @@ class PlaySession:
         return {'state': self.snapshot(), 'frames': frames or []}
 
     def export(self):
-        return {'schema_version': 1, 'seed': self.seed, 'rosters': [list(r) for r in self.game.rosters],
+        return {'schema_version': 1, 'release': RELEASE_VERSION, 'columns': self.game.columns, 'seed': self.seed, 'rosters': [list(r) for r in self.game.rosters],
                 'commands': deepcopy(self.commands), 'round': self.game.round,
                 'phase': self.phase, 'winner': self.game.winner, 'reason': self.game.end_reason,
                 'events': deepcopy(self.log)}

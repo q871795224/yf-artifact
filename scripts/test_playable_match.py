@@ -60,7 +60,7 @@ class PlayableTests(unittest.TestCase):
         h = unit('hero', 0, 10020, (7, 2))
         s.game.units = [h]
         self.assertIn((0, 'move', 'hero', '5,2'), legal_actions(s.game))
-        s.game.units += [unit(f'c{col}', 0, 1006, (6, col)) for col in range(6)]
+        s.game.units += [unit(f'c{col}', 0, 1006, (6, col)) for col in range(5)]
         self.assertNotIn((0, 'move', 'hero', '5,2'), legal_actions(s.game))
 
     def test_human_can_choose_every_spell_target_not_only_ai_best(self):
@@ -214,12 +214,60 @@ class PlayableTests(unittest.TestCase):
             else:
                 key = 'pass'
             s.apply(s.version, key)
-        # Golden replay updated after Fissure gained two armor-reduced damage.
-        self.assertEqual((s.phase, s.game.round, s.game.winner), ('finished', 16, 1))
+        # V0.2's five-column golden replay reaches base destruction in round 18.
+        self.assertEqual((s.phase, s.game.round, s.game.winner), ('finished', 18, 1))
         replay = PlaySession(13)
         for command in s.export()['commands']:
             replay.apply(command['version'], command['action_id'])
         self.assertEqual(s.snapshot(), replay.snapshot())
+
+    def test_release_uses_five_columns_for_opening_movement_and_spawning(self):
+        s = PlaySession(13)
+        self.assertEqual((s.snapshot()['release'], s.snapshot()['columns']), ('0.2', 5))
+        self.assertTrue(all(0 <= u.pos[1] < 5 for u in s.game.field()))
+        self.assertTrue(all(0 <= c < 5 for h in s.game.field(0) if h.hero for r, c in s.game.reachable(h)))
+        self.assertTrue(all(0 <= c < 5 for r, c in s.game.spawn_positions(0)))
+        s.game.units[0].pos = (4, 5)
+        with self.assertRaisesRegex(AssertionError, 'Invalid position'):
+            s.game.check()
+
+    def test_returning_hero_replaces_a_creep_in_a_full_five_cell_fountain(self):
+        s = empty_session()
+        h = unit('hero', 0, 10020, None)
+        h.equipment['Weapon'] = 10263
+        creeps = [unit(f'creep{c}', 0, 1006, (7, c)) for c in range(5)]
+        creeps[4].hp = 1
+        s.game.units = [h, *creeps]
+        s.game.spawn_hero(h)
+        self.assertEqual(h.pos, (7, 4))
+        self.assertEqual(h.equipment['Weapon'], 10263)
+        self.assertEqual(s.game.gold[1], 1)
+        s.game.check()
+
+    def test_summoning_and_portal_do_not_use_a_sixth_column(self):
+        s = empty_session()
+        h = unit('hero', 0, 10033, (4, 4))
+        s.game.units = [h]
+        s.game.hand[0] = [10355]
+        s.apply(s.version, choose(s, 'card', '0', '5,4'))
+        self.assertEqual(sum(not u.hero for u in s.game.field(0)), 3)
+        self.assertTrue(all(0 <= u.pos[1] < 5 for u in s.game.field()))
+        s.game.item_hand[0] = [(3006, True)]
+        s.game.units = [h] + [unit(f'block{c}', 0, 1006, (7, c)) for c in range(5)]
+        self.assertFalse(any(a[1] == 'item' for a in legal_actions(s.game)))
+        s.game.units.pop()
+        s.apply(s.version, choose(s, 'item', '0', 'hero'))
+        self.assertEqual(h.pos, (7, 4))
+
+    def test_frames_identify_played_ai_cards_without_exposing_the_hand(self):
+        s = empty_session()
+        s.game.units = [unit('friendly', 0, 1006, (4, 2)), unit('enemy', 1, 10064, (3, 2))]
+        s.game.units[1].moved = True
+        s.game.hand[1] = [10402]
+        packet = s.apply(s.version, 'pass')
+        action = next(f['action'] for f in packet['frames'] if f.get('action'))
+        self.assertEqual((action['team'], action['kind'], action['card_id']), (1, 'card', 10402))
+        self.assertNotIn('hand', packet['state']['opponent'])
 
 
 if __name__ == '__main__':

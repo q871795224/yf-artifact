@@ -152,7 +152,7 @@ class ExpandedMatch(Match):
             for pos in self.reachable(h):
                 now = self.position_score(h, pos)
                 future = [pos] + [(pos[0]+dr, pos[1]+dc) for dr, dc in EIGHT
-                                  if valid((pos[0]+dr, pos[1]+dc)) and
+                                  if valid((pos[0]+dr, pos[1]+dc), self.columns) and
                                   ((pos[0]+dr, pos[1]+dc) not in occupied or (pos[0]+dr, pos[1]+dc) == h.pos)]
                 # One future step with a frozen board; not a full turn/opponent search.
                 potential = max(self.position_score(h, p) for p in future)

@@ -13,7 +13,7 @@ async function checkGameFeedback(page) {
   if (!(await page.locator(".reachable").count())) throw new Error("Hero click did not open movement");
   await page.locator('[data-action="skill"]').click();
   await page.locator(`.cell[data-row="${hero.row - 1}"][data-col="${hero.col}"]`).click();
-  await page.locator(".fissure-crack").waitFor({ state: "attached" });
+  await page.locator('[data-effect="fissure"]').waitFor({ state: "attached" });
   report.fissure = true;
   await page.waitForTimeout(150);
   await page.screenshot({ path: "output/playwright/feedback-fissure.png" });
@@ -22,7 +22,7 @@ async function checkGameFeedback(page) {
     await page.locator("#pass-button").click();
     await page.waitForFunction(() => view.phase === "combat" || !busy);
     if (await page.evaluate(() => view.phase === "combat")) {
-      if (!(await page.locator(".combat-trail").count())) throw new Error("Combat had no visible attacks");
+      if (!(await page.locator('[data-effect="melee"], [data-effect="projectile"], [data-effect="tower"]').count())) throw new Error("Combat had no visible attacks");
       report.combat = true;
       await page.waitForTimeout(150);
       await page.screenshot({ path: "output/playwright/feedback-combat.png" });

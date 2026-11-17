@@ -23,8 +23,8 @@ async function checkMobilePrototype(page) {
   await page.reload();
   await page.waitForFunction(() => view && !busy && view.version === 0);
   check(
-    (await page.locator(".cell").count()) === 48,
-    "The full 6×8 board renders",
+    (await page.locator(".cell").count()) === 40,
+    "The full 5×8 board renders",
   );
   check(
     (await page.locator(".cell.hero").count()) === 4,
@@ -134,7 +134,7 @@ async function checkMobilePrototype(page) {
       metrics.board.x >= 0 &&
         metrics.board.x + metrics.board.width <= width &&
         metrics.board.y + metrics.board.height <= height,
-      `All 48 cells remain visible at ${width}×${height}`,
+      `All 40 cells remain visible at ${width}×${height}`,
     );
     check(
       metrics.cellWidth >= 30 && metrics.footerBottom <= height + 1,

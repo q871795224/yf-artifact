@@ -32,8 +32,8 @@ def distance(a, b):
     return max(abs(a[0] - b[0]), abs(a[1] - b[1]))
 
 
-def valid(pos):
-    return 0 <= pos[0] < 8 and 0 <= pos[1] < 6
+def valid(pos, columns=6):
+    return 0 <= pos[0] < 8 and 0 <= pos[1] < columns
 
 
 def roster_kind(roster):
@@ -96,9 +96,12 @@ class Unit:
 
 
 class Game:
-    def __init__(self, roster_a, roster_b, seed=11, probes=False, trace=False, targeting="aggro"):
+    def __init__(self, roster_a, roster_b, seed=11, probes=False, trace=False, targeting="aggro", columns=6):
         if targeting not in ("arrows", "aggro"):
             raise ValueError(f"Unknown targeting rule: {targeting}")
+        if columns not in (5, 6):
+            raise ValueError("Board must have five or six columns")
+        self.columns = columns
         self.targeting = targeting
         self.seed = seed
         self.probes = probes
@@ -113,7 +116,7 @@ class Game:
         self.first_spell = [False, False]
         self.frames = []
         self.events = []
-        columns = self.rng("opening").sample(range(6), 4)
+        columns = self.rng("opening").sample(range(self.columns), 4)
         for team, roster in enumerate(self.rosters):
             ordered = sorted(roster)
             offset = seed % 3
@@ -151,7 +154,7 @@ class Game:
     def check(self):
         field = self.field()
         assert len({u.pos for u in field}) == len(field), "Overlapping units"
-        assert all(valid(u.pos) and 0 < u.hp <= u.max_hp for u in field), "Invalid position or HP"
+        assert all(valid(u.pos, self.columns) and 0 < u.hp <= u.max_hp for u in field), "Invalid position or HP"
         assert all(len(self.field(t)) <= 24 for t in (0, 1)), "Team unit cap exceeded"
 
     def attack(self, unit, pos=None):
@@ -222,7 +225,7 @@ class Game:
     def spawn_hero(self, unit):
         occupied = {u.pos: u for u in self.field()}
         row = 7 if unit.team == 0 else 0
-        candidates = [(row, c) for c in self.rng("hero-birth").sample(range(6), 6)]
+        candidates = [(row, c) for c in self.rng("hero-birth").sample(range(self.columns), self.columns)]
         free = next((p for p in candidates if p not in occupied), None)
         replaceable = [occupied[p] for p in candidates if p in occupied and occupied[p].team == unit.team and not occupied[p].hero]
         if free is None:
@@ -252,7 +255,7 @@ class Game:
             for unit in list(self.units):
                 if unit.hero and unit.pos is None and unit.due <= self.round:
                     self.spawn_hero(unit)
-            preferred = self.rng("creep-birth").sample(range(6), 6)
+            preferred = self.rng("creep-birth").sample(range(self.columns), self.columns)
             for team in (0, 1):
                 for slot in range(2):
                     occupied = {u.pos for u in self.field()}
@@ -290,7 +293,7 @@ class Game:
                     for pos in choices:
                         blocker = occupied.get(pos)
                         vacates = blocker and blocker.team == team and blocker.uid in intents
-                        if valid(pos) and (blocker is None or vacates):
+                        if valid(pos, self.columns) and (blocker is None or vacates):
                             intents[unit.uid] = pos
                             break
             groups = defaultdict(list)
@@ -335,7 +338,7 @@ class Game:
             for r, c in frontier:
                 for dr, dc in EIGHT:
                     p = (r+dr, c+dc)
-                    if valid(p) and p not in occupied and p not in visited:
+                    if valid(p, self.columns) and p not in occupied and p not in visited:
                         new.add(p)
             visited.update(new)
             frontier = new

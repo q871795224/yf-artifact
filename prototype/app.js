@@ -155,7 +155,7 @@ function targetAt(row, col) {
   });
 }
 const unitPoint = (u) => ({ x: (u.col + 0.5) * 100, y: (u.row + 0.5) * 100 });
-const fortPoint = (key, col = 2.5) => ({ x: (col + 0.5) * 100, y: key === "AF" ? 700 : 100 });
+const fortPoint = (key, col = 2) => ({ x: (col + 0.5) * 100, y: key === "AF" ? 700 : 100 });
 function targetPoint(u) {
   const target = view.units.find((v) => v.key === u.target);
   return target ? unitPoint(target) : ["AF", "BF"].includes(u.target) ? fortPoint(u.target, u.col) : null;
@@ -176,60 +176,14 @@ function renderTargets() {
     return `<path class="target-ray ${u.team} ${u.range > 1 ? "ranged" : ""} ${u.key === selected ? "focused" : ""}" data-origin="${u.key}" data-target="${u.target}" d="${ray(unitPoint(u), to, 34, 7)}" marker-end="url(#arrow-${u.team})"><title>${esc(cardName(u.id) + "：" + targetDescription(u))}</title></path>`;
   }).join("");
 }
-async function animateCombat() {
-  const shots = view.units.filter((u) => u.target && !u.stunned).map((u) => ({
-    from: unitPoint(u), to: targetPoint(u), team: u.team, actor: u.key, ranged: u.range > 1,
-  }));
-  for (const fort of view.forts) {
-    const victim = view.units.find((u) => u.key === fort.target);
-    if (fort.ready && fort.attack && victim) shots.push({
-      from: fortPoint(fort.team === 0 ? "AF" : "BF", victim.col), to: unitPoint(victim),
-      team: fort.team === 0 ? "ally" : "enemy", ranged: true,
-    });
-  }
-  $(".board-frame").classList.add("is-fighting");
-  $("#battle-effects").innerHTML = shots.filter((s) => s.to).map((s) => {
-    const path = ray(s.from, s.to, 15);
-    if (s.actor && !reducedMotion()) {
-      const cell = $(`.cell[data-unit="${s.actor}"]`);
-      const dx = Math.sign(s.to.x - s.from.x) * 7, dy = Math.sign(s.to.y - s.from.y) * 7;
-      cell?.animate([{ transform: "translate(0,0)" }, { transform: `translate(${dx}px,${dy}px)`, offset: 0.45 }, { transform: "translate(0,0)" }], { duration: 550 });
-    }
-    return `<path class="combat-trail ${s.team}" d="${path}" pathLength="1"/><circle class="combat-impact ${s.team}" cx="${s.to.x}" cy="${s.to.y}" r="19"/>${!s.ranged ? `<path class="combat-slash ${s.team}" d="M${s.to.x - 18},${s.to.y + 21} L${s.to.x + 18},${s.to.y - 21} M${s.to.x - 4},${s.to.y + 22} L${s.to.x + 25},${s.to.y - 8}"/>` : !reducedMotion() ? `<circle class="combat-projectile ${s.team}" r="5"><animateMotion dur="0.55s" path="${path}" fill="freeze"/></circle>` : ""}`;
-  }).join("");
-  await delay(620);
-  $("#battle-effects").innerHTML = "";
-  $(".board-frame").classList.remove("is-fighting");
-}
-async function animateFissure(previous, command) {
-  let caster = previous?.units.find((u) => u.key === command?.actor && command.kind === "stun");
-  let dr = command?.dr, dc = command?.dc;
-  if (!caster) {
-    caster = previous?.units.find((u) => u.id === 10033 && u.cooldown === 0 && view.units.some((v) => v.key === u.key && v.cooldown === 4));
-    const victim = view.units.find((u) => u.stunned && previous?.units.some((v) => v.key === u.key && !v.stunned));
-    if (!caster || !victim) return false;
-    dr = Math.sign(victim.row - caster.row); dc = Math.sign(victim.col - caster.col);
-  }
-  const cells = [1, 2].map((n) => ({ row: caster.row + dr * n, col: caster.col + dc * n }))
-    .filter((p) => p.row >= 0 && p.row < 8 && p.col >= 0 && p.col < 6);
-  if (!cells.length) return false;
-  const start = unitPoint(caster), end = unitPoint(cells.at(-1));
-  const dx = end.x - start.x, dy = end.y - start.y, length = Math.hypot(dx, dy);
-  const crack = Array.from({ length: 13 }, (_, i) => {
-    const offset = i === 0 || i === 12 ? 0 : i % 2 ? 10 : -10;
-    return `${i ? "L" : "M"}${start.x + dx * i / 12 - dy / length * offset},${start.y + dy * i / 12 + dx / length * offset}`;
-  }).join(" ");
-  $("#battle-effects").innerHTML = cells.map((p) => `<rect class="fissure-tile" x="${p.col * 100 + 4}" y="${p.row * 100 + 4}" width="92" height="92" rx="4"/>`).join("") + `<path class="fissure-ridge" d="${crack}"/><path class="fissure-crack" d="${crack}" pathLength="1"/>`;
-  await delay(720);
-  $("#battle-effects").innerHTML = "";
-  return true;
-}
 function renderBoard(previous) {
   if (!view) return;
   const cells = [];
+  $(".game").style.setProperty("--board-columns", view.columns);
+  for (const layer of document.querySelectorAll(".board-overlay")) layer.setAttribute("viewBox", `0 0 ${view.columns * 100} 800`);
   const focus = selectedUnit();
   for (let row = 0; row < 8; row++)
-    for (let col = 0; col < 6; col++) {
+    for (let col = 0; col < view.columns; col++) {
       const u = view.units.find((u) => u.row === row && u.col === col);
       const classes = [
         "cell",
@@ -260,24 +214,6 @@ function renderBoard(previous) {
               ? "skill-range"
               : "targetable",
         );
-      const old = previous?.units.find((p) => p.key === u?.key);
-      if (u && previous) {
-        if (!old) classes.push("unit-arrived");
-        else if (old.hp !== u.hp) {
-          classes.push(u.hp < old.hp ? "unit-hit" : "unit-healed");
-          content += `<span class="hp-change ${u.hp < old.hp ? "loss" : "gain"}">${u.hp > old.hp ? "+" : ""}${u.hp - old.hp}</span>`;
-        }
-      }
-      if (!u && previous) {
-        const dead = previous.units.find(
-          (p) =>
-            p.row === row &&
-            p.col === col &&
-            !view.units.some((n) => n.key === p.key),
-        );
-        if (dead)
-          content += `<span class="death-marker"><img src="${image(dead.id)}" alt=""><b>阵亡</b></span>`;
-      }
       const label = `第${row + 1}排第${col + 1}列${u ? `，${u.team === "ally" ? "我方" : "敌方"}${cardName(u.id)}，攻击${u.attack}，生命${u.hp}${u.stunned ? "，眩晕" : ""}，${targetDescription(u)}` : "，空位"}`;
       cells.push(
         `<button class="${classes.filter(Boolean).join(" ")}" data-row="${row}" data-col="${col}" ${u ? `data-unit="${u.key}" data-team="${u.team}" aria-pressed="${u.key === selected}"` : ""} aria-label="${label}">${content}</button>`,
@@ -370,6 +306,9 @@ function render(previous) {
       !view.heroes.some((u) => u.key === selected))
   )
     selected = view.units.find((u) => u.team === "ally" && u.hero)?.key || null;
+  document.title = `V${view.release} · 单路战场`;
+  $(".game").dataset.release = view.release;
+  $(".prototype-note").textContent = `V${view.release} · ${view.columns} 列战场 · ${window.ArtifactAPI.browserMode ? "进度保存在此浏览器" : "本地试玩"}`;
   $("#round-label").textContent = `第 ${view.round} 回合`;
   $("#turn-text").textContent = busy
     ? "行动中"
@@ -674,18 +613,26 @@ async function applyPacket(packet, animate = false, command = null) {
   gameId = packet.game_id;
   rememberId(gameId);
   mode = null;
-  if (animate)
-    for (const [index, frame] of packet.frames.entries()) {
+  const sequence = requestSequence;
+  if (animate) {
+    const frames = packet.frames.length ? packet.frames : [packet.state];
+    for (const [index, frame] of frames.entries()) {
+      if (sequence !== requestSequence) return;
       const previous = view;
-      view = { ...packet.state, ...frame, actions: [] };
+      const next = { ...packet.state, ...frame, actions: [] };
+      if (frame.phase !== "combat") {
+        await window.ArtifactBattleFX.action(previous, next, frame.action || (index === 0 ? command : null));
+        await window.ArtifactBattleFX.deaths(previous, next);
+      }
+      if (sequence !== requestSequence) return;
+      view = next;
       render(previous);
       toast(frame.label);
-      if (frame.phase === "combat") await animateCombat();
-      else {
-        const fissure = await animateFissure(previous, index === 0 ? command : null);
-        if (!fissure) await delay(previous?.phase === "combat" ? 1100 : 330);
-      }
+      if (frame.phase === "combat") await window.ArtifactBattleFX.combat(view);
+      else if (!await window.ArtifactBattleFX.changes(previous, view)) await delay(120);
     }
+  }
+  if (sequence !== requestSequence) return;
   const previous = view;
   view = packet.state;
   busy = false;
@@ -933,7 +880,7 @@ document.addEventListener("keydown", (e) => {
 });
 if (window.ArtifactAPI.browserMode) {
   $("#board").innerHTML = Array.from(
-    { length: 48 },
+    { length: 40 },
     () => '<span class="cell" aria-hidden="true"></span>',
   ).join("");
 }

@@ -68,7 +68,7 @@ class Match(Game):
     item_ids = ITEMS
     gear_ids = GEAR
 
-    def __init__(self, a, b, seed=11, tower_attack=5, protection=False, trace=False):
+    def __init__(self, a, b, seed=11, tower_attack=5, protection=False, trace=False, columns=6):
         self.forts = [Fort(0), Fort(1)]
         self.tower_attack = tower_attack
         self.protection = protection
@@ -81,7 +81,7 @@ class Match(Game):
         self.item_hand = [[], []]  # (ID, already paid by Golden Ticket)
         self.improvements = [[], []]
         self.created = 0
-        super().__init__(a, b, seed, probes=False, trace=trace, targeting='aggro')
+        super().__init__(a, b, seed, probes=False, trace=trace, targeting='aggro', columns=columns)
         self.promote_units()
         for team, roster in enumerate(self.rosters):
             # Fixed 18-card experiment deck: each hero contributes two copies
@@ -206,7 +206,7 @@ class Match(Game):
         occupied = {u.pos for u in self.field()}
         heroes = [u for u in self.field(team) if u.hero]
         fountain = 7 if team == 0 else 0
-        return [(r,c) for r in range(8) for c in range(6) if (r,c) not in occupied
+        return [(r,c) for r in range(8) for c in range(self.columns) if (r,c) not in occupied
                 and (r == fountain or any(distance((r,c),h.pos) <= 1 for h in heroes))]
 
     def spawn_score(self, team, pos):
@@ -310,7 +310,7 @@ class Match(Game):
                 actions.append((5,'item',str(index),'ticket'))
             elif item == 3006:
                 occupied = {u.pos for u in self.field()}
-                free = any((7 if team == 0 else 0,c) not in occupied for c in range(6))
+                free = any((7 if team == 0 else 0,c) not in occupied for c in range(self.columns))
                 if free:
                     for h in heroes:
                         incoming = self.incoming_damage(h)
@@ -406,7 +406,7 @@ class Match(Game):
                 self.item_hand[team].append((choice,True))
             elif item==3006:
                 occupied={u.pos for u in self.field()};row=7 if team==0 else 0
-                target.pos=next((row,c)for c in range(6)if(row,c)not in occupied)
+                target.pos=next((row,c)for c in range(self.columns)if(row,c)not in occupied)
                 target.target_uid=None  # Retreat does not refresh its first-move bonus.
             self.record(f"{'AB'[team]}使用 {CARDS[item]['card_name']['schinese']} → {target_id}，消耗 {price} 金币；评分 {value:.2f}")
         self.cleanup();self.check_victory();self.refresh_targets()

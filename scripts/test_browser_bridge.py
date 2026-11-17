@@ -81,6 +81,10 @@ class StaticBuildTests(unittest.TestCase):
             self.assertFalse(list((out/'references/artifact-classic/assets').rglob('*.png')))
             self.assertTrue((out/'runtime-cache.js').is_file())
             self.assertFalse((out/'output').exists())
+            self.assertFalse((out/'effects-lab').exists())
+            self.assertEqual((out/'prototype/effects.js').read_text(), (ROOT/'prototype/effects.js').read_text())
+            self.assertTrue((out/'prototype/game-effects.js').is_file())
+            self.assertEqual(json.loads((out/'version.json').read_text())['release'], '0.2')
             self.assertTrue((out/'.nojekyll').is_file())
             self.assertEqual(build(out)['engine_version'], first['engine_version'])
 

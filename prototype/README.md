@@ -1,4 +1,6 @@
-# 手机单路战场试玩版
+# 手机单路战场 V0.2
+
+V0.2 使用五列八排战场，并接入与本地特效工作台共享的战斗效果。V0.1 为原六列正式试玩版本，保留在 Git 标签 `v0.1`。
 
 现在可以从第一回合手动操作，和 AI 完成一场拆塔、摧毁基地的对局。界面沿用已接受的深色石板与头像棋子设计，使用本地 Artifact Classic 原版图片；伤害、资源、技能和胜负直接由已有 Python 推演引擎计算。
 
@@ -24,7 +26,7 @@ python3 scripts/serve_prototype.py --open
 2. 点击己方英雄直接显示移动范围，也可切换英雄技能或装备；点击普通牌／物品查看效果并使用。每次操作后 AI 回应一次。
 3. 英雄平时移动八邻一格，每回合一次；出生／返场后的首次移动最多两格，路径不能穿过单位。小兵在回合开始自动移动。
 4. 普通攻击自动按仇恨进行。金色／蓝色箭头常态显示双方目标，远程虚线直接指向目标单位；不手动指定普攻。近战四向一格，远程四向两格，优先攻击单位。
-5. 双方连续让过后自动交战。结算后停留在战场供查看伤亡，点击“下一回合”继续；这一步只控制播放节奏，不花游戏行动。
+5. 双方连续让过后自动交战，播放近战、远程弹道与建筑炮击；技能、受击、治疗、召唤、眩晕、护甲提升、光环和阵亡使用共享特效库。遵循系统“减少动态效果”设置。结算后停留在战场供查看伤亡，点击“下一回合”继续；这一步只控制播放节奏，不花游戏行动。
 6. 摧毁对手的 40 血防御塔后，同位置出现 80 血基地，下一回合激活。摧毁基地获胜；同时摧毁为平局。可以认输结束当前对局。
 
 选目标时，中间操作条会显示提示与取消按钮，棋盘不被覆盖。右上角菜单可查看阵容／返场、近期行动记录、玩法说明，以及导出对局。
@@ -60,6 +62,7 @@ python3 scripts/deploy_pages.py --repo q871795224/yf-artifact
 - `scripts/playable_match.py`：真人行动适配、完整合法目标、交替行动和公开状态。AI 的高收益候选与玩家可操作范围分开，允许玩家走不利位置、选择所有合法目标、替换更弱装备等。
 - `scripts/simulate_finishers.py` → `simulate_expanded_match.py` → `simulate_match.py`／`simulate_heroes.py`：复用原有战斗、卡牌、出兵、资源与胜负规则，本次没有在 JavaScript 重写一套战斗计算。
 - `scripts/serve_prototype.py`：Python 标准库 HTTP 服务；对局以随机 ID 隔离，提交操作时校验版本，重复点击和旧页面操作不会重复扣资源。每次请求内完成玩家行动与 AI 回应，失败恢复到请求前状态。
+- `prototype/effects.js`：与本地工作台共享的十二类 SVG／Web Animations 特效；`game-effects.js` 将引擎状态变化与实际行动映射为播放效果，数字来自实际生命变化。
 - `prototype/app.js`：显示服务端状态、选目标、阶段播放和伤害／阵亡反馈。`cards.js` 为原版展示数据，修改过的规则以界面说明和实时攻血为准。
 - `prototype/engine-client.js`／`engine-worker.js` 与 `scripts/browser_bridge.py`：提供与本地 HTTP API 相同的数据格式，让 Pages 在浏览器内运行同一引擎；本地模式继续访问 Python 服务。静态构建时写入独立运行配置。
 - 所有美术继续引用 `references/artifact-classic/assets/`，通用图标／边框仍由 CSS／SVG 绘制，尚未补齐原版客户端 UI 和音效。
@@ -71,13 +74,15 @@ python3 -m unittest discover -s scripts -p 'test_*.py'
 node --check prototype/app.js
 ```
 
-当前 112 项 Python 检查通过，覆盖既有规则、真人合法目标、先后行动、双让过、资源、复活、基地胜负、版本校验、并发重复请求和记录复现。此前另执行过三个种子的完整自动对局，并抽查 662 个独立合法选项。
+当前 116 项 Python 检查通过，覆盖既有规则、真人合法目标、先后行动、双让过、资源、复活、基地胜负、版本校验、并发重复请求和记录复现。本版另执行六个种子的完整自动对局，逐步检查出生、移动、召唤和行动目标都在五列边界内，六局均正常结束。
 
-`scripts/check_mobile_prototype.js` 可传给 Playwright CLI 的 `run-code`。它读取固定检查用例 `scripts/fixtures/playthrough-13.json`，通过实际页面按钮执行 106 次操作，包含移动、技能、卡牌、装备、刷新续玩，最后在第 16 回合以我方基地被摧毁结束、导出记录并重新开局。这是接口／界面回归用例，不是平衡结论。
+`scripts/check_mobile_prototype.js` 可传给 Playwright CLI 的 `run-code`。它读取固定检查用例 `scripts/fixtures/playthrough-13.json`，通过实际页面按钮执行 117 次操作，包含移动、技能、卡牌、装备、刷新续玩，最后在第 18 回合以我方基地被摧毁结束、导出记录并重新开局。这是接口／界面回归用例，不是平衡结论。
 
-浏览器检查结果与截图位于 `output/playwright/interaction-v3-full.json` 及 `live-*.png`。Chrome 已检查 320×568、375×667、390×844、430×932、1440×900，完整测试无运行时错误。尚未做实体手机 Safari／Chrome 验证，小屏触摸体验和对局节奏留待试玩反馈。
+`scripts/check_battle_effects.js` 在开启动画时再次执行完整对局，统计十二种效果是否实际出现，并检查每次行动后没有残留特效、卡住或偏离规则回放。
 
-本轮反馈验证结果见 `output/playwright/interaction-v3-full.json` 与 `feedback-check.json`：完整对局 106 次操作／16 回合无运行时错误，`scripts/check_game_feedback.js` 另在开启动画时检查沟壑裂缝、交战出手、五个运行环境文件缓存，以及断网时从缓存读取完整 WASM 和标准库。仅验证运行环境可离线读取，不表示游戏页面和全部美术已支持离线游玩。
+浏览器检查结果与截图位于 `output/playwright/v02-mobile.json` 及 `live-*.png`。Chrome 已检查 320×568、375×667、390×844、430×932、1440×900，完整测试无运行时错误。尚未做实体手机 Safari／Chrome 验证，小屏触摸体验和对局节奏留待试玩反馈。
+
+开启动画的反馈验证结果见 `output/playwright/v02-mobile.json` 与 `v02-feedback.json`：完整对局 117 次操作／18 回合无运行时错误，`scripts/check_game_feedback.js` 另在开启动画时检查沟壑裂缝、交战出手、五个运行环境文件缓存，以及断网时从缓存读取完整 WASM 和标准库。仅验证运行环境可离线读取，不表示游戏页面和全部美术已支持离线游玩。
 
 移动端美术为 WebP：头像宽 128 像素、详情卡面宽 352 像素、图标宽 96 像素；图片总量从 43,018,613 降至 1,133,930 字节。原版 PNG 保留在参考库，Pages 只发布压缩副本。安装 `cwebp` 后可运行 `python3 scripts/compress_assets.py` 重新生成，不是正常启动或部署的必需步骤。
 

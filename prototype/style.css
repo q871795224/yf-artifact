@@ -263,7 +263,7 @@ img {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(var(--board-columns, 5), minmax(0, 1fr));
   grid-template-rows: repeat(8, minmax(0, 1fr));
   gap: 2px;
   background: #0e181b;

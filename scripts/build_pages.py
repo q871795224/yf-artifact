@@ -7,6 +7,8 @@ import json
 from pathlib import Path
 import shutil
 
+from playable_match import BOARD_COLUMNS, RELEASE_VERSION
+
 
 ROOT = Path(__file__).resolve().parents[1]
 ENGINE_FILES = (
@@ -64,8 +66,8 @@ def build(out):
         '<meta http-equiv="refresh" content="0;url=prototype/">'
         '<title>单路战场</title><a href="prototype/">进入战场</a></html>\n')
     (out / '.nojekyll').touch()
-    (out / 'version.json').write_text(json.dumps({'engine_version': version, 'runtime': manifest['version']})+'\n')
-    return {'path': str(out), 'engine_version': version,
+    (out / 'version.json').write_text(json.dumps({'release': RELEASE_VERSION, 'columns': BOARD_COLUMNS, 'engine_version': version, 'runtime': manifest['version']})+'\n')
+    return {'path': str(out), 'release': RELEASE_VERSION, 'engine_version': version,
             'bytes': sum(p.stat().st_size for p in out.rglob('*') if p.is_file())}
 
 

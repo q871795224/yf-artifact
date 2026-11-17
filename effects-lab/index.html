@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>特效工作台 · Artifact</title>
+  <link rel="icon" href="../references/artifact-classic/assets/mobile/ingame_image/10033.webp">
+  <link rel="stylesheet" href="style.css?v=columns-1">
+  <script src="../prototype/effects.js?v=0.2" defer></script>
+  <script src="app.js?v=columns-1" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <div class="app-brand"><span class="brand-mark" aria-hidden="true">✧</span><h1>特效工作台</h1><span class="local-label">本地</span></div>
+    <p>选效果，调参数，再放回战场里看。</p>
+    <button id="import-button">导入预设</button>
+    <input type="file" id="import-file" accept=".json,application/json" hidden>
+  </header>
+  <main class="workspace">
+    <aside class="library" aria-label="特效库">
+      <div class="section-heading"><h2>效果库</h2><span id="effect-count">12</span></div>
+      <nav id="effect-list" class="effect-list" aria-label="选择特效"></nav>
+      <section class="saved-library">
+        <h2>我的预设</h2>
+        <label class="sr-only" for="saved-presets">已保存的预设</label>
+        <select id="saved-presets"><option value="">暂无已保存的预设</option></select>
+        <div class="saved-actions"><button id="load-preset" disabled>载入</button><button id="delete-preset" disabled>删除</button></div>
+      </section>
+      <p class="library-note">预设保存在当前浏览器。<br>导出 JSON 可以备份、交换。</p>
+      <p id="notice" class="notice" role="status" aria-live="polite"></p>
+    </aside>
+    <section class="preview" aria-label="特效预览">
+      <div class="preview-heading">
+        <div><h2 id="effect-name">沟壑</h2><p id="effect-description">逐格裂地、碎石与命中</p></div>
+        <div class="preview-options">
+          <label class="preview-size">地图<select id="columns"><option value="5">5 列 × 8 排</option><option value="6" selected>6 列 × 8 排</option></select></label>
+          <label class="preview-size">预览宽度<select id="preview-size"><option value="360">手机 · 360px</option><option value="294">小屏 · 294px</option><option value="480">放大 · 480px</option></select></label>
+        </div>
+      </div>
+      <div class="board-room">
+        <div class="preview-board" id="preview-board">
+          <div class="board-grid" id="board-grid" role="img" aria-label="六列八排预览棋盘"></div>
+          <svg id="effect-layer" class="effect-layer" viewBox="0 0 600 800" preserveAspectRatio="none" aria-hidden="true"></svg>
+        </div>
+      </div>
+      <div class="stage-caption"><span><i class="team-key ally"></i>施法者</span><span><i class="team-key enemy"></i>目标</span><span id="scene-caption">向上两格</span></div>
+      <div class="playback">
+        <div class="transport">
+          <button id="replay" title="从头播放">重播</button>
+          <button id="play" class="primary" aria-label="播放特效">播放</button>
+          <button id="previous-frame" title="后退一帧，按 60fps 预览" aria-label="上一帧">−1 帧</button>
+          <button id="next-frame" title="前进一帧，按 60fps 预览" aria-label="下一帧">+1 帧</button>
+          <label class="loop-toggle"><input id="loop" type="checkbox">循环</label>
+          <label class="rate-control"><span class="sr-only">播放速度</span><select id="rate"><option value="0.25">0.25×</option><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label>
+        </div>
+        <div class="timeline-row"><label for="timeline" class="sr-only">预览时间轴</label><input id="timeline" type="range" min="0" max="900" step="1" value="450"><output id="time-readout">450 / 900 ms</output></div>
+      </div>
+    </section>
+    <aside class="inspector" aria-label="效果参数">
+      <div class="section-heading"><h2>效果参数</h2><button id="reset" class="text-button">恢复默认</button></div>
+      <div class="parameter-list">
+        <label class="parameter" for="duration"><span>总时长<output id="duration-output">900 ms</output></span><input id="duration" type="range" min="200" max="3000" step="10" value="900"></label>
+        <label class="parameter" for="width"><span>线条粗细<output id="width-output">3</output></span><input id="width" type="range" min="1" max="10" step="0.5" value="3"></label>
+        <label class="parameter" for="glow"><span>光晕<output id="glow-output">4</output></span><input id="glow" type="range" min="0" max="16" step="1" value="4"></label>
+        <label class="parameter" for="strength"><span>力度<output id="strength-output">1×</output></span><input id="strength" type="range" min="0.25" max="2" step="0.05" value="1"></label>
+        <label class="color-parameter" for="color"><span>主色</span><span class="color-field"><output id="color-output">#edbd72</output><input id="color" type="color" value="#edbd72"></span></label>
+        <label class="number-parameter" for="damage"><span>演示数字</span><input id="damage" type="number" min="0" max="999" step="1" value="2"></label>
+      </div>
+      <fieldset class="scene-settings"><legend>预览场景</legend>
+        <label for="direction">方向<select id="direction"><option value="N">↑ 上</option><option value="NE">↗ 右上</option><option value="E">→ 右</option><option value="SE">↘ 右下</option><option value="S">↓ 下</option><option value="SW">↙ 左下</option><option value="W">← 左</option><option value="NW">↖ 左上</option></select></label>
+        <label for="distance">距离<select id="distance"><option value="1">一格</option><option value="2" selected>两格</option></select></label>
+      </fieldset>
+      <p class="visual-note">这里只调视觉效果。演示数字不会修改游戏里的伤害规则。</p>
+      <section class="preset-editor">
+        <label for="preset-name">预设名称</label><input id="preset-name" maxlength="64" value="沟壑 · 自定义" autocomplete="off">
+        <div class="preset-actions"><button class="primary" id="save-preset">保存预设</button><button id="export-preset">导出 JSON</button></div>
+      </section>
+      <details class="json-details"><summary>查看预设 JSON</summary><pre id="preset-json"></pre></details>
+    </aside>
+  </main>
+</body>
+</html>
