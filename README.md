@@ -14,21 +14,15 @@
 
 构建静态站点：`python3 scripts/build_pages.py`；发布到 Pages：`python3 scripts/deploy_pages.py`。静态文件在独立 `gh-pages` 分支，源代码和资料在 `main`；`output/`、本地缓存及生成的 `dist/` 不进入源码分支。
 
-- [初步玩法与讨论记录](docs/design/initial-ideas.md)
-- [战场与回合草案](docs/design/combat-draft.md)
-- [纸面推演与临时数据](docs/design/paper-simulation.md)
-- [六回合开局推演：四正向攻击](docs/design/simulations/opening-02.md)
-- [英雄名单与自身能力草案](docs/design/heroes-draft.md)
-- [英雄批量推演：2,400 局与逐步回放](docs/design/simulations/hero-batch-01/README.md)
-- [自动索敌对照：4,800 局与成对回放](docs/design/simulations/hero-batch-02/README.md)
-- [首批普通牌与物品牌池](docs/design/first-card-pool.md)
-- [扩展牌池：每色六种普通牌与十二件装备](docs/design/expanded-card-pool.md)
-- [完整对局实验：建筑、牌库、物品与八场景对照](docs/design/simulations/match-batch-01/README.md)
-- [扩充牌池与推进 AI 的四组对照](docs/design/simulations/match-batch-02/README.md)
-- [金币积压诊断：物品供给、消费与装备状态](docs/design/simulations/item-economy-01/README.md)
-- [双经济终端候选：高费卡与 25 金进攻装备](docs/design/finisher-card-pool.md)
-- [双经济终端对照：1,728 局与超时续测](docs/design/simulations/finisher-batch-01/README.md)
-- [Artifact Classic 本地数据参考库](references/artifact-classic/README.md)：英雄、卡牌、小兵、技能与中英文文本，可离线查询。
-- [首批原版美术素材](references/artifact-classic/assets/README.md)：已缓存 130 张原版图片，含十二名候选英雄头像及候选牌池中文卡面，已用于手机界面原型。
+## 文档入口
+
+- [文档导航](docs/README.md)：当前规格、历史实验、原作资料与维护约定。
+- [V0.2 规则现状](docs/design/current-rules.md)：已确认方向、原型数值和待讨论项。
+- [决策记录](docs/design/decision-log.md)：为什么从随机箭头走向仇恨、为什么补双经济终端，以及被替代的方案。
+- [开发复盘与运维](docs/development/lessons-and-operations.md)：问题、解决办法、缓存／版本／发布／本机服务的坑点。
+- [V0.2 验证归档](docs/releases/v0.2.md)：完整对局、动画、视口、公网验证及测试局限。
+- [Classic 本地参考库](references/artifact-classic/README.md)与[原作美术](references/artifact-classic/assets/README.md)：日常离线查询与素材来源。
+
+早期草案和全部推演入口保留在文档导航中；它们记录当时的地图、技能和实验假设，不作为当前规则的替代。重要结果写入已提交的归档，临时日志和截图保留在忽略的 `output/`。
 
 参考相邻的 `../yf-pokemon` 工作区组织方式；该项目的技术选型与玩法不自动成为本项目约束。

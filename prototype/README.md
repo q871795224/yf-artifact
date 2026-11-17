@@ -1,5 +1,7 @@
 # 手机单路战场 V0.2
 
+当前完整规则与状态见 [V0.2 规则现状](../docs/design/current-rules.md)，验证明细见 [发布归档](../docs/releases/v0.2.md)，排查和发布注意见 [开发复盘与运维](../docs/development/lessons-and-operations.md)。
+
 V0.2 使用五列八排战场，并接入与本地特效工作台共享的战斗效果。V0.1 为原六列正式试玩版本，保留在 Git 标签 `v0.1`。
 
 现在可以从第一回合手动操作，和 AI 完成一场拆塔、摧毁基地的对局。界面沿用已接受的深色石板与头像棋子设计，使用本地 Artifact Classic 原版图片；伤害、资源、技能和胜负直接由已有 Python 推演引擎计算。
@@ -74,15 +76,15 @@ python3 -m unittest discover -s scripts -p 'test_*.py'
 node --check prototype/app.js
 ```
 
-当前 116 项 Python 检查通过，覆盖既有规则、真人合法目标、先后行动、双让过、资源、复活、基地胜负、版本校验、并发重复请求和记录复现。本版另执行六个种子的完整自动对局，逐步检查出生、移动、召唤和行动目标都在五列边界内，六局均正常结束。
+V0.2 发布时通过 116 项 Python 检查和六个种子的完整回归局。Chrome 的 320×568、375×667、390×844、430×932、1440×900 视口均完成布局检查；固定种子 13 通过真实按钮执行 117 次操作，第 18 回合正常结束，并验证刷新恢复、导出和重新开局。
 
-`scripts/check_mobile_prototype.js` 可传给 Playwright CLI 的 `run-code`。它读取固定检查用例 `scripts/fixtures/playthrough-13.json`，通过实际页面按钮执行 117 次操作，包含移动、技能、卡牌、装备、刷新续玩，最后在第 18 回合以我方基地被摧毁结束、导出记录并重新开局。这是接口／界面回归用例，不是平衡结论。
+浏览器检查脚本可传给 Playwright CLI 的 `run-code`：
 
-`scripts/check_battle_effects.js` 在开启动画时再次执行完整对局，统计十二种效果是否实际出现，并检查每次行动后没有残留特效、卡住或偏离规则回放。
+- `scripts/check_mobile_prototype.js`：读取 `scripts/fixtures/playthrough-13.json`，执行真实按钮的完整回归。
+- `scripts/check_game_feedback.js`：开启动画检查沟壑与交战，同时检查固定运行环境缓存。
+- `scripts/check_battle_effects.js`：开启动画再跑完整对局，检查十二类效果出现、动画清理和结局一致。
 
-浏览器检查结果与截图位于 `output/playwright/v02-mobile.json` 及 `live-*.png`。Chrome 已检查 320×568、375×667、390×844、430×932、1440×900，完整测试无运行时错误。尚未做实体手机 Safari／Chrome 验证，小屏触摸体验和对局节奏留待试玩反馈。
-
-开启动画的反馈验证结果见 `output/playwright/v02-mobile.json` 与 `v02-feedback.json`：完整对局 117 次操作／18 回合无运行时错误，`scripts/check_game_feedback.js` 另在开启动画时检查沟壑裂缝、交战出手、五个运行环境文件缓存，以及断网时从缓存读取完整 WASM 和标准库。仅验证运行环境可离线读取，不表示游戏页面和全部美术已支持离线游玩。
+具体结果、运行文件大小、公网发布标识和局限统一保存于 [V0.2 发布归档](../docs/releases/v0.2.md)。临时截图／JSON 位于忽略的 `output/`，其他机器不默认具备这些文件。桌面视口模拟不替代实体手机验证；运行时可从缓存读取，也不表示完整游戏已经支持离线。
 
 移动端美术为 WebP：头像宽 128 像素、详情卡面宽 352 像素、图标宽 96 像素；图片总量从 43,018,613 降至 1,133,930 字节。原版 PNG 保留在参考库，Pages 只发布压缩副本。安装 `cwebp` 后可运行 `python3 scripts/compress_assets.py` 重新生成，不是正常启动或部署的必需步骤。
 

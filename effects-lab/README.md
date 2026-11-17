@@ -1,5 +1,7 @@
 # 本地特效工作台
 
+设计沿革见 [决策记录](../docs/design/decision-log.md)；共享库、缓存、自动化与自启的坑点见 [开发复盘与运维](../docs/development/lessons-and-operations.md)。
+
 双击根目录的 `打开特效工作台.command`，或访问 <http://127.0.0.1:8741/effects-lab/>。当前电脑已安装 macOS LaunchAgent，由 Python 静态服务器在后台提供页面；每次登录 macOS 后自动启动，关闭终端不影响服务，进程退出后会自动拉起。只监听本机 `127.0.0.1:8741`，无需联网。
 
 该目录位于游戏发布目录之外，不进入 GitHub Pages 构建，没有调整英雄仇恨规则。也可以直接用浏览器打开此目录的 `index.html`，这种方式不需要服务器；页面仅引用自己的脚本与已有的本地 WebP 头像。
