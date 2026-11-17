@@ -2,10 +2,10 @@
 "use strict";
 (() => {
   const point = (u) => ({ x: (u.col + 0.5) * 100, y: (u.row + 0.5) * 100 });
-  const fortPoint = (team, col = 2) => ({ x: (col + 0.5) * 100, y: team === 0 ? 700 : 100 });
+  const fortPoint = (state, team) => point(state.forts[team]);
   const cell = (u) => document.querySelector(`.cell[data-unit="${u.key}"]`);
   const scene = (from, to, actor, target, extra = {}) => ({ from, to, actorElement: actor && cell(actor), targetElement: target && cell(target), ...extra });
-  const teamColor = (team) => team === "ally" ? "#edc47c" : "#89d0eb";
+  const teamColor = (team) => team === "ally" ? "#75d49a" : "#ee8585";
   const area = (u, columns) => {
     const cells = [];
     for (let dr = -1; dr <= 1; dr++) for (let dc = -1; dc <= 1; dc++) {
@@ -32,12 +32,12 @@
       if (!unit.target || unit.stunned) continue;
       const victim = state.units.find((u) => u.key === unit.target);
       const fortTeam = unit.target === "AF" ? 0 : unit.target === "BF" ? 1 : null;
-      const to = victim ? point(victim) : fortTeam !== null ? fortPoint(fortTeam, unit.col) : null;
+      const to = victim ? point(victim) : fortTeam !== null ? fortPoint(state, fortTeam) : null;
       if (to) entries.push({ kind: unit.range > 1 ? "projectile" : "melee", scene: scene(point(unit), to, unit, victim), parameters: { color: teamColor(unit.team) } });
     }
     for (const fort of state.forts) {
       const victim = state.units.find((u) => u.key === fort.target);
-      if (fort.ready && fort.attack && victim) entries.push({ kind: "tower", scene: scene(fortPoint(fort.team, victim.col), point(victim), null, victim) });
+      if (fort.ready && fort.attack && victim) entries.push({ kind: "tower", scene: scene(fortPoint(state, fort.team), point(victim), null, victim) });
     }
     document.querySelector(".board-frame").classList.add("is-fighting");
     try { await play(entries, 650); }
@@ -61,7 +61,7 @@
     const team = command.team === 1 ? "enemy" : "ally";
     const source = team === "ally" ? caster : previous.units.find((u) => u.hero && u.team === team && card?.colors.some((c) => CARDS[u.id]?.colors.includes(c)));
     if (!source) return false;
-    if ([10352, 10353].includes(command.card_id)) return play([{ kind: "lightning", scene: scene(point(source), fortPoint(team === "ally" ? 1 : 0), source, null) }], 500);
+    if ([10352, 10353].includes(command.card_id)) return play([{ kind: "lightning", scene: scene(point(source), fortPoint(previous, team === "ally" ? 1 : 0), source, null) }], 500);
     const victims = [10402, 10412].includes(command.card_id) ? previous.units.filter((u) => u.team !== team)
       : [10270, 10354, 10410].includes(command.card_id) && target ? [target] : [];
     return play(victims.map((u) => ({ kind: command.card_id === 10412 ? "lightning" : "projectile", scene: scene(point(source), point(u), source, u) })), 480);

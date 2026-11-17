@@ -7,18 +7,18 @@
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
     <meta name="theme-color" content="#181d20" />
-    <title>V0.2 · 单路战场</title>
+    <title>V0.3 · 单路战场</title>
     <link
       rel="icon"
       href="../references/artifact-classic/assets/mobile/ingame_image/10020.webp"
     />
-    <link rel="stylesheet" href="style.css?v=0.2" />
+    <link rel="stylesheet" href="style.css?v=0.3" />
     <script src="cards.js" defer></script>
-    <script src="runtime-config.js?v=0.2" defer></script>
-    <script src="engine-client.js?v=0.2" defer></script>
-    <script src="effects.js?v=0.2" defer></script>
-    <script src="game-effects.js?v=0.2" defer></script>
-    <script src="app.js?v=0.2" defer></script>
+    <script src="runtime-config.js?v=0.3" defer></script>
+    <script src="engine-client.js?v=0.3" defer></script>
+    <script src="effects.js?v=0.3" defer></script>
+    <script src="game-effects.js?v=0.3" defer></script>
+    <script src="app.js?v=0.3" defer></script>
   </head>
   <body>
     <svg
@@ -101,6 +101,11 @@
           stroke-width="1.5"
         />
       </symbol>
+      <symbol id="i-base" viewBox="0 0 24 24">
+        <path d="M12 1 18 8 15 17H9L6 8z" fill="currentColor"/>
+        <path d="m12 1-1 8 1 8 6-9M6 8l5 1 7-1" stroke="#e5f6ea" stroke-width=".6" fill="none"/>
+        <path d="m4 16 3 3h10l3-3 2 6H2z" fill="currentColor"/>
+      </symbol>
       <symbol id="i-close" viewBox="0 0 24 24">
         <path
           d="m6 6 12 12M6 18 18 6"
@@ -162,7 +167,9 @@
         <div class="board-frame">
           <div class="board" id="board" role="group" aria-label="棋盘"></div>
           <svg class="board-overlay target-overlay" id="target-overlay" viewBox="0 0 500 800" preserveAspectRatio="none" aria-hidden="true"></svg>
+          <svg class="board-overlay history-overlay" id="history-overlay" viewBox="0 0 500 800" preserveAspectRatio="none" aria-hidden="true"></svg>
           <svg class="board-overlay battle-effects" id="battle-effects" viewBox="0 0 500 800" preserveAspectRatio="none" aria-hidden="true"></svg>
+          <section class="unit-panel" id="unit-panel" aria-label="选中单位操作" hidden></section>
           <span class="tower-mark tower-mark-top" aria-hidden="true"
             ><svg><use href="#i-tower" /></svg
           ></span>
@@ -184,13 +191,8 @@
             <span class="turn-label"><span id="turn-text">准备中</span></span>
           </div>
         </div>
+        <div class="target-prompt" id="target-prompt" hidden></div>
       </section>
-
-      <section
-        class="unit-panel"
-        id="unit-panel"
-        aria-label="选中单位"
-      ></section>
 
       <section class="hand-section" aria-label="手牌">
         <div
