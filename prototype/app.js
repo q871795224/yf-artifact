@@ -353,8 +353,8 @@ function render(previous) {
   $("#gold-value").textContent = view.gold;
   $("#enemy-mana-value").innerHTML = `${view.opponent.mana}<span>/${view.maxMana}</span>`;
   $("#enemy-gold-value").textContent = view.opponent.gold;
-  view.forts.forEach((f) => {
-    const el = $(f.team === 0 ? ".ally-fort" : ".enemy-fort");
+  view.forts.filter((f) => f.team === 1).forEach((f) => {
+    const el = $(".enemy-fort");
     el.querySelector("b").innerHTML = `${f.hp}<span>/${f.maxHp}</span>`;
     el.querySelector("i").style.width =
       `${Math.max(0, (f.hp / f.maxHp) * 100)}%`;
@@ -378,6 +378,7 @@ function render(previous) {
   footer.disabled = busy;
   footer.innerHTML = `${busy ? "请稍候" : view.phase === "round_end" ? "下一回合" : view.phase === "finished" ? "查看结果" : "让过"}${icon("arrow")}`;
   footer.classList.toggle("next-round", view.phase === "round_end");
+  footer.title = `第 ${view.round} 回合 · ${$("#turn-text").textContent}`;
   footer.classList.toggle(
     "long-label",
     ["round_end", "finished"].includes(view.phase),
@@ -886,7 +887,7 @@ $("#detail-dialog").addEventListener("close", () => {
 $("#menu-button").addEventListener("click", () => {
   if (!view) return;
   $("#match-summary").textContent =
-    `第 ${view.round} 回合 · 已进行 ${view.version} 次操作`;
+    `已进行 ${view.version} 次操作`;
   $("#menu-button").setAttribute("aria-expanded", "true");
   $("#scene-dialog").showModal();
 });
@@ -928,7 +929,7 @@ document.querySelectorAll(".fort").forEach((el) => {
   el.setAttribute("role", "button");
   const show = () => {
     if (!view) return;
-    const f = view.forts[el.classList.contains("ally-fort") ? 0 : 1];
+    const f = view.forts.find((f) => f.team === 1);
     showFort(f);
   };
   el.addEventListener("click", show);
@@ -963,7 +964,7 @@ if (window.ArtifactAPI.browserMode) {
 }
 function fitBoard() {
   const field = $(".battlefield"), frame = $(".board-frame");
-  const side = Math.max(1, Math.min((field.clientWidth - 16 - 12 - ((view?.columns || 5)-1)*2)/(view?.columns || 5), (field.clientHeight - 40 - 26)/8));
+  const side = Math.max(1, Math.min((field.clientWidth - 16 - 12 - ((view?.columns || 5)-1)*2)/(view?.columns || 5), (field.clientHeight - 11 - 26)/8));
   frame.style.width = `${side*(view?.columns || 5) + ((view?.columns || 5)-1)*2 + 12}px`;
   frame.style.height = `${side*8 + 26}px`;
   renderUnit();

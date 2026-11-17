@@ -12,13 +12,13 @@
       rel="icon"
       href="../references/artifact-classic/assets/mobile/ingame_image/10020.webp"
     />
-    <link rel="stylesheet" href="style.css?v=0.3" />
+    <link rel="stylesheet" href="style.css?v=0.3-ui1" />
     <script src="cards.js" defer></script>
     <script src="runtime-config.js?v=0.3" defer></script>
     <script src="engine-client.js?v=0.3" defer></script>
     <script src="effects.js?v=0.3" defer></script>
     <script src="game-effects.js?v=0.3" defer></script>
-    <script src="app.js?v=0.3" defer></script>
+    <script src="app.js?v=0.3-ui1" defer></script>
   </head>
   <body>
     <svg
@@ -179,22 +179,10 @@
           <span class="middle-mark left" aria-hidden="true"></span
           ><span class="middle-mark right" aria-hidden="true"></span>
         </div>
-        <div class="battle-status">
-          <div class="fort ally-fort">
-            <svg><use href="#i-tower" /></svg
-            ><span class="fort-caption">我塔</span
-            ><span class="fort-meter"><i style="width: 100%"></i></span
-            ><b>40<span>/40</span></b>
-          </div>
-          <div class="round-info" role="status">
-            <span class="round-number" id="round-label"></span>
-            <span class="turn-label"><span id="turn-text">准备中</span></span>
-          </div>
-        </div>
-        <div class="target-prompt" id="target-prompt" hidden></div>
       </section>
 
       <section class="hand-section" aria-label="手牌">
+        <div class="target-prompt" id="target-prompt" hidden></div>
         <div
           class="hand"
           id="hand"
@@ -236,7 +224,7 @@
           <svg><use href="#i-coin" /></svg><b id="gold-value">0</b>
         </div>
         <button class="pass-button" id="pass-button" disabled>
-          让过<svg><use href="#i-arrow" /></svg>
+          载入中<svg><use href="#i-arrow" /></svg>
         </button>
       </footer>
 
@@ -264,6 +252,10 @@
           >
             <svg><use href="#i-close" /></svg>
           </button>
+        </div>
+        <div class="round-info" role="status">
+          <span class="round-number" id="round-label"></span>
+          <span class="turn-label" id="turn-text">准备中</span>
         </div>
         <p class="sheet-note" id="match-summary">
           三名英雄，单路战场。先破塔，再摧毁基地。
