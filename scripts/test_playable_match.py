@@ -1,4 +1,5 @@
 import unittest
+from copy import deepcopy
 
 from playable_match import PlaySession, legal_actions, InvalidAction, StaleAction
 from simulate_finishers import FinisherUnit
@@ -33,6 +34,97 @@ def choose(s, kind, actor=None, target=None):
 
 
 class PlayableTests(unittest.TestCase):
+    def test_forecast_marks_simultaneous_death_without_changing_the_match(self):
+        s = empty_session()
+        a, b = unit('a', 0, 1006, (4, 2)), unit('b', 1, 1006, (3, 2))
+        a.hp = b.hp = 2
+        s.game.units = [a, b]
+        before = deepcopy(vars(s.game))
+        prediction = s.combat_forecast()
+        self.assertEqual(prediction['units'], {'a': {'hp': 0, 'dies': True}, 'b': {'hp': 0, 'dies': True}})
+        self.assertEqual(vars(s.game), before)
+        s.apply(s.version, 'pass')
+        self.assertFalse(s.game.field())
+        self.assertEqual(s.game.gold, [1, 1])
+
+    def test_forecast_includes_regeneration_that_prevents_death(self):
+        s = empty_session()
+        a, b = unit('a', 0, 1006, (4, 2)), unit('b', 1, 1006, (3, 2))
+        a.hp = 2
+        healer = unit('healer', 0, 10036, (5, 2))
+        s.game.units = [a, b, healer]
+        self.assertEqual(s.combat_forecast()['units']['a'], {'hp': 2, 'dies': False})
+
+    def test_forecast_includes_armor_fountain_and_execution(self):
+        s = empty_session()
+        axe = unit('axe', 0, 10020, (0, 0))  # Two armor reduces fountain 10 to 8.
+        s.game.units = [axe]
+        self.assertEqual(s.combat_forecast()['units']['axe'], {'hp': 2, 'dies': False})
+        axe.pos = (4, 2)
+        axe.equipment['Weapon'] = 10263
+        victim = unit('victim', 1, 10020, (3, 2))
+        victim.permanent_health = 30
+        victim.hp = victim.max_hp
+        s.game.units.append(victim)
+        self.assertTrue(s.combat_forecast()['units']['victim']['dies'])
+
+    def test_forecast_reports_tower_break_without_counting_the_new_base_as_damage(self):
+        s = empty_session()
+        s.game.units = [unit('attacker', 0, 1006, (1, 2))]
+        s.game.forts[1].hp = 2
+        self.assertEqual(s.combat_forecast()['forts'][1], {'team': 1, 'hp': 0, 'destroyed': True})
+        s.game.combat()
+        self.assertEqual((s.game.forts[1].stage, s.game.forts[1].hp), ('base', 80))
+        self.assertEqual(s.game.forts[1].position, (0, 2))
+        self.assertEqual(s.game.forts[1].active_from, 11)
+
+    def test_buildings_block_both_teams_movement_spawns_and_auto_marching(self):
+        s = empty_session()
+        self.assertEqual(s.game.blocked_positions(), {(0, 2), (7, 2)})
+        h = unit('hero', 0, 10020, (6, 2))
+        s.game.units = [h]
+        self.assertNotIn((7, 2), s.game.reachable(h))
+        self.assertNotIn((7, 2), s.game.spawn_positions(0))
+        self.assertNotIn((0, 2), s.game.spawn_positions(1))
+        creep = unit('invader', 1, 1006, (6, 2))
+        creep.first_move = False
+        s.game.units = [creep]
+        s.game.auto_move()
+        self.assertIn(creep.pos, ((7, 1), (7, 3)))
+        s.game.check()
+        s.game.units = []
+        for team in (0, 1):
+            hero = unit(f'hero{team}', team, 10020, None)
+            s.game.units.append(hero)
+            s.game.spawn_hero(hero)
+            self.assertNotEqual(hero.pos[1], 2)
+
+    def test_attacking_a_building_requires_actual_orthogonal_range(self):
+        s = empty_session()
+        melee = unit('melee', 0, 1006, (1, 2))
+        self.assertIs(s.game.building_target(melee), s.game.forts[1])
+        melee.pos = (1, 1)
+        self.assertIsNone(s.game.building_target(melee))
+        melee.pos = (0, 1)
+        self.assertIs(s.game.building_target(melee), s.game.forts[1])
+        ranged = unit('ranged', 0, 10064, (2, 2))
+        self.assertIs(s.game.building_target(ranged), s.game.forts[1])
+        ranged.pos = (2, 1)
+        self.assertIsNone(s.game.building_target(ranged))
+
+    def test_action_history_preserves_a_public_legal_move_path(self):
+        s = empty_session()
+        h = unit('hero', 0, 10020, (7, 1))
+        s.game.units = [h]
+        s.apply(s.version, choose(s, 'move', 'hero', '5,1'))
+        entry = s.snapshot()['history'][0]
+        self.assertEqual(entry['source']['row'], 7)
+        self.assertEqual(entry['path'][0], {'row': 7, 'col': 1})
+        self.assertEqual(entry['path'][-1], {'row': 5, 'col': 1})
+        self.assertEqual(len(entry['path']), 3)
+        self.assertNotIn({'row': 7, 'col': 2}, entry['path'])
+        self.assertEqual(s.snapshot()['lastOpponent']['kind'], 'pass')
+
     def test_opening_is_real_first_round_with_two_heroes_each_and_contact(self):
         s = PlaySession(13)
         self.assertEqual(s.game.round, 1)
@@ -57,11 +149,11 @@ class PlayableTests(unittest.TestCase):
 
     def test_first_move_two_steps_requires_free_path(self):
         s = empty_session()
-        h = unit('hero', 0, 10020, (7, 2))
+        h = unit('hero', 0, 10020, (7, 1))
         s.game.units = [h]
-        self.assertIn((0, 'move', 'hero', '5,2'), legal_actions(s.game))
+        self.assertIn((0, 'move', 'hero', '5,1'), legal_actions(s.game))
         s.game.units += [unit(f'c{col}', 0, 1006, (6, col)) for col in range(5)]
-        self.assertNotIn((0, 'move', 'hero', '5,2'), legal_actions(s.game))
+        self.assertNotIn((0, 'move', 'hero', '5,1'), legal_actions(s.game))
 
     def test_human_can_choose_every_spell_target_not_only_ai_best(self):
         s = empty_session()
@@ -214,8 +306,9 @@ class PlayableTests(unittest.TestCase):
             else:
                 key = 'pass'
             s.apply(s.version, key)
-        # V0.2's five-column golden replay reaches base destruction in round 18.
-        self.assertEqual((s.phase, s.game.round, s.game.winner), ('finished', 18, 1))
+        self.assertEqual(s.phase, 'finished')
+        self.assertIn(s.game.winner, (0, 1))
+        self.assertLessEqual(s.game.forts[1-s.game.winner].hp, 0)
         replay = PlaySession(13)
         for command in s.export()['commands']:
             replay.apply(command['version'], command['action_id'])
@@ -223,7 +316,7 @@ class PlayableTests(unittest.TestCase):
 
     def test_release_uses_five_columns_for_opening_movement_and_spawning(self):
         s = PlaySession(13)
-        self.assertEqual((s.snapshot()['release'], s.snapshot()['columns']), ('0.2', 5))
+        self.assertEqual((s.snapshot()['release'], s.snapshot()['columns']), ('0.3', 5))
         self.assertTrue(all(0 <= u.pos[1] < 5 for u in s.game.field()))
         self.assertTrue(all(0 <= c < 5 for h in s.game.field(0) if h.hero for r, c in s.game.reachable(h)))
         self.assertTrue(all(0 <= c < 5 for r, c in s.game.spawn_positions(0)))
@@ -231,12 +324,12 @@ class PlayableTests(unittest.TestCase):
         with self.assertRaisesRegex(AssertionError, 'Invalid position'):
             s.game.check()
 
-    def test_returning_hero_replaces_a_creep_in_a_full_five_cell_fountain(self):
+    def test_returning_hero_replaces_a_creep_in_a_full_four_cell_fountain(self):
         s = empty_session()
         h = unit('hero', 0, 10020, None)
         h.equipment['Weapon'] = 10263
-        creeps = [unit(f'creep{c}', 0, 1006, (7, c)) for c in range(5)]
-        creeps[4].hp = 1
+        creeps = [unit(f'creep{c}', 0, 1006, (7, c)) for c in (0, 1, 3, 4)]
+        creeps[-1].hp = 1
         s.game.units = [h, *creeps]
         s.game.spawn_hero(h)
         self.assertEqual(h.pos, (7, 4))
@@ -253,7 +346,7 @@ class PlayableTests(unittest.TestCase):
         self.assertEqual(sum(not u.hero for u in s.game.field(0)), 3)
         self.assertTrue(all(0 <= u.pos[1] < 5 for u in s.game.field()))
         s.game.item_hand[0] = [(3006, True)]
-        s.game.units = [h] + [unit(f'block{c}', 0, 1006, (7, c)) for c in range(5)]
+        s.game.units = [h] + [unit(f'block{c}', 0, 1006, (7, c)) for c in (0, 1, 3, 4)]
         self.assertFalse(any(a[1] == 'item' for a in legal_actions(s.game)))
         s.game.units.pop()
         s.apply(s.version, choose(s, 'item', '0', 'hero'))

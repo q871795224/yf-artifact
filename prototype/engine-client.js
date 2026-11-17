@@ -5,7 +5,7 @@
   const pending = new Map();
   const cacheReady = browserMode && "serviceWorker" in navigator
     ? Promise.race([
-        navigator.serviceWorker.register(new URL("../runtime-cache.js?v=0.2", document.baseURI))
+        navigator.serviceWorker.register(new URL("../runtime-cache.js?v=0.3", document.baseURI))
           .then(() => navigator.serviceWorker.ready)
           .then(() => navigator.serviceWorker.controller || new Promise((resolve) => {
             const done = () => { navigator.serviceWorker.removeEventListener("controllerchange", done); resolve(); };
@@ -39,7 +39,7 @@
   }
   function engineWorker() {
     if (worker) return worker;
-    const url = new URL("engine-worker.js?v=0.2", document.baseURI);
+    const url = new URL("engine-worker.js?v=0.3", document.baseURI);
     url.searchParams.set("engine", window.ARTIFACT_ENGINE_VERSION || "local");
     worker = new Worker(url, {
       type: "module",

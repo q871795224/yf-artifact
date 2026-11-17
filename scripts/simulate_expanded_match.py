@@ -143,7 +143,7 @@ class ExpandedMatch(Match):
         return score
 
     def movement_actions(self, team):
-        occupied = {u.pos for u in self.field()}
+        occupied = {u.pos for u in self.field()} | self.blocked_positions()
         result = []
         for h in self.field(team):
             if not h.hero or h.stunned or h.moved:

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>素材库 · Artifact</title>
+  <link rel="icon" href="../references/artifact-classic/assets/mobile/mini_image/1006.webp">
+  <link rel="stylesheet" href="assets.css?v=3">
+  <script src="assets.js?v=3" defer></script>
+</head>
+<body>
+  <header class="asset-header">
+    <div><h1>素材库 <span>Artifact Classic</span></h1><p>浏览卡牌原图、头像和局内图标</p></div>
+    <a class="library-link" href="index.html">← 特效工作台</a>
+  </header>
+  <main class="asset-workspace">
+    <section class="asset-browser" aria-label="卡牌素材">
+      <div class="asset-filters">
+        <label class="search-filter">搜索<input id="asset-search" type="search" placeholder="卡牌名称、英文名或 ID"></label>
+        <label>卡牌类型<select id="asset-type"><option value="">全部类型</option><option value="Hero">英雄</option><option value="Creep">小兵与召唤单位</option><option value="Spell">法术</option><option value="Item">物品</option><option value="Improvement">改良</option><option value="Stronghold">建筑</option><option value="Pathing">攻击路径</option></select></label>
+        <label>图片<select id="asset-view"><option value="large_image">完整卡面</option><option value="mini_image">方形头像</option><option value="ingame_image">局内图标</option></select></label>
+        <label>来源<select id="asset-source"><option value="all">全部素材</option><option value="local">本地已有</option></select></label>
+      </div>
+      <p id="asset-status" role="status">载入素材索引…</p>
+      <div id="asset-grid" class="asset-grid" data-kind="large_image"></div>
+    </section>
+  </main>
+  <dialog id="asset-dialog" aria-labelledby="asset-title">
+    <div class="dialog-heading"><div><h2 id="asset-title"></h2><p id="asset-description"></p></div><button id="asset-close" aria-label="关闭素材详情">×</button></div>
+    <div class="asset-detail-image"><img id="asset-preview" alt="选中素材预览" hidden></div>
+    <div class="asset-detail-controls">
+      <label>图片版本<select id="asset-kind"><option value="large_image">完整卡面</option><option value="mini_image">方形头像</option><option value="ingame_image">局内图标</option></select></label>
+      <a id="asset-open" target="_blank" rel="noopener" hidden>打开原图 ↗</a>
+      <button id="asset-copy">复制名称和 ID</button>
+    </div>
+    <p id="asset-image-status" role="status"></p>
+  </dialog>
+</body>
+</html>

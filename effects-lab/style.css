@@ -784,3 +784,4 @@ input[type=color]{
     padding-left:10px
   }
 }
+.library-link { color: #cbd5c6; text-decoration: none; padding: 9px 13px; border: 1px solid #52605b; border-radius: 5px; white-space: nowrap; }

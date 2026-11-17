@@ -6,6 +6,12 @@
 
 该目录位于游戏发布目录之外，不进入 GitHub Pages 构建，没有调整英雄仇恨规则。也可以直接用浏览器打开此目录的 `index.html`，这种方式不需要服务器；页面仅引用自己的脚本与已有的本地 WebP 头像。
 
+## 素材库
+
+从页首“素材库”进入 <http://127.0.0.1:8741/effects-lab/assets.html>。默认以整页卡牌画廊展示 310 条原版完整卡面及项目已采用的自制图，可按名称、英文名、ID、类型及本地来源筛选；切换到小兵／召唤单位可浏览其中 50 条。原版使用本地 `cards.json` 与素材清单，自制图读取 `assets/custom/manifest.json`；不修改原作数据。
+
+图片版本可切换方形头像、完整卡面、局内图标；原版本地已有 59 个条目的图片，共 130 张；另有已采用的自制夜魇近战小兵图，搜索“夜魇”可查看，打开原图进入保留的 PNG。其余条目从原索引 Valve CDN 加载，需联网，旧链接可能失效。点击卡牌打开大图详情，可切换图片版本、打开原图、复制名称和 ID；关闭后保留筛选与浏览位置。用户浏览并提供选中的卡牌名称或 ID 后，再单独选取素材。此页需要通过本地 HTTP 服务访问，不支持直接双击 HTML 读取 JSON。
+
 ## 后台服务
 
 服务配置：`/Users/yifei.chen/Library/LaunchAgents/com.yifei.yf-artifact.effects-lab.plist`。日志：`/Users/yifei.chen/Library/Logs/yf-artifact-effects-lab/`。配置中使用当前仓库的绝对路径，移动仓库后需要修改配置并重新加载。

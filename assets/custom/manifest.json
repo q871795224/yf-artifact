@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {
+      "id": "dire-melee",
+      "name": {
+        "schinese": "夜魇近战小兵",
+        "english": "Dire Melee Creep"
+      },
+      "card_type": "Creep",
+      "source": {
+        "path": "assets/custom/originals/dire-melee.png",
+        "provided_filename": "imagen_original_1794905680_8b171272.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "a9f775a0e86518f6f51232a7abecf4c5f8ee43025289e6a49e9207caf74950ff"
+      },
+      "images": {
+        "mini_image": "prototype/assets/units/dire-melee.webp",
+        "large_image": "prototype/assets/units/dire-melee.webp"
+      },
+      "derived_sha256": "3fb82387377b30f3b3907a5decd86d06a3f4a878e86f58d0ba69f69d9e54abdf",
+      "usage": "Enemy basic melee creep (card 1006); appearance only, 2 attack / 4 health."
+    }
+  ]
+}

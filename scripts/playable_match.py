@@ -14,7 +14,7 @@ from simulate_match import CARDS
 from simulate_heroes import EIGHT, ARROWS, distance, valid
 
 
-RELEASE_VERSION = '0.2'
+RELEASE_VERSION = '0.3'
 BOARD_COLUMNS = 5
 
 PLAYER_ROSTER = (10020, 10033, 10014)
@@ -112,7 +112,7 @@ def legal_actions(game, team=0):
         elif item == 10216:
             targets = ['ticket']
         elif item == 3006:
-            occupied = {u.pos for u in game.field()}
+            occupied = {u.pos for u in game.field()} | game.blocked_positions()
             if any((7 if team == 0 else 0, c) not in occupied for c in range(game.columns)):
                 targets = [h.uid for h in heroes]
         for target in targets:
@@ -139,12 +139,14 @@ def action_view(game, action, version, team=0):
 class PlaySession:
     def __init__(self, seed=13):
         self.seed = seed
-        self.game = FinisherMatch(PLAYER_ROSTER, ENEMY_ROSTER, seed, 4, True, trace=True, columns=BOARD_COLUMNS)
+        self.game = FinisherMatch(PLAYER_ROSTER, ENEMY_ROSTER, seed, 4, True, trace=True, columns=BOARD_COLUMNS, fort_cells=True)
         self.version = 0
         self.phase = 'action'
         self.side = 0
         self.passes = 0
         self.log = []
+        self.history = []
+        self.last_opponent = None
         self.commands = []
         self._known_units = {}
         self.last_label = '第 1 回合开始'
@@ -206,6 +208,7 @@ class PlaySession:
     def _ai_response(self, frames):
         if self.side != 1 or self.phase != 'action':
             return
+        before = [self._unit_view(u) for u in self.game.field()]
         choices = self.game.actions(1)
         if choices:
             action = max(choices, key=lambda a: (round(a[0], 8), a[1], a[2], a[3]))
@@ -221,6 +224,7 @@ class PlaySession:
         self.game.check()
         self._known_units.update({u.uid: ('我方' if u.team == 0 else '敌方') + u.name for u in self.game.units})
         self._drain_events()
+        self._remember_action(visual, 1, before)
         self._finish_if_needed()
         self.side = 0
         frames.append(self._frame(self.last_label, action=visual))
@@ -234,6 +238,65 @@ class PlaySession:
         self.phase = 'finished' if self.game.finished else 'round_end'
         self.last_label = '交战结束 · 可查看损伤与阵亡'
         frames.append(self._frame(self.last_label))
+
+    def _remember_action(self, action, team, before):
+        entry = dict(action or {'kind': 'pass', 'team': team})
+        entry.update(round=self.game.round, label=self.last_label,
+                     sequence=self.version * 2 + team)
+        actor = next((u for u in before if u['key'] == entry.get('actor')), None)
+        after = [self._unit_view(u) for u in self.game.field()]
+        if actor:
+            entry['source'] = {k: actor[k] for k in ('key', 'id', 'row', 'col')}
+        if entry['kind'] == 'move' and actor:
+            entry['path'] = self._move_path(actor, (entry['row'], entry['col']), before)
+        changed = []
+        for u in after:
+            old = next((v for v in before if v['key'] == u['key']), None)
+            if old is None or any(old[k] != u[k] for k in ('hp', 'armor', 'stunned', 'equipment', 'team', 'row', 'col')):
+                changed.append({'row': u['row'], 'col': u['col']})
+        changed.extend({'row': u['row'], 'col': u['col']} for u in before
+                       if not any(v['key'] == u['key'] for v in after))
+        if entry.get('target') in ('AF', 'BF', 'fort'):
+            entry['fortTeam'] = 1-team
+        target = next((u for u in before if u['key'] == entry.get('target')), None)
+        if target:
+            changed.append({'row': target['row'], 'col': target['col']})
+        entry['affected'] = changed
+        self.history.append(entry)
+        self.history = self.history[-200:]
+        if team == 1:
+            self.last_opponent = entry
+
+    def _move_path(self, actor, destination, units):
+        start = (actor['row'], actor['col'])
+        occupied = {(u['row'], u['col']) for u in units}
+        blocked = self.game.blocked_positions()
+        paths = [[start]]
+        while paths:
+            path = paths.pop(0)
+            if path[-1] == destination:
+                return [{'row': r, 'col': c} for r, c in path]
+            if len(path) > 2:
+                continue
+            for dr, dc in EIGHT:
+                p = (path[-1][0]+dr, path[-1][1]+dc)
+                if valid(p, self.game.columns) and p not in occupied and p not in blocked and p not in path:
+                    paths.append([*path, p])
+        return []
+
+    def combat_forecast(self):
+        if self.phase != 'action' or self.game.finished:
+            return None
+        trial = deepcopy(self.game)
+        trial.trace = False
+        trial.events.clear()
+        trial.combat()
+        survivors = {u.uid: u for u in trial.field()}
+        return {'units': {u.uid: {'hp': max(0, survivors[u.uid].hp) if u.uid in survivors else 0,
+                                 'dies': u.uid not in survivors} for u in self.game.field()},
+                'forts': [{'team': f.team, 'hp': 0 if f.stage != trial.forts[f.team].stage else max(0, trial.forts[f.team].hp),
+                           'destroyed': f.stage != trial.forts[f.team].stage or trial.forts[f.team].hp <= 0}
+                          for f in self.game.forts]}
 
     def _catalog(self):
         if self.phase != 'action' or self.side != 0 or self.game.finished:
@@ -266,6 +329,7 @@ class PlaySession:
             raise InvalidAction('该操作现在不可用，请重新选择目标。')
         frames = []
         visual = None
+        before = [self._unit_view(u) for u in self.game.field()]
         if action_id == 'pass':
             self.passes += 1
             self.last_label = '我方让过'
@@ -278,6 +342,7 @@ class PlaySession:
             self.passes = 0
         self.game.check()
         self._drain_events()
+        self._remember_action(visual, 0, before)
         self._finish_if_needed()
         frames.append(self._frame(self.last_label, action=visual))
         if self.phase != 'finished':
@@ -294,6 +359,9 @@ class PlaySession:
         target = self.game.target(u) if u.pos is not None and not u.stunned else None
         fort = self.game.building_target(u) if u.pos is not None and target is None and not u.stunned else None
         arrow = ARROWS[self.game.attack_direction(u, target)] if target else ('↑' if fort and fort.row < u.pos[0] else '↓' if fort else None)
+        if fort:
+            dr, dc = fort.position[0]-u.pos[0], fort.position[1]-u.pos[1]
+            arrow = ARROWS[((dr > 0)-(dr < 0), (dc > 0)-(dc < 0))]
         equipment = []
         for slot, cid in u.equipment.items():
             cd = u.horn_cd if cid == 10260 else u.blade_cd if cid == 10263 else None
@@ -313,10 +381,12 @@ class PlaySession:
         g = self.game
         return {'round': g.round, 'phase': phase or self.phase, 'label': label,
                 'release': RELEASE_VERSION, 'columns': g.columns, 'rows': 8, 'action': action,
+                'lastOpponent': deepcopy(self.last_opponent),
                 'units': [self._unit_view(u) for u in g.field()],
                 'heroes': [self._unit_view(u) for u in g.units if u.hero],
                 'mana': g.mana[0], 'maxMana': min(10, g.round), 'gold': g.gold[0],
                 'forts': [{'team': f.team, 'hp': max(0, f.hp), 'maxHp': f.max_hp,
+                           'row': f.position[0], 'col': f.position[1],
                            'stage': f.stage, 'attack': g.fort_power(f),
                            'ready': g.round >= f.active_from, 'target': f.target_uid} for f in g.forts]}
 
@@ -330,7 +400,8 @@ class PlaySession:
                      opponent={'cards': len(g.hand[1]), 'items': len(g.item_hand[1]), 'gold': g.gold[1], 'mana': g.mana[1]},
                      improvements=[list(x) for x in g.improvements],
                      actions=catalog, passes=self.passes, winner=g.winner, endReason=g.end_reason,
-                     log=self.log[-80:], stats=[dict(s) for s in g.stats],
+                     log=self.log[-80:], history=deepcopy(self.history), forecast=self.combat_forecast(),
+                     stats=[dict(s) for s in g.stats],
                      rosters=[list(r) for r in g.rosters])
         return state
 

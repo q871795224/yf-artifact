@@ -51,6 +51,8 @@ async function checkMobilePrototype(page) {
   );
   await page.locator("#close-detail").click();
   await page.locator("#enemy-info").click();
+  check((await page.locator("#detail-title").innerText()).includes("对手行动记录"), "Opponent portrait opens its action history");
+  await page.locator('[data-action="roster"]').click();
   check(
     (await page.locator(".roster-unit").count()) === 6,
     "Roster shows all six heroes, including pending deployments",
@@ -84,7 +86,7 @@ async function checkMobilePrototype(page) {
     ),
     "Every legal movement square is directly touchable, including the fountain",
   );
-  await page.getByRole("button", { name: "取消", exact: true }).click();
+  await page.getByRole("button", { name: "取消选择目标", exact: true }).click();
   check(
     await page.evaluate(() => view.version === 0 && mode === null),
     "Cancelling target selection does not consume an action",
@@ -98,6 +100,12 @@ async function checkMobilePrototype(page) {
     [1440, 900],
   ]) {
     await page.setViewportSize({ width, height });
+    await page.evaluate(() => new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+    await page.waitForFunction(() => {
+      const cell = document.querySelector(".cell").getBoundingClientRect();
+      const board = document.querySelector("#board").getBoundingClientRect();
+      return Math.abs(cell.width-cell.height) < 1 && board.x >= 0 && board.right <= innerWidth && board.bottom <= innerHeight;
+    });
     const metrics = await page.evaluate(async () => {
       await document.fonts.ready;
       await Promise.all(
@@ -120,6 +128,7 @@ async function checkMobilePrototype(page) {
         },
         cellWidth: document.querySelector(".cell").getBoundingClientRect()
           .width,
+        cellHeight: document.querySelector(".cell").getBoundingClientRect().height,
         footerBottom: footer.bottom,
         broken: [...document.images]
           .filter((i) => !i.naturalWidth)
@@ -140,6 +149,7 @@ async function checkMobilePrototype(page) {
       metrics.cellWidth >= 30 && metrics.footerBottom <= height + 1,
       `Units and footer remain usable at ${width}×${height}`,
     );
+    check(Math.abs(metrics.cellWidth - metrics.cellHeight) < 1, `Cells stay square at ${width}×${height}`);
     check(
       !metrics.broken.length,
       `All original images load at ${width}×${height}`,

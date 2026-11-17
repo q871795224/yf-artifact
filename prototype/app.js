@@ -13,6 +13,11 @@ const esc = (value) =>
   );
 const cardName = (id) => CARDS[id]?.card_name.schinese || "未知卡牌";
 const image = (id, kind = "mini_image") => `${ASSETS}${kind}/${id}.webp`;
+const isDireMelee = (u) => u.id === 1006 && u.team === "enemy";
+const unitImage = (u, kind = "mini_image") => isDireMelee(u)
+  ? "assets/units/dire-melee.webp"
+  : image(u.id, kind);
+const unitName = (u) => isDireMelee(u) ? "夜魇近战小兵" : cardName(u.id);
 const identity = (id) => CARDS[id]?.colors?.[0] || "neutral";
 const pip = (id) =>
   `<i class="color-pip identity-${identity(id)}" aria-hidden="true"></i>`;
@@ -94,6 +99,7 @@ let gameId = null,
   busy = true,
   toastTimer,
   returnFocus,
+  reviewingAction = null,
   requestSequence = 0;
 const reducedMotion = () =>
   matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -123,9 +129,9 @@ function rememberId(id) {
     /* Private browser storage may be unavailable. */
   }
 }
-function toast(text) {
+function toast(text, cardId = null) {
   clearTimeout(toastTimer);
-  $("#toast").textContent = text;
+  $("#toast").innerHTML = `${cardId ? `<img src="${image(cardId)}" alt="${esc(cardName(cardId))}">` : ""}<span>${esc(text)}</span>`;
   $("#toast").hidden = false;
   toastTimer = setTimeout(() => ($("#toast").hidden = true), 3000);
 }
@@ -155,10 +161,13 @@ function targetAt(row, col) {
   });
 }
 const unitPoint = (u) => ({ x: (u.col + 0.5) * 100, y: (u.row + 0.5) * 100 });
-const fortPoint = (key, col = 2) => ({ x: (col + 0.5) * 100, y: key === "AF" ? 700 : 100 });
+const fortPoint = (key) => {
+  const fort = view.forts[key === "AF" ? 0 : 1];
+  return unitPoint(fort);
+};
 function targetPoint(u) {
   const target = view.units.find((v) => v.key === u.target);
-  return target ? unitPoint(target) : ["AF", "BF"].includes(u.target) ? fortPoint(u.target, u.col) : null;
+  return target ? unitPoint(target) : ["AF", "BF"].includes(u.target) ? fortPoint(u.target) : null;
 }
 function ray(from, to, inset = 33, side = 0) {
   const dx = to.x - from.x, dy = to.y - from.y;
@@ -169,11 +178,11 @@ function ray(from, to, inset = 33, side = 0) {
   return `M${from.x + dx / length * pad + ox},${from.y + dy / length * pad + oy} L${to.x - dx / length * pad + ox},${to.y - dy / length * pad + oy}`;
 }
 function renderTargets() {
-  const markers = ["ally", "enemy"].map((team) => `<marker id="arrow-${team}" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="${team === "ally" ? "#edc47c" : "#89d0eb"}"/></marker>`).join("");
+  const markers = ["ally", "enemy"].map((team) => `<marker id="arrow-${team}" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="${team === "ally" ? "#75d49a" : "#ee8585"}"/></marker>`).join("");
   $("#target-overlay").innerHTML = `<defs>${markers}</defs>` + view.units.map((u) => {
     const to = targetPoint(u);
     if (!to || u.stunned) return "";
-    return `<path class="target-ray ${u.team} ${u.range > 1 ? "ranged" : ""} ${u.key === selected ? "focused" : ""}" data-origin="${u.key}" data-target="${u.target}" d="${ray(unitPoint(u), to, 34, 7)}" marker-end="url(#arrow-${u.team})"><title>${esc(cardName(u.id) + "：" + targetDescription(u))}</title></path>`;
+    return `<path class="target-ray ${u.team} ${u.range > 1 ? "ranged" : ""} ${u.key === selected ? "focused" : ""}" data-origin="${u.key}" data-target="${u.target}" d="${ray(unitPoint(u), to, 34, 7)}" marker-end="url(#arrow-${u.team})"><title>${esc(unitName(u) + "：" + targetDescription(u))}</title></path>`;
   }).join("");
 }
 function renderBoard(previous) {
@@ -185,6 +194,7 @@ function renderBoard(previous) {
   for (let row = 0; row < 8; row++)
     for (let col = 0; col < view.columns; col++) {
       const u = view.units.find((u) => u.row === row && u.col === col);
+      const fort = view.forts.find((f) => f.row === row && f.col === col);
       const classes = [
         "cell",
         row === 0 || row === 7 ? "fountain" : "",
@@ -196,14 +206,23 @@ function renderBoard(previous) {
           ? `<span class="fountain-glyph">${icon("fountain")}</span>`
           : "";
       if (u) {
+        const prediction = !busy && view.phase === "action" ? view.forecast?.units[u.key] : null;
         classes.push(
           "occupied",
           u.hero ? "hero" : "creep",
           u.key === selected ? "selected" : "",
           u.stunned ? "stunned" : "",
           focus?.target === u.key ? "current-target" : "",
+          prediction?.dies ? "forecast-death" : "",
+          isDireMelee(u) ? "dire-melee" : "",
         );
-        content = `<img class="unit-art" src="${image(u.id)}" alt=""><span class="unit-vignette"></span><span class="allegiance"></span>${u.hero ? pip(u.id) : ""}<span class="unit-stats">${stats(u)}</span>${u.armor ? `<span class="armor-badge">${icon("shield")}${u.armor}</span>` : ""}${u.stunned ? '<span class="stun-badge">晕</span>' : ""}`;
+        content = `<img class="unit-art" src="${unitImage(u)}" alt=""><span class="unit-vignette"></span>${u.hero ? pip(u.id) : ""}<span class="unit-stats">${stats(u)}</span>${u.armor ? `<span class="armor-badge">${icon("shield")}${u.armor}</span>` : ""}${u.stunned ? '<span class="stun-badge">晕</span>' : ""}${prediction && prediction.hp !== u.hp ? `<span class="forecast-hp" title="按当前局面交战后的生命">→ ${prediction.hp} ♥</span>` : ""}${prediction?.dies ? '<span class="forecast-cross" aria-label="预计交战阵亡">×</span>' : ""}`;
+      }
+      if (fort) {
+        classes.push("structure", fort.ready ? "" : "structure-immune");
+        const prediction = !busy && view.phase === "action" ? view.forecast?.forts.find((f) => f.team === fort.team) : null;
+        if (prediction?.destroyed) classes.push("forecast-death");
+        content = `<span class="structure-art">${icon(fort.stage === "tower" ? "tower" : "base")}</span><span class="structure-label">${fort.stage === "tower" ? "塔" : "基地"}${fort.ready ? "" : " · 待激活"}</span><span class="unit-stats">${stats(fort)}</span>${prediction && prediction.hp !== fort.hp ? `<span class="forecast-hp">→ ${prediction.hp} ♥</span>` : ""}${prediction?.destroyed ? '<span class="forecast-cross">×</span>' : ""}`;
       }
       const possible = targetAt(row, col);
       if (possible.length)
@@ -214,37 +233,48 @@ function renderBoard(previous) {
               ? "skill-range"
               : "targetable",
         );
-      const label = `第${row + 1}排第${col + 1}列${u ? `，${u.team === "ally" ? "我方" : "敌方"}${cardName(u.id)}，攻击${u.attack}，生命${u.hp}${u.stunned ? "，眩晕" : ""}，${targetDescription(u)}` : "，空位"}`;
+      const label = `第${row + 1}排第${col + 1}列${fort ? `，${fort.team === 0 ? "我方" : "敌方"}${fort.stage === "tower" ? "防御塔" : "基地"}，生命${fort.hp}` : u ? `，${u.team === "ally" ? "我方" : "敌方"}${unitName(u)}，攻击${u.attack}，生命${u.hp}${u.stunned ? "，眩晕" : ""}，${targetDescription(u)}` : "，空位"}`;
       cells.push(
-        `<button class="${classes.filter(Boolean).join(" ")}" data-row="${row}" data-col="${col}" ${u ? `data-unit="${u.key}" data-team="${u.team}" aria-pressed="${u.key === selected}"` : ""} aria-label="${label}">${content}</button>`,
+        `<button class="${classes.filter(Boolean).join(" ")}" data-row="${row}" data-col="${col}" ${fort ? `data-fort="${fort.team}" data-team="${fort.team === 0 ? "ally" : "enemy"}"` : u ? `data-unit="${u.key}" data-team="${u.team}" aria-pressed="${u.key === selected}"` : ""} aria-label="${label}">${content}</button>`,
       );
     }
   $("#board").innerHTML = cells.join("");
   renderTargets();
+  renderHistory();
 }
 function renderUnit() {
+  const panel = $("#unit-panel"), prompt = $("#target-prompt");
   const u = selectedUnit();
-  if (mode && mode.kind !== "move") {
-    const id = mode.choices[0].card_id || u?.id || 10020;
-    $("#unit-panel").innerHTML =
-      `<img class="selected-portrait" src="${image(id)}" alt=""><div class="target-instructions" role="status"><b>选择${mode.kind === "move" ? "移动位置" : "目标"}</b><span>${esc(mode.hint)}</span></div><button class="cancel-target" data-action="cancel">取消</button>`;
-    return;
-  }
-  if (!u) {
-    $("#unit-panel").innerHTML =
-      `<span class="idle-panel">点选棋子查看状态，或让过进入交战。</span><button class="view-unit-button" data-action="roster">阵容</button>`;
-    return;
-  }
+  panel.hidden = !u || u.row === null || busy || (mode && mode.kind !== "move");
+  prompt.hidden = !mode;
+  prompt.innerHTML = mode ? `<span>${esc(mode.hint)}</span><button data-action="cancel" aria-label="取消选择目标">取消</button>` : "";
+  if (panel.hidden) return;
+  const mine = u.team === "ally" && u.hero;
   const meta = HEROES[u.id];
-  const mine = u.team === "ally" && u.hero && u.row !== null;
-  const move = actionFor("move", u.key),
-    skill = meta?.kind ? actionFor(meta.kind, u.key) : [];
-  let controls =
-    '<button class="view-unit-button" data-action="detail">查看详情</button>';
-  if (mine)
-    controls = `<div class="unit-actions"><button class="action-button ${mode?.kind === "move" ? "active" : ""}" data-action="move" ${move.length ? "" : "disabled"} aria-label="${mode?.kind === "move" ? "取消" : u.moved ? "本回合已移动" : "移动"}">${icon("move")}<span>${mode?.kind === "move" ? "取消" : u.moved ? "已移动" : "移动"}</span></button><button class="action-button ${mode?.kind === "skill" ? "active" : ""}" data-action="skill" ${skill.length ? "" : "disabled"} aria-label="${meta?.skill || "无主动技能"}">${u.cooldown ? `<small class="cooldown">${u.cooldown}</small>` : ""}${icon("fissure")}<span>${meta?.skill || "被动"}</span></button><button class="action-button" data-action="equipment">${icon("shield")}<span>装备${u.equipment.length ? ` ${u.equipment.length}` : ""}</span></button></div>`;
-  $("#unit-panel").innerHTML =
-    `<button class="selected-portrait ${u.row === null ? "dead-portrait" : ""}" data-action="detail" aria-label="查看${cardName(u.id)}详情"><img src="${image(u.id)}" alt=""></button><div class="unit-summary"><div class="unit-name">${u.hero ? pip(u.id) : ""}${cardName(u.id)}</div><div class="summary-stats">${mode?.kind === "move" ? `<span class="move-hint">${u.firstMove ? "首次可走两格" : "点高亮格移动"}</span>` : u.row === null ? `<span class="return-label">第 ${u.due} 回合登场</span>` : stats(u)}</div></div>${controls}`;
+  const skill = meta?.kind ? actionFor(meta.kind, u.key) : [];
+  panel.innerHTML = mine
+    ? `<button data-action="skill" ${skill.length ? "" : "disabled"} aria-label="${meta?.skill || "被动技能"}${u.cooldown ? `，冷却 ${u.cooldown} 回合` : ""}" title="${meta?.skill || "被动技能"}">${u.cooldown || icon("fissure")}</button><button data-action="equipment" aria-label="查看装备并使用主动装备" title="装备">${icon("shield")}</button>`
+    : '<button data-action="detail" aria-label="查看单位详情">ⓘ</button>';
+  const anchor = $(`.cell[data-unit="${u.key}"]`);
+  if (anchor) {
+    panel.style.left = `${anchor.offsetLeft}px`;
+    panel.style.top = `${anchor.offsetTop + anchor.offsetHeight - 47}px`;
+    panel.style.width = `${anchor.offsetWidth}px`;
+  }
+}
+function renderHistory() {
+  const entry = reviewingAction || view.lastOpponent;
+  const layer = $("#history-overlay");
+  if (!entry || busy || (!reviewingAction && entry.round !== view.round)) { layer.innerHTML = ""; return; }
+  let markup = '<defs><marker id="history-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="#d7c5ef"/></marker></defs>';
+  if (entry.kind === "move" && entry.source && entry.path?.length) {
+    const from = entry.source;
+    markup += `<image href="${unitImage({ ...from, team: entry.team === 1 ? "enemy" : "ally" })}" x="${from.col * 100 + 8}" y="${from.row * 100 + 8}" width="84" height="75" opacity=".28"/><rect x="${from.col * 100 + 4}" y="${from.row * 100 + 4}" width="92" height="92" rx="4" fill="none" stroke="#d7c5ef" stroke-width="2" stroke-dasharray="7 5"/><path d="${entry.path.map((p, i) => `${i ? "L" : "M"}${(p.col + .5)*100},${(p.row + .5)*100}`).join(" ")}" fill="none" stroke="#d7c5ef" stroke-width="4" stroke-dasharray="8 7" marker-end="url(#history-arrow)"/>`;
+  }
+  for (const p of entry.affected || []) markup += `<rect x="${p.col*100+5}" y="${p.row*100+5}" width="90" height="90" rx="5" fill="none" stroke="#d7c5ef" stroke-width="3" stroke-dasharray="5 4"/>`;
+  if (entry.source && entry.kind !== "move") markup += `<rect x="${entry.source.col*100+3}" y="${entry.source.row*100+3}" width="94" height="94" rx="5" fill="none" stroke="#d7c5ef" stroke-width="3"/>`;
+  if (entry.fortTeam !== undefined) { const f = view.forts[entry.fortTeam]; markup += `<rect x="${f.col*100+3}" y="${f.row*100+3}" width="94" height="94" fill="none" stroke="#d7c5ef" stroke-width="4"/>`; }
+  layer.innerHTML = markup;
 }
 function unavailableReason(id, isItem, index) {
   if (view.phase !== "action")
@@ -305,7 +335,7 @@ function render(previous) {
     (!view.units.some((u) => u.key === selected) &&
       !view.heroes.some((u) => u.key === selected))
   )
-    selected = view.units.find((u) => u.team === "ally" && u.hero)?.key || null;
+    selected = null;
   document.title = `V${view.release} · 单路战场`;
   $(".game").dataset.release = view.release;
   $(".prototype-note").textContent = `V${view.release} · ${view.columns} 列战场 · ${window.ArtifactAPI.browserMode ? "进度保存在此浏览器" : "本地试玩"}`;
@@ -331,6 +361,12 @@ function render(previous) {
     el.querySelector(".fort-caption").textContent =
       `${f.team === 0 ? "我" : "敌"}${f.stage === "tower" ? "塔" : "基地"}`;
     el.classList.toggle("fort-immune", !f.ready);
+    const prediction = !busy && view.phase === "action" ? view.forecast?.forts.find((p) => p.team === f.team) : null;
+    let loss = el.querySelector(".fort-forecast");
+    if (!loss) { loss = document.createElement("em"); loss.className = "fort-forecast"; el.querySelector(".fort-meter").append(loss); }
+    loss.style.left = `${(prediction?.hp ?? f.hp) / f.maxHp * 100}%`;
+    loss.style.width = `${Math.max(0, f.hp - (prediction?.hp ?? f.hp)) / f.maxHp * 100}%`;
+    el.title = prediction ? `当前直接交战：${prediction.destroyed ? f.stage === "tower" ? "预计破塔" : "预计摧毁基地" : `预计剩余 ${prediction.hp} 生命`}` : "查看建筑详情";
     const old = previous?.forts.find((p) => p.team === f.team);
     el.classList.toggle("fort-hit", !!old && (old.hp > f.hp || old.stage !== f.stage));
     el.setAttribute(
@@ -350,7 +386,7 @@ function render(previous) {
   const dead = view.heroes.filter((h) => h.team === "ally" && h.row === null);
   $("#enemy-info").setAttribute(
     "aria-label",
-    `阵容与返场${dead.length ? `，${dead.length}名英雄等待登场` : ""}`,
+    `查看对手行动记录${view.lastOpponent ? `，上一手：${view.lastOpponent.label}` : ""}`,
   );
   let badge = $("#enemy-info .reserve-count");
   if (dead.length) {
@@ -378,13 +414,15 @@ function targetDescription(u) {
   if (!u.target) return "射程内暂无普攻目标";
   if (u.target === "AF" || u.target === "BF")
     return `普攻${u.team === "ally" ? "敌方" : "我方"}建筑`;
-  return `普攻目标：${cardName(view.units.find((x) => x.key === u.target)?.id)}`;
+  const target = view.units.find((x) => x.key === u.target);
+  return `普攻目标：${target ? unitName(target) : "未知单位"}`;
 }
 function showUnit(u) {
   if (!u) return;
+  const prediction = view.phase === "action" ? view.forecast?.units[u.key] : null;
   const gear = u.equipment.map((e) => cardName(e.id)).join("、");
   openDetail(
-    `<h2 id="detail-title" class="detail-heading">${u.hero ? pip(u.id) : ""}${cardName(u.id)}</h2><p class="detail-subtitle">${u.team === "ally" ? "我方" : "敌方"}${u.hero ? "英雄" : "单位"} · ${u.row === null ? `等待第 ${u.due} 回合登场` : `第 ${u.row + 1} 排，第 ${u.col + 1} 列`}</p><div class="detail-layout"><img class="detail-art" src="${image(u.id, "large_image")}" alt="${cardName(u.id)}原版卡面"><div class="detail-copy"><div class="detail-stats">${stats(u)}${u.armor ? `<span class="stat">${icon("shield")}${u.armor}</span>` : ""}</div><p>${esc(HEROES[u.id]?.text || CARDS[u.id].card_text.schinese || "近战一格，自动移动与交战。")}</p><p class="detail-muted">射程 ${u.range} 格${u.siege ? ` · 攻城 ${u.siege}` : ""}${u.cleave ? ` · 顺势 ${u.cleave}` : ""}${u.regeneration ? ` · 恢复 ${u.regeneration}` : ""}</p>${u.row !== null ? `<p class="detail-muted">${esc(targetDescription(u))}</p>` : ""}${gear ? `<p class="detail-muted">装备：${esc(gear)}</p>` : ""}${u.cooldown ? `<p class="detail-muted">技能冷却 ${u.cooldown} 回合</p>` : ""}</div></div><p class="detail-note">原版完整卡面供参考，当前能力和攻血以战场数值为准。</p>`,
+    `<h2 id="detail-title" class="detail-heading">${u.hero ? pip(u.id) : ""}${unitName(u)}</h2><p class="detail-subtitle">${u.team === "ally" ? "我方" : "敌方"}${u.hero ? "英雄" : "单位"} · ${u.row === null ? `等待第 ${u.due} 回合登场` : `第 ${u.row + 1} 排，第 ${u.col + 1} 列`}</p><div class="detail-layout"><img class="detail-art" src="${unitImage(u, "large_image")}" alt="${unitName(u)}${isDireMelee(u) ? "立绘" : "原版卡面"}"><div class="detail-copy"><div class="detail-stats">${stats(u)}${u.armor ? `<span class="stat">${icon("shield")}${u.armor}</span>` : ""}</div><p>${esc(HEROES[u.id]?.text || CARDS[u.id].card_text.schinese || "近战一格，自动移动与交战。")}</p><p class="detail-muted">射程 ${u.range} 格${u.siege ? ` · 攻城 ${u.siege}` : ""}${u.cleave ? ` · 顺势 ${u.cleave}` : ""}${u.regeneration ? ` · 恢复 ${u.regeneration}` : ""}</p>${u.row !== null ? `<p class="detail-muted">${esc(targetDescription(u))}</p>` : ""}${prediction ? `<p class="forecast-detail">当前局面直接交战：${prediction.dies ? "预计阵亡" : `预计剩余 ${prediction.hp} 生命`}。对手行动后会更新。</p>` : ""}${gear ? `<p class="detail-muted">装备：${esc(gear)}</p>` : ""}${u.cooldown ? `<p class="detail-muted">技能冷却 ${u.cooldown} 回合</p>` : ""}</div></div><p class="detail-note">${isDireMelee(u) ? "夜魇近战小兵使用自制立绘。" : "原版完整卡面供参考。"}当前能力和攻血以战场数值为准。</p>`,
   );
 }
 function showEquipment(u) {
@@ -396,7 +434,7 @@ function showEquipment(u) {
     })
     .join("");
   openDetail(
-    `<h2 id="detail-title" class="detail-heading">${cardName(u.id)}的装备</h2><p class="sheet-note">每类槽位一件，新装备替换同槽旧装备。阵亡后保留。</p>${entries || '<p class="sheet-note">暂未穿戴装备。</p>'}<button class="detail-action" id="open-item-hand">查看物品手牌</button>`,
+    `<h2 id="detail-title" class="detail-heading">${unitName(u)}的装备</h2><p class="sheet-note">每类槽位一件，新装备替换同槽旧装备。阵亡后保留。</p>${entries || '<p class="sheet-note">暂未穿戴装备。</p>'}<button class="detail-action" id="open-item-hand">查看物品手牌</button>`,
   );
 }
 function showCard(id, index, item) {
@@ -519,9 +557,13 @@ function cellClick(row, col) {
     if (choices.length) {
       mode = null;
       perform(choices[0].id);
-    } else toast("请选择高亮位置，或点取消");
+    } else if (!u && mode.kind === "move") { selected = null; cancelMode(); }
+    else toast("请选择高亮位置，或点取消");
     return;
   }
+  const fort = view.forts.find((f) => f.row === row && f.col === col);
+  if (fort) { showFort(fort); return; }
+  if (!u) { selected = null; cancelMode(); return; }
   if (u) {
     const cancel = mode?.kind === "move" && selected === u.key;
     mode = null;
@@ -551,20 +593,21 @@ function showRoster() {
     `<h2 id="detail-title" class="detail-heading">阵容与返场</h2>${groups}<p class="detail-note">死亡后跳过下一回合，再下一回合从泉水返场。泉水可用空位不足时，自动替换己方生命最低的小兵。</p>`,
   );
 }
-function showLog() {
+function showLog(enemyOnly = false) {
+  const entries = (view.history || []).map((entry, index) => ({ ...entry, index })).filter((e) => !enemyOnly || e.team === 1);
   openDetail(
-    `<h2 id="detail-title" class="detail-heading">行动记录</h2><p class="sheet-note">最近 ${view.log.length} 条记录 · 第 ${view.round} 回合</p><div class="action-log">${
+    `<h2 id="detail-title" class="detail-heading">${enemyOnly ? "对手" : "双方"}行动记录</h2><p class="sheet-note">点击行动可在棋盘上查看位置与路径。</p><div class="log-options"><button id="log-toggle" data-enemy-only="${!enemyOnly}">${enemyOnly ? "查看双方行动" : "只看对手"}</button><button data-action="roster">阵容与返场</button></div><div class="history-list">${entries.slice().reverse().map((e) => `<button class="history-entry" data-history="${e.index}">${e.card_id ? `<img src="${image(e.card_id)}" alt="">` : e.source ? `<img src="${unitImage({ ...e.source, team: e.team === 1 ? "enemy" : "ally" })}" alt="">` : '<span class="history-pass">让</span>'}<span><b>${esc(e.label)}</b><small>第 ${e.round} 回合 · ${e.team === 1 ? "敌方" : "我方"}${e.kind === "move" ? " · 查看移动路径" : ""}</small></span></button>`).join("") || '<p class="sheet-note">尚无行动</p>'}</div><details><summary>详细事件</summary><div class="action-log">${
       view.log
         .slice()
         .reverse()
         .map((e) => `<p><span>${e.round}</span>${esc(e.text)}</p>`)
         .join("") || "暂无记录"
-    }</div>`,
+    }</div></details>`,
   );
 }
 function showHelp() {
   openDetail(
-    `<h2 id="detail-title" class="detail-heading">单路战场</h2><div class="help-copy"><p><b>行动：</b>打牌、移动英雄、使用技能、穿戴或使用装备，每次占一个行动，随后由对手回应。普通攻击自动进行，无需手动选择攻击。</p><p><b>交战：</b>双方连续让过后，所有单位与建筑同时结算攻击。交战后可查看损伤，点击“下一回合”继续。</p><p><b>移动：</b>点己方英雄直接显示可移动格，可随时改选技能或装备；取消不占行动。英雄每回合移动一次，平时八邻一格；从泉水出生／返场后的首次移动最多两格，不能穿过单位。小兵自动向前推进。</p><p><b>仇恨与箭头：</b>金色为我方，蓝色为敌方；远程虚线指向具体目标。英雄优先保持仍在射程内的旧目标，否则选择四向最近的敌人，同距离按固定顺序；没有单位可打时才攻击建筑。英雄不自动保护转火，这条只作用于小兵和建筑。</p><p><b>出牌：</b>普通牌需要对应颜色英雄在场；眩晕仍提供颜色。法力每回合刷新并增加一点，最高 10。</p><p><b>金币：</b>无工资，敌方小兵死亡 +1，英雄死亡 +5。物品花金币；开局发一张，此后每三回合再发一张。</p><p><b>装备：</b>武器、护甲、饰品各一件，同类替换。主动效果不花资源，有冷却，阵亡后装备保留。</p><p><b>胜负：</b>先摧毁 40 血防御塔，再摧毁同位置的 80 血基地。基地下一回合激活。塔攻击 4，基地攻击 8；进入敌方泉水会受到 10 点范围伤害。</p><p>当前固定阵容与候选牌池，双方交替获得每回合先手。右上角可查看记录和导出本局。</p></div>`,
+    `<h2 id="detail-title" class="detail-heading">单路战场</h2><div class="help-copy"><p><b>行动：</b>打牌、移动英雄、使用技能、穿戴或使用装备，每次占一个行动，随后由对手回应。普通攻击自动进行，无需手动选择攻击。</p><p><b>预测：</b>箭头表示普攻目标；灰色头像和红叉表示预计阵亡，→ 后的数字表示交战后的生命。预测按当前局面双方直接交战计算，对手行动后会更新。</p><p><b>交战：</b>双方连续让过后，所有单位与建筑同时结算攻击。交战后可查看损伤，点击“下一回合”继续。</p><p><b>移动：</b>点己方英雄显示可移动格；棋子上的按钮用于技能和装备，长按查看详情。点空格或取消退出选择，不占行动。英雄每回合移动一次，平时八邻一格；从泉水出生／返场后的首次移动最多两格，不能穿过单位。小兵自动向前推进。</p><p><b>仇恨与箭头：</b>绿色为我方，红色为敌方；远程虚线指向具体目标。英雄优先保持仍在射程内的旧目标，否则选择四向最近的敌人，同距离按固定顺序；没有单位可打时才攻击建筑。英雄不自动保护转火，这条只作用于小兵和建筑。</p><p><b>出牌：</b>普通牌需要对应颜色英雄在场；眩晕仍提供颜色。法力每回合刷新并增加一点，最高 10。</p><p><b>金币：</b>无工资，敌方小兵死亡 +1，英雄死亡 +5。物品花金币；开局发一张，此后每三回合再发一张。</p><p><b>装备：</b>武器、护甲、饰品各一件，同类替换。主动效果不花资源，有冷却，阵亡后装备保留。</p><p><b>胜负：</b>先摧毁 40 血防御塔，再摧毁同位置的 80 血基地。基地下一回合激活。塔攻击 4，基地攻击 8；进入敌方泉水会受到 10 点范围伤害。</p><p>当前固定阵容与候选牌池，双方交替获得每回合先手。右上角可查看记录和导出本局。</p></div>`,
   );
 }
 function showResult() {
@@ -627,7 +670,7 @@ async function applyPacket(packet, animate = false, command = null) {
       if (sequence !== requestSequence) return;
       view = next;
       render(previous);
-      toast(frame.label);
+      toast(frame.label, frame.action?.card_id);
       if (frame.phase === "combat") await window.ArtifactBattleFX.combat(view);
       else if (!await window.ArtifactBattleFX.changes(previous, view)) await delay(120);
     }
@@ -648,6 +691,8 @@ async function perform(id) {
   $("#toast").hidden = true;
   busy = true;
   mode = null;
+  selected = null;
+  reviewingAction = null;
   render();
   const sequence = ++requestSequence;
   try {
@@ -726,6 +771,27 @@ $("#unit-panel").addEventListener("click", (e) => {
   const button = e.target.closest("[data-action]");
   if (button && !button.disabled) unitAction(button.dataset.action);
 });
+$("#target-prompt").addEventListener("click", (e) => { if (e.target.closest("[data-action=cancel]")) cancelMode(); });
+let holdTimer = null, heldCell = null, suppressCellClick = false, holdOrigin = null;
+function cancelHold() { clearTimeout(holdTimer); holdTimer = null; }
+$("#board").addEventListener("pointerdown", (e) => {
+  const cell = e.target.closest(".cell[data-unit]");
+  if (!cell || busy) return;
+  heldCell = cell.dataset.unit;
+  suppressCellClick = false;
+  holdOrigin = { x: e.clientX, y: e.clientY };
+  holdTimer = setTimeout(() => {
+    suppressCellClick = true;
+    showUnit(view.units.find((u) => u.key === heldCell));
+  }, 450);
+});
+$("#board").addEventListener("pointermove", (e) => { if (holdOrigin && Math.hypot(e.clientX-holdOrigin.x, e.clientY-holdOrigin.y) > 8) cancelHold(); });
+for (const event of ["pointerup", "pointercancel", "pointerleave"]) $("#board").addEventListener(event, cancelHold);
+$("#board").addEventListener("contextmenu", (e) => {
+  const cell = e.target.closest(".cell[data-unit]");
+  if (cell) { e.preventDefault(); cancelHold(); showUnit(view.units.find((u) => u.key === cell.dataset.unit)); }
+});
+$("#board").addEventListener("click", (e) => { if (suppressCellClick) { suppressCellClick = false; e.stopImmediatePropagation(); } }, true);
 $("#hand").addEventListener("click", (e) => {
   const button = e.target.closest("[data-card]");
   if (button)
@@ -756,6 +822,15 @@ document.querySelectorAll(".hand-tab").forEach((b) => {
   });
 });
 $("#detail-body").addEventListener("click", (e) => {
+  const logToggle = e.target.closest("#log-toggle");
+  if (logToggle) showLog(logToggle.dataset.enemyOnly === "true");
+  if (e.target.closest('[data-action="roster"]')) showRoster();
+  const history = e.target.closest("[data-history]");
+  if (history) {
+    reviewingAction = view.history[Number(history.dataset.history)];
+    closeDetail(); mode = null; selected = null; render();
+    toast(reviewingAction.label);
+  }
   const play = e.target.closest("#play-card");
   if (play && !play.disabled)
     chooseCard(Number(play.dataset.index), play.dataset.item === "true");
@@ -842,17 +917,19 @@ $("#concede-button").addEventListener("click", () => {
   confirmConcede();
 });
 $("#enemy-info").addEventListener("click", () => {
-  if (view) showRoster();
+  if (view) showLog(true);
 });
+function showFort(f) {
+  const prediction = view.phase === "action" ? view.forecast?.forts.find((p) => p.team === f.team) : null;
+  openDetail(`<h2 id="detail-title" class="detail-heading">${f.team === 0 ? "我方" : "敌方"}${f.stage === "tower" ? "防御塔" : "基地"}</h2><p class="sheet-note">生命 ${f.hp}/${f.maxHp} · 攻击 ${f.attack} · 每轮攻击一个目标</p><p class="help-copy">位于泉水排中央，占一格，不可通行或部署单位。单位按四正向射程攻击建筑；建筑攻击周围两圈内的一个敌人，保留保护英雄转火。</p><p class="help-copy">${f.ready ? "破塔后原格出现基地，下一回合激活；泉水本身不能被攻击。" : "刚出现的基地将在下回合开始后激活，本回合不会攻击或受到伤害。"}</p>${prediction ? `<p class="forecast-detail">当前直接交战：${prediction.destroyed ? f.stage === "tower" ? "预计破塔" : "预计摧毁基地" : `预计剩余 ${prediction.hp} 生命`}。</p>` : ""}`);
+}
 document.querySelectorAll(".fort").forEach((el) => {
   el.tabIndex = 0;
   el.setAttribute("role", "button");
   const show = () => {
     if (!view) return;
     const f = view.forts[el.classList.contains("ally-fort") ? 0 : 1];
-    openDetail(
-      `<h2 id="detail-title" class="detail-heading">${f.team === 0 ? "我方" : "敌方"}${f.stage === "tower" ? "防御塔" : "基地"}</h2><p class="sheet-note">生命 ${f.hp}/${f.maxHp} · 攻击 ${f.attack} · 每轮攻击一个目标</p><p class="help-copy">${f.ready ? "优先保持合法仇恨，范围内敌方英雄攻击我方英雄时会保护转火。" : "刚出现的基地将在下回合开始后激活，本回合不会攻击或受到伤害。"}</p>`,
-    );
+    showFort(f);
   };
   el.addEventListener("click", show);
   el.addEventListener("keydown", (e) => {
@@ -884,4 +961,12 @@ if (window.ArtifactAPI.browserMode) {
     () => '<span class="cell" aria-hidden="true"></span>',
   ).join("");
 }
+function fitBoard() {
+  const field = $(".battlefield"), frame = $(".board-frame");
+  const side = Math.max(1, Math.min((field.clientWidth - 16 - 12 - ((view?.columns || 5)-1)*2)/(view?.columns || 5), (field.clientHeight - 40 - 26)/8));
+  frame.style.width = `${side*(view?.columns || 5) + ((view?.columns || 5)-1)*2 + 12}px`;
+  frame.style.height = `${side*8 + 26}px`;
+  renderUnit();
+}
+new ResizeObserver(fitBoard).observe($(".battlefield"));
 bootstrap();

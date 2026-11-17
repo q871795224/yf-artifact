@@ -49,6 +49,7 @@ class Fort:
     stage: str = 'tower'
     active_from: int = 1
     target_uid: str | None = None
+    position: tuple | None = None
 
     @property
     def uid(self):
@@ -56,7 +57,7 @@ class Fort:
 
     @property
     def row(self):
-        return 6.5 if self.team == 0 else .5
+        return self.position[0] if self.position else (6.5 if self.team == 0 else .5)
 
     @property
     def max_hp(self):
@@ -68,8 +69,8 @@ class Match(Game):
     item_ids = ITEMS
     gear_ids = GEAR
 
-    def __init__(self, a, b, seed=11, tower_attack=5, protection=False, trace=False, columns=6):
-        self.forts = [Fort(0), Fort(1)]
+    def __init__(self, a, b, seed=11, tower_attack=5, protection=False, trace=False, columns=6, fort_cells=False):
+        self.forts = [Fort(team, position=((7 if team == 0 else 0), columns//2) if fort_cells else None) for team in (0, 1)]
         self.tower_attack = tower_attack
         self.protection = protection
         self.finished = False
@@ -157,15 +158,21 @@ class Match(Game):
     def fort_power(self, fort):
         return self.tower_attack * (2 if fort.stage == 'base' else 1)
 
+    def blocked_positions(self):
+        return {f.position for f in self.forts if f.position is not None}
+
+    def fort_distance(self, fort, pos):
+        return distance(pos, fort.position) if fort.position else abs(pos[0]-fort.row)
+
     def fort_target(self, fort, override=None):
         if fort.hp <= 0 or self.round < fort.active_from or self.fort_power(fort) == 0:
             return None
         def position(u):
             return override[1] if override and u is override[0] else u.pos
-        candidates = [u for u in self.field(1-fort.team) if abs(position(u)[0]-fort.row) <= 2]
+        candidates = [u for u in self.field(1-fort.team) if self.fort_distance(fort, position(u)) <= 2]
         protected = [h for h in self.protecting_heroes(fort.team, override=override) if h in candidates]
         pool = protected or candidates
-        return next((u for u in pool if u.uid == fort.target_uid), min(pool, key=lambda u: (abs(position(u)[0]-fort.row), u.uid)) if pool else None)
+        return next((u for u in pool if u.uid == fort.target_uid), min(pool, key=lambda u: (self.fort_distance(fort, position(u)), u.uid)) if pool else None)
 
     def refresh_targets(self):
         previous = {u.uid:u.target_uid for u in self.field()}
@@ -187,12 +194,13 @@ class Match(Game):
     def building_target(self, unit, pos=None):
         pos = unit.pos if pos is None else pos
         f = self.forts[1-unit.team]
-        return f if self.round >= f.active_from and f.hp > 0 and abs(pos[0]-f.row) <= unit.reach else None
+        aligned = f.position is None or pos[0] == f.position[0] or pos[1] == f.position[1]
+        return f if self.round >= f.active_from and f.hp > 0 and aligned and self.fort_distance(f, pos) <= unit.reach else None
 
     def position_score(self, unit, pos):
         score = super().position_score(unit, pos)
         fort = self.forts[1-unit.team]
-        score -= .75 * max(0, abs(pos[0]-fort.row)-unit.reach)
+        score -= .75 * max(0, self.fort_distance(fort, pos)-unit.reach)
         if self.target(unit, pos) is None and self.building_target(unit, pos):
             score += self.attack(unit, pos) * (1.4 if fort.stage == 'base' else 1.1)
         if self.fort_target(fort, override=(unit, pos)) is unit:
@@ -203,7 +211,7 @@ class Match(Game):
         return score
 
     def spawn_positions(self, team):
-        occupied = {u.pos for u in self.field()}
+        occupied = {u.pos for u in self.field()} | self.blocked_positions()
         heroes = [u for u in self.field(team) if u.hero]
         fountain = 7 if team == 0 else 0
         return [(r,c) for r in range(8) for c in range(self.columns) if (r,c) not in occupied
@@ -309,7 +317,7 @@ class Match(Game):
             elif item == 10216:
                 actions.append((5,'item',str(index),'ticket'))
             elif item == 3006:
-                occupied = {u.pos for u in self.field()}
+                occupied = {u.pos for u in self.field()} | self.blocked_positions()
                 free = any((7 if team == 0 else 0,c) not in occupied for c in range(self.columns))
                 if free:
                     for h in heroes:
@@ -405,7 +413,7 @@ class Match(Game):
                 choice=self.rng(f'ticket:{team}').choice(self.gear_ids)
                 self.item_hand[team].append((choice,True))
             elif item==3006:
-                occupied={u.pos for u in self.field()};row=7 if team==0 else 0
+                occupied={u.pos for u in self.field()} | self.blocked_positions();row=7 if team==0 else 0
                 target.pos=next((row,c)for c in range(self.columns)if(row,c)not in occupied)
                 target.target_uid=None  # Retreat does not refresh its first-move bonus.
             self.record(f"{'AB'[team]}使用 {CARDS[item]['card_name']['schinese']} → {target_id}，消耗 {price} 金币；评分 {value:.2f}")

@@ -1,4 +1,4 @@
-// Execute with playwright-cli run-code against the static V0.2 game.
+// Execute with playwright-cli run-code against the current static release.
 async function checkBattleEffects(page) {
   await page.emulateMedia({ reducedMotion: "no-preference" });
   const errors = [];
@@ -38,6 +38,6 @@ async function checkBattleEffects(page) {
   }
   if (report.phase !== "finished" || report.winner !== plan.winner || report.round !== plan.round) throw new Error("Animated playback diverged from the engine replay");
   if (errors.length) throw new Error(errors.join("\n"));
-  await page.screenshot({ path: "output/playwright/v02-animated-finish.png" });
+  await page.screenshot({ path: `output/playwright/v${report.release}-animated-finish.png` });
   return { ...report, errors };
 }

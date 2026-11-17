@@ -135,6 +135,9 @@ class Game:
     def field(self, team=None):
         return [u for u in self.units if u.pos is not None and (team is None or u.team == team)]
 
+    def blocked_positions(self):
+        return set()
+
     def record(self, text):
         if self.trace:
             self.events.append(text)
@@ -155,6 +158,7 @@ class Game:
         field = self.field()
         assert len({u.pos for u in field}) == len(field), "Overlapping units"
         assert all(valid(u.pos, self.columns) and 0 < u.hp <= u.max_hp for u in field), "Invalid position or HP"
+        assert all(u.pos not in self.blocked_positions() for u in field), "Unit overlaps a building"
         assert all(len(self.field(t)) <= 24 for t in (0, 1)), "Team unit cap exceeded"
 
     def attack(self, unit, pos=None):
@@ -225,7 +229,8 @@ class Game:
     def spawn_hero(self, unit):
         occupied = {u.pos: u for u in self.field()}
         row = 7 if unit.team == 0 else 0
-        candidates = [(row, c) for c in self.rng("hero-birth").sample(range(self.columns), self.columns)]
+        candidates = [(row, c) for c in self.rng("hero-birth").sample(range(self.columns), self.columns)
+                      if (row, c) not in self.blocked_positions()]
         free = next((p for p in candidates if p not in occupied), None)
         replaceable = [occupied[p] for p in candidates if p in occupied and occupied[p].team == unit.team and not occupied[p].hero]
         if free is None:
@@ -260,7 +265,7 @@ class Game:
                 for slot in range(2):
                     occupied = {u.pos for u in self.field()}
                     row = 7 if team == 0 else 0
-                    pos = next(((row, c) for c in preferred if (row, c) not in occupied), None)
+                    pos = next(((row, c) for c in preferred if (row, c) not in occupied and (row, c) not in self.blocked_positions()), None)
                     if pos is None or len(self.field(team)) >= 24:
                         self.stats[team]["creep_spawn_blocked"] += 1
                         continue
@@ -293,7 +298,7 @@ class Game:
                     for pos in choices:
                         blocker = occupied.get(pos)
                         vacates = blocker and blocker.team == team and blocker.uid in intents
-                        if valid(pos, self.columns) and (blocker is None or vacates):
+                        if valid(pos, self.columns) and pos not in self.blocked_positions() and (blocker is None or vacates):
                             intents[unit.uid] = pos
                             break
             groups = defaultdict(list)
@@ -331,7 +336,7 @@ class Game:
         self.refresh_targets()
 
     def reachable(self, unit):
-        occupied = {u.pos for u in self.field()}
+        occupied = {u.pos for u in self.field()} | self.blocked_positions()
         visited, frontier = {unit.pos}, {unit.pos}
         for _ in range(2 if unit.first_move else 1):
             new = set()

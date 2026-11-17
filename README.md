@@ -2,7 +2,7 @@
 
 参考 Artifact，面向手机、供个人游玩的单路卡牌战斗游戏。已接入现有 Python 推演引擎，可在手机浏览器手动操作、与 AI 完成拆塔和基地胜负的完整对局。
 
-**当前版本：V0.2（五列战场与战斗特效）。** V0.1 保留为原六列正式试玩版本，版本记录见 [更新记录](CHANGELOG.md)。
+**当前版本：V0.3（战场阅读、交战预测与中央建筑）。** V0.1／V0.2 保留在版本标签中，版本记录见 [更新记录](CHANGELOG.md)。
 
 **[在线试玩](https://q871795224.github.io/yf-artifact/)** · [GitHub 仓库](https://github.com/q871795224/yf-artifact)
 
@@ -17,10 +17,11 @@
 ## 文档入口
 
 - [文档导航](docs/README.md)：当前规格、历史实验、原作资料与维护约定。
-- [V0.2 规则现状](docs/design/current-rules.md)：已确认方向、原型数值和待讨论项。
+- [当前源码规则](docs/design/current-rules.md)：已确认方向、原型数值和待讨论项。
+- [后续路线图](docs/design/roadmap.md)：本轮试玩反馈、已实现试验与后置事项。
 - [决策记录](docs/design/decision-log.md)：为什么从随机箭头走向仇恨、为什么补双经济终端，以及被替代的方案。
 - [开发复盘与运维](docs/development/lessons-and-operations.md)：问题、解决办法、缓存／版本／发布／本机服务的坑点。
-- [V0.2 验证归档](docs/releases/v0.2.md)：完整对局、动画、视口、公网验证及测试局限。
+- [V0.3 发布验证](docs/releases/v0.3.md)：完整对局、动画、视口、公网验证及测试局限。
 - [Classic 本地参考库](references/artifact-classic/README.md)与[原作美术](references/artifact-classic/assets/README.md)：日常离线查询与素材来源。
 
 早期草案和全部推演入口保留在文档导航中；它们记录当时的地图、技能和实验假设，不作为当前规则的替代。重要结果写入已提交的归档，临时日志和截图保留在忽略的 `output/`。
