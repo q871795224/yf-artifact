@@ -18,6 +18,7 @@
 
 - [文档导航](docs/README.md)：当前规格、历史实验、原作资料与维护约定。
 - [当前源码规则](docs/design/current-rules.md)：已确认方向、原型数值和待讨论项。
+- [成长 Demo 设计记录](docs/design/growth-demo.md)：三级成长、存活回合计数、红绿英雄候选和专属卡未定项，尚未实现。
 - [后续路线图](docs/design/roadmap.md)：本轮试玩反馈、已实现试验与后置事项。
 - [决策记录](docs/design/decision-log.md)：为什么从随机箭头走向仇恨、为什么补双经济终端，以及被替代的方案。
 - [开发复盘与运维](docs/development/lessons-and-operations.md)：问题、解决办法、缓存／版本／发布／本机服务的坑点。

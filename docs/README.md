@@ -7,6 +7,7 @@
 | 想了解什么 | 文档 |
 | --- | --- |
 | 当前源码怎么玩，哪些只是原型数值 | [V0.3 规则现状](design/current-rules.md) |
+| 新一轮三级成长、红绿 Demo、英雄面板与专属卡讨论 | [成长 Demo：结论、候选与未定项](design/growth-demo.md)（尚未实现） |
 | 这轮改什么、以后再改什么 | [路线图](design/roadmap.md) |
 | 为什么这样设计，哪些方案被替代，哪些还没定 | [决策记录](design/decision-log.md) |
 | 遇到的问题、处理办法、启动／发布与排查步骤 | [开发复盘与运维](development/lessons-and-operations.md) |
