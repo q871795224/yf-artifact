@@ -1,18 +1,19 @@
 # 文档导航
 
-整理日期：2026-11-17，当前正式试玩版为 **V0.3**，V0.2 保留历史发布归档。先看当前规格，再按需要回查讨论与实验；早期文件中的“当前”“待定”“下一步”描述的是写作时点。
+更新日期：2026-11-18，当前版本为 **V0.4 成长 Demo**，V0.2／V0.3 保留历史发布归档。先看当前规格，再按需要回查讨论与实验；早期文件中的“当前”“待定”“下一步”描述的是写作时点。
 
 ## 当前入口
 
 | 想了解什么 | 文档 |
 | --- | --- |
-| 当前源码怎么玩，哪些只是原型数值 | [V0.3 规则现状](design/current-rules.md) |
-| 新一轮三级成长、红绿 Demo、英雄面板与专属卡讨论 | [成长 Demo：结论、候选与未定项](design/growth-demo.md)（尚未实现） |
+| 当前源码怎么玩，哪些只是原型数值 | [V0.4 成长 Demo 实现](design/growth-implementation.md) |
+| 三级成长、红绿 Demo、英雄面板与专属卡讨论沿革 | [成长 Demo：结论、候选与未定项](design/growth-demo.md) |
 | 第一期 6 人名单、第二期备选、强势期与关键字原则 | [第一期英雄对齐结论](design/hero-roster-alignment.md)（2026-11-18 已对齐） |
 | 这轮改什么、以后再改什么 | [路线图](design/roadmap.md) |
 | 为什么这样设计，哪些方案被替代，哪些还没定 | [决策记录](design/decision-log.md) |
 | 遇到的问题、处理办法、启动／发布与排查步骤 | [开发复盘与运维](development/lessons-and-operations.md) |
-| V0.3 测过什么 | [发布验证](releases/v0.3.md) |
+| V0.4 测过什么 | [发布验证](releases/v0.4.md) |
+| V0.3 测过什么 | [历史发布验证](releases/v0.3.md)、[V0.3 规则现状](design/current-rules.md) |
 | V0.2 测过什么、结果与局限 | [V0.2 验证归档](releases/v0.2.md) |
 | 版本区别与标签 | [更新记录](../CHANGELOG.md) |
 | 本地／在线试玩与界面操作 | [游戏说明](../prototype/README.md) |
@@ -39,7 +40,7 @@
 
 - [Classic 数据参考库](../references/artifact-classic/README.md)：2018 数值快照与独立保存的 2021 客户端文本。
 - [原作图片](../references/artifact-classic/assets/README.md)：原始图片与压缩 WebP 副本。
-- [真人行动适配器](../scripts/playable_match.py)：当前源码版本、地图列数、合法操作与公开状态。
+- [成长版行动适配器](../scripts/growth_playable.py)与[基础适配器](../scripts/playable_match.py)：当前成长玩法与共用的行动、回放和公开状态。
 - [特效库](../prototype/effects.js)与[对局适配器](../prototype/game-effects.js)：工作台／正式游戏共用视觉实现，后者映射真实行动与状态变化。
 
 新增决策写入决策记录，当前行为改变时同步规则现状与更新记录；发布验证结果写入对应版本归档。临时日志和截图留在忽略的 `output/`，重要结论应提炼到已提交的文档里。

@@ -29,7 +29,7 @@
   async function combat(state) {
     const entries = [];
     for (const unit of state.units) {
-      if (!unit.target || unit.stunned) continue;
+      if (!unit.target || unit.stunned || unit.canAttack === false) continue;
       const victim = state.units.find((u) => u.key === unit.target);
       const fortTeam = unit.target === "AF" ? 0 : unit.target === "BF" ? 1 : null;
       const to = victim ? point(victim) : fortTeam !== null ? fortPoint(state, fortTeam) : null;
@@ -81,6 +81,7 @@
         if (u.hp !== old.hp) entries.push({ kind: u.hp > old.hp ? "heal" : "impact", scene: location, parameters: { damage: Math.abs(u.hp - old.hp) } });
         if (u.armor > old.armor) entries.push({ kind: "shield", scene: location });
       }
+      if (old && u.level > old.level) entries.push({ kind: "aura", scene: location, parameters: { color: "#efcf76" } });
       if (u.stunned && !old?.stunned) entries.push({ kind: "stun", scene: location });
       if ([10014, 10036].includes(u.id) && (!old || old.row !== u.row || old.col !== u.col || previous.round !== next.round)) {
         entries.push({ kind: "aura", scene: { ...location, areaCells: area(u, next.columns) } });

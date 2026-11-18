@@ -4,7 +4,9 @@ from copy import deepcopy
 import json
 import re
 
-from playable_match import PlaySession, InvalidAction, StaleAction
+from playable_match import InvalidAction, StaleAction
+from growth_playable import GrowthSession as PlaySession
+from growth_cards import catalog_view
 
 
 class BrowserBridge:
@@ -20,7 +22,7 @@ class BrowserBridge:
             raise LookupError('没有找到这局的浏览器存档，请开始新一局。')
         if record.get('engine_version') != self.engine_version:
             raise StaleAction('游戏版本已更新，旧对局无法继续，请开始新一局。')
-        session = PlaySession(record['seed'])
+        session = PlaySession(record['seed'], record.get('deck_config'))
         for command in record['commands']:
             session.apply(command['version'], command['action_id'])
         self.session, self.game_id = session, game_id
@@ -28,15 +30,18 @@ class BrowserBridge:
     def save_record(self):
         return {'schema_version': 1, 'engine_version': self.engine_version,
                 'game_id': self.game_id, 'seed': self.session.seed,
+                'deck_config': deepcopy(self.session.game.deck_config[0]),
                 'commands': deepcopy(self.session.commands)}
 
     def request(self, path, body, record=None, new_id=None, seed=None):
         try:
+            if path == '/api/catalog' and body is None:
+                return self._response(catalog_view())
             if path == '/api/games' and body is not None:
                 chosen_seed = body.get('seed', seed)
                 if type(chosen_seed) is not int or not 1 <= chosen_seed <= 1000000000:
                     raise InvalidAction('对局种子不正确。')
-                session = PlaySession(chosen_seed)
+                session = PlaySession(chosen_seed, body.get('deck_config'))
                 self.session, self.game_id = session, new_id
                 return self._response(session.packet(), save=True)
             route = re.fullmatch(r'/api/games/([a-f0-9]{32})(/actions|/export)?', path)

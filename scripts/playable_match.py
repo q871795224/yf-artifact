@@ -129,8 +129,10 @@ def action_view(game, action, version, team=0):
         index = int(actor)
         card_id = game.hand[team][index] if kind == 'card' else game.item_hand[team][index][0]
         view.update(index=index, card_id=card_id)
-    if kind in ('move', 'horn') or (kind == 'card' and ',' in target):
+    if kind in ('move', 'horn', 'blink') or (kind == 'card' and ',' in target):
         view['row'], view['col'] = map(int, target.split(','))
+    if '|' in target:
+        view['firstTarget'], view['secondTarget'] = target.split('|')
     if kind == 'stun':
         view['dr'], view['dc'] = map(int, target.split(','))
     return view
@@ -228,7 +230,7 @@ class PlaySession:
         self._finish_if_needed()
         self.side = 0
         frames.append(self._frame(self.last_label, action=visual))
-        if self.passes == 2 and self.phase != 'finished':
+        if (self.passes == 2 or getattr(self.game, 'force_combat', False)) and self.phase != 'finished':
             self._combat(frames)
 
     def _combat(self, frames):
@@ -346,7 +348,7 @@ class PlaySession:
         self._finish_if_needed()
         frames.append(self._frame(self.last_label, action=visual))
         if self.phase != 'finished':
-            if self.passes == 2:
+            if self.passes == 2 or getattr(self.game, 'force_combat', False):
                 self._combat(frames)
             else:
                 self.side = 1

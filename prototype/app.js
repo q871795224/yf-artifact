@@ -12,7 +12,7 @@ const esc = (value) =>
       ],
   );
 const cardName = (id) => CARDS[id]?.card_name.schinese || "未知卡牌";
-const image = (id, kind = "mini_image") => `${ASSETS}${kind}/${id}.webp`;
+const image = (id, kind = "mini_image") => `${ASSETS}${kind}/${CARDS[id]?.art_id || id}.webp`;
 const isDireMelee = (u) => u.id === 1006 && u.team === "enemy";
 const unitImage = (u, kind = "mini_image") => isDireMelee(u)
   ? "assets/units/dire-melee.webp"
@@ -77,7 +77,14 @@ const RULES = {
     "随机获得本场装备池的一件装备，放入物品手牌；该装备已经付费，使用时不再花金币。",
 };
 const SLOT_NAMES = { Weapon: "武器", Armor: "护甲", Accessory: "饰品" };
-const storageKey = "yf-artifact-match-v1";
+const storageKey = "yf-artifact-match-v04";
+const deckStorageKey = "yf-artifact-deck-v04";
+let growthCatalog = null, deckDraft = null;
+const cardCost = (id) => view?.cardCosts?.[id] ?? CARDS[id].mana_cost;
+const skillKind = (u) => u.skillKind || HEROES[u.id]?.kind;
+const skillName = (u) => ({chen:"劝化",purify:"洗礼",swap:"换位",redirect:"引导箭头"})[skillKind(u)] || "被动技能";
+const statusNames = {attack_down:"减攻",unprepared:"等待装备",hex:"妖术",silence:"沉默",taunt:"嘲讽"};
+const statusText = (u) => Object.keys(u.debuffs || {}).map(k => statusNames[k] || k).join("、");
 if (window.ArtifactAPI.browserMode) {
   $(".prototype-note").textContent =
     "试玩版 · 进度保存在此浏览器，可直接通过互联网游玩";
@@ -139,7 +146,7 @@ async function api(path, body) {
   return window.ArtifactAPI.request(path, body);
 }
 function stats(u) {
-  return `<span class="stat atk ${u.attack > (CARDS[u.id]?.attack || 0) ? "buffed" : ""}">${icon("sword")}${u.attack}</span><span class="stat hp">${icon("heart")}${u.hp}</span>`;
+  return `<span class="stat atk ${u.attack > (u.baseAttack ?? CARDS[u.id]?.attack ?? 0) ? "buffed" : ""}">${icon("sword")}${u.attack}</span><span class="stat hp">${icon("heart")}${u.hp}</span>`;
 }
 function targetAt(row, col) {
   if (!mode) return [];
@@ -157,7 +164,7 @@ function targetAt(row, col) {
       );
     }
     if (a.row !== undefined) return a.row === row && a.col === col;
-    return unit && a.target === unit.key;
+    return unit && (a.firstTarget || a.target) === unit.key;
   });
 }
 const unitPoint = (u) => ({ x: (u.col + 0.5) * 100, y: (u.row + 0.5) * 100 });
@@ -216,7 +223,7 @@ function renderBoard(previous) {
           prediction?.dies ? "forecast-death" : "",
           isDireMelee(u) ? "dire-melee" : "",
         );
-        content = `<img class="unit-art" src="${unitImage(u)}" alt=""><span class="unit-vignette"></span>${u.hero ? pip(u.id) : ""}<span class="unit-stats">${stats(u)}</span>${u.armor ? `<span class="armor-badge">${icon("shield")}${u.armor}</span>` : ""}${u.stunned ? '<span class="stun-badge">晕</span>' : ""}${prediction && prediction.hp !== u.hp ? `<span class="forecast-hp" title="按当前局面交战后的生命">→ ${prediction.hp} ♥</span>` : ""}${prediction?.dies ? '<span class="forecast-cross" aria-label="预计交战阵亡">×</span>' : ""}`;
+        content = `<img class="unit-art" src="${unitImage(u)}" alt=""><span class="unit-vignette"></span>${u.hero ? pip(u.id) : ""}${u.level ? `<span class="level-badge">Lv${u.level}</span>` : ""}${u.debuffs?.silence || u.debuffs?.hex || u.forcedTarget || u.buffs?.bkb ? `<span class="status-badge">${u.buffs?.bkb ? "BKB" : u.debuffs.hex ? "妖" : u.forcedTarget ? "嘲" : "默"}</span>` : ""}<span class="unit-stats">${stats(u)}</span>${u.armor ? `<span class="armor-badge">${icon("shield")}${u.armor}</span>` : ""}${u.stunned ? '<span class="stun-badge">晕</span>' : ""}${prediction && prediction.hp !== u.hp ? `<span class="forecast-hp" title="按当前局面交战后的生命">→ ${prediction.hp} ♥</span>` : ""}${prediction?.dies ? '<span class="forecast-cross" aria-label="预计交战阵亡">×</span>' : ""}`;
       }
       if (fort) {
         classes.push("structure", fort.ready ? "" : "structure-immune");
@@ -249,11 +256,10 @@ function renderUnit() {
   prompt.hidden = !mode;
   prompt.innerHTML = mode ? `<span>${esc(mode.hint)}</span><button data-action="cancel" aria-label="取消选择目标">取消</button>` : "";
   if (panel.hidden) return;
-  const mine = u.team === "ally" && u.hero;
-  const meta = HEROES[u.id];
-  const skill = meta?.kind ? actionFor(meta.kind, u.key) : [];
+  const mine = u.team === "ally" && (u.hero || u.skillKind);
+    const skill = skillKind(u) ? actionFor(skillKind(u), u.key) : [];
   panel.innerHTML = mine
-    ? `<button data-action="skill" ${skill.length ? "" : "disabled"} aria-label="${meta?.skill || "被动技能"}${u.cooldown ? `，冷却 ${u.cooldown} 回合` : ""}" title="${meta?.skill || "被动技能"}">${u.cooldown || icon("fissure")}</button><button data-action="equipment" aria-label="查看装备并使用主动装备" title="装备">${icon("shield")}</button>`
+    ? `<button data-action="skill" ${skill.length ? "" : "disabled"} aria-label="${skillName(u)}${u.cooldown ? `，冷却 ${u.cooldown} 回合` : ""}" title="${skillName(u)}">${u.cooldown || icon("fissure")}</button><button data-action="equipment" aria-label="查看装备并使用主动装备" title="装备">${icon("shield")}</button><button data-action="detail" aria-label="查看成长与状态">ⓘ</button>`
     : '<button data-action="detail" aria-label="查看单位详情">ⓘ</button>';
   const anchor = $(`.cell[data-unit="${u.key}"]`);
   if (anchor) {
@@ -286,8 +292,13 @@ function unavailableReason(id, isItem, index) {
     const price = view.items[index].paid ? 0 : c.gold_cost;
     if (price > view.gold) return `需要 ${price} 金币，当前 ${view.gold}`;
   } else {
-    if (c.mana_cost > view.mana)
-      return `需要 ${c.mana_cost} 法力，当前 ${view.mana}`;
+    if (c.hero_id) {
+      const hero = view.heroes.find(u => u.id === c.hero_id && u.team === "ally");
+      if (!hero || hero.row === null) return `需要${cardName(c.hero_id)}在场`;
+      if (hero.level < c.unlock_level) return `需要${cardName(c.hero_id)}达到${c.unlock_level}级（当前${hero.level}级）`;
+    }
+    if (cardCost(id) > view.mana)
+      return `需要 ${cardCost(id)} 法力，当前 ${view.mana}`;
     if (
       c.colors?.length &&
       !view.units.some(
@@ -319,7 +330,7 @@ function renderHand() {
       .map((id, index) => {
         const c = CARDS[id],
           paid = item && view.items[index].paid,
-          cost = item ? (paid ? 0 : c.gold_cost) : c.mana_cost;
+          cost = item ? (paid ? 0 : c.gold_cost) : cardCost(id);
         const usable = actions().some(
           (a) => a.kind === (item ? "item" : "card") && a.index === index,
         );
@@ -411,31 +422,32 @@ function closeDetail() {
   $("#detail-dialog").close();
 }
 function targetDescription(u) {
-  if (u.stunned) return "眩晕，本回合无法普攻";
+  if (u.debuffs?.hex) return "妖术，无法攻击、移动或使用主动能力";
+  if (u.stunned) return "眩晕，无法普攻";
   if (!u.target) return "射程内暂无普攻目标";
   if (u.target === "AF" || u.target === "BF")
     return `普攻${u.team === "ally" ? "敌方" : "我方"}建筑`;
   const target = view.units.find((x) => x.key === u.target);
-  return `普攻目标：${target ? unitName(target) : "未知单位"}`;
+  return `${u.canAttack === false ? "仇恨目标（当前打不到，未移动则交战前追击）" : "普攻目标"}：${target ? unitName(target) : "未知单位"}`;
 }
 function showUnit(u) {
   if (!u) return;
   const prediction = view.phase === "action" ? view.forecast?.units[u.key] : null;
   const gear = u.equipment.map((e) => cardName(e.id)).join("、");
   openDetail(
-    `<h2 id="detail-title" class="detail-heading">${u.hero ? pip(u.id) : ""}${unitName(u)}</h2><p class="detail-subtitle">${u.team === "ally" ? "我方" : "敌方"}${u.hero ? "英雄" : "单位"} · ${u.row === null ? `等待第 ${u.due} 回合登场` : `第 ${u.row + 1} 排，第 ${u.col + 1} 列`}</p><div class="detail-layout"><img class="detail-art" src="${unitImage(u, "large_image")}" alt="${unitName(u)}${isDireMelee(u) ? "立绘" : "原版卡面"}"><div class="detail-copy"><div class="detail-stats">${stats(u)}${u.armor ? `<span class="stat">${icon("shield")}${u.armor}</span>` : ""}</div><p>${esc(HEROES[u.id]?.text || CARDS[u.id].card_text.schinese || "近战一格，自动移动与交战。")}</p><p class="detail-muted">射程 ${u.range} 格${u.siege ? ` · 攻城 ${u.siege}` : ""}${u.cleave ? ` · 顺势 ${u.cleave}` : ""}${u.regeneration ? ` · 恢复 ${u.regeneration}` : ""}</p>${u.row !== null ? `<p class="detail-muted">${esc(targetDescription(u))}</p>` : ""}${prediction ? `<p class="forecast-detail">当前局面直接交战：${prediction.dies ? "预计阵亡" : `预计剩余 ${prediction.hp} 生命`}。对手行动后会更新。</p>` : ""}${gear ? `<p class="detail-muted">装备：${esc(gear)}</p>` : ""}${u.cooldown ? `<p class="detail-muted">技能冷却 ${u.cooldown} 回合</p>` : ""}</div></div><p class="detail-note">${isDireMelee(u) ? "夜魇近战小兵使用自制立绘。" : "原版完整卡面供参考。"}当前能力和攻血以战场数值为准。</p>`,
+    `<h2 id="detail-title" class="detail-heading">${u.hero ? pip(u.id) : ""}${unitName(u)}</h2><p class="detail-subtitle">${u.team === "ally" ? "我方" : "敌方"}${u.hero ? "英雄" : "单位"} · ${u.row === null ? `等待第 ${u.due} 回合登场` : `第 ${u.row + 1} 排，第 ${u.col + 1} 列`}</p><div class="detail-layout"><img class="detail-art" src="${unitImage(u, "large_image")}" alt="${unitName(u)}${isDireMelee(u) ? "立绘" : "原版卡面"}"><div class="detail-copy"><div class="detail-stats">${stats(u)}${u.armor ? `<span class="stat">${icon("shield")}${u.armor}</span>` : ""}</div><p>${esc(HEROES[u.id]?.text || CARDS[u.id]?.card_text.schinese || "近战一格，自动移动与交战。")}</p><p class="detail-muted">射程 ${u.range} 格${u.siege ? ` · 攻城 ${u.siege}` : ""}${u.cleave ? ` · 顺势 ${u.cleave}` : ""}${u.regeneration ? ` · 恢复 ${u.regeneration}` : ""}</p>${u.row !== null ? `<p class="detail-muted">${esc(targetDescription(u))}</p>` : ""}${prediction ? `<p class="forecast-detail">当前局面直接交战：${prediction.dies ? "预计阵亡" : `预计剩余 ${prediction.hp} 生命`}。对手行动后会更新。</p>` : ""}${gear ? `<p class="detail-muted">装备：${esc(gear)}</p>` : ""}${u.level ? `<p class="growth-progress">Lv${u.level} · 经验 ${u.xp}${u.level < 3 ? ` / ${u.level === 1 ? 3 : 6}` : ""}${u.pendingLevel > u.level ? ` · 下轮升至Lv${u.pendingLevel}` : ""}</p><p class="detail-muted">成长（攻/甲/血）：${u.panels.map((p,i)=>`Lv${i+1} ${p.join("/")}`).join(" → ")}</p>` : ""}${statusText(u) ? `<p class="detail-muted">负面状态：${esc(statusText(u))}</p>` : ""}${u.buffs?.bkb ? '<p class="detail-muted">BKB：本轮魔法、负面状态免疫</p>' : ""}${u.cooldown ? `<p class="detail-muted">技能冷却 ${u.cooldown} 回合</p>` : ""}</div></div><p class="detail-note">${isDireMelee(u) ? "夜魇近战小兵使用自制立绘。" : "沿用原版立绘。"}当前能力和攻血以战场数值为准。</p>`,
   );
 }
 function showEquipment(u) {
   const entries = u.equipment
     .map((e) => {
-      const kind = e.id === 10260 ? "horn" : e.id === 10263 ? "blade" : null;
+      const kind = e.active || (e.id === 10260 ? "horn" : e.id === 10263 ? "blade" : null);
       const choices = kind ? actionFor(kind, u.key) : [];
-      return `<div class="gear-row"><img src="${image(e.id)}" alt=""><span><b>${cardName(e.id)}</b><small>${SLOT_NAMES[e.slot] || e.slot}${e.cooldown !== null ? ` · ${e.cooldown ? `冷却 ${e.cooldown}` : "主动就绪"}` : ""}</small></span>${kind ? `<button class="gear-active" data-gear-kind="${kind}" ${choices.length ? "" : "disabled"}>使用</button>` : ""}</div>`;
+      return `<div class="gear-row"><img src="${image(e.id)}" alt=""><span><b>${cardName(e.id)}</b><small>${SLOT_NAMES[e.slot] || e.slot}${e.cooldown !== null ? ` · ${e.cooldown ? `冷却 ${e.cooldown}` : "主动就绪"}` : ""}</small><small>${esc(CARDS[e.id].card_text.schinese)}</small></span>${kind ? `<button class="gear-active" data-gear-kind="${kind}" ${choices.length ? "" : "disabled"}>使用</button>` : ""}</div>`;
     })
     .join("");
   openDetail(
-    `<h2 id="detail-title" class="detail-heading">${unitName(u)}的装备</h2><p class="sheet-note">每类槽位一件，新装备替换同槽旧装备。阵亡后保留。</p>${entries || '<p class="sheet-note">暂未穿戴装备。</p>'}<button class="detail-action" id="open-item-hand">查看物品手牌</button>`,
+    `<h2 id="detail-title" class="detail-heading">${unitName(u)}的装备</h2><p class="sheet-note">每类槽位一件，新装备替换同槽旧装备。阵亡后保留；圣剑按击杀归属转移。</p>${entries || '<p class="sheet-note">暂未穿戴装备。</p>'}<button class="detail-action" id="open-item-hand">查看物品手牌</button>`,
   );
 }
 function showCard(id, index, item) {
@@ -447,7 +459,7 @@ function showCard(id, index, item) {
     choices = actions().filter(
       (a) => a.kind === (item ? "item" : "card") && a.index === index,
     ),
-    cost = item ? (view.items[index].paid ? 0 : c.gold_cost) : c.mana_cost;
+    cost = item ? (view.items[index].paid ? 0 : c.gold_cost) : cardCost(id);
   const global =
     choices.length &&
     ["all", "self", "draw", "ticket", "improvement", "fort"].includes(
@@ -463,7 +475,7 @@ function showCard(id, index, item) {
           : "施放"
       : "选择目标";
   openDetail(
-    `<h2 id="detail-title" class="detail-heading">${item ? "" : pip(id)}${cardName(id)}</h2><p class="detail-subtitle">${item ? "物品 · 金币支付" : "普通牌 · 法力支付"}</p><div class="detail-layout"><img class="detail-art" src="${image(id, "large_image")}" alt="${cardName(id)}原版卡面"><div class="detail-copy"><div class="detail-cost ${item ? "item" : ""}">${icon(item ? "coin" : "mana")}${cost}</div><p>${esc(RULES[id] || c.card_text.schinese).replace(/\n+/g, "<br>")}</p>${item && c.sub_type !== "Consumable" ? '<p class="detail-muted">穿戴占一次行动；替换同槽旧装备。</p>' : ""}${c.card_type === "Creep" ? `<div class="detail-stats">${icon("sword")}${c.attack}${icon("heart")}${c.hit_points}</div>` : ""}</div></div><button class="detail-action" id="play-card" data-id="${id}" data-index="${index}" data-item="${item}" ${choices.length ? "" : "disabled"}>${esc(label)}</button>`,
+    `<h2 id="detail-title" class="detail-heading">${item ? "" : pip(id)}${cardName(id)}</h2><p class="detail-subtitle">${item ? "物品 · 金币支付" : "普通牌 · 法力支付"}</p><div class="detail-layout"><img class="detail-art" src="${image(id, "large_image")}" alt="${cardName(id)}参考立绘"><div class="detail-copy"><div class="detail-cost ${item ? "item" : ""}">${icon(item ? "coin" : "mana")}${cost}</div><p>${esc(RULES[id] || c.card_text.schinese).replace(/\n+/g, "<br>")}</p>${item && c.sub_type !== "Consumable" ? '<p class="detail-muted">穿戴占一次行动；替换同槽旧装备。</p>' : ""}${c.card_type === "Creep" ? `<div class="detail-stats">${icon("sword")}${c.attack}${icon("heart")}${c.hit_points}</div>` : ""}</div></div><button class="detail-action" id="play-card" data-id="${id}" data-index="${index}" data-item="${item}" ${choices.length ? "" : "disabled"}>${esc(label)}</button>${item ? "" : `<button class="quiet-button" id="reforge-card" data-index="${index}" data-item="${item}" ${actions().some(a => a.kind === "reforge" && a.actor === String(index)) ? "" : "disabled"}>重铸 · 1行动 / 0法力</button><p class="detail-muted">先抽一张，再将本卡放回原牌库；牌库为空时不可重铸。物品不能重铸。</p>`}`,
   );
 }
 function setMode(kind, choices, hint) {
@@ -533,14 +545,14 @@ function unitAction(kind) {
       cancelMode();
       return;
     }
-    const choices = actionFor(HEROES[u.id]?.kind, u.key);
+    const choices = actionFor(skillKind(u), u.key);
     if (choices.length)
       setMode(
         "skill",
         choices,
         u.id === 10033
           ? "沟壑 · 直线两格，2 点普通伤害并眩晕"
-          : `${HEROES[u.id].skill} · 选择目标`,
+          : `${skillName(u)} · 选择目标`,
       );
   }
 }
@@ -556,6 +568,12 @@ function cellClick(row, col) {
   if (mode && !(mode.kind === "move" && u)) {
     const choices = targetAt(row, col);
     if (choices.length) {
+      if (choices[0].firstTarget) {
+        mode.choices = choices.map(a => ({...a, target:a.secondTarget, firstTarget:null}));
+        mode.hint = "已选定施法单位 · 再选择高亮目标";
+        renderBoard(); renderUnit();
+        return;
+      }
       mode = null;
       perform(choices[0].id);
     } else if (!u && mode.kind === "move") { selected = null; cancelMode(); }
@@ -585,7 +603,7 @@ function showRoster() {
           .filter((h) => h.team === team)
           .map(
             (h) =>
-              `<button class="roster-unit ${h.row === null ? "waiting" : ""}" data-hero="${h.key}"><img src="${image(h.id)}" alt=""><span>${pip(h.id)}${cardName(h.id)}<small>${h.row === null ? `第 ${h.due} 回合登场` : h.stunned ? "眩晕，仍提供出牌颜色" : `在场 · ${h.hp}/${h.maxHp} 生命`}${h.cooldown ? ` · CD ${h.cooldown}` : ""}</small></span></button>`,
+              `<button class="roster-unit ${h.row === null ? "waiting" : ""}" data-hero="${h.key}"><img src="${image(h.id)}" alt=""><span>${pip(h.id)}${cardName(h.id)}<small>${h.row === null ? `第 ${h.due} 回合登场` : h.stunned ? "眩晕，仍提供出牌颜色" : `Lv${h.level} · 经验${h.xp} · ${h.hp}/${h.maxHp} 生命`}${h.cooldown ? ` · CD ${h.cooldown}` : ""}</small></span></button>`,
           )
           .join("")}</div>`,
     )
@@ -608,7 +626,7 @@ function showLog(enemyOnly = false) {
 }
 function showHelp() {
   openDetail(
-    `<h2 id="detail-title" class="detail-heading">单路战场</h2><div class="help-copy"><p><b>行动：</b>打牌、移动英雄、使用技能、穿戴或使用装备，每次占一个行动，随后由对手回应。普通攻击自动进行，无需手动选择攻击。</p><p><b>预测：</b>箭头表示普攻目标；灰色头像和红叉表示预计阵亡，→ 后的数字表示交战后的生命。预测按当前局面双方直接交战计算，对手行动后会更新。</p><p><b>交战：</b>双方连续让过后，所有单位与建筑同时结算攻击。交战后可查看损伤，点击“下一回合”继续。</p><p><b>移动：</b>点己方英雄显示可移动格；棋子上的按钮用于技能和装备，长按查看详情。点空格或取消退出选择，不占行动。英雄每回合移动一次，平时八邻一格；从泉水出生／返场后的首次移动最多两格，不能穿过单位。小兵自动向前推进。</p><p><b>仇恨与箭头：</b>绿色为我方，红色为敌方；远程虚线指向具体目标。英雄优先保持仍在射程内的旧目标，否则选择四向最近的敌人，同距离按固定顺序；没有单位可打时才攻击建筑。英雄不自动保护转火，这条只作用于小兵和建筑。</p><p><b>出牌：</b>普通牌需要对应颜色英雄在场；眩晕仍提供颜色。法力每回合刷新并增加一点，最高 10。</p><p><b>金币：</b>无工资，敌方小兵死亡 +1，英雄死亡 +5。物品花金币；开局发一张，此后每三回合再发一张。</p><p><b>装备：</b>武器、护甲、饰品各一件，同类替换。主动效果不花资源，有冷却，阵亡后装备保留。</p><p><b>胜负：</b>先摧毁 40 血防御塔，再摧毁同位置的 80 血基地。基地下一回合激活。塔攻击 4，基地攻击 8；进入敌方泉水会受到 10 点范围伤害。</p><p>当前固定阵容与候选牌池，双方交替获得每回合先手。右上角可查看记录和导出本局。</p></div>`,
+    `<h2 id="detail-title" class="detail-heading">单路战场</h2><div class="help-copy"><p><b>行动：</b>打牌、移动英雄、使用技能、穿戴或使用装备，每次占一个行动，随后由对手回应。普通攻击自动进行。打不到仇恨目标时，未移动的单位在交战前尝试追击。重铸消耗一次行动、0法力，先抽牌再将原牌归库。</p><p><b>预测：</b>箭头表示普攻目标；灰色头像和红叉表示预计阵亡，→ 后的数字表示交战后的生命。预测按当前局面双方直接交战计算，对手行动后会更新。</p><p><b>交战：</b>双方连续让过后，先处理仇恨追击，再由所有单位与建筑同时结算攻击。恢复在阵亡清理前结算。交战后可查看损伤，点击“下一回合”继续。</p><p><b>移动：</b>点己方英雄显示可移动格；棋子上的按钮用于技能和装备，长按查看详情。点空格或取消退出选择，不占行动。英雄每回合移动一次，平时八邻一格；从泉水出生／返场后的首次移动最多两格，不能穿过单位。小兵自动向前推进。</p><p><b>仇恨与箭头：</b>绿色为我方，红色为敌方；远程虚线指向具体目标。英雄优先保持仍在射程内的旧目标，目标仍在场时保留仇恨，打不到则在交战前尝试追击；没有目标时选择四向射程内最近敌人，同距离按固定顺序；没有单位可打时才攻击建筑。英雄不自动保护转火，这条只作用于小兵和建筑。</p><p><b>出牌：</b>普通牌需要对应颜色英雄在场；眩晕仍提供颜色。起手5张，后续每轮抽1张；首轮3法力，每轮刷新并加1，上限10。所有专属卡都要求对应英雄在场并达到解锁等级；阵亡保留等级，返场后可继续使用。</p><p><b>成长：</b>英雄在场且存活到回合末获得1经验，3/6经验分别升至2/3级，下轮生效。死亡保留等级、经验与永久强化，升级增加的生命直接补到当前生命。</p><p><b>金币：</b>无工资，敌方小兵死亡 +1，英雄死亡 +5。物品花金币；开局发一张，此后每三回合再发一张。</p><p><b>装备：</b>武器、护甲、饰品各一件，同类替换。主动效果消耗一次行动、0法力，有冷却。沉默不禁装备，妖术禁装备主动、保留被动。BKB驱散全部负面状态，并在本轮免疫魔法伤害和新增负面状态。</p><p><b>胜负：</b>先摧毁 40 血防御塔，再摧毁同位置的 80 血基地。基地下一回合激活。塔攻击 4，基地攻击 8；进入敌方泉水会受到 10 点范围伤害。</p><p>当前固定阵容与候选牌池，双方交替获得每回合先手。右上角可查看记录和导出本局。</p></div>`,
   );
 }
 function showResult() {
@@ -727,6 +745,41 @@ function showReconnect(error) {
     `<h2 id="detail-title" class="detail-heading">重新载入战场</h2><p class="sheet-note">${esc(window.ArtifactAPI.browserMode ? error.message : error.status === 404 ? "服务重启后，上一局记录已清空。你可以开始新一局。" : "请确认电脑上的游戏服务仍在运行，手机和电脑处于同一网络。")}</p><button class="detail-action" id="retry-connect">重试</button><button class="quiet-button" id="recover-new">开始新一局</button>`,
   );
 }
+function savedDeck() {
+  try { return JSON.parse(localStorage.getItem(deckStorageKey)) || growthCatalog.defaultDeck; }
+  catch { return growthCatalog.defaultDeck; }
+}
+function showDeckBuilder() {
+  if (!deckDraft) deckDraft = structuredClone(savedDeck());
+  const counts = (ids) => ids.reduce((acc,id)=>(acc[id]=(acc[id]||0)+1,acc),{});
+  const normal = counts(deckDraft.ordinary), items = counts(deckDraft.items);
+  const total = deckDraft.ordinary.length + 9;
+  const rows = (isItem) => growthCatalog.cards.filter(c => isItem ? c.card_type === "Item" : c.card_id < 63000 && ["Creep","Spell"].includes(c.card_type) && c.colors.includes("green")).map(c => {
+    const n = (isItem ? items : normal)[c.card_id] || 0;
+    return `<div class="deck-row"><img src="${image(c.card_id)}" alt=""><span><b>${esc(cardName(c.card_id))}</b><small>${isItem ? `${c.gold_cost}金 · ${SLOT_NAMES[c.sub_type] || "消耗品"}` : `${c.mana_cost}费${c.card_type === "Creep" ? ` · ${c.attack}/${c.armor}/${c.hit_points}` : ""}`} · ${esc(c.card_text.schinese)}</small></span><button data-deck-id="${c.card_id}" data-deck-item="${isItem}" data-delta="-1" ${n ? "" : "disabled"} aria-label="减少${esc(cardName(c.card_id))}">−</button><b>${n}</b><button data-deck-id="${c.card_id}" data-deck-item="${isItem}" data-delta="1" ${n>=3 ? "disabled" : ""} aria-label="增加${esc(cardName(c.card_id))}">+</button></div>`;
+  }).join("");
+  openDetail(`<h2 id="detail-title" class="detail-heading">绿色牌组构筑</h2><p class="sheet-note">狼人、陈、全能骑士。固定9张专属（每名3张）＋21张自选；物品牌10张。同名最多3张，保存后用于下一局。</p><p class="growth-progress" role="status">普通 ${total}/30 · 物品 ${deckDraft.items.length}/10</p><details open><summary>普通牌 · ${deckDraft.ordinary.length}/21 自选</summary>${rows(false)}</details><details><summary>物品牌 · ${deckDraft.items.length}/10</summary>${rows(true)}</details><details><summary>固定专属9张</summary>${growthCatalog.rosters[0].map(h=>`<p>${esc(cardName(Number(growthCatalog.signatures[h])))} ×3</p>`).join("")}</details><button class="detail-action" id="save-deck" ${total===30 && deckDraft.items.length===10 ? "" : "disabled"}>保存构筑</button><button class="quiet-button" id="reset-deck">恢复默认构筑</button><p class="detail-muted" id="deck-save-status"></p>`);
+}
+$("#detail-body").addEventListener("click", e => {
+  const button=e.target.closest("[data-deck-id]");
+  if (button && !button.disabled) {
+    const list=button.dataset.deckItem === "true" ? deckDraft.items : deckDraft.ordinary;
+    const id=Number(button.dataset.deckId);
+    const scroll=$("#detail-dialog").scrollTop;
+    const itemOpen=$("#detail-body details:nth-of-type(2)")?.open;
+    if (button.dataset.delta === "1") list.push(id);
+    else list.splice(list.indexOf(id),1);
+    showDeckBuilder();
+    if (itemOpen) $("#detail-body details:nth-of-type(2)").open=true;
+    $("#detail-dialog").scrollTop=scroll;
+    document.querySelector(`[data-deck-id="${id}"][data-delta="${button.dataset.delta}"]`)?.focus({preventScroll:true});
+  }
+  if (e.target.closest("#reset-deck")) {deckDraft=structuredClone(growthCatalog.defaultDeck);showDeckBuilder();}
+  if (e.target.closest("#save-deck")) {
+    try {localStorage.setItem(deckStorageKey,JSON.stringify(deckDraft));$("#deck-save-status").textContent="已保存，下一局生效。";}
+    catch {$("#deck-save-status").textContent="浏览器无法保存构筑，请检查存储设置。";}
+  }
+});
 async function createGame() {
   if (busy && view) return;
   busy = true;
@@ -738,7 +791,7 @@ async function createGame() {
   $("#scene-dialog").close();
   if (view) render();
   try {
-    await applyPacket(await api("/api/games", {}));
+    await applyPacket(await api("/api/games", {deck_config: savedDeck()}));
     toast("对局开始 · 双方每次行动后交替操作");
   } catch (error) {
     showReconnect(error);
@@ -748,6 +801,17 @@ async function bootstrap() {
   busy = true;
   gameId = savedId();
   try {
+    if (!growthCatalog) {
+      growthCatalog = await api("/api/catalog");
+      for (const card of growthCatalog.cards) CARDS[card.card_id] = card;
+      Object.assign(HEROES, {
+        10014:{text:"八邻其他友军获得1/1/2攻击，随狼人等级变化。"},
+        10017:{kind:"chen",skill:"劝化",text:"主动CD4：控制距离2内敌方非英雄单位。唯一远程英雄，射程2。"},
+        10044:{kind:"purify",skill:"洗礼",text:"主动CD2：自己或八邻友军恢复1/2/3生命。"},
+        10054:{text:"固定分裂1/2/2，攻击目标两侧敌人；攻击提高不影响分裂。"},
+        10069:{text:"二级起反伤2：受到普攻并实际掉血时触发，受护甲减免。"}
+      });
+    }
     if (gameId) await applyPacket(await api(`/api/games/${gameId}`));
     else await createGame();
   } catch (error) {
@@ -832,6 +896,11 @@ $("#detail-body").addEventListener("click", (e) => {
     closeDetail(); mode = null; selected = null; render();
     toast(reviewingAction.label);
   }
+  const reforge = e.target.closest("#reforge-card");
+  if (reforge && !reforge.disabled) {
+    const action = actions().find(a => a.kind === "reforge" && a.actor === reforge.dataset.index);
+    if (action) { closeDetail(); perform(action.id); }
+  }
   const play = e.target.closest("#play-card");
   if (play && !play.disabled)
     chooseCard(Number(play.dataset.index), play.dataset.item === "true");
@@ -841,7 +910,8 @@ $("#detail-body").addEventListener("click", (e) => {
     closeDetail();
     if (gear.dataset.gearKind === "horn")
       setMode("item", choices, "领袖号角 · 选择召唤空格");
-    else perform(choices[0].id);
+    else if (choices[0]?.target === "self") perform(choices[0].id);
+    else if (choices.length) setMode("item", choices, "装备主动 · 选择高亮目标");
   }
   const hero = e.target.closest("[data-hero]");
   if (hero) {
@@ -899,7 +969,7 @@ $("#scene-dialog").addEventListener("close", () => {
 document.querySelectorAll("[data-menu]").forEach((b) =>
   b.addEventListener("click", () => {
     $("#scene-dialog").close();
-    ({ roster: showRoster, log: showLog, help: showHelp, export: exportMatch })[
+    ({ roster: showRoster, log: showLog, help: showHelp, export: exportMatch, deck: showDeckBuilder })[
       b.dataset.menu
     ]();
   }),

@@ -14,12 +14,12 @@ class BrowserBridgeTests(unittest.TestCase):
         self.assertEqual(packet['status'], 200)
         return bridge, packet
 
-    def test_browsers_share_the_exact_existing_opening_rules(self):
+    def test_browsers_share_the_growth_opening_rules(self):
         bridge, packet = self.create()
         self.assertEqual(packet['data']['state']['round'], 1)
         self.assertEqual(packet['data']['state']['version'], 0)
         self.assertEqual(packet['save']['commands'], [])
-        self.assertEqual(len(packet['data']['state']['units']), 8)
+        self.assertEqual(len(packet['data']['state']['units']), 4)
 
     def test_restore_replays_a_saved_command_and_preserves_state(self):
         bridge, packet = self.create()
@@ -84,7 +84,7 @@ class StaticBuildTests(unittest.TestCase):
             self.assertFalse((out/'effects-lab').exists())
             self.assertEqual((out/'prototype/effects.js').read_text(), (ROOT/'prototype/effects.js').read_text())
             self.assertTrue((out/'prototype/game-effects.js').is_file())
-            self.assertEqual(json.loads((out/'version.json').read_text())['release'], '0.3')
+            self.assertEqual(json.loads((out/'version.json').read_text())['release'], '0.4')
             self.assertTrue((out/'.nojekyll').is_file())
             self.assertEqual(build(out)['engine_version'], first['engine_version'])
 

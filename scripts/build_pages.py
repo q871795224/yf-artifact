@@ -7,7 +7,8 @@ import json
 from pathlib import Path
 import shutil
 
-from playable_match import BOARD_COLUMNS, RELEASE_VERSION
+from playable_match import BOARD_COLUMNS
+from growth_cards import RELEASE_VERSION
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -15,6 +16,7 @@ ENGINE_FILES = (
     'scripts/simulate_heroes.py', 'scripts/simulate_match.py',
     'scripts/simulate_expanded_match.py', 'scripts/simulate_finishers.py',
     'scripts/playable_match.py', 'scripts/browser_bridge.py',
+    'scripts/growth_cards.py', 'scripts/growth_match.py', 'scripts/growth_playable.py',
     'references/artifact-classic/cards.json',
     'docs/design/first-card-pool.json', 'docs/design/expanded-card-pool.json',
 )

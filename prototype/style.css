@@ -1738,3 +1738,16 @@ dialog::backdrop {
 .log-options button { border: 1px solid #607465; border-radius: 4px; background: #273b2d; padding: 7px 10px; font-size: 12px; }
 @media (max-height: 740px) { .game { grid-template-rows: 42px minmax(0, 1fr) 82px 48px; } }
 @media (max-height: 620px) { .game { grid-template-rows: 42px minmax(0, 1fr) 74px 48px; } }
+
+/* Growth Demo additions, retaining the battlefield's existing visual language. */
+.level-badge { position:absolute; top:5px; right:5px; border:1px solid #c8b77f; border-radius:3px; background:#262b23e8; color:#f6dc99; padding:2px 4px; font:bold 10px system-ui; }
+.status-badge { position:absolute; top:26px; right:5px; color:#ffcfab; background:#36202be8; padding:1px 3px; border-radius:2px; font-size:10px; }
+.growth-progress { color:#e4cc8c; font-size:14px; padding:10px 0; }
+.deck-row { display:flex; align-items:center; gap:8px; padding:9px 0; border-bottom:1px solid #ffffff15; }
+.deck-row img { width:36px; height:44px; object-fit:cover; border-radius:3px; }
+.deck-row span { flex:1; min-width:0; }
+.deck-row small { display:block; color:#aeb9b2; font-size:11px; line-height:1.5; margin-top:3px; }
+.deck-row button { width:30px; height:32px; background:#34433a; color:#f1edda; border:1px solid #6b806b; border-radius:4px; }
+.deck-row button:disabled { opacity:.35; }
+.detail-dialog details { margin:12px 0; }
+.detail-dialog summary { cursor:pointer; color:#d5dec9; padding:8px 0; }

@@ -13,7 +13,9 @@ import threading
 import uuid
 import webbrowser
 
-from playable_match import PlaySession, InvalidAction, StaleAction
+from playable_match import InvalidAction, StaleAction
+from growth_playable import GrowthSession as PlaySession
+from growth_cards import catalog_view
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -32,6 +34,9 @@ class Handler(SimpleHTTPRequestHandler):
         self.wfile.write(content)
 
     def do_GET(self):
+        if self.path == '/api/catalog':
+            self.send_json(catalog_view())
+            return
         if self.path == '/api/health':
             self.send_json({'ok': True, 'mode': 'playable'})
             return
@@ -70,7 +75,7 @@ class Handler(SimpleHTTPRequestHandler):
                 seed = body.get('seed', random.SystemRandom().randrange(1, 1000000)*3+1)
                 if type(seed) is not int or not 1 <= seed <= 1000000000:
                     raise ValueError('对局种子不正确。')
-                session, game_id = PlaySession(seed), uuid.uuid4().hex
+                session, game_id = PlaySession(seed, body.get('deck_config')), uuid.uuid4().hex
                 with SESSIONS_LOCK:
                     SESSIONS[game_id] = (session, threading.Lock())
                 self.send_json({'game_id': game_id, **session.packet()}, 201)
