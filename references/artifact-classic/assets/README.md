@@ -36,3 +36,7 @@ Valve [官方 API 说明](https://github.com/ValveSoftware/ArtifactDeckCode#card
 ## 手机版派生资源
 
 `mobile/` 保留低分辨率 WebP 副本及校验清单，由 `python3 scripts/compress_assets.py` 使用 cwebp 生成。头像宽 128、完整卡面宽 352、游戏图标宽 96 像素；130 张图片合计 1,133,930 字节，原 PNG 合计 43,018,613 字节。原始文件与来源不变，Pages 仅发布这些压缩副本。
+
+## 成长 Demo 补充素材（2026-11-18）
+
+新增全能骑士10044、灵狼10112、跳刀10206、刃甲10208的参考图片，下载地址取自固定的 `cards.json` Steam CDN 字段；转换后的 WebP 记入 `mobile/manifest.json`。灵狼原记录没有 ingame 图片，ingame 目录使用同卡 mini 图片的副本。新设计的卡名与数值不写入原版数据库，部分新卡复用已有立绘作为占位。
