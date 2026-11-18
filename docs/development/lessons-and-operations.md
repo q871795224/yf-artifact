@@ -1,5 +1,7 @@
 # 开发复盘与运维
 
+> V0.4 更新：当前规则见[成长版实现说明](../design/growth-implementation.md)，发布核验见[V0.4 归档](../releases/v0.4.md)。新版引擎入口为 `growth_cards.py`、`growth_match.py`、`growth_playable.py`；浏览器使用 `scripts/check_growth_prototype.js`。下文 V0.3 固定回放和旧浏览器脚本仅用于历史对照，不能直接作为成长版发布基准。
+
 整理于 2026-11-17，适用当前 V0.3；历史问题保留当时背景。玩法理由见[决策记录](../design/decision-log.md)，规则与未定项见[当前规格](../design/current-rules.md)。本页区分已经遇到的问题与今后的操作注意，不把尚未实现的功能写成修复成果。
 
 ## 已遇到的问题与处理
