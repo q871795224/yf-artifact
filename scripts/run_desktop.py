@@ -14,7 +14,7 @@ from urllib.request import ProxyHandler, build_opener
 from build_pages import ROOT, engine_sources
 
 
-DEFAULT_PORT = 8782
+DEFAULT_PORT = 8786
 HTTP = build_opener(ProxyHandler({}))
 
 

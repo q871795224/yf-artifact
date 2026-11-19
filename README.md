@@ -4,7 +4,7 @@
 
 **当前版本：V0.4 成长 Demo。** 新玩法与执行约定见 [实现说明](docs/design/growth-implementation.md)，验证见 [发布记录](docs/releases/v0.4.md)，版本记录见 [更新记录](CHANGELOG.md)。
 
-**Godot 桌面试玩**：在本工作区运行 `./运行桌面版.sh`，或在 Windows 双击 `运行桌面版.cmd`。默认端口 8782 支持手机局域网试玩与电脑归档，见[启动与数据说明](desktop/README.md)。
+**Godot 桌面试玩**：在本工作区运行 `./运行桌面版.sh`，或在 Windows 双击 `运行桌面版.cmd`。默认端口 8786 支持手机局域网试玩与电脑归档，见[启动与数据说明](desktop/README.md)。
 
 **[在线试玩](https://q871795224.github.io/yf-artifact/)** · [GitHub 仓库](https://github.com/q871795224/yf-artifact)
 

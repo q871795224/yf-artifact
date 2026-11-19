@@ -1,6 +1,6 @@
 extends Node
 
-var address := "http://127.0.0.1:8782"
+var address := "http://127.0.0.1:8786"
 
 func request(path: String, body: Variant = null) -> Dictionary:
 	var transport := HTTPRequest.new()

@@ -12,10 +12,11 @@ var type_line := ""
 var active := false
 var payable := false
 var text_font: Font
+var peek := false
 
 func _ready() -> void:
 	flat = true
-	custom_minimum_size = Vector2(102, 128)
+	custom_minimum_size = Vector2(102, 44 if peek else 128)
 	for style: String in ["normal", "hover", "pressed", "focus", "disabled", "hover_pressed"]:
 		add_theme_stylebox_override(style, StyleBoxEmpty.new())
 	mouse_entered.connect(queue_redraw)
@@ -24,7 +25,7 @@ func _ready() -> void:
 	focus_exited.connect(queue_redraw)
 
 func _draw() -> void:
-	var frame := Rect2(Vector2(4, 5), size - Vector2(8, 11))
+	var frame := Rect2(Vector2(4, 5), Vector2(size.x - 8, 117 if peek else size.y - 11))
 	var highlighted := is_hovered() or active or has_focus()
 	if highlighted:
 		frame.position.y -= 4
@@ -53,6 +54,8 @@ func _draw() -> void:
 	draw_rect(Rect2(Vector2(frame.position.x + 4, bottom - 27), Vector2(frame.size.x - 8, 24)), Color("#26211a"))
 	draw_line(Vector2(frame.position.x + 5, bottom - 27), Vector2(frame.end.x - 5, bottom - 27), Color(line, 0.55))
 	_text(title_line, frame.position + Vector2(7, 20), frame.size.x - 14, 14, LIGHT)
+	if peek:
+		return
 	var descriptor := type_line if stat_line.is_empty() else stat_line
 	_text(descriptor, Vector2(frame.position.x + 8, bottom - 8), frame.size.x - 44, 12, Color("#d2c2a1"))
 	_text(cost_line, Vector2(frame.end.x - 35, bottom - 8), 30, 13, Color("#e5bd77") if payable else Color("#bfa094"))

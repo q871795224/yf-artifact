@@ -2,11 +2,11 @@ extends Control
 
 signal cell_clicked(pos: Vector2i, secondary: bool)
 
+const TableStage = preload("res://table_stage.gd")
 const PAPER := Color("#e5ddc9")
 const GOLD := Color("#d1b079")
 const GREEN := Color("#8fc8a2")
 const RED := Color("#e29280")
-const TILE_GAP := 4.0
 
 var assets_root := ""
 var catalog: Dictionary = {}
@@ -16,6 +16,7 @@ var selected := ""
 var show_arrows := true
 var sound_enabled := true
 var details_font: Font
+var table: TableStage
 var _textures: Dictionary = {}
 var _illustrations: Dictionary = {}
 var _from: Dictionary = {}
@@ -24,11 +25,17 @@ var _shots: Array = []
 var _progress := 0.0
 var _stage := ""
 var _impact_audio: AudioStreamPlayer
+var _card_cells: Array[Vector2i] = []
 
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	focus_mode = Control.FOCUS_ALL
 	custom_minimum_size = Vector2(345, 476)
+	table = TableStage.new()
+	table.show_behind_parent = true
+	add_child(table)
+	table.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	resized.connect(queue_redraw)
 	mouse_exited.connect(queue_redraw)
 	_impact_audio = AudioStreamPlayer.new()
 	_impact_audio.stream = _impact_sample()
@@ -36,6 +43,7 @@ func _ready() -> void:
 
 func present(battle: Dictionary) -> void:
 	state = battle
+	table.sync(int(state.get("columns", 5)), state.get("forts", []))
 	queue_redraw()
 
 func highlight(cells: Array[Vector2i], unit_key: String) -> void:
@@ -90,38 +98,31 @@ func unit_name(unit: Dictionary, short := false) -> String:
 		return role if short else ("天辉" if unit.team == "ally" else "夜魇") + role
 	return catalog.get(int(unit.id), {}).get("card_name", {}).get("schinese", "单位")
 
-func _grid() -> Rect2:
-	var columns := int(state.get("columns", 5))
-	var tile := floorf(minf((size.x - 44) / (columns * 1.42), (size.y - 12) / 8.0))
-	tile = maxf(tile, 12.0)
-	var extent := Vector2(columns * tile * 1.42, 8 * tile)
-	return Rect2((size - extent) * 0.5, extent)
-
-func _pitch(board: Rect2) -> Vector2:
-	return board.size / Vector2(int(state.get("columns", 5)), 8)
-
 func _cell(pos: Vector2i) -> Rect2:
-	var board := _grid()
-	var pitch := _pitch(board)
-	return Rect2(board.position + Vector2(pos) * pitch + Vector2.ONE * TILE_GAP / 2,
-		pitch - Vector2.ONE * TILE_GAP)
+	return table.cell_rect(pos)
+
+func _cell_at(point: Vector2) -> Vector2i:
+	for row in range(8):
+		for col in range(int(state.get("columns", 5))):
+			var at := Vector2i(col, row)
+			if _cell(at).has_point(point):
+				return at
+	return Vector2i(-1, -1)
 
 func _coordinates(record: Dictionary) -> Vector2i:
 	return Vector2i(int(record.col), int(record.row))
 
 func _gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index in [MOUSE_BUTTON_LEFT, MOUSE_BUTTON_RIGHT]:
-		var field := _grid()
-		if field.has_point(event.position):
-			var pos := Vector2i((event.position - field.position) / _pitch(field))
+		var pos := _cell_at(event.position)
+		if pos.x >= 0:
 			cell_clicked.emit(pos, event.button_index == MOUSE_BUTTON_RIGHT)
 			accept_event()
 
 func _get_tooltip(at_position: Vector2) -> String:
-	var field := _grid()
-	if not field.has_point(at_position):
+	var pos := _cell_at(at_position)
+	if pos.x < 0:
 		return ""
-	var pos := Vector2i((at_position - field.position) / _pitch(field))
 	for fort: Dictionary in state.get("forts", []):
 		if _coordinates(fort) == pos:
 			return "每次交战攻击范围内一名敌军 · 射程 %d" % int(fort.get("reach", 2))
@@ -135,8 +136,27 @@ func animate(old: Dictionary, next: Dictionary, stage: String, duration: float) 
 	_after = _unit_map(next)
 	_stage = stage
 	_shots = old.get("fortShots", [])
+	_card_cells.clear()
+	if stage == "card":
+		for unit: Dictionary in _after.values():
+			var previous: Dictionary = _from.get(unit.key, {})
+			if previous.is_empty() or unit.hp != previous.hp or unit.team != previous.team or unit.armor != previous.armor:
+				_card_cells.append(_coordinates(unit))
+		for unit: Dictionary in _from.values():
+			if not _after.has(unit.key):
+				_card_cells.append(_coordinates(unit))
+		var action: Dictionary = next.get("action", {})
+		if action.has("row"):
+			_card_cells.append(_coordinates(action))
+		var target: Dictionary = _after.get(action.get("target"), {})
+		if not target.is_empty():
+			_card_cells.append(_coordinates(target))
+		for fort: Dictionary in next.get("forts", []):
+			var before: Array = old.get("forts", [])
+			if before.size() > int(fort.team) and before[int(fort.team)].hp != fort.hp:
+				_card_cells.append(_coordinates(fort))
 	_progress = 0.0
-	present(old if stage == "combat" else next)
+	present(old if stage in ["combat", "card"] else next)
 	var tween := create_tween()
 	tween.tween_method(_seek, 0.0, 1.0, duration)
 	await tween.finished
@@ -148,6 +168,8 @@ func _seek(progress: float) -> void:
 		if not _shots.is_empty() or _from.values().any(
 			func(unit: Dictionary) -> bool: return unit.get("canAttack", false)):
 			_impact_audio.play()
+	if _stage == "card" and _progress < 0.62 and progress >= 0.62 and not _card_cells.is_empty() and sound_enabled:
+		_impact_audio.play()
 	_progress = progress
 	queue_redraw()
 
@@ -184,22 +206,16 @@ func _target_points(units: Dictionary) -> Dictionary:
 	return points
 
 func _draw() -> void:
-	var grid := _grid()
+	if table == null:
+		return
 	var font := details_font if details_font else ThemeDB.fallback_font
-	var felt := grid.grow(15)
-	draw_rect(felt, Color("#303532"))
-	draw_rect(felt.grow(-2), Color("#232a28"))
-	draw_rect(felt, Color("#7d6d55"), false, 1.0)
-	draw_rect(felt.grow(-5), Color("#7d6d5544"), false, 1.0)
-	var middle := grid.get_center().y
-	draw_line(Vector2(grid.position.x, middle), Vector2(grid.end.x, middle), Color("#c29c655f"), 1.0, true)
 	for row in range(8):
 		for col in range(int(state.get("columns", 5))):
 			var pos := Vector2i(col, row)
 			var rect := _cell(pos)
-			var tile := Color("#333c39") if (row + col) % 2 == 0 else Color("#303936")
+			var tile := Color("#25190a26") if (row + col) % 2 == 0 else Color("#1a100b0e")
 			if row == 0 or row == 7:
-				tile = Color("#423833") if row == 0 else Color("#29433f")
+				tile = Color("#9d553a32") if row == 0 else Color("#53a09530")
 			draw_rect(rect, tile)
 			var outline := Color("#b5a17933") if row in [0,7] else Color("#b8b09928")
 			draw_rect(rect, outline, false, 1.0)
@@ -207,7 +223,7 @@ func _draw() -> void:
 				draw_rect(rect, Color("#7ec0b044"))
 				draw_rect(rect.grow(-1), Color("#99d8c8"), false, 2.0)
 		var center := _cell(Vector2i(0, row)).get_center()
-		draw_string(font, Vector2(grid.position.x - 17, center.y + 5), str(row + 1),
+		draw_string(font, Vector2(_cell(Vector2i(0, row)).position.x - 13, center.y + 5), str(row + 1),
 			HORIZONTAL_ALIGNMENT_LEFT, -1, 12, Color("#b6b7a589"))
 
 	var units := _unit_map(state)
@@ -225,24 +241,41 @@ func _draw() -> void:
 					bool(unit.get("canAttack", true)))
 	if _stage == "combat":
 		_draw_impacts(units, targets, font)
+	if _stage == "card":
+		for cell: Vector2i in _card_cells:
+			var at := _cell(cell)
+			draw_rect(at, Color(Color("#f4d58a"), sin(PI * _progress) * 0.35))
+			if _progress > 0.58:
+				_shock(at.get_center(), (_progress - 0.58) / 0.42, GOLD, 28)
+	if state.has("deck"):
+		_center_text(font, "牌堆 %d" % int(state.deck), table.deck_label(0), 13, PAPER)
+		_center_text(font, "牌堆 %d" % int(state.get("opponent", {}).get("deck", 0)), table.deck_label(1), 13, PAPER)
 
 func _draw_fort(fort: Dictionary, font: Font) -> void:
 	var rect := _cell(_coordinates(fort))
 	var tint := GREEN if int(fort.team) == 0 else RED
 	var center := rect.get_center()
-	var radius := rect.size.y * 0.35
-	var core := center - Vector2(0, rect.size.y * 0.10)
-	draw_circle(core + Vector2(0, 4), radius + 2, Color("#000000a6"), true, -1, true)
-	draw_circle(core, radius, Color("#252323"), true, -1, true)
-	draw_arc(core, radius, 0.0, TAU, 36, GOLD.darkened(0.20), 1.6, true)
-	draw_arc(core, radius * 0.77, 0.2, TAU - 0.2, 30, Color(tint, 0.72), 1.7, true)
-	var shard := PackedVector2Array([core + Vector2(0, -radius * 0.66), core + Vector2(radius * 0.43, 0),
-		core + Vector2(0, radius * 0.62), core - Vector2(radius * 0.43, 0)])
-	draw_colored_polygon(shard, tint.darkened(0.26))
-	draw_line(shard[0], shard[2], tint.lightened(0.18), 1.4, true)
-	var hp := "%d / %d" % [int(fort.hp), int(fort.maxHp)]
-	draw_rect(Rect2(Vector2(center.x - 25, rect.end.y - 19), Vector2(50, 18)), Color("#1a1614ed"))
-	_center_text(font, hp, Vector2(center.x, rect.end.y - 5), 13, PAPER)
+	var left := center + Vector2(-rect.size.x * 0.34, 3)
+	var right := center + Vector2(rect.size.x * 0.34, 3)
+	draw_circle(left, 16, Color("#252a29"))
+	draw_circle(right, 16, Color("#252a29"))
+	draw_arc(left, 16, 0, TAU, 24, tint, 1, true)
+	draw_arc(right, 16, 0, TAU, 24, tint, 1, true)
+	_center_text(font, str(int(fort.get("mana", 0))), left - Vector2(0, 2), 12, Color("#a6daed"))
+	draw_line(left - Vector2(7, -1), left + Vector2(7, 1), Color("#8db7c5"), 1, true)
+	_center_text(font, str(int(fort.get("maxMana", 0))), left + Vector2(0, 12), 11, Color("#a6daed"))
+	_center_text(font, str(int(fort.hp)), right + Vector2(0, 5), 15, PAPER)
+	var forecast: Variant = state.get("forecast")
+	if _stage.is_empty() and forecast is Dictionary:
+		for predicted: Dictionary in forecast.forts:
+			if int(predicted.team) == int(fort.team) and int(predicted.hp) < int(fort.hp):
+				_damage_badge(right + Vector2(9, 8), int(fort.hp) - int(predicted.hp), font)
+
+func _damage_badge(at: Vector2, loss: int, font: Font) -> void:
+	var badge := Rect2(at, Vector2(22, 13))
+	draw_rect(badge, Color("#883f31") if loss > 0 else Color("#315e48"))
+	var change := "−%d" % loss if loss > 0 else "+%d" % -loss
+	_center_text(font, change, Vector2(badge.get_center().x, badge.end.y - 3), 10, PAPER)
 
 func _draw_unit(unit: Dictionary, points: Dictionary, font: Font) -> void:
 	var rect := _cell(_coordinates(unit))
@@ -272,7 +305,8 @@ func _draw_unit(unit: Dictionary, points: Dictionary, font: Font) -> void:
 	draw_style_box(frame, rect)
 	var picture := artwork_for(int(unit.id), unit.team)
 	if picture:
-		var portrait := Rect2(rect.position + Vector2(2, 15), rect.size - Vector2(4, 34))
+		var top := 21.0 if unit.hero else 14.0
+		var portrait := Rect2(rect.position + Vector2(2, top), rect.size - Vector2(4, top + 16))
 		var image_size := picture.get_size()
 		var visible_height := image_size.x * (portrait.size.y / maxf(1.0, portrait.size.x))
 		var visible_width := image_size.y * (portrait.size.x / maxf(1.0, portrait.size.y))
@@ -282,11 +316,12 @@ func _draw_unit(unit: Dictionary, points: Dictionary, font: Font) -> void:
 		if unit.get("stunned", false):
 			fade = Color(0.62, 0.68, 0.80, opacity)
 		draw_texture_rect_region(picture, portrait, source, fade)
-	draw_rect(Rect2(rect.position + Vector2(1, 1), Vector2(rect.size.x - 2, 13)), Color(tint.darkened(0.72), opacity))
+	var title_y := 18.0 if unit.hero else 11.0
+	draw_rect(Rect2(rect.position + Vector2(1, title_y - 9), Vector2(rect.size.x - 2, 12)), Color(tint.darkened(0.72), opacity))
 	var title := unit_name(unit, true)
 	var title_width := font.get_string_size(title, HORIZONTAL_ALIGNMENT_LEFT, -1, 11).x
 	var title_size := int(clampf(11.0 * (rect.size.x - 4) / maxf(1.0, title_width), 8.0, 11.0))
-	_center_text(font, title, Vector2(rect.get_center().x, rect.position.y + 11), title_size, Color(PAPER, opacity))
+	_center_text(font, title, Vector2(rect.get_center().x, rect.position.y + title_y), title_size, Color(PAPER, opacity))
 	var outline := GOLD if selected == unit.key else frame_alpha
 	if unit.hero or selected == unit.key:
 		draw_rect(rect.grow(-1), outline, false, 1.4)
@@ -298,21 +333,30 @@ func _draw_unit(unit: Dictionary, points: Dictionary, font: Font) -> void:
 	_draw_stats(rect, [int(unit.attack), int(unit.get("armor", 0)), hp], font, opacity)
 	if _stage == "" and not forecast.is_empty() and int(forecast.hp) != hp:
 		var loss := hp - int(forecast.hp)
-		var badge := Rect2(rect.end - Vector2(24, 34), Vector2(23, 13))
-		draw_rect(badge, Color("#46332ef5") if loss > 0 else Color("#294b3ff5"))
-		var change := "−%d" % loss if loss > 0 else "+%d" % -loss
-		_center_text(font, change, Vector2(badge.get_center().x, badge.end.y - 3), 10, PAPER)
+		_damage_badge(rect.end - Vector2(17, 7), loss, font)
 	if unit.hero:
-		draw_rect(Rect2(rect.position + Vector2(2, 15), Vector2(23, 13)), Color("#172326db"))
-		draw_string(font, rect.position + Vector2(4, 25), "Lv%d" % int(unit.get("level", 1)),
-			HORIZONTAL_ALIGNMENT_LEFT, -1, 9, frame_alpha)
+		_draw_equipment(rect, unit.get("equipment", []), opacity)
+
+func _draw_equipment(rect: Rect2, equipped: Array, opacity: float) -> void:
+	var width := (rect.size.x - 4) / 3
+	var slots := ["Weapon", "Armor", "Accessory"]
+	for i in range(slots.size()):
+		var well := Rect2(rect.position + Vector2(2 + i * width, 0), Vector2(width - 1, 8))
+		draw_rect(well, Color("#121410", opacity))
+		draw_rect(well, Color("#9a805a", 0.80 * opacity), false, 1)
+		for item: Dictionary in equipped:
+			if item.slot == slots[i]:
+				var image := artwork_for(int(item.id))
+				if image:
+					draw_texture_rect(image, well.grow(-1), false, Color(1, 1, 1, opacity))
+				break
 
 func _draw_stats(rect: Rect2, values: Array, font: Font, opacity: float) -> void:
 	var col_width := (rect.size.x - 2) / 3
 	var labels := ["攻", "甲", "血"]
 	var tints := [Color("#e0bb7e"), Color("#b3cbd1"), Color("#efa49b")]
 	for i in range(3):
-		var cell := Rect2(Vector2(rect.position.x + 1 + i * col_width, rect.end.y - 18), Vector2(col_width, 17))
+		var cell := Rect2(Vector2(rect.position.x + 1 + i * col_width, rect.end.y - 15), Vector2(col_width, 14))
 		draw_rect(cell, Color("#292b26", opacity))
 		draw_rect(cell, Color("#88755e", opacity * 0.47), false, 1)
 		_center_text(font, "%s%d" % [labels[i], values[i]], Vector2(cell.get_center().x, cell.end.y - 4),

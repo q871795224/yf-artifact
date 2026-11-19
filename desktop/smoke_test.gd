@@ -49,6 +49,17 @@ func _run() -> void:
 	_expect(app.board.texture_for(10020) != null, "桌面未找到共享美术。")
 	_expect(app.tactic_button.disabled and app.hand.get_child_count() == 5, "开局技能或手牌异常。")
 	await _capture("桌面战场.png")
+	app.hand.get_child(0).mouse_entered.emit()
+	await process_frame
+	_expect(is_instance_valid(app.hover_card) and app.hover_card.visible, "手牌悬停没有显示完整牌面。")
+	await _capture("桌面手牌悬浮.png")
+	app.hand.get_child(0).mouse_exited.emit()
+	for team in range(2):
+		app._show_play_card({"card_id": app.state.hand[0], "team": team})
+		_expect(int(app.play_reveal.anchor_left) == team, "出牌展示没有显示在正确的一侧。")
+		await create_timer(0.24).timeout
+		await _capture("出牌展示-%d.png" % team)
+		app._hide_play_card()
 
 	# Exercise the actual UI bindings for card inspection and reforge.
 	app.hand.get_child(0).pressed.emit()
@@ -62,6 +73,10 @@ func _run() -> void:
 		if int(app.state.round) > 1:
 			break
 		app.pass_button.pressed.emit()
+		if is_instance_valid(app.shop_window) and app.shop_window.visible:
+			_expect(app.state.shop.offers.size() == 3, "商店没有返回三类货源。")
+			await _capture("桌面采购.png")
+			app.shop_continue.pressed.emit()
 		await _idle(app)
 	_expect(int(app.state.round) == 2 and not app.tactic_button.disabled, "没有经过交战并解锁调位。")
 	var action: Dictionary = {}

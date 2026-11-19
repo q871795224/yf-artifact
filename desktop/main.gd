@@ -42,6 +42,13 @@ var log_text: RichTextLabel
 var history_layer: PanelContainer
 var detail_layer: PanelContainer
 var hand: HBoxContainer
+var hidden_hand: HBoxContainer
+var board_area: Control
+var hover_card: PanelContainer
+var play_reveal: PanelContainer
+var shop_window: Window
+var shop_continue: Button
+var shop_fog: ColorRect
 var hand_tabs: HBoxContainer
 var pass_button: Button
 var tactic_button: Button
@@ -139,7 +146,7 @@ func _spacer(parent: Node) -> void:
 
 func _build(assets: String) -> void:
 	var backdrop := ColorRect.new()
-	backdrop.color = Color("#181d20")
+	backdrop.color = Color("#191510")
 	backdrop.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(backdrop)
 	backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -173,12 +180,22 @@ func _build(assets: String) -> void:
 	new_button = _button(header, "新一局", _ask_new)
 
 	var enemy_bar := HBoxContainer.new()
-	enemy_bar.alignment = BoxContainer.ALIGNMENT_CENTER
+	enemy_bar.custom_minimum_size.y = 32
 	root.add_child(enemy_bar)
-	opponent_label = _label("", 15, RED)
+	var enemy_spacer := Control.new()
+	enemy_spacer.custom_minimum_size.x = 142
+	enemy_bar.add_child(enemy_spacer)
+	hidden_hand = HBoxContainer.new()
+	hidden_hand.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	hidden_hand.alignment = BoxContainer.ALIGNMENT_CENTER
+	hidden_hand.add_theme_constant_override("separation", 4)
+	enemy_bar.add_child(hidden_hand)
+	opponent_label = _label("", 16, RED)
+	opponent_label.custom_minimum_size.x = 142
+	opponent_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	enemy_bar.add_child(opponent_label)
 
-	var board_area := Control.new()
+	board_area = Control.new()
 	board_area.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	board_area.custom_minimum_size.y = 424
 	root.add_child(board_area)
@@ -220,8 +237,6 @@ func _build(assets: String) -> void:
 	var turn_bar := HBoxContainer.new()
 	turn_bar.add_theme_constant_override("separation", 10)
 	root.add_child(turn_bar)
-	resource_label = _label("等待对局", 16, MANA)
-	turn_bar.add_child(resource_label)
 	phase_label = _label("", 14, PAPER)
 	phase_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	phase_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -230,9 +245,12 @@ func _build(assets: String) -> void:
 	cancel_button = _button(turn_bar, "取消", _cancel_target)
 	tactic_button = _button(turn_bar, "调位", _start_tactic)
 	pass_button = _button(turn_bar, "让过", _advance)
-	pass_button.custom_minimum_size.x = 98
-	pass_button.add_theme_stylebox_override("normal", _surface("#513a24", "#cba363", 7, 9))
-	pass_button.add_theme_stylebox_override("hover", _surface("#755433", "#f0ce90", 7, 9))
+	pass_button.custom_minimum_size = Vector2(118, 45)
+	var brass := _surface("#594121", "#e4b770", 12, 8)
+	brass.shadow_color = Color("#e3a34b68")
+	brass.shadow_size = 8
+	pass_button.add_theme_stylebox_override("normal", brass)
+	pass_button.add_theme_stylebox_override("hover", _surface("#8c6231", "#ffdfa2", 12, 10))
 
 	hand_tabs = HBoxContainer.new()
 	root.add_child(hand_tabs)
@@ -255,9 +273,12 @@ func _build(assets: String) -> void:
 	notice = _label("", 13, MUTED)
 	notice.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
 	hand_tabs.add_child(notice)
+	resource_label = _label("等待对局", 16, MANA)
+	hand_tabs.add_child(resource_label)
 	var hand_scroll := ScrollContainer.new()
-	hand_scroll.custom_minimum_size.y = 135
+	hand_scroll.custom_minimum_size.y = 49
 	hand_scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	hand_scroll.clip_contents = true
 	root.add_child(hand_scroll)
 	hand = HBoxContainer.new()
 	hand.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -341,6 +362,7 @@ func _set_busy(value: bool) -> void:
 
 func _render() -> void:
 	board.present(state)
+	_render_enemy_hand()
 	_update_markers()
 	_render_controls()
 	_render_hand()
@@ -372,15 +394,15 @@ func _render_controls() -> void:
 	tactic_button.tooltip_text = "本回合已使用" if skill.get("used", false) else "移动一名友军到八邻空格，或与八邻友军交换"
 	cancel_button.visible = not mode.is_empty()
 	pass_button.disabled = busy or not initialized
-	pass_button.text = "下一回合" if state.get("phase") == "round_end" else "查看结果" if state.get("phase") == "finished" else "让过"
+	pass_button.text = "采购" if state.get("phase") == "round_end" else "查看结果" if state.get("phase") == "finished" else "让过"
 	if not initialized:
 		round_label.text = "正在连接" if busy else "等待开局"
 		phase_label.text = ""
 		return
 	var opponent: Dictionary = state.get("opponent", {})
 	round_label.text = "第 %d 回合" % int(state.round)
-	resource_label.text = "%d / %d 法力    %d 金" % [int(state.mana), int(state.maxMana), int(state.gold)]
-	opponent_label.text = "敌方    %d 法力    %d 金" % [int(opponent.get("mana", 0)), int(opponent.get("gold", 0))]
+	resource_label.text = "我方  ·  %d 金" % int(state.gold)
+	opponent_label.text = "红方对手  ·  %d 金" % int(opponent.get("gold", 0))
 	if busy:
 		phase_label.text = "正在结算"
 	elif not mode.is_empty():
@@ -427,7 +449,22 @@ func _actions(kind: String, actor := "") -> Array:
 	return state.get("actions", []).filter(func(action: Dictionary) -> bool:
 		return action.kind == kind and (actor.is_empty() or action.actor == actor))
 
+func _render_enemy_hand() -> void:
+	_clear(hidden_hand)
+	var count := int(state.get("opponent", {}).get("cards", 0))
+	for i in range(mini(count, 9)):
+		var back := PanelContainer.new()
+		back.custom_minimum_size = Vector2(52, 30)
+		back.add_theme_stylebox_override("panel", _surface("#3d2923", "#a47655", 5, 5))
+		var seam := _label("◇", 14, Color("#cfa66d"))
+		seam.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		back.add_child(seam)
+		hidden_hand.add_child(back)
+	if count > 9:
+		hidden_hand.add_child(_label("+%d" % (count - 9), 13, GOLD))
+
 func _render_hand() -> void:
+	_hide_hover_card()
 	_clear(hand)
 	var ordinary: Array = state.get("hand", [])
 	var items: Array = state.get("items", [])
@@ -441,6 +478,8 @@ func _render_hand() -> void:
 		var cost := _cost(id, index, item_tab)
 		var unit_card: Dictionary = _card(id)
 		var tile := HandCard.new()
+		tile.peek = true
+		tile.clip_contents = true
 		tile.title_line = _card_name(id)
 		tile.cost_line = "%d 金" % cost if item_tab else "%d 费" % cost
 		tile.type_line = {"Spell": "法术", "Item": "物品", "Creep": "单位"}.get(unit_card.get("card_type"), "")
@@ -451,7 +490,8 @@ func _render_hand() -> void:
 		tile.artwork = board.artwork_for(id)
 		tile.text_font = font
 		tile.active = inspected.get("type") == "card" and inspected.get("index") == index and inspected.get("item") == item_tab
-		tile.tooltip_text = unit_card.get("card_text", {}).get("schinese", "")
+		tile.mouse_entered.connect(_show_hand_hover.bind(tile, id, cost, item_tab))
+		tile.mouse_exited.connect(_hide_hover_card)
 		tile.pressed.connect(_inspect_card.bind(index, item_tab))
 		hand.add_child(tile)
 	if pile.is_empty():
@@ -716,7 +756,7 @@ func _cancel_target() -> void:
 
 func _advance() -> void:
 	match state.get("phase", ""):
-		"round_end": _submit("next_round")
+		"round_end": _open_shop()
 		"action": _submit("pass")
 		"finished":
 			var outcome := AcceptDialog.new()
@@ -733,6 +773,7 @@ func _submit(action_id: String) -> void:
 		return
 	_reset_selection()
 	_update_markers()
+	_hide_hover_card()
 	_set_busy(true)
 	_render_detail()
 	var packet := await api.request("/api/games/%s/actions" % game_id, {
@@ -762,7 +803,14 @@ func _animate_packet(packet: Dictionary, action_id: String) -> void:
 			phase_label.text = "交战"
 			await board.animate(frame, after, "combat", 0.85 / playback_speed)
 		elif index == 0 or frames[index - 1].phase != "combat":
-			await board.animate(prior, frame, "move", 0.18 / playback_speed)
+			var action: Variant = frame.get("action")
+			if action is Dictionary and action.has("card_id"):
+				_show_play_card(action)
+				await get_tree().create_timer(0.32 / playback_speed).timeout
+				await board.animate(prior, frame, "card", 0.52 / playback_speed)
+				_hide_play_card()
+			else:
+				await board.animate(prior, frame, "move", 0.18 / playback_speed)
 		prior = frame
 
 func _confirm(title: String, copy: String, action: Callable) -> void:
@@ -967,3 +1015,147 @@ func _play_sample() -> void:
 	after.units = [alive]
 	await sample_board.animate(sample, after, "combat", 0.9 / [0.5, 1.0, 2.0][sample_speed.selected])
 	sample_play.disabled = false
+
+func _art_card(parent: Node, id: int, price: String, width: int, height: int) -> PanelContainer:
+	var card := PanelContainer.new()
+	card.custom_minimum_size.x = width
+	card.add_theme_stylebox_override("panel", _surface("#28241b", "#b28c5d", 8, 9))
+	var content := VBoxContainer.new()
+	content.add_theme_constant_override("separation", 6)
+	card.add_child(content)
+	var heading := HBoxContainer.new()
+	content.add_child(heading)
+	var title := _label(_card_name(id), 17, PAPER)
+	title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	heading.add_child(title)
+	if not price.is_empty():
+		heading.add_child(_label(price, 14, GOLD))
+	var art := TextureRect.new()
+	art.texture = board.artwork_for(id)
+	art.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	art.custom_minimum_size.y = height
+	art.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+	content.add_child(art)
+	var copy := _label(_card(id).get("card_text", {}).get("schinese", ""), 14, PAPER)
+	copy.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	content.add_child(copy)
+	parent.add_child(card)
+	return card
+
+func _make_mouse_passive(control: Control) -> void:
+	control.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	for child in control.get_children():
+		if child is Control:
+			_make_mouse_passive(child)
+
+func _show_hand_hover(tile: Control, id: int, cost: int, is_item: bool) -> void:
+	if busy:
+		return
+	_hide_hover_card()
+	hover_card = _art_card(self, id, "%d %s" % [cost, "金" if is_item else "费"], 202, 144)
+	hover_card.z_index = 12
+	_make_mouse_passive(hover_card)
+	_position_hover(tile, hover_card)
+
+func _position_hover(tile: Control, floating: PanelContainer) -> void:
+	await get_tree().process_frame
+	if not is_instance_valid(floating) or not is_instance_valid(tile):
+		return
+	var origin := tile.global_position
+	floating.global_position = Vector2(clampf(origin.x - 44, 8, size.x - floating.size.x - 8),
+		maxf(8, origin.y - floating.size.y - 9))
+
+func _hide_hover_card() -> void:
+	if is_instance_valid(hover_card):
+		hover_card.hide()
+		hover_card.queue_free()
+		hover_card = null
+
+func _show_play_card(action: Dictionary) -> void:
+	_hide_play_card()
+	play_reveal = _art_card(board_area, int(action.card_id), "", 222, 150)
+	_side_layer(play_reveal, int(action.team) == 1)
+	play_reveal.anchor_top = 0.22
+	play_reveal.anchor_bottom = 0.22
+	play_reveal.offset_top = 0
+	play_reveal.offset_bottom = 0
+	play_reveal.z_index = 5
+	_make_mouse_passive(play_reveal)
+	play_reveal.modulate.a = 0.0
+	create_tween().tween_property(play_reveal, "modulate:a", 1.0, 0.19)
+
+func _hide_play_card() -> void:
+	if is_instance_valid(play_reveal):
+		play_reveal.hide()
+		play_reveal.queue_free()
+		play_reveal = null
+
+func _open_shop() -> void:
+	var shop: Dictionary = state.get("shop", {})
+	if shop.is_empty():
+		_submit("next_round")
+		return
+	if not is_instance_valid(shop_window):
+		shop_fog = ColorRect.new()
+		shop_fog.color = Color("#0f0b0799")
+		shop_fog.z_index = 15
+		shop_fog.hide()
+		add_child(shop_fog)
+		shop_fog.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+		shop_window = Window.new()
+		shop_window.title = "商店"
+		shop_window.hide()
+		shop_window.transient = true
+		shop_window.exclusive = true
+		shop_window.close_requested.connect(shop_window.hide)
+		shop_window.visibility_changed.connect(func() -> void: shop_fog.visible = shop_window.visible)
+		add_child(shop_window)
+	_clear(shop_window)
+	var root := _window_contents(shop_window)
+	var store := _panel(root)
+	store.get_parent().add_theme_stylebox_override("panel", _surface("#2d2118", "#b59462", 12, 17))
+	var top := HBoxContainer.new()
+	store.add_child(top)
+	top.add_child(_label("战后采购", 24, GOLD))
+	_spacer(top)
+	top.add_child(_label("%d 金" % int(state.gold), 18, GOLD))
+	var shelf := HBoxContainer.new()
+	shelf.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	shelf.add_theme_constant_override("separation", 10)
+	store.add_child(shelf)
+	for index in range(shop.offers.size()):
+		var offer: Dictionary = shop.offers[index]
+		var section := VBoxContainer.new()
+		section.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		shelf.add_child(section)
+		section.add_child(_label(offer.source, 15, MUTED))
+		if offer.id == null:
+			var empty := _label("牌堆已空", 16, MUTED)
+			empty.custom_minimum_size = Vector2(160, 210)
+			section.add_child(empty)
+			continue
+		var merchandise := _art_card(section, int(offer.id), "%d 金" % int(offer.price), 170, 115)
+		merchandise.size_flags_vertical = Control.SIZE_EXPAND_FILL
+		var purchased: Variant = shop.get("selected")
+		var accept_offer := _button(section, "已购入" if purchased != null and int(purchased) == index else "购买",
+			_buy_shop_offer.bind(offer.get("action_id")))
+		accept_offer.disabled = offer.get("action_id") == null
+	var end_column := VBoxContainer.new()
+	end_column.alignment = BoxContainer.ALIGNMENT_CENTER
+	shelf.add_child(end_column)
+	shop_continue = _button(end_column, "结束采购" if shop.bought else "跳过采购", _finish_shop)
+	shop_continue.add_theme_stylebox_override("normal", _surface("#594121", "#dcb26d", 8, 10))
+	shop_window.popup_centered(Vector2i(770, 400))
+
+func _buy_shop_offer(action_id: Variant) -> void:
+	if action_id == null:
+		return
+	shop_window.hide()
+	await _submit(str(action_id))
+	if state.get("phase") == "round_end":
+		_open_shop()
+
+func _finish_shop() -> void:
+	if is_instance_valid(shop_window):
+		shop_window.hide()
+	_submit("next_round")
