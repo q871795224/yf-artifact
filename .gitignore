@@ -6,3 +6,4 @@ output/
 dist/
 node_modules/
 .venv/
+desktop/.godot/
