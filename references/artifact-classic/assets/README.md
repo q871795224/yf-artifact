@@ -27,7 +27,7 @@
 
 ## 客户端资源的下一条路径
 
-本机默认 `/Applications/Steam.app` 与 `~/Library/Application Support/Steam/steamapps` 路径下未发现 Steam；尚未定位到可供提取的 Artifact 客户端文件，不排除安装在其他位置。
+2026-11-20 在 Windows Steam 的 `C:\Program Files (x86)\Steam\steamapps\common\Artifact` 定位到 Artifact Classic。Steam 清单为 `appmanifest_583950.acf`，游戏资源包在 `game/dcg/pak01_dir.vpk` 及相关分卷。此前 macOS 默认 Steam 路径的排查属于旧环境。桌面客户端使用本仓库已有的卡牌图片，并从其中显示插画区；当前画面由 Godot 自有牌框和规则数值组成。
 
 [Source 2 Viewer](https://s2v.app/) 支持读取 VPK、提取资源及将纹理导出为 PNG，并提供 macOS Apple Silicon 命令行版本。找到客户端后，可以先浏览目录并导出少量 UI 图标／卡框作验证，再按手机原型需要补充资源。工具可行性已查证；本项目尚未执行客户端 VPK 提取。
 

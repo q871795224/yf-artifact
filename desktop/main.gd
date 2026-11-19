@@ -2,6 +2,7 @@ extends Control
 
 const Battlefield = preload("res://battlefield.gd")
 const LocalAPI = preload("res://local_api.gd")
+const HandCard = preload("res://hand_card.gd")
 const CONFIG := "user://desktop.cfg"
 const ALL_TARGETS := ["all", "self", "draw", "fort", "ticket", "improvement"]
 const MANA := Color("#9ed1ea")
@@ -32,11 +33,14 @@ var archive_dir := ""
 
 var round_label: Label
 var resource_label: Label
+var opponent_label: Label
 var phase_label: Label
 var reserve_label: Label
 var notice: Label
 var details: VBoxContainer
 var log_text: RichTextLabel
+var history_layer: PanelContainer
+var detail_layer: PanelContainer
 var hand: HBoxContainer
 var hand_tabs: HBoxContainer
 var pass_button: Button
@@ -86,9 +90,9 @@ func _make_theme() -> Theme:
 	skin.set_color("default_color", "RichTextLabel", MUTED)
 	skin.set_color("font_color", "Button", PAPER)
 	skin.set_color("font_disabled_color", "Button", Color("#7d8986"))
-	skin.set_stylebox("normal", "Button", _surface("#28373a", "#415651", 5, 8))
-	skin.set_stylebox("hover", "Button", _surface("#364b47", "#749482", 5, 8))
-	skin.set_stylebox("pressed", "Button", _surface("#3a5048", "#8fbd9e", 5, 8))
+	skin.set_stylebox("normal", "Button", _surface("#201d18f2", "#6d5c43", 6, 8))
+	skin.set_stylebox("hover", "Button", _surface("#3b3022", "#b8986a", 6, 8))
+	skin.set_stylebox("pressed", "Button", _surface("#4d3a24", "#ccaa77", 6, 8))
 	skin.set_stylebox("disabled", "Button", _surface("#222d2f", "#36413f", 5, 8))
 	skin.set_stylebox("focus", "Button", _surface("#00000000", "#a4c6ac", 5, 8))
 	return skin
@@ -134,35 +138,61 @@ func _spacer(parent: Node) -> void:
 	parent.add_child(spacer)
 
 func _build(assets: String) -> void:
+	var backdrop := ColorRect.new()
+	backdrop.color = Color("#181d20")
+	backdrop.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(backdrop)
+	backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+
 	var margins := MarginContainer.new()
 	add_child(margins)
 	margins.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	for side: String in ["left", "right", "top", "bottom"]:
 		margins.add_theme_constant_override("margin_" + side, 16)
 	var root := VBoxContainer.new()
-	root.add_theme_constant_override("separation", 10)
+	root.add_theme_constant_override("separation", 5)
 	margins.add_child(root)
 	var header := HBoxContainer.new()
-	header.add_theme_constant_override("separation", 8)
+	header.add_theme_constant_override("separation", 7)
 	root.add_child(header)
-	header.add_child(_label("单路战场", 26, GOLD))
-	round_label = _label("连接战场", 16, MUTED)
+	header.add_child(_label("单路战场", 24, GOLD))
+	round_label = _label("连接战场", 15, MUTED)
 	header.add_child(round_label)
 	_spacer(header)
+	var roster := _button(header, "阵容", _show_roster)
+	roster.tooltip_text = "查英雄成长和返场回合"
+	var report := CheckButton.new()
+	report.text = "战报"
+	report.toggled.connect(func(value: bool) -> void: history_layer.visible = value)
+	header.add_child(report)
 	deck_button = _button(header, "构筑", _open_deck)
-	_button(header, "特效预览", _open_preview)
-	export_button = _button(header, "导出对局", _open_export)
+	_button(header, "特效", _open_preview)
+	export_button = _button(header, "导出", _open_export)
 	_button(header, "记录文件", _open_archive)
 	concede_button = _button(header, "认输", _ask_concede)
 	new_button = _button(header, "新一局", _ask_new)
 
-	var columns := HBoxContainer.new()
-	columns.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	columns.add_theme_constant_override("separation", 12)
-	root.add_child(columns)
+	var enemy_bar := HBoxContainer.new()
+	enemy_bar.alignment = BoxContainer.ALIGNMENT_CENTER
+	root.add_child(enemy_bar)
+	opponent_label = _label("", 15, RED)
+	enemy_bar.add_child(opponent_label)
 
-	var history := _panel(columns)
-	history.get_parent().custom_minimum_size.x = 246
+	var board_area := Control.new()
+	board_area.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	board_area.custom_minimum_size.y = 424
+	root.add_child(board_area)
+	board = Battlefield.new()
+	board.assets_root = assets
+	board.details_font = font
+	board.cell_clicked.connect(_cell_clicked)
+	board_area.add_child(board)
+	board.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+
+	var history := _panel(board_area)
+	history_layer = history.get_parent()
+	_side_layer(history_layer, false)
+	history_layer.hide()
 	history.add_child(_label("交战记录", 18, GOLD))
 	log_text = RichTextLabel.new()
 	log_text.size_flags_vertical = Control.SIZE_EXPAND_FILL
@@ -170,48 +200,10 @@ func _build(assets: String) -> void:
 	log_text.selection_enabled = true
 	history.add_child(log_text)
 
-	var battle := _panel(columns)
-	battle.get_parent().size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	var battle_bar := HBoxContainer.new()
-	battle.add_child(battle_bar)
-	resource_label = _label("等待对局", 15, MANA)
-	battle_bar.add_child(resource_label)
-	_spacer(battle_bar)
-	var arrows := CheckButton.new()
-	arrows.text = "攻击箭头"
-	arrows.button_pressed = true
-	arrows.toggled.connect(func(value: bool) -> void:
-		board.show_arrows = value
-		board.queue_redraw())
-	battle_bar.add_child(arrows)
-	var speed := OptionButton.new()
-	for text: String in ["常速", "两倍速", "跳过动画"]:
-		speed.add_item(text)
-	speed.item_selected.connect(func(index: int) -> void:
-		playback_speed = [1.0, 2.0, 0.0][index])
-	battle_bar.add_child(speed)
-
-	board = Battlefield.new()
-	board.assets_root = assets
-	board.details_font = font
-	board.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	board.cell_clicked.connect(_cell_clicked)
-	battle.add_child(board)
-
-	var turn_bar := HBoxContainer.new()
-	battle.add_child(turn_bar)
-	phase_label = _label("", 14, MUTED)
-	phase_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	phase_label.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
-	turn_bar.add_child(phase_label)
-	cancel_button = _button(turn_bar, "取消", _cancel_target)
-	tactic_button = _button(turn_bar, "调位", _start_tactic)
-	pass_button = _button(turn_bar, "让过", _advance)
-	pass_button.custom_minimum_size.x = 96
-
-	var side := _panel(columns)
-	side.get_parent().custom_minimum_size.x = 315
-	side.add_child(_label("详情", 18, GOLD))
+	var side := _panel(board_area)
+	detail_layer = side.get_parent()
+	_side_layer(detail_layer, true)
+	side.add_child(_label("详情", 16, GOLD))
 	var detail_scroll := ScrollContainer.new()
 	detail_scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	detail_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
@@ -225,21 +217,52 @@ func _build(assets: String) -> void:
 	reserve_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	side.add_child(reserve_label)
 
-	var hand_panel := _panel(root, false)
+	var turn_bar := HBoxContainer.new()
+	turn_bar.add_theme_constant_override("separation", 10)
+	root.add_child(turn_bar)
+	resource_label = _label("等待对局", 16, MANA)
+	turn_bar.add_child(resource_label)
+	phase_label = _label("", 14, PAPER)
+	phase_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	phase_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	phase_label.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+	turn_bar.add_child(phase_label)
+	cancel_button = _button(turn_bar, "取消", _cancel_target)
+	tactic_button = _button(turn_bar, "调位", _start_tactic)
+	pass_button = _button(turn_bar, "让过", _advance)
+	pass_button.custom_minimum_size.x = 98
+	pass_button.add_theme_stylebox_override("normal", _surface("#513a24", "#cba363", 7, 9))
+	pass_button.add_theme_stylebox_override("hover", _surface("#755433", "#f0ce90", 7, 9))
+
 	hand_tabs = HBoxContainer.new()
-	hand_panel.add_child(hand_tabs)
+	root.add_child(hand_tabs)
 	_button(hand_tabs, "普通牌", func() -> void: _hand_tab(false))
 	_button(hand_tabs, "物品", func() -> void: _hand_tab(true))
+	var arrows := CheckButton.new()
+	arrows.text = "攻击箭头"
+	arrows.button_pressed = true
+	arrows.toggled.connect(func(value: bool) -> void:
+		board.show_arrows = value
+		board.queue_redraw())
+	hand_tabs.add_child(arrows)
+	var speed := OptionButton.new()
+	for text: String in ["常速", "两倍速", "跳过动画"]:
+		speed.add_item(text)
+	speed.item_selected.connect(func(index: int) -> void:
+		playback_speed = [1.0, 2.0, 0.0][index])
+	hand_tabs.add_child(speed)
 	_spacer(hand_tabs)
 	notice = _label("", 13, MUTED)
 	notice.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
 	hand_tabs.add_child(notice)
 	var hand_scroll := ScrollContainer.new()
-	hand_scroll.custom_minimum_size.y = 71
+	hand_scroll.custom_minimum_size.y = 135
 	hand_scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	hand_panel.add_child(hand_scroll)
+	root.add_child(hand_scroll)
 	hand = HBoxContainer.new()
-	hand.add_theme_constant_override("separation", 7)
+	hand.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	hand.alignment = BoxContainer.ALIGNMENT_CENTER
+	hand.add_theme_constant_override("separation", 5)
 	hand_scroll.add_child(hand)
 
 	confirmation = ConfirmationDialog.new()
@@ -252,6 +275,16 @@ func _build(assets: String) -> void:
 	export_dialog.file_selected.connect(_write_export)
 	add_child(export_dialog)
 	_render()
+
+func _side_layer(panel: PanelContainer, right: bool) -> void:
+	var edge := 1.0 if right else 0.0
+	panel.anchor_left = edge
+	panel.anchor_right = edge
+	panel.anchor_top = 0.06
+	panel.anchor_bottom = 0.94
+	panel.offset_left = -288 if right else 0
+	panel.offset_right = 0 if right else 246
+	panel.add_theme_stylebox_override("panel", _surface("#171917f5", "#79664e", 10, 13))
 
 func _connect_game() -> void:
 	_set_busy(true)
@@ -346,8 +379,8 @@ func _render_controls() -> void:
 		return
 	var opponent: Dictionary = state.get("opponent", {})
 	round_label.text = "第 %d 回合" % int(state.round)
-	resource_label.text = "我方  %d/%d 法力  %d 金     敌方  %d 法力  %d 金" % [
-		int(state.mana), int(state.maxMana), int(state.gold), int(opponent.get("mana", 0)), int(opponent.get("gold", 0))]
+	resource_label.text = "%d / %d 法力    %d 金" % [int(state.mana), int(state.maxMana), int(state.gold)]
+	opponent_label.text = "敌方    %d 法力    %d 金" % [int(opponent.get("mana", 0)), int(opponent.get("gold", 0))]
 	if busy:
 		phase_label.text = "正在结算"
 	elif not mode.is_empty():
@@ -371,11 +404,7 @@ func _card_name(id: int) -> String:
 	return _card(id).get("card_name", {}).get("schinese", "牌 %d" % id)
 
 func _unit_name(unit: Dictionary) -> String:
-	if int(unit.id) == 64004:
-		return "天辉远程小兵" if unit.team == "ally" else "夜魇远程小兵"
-	if int(unit.id) == 1006:
-		return "天辉近战小兵" if unit.team == "ally" else "夜魇近战小兵"
-	return _card_name(int(unit.id))
+	return board.unit_name(unit)
 
 func _unit(key: String) -> Dictionary:
 	for unit: Dictionary in state.get("units", []):
@@ -411,15 +440,20 @@ func _render_hand() -> void:
 		var id := int(pile[index].id if item_tab else pile[index])
 		var cost := _cost(id, index, item_tab)
 		var unit_card: Dictionary = _card(id)
-		var descriptor := "%d 金" % cost if item_tab else "%d 费" % cost
+		var tile := HandCard.new()
+		tile.title_line = _card_name(id)
+		tile.cost_line = "%d 金" % cost if item_tab else "%d 费" % cost
+		tile.type_line = {"Spell": "法术", "Item": "物品", "Creep": "单位"}.get(unit_card.get("card_type"), "")
 		if unit_card.get("card_type") == "Creep":
-			descriptor += " · %d/%d" % [int(unit_card.attack), int(unit_card.hit_points)]
-		var tile := _button(hand, "%s\n%s" % [_card_name(id), descriptor], _inspect_card.bind(index, item_tab))
-		tile.custom_minimum_size = Vector2(139, 57)
-		tile.icon = board.texture_for(id)
-		tile.expand_icon = true
-		tile.add_theme_constant_override("icon_max_width", 38)
+			tile.stat_line = "%d / %d" % [int(unit_card.attack), int(unit_card.hit_points)]
+		tile.accent = GOLD if item_tab else GREEN
+		tile.payable = not _actions("item" if item_tab else "card", str(index)).is_empty()
+		tile.artwork = board.artwork_for(id)
+		tile.text_font = font
+		tile.active = inspected.get("type") == "card" and inspected.get("index") == index and inspected.get("item") == item_tab
 		tile.tooltip_text = unit_card.get("card_text", {}).get("schinese", "")
+		tile.pressed.connect(_inspect_card.bind(index, item_tab))
+		hand.add_child(tile)
 	if pile.is_empty():
 		hand.add_child(_label("手牌为空", 14, MUTED))
 
@@ -440,6 +474,7 @@ func _inspect_card(index: int, is_item: bool) -> void:
 	_update_markers()
 	_render_controls()
 	_render_detail()
+	_render_hand()
 
 func _detail_text(text: String, tint := MUTED) -> void:
 	var line := _label(text, 14, tint)
@@ -465,8 +500,19 @@ func _detail_header(title: String, text: String, texture: Texture2D = null) -> v
 	facts.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	left.add_child(facts)
 
+func _detail_art(artwork: Texture2D) -> void:
+	if artwork == null:
+		return
+	var picture := TextureRect.new()
+	picture.texture = artwork
+	picture.custom_minimum_size.y = 150
+	picture.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	picture.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	details.add_child(picture)
+
 func _render_detail() -> void:
 	_clear(details)
+	detail_layer.visible = not inspected.is_empty()
 	match inspected.get("type", ""):
 		"unit":
 			_detail_unit(_unit(selected))
@@ -474,9 +520,23 @@ func _render_detail() -> void:
 			_detail_card(int(inspected.index), bool(inspected.item))
 		"fort":
 			_detail_fort(int(inspected.team))
+		"roster":
+			for unit: Dictionary in state.heroes:
+				var team := "我方" if unit.team == "ally" else "敌方"
+				var location := "第 %d 轮登场" % int(unit.due) if unit.row == null else "第 %d 排第 %d 列" % [int(unit.row) + 1, int(unit.col) + 1]
+				_detail_header(_unit_name(unit), "%s · Lv%d · %s" % [team, int(unit.level), location],
+					board.artwork_for(int(unit.id), unit.team))
 		_:
-			_detail_text("点棋子或手牌查看详情。棋盘箭头显示普攻意图，虚线表示当前够不到。")
-			_detail_text("调位、出牌和移动各占一次行动。双方连续让过后结算交战。")
+			pass
+
+func _show_roster() -> void:
+	if state.is_empty():
+		return
+	_reset_selection()
+	inspected = {"type": "roster"}
+	_update_markers()
+	_render_controls()
+	_render_detail()
 
 func _detail_card(index: int, is_item: bool) -> void:
 	var pile: Array = state.get("items" if is_item else "hand", [])
@@ -484,7 +544,8 @@ func _detail_card(index: int, is_item: bool) -> void:
 		return
 	var id := int(pile[index].id if is_item else pile[index])
 	var card := _card(id)
-	_detail_header(_card_name(id), "%d %s" % [_cost(id, index, is_item), "金币" if is_item else "法力"], board.texture_for(id, "", true))
+	_detail_header(_card_name(id), "%d %s" % [_cost(id, index, is_item), "金币" if is_item else "法力"])
+	_detail_art(board.artwork_for(id))
 	_detail_text(card.get("card_text", {}).get("schinese", ""))
 	var kind := "item" if is_item else "card"
 	var row := HBoxContainer.new()
@@ -502,7 +563,7 @@ func _detail_unit(unit: Dictionary) -> void:
 	_detail_header(_unit_name(unit), "%s · %d 攻  %d 甲  %d/%d 血\n射程 %d 格%s" % [
 		team, int(unit.attack), int(unit.armor), int(unit.hp), int(unit.maxHp), int(unit.range),
 		" · Lv%d · 经验 %d" % [int(unit.level), int(unit.xp)] if unit.hero else ""],
-		board.texture_for(int(unit.id), unit.team, true))
+		board.artwork_for(int(unit.id), unit.team))
 	var target: Variant = unit.get("target")
 	if target != null:
 		var enemy := _unit(str(target))

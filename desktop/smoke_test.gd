@@ -29,6 +29,13 @@ func _capture(name_text: String) -> void:
 	if not picture.is_empty():
 		_expect(picture.save_png(folder.path_join(name_text)) == OK, "无法保存截图。")
 
+func _click_cell(board: Control, cell: Vector2i) -> void:
+	var click := InputEventMouseButton.new()
+	click.button_index = MOUSE_BUTTON_LEFT
+	click.pressed = true
+	click.position = board._cell(cell).get_center()
+	board._gui_input(click)
+
 func _run() -> void:
 	var app := preload("res://main.tscn").instantiate()
 	root.add_child(app)
@@ -46,6 +53,7 @@ func _run() -> void:
 	# Exercise the actual UI bindings for card inspection and reforge.
 	app.hand.get_child(0).pressed.emit()
 	_expect(app.inspected.type == "card", "点击手牌未打开卡牌详情。")
+	await _capture("桌面卡牌详情.png")
 	app._choose_hand("reforge", 0)
 	await _idle(app)
 	_expect(int(app.state.version) == 1 and int(app.state.mana) == 1, "重铸没有通过对局服务执行。")
@@ -68,9 +76,9 @@ func _run() -> void:
 	var actor: Dictionary = app._unit(action.firstTarget)
 	var destination := Vector2i(int(action.col), int(action.row))
 	app.tactic_button.pressed.emit()
-	app.board.cell_clicked.emit(Vector2i(int(actor.col), int(actor.row)), false)
+	_click_cell(app.board, Vector2i(int(actor.col), int(actor.row)))
 	_expect(destination in app.board.markers, "第二步没有高亮合法空格。")
-	app.board.cell_clicked.emit(destination, false)
+	_click_cell(app.board, destination)
 	await _idle(app)
 	var moved: Dictionary = app._unit(action.firstTarget)
 	_expect(not moved.is_empty() and int(moved.row) == destination.y and int(moved.col) == destination.x, "调位没有移动选中的友军。")
