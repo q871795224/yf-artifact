@@ -6,6 +6,7 @@ from growth_cards import CATALOG, ITEMS, PANELS, RANGED_CREEP, SIGNATURES, defau
 from growth_match import GrowthMatch, GrowthUnit
 from growth_playable import GrowthSession
 from browser_bridge import BrowserBridge
+from playable_match import InvalidAction, StaleAction
 
 
 def unit(uid,team,cid,pos,level=1):
@@ -46,9 +47,42 @@ class GrowthTests(unittest.TestCase):
             self.assertEqual(len([u for u in g.field(0) if not u.hero]),r)
             self.assertEqual(g.mana,[r]*2)
         self.assertEqual([len(h) for h in g.hand],[7,7])
-        self.assertEqual([len(h) for h in g.item_hand],[2,2])
+        self.assertEqual([len(h) for h in g.item_hand],[1,1])
         g.round=11;g.start_round()
         self.assertEqual(g.mana,[10,10])
+
+    def test_round_end_market_charges_once_and_keeps_offer_visible(self):
+        s=GrowthSession(2)
+        s.phase='round_end'
+        s.game.gold[0]=30
+        before=s.snapshot()['shop']
+        left,middle,right=before['offers']
+        self.assertEqual([o['source'] for o in before['offers']],['神秘商店','物品牌堆','消耗品'])
+        self.assertNotEqual(left['id'],middle['id'])
+        self.assertEqual(ITEMS[right['id']]['sub_type'],'Consumable')
+        deck=len(s.game.item_deck[0])
+        after=s.apply(0,middle['action_id'])['state']
+        self.assertEqual((after['phase'],after['gold'],after['shop']['selected']),
+                         ('round_end',30-middle['price'],1))
+        self.assertEqual(s.game.item_hand[0][-1],(middle['id'],True))
+        self.assertEqual(len(s.game.item_deck[0]),deck-1)
+        self.assertEqual([o['id'] for o in after['shop']['offers']],[o['id'] for o in before['offers']])
+        self.assertTrue(all(o['action_id'] is None for o in after['shop']['offers']))
+        with self.assertRaises(StaleAction):
+            s.apply(0,middle['action_id'])
+        with self.assertRaises(InvalidAction):
+            s.apply(1,middle['action_id'])
+        self.assertEqual(s.apply(1,'next_round')['state']['round'],2)
+        self.assertFalse(s.game.shop_bought[0])
+
+    def test_empty_constructed_shop_column_keeps_other_supplies(self):
+        g=GrowthMatch(2)
+        g.item_deck[0]=[]
+        g.gold[0]=40
+        self.assertEqual(set(g.shop_affordable(0)),{0,2})
+        g.shop_buy(0,2)
+        self.assertEqual(g.stats[0]['shop_purchases'],1)
+        self.assertTrue(g.item_hand[0][-1][1])
 
     def test_both_sides_share_the_three_wave_cycle(self):
         g=GrowthMatch()

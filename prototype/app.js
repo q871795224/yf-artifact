@@ -401,7 +401,7 @@ function render(previous) {
   });
   const footer = $("#pass-button");
   footer.disabled = busy;
-  footer.innerHTML = `${busy ? "请稍候" : view.phase === "round_end" ? "下一回合" : view.phase === "finished" ? "查看结果" : "让过"}${icon("arrow")}`;
+  footer.innerHTML = `${busy ? "请稍候" : view.phase === "round_end" ? "采购" : view.phase === "finished" ? "查看结果" : "让过"}${icon("arrow")}`;
   footer.classList.toggle("next-round", view.phase === "round_end");
   footer.title = `第 ${view.round} 回合 · ${$("#turn-text").textContent}`;
   footer.classList.toggle(
@@ -641,7 +641,7 @@ function showLog(enemyOnly = false) {
 }
 function showHelp() {
   openDetail(
-    `<h2 id="detail-title" class="detail-heading">单路战场</h2><div class="help-copy"><p><b>行动：</b>打牌、移动英雄、使用技能、穿戴或使用装备，每次占一个行动，随后由对手回应。普通攻击自动进行。打不到主动指定或受控锁定的目标时，未移动的单位在交战前尝试追击。重铸消耗一次行动、0法力，先抽牌再将原牌归库。</p><p><b>预测：</b>箭头表示普攻目标；灰色头像和红叉表示预计阵亡，→ 后的数字表示交战后的生命。预测按当前局面双方直接交战计算，对手行动后会更新。</p><p><b>交战：</b>双方连续让过后，先处理仇恨追击，再由所有单位与建筑同时结算攻击。恢复在阵亡清理前结算。交战后可查看损伤，点击“下一回合”继续。</p><p><b>移动：</b>点己方英雄显示可移动格；棋子上的按钮用于技能和装备，长按查看详情。点空格或取消退出选择，不占行动。英雄每回合移动一次，平时八邻一格；从泉水出生／返场后的首次移动最多两格，不能穿过单位。小兵自动向前推进。</p><p><b>仇恨与箭头：</b>绿色为我方，红色为敌方；远程虚线指向具体目标。自动仇恨保留仍在射程内的旧目标；目标出射程后选择四向射程内最近敌人，同距离按固定顺序；没有单位可打时才攻击建筑。英雄不自动保护转火，这条只作用于小兵和建筑。</p><p><b>全局技能：</b>每方每轮一次，2 法力，消耗一次行动。绿色调位可移到八邻空格，或与八邻友军交换。红色指引攻击可选场上敌军，让目标周围八格的可行动友军集火。</p><p><b>出牌：</b>普通牌需要对应颜色英雄在场；眩晕仍提供颜色。起手5张，后续每轮抽1张；首轮1法力，每轮刷新并加1，上限10。所有专属卡都要求对应英雄在场并达到解锁等级；阵亡保留等级，返场后可继续使用。</p><p><b>成长：</b>英雄在场且存活到回合末获得1经验，3/6经验分别升至2/3级，下轮生效。死亡保留等级、经验与永久强化，升级增加的生命直接补到当前生命。</p><p><b>金币：</b>无工资，敌方小兵死亡 +1，英雄死亡 +5。物品花金币；开局发一张，此后每三回合再发一张。</p><p><b>装备：</b>武器、护甲、饰品各一件，同类替换。主动效果消耗一次行动、0法力，有冷却。沉默不禁装备，妖术禁装备主动、保留被动。BKB驱散全部负面状态，并在本轮免疫魔法伤害和新增负面状态。</p><p><b>胜负：</b>先摧毁 40 血防御塔，再摧毁同位置的 80 血基地。基地下一回合激活。塔攻击 4，基地攻击 8；进入敌方泉水会受到 10 点范围伤害。</p><p>当前固定阵容与候选牌池，双方交替获得每回合先手。右上角可查看记录和导出本局。</p></div>`,
+    `<h2 id="detail-title" class="detail-heading">单路战场</h2><div class="help-copy"><p><b>行动：</b>打牌、移动英雄、使用技能、穿戴或使用装备，每次占一个行动，随后由对手回应。普通攻击自动进行。打不到主动指定或受控锁定的目标时，未移动的单位在交战前尝试追击。重铸消耗一次行动、0法力，先抽牌再将原牌归库。</p><p><b>预测：</b>箭头表示普攻目标；灰色头像和红叉表示预计阵亡，→ 后的数字表示交战后的生命。预测按当前局面双方直接交战计算，对手行动后会更新。</p><p><b>交战：</b>双方连续让过后，先处理仇恨追击，再由所有单位与建筑同时结算攻击。恢复在阵亡清理前结算。交战后可查看损伤，再打开采购。</p><p><b>移动：</b>点己方英雄显示可移动格；棋子上的按钮用于技能和装备，长按查看详情。点空格或取消退出选择，不占行动。英雄每回合移动一次，平时八邻一格；从泉水出生／返场后的首次移动最多两格，不能穿过单位。小兵自动向前推进。</p><p><b>仇恨与箭头：</b>绿色为我方，红色为敌方；远程虚线指向具体目标。自动仇恨保留仍在射程内的旧目标；目标出射程后选择四向射程内最近敌人，同距离按固定顺序；没有单位可打时才攻击建筑。英雄不自动保护转火，这条只作用于小兵和建筑。</p><p><b>全局技能：</b>每方每轮一次，2 法力，消耗一次行动。绿色调位可移到八邻空格，或与八邻友军交换。红色指引攻击可选场上敌军，让目标周围八格的可行动友军集火。</p><p><b>出牌：</b>普通牌需要对应颜色英雄在场；眩晕仍提供颜色。起手5张，后续每轮抽1张；首轮1法力，每轮刷新并加1，上限10。所有专属卡都要求对应英雄在场并达到解锁等级；阵亡保留等级，返场后可继续使用。</p><p><b>成长：</b>英雄在场且存活到回合末获得1经验，3/6经验分别升至2/3级，下轮生效。死亡保留等级、经验与永久强化，升级增加的生命直接补到当前生命。</p><p><b>金币：</b>无工资，敌方小兵死亡 +1，英雄死亡 +5。开局发一张物品；交战后可从三个货源选购一件，或跳过。购入手牌的物品已经支付。</p><p><b>装备：</b>武器、护甲、饰品各一件，同类替换。主动效果消耗一次行动、0法力，有冷却。沉默不禁装备，妖术禁装备主动、保留被动。BKB驱散全部负面状态，并在本轮免疫魔法伤害和新增负面状态。</p><p><b>胜负：</b>先摧毁 40 血防御塔，再摧毁同位置的 80 血基地。基地下一回合激活。塔攻击 4，基地攻击 8；进入敌方泉水会受到 10 点范围伤害。</p><p>当前固定阵容与候选牌池，双方交替获得每回合先手。右上角可查看记录和导出本局。</p></div>`,
   );
 }
 function showResult() {
@@ -658,6 +658,34 @@ function showResult() {
   openDetail(
     `<div class="result-mark">${icon("tower")}</div><h2 id="detail-title" class="result-title">${title}</h2><p class="result-subtitle">${view.endReason === "conceded" ? "你结束了这场对局" : draw ? "双方基地同时被摧毁" : won ? "敌方基地已被摧毁" : "我方基地已被摧毁"}</p><div class="result-stats"><span><b>${view.round}</b>回合</span><span><b>${stats.hero_kills || 0}</b>英雄击杀</span><span><b>${stats.gold_spent || 0}</b>花费金币</span></div><button class="detail-action" id="result-new">再来一局</button><button class="quiet-button" id="result-export">导出本局记录</button>`,
   );
+}
+function showShop() {
+  const shop = view.shop;
+  if (!shop) {
+    perform("next_round");
+    return;
+  }
+  const offers = shop.offers.map(({id, source, price, action_id}, index) => `
+    <div class="shop-offer">
+      <div class="shop-art">${id === null ? "" : `<img src="${image(id)}" alt="">`}</div>
+      <div><b>${esc(source)}</b><p>${id === null ? "牌堆已空" : esc(cardName(id)) + ` · ${price} 金`}</p>
+        ${id === null ? "" : `<small>${esc(CARDS[id]?.card_text.schinese || "")}</small>`}</div>
+      ${id === null ? "" : `<button data-shop-offer="${action_id ?? ""}" ${action_id ? "" : "disabled"}>${shop.selected === index ? "已购入" : "购买"}</button>`}
+    </div>`).join("");
+  openDetail(`<h2 id="detail-title" class="detail-heading">战后采购 · ${view.gold} 金</h2>
+    <div class="shop-list">${offers}</div>
+    <button class="detail-action" id="finish-shop">${shop.bought ? "结束采购" : "跳过采购"}</button>`);
+  $("#detail-body").querySelectorAll("[data-shop-offer]:not([disabled])").forEach(button => {
+    button.addEventListener("click", async () => {
+      closeDetail();
+      await perform(button.dataset.shopOffer);
+      if (view.phase === "round_end") showShop();
+    });
+  });
+  $("#finish-shop").addEventListener("click", () => {
+    closeDetail();
+    perform("next_round");
+  });
 }
 function downloadPlaytest(data) {
   const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
@@ -728,7 +756,7 @@ async function applyPacket(packet, animate = false, command = null) {
   busy = false;
   render(previous);
   if (view.phase === "finished") showResult();
-  else if (view.phase === "round_end") toast("交战结束 · 点击下一回合继续");
+  else if (view.phase === "round_end") toast(view.shop?.bought ? "物品已入手牌 · 结束采购可继续" : "交战结束 · 可以采购");
   else if (animate && !packet.frames.length) toast(view.label);
 }
 async function perform(id) {
@@ -976,7 +1004,8 @@ $("#detail-body").addEventListener("click", (e) => {
 $("#pass-button").addEventListener("click", () => {
   if (!view || busy) return;
   if (view.phase === "finished") showResult();
-  else perform(view.phase === "round_end" ? "next_round" : "pass");
+  else if (view.phase === "round_end") showShop();
+  else perform("pass");
 });
 $("#global-skill").addEventListener("click", () => {
   const { kind, name, cost } = view.globalSkill;

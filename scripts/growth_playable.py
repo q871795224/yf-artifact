@@ -2,8 +2,8 @@
 from copy import deepcopy
 from growth_cards import RELEASE_VERSION, PANELS, ITEMS
 from simulate_match import CARDS
-from growth_match import GLOBAL_SKILLS, GLOBAL_SKILL_COST, GrowthMatch
-from playable_match import PlaySession, action_view
+from growth_match import GLOBAL_SKILLS, GLOBAL_SKILL_COST, SHOP_SOURCES, GrowthMatch
+from playable_match import PlaySession, action_view, StaleAction
 
 
 class GrowthSession(PlaySession):
@@ -55,6 +55,29 @@ class GrowthSession(PlaySession):
             return []
         return [(action_view(self.game,a,self.version),a) for a in self.game.legal_actions(0)]
 
+    def _shop_actions(self):
+        return {action_view(self.game,(0,'shop',str(slot),str(cid)),self.version)['id']:slot
+                for slot,cid in self.game.shop_affordable(0).items()}
+
+    def apply(self,version,action_id):
+        if type(version) is not int or version!=self.version:
+            raise StaleAction('战场已更新，请按当前状态重新操作。')
+        if self.phase=='round_end':
+            choices=self._shop_actions()
+            if action_id in choices:
+                self.game.shop_buy(0,choices[action_id])
+                self._drain_events()
+                self.last_label='已购入物品 · 可以结束采购'
+                self.commands.append({'version':version,'action_id':action_id})
+                self.version+=1
+                return self.packet()
+            if action_id=='next_round' and len(self.game.item_hand[1])<2:
+                options=self.game.shop_affordable(1)
+                if options:
+                    self.game.shop_buy(1,max(options,key=lambda slot:(ITEMS[options[slot]]['gold_cost'],slot==1)))
+                    self._drain_events()
+        return super().apply(version,action_id)
+
     def _unit_view(self,u):
         v=super()._unit_view(u)
         for e in v['equipment']:
@@ -76,8 +99,8 @@ class GrowthSession(PlaySession):
     def _frame(self,*args,**kwargs):
         v=super()._frame(*args,**kwargs)
         v.update(release=RELEASE_VERSION,maxMana=self.game.max_mana)
-        for view,fort in zip(v['forts'],self.game.forts):
-            view['reach']=self.game.fort_reach(fort)
+        for team,(view,fort) in enumerate(zip(v['forts'],self.game.forts)):
+            view.update(reach=self.game.fort_reach(fort),mana=self.game.mana[team],maxMana=self.game.max_mana)
         return v
 
     def snapshot(self):
@@ -85,6 +108,14 @@ class GrowthSession(PlaySession):
         kind,name=GLOBAL_SKILLS[0]
         v['globalSkill']={'kind':kind,'name':name,'cost':GLOBAL_SKILL_COST,'used':self.game.global_skill_used[0]}
         v['cardCosts']={cid:self.game.card_cost(cid,0) for cid in self.game.hand[0]}
+        v['opponent']['deck']=len(self.game.deck[1])
+        if self.phase=='round_end':
+            actions={slot:key for key,slot in self._shop_actions().items()}
+            purchase=self.game.shop_bought[0]
+            v['shop']={'bought':purchase is not None,'selected':purchase['slot'] if purchase else None,'offers':[
+                {'source':label,'id':cid,'price':ITEMS[cid]['gold_cost'] if cid is not None else None,
+                 'action_id':actions.get(slot)}
+                for slot,(label,cid) in enumerate(zip(SHOP_SOURCES,self.game.shop_items(0)))]}
         return v
 
     def export(self):

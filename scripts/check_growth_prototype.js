@@ -51,6 +51,10 @@ async (page) => {
   for (let n=0;n<90;n++) {
     if (await page.evaluate(()=>view.round>=4 || view.phase==='finished')) break;
     await page.locator('#pass-button').click();
+    if (await page.locator('#finish-shop').isVisible()) {
+      check(await page.locator('.shop-offer').count() === 3,'Three market sources are visible');
+      await page.locator('#finish-shop').click();
+    }
     await page.waitForFunction(()=>!busy);
   }
   check(await page.evaluate(()=>view.round>=4),'Round transitions reach the growth phase');

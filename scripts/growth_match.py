@@ -9,6 +9,7 @@ from growth_cards import PANELS, ITEMS, ROSTERS, SIGNATURES, RANGED_CREEP, valid
 
 GLOBAL_SKILLS = (('rally_swap', '调位'), ('direct_attack', '指引攻击'))
 GLOBAL_SKILL_COST = 2
+SHOP_SOURCES = ('神秘商店', '物品牌堆', '消耗品')
 
 
 @dataclass
@@ -77,6 +78,7 @@ class GrowthMatch(Match):
         self.duels=[]
         self.force_combat=False
         self.global_skill_used=[False,False]
+        self.shop_bought=[None,None]
         self.gear_ids=[i for i,c in ITEMS.items() if c['sub_type']!='Consumable']
         columns=self.rng('growth-opening').sample([0,1,3,4],2)
         for team,roster in enumerate(self.rosters):
@@ -97,6 +99,7 @@ class GrowthMatch(Match):
         self.force_combat=False
         self.duels=[]
         self.global_skill_used=[False,False]
+        self.shop_bought=[None,None]
         for u in self.units:
             u.buffs.clear()
             u.debuffs={k:v for k,v in u.debuffs.items() if k in ('attack_down','unprepared')}
@@ -122,10 +125,35 @@ class GrowthMatch(Match):
                     creep=RANGED_CREEP if self.round%3==0 else 1006
                     self.create_unit(team,creep,self.rng(f'creep-spawn:{team}').choice(cells),trigger=False)
                 self.draw(team,1)
-            if self.round%3==0:
-                self.draw_item(team)
         self.mana=[self.max_mana]*2
         self.refresh_targets()
+
+    def shop_items(self,team):
+        if self.shop_bought[team]:
+            return self.shop_bought[team]['offers']
+        built=self.item_deck[team][-1] if self.item_deck[team] else None
+        gear=[cid for cid in self.gear_ids if cid!=built]
+        supplies=[cid for cid,item in ITEMS.items() if item['sub_type']=='Consumable' and cid!=built]
+        return (self.rng(f'shop-gear:{team}').choice(gear),built,
+                self.rng(f'shop-supply:{team}').choice(supplies))
+
+    def shop_affordable(self,team):
+        if self.shop_bought[team]:
+            return {}
+        return {slot:cid for slot,cid in enumerate(self.shop_items(team))
+                if cid is not None and ITEMS[cid]['gold_cost']<=self.gold[team]}
+
+    def shop_buy(self,team,slot):
+        cid=self.shop_affordable(team)[slot]
+        price=ITEMS[cid]['gold_cost']
+        self.gold[team]-=price
+        self.stats[team]['shop_spent']+=price
+        self.stats[team]['shop_purchases']+=1
+        self.shop_bought[team]={'slot':slot,'offers':self.shop_items(team)}
+        if slot==1:
+            self.item_deck[team].pop()
+        self.item_hand[team].append((cid,True))
+        self.record(f'{"AB"[team]}从{SHOP_SOURCES[slot]}购入{ITEMS[cid]["card_name"]["schinese"]}，花费{price}金币')
 
     @property
     def max_mana(self):

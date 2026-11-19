@@ -1169,6 +1169,23 @@ dialog::backdrop {
   font-size: 17px;
 }
 .scene-option[hidden] { display: none; }
+.shop-list { display: grid; gap: 8px; margin: 12px 0; }
+.shop-offer {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr) auto;
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid #6f654e;
+  border-radius: 5px;
+  background: #302b23;
+}
+.shop-offer img { width: 44px; height: 44px; object-fit: cover; border-radius: 4px; }
+.shop-offer b { color: #d5ba8a; font-size: 12px; }
+.shop-offer p { margin: 2px 0; }
+.shop-offer small { color: #c3b99f; line-height: 1.35; }
+.shop-offer button { color: #efd8a6; border: 1px solid #8b7448; padding: 5px; border-radius: 4px; background: #473820; }
+.shop-offer button:disabled { opacity: .5; }
 .scene-option small {
   display: block;
   margin-top: 7px;
