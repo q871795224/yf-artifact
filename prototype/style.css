@@ -322,7 +322,7 @@ img {
 .cell.creep .unit-art {
   filter: saturate(0.42) brightness(0.78);
 }
-.cell.creep.dire-melee .unit-art {
+.cell.creep.custom-unit-art .unit-art {
   filter: saturate(0.9) brightness(0.95);
   object-position: 50% 36%;
 }
@@ -931,7 +931,7 @@ img {
 }
 .resource-bar {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto auto auto;
+  grid-template-columns: minmax(0, 1fr) repeat(4, auto);
   align-items: center;
   gap: 8px;
   padding: 5px 8px;
@@ -939,6 +939,21 @@ img {
   background: linear-gradient(130deg, #4d50422b, transparent 65%), #1b2123;
   box-shadow: 0 -2px 0 #101719;
   z-index: 5;
+}
+.command-button {
+  min-height: 38px;
+  padding: 0 7px;
+  white-space: nowrap;
+  color: #cce4cd;
+  border: 1px solid #6a8d72;
+  border-radius: 3px;
+  background: #28382e;
+}
+.command-button[aria-pressed="true"] {
+  outline: 1px solid #b0d9ab;
+}
+.command-button:disabled {
+  opacity: .5;
 }
 .resource {
   display: flex;
@@ -1715,7 +1730,7 @@ dialog::backdrop {
 .forecast-death .structure-art { filter: grayscale(1); }
 .toast { display: flex; align-items: center; gap: 9px; }
 .toast img { width: 42px; height: 42px; border-radius: 3px; }
-.forecast-death .unit-art, .cell.creep.dire-melee.forecast-death .unit-art { filter: grayscale(1) brightness(.62); }
+.forecast-death .unit-art, .cell.creep.custom-unit-art.forecast-death .unit-art { filter: grayscale(1) brightness(.62); }
 .forecast-cross { position: absolute; inset: 0 0 18px; display: grid; place-items: center; color: #ff7676; opacity: .55; font: 700 40px/1 sans-serif; text-shadow: 0 1px 4px #000; pointer-events: none; }
 .forecast-hp { position: absolute; bottom: 19px; right: 1px; color: #ffb5ad; font: 10px/14px var(--body); background: #211415e8; padding: 0 2px; pointer-events: none; }
 .forecast-detail { color: #f4b5ae; }

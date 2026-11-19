@@ -276,6 +276,10 @@ class Game:
         self.spells = [{"damage", "heal"} if self.probes else set() for _ in (0, 1)]
         self.first_spell = [False, False]
 
+    def stops_marching(self,unit):
+        return any(distance(unit.pos,foe.pos)==1 and (unit.pos[0]==foe.pos[0] or unit.pos[1]==foe.pos[1])
+                   for foe in self.field(1-unit.team))
+
     def auto_move(self):
         fresh = {u.uid for u in self.field() if not u.hero and u.first_move}
         if self.round == 1:
@@ -289,7 +293,7 @@ class Game:
                 forward = -1 if team == 0 else 1
                 creeps = sorted((u for u in self.field(team) if not u.hero and (wave == 0 or u.uid in fresh)), key=lambda u: (u.pos[0] if team == 0 else -u.pos[0], u.pos[1]))
                 for unit in creeps:
-                    if any(distance(unit.pos, foe.pos) == 1 and (unit.pos[0] == foe.pos[0] or unit.pos[1] == foe.pos[1]) for foe in self.field(1-team)):
+                    if self.stops_marching(unit):
                         continue
                     choices = [(unit.pos[0]+forward, unit.pos[1])]
                     sides = [-1, 1]

@@ -133,6 +133,10 @@ def action_view(game, action, version, team=0):
         view['row'], view['col'] = map(int, target.split(','))
     if '|' in target:
         view['firstTarget'], view['secondTarget'] = target.split('|')
+    elif kind == 'rally_swap':
+        view['firstTarget'], view['secondTarget'] = actor, target
+        if ',' in target:
+            view['row'], view['col'] = map(int, target.split(','))
     if kind == 'stun':
         view['dr'], view['dc'] = map(int, target.split(','))
     return view
@@ -254,7 +258,8 @@ class PlaySession:
         changed = []
         for u in after:
             old = next((v for v in before if v['key'] == u['key']), None)
-            if old is None or any(old[k] != u[k] for k in ('hp', 'armor', 'stunned', 'equipment', 'team', 'row', 'col')):
+            if old is None or any(old[k] != u[k] for k in ('hp', 'armor', 'stunned', 'equipment', 'team', 'row', 'col')) or (
+                    entry['kind'] == 'direct_attack' and old['target'] != u['target']):
                 changed.append({'row': u['row'], 'col': u['col']})
         changed.extend({'row': u['row'], 'col': u['col']} for u in before
                        if not any(v['key'] == u['key'] for v in after))

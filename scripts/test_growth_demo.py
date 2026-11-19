@@ -2,7 +2,7 @@
 from copy import deepcopy
 import unittest
 
-from growth_cards import CATALOG, ITEMS, PANELS, SIGNATURES, default_deck, validate_deck, full_deck
+from growth_cards import CATALOG, ITEMS, PANELS, RANGED_CREEP, SIGNATURES, default_deck, validate_deck, full_deck
 from growth_match import GrowthMatch, GrowthUnit
 from growth_playable import GrowthSession
 from browser_bridge import BrowserBridge
@@ -44,9 +44,126 @@ class GrowthTests(unittest.TestCase):
             g.round=r;g.start_round()
             self.assertEqual(len([u for u in g.field(0) if u.hero]),r)
             self.assertEqual(len([u for u in g.field(0) if not u.hero]),r)
-            self.assertEqual(g.mana,[r+2]*2)
+            self.assertEqual(g.mana,[r]*2)
         self.assertEqual([len(h) for h in g.hand],[7,7])
         self.assertEqual([len(h) for h in g.item_hand],[2,2])
+        g.round=11;g.start_round()
+        self.assertEqual(g.mana,[10,10])
+
+    def test_both_sides_share_the_three_wave_cycle(self):
+        g=GrowthMatch()
+        for r,cid in enumerate((1006,1006,RANGED_CREEP)*2,1):
+            g.round=r
+            g.start_round()
+            for team in (0,1):
+                creep=[u for u in g.field(team) if not u.hero][-1]
+                self.assertEqual(creep.card_id,cid)
+            g.units=[u for u in g.units if u.hero]
+
+    def test_ranged_creep_stops_and_shoots_through_friendly_frontline(self):
+        g=empty()
+        archer=unit('archer',0,RANGED_CREEP,(5,1))
+        front=unit('front',0,1006,(4,1))
+        enemy=unit('enemy',1,1006,(3,1))
+        g.units=[archer,front,enemy]
+        g.auto_move()
+        self.assertEqual(archer.pos,(5,1))
+        self.assertIs(g.target(archer),enemy)
+        g.combat()
+        self.assertEqual(enemy.hp,1)
+
+    def test_auto_reinforcements_use_multiple_legal_columns_deterministically(self):
+        def columns(seed):
+            g=GrowthMatch(seed)
+            picks=[]
+            for r in range(2,10):
+                g.units=[]
+                g.round=r
+                g.start_round()
+                self.assertEqual(len(g.field()),2)
+                picks.append(tuple(u.pos[1] for u in g.field()))
+            return picks
+        picks=columns(13)
+        self.assertEqual(picks,columns(13))
+        for team in (0,1):
+            self.assertGreater(len({p[team] for p in picks}),1)
+        g=GrowthMatch(13)
+        self.assertIn((7,2),g.fountain_positions(0))
+        self.assertIn((0,2),g.fountain_positions(1))
+
+    def test_global_swap_allows_two_heroes_and_updates_targets(self):
+        g=empty()
+        a=unit('a',0,10014,(4,1))
+        b=unit('b',0,10017,(3,2))
+        foe=unit('foe',1,1006,(2,2))
+        g.units=[a,b,foe]
+        g.refresh_targets()
+        self.assertIs(g.target(foe),b)
+        do(g,'rally_swap','a','b')
+        self.assertEqual((a.pos,b.pos,g.mana[0]),((3,2),(4,1),8))
+        self.assertTrue(a.moved and b.moved)
+        self.assertIs(g.target(foe),a)
+        self.assertFalse(any(x[1]=='rally_swap' for x in g.legal_actions(0)))
+        g.round+=1
+        g.start_round()
+        self.assertTrue(any(x[1]=='rally_swap' for x in g.legal_actions(0)))
+
+    def test_global_swap_to_empty_space_can_move_a_creep_but_not_into_tower_or_enemy(self):
+        g=empty()
+        creep=unit('creep',0,1006,(5,2))
+        enemy=unit('enemy',1,1006,(4,1))
+        g.units=[creep,enemy]
+        choices=[x[3] for x in g.legal_actions(0) if x[1:3]==('rally_swap','creep')]
+        self.assertNotIn('6,2',choices)
+        self.assertNotIn('4,1',choices)
+        self.assertNotIn('3,2',choices)
+        do(g,'rally_swap','creep','4,2')
+        self.assertEqual((creep.pos,g.mana[0],creep.moved),((4,2),8,True))
+        self.assertIs(g.target(creep),enemy)
+        self.assertFalse(any(x[1]=='rally_swap' for x in g.legal_actions(0)))
+
+    def test_direct_attack_orders_the_eight_neighbors_without_overwriting_taunt(self):
+        g=empty()
+        victim=unit('victim',0,10014,(4,2))
+        distant=unit('distant',0,1006,(6,4))
+        close=unit('close',1,10020,(3,2))
+        diagonal=unit('diagonal',1,1006,(3,1))
+        forced=unit('forced',1,1006,(4,3))
+        outside=unit('outside',1,1006,(2,2))
+        g.units=[victim,distant,close,diagonal,forced,outside]
+        forced.forced_uid=distant.uid
+        self.assertFalse(any(x[1]=='direct_attack' and x[3]=='distant' for x in g.legal_actions(1)))
+        do(g,'direct_attack','','victim',1)
+        self.assertEqual(g.mana[1],8)
+        self.assertTrue(close.ordered and diagonal.ordered)
+        self.assertFalse(forced.ordered or outside.ordered)
+        self.assertIs(g.aggro_target(forced),distant)
+        self.assertIs(g.aggro_target(diagonal),victim)
+        self.assertIsNone(g.target(diagonal))
+        g.chase()
+        self.assertIs(g.target(diagonal),victim)
+        self.assertFalse(any(x[1]=='direct_attack' for x in g.legal_actions(1)))
+
+    def test_combat_frame_reports_damage_from_tower_and_full_block(self):
+        session=GrowthSession(13)
+        g=session.game=empty()
+        g.tower_attack=4
+        self.assertEqual([f.position for f in g.forts],[(6,2),(1,2)])
+        enemy=unit('enemy',1,10020,(5,1))
+        decoy=unit('z',1,1006,(6,1))
+        ally=unit('ally',0,10014,(2,2))
+        too_far=unit('far',0,1006,(3,2))
+        enemy.permanent_armor=4
+        g.units=[enemy,decoy,ally,too_far]
+        g.refresh_targets()
+        frames=[]
+        session._combat(frames)
+        self.assertEqual(frames[0]['fortShots'],[
+            {'team':0,'target':'enemy','damage':0,'immune':False},
+            {'team':1,'target':'ally','damage':4,'immune':False},
+        ])
+        g.units=[too_far]
+        self.assertIsNone(g.fort_target(g.forts[1]))
 
     def test_experience_is_earned_alive_and_applied_next_start(self):
         g=empty();h=unit('hero',0,10020,(5,0));g.units=[h]
@@ -139,6 +256,20 @@ class GrowthTests(unittest.TestCase):
         self.assertTrue(h.moved)
         self.assertEqual(abs(h.pos[0]-3)+abs(h.pos[1]-2),1)
 
+    def test_swap_retargets_automatic_aggro_without_a_chase(self):
+        g=empty()
+        scout=unit('scout',0,61009,(4,1))
+        creep=unit('creep',0,1006,(3,1))
+        enemy=unit('enemy',1,1006,(2,1))
+        g.units=[scout,creep,enemy]
+        g.refresh_targets()
+        self.assertIs(g.target(creep),enemy)
+        do(g,'swap','scout','creep')
+        self.assertIsNone(g.aggro_target(creep))
+        self.assertIs(g.target(enemy),scout)
+        g.chase()
+        self.assertEqual(creep.pos,(4,1))
+
     def test_ordinary_aggro_retains_unreachable_target_and_chases_before_combat(self):
         g=empty();a=unit('a',0,10044,(4,2));v=unit('v',1,10020,(3,3));g.units=[a,v]
         a.target_uid='v';a.ordered=True
@@ -214,9 +345,9 @@ class GrowthTests(unittest.TestCase):
     def test_blink_is_manhattan_three_and_does_not_land_on_buildings(self):
         g=empty();h=unit('h',0,10017,(4,2));g.units=[h];g.equip(h,65010)
         targets={a[3] for a in g.legal_actions(0) if a[1]=='blink'}
-        self.assertIn('1,2',targets);self.assertNotIn('2,4',targets);self.assertNotIn('7,2',targets)
-        do(g,'blink','h','1,2')
-        self.assertEqual((h.pos,h.gear_cds[65010]),((1,2),2))
+        self.assertIn('7,2',targets);self.assertNotIn('2,4',targets);self.assertNotIn('6,2',targets)
+        do(g,'blink','h','7,2')
+        self.assertEqual((h.pos,h.gear_cds[65010]),((7,2),2))
 
     def test_midas_is_five_gold_total_and_cannot_target_heroes(self):
         g=empty();h=unit('h',0,10017,(4,2));c=unit('c',1,1006,(4,3));v=unit('v',1,10020,(3,2));g.units=[h,c,v]
@@ -305,9 +436,9 @@ class GrowthTests(unittest.TestCase):
         do(g,'item',0,'h');self.assertFalse(h.stunned)
 
     def test_siege_only_adds_damage_when_attacking_structure(self):
-        g=empty();a=unit('a',0,10017,(1,2));a.permanent_siege=3;g.units=[a]
+        g=empty();a=unit('a',0,10017,(2,2));a.permanent_siege=3;g.units=[a]
         g.combat();self.assertEqual(g.forts[1].hp,36)
-        g=empty();a=unit('a',0,10017,(1,2));a.permanent_siege=3;v=unit('v',1,1006,(1,3));g.units=[a,v]
+        g=empty();a=unit('a',0,10017,(2,2));a.permanent_siege=3;v=unit('v',1,1006,(2,3));g.units=[a,v]
         g.combat();self.assertEqual(g.forts[1].hp,40)
 
     def test_forecast_does_not_mutate_growth_status_rng_or_equipment(self):

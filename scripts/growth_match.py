@@ -5,7 +5,10 @@ from dataclasses import dataclass, field
 
 from simulate_heroes import EIGHT, CARDINAL, distance, valid
 from simulate_match import Match, BattleUnit, Fort, CARDS
-from growth_cards import PANELS, ITEMS, ROSTERS, SIGNATURES, validate_deck, full_deck
+from growth_cards import PANELS, ITEMS, ROSTERS, SIGNATURES, RANGED_CREEP, validate_deck, full_deck
+
+GLOBAL_SKILLS = (('rally_swap', '调位'), ('direct_attack', '指引攻击'))
+GLOBAL_SKILL_COST = 2
 
 
 @dataclass
@@ -48,7 +51,9 @@ class GrowthUnit(BattleUnit):
 
     @property
     def reach(self):
-        return (2 if self.hero==10017 else 1)+(1 if self.hero==10017 and 65018 in self.equipment.values() else 0)
+        if self.hero==10017:
+            return 2+(65018 in self.equipment.values())
+        return 2 if self.card_id==RANGED_CREEP else 1
 
 
 class GrowthMatch(Match):
@@ -57,10 +62,10 @@ class GrowthMatch(Match):
         self.columns,self.targeting,self.protection,self.tower_attack=5,'aggro',True,4
         self.rosters=ROSTERS
         self.deck_config=[validate_deck(deck_config),validate_deck(None,1)]
-        self.forts=[Fort(t,position=(7 if t==0 else 0,2)) for t in (0,1)]
+        self.forts=[Fort(t,position=(6 if t==0 else 1,2)) for t in (0,1)]
         self.finished,self.winner,self.end_reason=False,None,None
         self.stats=[Counter(),Counter()]
-        self.gold,self.mana=[0,0],[3,3]
+        self.gold,self.mana=[0,0],[0,0]
         self.events,self.frames,self.units=[],[],[]
         self.hand,self.deck=[[],[]],[[],[]]
         self.item_hand,self.item_deck=[[],[]],[[],[]]
@@ -71,6 +76,7 @@ class GrowthMatch(Match):
         self.created=0
         self.duels=[]
         self.force_combat=False
+        self.global_skill_used=[False,False]
         self.gear_ids=[i for i,c in ITEMS.items() if c['sub_type']!='Consumable']
         columns=self.rng('growth-opening').sample([0,1,3,4],2)
         for team,roster in enumerate(self.rosters):
@@ -90,6 +96,7 @@ class GrowthMatch(Match):
     def start_round(self):
         self.force_combat=False
         self.duels=[]
+        self.global_skill_used=[False,False]
         for u in self.units:
             u.buffs.clear()
             u.debuffs={k:v for k,v in u.debuffs.items() if k in ('attack_down','unprepared')}
@@ -112,16 +119,29 @@ class GrowthMatch(Match):
             if self.round>1:
                 cells=self.fountain_positions(team)
                 if cells and len(self.field(team))<24:
-                    self.create_unit(team,1006,cells[0],trigger=False)
+                    creep=RANGED_CREEP if self.round%3==0 else 1006
+                    self.create_unit(team,creep,self.rng(f'creep-spawn:{team}').choice(cells),trigger=False)
                 self.draw(team,1)
             if self.round%3==0:
                 self.draw_item(team)
-        self.mana=[min(10,self.round+2)]*2
+        self.mana=[self.max_mana]*2
         self.refresh_targets()
+
+    @property
+    def max_mana(self):
+        return min(10,self.round)
+
+    def fort_reach(self,fort):
+        return 1 if fort.stage=='tower' else super().fort_reach(fort)
 
     def fountain_positions(self,team):
         occupied={u.pos for u in self.field()}|self.blocked_positions()
         return [(7 if team==0 else 0,c) for c in range(self.columns) if (7 if team==0 else 0,c) not in occupied]
+
+    def stops_marching(self,u):
+        if u.card_id==RANGED_CREEP and (self.target(u) or self.building_target(u)):
+            return True
+        return super().stops_marching(u)
 
     def spawn_hero(self,u):
         cells=self.fountain_positions(u.team)
@@ -200,20 +220,23 @@ class GrowthMatch(Match):
         return result
 
     def aggro_target(self,u,pos=None,override=None):
-        """Intent survives being out of attack range; querying never mutates it."""
+        """Explicit orders survive being out of range; automatic targets follow position."""
         foes=self.field(1-u.team)
         p=u.pos if pos is None else pos
         def position(v):
             return override[1] if override and v is override[0] else v.pos
         if u.forced_uid:
             return next((v for v in foes if v.uid==u.forced_uid),None)
+        if u.ordered:
+            old=next((v for v in foes if v.uid==u.target_uid),None)
+            if old:
+                return old
         if not u.hero and not u.ordered:
             protected=[v for v in self.protecting_heroes(u.team,observer=p,override=override)
                        if (p[0]==position(v)[0] or p[1]==position(v)[1]) and distance(p,position(v))<=u.reach]
             if protected:
                 return next((v for v in protected if v.uid==u.target_uid),min(protected,key=lambda v:(distance(p,position(v)),v.uid)))
-        old=next((v for v in foes if v.uid==u.target_uid),None)
-        return old if old else super().target(u,pos,override)
+        return super().target(u,pos,override)
 
     def target(self,u,pos=None,override=None):
         if not self.can_act(u):
@@ -226,9 +249,11 @@ class GrowthMatch(Match):
         return v if (p[0]==q[0] or p[1]==q[1]) and 0<distance(p,q)<=u.reach else None
 
     def refresh_targets(self):
-        # Commit aggro intentions rather than only currently legal attack targets.
+        # Commit explicit intents and legal automatic targets.
         for u in self.field():
             v=self.aggro_target(u)
+            if u.ordered and (not v or v.uid!=u.target_uid):
+                u.ordered=False
             u.target_uid=v.uid if v else None
         for f in self.forts:
             v=self.fort_target(f)
@@ -383,6 +408,22 @@ class GrowthMatch(Match):
             return h.level+1
         return CARDS[cid]['mana_cost']
 
+    def move_unit(self,u,pos):
+        u.pos=pos
+        u.moved=True
+        u.first_move=False
+
+    def swap_positions(self,a,b):
+        old=a.pos
+        self.move_unit(a,b.pos)
+        self.move_unit(b,old)
+
+    def commandable(self,team):
+        return [u for u in self.field(team) if self.can_act(u) and not u.forced_uid]
+
+    def direct_attack_units(self,team,target):
+        return [u for u in self.commandable(team) if distance(u.pos,target.pos)==1]
+
     def card_targets(self,cid,team):
         c=CARDS[cid]
         friends,foes=self.field(team),self.field(1-team)
@@ -494,6 +535,23 @@ class GrowthMatch(Match):
                 targets=[u.uid for u in friends]
             for t in targets:
                 add('item',i,t)
+        if self.mana[team]>=GLOBAL_SKILL_COST and not self.global_skill_used[team]:
+            kind,_=GLOBAL_SKILLS[team]
+            if kind=='rally_swap':
+                units={u.pos:u for u in self.commandable(team)}
+                occupied={u.pos for u in self.field()}|self.blocked_positions()
+                for u in units.values():
+                    for dr,dc in EIGHT:
+                        pos=(u.pos[0]+dr,u.pos[1]+dc)
+                        v=units.get(pos)
+                        if v:
+                            add(kind,u.uid,v.uid)
+                        elif valid(pos,self.columns) and pos not in occupied:
+                            add(kind,u.uid,f'{pos[0]},{pos[1]}')
+            else:
+                for v in foes:
+                    if self.direct_attack_units(team,v):
+                        add(kind,'',v.uid)
         return out
 
     def take_action(self,action,team):
@@ -511,10 +569,24 @@ class GrowthMatch(Match):
             self.deck[team].insert(self.rng(f'reforge:{team}:{self.stats[team]["actions"]}').randrange(len(self.deck[team])+1),old)
             self.record(f'{"AB"[team]}重铸一张普通牌，先抽牌再归库')
         elif kind=='move':
-            actor.pos=tuple(map(int,target_id.split(',')))
-            actor.moved=True
-            actor.first_move=False
+            self.move_unit(actor,tuple(map(int,target_id.split(','))))
             self.record(f'{actor.uid}移动至{actor.pos}')
+        elif kind in ('rally_swap','direct_attack'):
+            self.mana[team]-=GLOBAL_SKILL_COST
+            self.global_skill_used[team]=True
+            if kind=='rally_swap':
+                if target:
+                    self.swap_positions(actor,target)
+                    self.record(f'{"AB"[team]}全局技能 调位：{actor.uid} ↔ {target.uid}')
+                else:
+                    self.move_unit(actor,tuple(map(int,target_id.split(','))))
+                    self.record(f'{"AB"[team]}全局技能 调位：{actor.uid} → {actor.pos}')
+            else:
+                units=self.direct_attack_units(team,target)
+                for u in units:
+                    u.target_uid=target.uid
+                    u.ordered=True
+                self.record(f'{"AB"[team]}全局技能 指引攻击：{",".join(u.uid for u in units)} → {target.uid}')
         elif kind in ('chen','purify','swap','redirect'):
             actor.cd=4 if kind=='chen' else 2 if kind in ('purify','redirect') else 1
             if kind=='chen':
@@ -525,9 +597,7 @@ class GrowthMatch(Match):
             elif kind=='purify':
                 self.heal(target,actor.level)
             elif kind=='swap':
-                actor.pos,target.pos=target.pos,actor.pos
-                actor.moved=target.moved=True
-                actor.first_move=target.first_move=False
+                self.swap_positions(actor,target)
             else:
                 for u in self.field(team):
                     if u is not actor and distance(actor.pos,u.pos)==1 and not u.forced_uid:
@@ -602,9 +672,7 @@ class GrowthMatch(Match):
             elif effect=='pick':
                 self.negative(b,'taunt',a.uid)
             else:
-                a.pos,b.pos=b.pos,a.pos
-                a.moved=b.moved=True
-                a.first_move=b.first_move=False
+                self.swap_positions(a,b)
         elif effect=='whip':
             self.hurt(target,1)
             target.temporary_attack+=2
@@ -703,6 +771,7 @@ class GrowthMatch(Match):
         damage=Counter()
         building=Counter()
         sources=defaultdict(set)
+        fort_shots=[]
         weaken=[]
         regen={u.uid:self.regeneration(u) for u in units}
         def hit(attacker,v,amount):
@@ -736,6 +805,8 @@ class GrowthMatch(Match):
             v=self.fort_target(fort)
             if v:
                 actual=hit(None,v,self.fort_power(fort))
+                fort_shots.append({'team':fort.team,'target':v.uid,'damage':actual,
+                                   'immune':bool(v.buffs.get('immune'))})
                 self.record(f'{fort.uid}建筑攻击 {v.uid}：{actual}')
             for e in units:
                 if e.team!=fort.team and e.pos[0]==(7 if fort.team==0 else 0):
@@ -759,6 +830,7 @@ class GrowthMatch(Match):
             u.damage_sources.clear()
         self.refresh_targets()
         self.check()
+        return fort_shots
 
     def actions(self,team):
         """AI uses the same complete legal catalog as the player, scored for useful actions."""
@@ -780,8 +852,23 @@ class GrowthMatch(Match):
                 value=min(actor.level,target.max_hp-target.hp)*1.5
             elif kind=='redirect':
                 value=sum(self.attack(u)*.2 for u in self.field(team) if u is not actor and distance(u.pos,actor.pos)==1 and not u.forced_uid and u.target_uid!=target_id)
-            elif kind=='swap':
-                value=self.position_score(actor,target.pos)+self.position_score(target,actor.pos)-self.position_score(actor,actor.pos)-self.position_score(target,target.pos)
+            elif kind in ('swap','rally_swap'):
+                pos=target.pos if target else tuple(map(int,target_id.split(',')))
+                value=self.position_score(actor,pos)-self.position_score(actor,actor.pos)
+                if target:
+                    value+=self.position_score(target,actor.pos)-self.position_score(target,target.pos)
+                if kind=='rally_swap':
+                    value-=1
+            elif kind=='direct_attack':
+                for u in self.direct_attack_units(team,target):
+                    old=self.target(u)
+                    if (u.pos[0]==target.pos[0] or u.pos[1]==target.pos[1]) and old is not target:
+                        damage=self.primary_damage(u,target)
+                        current=self.primary_damage(u,old)*(1.5 if old.hero else 1) if old else 0
+                        value+=(damage*(1.5 if target.hero else 1)-current)*.5
+                        if damage:
+                            value+=.35
+                value-=.5
             elif kind=='card':
                 cid=self.hand[team][int(actor_id)]
                 c=CARDS[cid]

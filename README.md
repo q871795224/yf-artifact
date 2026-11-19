@@ -10,7 +10,7 @@
 
 双击 `运行原型.command`，或运行 `python3 scripts/serve_prototype.py --open`，打开[手机战场试玩版](prototype/README.md)。电脑访问 `http://127.0.0.1:8765/prototype/`，手机连接同一 Wi-Fi 后替换为电脑局域网 IP。我方狼人／陈／全能，对手斧王／军团／斯温。右上角提供构筑、玩法、行动记录和导出；普通牌30张（9专属＋21自选）、物品牌10张，保存构筑后下一局生效。
 
-调试视觉效果可双击 `打开特效工作台.command`，打开 [本地特效工作台](http://127.0.0.1:8741/effects-lab/)。当前电脑已配置后台服务，登录 macOS 后自动启动；支持十二类效果、逐帧预览和参数预设，使用方式见 [工作台说明](effects-lab/README.md)，不进入 Pages 发布。
+调试视觉效果可双击 `打开特效工作台.command`，打开 [本地特效工作台](http://127.0.0.1:8741/effects-lab/)。当前电脑已配置后台服务，登录 macOS 后自动启动；支持十三类效果、逐帧预览和参数预设，使用方式见 [工作台说明](effects-lab/README.md)，不进入 Pages 发布。
 
 构建静态站点：`python3 scripts/build_pages.py`；发布到 Pages：`python3 scripts/deploy_pages.py`。静态文件在独立 `gh-pages` 分支，源代码和资料在 `main`；`output/`、本地缓存及生成的 `dist/` 不进入源码分支。
 

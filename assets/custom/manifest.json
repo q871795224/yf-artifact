@@ -21,6 +21,50 @@
       },
       "derived_sha256": "3fb82387377b30f3b3907a5decd86d06a3f4a878e86f58d0ba69f69d9e54abdf",
       "usage": "Enemy basic melee creep (card 1006); appearance only, 2 attack / 4 health."
+    },
+    {
+      "id": "dire-ranged",
+      "name": {
+        "schinese": "夜魇远程小兵",
+        "english": "Dire Ranged Creep"
+      },
+      "card_type": "Creep",
+      "source": {
+        "path": "assets/custom/originals/dire-ranged.png",
+        "provided_filename": "imagen_original_1795014831_86228e3b.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "61485e8afeb164f94b199f9a91f302fad1fd540ae5764d550d3dd3f0ad5e9525"
+      },
+      "usage": "夜魇远程小兵；熔岩黑岩阵营，持发光符文法杖的树人。",
+      "integration": "linked",
+      "images": {
+        "mini_image": "prototype/assets/units/dire-ranged.webp",
+        "large_image": "prototype/assets/units/dire-ranged.webp"
+      },
+      "derived_sha256": "78f6ce035ea978d45d3fd9dd266f54b1390c992d1d2e71b91a4ecdc9c87dee6d"
+    },
+    {
+      "id": "radiant-ranged",
+      "name": {
+        "schinese": "天辉远程小兵",
+        "english": "Radiant Ranged Creep"
+      },
+      "card_type": "Creep",
+      "source": {
+        "path": "assets/custom/originals/radiant-ranged.png",
+        "provided_filename": "imagen_original_1795013292_6ac84ebd.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "b7786c67c95447174fac685ec552035481135c5800079b9abd07ef0e413c4162"
+      },
+      "usage": "天辉远程小兵；青绿森林，持发光木杖的秋叶树精。",
+      "integration": "linked",
+      "images": {
+        "mini_image": "prototype/assets/units/radiant-ranged.webp",
+        "large_image": "prototype/assets/units/radiant-ranged.webp"
+      },
+      "derived_sha256": "d586d68a82999ad401348d4374494c550d45ff4374814cb63394edd476fb1945"
     }
   ]
 }

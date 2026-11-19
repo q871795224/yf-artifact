@@ -332,6 +332,22 @@ button,input,select{
   border-color:#c3ac77;
   background:#141d20
 }
+.clash-piece{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  border:1px solid #c3ac77;
+  border-radius:3px;
+  background:#141d20;
+}
+.clash-health{
+  display:grid;
+}
+.clash-health [data-hp],.clash-health [data-hit-hp]{
+  grid-area:1 / 1;
+  color:#e4a28e;
+}
+#sound-option[hidden]{display:none}
 .preview-cell img{
   display:block;
   position:absolute;
@@ -633,13 +649,14 @@ input[type=color]{
 }
 @media(max-width:600px){
   body{
+    grid-template-columns:minmax(0,1fr);
     grid-template-rows:56px auto
   }
   .app-header{
     padding:0 12px;
     gap:8px
   }
-  .app-header p{
+  .app-header p,.local-label{
     display:none
   }
   .app-header h1{

@@ -10,8 +10,8 @@ async function checkEffectsLab(page) {
   await page.reload();
   check(page.url().startsWith("file:") || new URL(page.url()).hostname === "127.0.0.1", "The workbench runs locally from a file or background service");
   const catalog = await page.evaluate(() => Object.entries(ArtifactFX.catalog).map(([kind, entry]) => ({ kind, name: entry.name })));
-  check(catalog.length === 12, "All twelve effect types are available");
-  check(await page.locator("#effect-count").textContent() === "12", "The library displays the current effect count");
+  check(catalog.length === 13, "All thirteen effect types are available");
+  check(await page.locator("#effect-count").textContent() === "13", "The library displays the current effect count");
   const scrub = (fraction) => page.locator("#timeline").evaluate((input, f) => { input.value = Number(input.max) * f; input.dispatchEvent(new Event("input", { bubbles: true })); }, fraction);
   const frame = () => page.evaluate(() => document.getAnimations().map((a) => {
     const style = getComputedStyle(a.effect.target);
@@ -22,10 +22,22 @@ async function checkEffectsLab(page) {
     check(await page.locator("#effect-name").innerText() === entry.name, `${entry.kind} can be selected`);
     check(await page.locator(`#effect-layer [data-effect="${entry.kind}"]`).count() === 1, `${entry.kind} builds its preview`);
     check(await page.evaluate(() => document.getAnimations().every((a) => a.playState === "paused")), `${entry.kind} starts as a paused keyframe`);
-    const middle = await frame();
+    await scrub(0.5); const middle = await frame();
     await scrub(1); await scrub(0); await scrub(0.5);
     check(JSON.stringify(await frame()) === JSON.stringify(middle), `${entry.kind} can scrub backward and reproduce the same keyframe`);
   }
+  await page.locator('[data-kind="clash"]').click();
+  const visibleHealth = () => page.evaluate(() => Array.from(document.querySelectorAll(".clash-health span"))
+    .filter((el) => getComputedStyle(el).opacity === "1").map((el) => el.textContent));
+  await scrub(0.36);
+  check(JSON.stringify(await visibleHealth()) === JSON.stringify(["♥ 4", "♥ 7"]), "Clash preserves both health values before impact");
+  await scrub(0.45);
+  check(JSON.stringify(await visibleHealth()) === JSON.stringify(["♥ 0", "♥ 3"]), "Clash changes both health values on impact");
+  await scrub(1);
+  const clashOpacity = (id) => page.locator(`#${id}-unit .clash-piece`).evaluate((el) => getComputedStyle(el).opacity);
+  check(await clashOpacity("source") === "1" && await clashOpacity("target") === "0", "The defeated clash unit fades while the survivor returns");
+  await scrub(0);
+  check(await clashOpacity("target") === "1", "Rewinding restores the defeated clash unit");
   for (const kind of ["lightning", "stun", "shield", "aura", "death", "tower"]) {
     await page.locator(`[data-kind="${kind}"]`).click();
     await scrub(0.25); const early = await frame();

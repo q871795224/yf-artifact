@@ -4,6 +4,7 @@ from copy import deepcopy
 from simulate_match import CARDS
 
 RELEASE_VERSION = '0.4'
+RANGED_CREEP = 64004
 ROSTERS = ((10014, 10017, 10044), (10020, 10069, 10054))
 PANELS = {
     10020: ((3, 0, 5), (4, 1, 8), (6, 2, 10)),
@@ -79,6 +80,8 @@ for hero,name,cost,level,effect,text in [
 for level in (1,2,3):
     card(64000+level,f'{level}级灵狼','Creep',0,'召出后不随狼人升级。','green',10112,
          attack=level,armor=0,hit_points=3,effect='')
+card(RANGED_CREEP,'远程小兵','Creep',0,'正交射程两格，可隔着友军射击。',
+     attack=1,armor=0,hit_points=3)
 
 ITEMS = {}
 def item(cid,name,price,slot,text,art,atk=0,armor=0,hp=0,active=None,cd=0):

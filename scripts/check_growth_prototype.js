@@ -20,7 +20,9 @@ async (page) => {
   check(await page.locator('.cell').count() === 40,'5×8 board');
   check(await page.locator('.cell.hero').count() === 2,'One opening hero per side');
   check(await page.locator('.level-badge').count() === 2,'Hero level badges');
-  check((await page.locator('#mana-value').innerText()).replace(/\s/g,'') === '3/3','Three opening mana');
+  check((await page.locator('#mana-value').innerText()).replace(/\s/g,'') === '1/1','One opening mana');
+  check(await page.evaluate(() => view.forts.every(f => f.col === 2 && f.row === (f.team === 0 ? 6 : 1) && f.reach === 1)), 'Towers move forward one rank and cover eight neighbors');
+  check(await page.locator('#global-skill').isDisabled(),'Two-mana tactics are unavailable in round one');
   check(await page.locator('.hand-card').count() === 5,'Five starting ordinary cards');
   await page.getByRole('button',{name:'对局菜单',exact:true}).click();
   await page.locator('[data-menu="deck"]').click();

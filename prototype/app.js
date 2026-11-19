@@ -14,10 +14,14 @@ const esc = (value) =>
 const cardName = (id) => CARDS[id]?.card_name.schinese || "未知卡牌";
 const image = (id, kind = "mini_image") => `${ASSETS}${kind}/${CARDS[id]?.art_id || id}.webp`;
 const isDireMelee = (u) => u.id === 1006 && u.team === "enemy";
-const unitImage = (u, kind = "mini_image") => isDireMelee(u)
-  ? "assets/units/dire-melee.webp"
-  : image(u.id, kind);
-const unitName = (u) => isDireMelee(u) ? "夜魇近战小兵" : cardName(u.id);
+const unitArt = (u) => u.id === 64004 ? (u.team === "enemy" ? "dire-ranged" : "radiant-ranged")
+  : isDireMelee(u) ? "dire-melee" : null;
+const unitImage = (u, kind = "mini_image") => {
+  const art = unitArt(u);
+  return art ? `assets/units/${art}.webp` : image(u.id, kind);
+};
+const unitName = (u) => u.id === 64004 ? (u.team === "enemy" ? "夜魇远程小兵" : "天辉远程小兵")
+  : isDireMelee(u) ? "夜魇近战小兵" : cardName(u.id);
 const identity = (id) => CARDS[id]?.colors?.[0] || "neutral";
 const pip = (id) =>
   `<i class="color-pip identity-${identity(id)}" aria-hidden="true"></i>`;
@@ -163,8 +167,9 @@ function targetAt(row, col) {
         dc === a.dc * Math.max(Math.abs(dr), Math.abs(dc))
       );
     }
+    if (a.firstTarget) return unit && a.firstTarget === unit.key;
     if (a.row !== undefined) return a.row === row && a.col === col;
-    return unit && (a.firstTarget || a.target) === unit.key;
+    return unit && a.target === unit.key;
   });
 }
 const unitPoint = (u) => ({ x: (u.col + 0.5) * 100, y: (u.row + 0.5) * 100 });
@@ -221,7 +226,7 @@ function renderBoard(previous) {
           u.stunned ? "stunned" : "",
           focus?.target === u.key ? "current-target" : "",
           prediction?.dies ? "forecast-death" : "",
-          isDireMelee(u) ? "dire-melee" : "",
+          unitArt(u) ? "custom-unit-art" : "",
         );
         content = `<img class="unit-art" src="${unitImage(u)}" alt=""><span class="unit-vignette"></span>${u.hero ? pip(u.id) : ""}${u.level ? `<span class="level-badge">Lv${u.level}</span>` : ""}${u.debuffs?.silence || u.debuffs?.hex || u.forcedTarget || u.buffs?.bkb ? `<span class="status-badge">${u.buffs?.bkb ? "BKB" : u.debuffs.hex ? "妖" : u.forcedTarget ? "嘲" : "默"}</span>` : ""}<span class="unit-stats">${stats(u)}</span>${u.armor ? `<span class="armor-badge">${icon("shield")}${u.armor}</span>` : ""}${u.stunned ? '<span class="stun-badge">晕</span>' : ""}${prediction && prediction.hp !== u.hp ? `<span class="forecast-hp" title="按当前局面交战后的生命">→ ${prediction.hp} ♥</span>` : ""}${prediction?.dies ? '<span class="forecast-cross" aria-label="预计交战阵亡">×</span>' : ""}`;
       }
@@ -251,6 +256,7 @@ function renderBoard(previous) {
 }
 function renderUnit() {
   const panel = $("#unit-panel"), prompt = $("#target-prompt");
+  $("#global-skill").setAttribute("aria-pressed", String(!!mode && mode.kind === view.globalSkill?.kind));
   const u = selectedUnit();
   panel.hidden = !u || u.row === null || busy || (mode && mode.kind !== "move");
   prompt.hidden = !mode;
@@ -361,6 +367,14 @@ function render(previous) {
           ? "正在交战"
           : "对局结束";
   $("#mana-value").innerHTML = `${view.mana} <span>/ ${view.maxMana}</span>`;
+  const commandButton = $("#global-skill"), command = view.globalSkill;
+  commandButton.hidden = !command;
+  if (command) {
+    commandButton.textContent = command.name;
+    commandButton.disabled = busy || view.phase !== "action" || !actions().some(a => a.kind === command.kind);
+    commandButton.title = command.used ? "本轮已使用" : `${command.name} · 每轮一次，消耗 ${command.cost} 法力和一次行动`;
+    commandButton.setAttribute("aria-label", commandButton.title);
+  }
   $("#gold-value").textContent = view.gold;
   $("#enemy-mana-value").innerHTML = `${view.opponent.mana}<span>/${view.maxMana}</span>`;
   $("#enemy-gold-value").textContent = view.opponent.gold;
@@ -435,7 +449,7 @@ function showUnit(u) {
   const prediction = view.phase === "action" ? view.forecast?.units[u.key] : null;
   const gear = u.equipment.map((e) => cardName(e.id)).join("、");
   openDetail(
-    `<h2 id="detail-title" class="detail-heading">${u.hero ? pip(u.id) : ""}${unitName(u)}</h2><p class="detail-subtitle">${u.team === "ally" ? "我方" : "敌方"}${u.hero ? "英雄" : "单位"} · ${u.row === null ? `等待第 ${u.due} 回合登场` : `第 ${u.row + 1} 排，第 ${u.col + 1} 列`}</p><div class="detail-layout"><img class="detail-art" src="${unitImage(u, "large_image")}" alt="${unitName(u)}${isDireMelee(u) ? "立绘" : "原版卡面"}"><div class="detail-copy"><div class="detail-stats">${stats(u)}${u.armor ? `<span class="stat">${icon("shield")}${u.armor}</span>` : ""}</div><p>${esc(HEROES[u.id]?.text || CARDS[u.id]?.card_text.schinese || "近战一格，自动移动与交战。")}</p><p class="detail-muted">射程 ${u.range} 格${u.siege ? ` · 攻城 ${u.siege}` : ""}${u.cleave ? ` · 顺势 ${u.cleave}` : ""}${u.regeneration ? ` · 恢复 ${u.regeneration}` : ""}</p>${u.row !== null ? `<p class="detail-muted">${esc(targetDescription(u))}</p>` : ""}${prediction ? `<p class="forecast-detail">当前局面直接交战：${prediction.dies ? "预计阵亡" : `预计剩余 ${prediction.hp} 生命`}。对手行动后会更新。</p>` : ""}${gear ? `<p class="detail-muted">装备：${esc(gear)}</p>` : ""}${u.level ? `<p class="growth-progress">Lv${u.level} · 经验 ${u.xp}${u.level < 3 ? ` / ${u.level === 1 ? 3 : 6}` : ""}${u.pendingLevel > u.level ? ` · 下轮升至Lv${u.pendingLevel}` : ""}</p><p class="detail-muted">成长（攻/甲/血）：${u.panels.map((p,i)=>`Lv${i+1} ${p.join("/")}`).join(" → ")}</p>` : ""}${statusText(u) ? `<p class="detail-muted">负面状态：${esc(statusText(u))}</p>` : ""}${u.buffs?.bkb ? '<p class="detail-muted">BKB：本轮魔法、负面状态免疫</p>' : ""}${u.cooldown ? `<p class="detail-muted">技能冷却 ${u.cooldown} 回合</p>` : ""}</div></div><p class="detail-note">${isDireMelee(u) ? "夜魇近战小兵使用自制立绘。" : "沿用原版立绘。"}当前能力和攻血以战场数值为准。</p>`,
+    `<h2 id="detail-title" class="detail-heading">${u.hero ? pip(u.id) : ""}${unitName(u)}</h2><p class="detail-subtitle">${u.team === "ally" ? "我方" : "敌方"}${u.hero ? "英雄" : "单位"} · ${u.row === null ? `等待第 ${u.due} 回合登场` : `第 ${u.row + 1} 排，第 ${u.col + 1} 列`}</p><div class="detail-layout"><img class="detail-art" src="${unitImage(u, "large_image")}" alt="${unitName(u)}${unitArt(u) ? "立绘" : "原版卡面"}"><div class="detail-copy"><div class="detail-stats">${stats(u)}${u.armor ? `<span class="stat">${icon("shield")}${u.armor}</span>` : ""}</div><p>${esc(HEROES[u.id]?.text || CARDS[u.id]?.card_text.schinese || "近战一格，自动移动与交战。")}</p><p class="detail-muted">射程 ${u.range} 格${u.siege ? ` · 攻城 ${u.siege}` : ""}${u.cleave ? ` · 顺势 ${u.cleave}` : ""}${u.regeneration ? ` · 恢复 ${u.regeneration}` : ""}</p>${u.row !== null ? `<p class="detail-muted">${esc(targetDescription(u))}</p>` : ""}${prediction ? `<p class="forecast-detail">当前局面直接交战：${prediction.dies ? "预计阵亡" : `预计剩余 ${prediction.hp} 生命`}。对手行动后会更新。</p>` : ""}${gear ? `<p class="detail-muted">装备：${esc(gear)}</p>` : ""}${u.level ? `<p class="growth-progress">Lv${u.level} · 经验 ${u.xp}${u.level < 3 ? ` / ${u.level === 1 ? 3 : 6}` : ""}${u.pendingLevel > u.level ? ` · 下轮升至Lv${u.pendingLevel}` : ""}</p><p class="detail-muted">成长（攻/甲/血）：${u.panels.map((p,i)=>`Lv${i+1} ${p.join("/")}`).join(" → ")}</p>` : ""}${statusText(u) ? `<p class="detail-muted">负面状态：${esc(statusText(u))}</p>` : ""}${u.buffs?.bkb ? '<p class="detail-muted">BKB：本轮魔法、负面状态免疫</p>' : ""}${u.cooldown ? `<p class="detail-muted">技能冷却 ${u.cooldown} 回合</p>` : ""}</div></div><p class="detail-note">${unitArt(u) ? "使用自制立绘。" : "沿用原版立绘。"}当前能力和攻血以战场数值为准。</p>`,
   );
 }
 function showEquipment(u) {
@@ -569,8 +583,9 @@ function cellClick(row, col) {
     const choices = targetAt(row, col);
     if (choices.length) {
       if (choices[0].firstTarget) {
+        if (mode.kind === "rally_swap") selected = u.key;
         mode.choices = choices.map(a => ({...a, target:a.secondTarget, firstTarget:null}));
-        mode.hint = "已选定施法单位 · 再选择高亮目标";
+        mode.hint = mode.kind === "rally_swap" ? "调位 · 选择相邻友军或空格" : "已选定施法单位 · 再选择高亮目标";
         renderBoard(); renderUnit();
         return;
       }
@@ -626,7 +641,7 @@ function showLog(enemyOnly = false) {
 }
 function showHelp() {
   openDetail(
-    `<h2 id="detail-title" class="detail-heading">单路战场</h2><div class="help-copy"><p><b>行动：</b>打牌、移动英雄、使用技能、穿戴或使用装备，每次占一个行动，随后由对手回应。普通攻击自动进行。打不到仇恨目标时，未移动的单位在交战前尝试追击。重铸消耗一次行动、0法力，先抽牌再将原牌归库。</p><p><b>预测：</b>箭头表示普攻目标；灰色头像和红叉表示预计阵亡，→ 后的数字表示交战后的生命。预测按当前局面双方直接交战计算，对手行动后会更新。</p><p><b>交战：</b>双方连续让过后，先处理仇恨追击，再由所有单位与建筑同时结算攻击。恢复在阵亡清理前结算。交战后可查看损伤，点击“下一回合”继续。</p><p><b>移动：</b>点己方英雄显示可移动格；棋子上的按钮用于技能和装备，长按查看详情。点空格或取消退出选择，不占行动。英雄每回合移动一次，平时八邻一格；从泉水出生／返场后的首次移动最多两格，不能穿过单位。小兵自动向前推进。</p><p><b>仇恨与箭头：</b>绿色为我方，红色为敌方；远程虚线指向具体目标。英雄优先保持仍在射程内的旧目标，目标仍在场时保留仇恨，打不到则在交战前尝试追击；没有目标时选择四向射程内最近敌人，同距离按固定顺序；没有单位可打时才攻击建筑。英雄不自动保护转火，这条只作用于小兵和建筑。</p><p><b>出牌：</b>普通牌需要对应颜色英雄在场；眩晕仍提供颜色。起手5张，后续每轮抽1张；首轮3法力，每轮刷新并加1，上限10。所有专属卡都要求对应英雄在场并达到解锁等级；阵亡保留等级，返场后可继续使用。</p><p><b>成长：</b>英雄在场且存活到回合末获得1经验，3/6经验分别升至2/3级，下轮生效。死亡保留等级、经验与永久强化，升级增加的生命直接补到当前生命。</p><p><b>金币：</b>无工资，敌方小兵死亡 +1，英雄死亡 +5。物品花金币；开局发一张，此后每三回合再发一张。</p><p><b>装备：</b>武器、护甲、饰品各一件，同类替换。主动效果消耗一次行动、0法力，有冷却。沉默不禁装备，妖术禁装备主动、保留被动。BKB驱散全部负面状态，并在本轮免疫魔法伤害和新增负面状态。</p><p><b>胜负：</b>先摧毁 40 血防御塔，再摧毁同位置的 80 血基地。基地下一回合激活。塔攻击 4，基地攻击 8；进入敌方泉水会受到 10 点范围伤害。</p><p>当前固定阵容与候选牌池，双方交替获得每回合先手。右上角可查看记录和导出本局。</p></div>`,
+    `<h2 id="detail-title" class="detail-heading">单路战场</h2><div class="help-copy"><p><b>行动：</b>打牌、移动英雄、使用技能、穿戴或使用装备，每次占一个行动，随后由对手回应。普通攻击自动进行。打不到主动指定或受控锁定的目标时，未移动的单位在交战前尝试追击。重铸消耗一次行动、0法力，先抽牌再将原牌归库。</p><p><b>预测：</b>箭头表示普攻目标；灰色头像和红叉表示预计阵亡，→ 后的数字表示交战后的生命。预测按当前局面双方直接交战计算，对手行动后会更新。</p><p><b>交战：</b>双方连续让过后，先处理仇恨追击，再由所有单位与建筑同时结算攻击。恢复在阵亡清理前结算。交战后可查看损伤，点击“下一回合”继续。</p><p><b>移动：</b>点己方英雄显示可移动格；棋子上的按钮用于技能和装备，长按查看详情。点空格或取消退出选择，不占行动。英雄每回合移动一次，平时八邻一格；从泉水出生／返场后的首次移动最多两格，不能穿过单位。小兵自动向前推进。</p><p><b>仇恨与箭头：</b>绿色为我方，红色为敌方；远程虚线指向具体目标。自动仇恨保留仍在射程内的旧目标；目标出射程后选择四向射程内最近敌人，同距离按固定顺序；没有单位可打时才攻击建筑。英雄不自动保护转火，这条只作用于小兵和建筑。</p><p><b>全局技能：</b>每方每轮一次，2 法力，消耗一次行动。绿色调位可移到八邻空格，或与八邻友军交换。红色指引攻击可选场上敌军，让目标周围八格的可行动友军集火。</p><p><b>出牌：</b>普通牌需要对应颜色英雄在场；眩晕仍提供颜色。起手5张，后续每轮抽1张；首轮1法力，每轮刷新并加1，上限10。所有专属卡都要求对应英雄在场并达到解锁等级；阵亡保留等级，返场后可继续使用。</p><p><b>成长：</b>英雄在场且存活到回合末获得1经验，3/6经验分别升至2/3级，下轮生效。死亡保留等级、经验与永久强化，升级增加的生命直接补到当前生命。</p><p><b>金币：</b>无工资，敌方小兵死亡 +1，英雄死亡 +5。物品花金币；开局发一张，此后每三回合再发一张。</p><p><b>装备：</b>武器、护甲、饰品各一件，同类替换。主动效果消耗一次行动、0法力，有冷却。沉默不禁装备，妖术禁装备主动、保留被动。BKB驱散全部负面状态，并在本轮免疫魔法伤害和新增负面状态。</p><p><b>胜负：</b>先摧毁 40 血防御塔，再摧毁同位置的 80 血基地。基地下一回合激活。塔攻击 4，基地攻击 8；进入敌方泉水会受到 10 点范围伤害。</p><p>当前固定阵容与候选牌池，双方交替获得每回合先手。右上角可查看记录和导出本局。</p></div>`,
   );
 }
 function showResult() {
@@ -950,6 +965,16 @@ $("#pass-button").addEventListener("click", () => {
   if (view.phase === "finished") showResult();
   else perform(view.phase === "round_end" ? "next_round" : "pass");
 });
+$("#global-skill").addEventListener("click", () => {
+  const { kind, name, cost } = view.globalSkill;
+  if (mode?.kind === kind) {
+    cancelMode();
+    return;
+  }
+  selected = null;
+  const hint = kind === "rally_swap" ? "选择要调位的友军" : "选择要集火的敌军";
+  setMode(kind, actions().filter(a => a.kind === kind), `${name} · ${cost} 费 · ${hint}`);
+});
 $("#close-detail").addEventListener("click", closeDetail);
 $("#detail-dialog").addEventListener("close", () => {
   if (returnFocus?.isConnected) returnFocus.focus({ preventScroll: true });
@@ -992,7 +1017,7 @@ $("#enemy-info").addEventListener("click", () => {
 });
 function showFort(f) {
   const prediction = view.phase === "action" ? view.forecast?.forts.find((p) => p.team === f.team) : null;
-  openDetail(`<h2 id="detail-title" class="detail-heading">${f.team === 0 ? "我方" : "敌方"}${f.stage === "tower" ? "防御塔" : "基地"}</h2><p class="sheet-note">生命 ${f.hp}/${f.maxHp} · 攻击 ${f.attack} · 每轮攻击一个目标</p><p class="help-copy">位于泉水排中央，占一格，不可通行或部署单位。单位按四正向射程攻击建筑；建筑攻击周围两圈内的一个敌人，保留保护英雄转火。</p><p class="help-copy">${f.ready ? "破塔后原格出现基地，下一回合激活；泉水本身不能被攻击。" : "刚出现的基地将在下回合开始后激活，本回合不会攻击或受到伤害。"}</p>${prediction ? `<p class="forecast-detail">当前直接交战：${prediction.destroyed ? f.stage === "tower" ? "预计破塔" : "预计摧毁基地" : `预计剩余 ${prediction.hp} 生命`}。</p>` : ""}`);
+  openDetail(`<h2 id="detail-title" class="detail-heading">${f.team === 0 ? "我方" : "敌方"}${f.stage === "tower" ? "防御塔" : "基地"}</h2><p class="sheet-note">生命 ${f.hp}/${f.maxHp} · 攻击 ${f.attack} · 每轮攻击一个目标</p><p class="help-copy">位于第 ${f.row + 1} 排中央，占一格，不可通行或部署单位。单位按四正向射程攻击建筑。建筑攻击周围 ${f.reach ?? 2} 格内的一名敌军，含斜角。</p><p class="help-copy">${f.ready ? "破塔后原格出现基地，下一回合激活；泉水本身不能被攻击。" : "刚出现的基地将在下回合开始后激活，本回合不会攻击或受到伤害。"}</p>${prediction ? `<p class="forecast-detail">当前直接交战：${prediction.destroyed ? f.stage === "tower" ? "预计破塔" : "预计摧毁基地" : `预计剩余 ${prediction.hp} 生命`}。</p>` : ""}`);
 }
 document.querySelectorAll(".fort").forEach((el) => {
   el.tabIndex = 0;

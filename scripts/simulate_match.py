@@ -164,12 +164,15 @@ class Match(Game):
     def fort_distance(self, fort, pos):
         return distance(pos, fort.position) if fort.position else abs(pos[0]-fort.row)
 
+    def fort_reach(self, fort):
+        return 2
+
     def fort_target(self, fort, override=None):
         if fort.hp <= 0 or self.round < fort.active_from or self.fort_power(fort) == 0:
             return None
         def position(u):
             return override[1] if override and u is override[0] else u.pos
-        candidates = [u for u in self.field(1-fort.team) if self.fort_distance(fort, position(u)) <= 2]
+        candidates = [u for u in self.field(1-fort.team) if self.fort_distance(fort, position(u)) <= self.fort_reach(fort)]
         protected = [h for h in self.protecting_heroes(fort.team, override=override) if h in candidates]
         pool = protected or candidates
         return next((u for u in pool if u.uid == fort.target_uid), min(pool, key=lambda u: (self.fort_distance(fort, position(u)), u.uid)) if pool else None)

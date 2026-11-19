@@ -7,6 +7,7 @@
   const icons = {
     fissure: '<path d="m12 2-3 6 5 3-5 5 3 6M3 12h3m12 0h3"/>',
     melee: '<path d="m6 19 14-15-1 7L8 21zM4 14l7 6M3 21l4-4"/>',
+    clash: '<path d="m3 4 15 15m3-15L6 19M4 15l5 5m6-5 5 5"/>',
     projectile: '<path d="M3 17 19 5m-6-1 8-2-2 8M3 9l4-3M8 21l4-3"/>',
     impact: '<path d="m12 2 2 6 6-2-4 6 6 3-7 1-3 6-2-7-7 1 5-5-4-5 6 2z"/>',
     heal: '<path d="M12 4v16M4 12h16"/><circle cx="12" cy="12" r="10" opacity=".3"/>',
@@ -20,6 +21,8 @@
   };
   let kind = "fissure", params = FX.defaults(kind), sceneSettings = { direction: "N", distance: 2, columns: 6 };
   let saved = [], controller = null, playing = false, raf = null;
+  let audio, previousTime = 0;
+  const fixedDistance = (effect) => ({ fissure: 2, clash: 1 }[effect]);
   const notice = (text) => { $("#notice").textContent = text; };
   function validateProject(value) {
     if (!value || value.schemaVersion !== 1 || !Object.hasOwn(FX.catalog, value.kind) || !value.parameters || typeof value.parameters !== "object" || Array.isArray(value.parameters)) throw new Error("这不是受支持的特效预设");
@@ -28,7 +31,7 @@
     const columns = value.scene.columns === undefined ? 6 : value.scene.columns;
     if (![5, 6].includes(columns)) throw new Error("地图需要为五列或六列");
     if (typeof value.name !== "string" || !value.name.trim() || value.name.length > 64) throw new Error("预设名称需要为 1–64 个字符");
-    return { schemaVersion: 1, name: value.name.trim(), kind: value.kind, parameters, scene: { direction: value.scene.direction, distance: value.kind === "fissure" ? 2 : value.scene.distance, columns } };
+    return { schemaVersion: 1, name: value.name.trim(), kind: value.kind, parameters, scene: { direction: value.scene.direction, distance: fixedDistance(value.kind) ?? value.scene.distance, columns } };
   }
   const project = () => ({ schemaVersion: 1, name: $("#preset-name").value.trim() || FX.catalog[kind].name + " · 自定义", kind, parameters: { ...params }, scene: { ...sceneSettings } });
   function persist() {
@@ -53,10 +56,29 @@
     $("#play").textContent = playing ? "暂停" : "播放";
     $("#play").setAttribute("aria-label", playing ? "暂停特效" : "播放特效");
   }
+  function clashSound() {
+    if (audio?.state !== "running") return;
+    const now = audio.currentTime;
+    for (const [type, frequency, end, volume] of [["sine", 140, 52, 0.32], ["triangle", 820, 185, 0.14]]) {
+      const tone = audio.createOscillator(), envelope = audio.createGain();
+      tone.type = type;
+      tone.frequency.setValueAtTime(frequency, now);
+      tone.frequency.exponentialRampToValueAtTime(end, now + 0.1);
+      envelope.gain.setValueAtTime(0.001, now);
+      envelope.gain.exponentialRampToValueAtTime(volume, now + 0.006);
+      envelope.gain.exponentialRampToValueAtTime(0.001, now + 0.14);
+      tone.connect(envelope).connect(audio.destination);
+      tone.start(now);
+      tone.stop(now + 0.15);
+    }
+  }
   function tick() {
     if (!playing) return;
-    if (controller.time >= controller.duration - 0.1) {
-      if ($("#loop").checked) { controller.seek(0); controller.play(); }
+    const time = controller.time, hitTime = controller.duration * FX.catalog.clash.hit;
+    if (kind === "clash" && $("#sound").checked && previousTime < hitTime && time >= hitTime) clashSound();
+    previousTime = time;
+    if (time >= controller.duration - 0.1) {
+      if ($("#loop").checked) { controller.seek(0); controller.play(); previousTime = 0; }
       else { playing = false; controller.pause(); }
     }
     updatePlayback();
@@ -66,7 +88,11 @@
     playing = false; cancelAnimationFrame(raf); controller?.pause(); updatePlayback();
   }
   function play() {
-    cancelAnimationFrame(raf); playing = true; controller.play(); updatePlayback(); raf = requestAnimationFrame(tick);
+    if (kind === "clash" && $("#sound").checked && window.AudioContext) {
+      audio ??= new AudioContext();
+      if (audio.state === "suspended") audio.resume().catch(() => {});
+    }
+    cancelAnimationFrame(raf); playing = true; controller.play(); previousTime = controller.time; updatePlayback(); raf = requestAnimationFrame(tick);
   }
   function seek(ms) {
     pause(); controller.seek(ms); updatePlayback();
@@ -78,11 +104,13 @@
     $("#board-grid").setAttribute("aria-label", `${columns}列八排预览棋盘`);
     const source = { row: 4, col: 2 };
     const [dr, dc, directionName] = directions[sceneSettings.direction];
-    const distance = kind === "fissure" ? 2 : sceneSettings.distance;
+    const distance = fixedDistance(kind) ?? sceneSettings.distance;
     const target = { row: source.row + dr * distance, col: source.col + dc * distance };
     const cells = [1, 2].map((n) => ({ row: source.row + dr * n, col: source.col + dc * n }));
-    const actor = { id: { melee: 10020, projectile: 10064, heal: 10036, summon: 10017, lightning: 10065, shield: 10017, aura: 10036, death: 10020, tower: 1000 }[kind] || 10033, attack: kind === "tower" ? 4 : 2, hp: kind === "tower" ? 40 : 7 };
+    const clash = kind === "clash";
+    const actor = { id: { melee: 10020, clash: 10020, projectile: 10064, heal: 10036, summon: 10017, lightning: 10065, shield: 10017, aura: 10036, death: 10020, tower: 1000 }[kind] || 10033, attack: clash ? params.damage : kind === "tower" ? 4 : 2, hp: kind === "tower" ? 40 : 7 };
     const friendly = ["heal", "summon", "shield", "aura"].includes(kind);
+    const defender = { id: friendly ? 10014 : 10069, attack: clash ? params.damage : 6, hp: clash ? 4 : 8 };
     const actorName = { 10020: "斧王", 10064: "冰晶圣女", 10036: "魅惑魔女", 10017: "陈", 10033: "撼地者", 10065: "宙斯", 1000: "防御塔" }[actor.id];
     const areaCells = [];
     for (let r = -1; r <= 1; r++) for (let c = -1; c <= 1; c++) {
@@ -95,13 +123,22 @@
       const isTarget = row === target.row && col === target.col;
       const secondary = kind === "fissure" && row === cells[0].row && col === cells[0].col;
       const auraAlly = kind === "aura" && row === target.row && Math.abs(col - target.col) === 1;
-      const unit = isSource ? actor : isTarget ? { id: friendly ? 10014 : 10069, attack: 6, hp: 8 } : secondary || auraAlly ? { id: 1006, attack: 2, hp: 4 } : null;
-      tiles.push(`<div class="preview-cell ${row === 0 || row === 7 ? "fountain" : ""} ${row === 7 ? "home-fountain" : ""} ${row === 3 ? "front" : ""} ${unit ? "occupied" : ""}" ${isSource ? 'id="source-unit"' : isTarget ? 'id="target-unit"' : ""} title="第${row + 1}排第${col + 1}列${isSource ? "，" + actorName : isTarget ? "，预览目标" : ""}">${unit ? `<img src="../references/artifact-classic/assets/mobile/mini_image/${unit.id}.webp" alt=""><i class="team-key ${isSource || friendly ? "ally" : "enemy"}"></i><span class="cell-stats"><span>⚔ ${unit.attack}</span><span>♥ ${unit.hp}</span></span>` : ""}</div>`);
+      const unit = isSource ? actor : isTarget ? defender : secondary || auraAlly ? { id: 1006, attack: 2, hp: 4 } : null;
+      let portrait = "";
+      if (unit) {
+        const hp = clash ? `<span class="clash-health"><span data-hp>♥ ${unit.hp}</span><span data-hit-hp>♥ ${Math.max(0, unit.hp - params.damage)}</span></span>`
+          : `<span>♥ ${unit.hp}</span>`;
+        portrait = `<img src="../references/artifact-classic/assets/mobile/mini_image/${unit.id}.webp" alt=""><i class="team-key ${isSource || friendly ? "ally" : "enemy"}"></i><span class="cell-stats"><span>⚔ ${unit.attack}</span>${hp}</span>`;
+        if (clash) portrait = `<div class="clash-piece">${portrait}</div>`;
+      }
+      tiles.push(`<div class="preview-cell ${row === 0 || row === 7 ? "fountain" : ""} ${row === 7 ? "home-fountain" : ""} ${row === 3 ? "front" : ""} ${unit && !clash ? "occupied" : ""}" ${isSource ? 'id="source-unit"' : isTarget ? 'id="target-unit"' : ""} title="第${row + 1}排第${col + 1}列${isSource ? "，" + actorName : isTarget ? "，预览目标" : ""}">${portrait}</div>`);
     }
     $("#board-grid").innerHTML = tiles.join("");
     $("#scene-caption").textContent = `向${directionName}${distance === 1 ? "一" : "两"}格`;
     const point = (p) => ({ x: (p.col + 0.5) * 100, y: (p.row + 0.5) * 100 });
-    return { from: point(source), to: point(target), cells, areaCells, actorElement: $("#source-unit"), targetElement: $("#target-unit") };
+    const piece = clash ? " .clash-piece" : "";
+    return { from: point(source), to: point(target), cells, areaCells,
+      actorElement: $(`#source-unit${piece}`), targetElement: $(`#target-unit${piece}`), actorHp: actor.hp, targetHp: defender.hp };
   }
   function rebuild(progress = 0.5, resume = false) {
     cancelAnimationFrame(raf); controller?.dispose();
@@ -121,8 +158,9 @@
     }
     $("#direction").value = sceneSettings.direction;
     $("#columns").value = sceneSettings.columns;
-    $("#distance").value = kind === "fissure" ? 2 : sceneSettings.distance;
-    $("#distance").disabled = kind === "fissure";
+    $("#distance").value = fixedDistance(kind) ?? sceneSettings.distance;
+    $("#distance").disabled = fixedDistance(kind) !== undefined;
+    $("#sound-option").hidden = kind !== "clash";
     document.querySelectorAll(".effect-option").forEach((b) => { b.classList.toggle("active", b.dataset.kind === kind); b.setAttribute("aria-pressed", b.dataset.kind === kind); });
     updateJSON();
   }
@@ -130,7 +168,7 @@
     const p = validateProject(value);
     kind = p.kind; params = p.parameters; sceneSettings = p.scene;
     $("#preset-name").value = p.name;
-    updateControls(); rebuild(); persist();
+    updateControls(); rebuild(kind === "clash" ? 0 : 0.5); persist();
   }
   $("#effect-count").textContent = Object.keys(FX.catalog).length;
   for (const [key, entry] of Object.entries(FX.catalog)) {
@@ -138,9 +176,9 @@
     b.style.setProperty("--effect-color", entry.color);
     b.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true">${icons[key]}</svg><span><b>${entry.name}</b><small>${entry.category}</small></span>`;
     b.addEventListener("click", () => {
-      kind = key; params = FX.defaults(kind); sceneSettings.distance = kind === "melee" ? 1 : 2;
+      kind = key; params = FX.defaults(kind); sceneSettings.distance = fixedDistance(kind) ?? (kind === "melee" ? 1 : 2);
       $("#preset-name").value = entry.name + " · 自定义";
-      updateControls(); rebuild(); persist();
+      updateControls(); rebuild(kind === "clash" ? 0 : 0.5); persist();
     });
     $("#effect-list").append(b);
   }
@@ -210,5 +248,12 @@
       kind = current.kind; params = current.parameters; sceneSettings = current.scene; $("#preset-name").value = current.name;
     }
   } catch { notice("没有读到有效的本地记录，已使用默认参数。可通过 JSON 导入备份。"); }
-  updateSaved(); updateControls(); rebuild();
+  updateSaved();
+  if (new URLSearchParams(location.search).get("effect") === "clash") {
+    kind = "clash";
+    params = FX.defaults(kind);
+    sceneSettings = { direction: "N", distance: 1, columns: 5 };
+    $("#preset-name").value = "双单位对撞 · 自定义";
+  }
+  updateControls(); rebuild(kind === "clash" ? 0 : 0.5);
 })();

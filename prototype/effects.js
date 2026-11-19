@@ -5,6 +5,7 @@
   const catalog = {
     fissure: { name: "沟壑", category: "英雄技能", description: "逐格裂地、碎石与命中", color: "#edbd72", duration: 900 },
     melee: { name: "近战挥砍", category: "普通攻击", description: "前冲、刀光与回位", color: "#f0dfb4", duration: 620 },
+    clash: { name: "双单位对撞", category: "交战小样", description: "双方前冲，命中时扣血，随后回弹或退场", color: "#ffba75", duration: 740, damage: 4, hit: 0.38 },
     projectile: { name: "远程弹道", category: "普通攻击", description: "拖尾、飞行与碰撞", color: "#8ed9ee", duration: 800 },
     impact: { name: "受击", category: "战斗反馈", description: "冲击环、火星与伤害数字", color: "#eea17e", duration: 750 },
     heal: { name: "治疗", category: "战斗反馈", description: "上升光点与恢复数字", color: "#b3d79d", duration: 1200 },
@@ -91,14 +92,15 @@
         { opacity: 0, transform: `scale(${(healing ? 1.2 : 1.9) * p.strength})`, offset: 1 },
       ]);
     };
-    const number = (healing = false, start = 0.35) => {
-      if (!p.damage) return;
-      const text = add("text", { x: to.x, y: to.y - 18, fill: healing ? p.color : "#fff0d1", "text-anchor": "middle", "font-size": 30, "font-weight": 700, "font-family": "Georgia,serif", stroke: "#111719", "stroke-width": 3, "paint-order": "stroke" });
-      text.textContent = `${healing ? "+" : "−"}${p.damage}`;
+    const number = (healing = false, start = 0.35, at = to, entrance = 0.1) => {
+      const label = kind === "tower" && scene.outcome;
+      if (!p.damage && !label) return;
+      const text = add("text", { x: at.x, y: at.y - 18, fill: label ? "#d6e6ef" : healing ? p.color : "#fff0d1", "text-anchor": "middle", "font-size": label ? 24 : 30, "font-weight": 700, "font-family": "Georgia,serif", stroke: "#111719", "stroke-width": 3, "paint-order": "stroke" });
+      text.textContent = label || `${healing ? "+" : "−"}${p.damage}`;
       animate(text, [
         { opacity: 0, transform: "translateY(0)", offset: 0 },
         { opacity: 0, transform: "translateY(0)", offset: start },
-        { opacity: 1, transform: "translateY(-8px)", offset: start + 0.1 },
+        { opacity: 1, transform: "translateY(-8px)", offset: start + entrance },
         { opacity: 1, transform: "translateY(-32px)", offset: 0.8 },
         { opacity: 0, transform: "translateY(-48px)", offset: 1 },
       ]);
@@ -131,6 +133,35 @@
       animate(slash, [{ opacity: 0, transform: "scale(0.4) rotate(-12deg)", offset: 0 }, { opacity: 0, transform: "scale(0.4) rotate(-12deg)", offset: 0.18 }, { opacity: 1, transform: `scale(${p.strength}) rotate(0deg)`, offset: 0.43 }, { opacity: 0, transform: `scale(${p.strength * 1.1})`, offset: 0.85 }, { opacity: 0, offset: 1 }]);
       if (scene.actorElement) animate(scene.actorElement, [{ transform: "translate(0,0)", offset: 0 }, { transform: `translate(${dx / length * 10 * p.strength}px,${dy / length * 10 * p.strength}px)`, offset: 0.38 }, { transform: "translate(0,0)", offset: 0.72 }, { transform: "translate(0,0)", offset: 1 }]);
       burst(to, 0.4); number(false, 0.4); flash(scene.targetElement);
+    } else if (kind === "clash") {
+      const hit = catalog.clash.hit;
+      const middle = { x: (from.x + to.x) / 2, y: (from.y + to.y) / 2 };
+      const motion = (side, amount) => `translate(${dx * side * amount}%,${dy * side * amount}%)`;
+      for (const [side, element, hp] of [[1, scene.actorElement, scene.actorHp], [-1, scene.targetElement, scene.targetHp]]) {
+        if (!element) continue;
+        const falls = p.damage >= hp;
+        animate(element, [
+          { transform: motion(side, 0), opacity: 1, offset: 0 },
+          { transform: motion(side, -0.09), offset: 0.17, easing: "cubic-bezier(.65,0,.95,.35)" },
+          { transform: motion(side, 0.29), filter: "brightness(1)", offset: hit - 0.02 },
+          { transform: motion(side, 0.29), filter: "brightness(1.9)", offset: hit },
+          { transform: motion(side, -0.15 * p.strength), filter: "brightness(1)", opacity: 1, offset: 0.57 },
+          { transform: motion(side, falls ? -0.25 : 0), opacity: falls ? 0 : 1, offset: 0.86 },
+          { transform: motion(side, falls ? -0.25 : 0), opacity: falls ? 0 : 1, offset: 1 },
+        ]);
+        for (const [selector, before] of [["[data-hp]", 1], ["[data-hit-hp]", 0]]) {
+          const label = element.querySelector(selector);
+          if (label) animate(label, [{ opacity: before, offset: 0 }, { opacity: before, offset: hit, easing: "steps(1, jump-start)" },
+            { opacity: 1 - before, offset: 1 }]);
+        }
+      }
+      const cross = line(`M${middle.x - 21},${middle.y - 14} l42,28 M${middle.x + 21},${middle.y - 14} l-42,28`, p.width * 2, "#fff5dc");
+      animate(cross, [{ opacity: 0, offset: 0 }, { opacity: 0, offset: hit - 0.01 },
+        { opacity: 1, offset: hit }, { opacity: 0, offset: hit + 0.16 }, { opacity: 0, offset: 1 }]);
+      burst(middle, hit);
+      ring(middle, hit);
+      number(false, hit, from, 0.035);
+      number(false, hit, to, 0.035);
     } else if (kind === "projectile") {
       const trail = line(`M${from.x},${from.y} L${to.x},${to.y}`, p.width);
       trail.setAttribute("stroke-dasharray", "4 7"); fade(trail, 0.05, 0.85);
@@ -243,7 +274,7 @@
       const points = Array.from({ length: 21 }, (_, n) => { const at = arc(n / 20); return `${n ? "L" : "M"}${at.x},${at.y}`; }).join(" ");
       const trail = line(points, p.width, p.color);
       trail.setAttribute("stroke-dasharray", "3 8"); fade(trail, 0.15, 0.82);
-      const charge = glow(add("circle", { cx: from.x, cy: from.y, r: 16 * p.strength, fill: p.color }));
+      const charge = glow(add("circle", { cx: from.x, cy: from.y, r: 20 * p.strength, fill: "#fff0cb", stroke: p.color, "stroke-width": p.width }));
       charge.style.transformOrigin = `${from.x}px ${from.y}px`;
       animate(charge, [{ opacity: 0, transform: "scale(0.2)", offset: 0 }, { opacity: 0.9, transform: "scale(1)", offset: 0.18 }, { opacity: 0, transform: "scale(1.4)", offset: 0.27 }, { opacity: 0, offset: 1 }]);
       const shell = glow(add("circle", { cx: 0, cy: 0, r: 8 * p.strength, fill: "#fff0cb", stroke: p.color, "stroke-width": p.width }));
@@ -251,7 +282,7 @@
         const at = arc(n / 20); return { transform: `translate(${at.x}px,${at.y}px)`, opacity: n === 20 ? 0 : 1, offset: 0.2 + n / 20 * 0.48 };
       });
       animate(shell, [{ transform: `translate(${from.x}px,${from.y}px)`, opacity: 0, offset: 0 }, { transform: `translate(${from.x}px,${from.y}px)`, opacity: 0, offset: 0.19 }, ...flight, { opacity: 0, offset: 1 }]);
-      ring(to, 0.67); burst(to, 0.68); number(false, 0.68); flash(scene.targetElement, 0.68);
+      ring(to, 0.67); burst(to, 0.68); number(false, 0.68, to, 0.04); flash(scene.targetElement, 0.68);
     }
     return {
       duration: p.duration, root,

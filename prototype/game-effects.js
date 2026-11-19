@@ -35,9 +35,15 @@
       const to = victim ? point(victim) : fortTeam !== null ? fortPoint(state, fortTeam) : null;
       if (to) entries.push({ kind: unit.range > 1 ? "projectile" : "melee", scene: scene(point(unit), to, unit, victim), parameters: { color: teamColor(unit.team) } });
     }
-    for (const fort of state.forts) {
-      const victim = state.units.find((u) => u.key === fort.target);
-      if (fort.ready && fort.attack && victim) entries.push({ kind: "tower", scene: scene(fortPoint(state, fort.team), point(victim), null, victim) });
+    const shots = state.fortShots ?? state.forts.filter(fort => fort.ready && fort.attack && fort.target);
+    for (const shot of shots) {
+      const victim = state.units.find((u) => u.key === shot.target);
+      if (!victim) continue;
+      const outcome = shot.immune ? "免疫" : shot.damage === 0 ? "格挡" : null;
+      entries.push({
+        kind: "tower", scene: scene(fortPoint(state, shot.team), point(victim), null, victim, { outcome }),
+        parameters: { damage: shot.damage ?? 0, strength: 1.25, glow: 5, width: 4 },
+      });
     }
     document.querySelector(".board-frame").classList.add("is-fighting");
     try { await play(entries, 650); }

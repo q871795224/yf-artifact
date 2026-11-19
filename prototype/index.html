@@ -12,13 +12,13 @@
       rel="icon"
       href="../references/artifact-classic/assets/mobile/ingame_image/10020.webp"
     />
-    <link rel="stylesheet" href="style.css?v=0.4-ui1" />
+    <link rel="stylesheet" href="style.css?v=0.4-tactics1" />
     <script src="cards.js" defer></script>
     <script src="runtime-config.js?v=0.4" defer></script>
     <script src="engine-client.js?v=0.4" defer></script>
-    <script src="effects.js?v=0.4" defer></script>
-    <script src="game-effects.js?v=0.4" defer></script>
-    <script src="app.js?v=0.4-ui1" defer></script>
+    <script src="effects.js?v=0.4-tactics1" defer></script>
+    <script src="game-effects.js?v=0.4-tactics1" defer></script>
+    <script src="app.js?v=0.4-tactics2" defer></script>
   </head>
   <body>
     <svg
@@ -220,6 +220,7 @@
           <svg><use href="#i-mana" /></svg
           ><b id="mana-value">1 <span>/ 1</span></b>
         </div>
+        <button class="command-button" id="global-skill" type="button" hidden disabled></button>
         <div class="resource gold" aria-label="金币">
           <svg><use href="#i-coin" /></svg><b id="gold-value">0</b>
         </div>
