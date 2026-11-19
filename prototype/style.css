@@ -1168,6 +1168,7 @@ dialog::backdrop {
   font-family: var(--display);
   font-size: 17px;
 }
+.scene-option[hidden] { display: none; }
 .scene-option small {
   display: block;
   margin-top: 7px;

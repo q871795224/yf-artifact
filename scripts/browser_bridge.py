@@ -49,7 +49,8 @@ class BrowserBridge:
                 raise LookupError('找不到该对局。')
             self._restore(route[1], record)
             if route[2] == '/export' and body is None:
-                return self._response(self.session.export())
+                return self._response({**self.session.export(), 'engine_version': self.engine_version,
+                                       'source': 'pages-browser'})
             if route[2] == '/actions' and body is not None:
                 backup = deepcopy(self.session)
                 try:

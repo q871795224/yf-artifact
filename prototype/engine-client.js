@@ -16,9 +16,42 @@
       ])
     : Promise.resolve();
   let worker,
+    archiveDatabase,
     sequence = 0,
     memorySave = null,
     storageWarning = false;
+  function playtestDatabase() {
+    if (!archiveDatabase) archiveDatabase = new Promise((resolve, reject) => {
+      const request = indexedDB.open("yf-artifact-playtests", 1);
+      request.onupgradeneeded = () => request.result.createObjectStore("matches", { keyPath: "game_id" });
+      request.onsuccess = () => resolve(request.result);
+      request.onerror = () => reject(request.error);
+    });
+    return archiveDatabase;
+  }
+  async function listPlaytests() {
+    const database = await playtestDatabase();
+    return new Promise((resolve, reject) => {
+      const request = database.transaction("matches").objectStore("matches").getAll();
+      request.onsuccess = () => resolve(request.result.sort((a, b) => b.updated_at.localeCompare(a.updated_at)));
+      request.onerror = () => reject(request.error);
+    });
+  }
+  async function archivePlaytest(record) {
+    const database = await playtestDatabase();
+    const transaction = database.transaction("matches", "readwrite");
+    const store = transaction.objectStore("matches"), request = store.get(record.game_id);
+    return new Promise((resolve, reject) => {
+      request.onsuccess = () => {
+        const old = request.result;
+        if (!old || old.commands.length <= record.commands.length) {
+          store.put({ ...record, created_at: old?.created_at || record.updated_at });
+        }
+      };
+      transaction.oncomplete = resolve;
+      transaction.onabort = () => reject(transaction.error);
+    });
+  }
   function getSave() {
     try {
       return memorySave || JSON.parse(localStorage.getItem(saveKey));
@@ -55,7 +88,17 @@
       if (!job) return;
       clearTimeout(job.timer);
       pending.delete(data.id);
-      if (data.save) save(data.save);
+      if (data.save) {
+        save(data.save);
+        const { round, phase, winner, endReason, stats, forts, release } = data.data.state;
+        archivePlaytest({ ...data.save, round, phase, winner, reason: endReason, stats, forts, release,
+          source: "pages-browser", updated_at: new Date().toISOString() }).catch(() => {
+          if (!storageWarning) {
+            storageWarning = true;
+            window.dispatchEvent(new CustomEvent("artifact-save-warning"));
+          }
+        });
+      }
       if (data.status >= 400) {
         const error = new Error(
           data.data?.error || "游戏载入未完成，请重新载入。",
@@ -121,5 +164,5 @@
       });
     });
   }
-  window.ArtifactAPI = { request, browserMode };
+  window.ArtifactAPI = { request, browserMode, listPlaytests };
 })();

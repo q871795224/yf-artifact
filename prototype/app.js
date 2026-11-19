@@ -659,21 +659,34 @@ function showResult() {
     `<div class="result-mark">${icon("tower")}</div><h2 id="detail-title" class="result-title">${title}</h2><p class="result-subtitle">${view.endReason === "conceded" ? "你结束了这场对局" : draw ? "双方基地同时被摧毁" : won ? "敌方基地已被摧毁" : "我方基地已被摧毁"}</p><div class="result-stats"><span><b>${view.round}</b>回合</span><span><b>${stats.hero_kills || 0}</b>英雄击杀</span><span><b>${stats.gold_spent || 0}</b>花费金币</span></div><button class="detail-action" id="result-new">再来一局</button><button class="quiet-button" id="result-export">导出本局记录</button>`,
   );
 }
+function downloadPlaytest(data) {
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob), link = document.createElement("a");
+  link.href = url;
+  link.download = `artifact-${data.seed}-round-${data.round}.json`;
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
 async function exportMatch() {
   try {
-    const data = await api(`/api/games/${gameId}/export`);
-    const blob = new Blob([JSON.stringify(data, null, 2)], {
-      type: "application/json",
-    });
-    const url = URL.createObjectURL(blob),
-      link = document.createElement("a");
-    link.href = url;
-    link.download = `artifact-${data.seed}-round-${data.round}.json`;
-    link.click();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    downloadPlaytest(await api(`/api/games/${gameId}/export`));
     toast("对局记录已导出");
   } catch (e) {
     toast(e.message);
+  }
+}
+async function showPlaytests() {
+  try {
+    const matches = await window.ArtifactAPI.listPlaytests();
+    const entries = matches.map((match, index) =>
+      `<button class="scene-option" data-playtest-index="${index}"><span>第 ${match.round} 回合 · ${match.phase === "finished" ? "已结束" : "进行中"}<small>${esc(new Date(match.updated_at).toLocaleString())} · 种子 ${match.seed}</small></span><b>↓</b></button>`).join("");
+    openDetail(`<h2 id="detail-title" class="detail-heading">本机对局</h2>
+      ${entries || '<p class="sheet-note">当前浏览器还没有归档。</p>'}`);
+    $("#detail-body").querySelectorAll("[data-playtest-index]").forEach(button => {
+      button.addEventListener("click", () => downloadPlaytest(matches[Number(button.dataset.playtestIndex)]));
+    });
+  } catch {
+    toast("打不开浏览器对局归档。仍可导出当前一局。");
   }
 }
 function confirmNew() {
@@ -757,7 +770,7 @@ function showReconnect(error) {
   if (view) render();
   $("#turn-text").textContent = "连接中断";
   openDetail(
-    `<h2 id="detail-title" class="detail-heading">重新载入战场</h2><p class="sheet-note">${esc(window.ArtifactAPI.browserMode ? error.message : error.status === 404 ? "服务重启后，上一局记录已清空。你可以开始新一局。" : "请确认电脑上的游戏服务仍在运行，手机和电脑处于同一网络。")}</p><button class="detail-action" id="retry-connect">重试</button><button class="quiet-button" id="recover-new">开始新一局</button>`,
+    `<h2 id="detail-title" class="detail-heading">重新载入战场</h2><p class="sheet-note">${esc(error.status || window.ArtifactAPI.browserMode ? error.message : "请确认电脑上的游戏服务仍在运行，手机和电脑处于同一网络。")}</p><button class="detail-action" id="retry-connect">重试</button><button class="quiet-button" id="recover-new">开始新一局</button>`,
   );
 }
 function savedDeck() {
@@ -994,11 +1007,26 @@ $("#scene-dialog").addEventListener("close", () => {
 document.querySelectorAll("[data-menu]").forEach((b) =>
   b.addEventListener("click", () => {
     $("#scene-dialog").close();
-    ({ roster: showRoster, log: showLog, help: showHelp, export: exportMatch, deck: showDeckBuilder })[
+    ({ roster: showRoster, log: showLog, help: showHelp, export: exportMatch, deck: showDeckBuilder,
+       playtests: showPlaytests, import: () => $("#replay-file").click() })[
       b.dataset.menu
     ]();
   }),
 );
+$(`[data-menu="${window.ArtifactAPI.browserMode ? "playtests" : "import"}"]`).hidden = false;
+$("#replay-file").addEventListener("change", async (event) => {
+  const file = event.target.files[0];
+  if (!file) return;
+  try {
+    if (file.size > 2 * 1024 * 1024) throw new Error("对局文件超过 2 MB。");
+    const result = await api("/api/replays/import", JSON.parse(await file.text()));
+    toast(result.duplicate ? "电脑已有这份对局记录" : result.verified ? "已保存到电脑并验证复演" : "原始记录已保存，规则版本待核对");
+  } catch (error) {
+    toast(error instanceof SyntaxError ? "请选择有效的 JSON 对局文件" : error.message);
+  } finally {
+    event.target.value = "";
+  }
+});
 $("#new-game-button").addEventListener("click", () => {
   if (busy) {
     toast("请等当前行动完成");

@@ -2,12 +2,15 @@ from concurrent.futures import ThreadPoolExecutor
 from functools import partial
 from http.server import ThreadingHTTPServer
 import json
+from pathlib import Path
+from tempfile import TemporaryDirectory
 import threading
 import unittest
 import urllib.error
 import urllib.request
 
 from serve_prototype import Handler, ROOT, SESSIONS
+from playtest_archive import PlaytestArchive
 
 
 class QuietHandler(Handler):
@@ -18,7 +21,10 @@ class QuietHandler(Handler):
 class PlayableAPITests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.server = ThreadingHTTPServer(('127.0.0.1', 0), partial(QuietHandler, directory=str(ROOT)))
+        cls.storage = TemporaryDirectory()
+        cls.archive = PlaytestArchive(cls.storage.name, 'b'*64)
+        cls.server = ThreadingHTTPServer(('127.0.0.1', 0), partial(
+            QuietHandler, directory=str(ROOT), archive=cls.archive))
         cls.thread = threading.Thread(target=cls.server.serve_forever, daemon=True)
         cls.thread.start()
         cls.base = f'http://127.0.0.1:{cls.server.server_port}'
@@ -28,6 +34,7 @@ class PlayableAPITests(unittest.TestCase):
         cls.server.shutdown()
         cls.server.server_close()
         cls.thread.join()
+        cls.storage.cleanup()
 
     def setUp(self):
         self.created = []
@@ -98,6 +105,29 @@ class PlayableAPITests(unittest.TestCase):
         status, end = self.call(path, {'version': 0, 'action_id': 'concede'})
         self.assertEqual((status, end['state']['phase'], end['state']['winner']), (200, 'finished', 1))
         self.assertEqual(self.call(path, {'version': 1, 'action_id': 'pass'})[0], 400)
+
+    def test_archive_restores_and_imports_export_without_showing_local_files(self):
+        packet = self.create()
+        key = packet['game_id']
+        path = '/api/games/'+key
+        self.call(path+'/actions', {'version': 0, 'action_id': 'pass'})
+        before = self.call(path)[1]['state']
+        SESSIONS.pop(key)
+        self.assertEqual(self.call(path)[1]['state'], before)
+        saved = json.loads((Path(self.storage.name)/f'{key}.json').read_text())
+        self.assertEqual(saved['source'], 'lan-browser')
+        self.assertEqual(saved['commands'], [{'version': 0, 'action_id': 'pass'}])
+        self.assertEqual(len(saved['forts']), 2)
+        _, exported = self.call(path+'/export')
+        status, imported = self.call('/api/replays/import', exported)
+        self.assertEqual((status, imported['verified'], imported['duplicate']), (201, True, False))
+        self.assertTrue(self.call('/api/replays/import', exported)[1]['duplicate'])
+        foreign = dict(exported, engine_version='a'*64)
+        status, result = self.call('/api/replays/import', foreign)
+        self.assertEqual((status, result['verified']), (201, False))
+        with self.assertRaises(urllib.error.HTTPError) as error:
+            urllib.request.urlopen(self.base+'/output/playtests/'+key+'.json')
+        self.assertEqual(error.exception.code, 404)
 
 
 if __name__ == '__main__':

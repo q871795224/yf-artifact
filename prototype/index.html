@@ -12,13 +12,13 @@
       rel="icon"
       href="../references/artifact-classic/assets/mobile/ingame_image/10020.webp"
     />
-    <link rel="stylesheet" href="style.css?v=0.4-tactics1" />
+    <link rel="stylesheet" href="style.css?v=0.4-archive" />
     <script src="cards.js" defer></script>
     <script src="runtime-config.js?v=0.4" defer></script>
-    <script src="engine-client.js?v=0.4" defer></script>
+    <script src="engine-client.js?v=0.4-archive" defer></script>
     <script src="effects.js?v=0.4-tactics1" defer></script>
     <script src="game-effects.js?v=0.4-tactics1" defer></script>
-    <script src="app.js?v=0.4-tactics2" defer></script>
+    <script src="app.js?v=0.4-archive" defer></script>
   </head>
   <body>
     <svg
@@ -278,11 +278,14 @@
           <span>导出对局记录<small>保留这局的操作，方便回看和反馈</small></span
           ><b>↓</b>
         </button>
+        <button class="scene-option" data-menu="playtests" hidden><span>本机对局<small>下载保存在浏览器的试玩记录</small></span><b>↓</b></button>
+        <button class="scene-option" data-menu="import" hidden><span>收集对局文件<small>把手机导出的 JSON 保存到电脑</small></span><b>↑</b></button>
+        <input id="replay-file" type="file" accept=".json,application/json" hidden>
         <button class="scene-option" data-menu="deck"><span>牌组构筑<small>30张普通牌与10张物品牌，同名最多3张</small></span><b>▤</b></button>
         <button class="reset-button" id="new-game-button">开始新一局</button>
         <button class="quiet-button" id="concede-button">认输并结束本局</button>
         <p class="prototype-note">
-          试玩版 · 刷新页面可继续，停止服务后对局清空
+          本机试玩
         </p>
       </dialog>
       <div class="toast" id="toast" role="status" hidden></div>

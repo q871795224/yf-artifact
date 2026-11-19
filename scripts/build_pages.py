@@ -24,6 +24,11 @@ RUNTIME_FILES = ('pyodide.mjs', 'pyodide.asm.mjs', 'pyodide.asm.wasm',
                  'python_stdlib.zip', 'pyodide-lock.json')
 
 
+def engine_sources():
+    files = [{'path': path, 'content': (ROOT / path).read_text()} for path in ENGINE_FILES]
+    return files, hashlib.sha256(json.dumps(files, ensure_ascii=False).encode()).hexdigest()
+
+
 def build(out):
     out = Path(out).resolve()
     if out == ROOT or out in ROOT.parents:
@@ -51,8 +56,7 @@ def build(out):
     shutil.copy2(ROOT / 'references/artifact-classic/assets/README.md', out / 'references/artifact-classic/assets/README.md')
     (out / 'scripts/fixtures').mkdir(parents=True)
     shutil.copy2(ROOT / 'scripts/fixtures/playthrough-13.json', out / 'scripts/fixtures/playthrough-13.json')
-    files = [{'path': path, 'content': (ROOT / path).read_text()} for path in ENGINE_FILES]
-    version = hashlib.sha256(json.dumps(files, ensure_ascii=False).encode()).hexdigest()
+    files, version = engine_sources()
     # Only JSON whitespace changes; the rules fingerprint retains source semantics.
     for file in files:
         if file['path'].endswith('.json'):
