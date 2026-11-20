@@ -20,7 +20,8 @@
         "large_image": "prototype/assets/units/dire-melee.webp"
       },
       "derived_sha256": "3fb82387377b30f3b3907a5decd86d06a3f4a878e86f58d0ba69f69d9e54abdf",
-      "usage": "Enemy basic melee creep (card 1006); appearance only, 2 attack / 4 health."
+      "usage": "Enemy basic melee creep (card 1006); appearance only, 2 attack / 4 health.",
+      "integration": "linked"
     },
     {
       "id": "dire-ranged",
@@ -45,6 +46,23 @@
       "derived_sha256": "78f6ce035ea978d45d3fd9dd266f54b1390c992d1d2e71b91a4ecdc9c87dee6d"
     },
     {
+      "id": "dire-siege",
+      "name": {
+        "schinese": "夜魇攻城车",
+        "english": "Dire Siege Engine"
+      },
+      "card_type": "Creep",
+      "source": {
+        "path": "assets/custom/originals/dire-siege.png",
+        "provided_filename": "imagen_original_1795014653_7645a68b.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "ac159d98cec4e112547385c6b29c9df244a58508dd7469735e1a7201d901a5fb"
+      },
+      "usage": "夜魇攻城车；焦黑尖刺投石车，熔岩裂隙背景。",
+      "integration": "pending"
+    },
+    {
       "id": "radiant-ranged",
       "name": {
         "schinese": "天辉远程小兵",
@@ -65,6 +83,23 @@
         "large_image": "prototype/assets/units/radiant-ranged.webp"
       },
       "derived_sha256": "d586d68a82999ad401348d4374494c550d45ff4374814cb63394edd476fb1945"
+    },
+    {
+      "id": "radiant-siege",
+      "name": {
+        "schinese": "天辉攻城车",
+        "english": "Radiant Siege Engine"
+      },
+      "card_type": "Creep",
+      "source": {
+        "path": "assets/custom/originals/radiant-siege.png",
+        "provided_filename": "imagen_original_1795013729_9b91b995.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "90141cf8e5c790efcb85b3d67ebbfd7bf67be41c7af9e1dcc0e242870b4b06dc"
+      },
+      "usage": "天辉攻城车；石木混合投石车，森林石径背景。",
+      "integration": "pending"
     }
   ]
 }
