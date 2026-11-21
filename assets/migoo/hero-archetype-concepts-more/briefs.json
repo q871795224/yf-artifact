@@ -1,0 +1,62 @@
+{
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "style": "单张 9:16 全幅原创奇幻英雄卡牌插画。上传的是 Artifact Classic 无框画，仅参考清晰大形、自然材质、松紧有别的绘画边缘与局部高光。形象、身份、装备、道具、体型、色彩和构图均独立设计，灵感仅限抽象战术主题。用区别于普通单位的鲜明人物特征与独有器物建立英雄感。主体在画面中部，头部、关键手势和器物容易在小图辨认，背景松笔而保留生活细节。对比拉开，暖冷层次自然，避免满画面泛光。无卡框、字、数字、UI、箭头、棋盘、logo、水印和白边，画满到四边。",
+  "jobs": [
+    {
+      "slug": "threshold-bell-mediator",
+      "name": "界铃引渡人",
+      "description": "在生者与亡魂之间引路的英雄题材。原创肌肉结实的灰发地底老年男子，制服是燕麦布长衫、无帽、陶白袖扣，双手扶一件及膝长的六棱铜铃，铃口朝下贴在石门门槛前。门后浮起两缕模糊的乳白鬼火，不成人形。苍灰拱廊有金黄窗侧光，脸的年龄和铃的铜边集中局部高光，用大铃建立识别。",
+      "references": [
+        "output/blue-black-art-references/10307_psd.png",
+        "output/blue-black-art-references/10404_psd.png"
+      ]
+    },
+    {
+      "slug": "red-bark-acorn-hunter",
+      "name": "赤皮梢猎",
+      "description": "原创体型像耳廓狐的小型树冠异族，宽而光滑的长耳、大脚和鸦蓝羽披肩，侧蹲在巨树两个红皮分叉之间，手中是一柄能回旋的三叶陶投器，腰带留数颗木果诱饵。深秋林与淡蓝天空分明，斑驳日光切到侧脸和陶刃，身体敏捷，剪影可读。武器、衣着和种族特征用新设计。",
+      "references": [
+        "output/blue-black-art-references/10129_psd.png",
+        "output/blue-black-art-references/10328_psd.png"
+      ]
+    },
+    {
+      "slug": "porcelain-roll-champion",
+      "name": "釉甲滚斗士",
+      "description": "以敏捷斗士与滚动防御为主题。原创宽背矮个两足异族，脸象短鼻獾，穿可扣合收起的几块墨白厚瓷甲片，盘膝蜷身跳下潮湿石阶，手将一把短圆盾倒扣在胸前。釉面碎釉有小而清晰的高光，格斗姿势本身构成紧凑圆形；地上只有一条泥痕，冷雨的背景自然。",
+      "references": [
+        "output/blue-black-art-references/10092_psd.png",
+        "output/blue-black-art-references/10308_psd.png"
+      ]
+    },
+    {
+      "slug": "shadow-tile-painter",
+      "name": "影砖画匠",
+      "description": "把不同单位的影子联起来的主题。原创短发年轻女壁画匠单手托两枚破灰陶砖，另一手以粗炭条连通砖面上一黑一白两道正在移动的自然剪影；人物腰围染黑的抹布，手腕缠土黄皮绳。巷壁和中色沙土占大色块，亮点专注在手指、半脸和陶砖接缝。不用书法笔、文字或夸张披风。",
+      "references": [
+        "output/blue-black-art-references/10322_psd.png",
+        "output/blue-black-art-references/10354_psd.png"
+      ]
+    },
+    {
+      "slug": "gravity-reefling",
+      "name": "悬礁引石灵",
+      "description": "牵引和移动伙伴的非人英雄题材。原创形体是一块深灰半月状多孔浮礁，背面有三根宽石翼，翼间牵着细线般微弱的白色重力痕，附近三颗小碎石在偏离旧轨迹，各方向不同。深处是海蚀洞口明亮的天光、潮水淡反光和灰绿湿苔，核心是有重量的半月剪影，不画光球形主体。",
+      "references": [
+        "output/blue-black-art-references/10267_psd.png",
+        "output/blue-black-art-references/10355_psd.png"
+      ]
+    },
+    {
+      "slug": "twilight-dream-moth",
+      "name": "暮梦透翅蛾",
+      "description": "在梦境间游移的非人英雄题材。原创半人大体型六足绒蛾，长有粉白毛耳与两对大而不对称的琥珀透明翼，旋转飞出暮色花林的地面影洞。翅上一点银色亮光刚好照出鳞粉，身体为暖米灰，暗紫周边，跟其他翼怪靠形体、耳部和翼片分区区分。无龙形、无长尾。",
+      "references": [
+        "output/blue-black-art-references/10138_psd.png",
+        "output/blue-black-art-references/10355_psd.png"
+      ]
+    }
+  ]
+}

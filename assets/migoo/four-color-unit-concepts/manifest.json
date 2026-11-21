@@ -1,0 +1,1610 @@
+{
+  "counts": {
+    "red": 20,
+    "black": 20,
+    "blue": 20,
+    "green": 20
+  },
+  "images": [
+    {
+      "color": "red",
+      "name": "余烬鼓手",
+      "inspiration": "斧王背景的红雾军团",
+      "file": "red/ash-drummer/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "38a713bb37744e91aabeedbafd6255b8de809734f639417f1673649d04aff86b",
+      "task_id": "mt_cGkzNDhjZTYzNzYxZmZkNzUyMjA4N2Y5NmE1NTRhYWMzM2JlMjY2OTU5",
+      "media_id": "1458504333567204",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "red",
+      "name": "铜额撞兽",
+      "inspiration": "半人马竞技文化",
+      "file": "red/brass-ram/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "81e09d02378398941bf6ea2730c436354c32ab919f279e5e4b023a013b166d46",
+      "task_id": "mt_cGllMmIwZGNjNGUxZjhjMjdkZmMzNDliMjEyZDNlN2Y5NThlZWYxMDEy",
+      "media_id": "1458504703951655",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "red",
+      "name": "随军砧匠",
+      "inspiration": "军团指挥官的守城题材",
+      "file": "red/field-forger/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "ed93c629559a66e5df579316f4e6736b7d8a39354c38f4d0785225db270b93eb",
+      "task_id": "mt_cGk3ODc4MTFlMDM5YjA4N2E1MzIxOTc5YmQ4MTVlYmEzNjFhZDZmMjNl",
+      "media_id": "1458504925545259",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "red",
+      "name": "斗场旗手",
+      "inspiration": "半人马战行者的竞技场题材",
+      "file": "red/pit-standard/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "105c0b227cb714c64776c24fa1c6ce47edba76105741988803f99e73605249e4",
+      "task_id": "mt_cGlmZTk4YzgzOGFiYjdhMTA5YjIyYzdhMmRiMWFmOTFmNDQ4NjFiMzk0",
+      "media_id": "1458505428009815",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "red",
+      "name": "熔沟摔手",
+      "inspiration": "斧王背景的红雾军团",
+      "file": "red/ash-wrestler/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "8941d145d5ebcfe83c55443ba1a69c145984dbfd251bb2695b4b4e81477312cb",
+      "task_id": "mt_cGlkNjIyNWM4MmZjZDEwOGEzMjkxZjlmZWE0MGMwZjU1ZTJkM2MxZWY4",
+      "media_id": "1458505664513276",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "red",
+      "name": "炭背蜥",
+      "inspiration": "熔岩地带的野生生物",
+      "file": "red/magma-salamander/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "68381066cc6b951c4a5ca45bd5c50893b5be4a2c377a95f92db9f5c2593c83ee",
+      "task_id": "mt_cGk5M2RmMmQwMWU0ZWE3NmUyOGVjZDE5NjBiNGYzMDZhZDIxYTM0NGIy",
+      "media_id": "1458505901507372",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "red",
+      "name": "枪阵教头",
+      "inspiration": "军团指挥官的守城题材",
+      "file": "red/spear-yard/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "1f1ac101f369b39cc410eadde0ed0150837f35bbb0ce5f2dd77824a89086cf1c",
+      "task_id": "mt_cGkwMGJmNGMyMGRmYWNmNmNkMTA1YThjNDk5YzRmNjg5ZTZmMTZlMGE0",
+      "media_id": "1458506369516328",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "red",
+      "name": "盾驮骡",
+      "inspiration": "近卫军的行军后勤题材",
+      "file": "red/shield-donkey/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "9f4ec28fcdc55d0ee71389f3f88cf1b20fc4d9064ec9104909a5362cfccf53bb",
+      "task_id": "mt_cGliMDI4MWJkY2VmNzQ0ZTkyMDQyNzkwMDVlMjk2YzUyYzFkNDVjMjdh",
+      "media_id": "1458506631578873",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "red",
+      "name": "断枪新兵",
+      "inspiration": "军团指挥官的守城题材",
+      "file": "red/pike-rookie/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "a838641a98e55225bf54b3738ac1cb579b5151058505343374648cef2099c2ad",
+      "task_id": "mt_cGk3ZDE4ODM0Yjk0YzgzNWQwMWM2ZTgzODIyN2NkMzY5YzMyYjE0OWFh",
+      "media_id": "1458506910745834",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "red",
+      "name": "嵌钉撞手",
+      "inspiration": "基恩机械与城门攻坚题材",
+      "file": "red/forge-rammer/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "2e23441a115a474469b68d2945b9334bfcd25c527bc9e030a1768f83fa4f6e69",
+      "task_id": "mt_cGkzYWZkNjMwZmNiYzkwMTI0NjQ5YzBjMWVhYzQxOTQzNTMyNGZjMTNh",
+      "media_id": "1458507400512770",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "red",
+      "name": "灰烬黄蜂",
+      "inspiration": "炽火魔法与火山生物题材",
+      "file": "red/ember-wasp/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "2041df7ae430b7b7637f254f89f2c3d8919cc6b8322080d0c226c5cc05795fd3",
+      "task_id": "mt_cGljNmViMjk5MDhjZDQzMDk2MzFkZmYzNTkwZWFkMDI1YmQ5MDAwNzA3",
+      "media_id": "1458507720156398",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "red",
+      "name": "斗场投网手",
+      "inspiration": "半人马竞技文化",
+      "file": "red/arena-net/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "dd27317817aa5672058ec3e7d99eb370fdf2c2b93f541f68fcd6956d0bb8ff2a",
+      "task_id": "mt_cGlmMGQ1MWJmZTQxMmQxNTU4NGUzNzViMTc2ZTU1NzRiMTg3ZDVmN2Zh",
+      "media_id": "1458507928372457",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "red",
+      "name": "烟脊救兵",
+      "inspiration": "军团指挥官的守城题材",
+      "file": "red/smoke-rescue/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "89f1cab18a675cb3098bfee8344e36322f58de71c91763f135a03098db295641",
+      "task_id": "mt_cGkxYTU4ZTQzZGQwNWE0OWFlNzcyMWFhN2NhNGM0NzFlMDc2Yjc4OGZi",
+      "media_id": "1458508443001667",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "red",
+      "name": "赤岩猎隼",
+      "inspiration": "兽王的山野狩猎题材",
+      "file": "red/cliff-falcon/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "9ac41ae3c504407d7f6f2d158eafa0c2b13ad252921e064e0f0e3f3db424afe2",
+      "task_id": "mt_cGk5MWZjZjJlZDA5OWUxYjEyZGEwYzA1MTUxY2RmN2UzMDk1OWNlZGVm",
+      "media_id": "1458508697895731",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "red",
+      "name": "沸壶兵",
+      "inspiration": "基恩机械与城防题材",
+      "file": "red/iron-distiller/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "df86d68e6979b2f9e676ea939f211b4133159f646a17ee7cb013af08ceb566a6",
+      "task_id": "mt_cGk5Nzg5NTQyYjMyYmU5MTk3YzNhZDQ3YWY0NjEzMjdjMTYyMzcxMTYw",
+      "media_id": "1458508937610518",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "red",
+      "name": "长号引路人",
+      "inspiration": "红雾军团的行军题材",
+      "file": "red/march-horn/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "f496300867734c56425230d0a093b0eb8bd96bbd33233b1395fcb70b3a3072be",
+      "task_id": "mt_cGlhZjg5NmRhOGU1ZWMwMDNmYzRhNzcwNzc3OTIwZDJkMjVjZDQwY2Fj",
+      "media_id": "1458509550093598",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "red",
+      "name": "双环拳手",
+      "inspiration": "半人马竞技文化",
+      "file": "red/buckler-duelist/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "7b85896d242d8bd24210a3bd8c2c65ceea9440b1f5f311665e6f0f45c5653870",
+      "task_id": "mt_cGkyMDczZTM4YmEyOGRjY2FlN2JjNzg2ZWZkYWE0YmUyMDA3ZGMwZWYw",
+      "media_id": "1458509817521439",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "red",
+      "name": "裂地甲虫",
+      "inspiration": "荒原的巨型节肢生物",
+      "file": "red/red-carapace/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "4e191645d2ab095062fd573627f55830acc7b3eb1622515e071f0f857a5294f8",
+      "task_id": "mt_cGkzYmVjMTliOTEwYzkwM2E2ZTIyNjdlNDI4NDQ3NDg1Y2Y0ZDI2MjJm",
+      "media_id": "1458510075561188",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "red",
+      "name": "铁勺伍长",
+      "inspiration": "军团远征的营地后勤",
+      "file": "red/parade-cook/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "c46be9671fc9cb4818d669e3a174d251780e4dbe4c065388047bd55ee209975e",
+      "task_id": "mt_cGllOWUzNTg4MWRlZTQ5MjFkZDZmMjNmZGQxZDA5MDIyODFkY2NiNWZm",
+      "media_id": "1458510677582671",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "red",
+      "name": "拖链巨兵",
+      "inspiration": "高地蛮族与攻城军题材",
+      "file": "red/chain-bearer/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "8ca554cece2ee72ccdf3caa833449eaf61880fa45d2107e7b46bc91c5f3d7275",
+      "task_id": "mt_cGkzMjgxNzgwY2E1ZjVhY2YwMzM4ZmU5MGE2YWRkMzE3NzI0YzFlZDNh",
+      "media_id": "1458510900478806",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "black",
+      "name": "墨翅信鸦",
+      "inspiration": "幻影刺客组织的隐秘通信题材",
+      "file": "black/roof-ink-crow/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "a5e901d413772e81920a22ce950187e8c7ce10c75b5e21db2f7753d73e11a51a",
+      "task_id": "mt_cGk0OWNiMjExYzY4OTIwNjJkMTJmYmRkMDMyNGY2YzhjMjYyYWJhMWQ1",
+      "media_id": "1458504315863873",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "black",
+      "name": "裁影师",
+      "inspiration": "幻影刺客组织的潜行训练题材",
+      "file": "black/veil-tailor/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "91dd9af438852be41321aa9d7eb2de1eb64c05e3b4673d33fa8cabce13506dba",
+      "task_id": "mt_cGk3ZmU5OWE1NjE4M2I3NDRmYTgyYmE4YmY4YTk4OTZiMzM4ZjkwZmEw",
+      "media_id": "1458504553521961",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "black",
+      "name": "盐路追猎者",
+      "inspiration": "赏金猎人的委托题材",
+      "file": "black/salt-bounty/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "a880ae124f13e9c12d7b6c86962fa3c5f5cc8757c7561167dbf9983ccde0ee2f",
+      "task_id": "mt_cGk1ZmJhNzU3N2FiY2U3OWMyN2RmOTM1MDNjMGZjYmRkOWY3MGFlNDM0",
+      "media_id": "1458505183741205",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "black",
+      "name": "封蜡掮客",
+      "inspiration": "赏金交易和泰勒庄园题材",
+      "file": "black/signet-broker/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "4fbe2141cfb998f0f533c49a072e2d7605624e705600a758157777c4411aaa30",
+      "task_id": "mt_cGlmODE3YTA5NThiYjk1YmMzN2ZiYmI2NDZiYmE1NzNlMjM3MWVlNmJj",
+      "media_id": "1458505430508345",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "black",
+      "name": "墓泥蛭",
+      "inspiration": "瘟疫法师的疫区意象",
+      "file": "black/crypt-leech/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "f94842b9665fbbf6817d83ee7b24a5d6b609cb3f0bf8ecd8ae3bb2232ff3f2c2",
+      "task_id": "mt_cGk5MjVmZTlkZjM3ZjhlODI1MjlkN2M5ODQyOWUyY2FhZGIwZTRhOGNl",
+      "media_id": "1458505670304604",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "black",
+      "name": "踩泽行者",
+      "inspiration": "夜间潜行与沼泽地形题材",
+      "file": "black/marsh-stilt/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "5d04b5e7429c68e07f4dfe13187ee7ba3e262edfc85ca1b384f9600c38ed91f3",
+      "task_id": "mt_cGk2ZWJhOWZlNGJmY2Q0OTZiYTMxYTQ1MzhkMjkyNzNkOTA5MzhmYWNi",
+      "media_id": "1458506135979283",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "black",
+      "name": "铜面翻手",
+      "inspiration": "幻影刺客组织的伪装题材",
+      "file": "black/mask-tumbler/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "346933c6f2e752bbc4b6cb47cacfc761b0cce2af72b7c2c70e8950de71d32028",
+      "task_id": "mt_cGk2YWZjYWM4YjkzMGM2ODg5NzY5YjAwMmRjNjQzYzcyZGU4ODc4ODJi",
+      "media_id": "1458506404021063",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "black",
+      "name": "断铃修士",
+      "inspiration": "秘密结社与法术干扰题材",
+      "file": "black/bell-silencer/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "b1884b11082147c39cf0cf7a8c6918854416d6e85f2809d65aa1a7d9684362dd",
+      "task_id": "mt_cGk4NDMwYjY4NWFlYTIxNTAyYWZmMDJiZWNkMTdkYzZlYjc0ZmUyNzky",
+      "media_id": "1458506626409734",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "black",
+      "name": "暗渠钩手",
+      "inspiration": "盗贼与城防暗渠题材",
+      "file": "black/canal-trapper/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "ae77fd4046f63904e2e08f4f32c0c974602bab55f94a7de0ede95cc179d51b57",
+      "task_id": "mt_cGliYjFhNDllMDNlYTgzOGFiODc4OGE1OGY4OTdmMDRjY2JkNzVjZDQ2",
+      "media_id": "1458507155735814",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "black",
+      "name": "静步猎犬",
+      "inspiration": "赏金追踪与追猎伙伴题材",
+      "file": "black/night-hound/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "7d2af2598662315c8eb1c9f4817eb9f223ac6330984f8dcb54ceff0959822b8a",
+      "task_id": "mt_cGk5ZDM4OGMwOTA4OTYwYTFjZjVhM2MzMTI1MWQ1MDA2MzYyYWQzNmUz",
+      "media_id": "1458507400397634",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "black",
+      "name": "咬锁鼠",
+      "inspiration": "基恩地下机械与盗窃题材",
+      "file": "black/key-biter/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "fad9904a69aa0abe85335e8aac57ce58a062178f3302fdead2eaf88709c90773",
+      "task_id": "mt_cGlkMzdhOTkyMzJmNWE3YmFkMzMwNDk3ZDYyZDVhNTU4NTBiY2IwYjNl",
+      "media_id": "1458507671462735",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "black",
+      "name": "断梁客",
+      "inspiration": "高地攻城与工兵题材",
+      "file": "black/quarry-cutter/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "ed7c813b5fb790136fa811bc5630e2f73727f75c8238d970351d6b79ae48a122",
+      "task_id": "mt_cGljZGI2NWYxZDRjOWM1ZDNjNzgwYWYwMjdiMjA1N2FkZTBhM2Q3NGRi",
+      "media_id": "1458508187075836",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "black",
+      "name": "缄口蜂",
+      "inspiration": "幽暗森林的扰敌生物题材",
+      "file": "black/silk-wasp/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "116b90565e527a28f7d7bf405cda5c020422cbc2c0211943e9b8be32d4486f2d",
+      "task_id": "mt_cGlkZjYyZWQ5NWIzN2VlYWJkNDE3NGUzNTYxMzkzYzc0ZjlkOGYwZDdk",
+      "media_id": "1458508420859141",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "black",
+      "name": "挂旗哨",
+      "inspiration": "狙击手与山地巡哨题材",
+      "file": "black/rooftop-spotter/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "d6ce2499d9e4baa0ab19ac54010be47103e5b0cc91b6bd71f94a8f63d02d8b40",
+      "task_id": "mt_cGk1MjVmYTJkOTczMTdmN2Y4N2E3NzJjNjljYTVkZDFhYjA2OTQ3NzAy",
+      "media_id": "1458508714828629",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "black",
+      "name": "簪毒药工",
+      "inspiration": "剧毒术士的毒物研究题材",
+      "file": "black/poison-apothecary/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "b880f64e84d81672217a339580f310f33abcf19663fba57a8049b28f5c2bd701",
+      "task_id": "mt_cGljOGJkM2I3ZGZkMWYzMDhlYTFmYjRiZTMxOTZlMzY0MjdiNWU1Y2Qx",
+      "media_id": "1458509226190098",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "black",
+      "name": "叼钱胡狼",
+      "inspiration": "赏金与偏远商道题材",
+      "file": "black/coin-jackal/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "5d3576a11b43dcb99f9b4d93a4553922548721f5bbb8cea3d0a97c5a4cb8d645",
+      "task_id": "mt_cGliOTE4ZDFhYWIwNzI4NjA1NDIyYmU3MWE2MzVlMDg5ZGU0YTBjZWY4",
+      "media_id": "1458509580379395",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "black",
+      "name": "薄石投手",
+      "inspiration": "基恩山地远攻题材",
+      "file": "black/sable-sling/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "44211d645e109579add5047cdb8857e1376b1b892db5c42baa7ecfe7f7aee185",
+      "task_id": "mt_cGk5NDZjNWUyOWM2Njg2YzkxNjU0YzBlM2FmYTJkYmY0ZjRjYTNhYTI3",
+      "media_id": "1458509827883846",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "black",
+      "name": "骨锁匠",
+      "inspiration": "冥界物件与秘密结社题材",
+      "file": "black/bone-locksmith/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "3886bde628be51757d370e9acdac2557a2c9951da205e8f1bc5d1bceb999fb64",
+      "task_id": "mt_cGkyY2U4NjBhZmJkMjk4YWI2NTFiOWJiMWZhOTA5MWE2OWJjODk5YjA0",
+      "media_id": "1458510352188247",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "black",
+      "name": "折桥客",
+      "inspiration": "夜间破坏与山道伏击题材",
+      "file": "black/dry-bridge-knife/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "86f44a006a674e0f3c6d5d065b27a90074e352bd91a1603e10ceb211d3726f85",
+      "task_id": "mt_cGliMDY0YWJhYTI2YmFiYjE5MDAzMWVhMDY4Y2NhM2NlNmJjZTA0ZmVi",
+      "media_id": "1458510616822622",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "black",
+      "name": "水巷捞手",
+      "inspiration": "港口黑市与寻物题材",
+      "file": "black/moon-dredger/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "dc26357c176b42e903178da08a51d0ff3a0a1a2abc971db2899cd2ab6de05aad",
+      "task_id": "mt_cGlhMDk5ZmM2OTQwNGMxMTkwYzlmMDFkZWNiMjEyZDAxNmE1MWQ4OTc5",
+      "media_id": "1458510904050519",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "blue",
+      "name": "寒库抄录员",
+      "inspiration": "冰晶圣女的冰霜求学题材",
+      "file": "blue/ice-archivist/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "5a6221a3e08d907e5430651d43e56225cfea05a2aa2a384da0210c9505b608f8",
+      "task_id": "mt_cGliN2QxZGFkZWM1MGVhZjJkMDc1YWM2ZjBjZjdiMDA0ZjhlOTcwODRj",
+      "media_id": "1458504322589507",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "blue",
+      "name": "翼哨传令",
+      "inspiration": "天怒法师的天空王庭题材",
+      "file": "blue/sky-messenger/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "1f9d5af732c0619001e2cff6d367b23a0c9f7cba96d558455fefc51a7427c492",
+      "task_id": "mt_cGkwYzQ3ZGUyODUxOWFlYTM4MGY0NzNhYWNhNWUyMzc1OGUxMGI3MmRj",
+      "media_id": "1458504945189716",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "blue",
+      "name": "潮钟龟",
+      "inspiration": "潮汐猎人的海域题材",
+      "file": "blue/bell-tortoise/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "8930e4756db8507f06e52f939849aca83651029fda28d854c3dc353360d494d5",
+      "task_id": "mt_cGk2MWViMzZkMzliMjI3MTA2MDJlMzY3MGMwYTZhZDU5YzFkOWFkZjY4",
+      "media_id": "1458505197839192",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "blue",
+      "name": "观风学徒",
+      "inspiration": "风暴之灵的风雨意象",
+      "file": "blue/weather-apprentice/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "b0aea76a495f8ad6fdf4261d29646ac40ec12af5905f7edb77c7d0f16bdb576b",
+      "task_id": "mt_cGk5ODI3ZmNlYTYyM2M2ZTEyZjUxNTY2NTA3OTFiOWZiMjAzODNiZmNl",
+      "media_id": "1458505452061532",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "blue",
+      "name": "霜踵山猫",
+      "inspiration": "冰霜高山的野生生物",
+      "file": "blue/frost-lynx/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "aaa10ec572940c1a35db56f1c141f5cdfd065fa776cba7784a4aec9ddcae8548",
+      "task_id": "mt_cGlmODBiYzcxYTZjNWRiNzI2NThiYzM4NWNiMzE2YjIxMzFiNmFjMmYz",
+      "media_id": "1458505879323431",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "blue",
+      "name": "法渠巡工",
+      "inspiration": "基恩机械与法力管路题材",
+      "file": "blue/rune-plumber/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "ef56b37e9bacd102b89e4df5895a2518ebf7929380b597c077ed176c40cf282c",
+      "task_id": "mt_cGk4NWJmYzlmYzYyNzViNjJmMzNmNTBjMjE0ZGEzN2VjOWU3NmNlNzZk",
+      "media_id": "1458506143122261",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "blue",
+      "name": "星砂蟹",
+      "inspiration": "神蚀者的星界异物题材",
+      "file": "blue/asterite-crab/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "6601bd742996ab9631ebdb558c7b5a9be37120a7893573cedd1ac1e24e4a0384",
+      "task_id": "mt_cGljM2UzNWRiYWQ5NTczYjdhOTlkMzU5YzdjNTBhNDZmNTFjMzk0OGVk",
+      "media_id": "1458506362962782",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "blue",
+      "name": "听晶童",
+      "inspiration": "神秘之耀与法师学院题材",
+      "file": "blue/resonance-choir/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "70f1e96a935f3723d0ef4611648449f59d5ceb9a6e9d0e1c73cbafd5b5865710",
+      "task_id": "mt_cGkwNGFiNWVkNTViNTFmMDc1NTRjMjM2YzMxYTdhY2E1MjIwMWUxNDhi",
+      "media_id": "1458506909606720",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "blue",
+      "name": "铜翼鸥",
+      "inspiration": "修补匠的基恩工程题材",
+      "file": "blue/steam-gull/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "9681458d022c1845bf439d4bcda5aca84d6e6c4024c671a3141b291fd5f82a45",
+      "task_id": "mt_cGlmYzIxZjdhOTYwYThhNjcyN2YxNjcyZmFjY2M4NGQ5MGNhMjBjYWJm",
+      "media_id": "1458507165492028",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "blue",
+      "name": "界缝织工",
+      "inspiration": "次元魔法与虚空意象",
+      "file": "blue/seam-weaver/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "19dca4162dbdd3c899b627f30c03a40bdac95fcd1fbae06c6027ee598202fc77",
+      "task_id": "mt_cGk0ZTdmZGY3MDU0NGZhYTdlYzE3ZmJjMjg4OGFhZmU4MDZjMjgzMmE3",
+      "media_id": "1458507461903149",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "blue",
+      "name": "引雷卷轴兵",
+      "inspiration": "撼地者的山崖与风暴意象",
+      "file": "blue/storm-spooler/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "252e854f298312f268a8a693457f2fa8f832c6c2800a3d3904e97fb772dd5fa7",
+      "task_id": "mt_cGkzZDRlN2M1YTJjYWM1YWM1Y2YxMDZlZTYwZDAwNjRhMTM5ZWEwNzdi",
+      "media_id": "1458507934917422",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "blue",
+      "name": "珊枝短枪手",
+      "inspiration": "潮汐猎人背景海域",
+      "file": "blue/coral-lancer/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "3715942672136c4c101e2ff17d1ad1f42f861b22df674e3cc73995f8a635bdac",
+      "task_id": "mt_cGk0MjlmZDE1ZmZjN2Y2NDUxZDAwZTk5ZmIzY2U4MDcxN2MzMWUyYzY5",
+      "media_id": "1458508179129133",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "blue",
+      "name": "镜痕兔",
+      "inspiration": "星界传送题材",
+      "file": "blue/mirror-hare/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "a5de9ced2620098c680f63053beb59dcbe276a86c825f9134837c8b75cc7c6f7",
+      "task_id": "mt_cGk5OTk0OTI3YzBmNDk0MmQzYWM5Yjk3MTAwNGNlNzNmODNjMjEwMmVh",
+      "media_id": "1458508452037412",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "blue",
+      "name": "听潮盾卫",
+      "inspiration": "潮汐猎人海域与港城题材",
+      "file": "blue/chime-guard/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "7a51c5424b19c689c738136f9a144b73bb6c1d8ddafc2a7e4d03ba20e81013e2",
+      "task_id": "mt_cGkwYTcxY2YxYTQ0MzNkYjQ5MzBiMGEwZjNlN2NlODgxMzJhMjBmMWUz",
+      "media_id": "1458508949979992",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "blue",
+      "name": "焰芯匠",
+      "inspiration": "食人魔魔法师的多重施法题材",
+      "file": "blue/arc-candlemaker/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "e032ae6d6066362dfe6147ad6a8c8af220f149ce4bc44edc581ba3f5b4902ab0",
+      "task_id": "mt_cGk1ZGE1MjlmM2YxMjc1MTYyZjNmMTQ1ZTRlZDYxZTc4MzZkODAyOGM0",
+      "media_id": "1458509327000412",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "blue",
+      "name": "漂光海鳐",
+      "inspiration": "海域怪物与魔力意象",
+      "file": "blue/drift-ray/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "fde2245284231060ab40f7de61e7e7c38a7fa104c22da4b6c4d512cd57c9733c",
+      "task_id": "mt_cGk3YTgwZWJhMDZiYWQ2OTcyN2Y0OTBiZDNkNGJmYTZhOTE3ZWNjNTU4",
+      "media_id": "1458509550863171",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "blue",
+      "name": "踏霜驮夫",
+      "inspiration": "寒冬飞龙的雪山题材",
+      "file": "blue/glacier-mule/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "5b5c45b9ffef4bf791cdadf3df6b5a695e0aafa168905164f53c00403cc6fb16",
+      "task_id": "mt_cGlhY2ViMGFkZDViMzExYjlmOWQzZjQ2NGI0ZTBhNWQ3MjA3YWQxODRi",
+      "media_id": "1458510117659481",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "blue",
+      "name": "校潮铜甲",
+      "inspiration": "修补匠与基恩机械题材",
+      "file": "blue/blue-brass-beetle/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "cfbcaf095567aeef249fc55edca1806172d62aee36b044d12267393a0d10de01",
+      "task_id": "mt_cGllYzgwNWJjNTE0YWI0YTIzMjZmMDM4ZjYwM2Q2MzI2YjkwZmRiOWI2",
+      "media_id": "1458510400258876",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "blue",
+      "name": "云墨引航人",
+      "inspiration": "天空王庭与侦察题材",
+      "file": "blue/cloud-ink-scout/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "cd29b22c05ec8f1062f78f5b45dc1fdfbf3f736e1972b2e3c1697d036e8608ce",
+      "task_id": "mt_cGk1MGQ3OGFkYzgzOTUwODRiYjlhNmVmYmYxZWI0M2U4NWMxZjBlZGU0",
+      "media_id": "1458510609802489",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "blue",
+      "name": "涡耳短鳗",
+      "inspiration": "海域怪物与涡流题材",
+      "file": "blue/moon-current-eel/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "1db3d2eca12f0e7655e4d66ffd1e89153fd7962f6f35351564ef30b00cacb5d4",
+      "task_id": "mt_cGk0NTYyMDNiN2RiN2U1OGMyZDdkYmRhYjllZWQzMjViOTdkNTZjNGVl",
+      "media_id": "1458511193916690",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "green",
+      "name": "林冠兽医",
+      "inspiration": "魅惑魔女与森林疗愈题材",
+      "file": "green/canopy-vet/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "1f1313f7542462d9576b65892bf8987ab7d9cd8b56fe4f17531e6c6b4e03bb0a",
+      "task_id": "mt_cGkwNjI4YWM5NDlmNTYzNjU3ZWNhMGRjYTRlZThjZWUwMThiOWRmYzlk",
+      "media_id": "1458504566252799",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "green",
+      "name": "苔甲陆龟",
+      "inspiration": "树精卫士的古林题材",
+      "file": "green/greenglen-turtle/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "c6eedb790aff7fef64708bb945659637990a36aef48d1bc3f6b168bb2d3e0e09",
+      "task_id": "mt_cGkyZTNkYWY0ZGI2NjVlZWQ4NjJiNTRiMzllYTIyNTE5OWRkYmE5ODkx",
+      "media_id": "1458504943289135",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "green",
+      "name": "荆篱牧童",
+      "inspiration": "兽王与山野育兽题材",
+      "file": "green/hedge-shepherd/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "1c0772aef8505f75b0037382251734e7dab9679f6e219cf597815708743c6dfc",
+      "task_id": "mt_cGk4NDZjYWVlMDcxODJlNjBiZTQzNmFhNDNlYmQ4ZTJiYWRkNTBlZmY2",
+      "media_id": "1458505184797943",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "green",
+      "name": "蕨角山羊",
+      "inspiration": "熊战士山地部落的野地意象",
+      "file": "green/fernbark-goat/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "73ab8a902f7f9f1abe1f3378dacc7b5e5324a8db1ffbe433b4a3bc947984fa25",
+      "task_id": "mt_cGk5ZjkyNzQzMzM4ZGExODRkMGUzZDkzMTVjNWU0N2U3NTY1NGZmODg2",
+      "media_id": "1458505663956248",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "green",
+      "name": "月籽采集人",
+      "inspiration": "露娜月林与赛莉蒙妮意象",
+      "file": "green/moonseed-gatherer/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "c2b47efbf21089bdbadd0e9c4fd70f92abb45376603b0aaa6954aca8d9729b02",
+      "task_id": "mt_cGk4MjQ1MGRkNDBhOGMxZDY0OGY0MWE5NjY4NjczZmYzMWFkZDY5ZTRi",
+      "media_id": "1458505897329910",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "green",
+      "name": "伞冠孢灵",
+      "inspiration": "古林与菌落题材",
+      "file": "green/domed-mushroom/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "3e206654f87ab2ba4fc2b458e654e90f86c504ea8205d1a89476c6b63f738e35",
+      "task_id": "mt_cGljYjc5MDY5NGIxNWFiNjBhNTZjYjg4MDFjOGFhMTZkMzUzNTdhYThm",
+      "media_id": "1458506142712638",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "green",
+      "name": "编藤渡工",
+      "inspiration": "树精卫士与林间换位题材",
+      "file": "green/river-vine-hand/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "ac0dffa7af74f1175a625b2faeebefe515ceb6e6e8b729bace906f2f0dc02a31",
+      "task_id": "mt_cGk1YWZiYzZjZDE0NzUwOTZmMWE3Y2E2ZGI3YWE4NDAwNzllMDIzMDdm",
+      "media_id": "1458506644210959",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "green",
+      "name": "鹿角巡护者",
+      "inspiration": "魅惑魔女与林间巡护题材",
+      "file": "green/elk-bugler/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "40343f6e7fcaf744d20e0502ceaaf82dc2e31e7ffecc089c3559e331d37424b5",
+      "task_id": "mt_cGk4NTMyZGE3NTE1ZjRmM2VlNjBlMmZiZjg0NDBiZTZmNDMwOGEyNzRh",
+      "media_id": "1458506930496302",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "green",
+      "name": "苇甲傀儡",
+      "inspiration": "古林守护和自然魔法题材",
+      "file": "green/woven-golem/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "227226a8c9a991e3f26ad900ee2ccf0e0c199f2ac680f57f62458d2b8960f11f",
+      "task_id": "mt_cGljODdiZDIwMWIzMTE1MmE1Y2EzZmYwZDQzYjk3ODY0YjQ5N2E4MzEy",
+      "media_id": "1458507163452663",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "green",
+      "name": "结根獾",
+      "inspiration": "狼人背景的森林部落题材",
+      "file": "green/burl-badger/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "3f051a18a27599195c692c6886372e37baa4b2c8e62216d3fc6cb389f2aad7bd",
+      "task_id": "mt_cGkzNDFlMjcyZWVhMTViOTlmZDlhM2NlY2E5ZmFlNzBiOTkxOGM3ODEw",
+      "media_id": "1458507679458128",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "green",
+      "name": "授粉背篓人",
+      "inspiration": "树精卫士的生态题材",
+      "file": "green/pollen-bearer/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "b1c8401dfb30758575a56c4d6ab49308b204735f4c276f145462f1b68b7ef495",
+      "task_id": "mt_cGlmZmFhNzQ2YzJiZWZkZWMyOTEzYjlhMjZjZDUyZGU0NTQ5OWQ5NzNh",
+      "media_id": "1458507953349424",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "green",
+      "name": "浮叶水獭",
+      "inspiration": "林溪和动物伙伴题材",
+      "file": "green/hedge-otter/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "31cb8781a35d2638393eb13fe0fd1bf5a3b0c2f21f9739a615b7c33fbdfd2458",
+      "task_id": "mt_cGlmNzQ2MTNiN2Y0MjgzM2NmODU0MDY2Zjc3NmE4Yjc4ZDJiYjFiOTAz",
+      "media_id": "1458508173116246",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "green",
+      "name": "压根老匠",
+      "inspiration": "古林与古树守卫题材",
+      "file": "green/stump-locker/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "e037bc450b4f38c1a38245b0400271d415e0c5d562e70d5571552e432984e22d",
+      "task_id": "mt_cGk0Zjc5MzMzZWRkN2UxZDgzMmUxMWI3NzEyMDU2NzdlMmM3YjdkNTcz",
+      "media_id": "1458508715443032",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "green",
+      "name": "苔衣蜗行客",
+      "inspiration": "古林与巨型无脊椎生物题材",
+      "file": "green/lichen-roamer/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "e34edc41c205b76995a4929f436fa060005f429d0962f4e5322be072dcee607f",
+      "task_id": "mt_cGlmMjExMDczNWFlYjJkMGVlNDQwZjRlNTcyNDM1NjJjZWU1ZjdhOWQx",
+      "media_id": "1458508965061916",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "green",
+      "name": "杉影信差",
+      "inspiration": "卓尔游侠的林中行路题材",
+      "file": "green/cedar-runner/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "aa537168abf374a63fb4ef5acdf64010f5c72818fdeeb9e55d03aab8f291ebb3",
+      "task_id": "mt_cGk4NDlhMDQ0MDZkNWM3YzUyOTc0YjJlOWU4NWQyOWM4YjcyYWJmNjY0",
+      "media_id": "1458509190693702",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "green",
+      "name": "背籽犀甲",
+      "inspiration": "德鲁伊和播种生态题材",
+      "file": "green/seedhorn-scarab/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "17ba06ced4f4730759279121f6f01e1d395788eb5b9d51dc33128644773f2225",
+      "task_id": "mt_cGlmNzgyOWUxZmRiZDczMDM2ZDEzNjMxMzYzY2NjMmIzOTg1MGFiYTk3",
+      "media_id": "1458509814211395",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "green",
+      "name": "金叶箭匠",
+      "inspiration": "卓尔背景的林地箭术题材",
+      "file": "green/goldleaf-fletcher/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "2108ca8b1ed6effdfa4feb13ccf8ebaecfc8f9d94a97009f81ca4e66fea16e21",
+      "task_id": "mt_cGlkYTBiMTZjOWI3YjdmYmJhYzMyNzFiYWY4OTI3ZjFjZjVkYTk4M2Q1",
+      "media_id": "1458510061815039",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "green",
+      "name": "草铃牧卫",
+      "inspiration": "熊战士的护群与林边聚落题材",
+      "file": "green/meadow-bell/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "adea5bf00248aeedc1f12b9a8b9e203efd3ef1163bc660def32d2334d5d8fe33",
+      "task_id": "mt_cGkwMDlmMTNlMzg3ZTYyOWJjNDM2ODJkODk3ZDUwZjgzN2I2YWM3OGY2",
+      "media_id": "1458510352966488",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "green",
+      "name": "荇草泥牛",
+      "inspiration": "古林沼地的动物群题材",
+      "file": "green/marsh-moss-bison/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "b4f0575b6c906680160c05b23550725860fe71a0ce8855ee21a2d35a8d111cf0",
+      "task_id": "mt_cGk3ZDY0MTIzZmJlZmY0OWE0OWFhZjRhOWM5NzRmN2I1MGNjNDViMzI5",
+      "media_id": "1458510914323292",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "color": "green",
+      "name": "孢伞捕手",
+      "inspiration": "林中孢粉及守护题材",
+      "file": "green/fern-catcher/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "36928531b6e8896946bb1fa069eefd1d0ae61a6afa0f6ce0843617416d065ca1",
+      "task_id": "mt_cGk0ZDU1ZjQ0YmVkMDQ2ZDk3ZjFiMThlMmRmYTE2YWQ0MzUxNGE0MTY5",
+      "media_id": "1458511163507509",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    }
+  ]
+}

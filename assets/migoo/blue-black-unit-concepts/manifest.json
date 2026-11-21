@@ -1,0 +1,112 @@
+{
+  "images": [
+    {
+      "name": "潮闸守卫",
+      "image": "blue-tide-warden/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "c11da57f2b0750075e35ab8d1a3a92ee0dcaf72dec6985a968a661314c0605a4",
+      "task_id": "mt_cGk3NGVhYWI0ZDI4YTZjZmM1N2ZmM2RlMWNlZjE5ZjZkMGMzY2M4YTQz",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458501883643137"
+    },
+    {
+      "name": "蓄灯侍从",
+      "image": "blue-lamplight-attendant/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "c7e734be127ff978bf7170ac719be85b8c17b21457e2171307cb9cb19d51534b",
+      "task_id": "mt_cGljYmI1ZjRlYmY4OTg1ZTBjOWM5NmI1ZDc0YjM4M2VkM2U0MzI5OWE4",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458501903541512"
+    },
+    {
+      "name": "棱镜炮手",
+      "image": "blue-glass-mortar/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "31c8de743ed0749f8d8bac4f28cd61abde911ce5fc5f1867d28262a9436d4f88",
+      "task_id": "mt_cGk5Mjg1NGNmMzkyZGUxOWVlZDZkYTIwOGZmYmVjMzk3MjJjMDdmMDdj",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458501923914574"
+    },
+    {
+      "name": "檐影斥候",
+      "image": "black-eaves-runner/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "e259d589190daa0086f92877264bb854e7eb04b51f9b0b4a1a8799d540e67ac7",
+      "task_id": "mt_cGk0NDNiMTA0YzZkNzcwNWNmYjQxYjRiYTNlZjEyYjcwMTk4MmJlZjZj",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458502189212905"
+    },
+    {
+      "name": "赏金弩手",
+      "image": "black-bounty-arbalist/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "e700d6008cd8b3ff8f2e7a2c7ddaf80a2a097019c58892adc31a3b7d6baf2e52",
+      "task_id": "mt_cGk0YWRhOTdjMzYxNjkyZDI4YmIzMzAxNDdkMjE5YzYxYjEyMWFkMDJi",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458502138586397"
+    },
+    {
+      "name": "撬墙工兵",
+      "image": "black-wall-sapper/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "e48e517e02fd5d8ab6cf4f9ce1bd6e658fc67e8eb1826183c90c5147c5b7dc49",
+      "task_id": "mt_cGk0YjRiZDdkNjZiYTE5MTU4YWJiNzRhYTM2OTZhMDY5ODdkZmE2NDU5",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458502220170078"
+    }
+  ]
+}

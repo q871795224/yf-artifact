@@ -1,0 +1,71 @@
+{
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "style": "单张竖版纯插画，全画幅，暗黑奇幻半写实厚涂，手绘笔触，材质清晰。构图独立创作。参考图只用于笔触、明暗或空间感，不沿用人物、姿势、构图或白边。主动作集中于中间区域，缩小后依然可辨；轮廓和道具完整，有前中远景，冷色魔法可搭配有节制的暖光。画满到四边，画面只含插画，无卡框、文字、数字、UI、箭头、网格、白边、logo、水印。",
+  "jobs": [
+    {
+      "slug": "five-point-lightning",
+      "name": "五点落雷",
+      "description": "一次打到中心和四邻。用斜俯视呈现雨夜石堡的十字路口，一根主雷柱击中交叉口，四条蓝白电弧分别沿四条石路贴地奔向外围。碎石与湿路面反光；前、后、左、右四条岔路清楚，只有一根从天垂直落下的主雷柱。",
+      "references": [
+        "output/blue-black-art-references/10412_psd.png",
+        "assets/migoo/spell-breakthrough-charge/original.png"
+      ]
+    },
+    {
+      "slug": "alley-ice-surge",
+      "name": "贯巷冰潮",
+      "description": "沿一条窄线连续打到前后两个目标。视线顺着狭长城巷望去，青白冰脊从前景一直长到远处，前面盾兵被抬起、后面一人正要回头。阳光从街上方斜切，结霜青灰石墙，高光集中在冰脊。只有一条纵向冰脊。",
+      "references": [
+        "output/blue-black-art-references/10277_psd.png",
+        "assets/migoo/spell-breakthrough-charge/original.png"
+      ]
+    },
+    {
+      "slug": "vortex-pull",
+      "name": "涡流牵阵",
+      "description": "把分散的敌人拉到一处。倾斜俯视，雾港泥滩中央是一处嵌在地面积水里的蓝绿旋涡，左右各一名披甲敌兵同时被向中心拖，鞋跟留下向内汇聚的两道泥痕，斗篷和溅起的水珠也奔向中心。铁灰天气，远处暗暖船灯。涡流贴地，中心没有门框或漩涡传送口。",
+      "references": [
+        "output/blue-black-art-references/10267_psd.png",
+        "assets/migoo/signature-gust/original.png"
+      ]
+    },
+    {
+      "slug": "frost-line",
+      "name": "霜线封路",
+      "description": "暂时封住通道。横向冷白冰脊从山桥左栏连到右栏，桥面前排守军急停扬起碎霜，远处侧翼从悬崖上的另一条栈道赶来。冰墙横贯画面，是一块坚实障碍；山间晨光给两侧岩壁少许暖色。",
+      "references": [
+        "output/blue-black-art-references/10277_psd.png",
+        "assets/migoo/spell-coordinated-march/original.png"
+      ]
+    },
+    {
+      "slug": "echo-reservoir",
+      "name": "回响蓄能",
+      "description": "把用过的法术转成之后可用的资源。深色圆形石质实验台中央悬着一枚靛蓝蓄能晶体，像回放一样，断裂的青紫法术光弧及细碎玻璃状光片从画面四周倒流向晶体；中央晶体边缘被逐段点亮。背后少量铜夹具与烛光，避免画成爆炸。",
+      "references": [
+        "output/blue-black-art-references/10307_psd.png",
+        "assets/custom/originals/spell-62017.png"
+      ]
+    },
+    {
+      "slug": "mirror-gate-reinforcements",
+      "name": "镜门补位",
+      "description": "把援军直接送入盾阵缺口。在潮湿的庭院中，左右两排友军举盾形成一道断线，中间缺口立起一道平整竖直的发光水镜，前景一名援兵已经跨出门槛、抬盾补上缺口，后面还有一名援兵跟进。半人高视角，盾列和空位很清楚，青蓝水镜对照石墙暖灯。",
+      "references": [
+        "output/blue-black-art-references/10355_psd.png",
+        "assets/migoo/spell-coordinated-march/original.png"
+      ]
+    },
+    {
+      "slug": "tower-core-resonance",
+      "name": "塔芯共振",
+      "description": "利用塔芯共振击穿外壳。傍晚的峡谷防线，低角度看一座高塔。近景原创施法者在塔下把一束细而稳定的钴蓝魔法送入露出的塔芯；蓝光裂纹从塔芯向上、向两侧扩散，外层几块较大的石壳脱落，塔身仍有清楚轮廓。没有天空落雷，不做全场爆炸。",
+      "references": [
+        "output/blue-black-art-references/10353_psd.png",
+        "assets/custom/originals/spell-62016.png"
+      ]
+    }
+  ]
+}

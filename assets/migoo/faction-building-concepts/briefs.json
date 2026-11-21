@@ -1,0 +1,62 @@
+{
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "style": "单张 9:16 全幅原创奇幻战场建筑插画。两张参考均为 Artifact Classic 无框原画，只取实在石材、松紧有别的手绘边缘、自然光线、色块和局部高光，建筑的几何、装饰、机位与背景全新构思。主体在中央占大面积，低频清楚的大轮廓，小图上能区分；焦点处提亮并保留暗部层次，有自然的空气透视。边缘连续满版，无卡框、字、数字、UI、箭头、棋盘、logo、水印和白边。画里无需英雄或大型战斗。",
+  "jobs": [
+    {
+      "slug": "radiant-watchtower",
+      "name": "天辉防御塔",
+      "description": "一座偏细长的防御塔，由三段浅灰石砌成，顶端一圈悬挑护栏托住向右侧前线开口的短弩炮台。棕铜机械仅在炮口和支架有一点暖光，塔身一侧有藤蔓，另一侧保留素石。斜仰看山口晴天，亮云拉开细长剪影，塔自身有完整塔脚和塔顶。",
+      "references": [
+        "output/blue-black-art-references/10353_psd.png",
+        "output/blue-black-art-references/10355_psd.png"
+      ]
+    },
+    {
+      "slug": "radiant-ancient",
+      "name": "天辉基地核心",
+      "description": "一块原创琥珀色矿芯盘踞在两面低矮的弧形石肋之间，粗大的根系从石肋下伸进大地。构图宽厚稳定，前景有矮矮的浅青苔石阶；大块暖光从林窗只落在矿芯和根茎连接处。没有细长塔楼，给人整个营地共用的核心感。",
+      "references": [
+        "output/blue-black-art-references/10355_psd.png",
+        "output/blue-black-art-references/10138_psd.png"
+      ]
+    },
+    {
+      "slug": "radiant-fountain",
+      "name": "天辉泉水",
+      "description": "低视角看两层横宽的浅灰石水盘，泉水从错开的石唇流到较宽的下盘，近景水纹和薄苔完整。林间米金晨光落到水沿，背后是松散的宽阔浅木桥和蕨叶。水面是视觉中心，周边石料轻浅，青绿色主要来自清水反光。",
+      "references": [
+        "output/blue-black-art-references/10138_psd.png",
+        "output/blue-black-art-references/10267_psd.png"
+      ]
+    },
+    {
+      "slug": "dire-bastion-tower",
+      "name": "夜魇防御塔",
+      "description": "孤立暗铁与赭石混砌的守塔，宽脚收腰，靠上是伸出的一截黑铁弩臂，两片厚斜板保护炮口。斜仰视角中，在苍白雨云前让建筑轮廓很清晰，日光从烟云空隙擦过塔身和几颗铜钉。红色只落在塔侧一块退色营旗和炮口砧痕。",
+      "references": [
+        "output/blue-black-art-references/10353_psd.png",
+        "output/blue-black-art-references/10177_psd.png"
+      ]
+    },
+    {
+      "slug": "dire-ancient",
+      "name": "夜魇基地核心",
+      "description": "一团深红矿芯压在三片向内倾的厚黑岩片下，岩片像断裂山脊，有明显层理和低矮、展开的底座。从入口石阶斜看，矿芯透光集中在低位几条缝隙，远处有灰紫暮色和开裂的石坪。整体看起来沉重，三大片岩石形状各异。",
+      "references": [
+        "output/blue-black-art-references/10323_psd.png",
+        "output/blue-black-art-references/10177_psd.png"
+      ]
+    },
+    {
+      "slug": "dire-fountain",
+      "name": "夜魇泉水",
+      "description": "一座火山岩庭院里的低矮温泉池，粗糙的黑石池沿很宽，一面短墙的三道青铜出水嘴流出暗琥珀色矿泉，水面有一小层天然蒸汽。画面以可读的平宽池形为主，雨后紫灰天光提亮边缘，暖高光只在铜嘴和池面反射，保持水的清澈与流动。",
+      "references": [
+        "output/blue-black-art-references/10267_psd.png",
+        "output/blue-black-art-references/10323_psd.png"
+      ]
+    }
+  ]
+}

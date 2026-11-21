@@ -1,0 +1,112 @@
+{
+  "images": [
+    {
+      "name": "天辉防御塔",
+      "image": "radiant-watchtower/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "769367f72ceee93f267fb8b6795b3bbfd91c51f75fa6411b9946ed9ce76cbe7d",
+      "task_id": "mt_cGkxZDQ2ZjYxMzFkNWY5ZWRjZjNkYmNmYWI4ZDM5OWRhNTE1OTNiMjdi",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458514947106038"
+    },
+    {
+      "name": "天辉基地核心",
+      "image": "radiant-ancient/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "65c2c8693d8ce9499b36762c004a04a926506a2dd9ca782063c0cb5243a4db9c",
+      "task_id": "mt_cGkzMThkZjMxNmZjMjRkMWZkOWI0ZWQ4Njk4N2NkMzk0NGE0NTNhZTg5",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458514901050181"
+    },
+    {
+      "name": "天辉泉水",
+      "image": "radiant-fountain/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "08a05a239896e2e4066c01b00773ee667c7b97bb09ccecaeba3657f455b42eea",
+      "task_id": "mt_cGk5ZjA0NzI4ZTZlNjBkYWZiMGMzMDg1MTkwYTU3ZDRhZTg5OTkxZTY3",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458514906752276"
+    },
+    {
+      "name": "夜魇防御塔",
+      "image": "dire-bastion-tower/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "4f40de6fe6593323a95faec90fa1eb429971722d89c25ccf0c9bfe241c0bcfab",
+      "task_id": "mt_cGkzMjcxNTE0NzVjOWNhY2ExZTk0MDU3NDdhODhjMTAxMzNjNzU3NjVk",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458515157714191"
+    },
+    {
+      "name": "夜魇基地核心",
+      "image": "dire-ancient/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "f06451be047bcee465e55bb426125cd7db793825574ff2e1d24f96ba6ff86cb0",
+      "task_id": "mt_cGk0YjI1ZjRhYzFlZDI4M2NjNmFkYjg3MDQ0NTRmZWU3ZjRmNTRjMGQ2",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458515175793913"
+    },
+    {
+      "name": "夜魇泉水",
+      "image": "dire-fountain/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "a791975035984632c580bacc1960c90b3e4162146a9ce7c1cffa9fd6e2ab3b09",
+      "task_id": "mt_cGkzODI5YzU2OWIxYzY4NzNiYzQwZjZiOTI3MzI5NTVlZDA2NmVkODUx",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458515162178832"
+    }
+  ]
+}

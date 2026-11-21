@@ -1,0 +1,385 @@
+{
+  "count": 20,
+  "images": [
+    {
+      "name": "原力法杖",
+      "inspiration": "位移与救援",
+      "file": "equipment/force-staff/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "e0d3679d80ea63fbff77078a6b30fc789eb2043e24bda67587b2ecd2ee27c22c",
+      "task_id": "mt_cGkyNTM4YzcxN2RlZTg2ZGY1M2Y4ZWU4N2FlZTE3NTdhZTEwMjNkNTY3",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458512508175599"
+    },
+    {
+      "name": "风杖",
+      "inspiration": "卷风隔离",
+      "file": "equipment/euls-scepter/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "ba69f50287fef6cfcc1d972b847e78ae44223f0febb268543f6450d3da479f52",
+      "task_id": "mt_cGk4MjIwZjRmYzMxZmNkN2RhZGMxNGYyNzIyODBiMDJiOGNjMWQ0ODM1",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458512726877458"
+    },
+    {
+      "name": "幽魂权杖",
+      "inspiration": "抵御物理攻势",
+      "file": "equipment/ghost-scepter/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "b7a3c6b107bf695227784933ad32ce146a53e4a9878c58938a3e3366c362b85f",
+      "task_id": "mt_cGkyOWE2MWI1NjQxYzAxYjlhMGM4NDU3NmJkNGM2OTViMWM2ZTY5NTg1",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458512511542088"
+    },
+    {
+      "name": "微光披风",
+      "inspiration": "掩护与魔法防护",
+      "file": "equipment/glimmer-cape/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "5327f90d187689119dd4b2f3bbde5079fb227b03eab3d8c27cc2b8b7989a6115",
+      "task_id": "mt_cGkxMTU3MTg3ZTNhM2M4OTYyOTgzYmY5Zjk2YWFiNTIzNzJjY2M4NDI2",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458512903562515"
+    },
+    {
+      "name": "清莲宝珠",
+      "inspiration": "法术反馈",
+      "file": "equipment/lotus-orb/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "f70d1fd51ac233885cd71613c6292a78294f8451ea61ff4550b8e04968e1b7f3",
+      "task_id": "mt_cGk2M2Q3NGRmYjBmYWI3NmI3NDA3ZmRkZDE2MTNjZTMwYWUzNzg0Nzhj",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458512914965738"
+    },
+    {
+      "name": "林肯法球",
+      "inspiration": "阻挡指向法术",
+      "file": "equipment/linkens-sphere/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "0c2726a9934c3cb240d710cd10f933e07eeb55a3c9c4ac617ade359074c72244",
+      "task_id": "mt_cGkxNDNkYzI5M2YxNDEyZTcwNDJhMDAzMWIwYjMyMmQ2OTRiYTNmMjlh",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458512922682646"
+    },
+    {
+      "name": "阿托斯之棍",
+      "inspiration": "定身",
+      "file": "equipment/rod-of-atos/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "05bae582578d2a142d8d942d2f362939d238e44644c3ba18ea2d706ba29bfd23",
+      "task_id": "mt_cGkxMmQ5MDUwY2ZmZWU0ZTNlMDk1NDcwZDc0NDY3NGM3YmVlY2U2YmIw",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458513154344216"
+    },
+    {
+      "name": "黯灭",
+      "inspiration": "破甲",
+      "file": "equipment/desolator/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "f20789748b91c54821638db3b558eb21abea3b0dd509c6f5306011309507498d",
+      "task_id": "mt_cGkxN2MxZTg0Mjk4ZjRmMzA4Nzk5NWQxMmEwMjVjMjQzMDgzYzdlNTRm",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458513125213456"
+    },
+    {
+      "name": "飓风长戟",
+      "inspiration": "推离与远程对抗",
+      "file": "equipment/hurricane-pike/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "85e792e59acd6ceff3260ab5cc36ad7272d1bec117a738a5ed2204c2f7cd1b7c",
+      "task_id": "mt_cGljNzhmOTgwZWViMzM0MTkwNTRkY2VlMWE1Yjc4YjEwYjQxODI0ZGYw",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458513111737577"
+    },
+    {
+      "name": "否决坠饰",
+      "inspiration": "持续驱散",
+      "file": "equipment/nullifier/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "453612e6f365ba13e6fc09a39c79c6c88ba5bda25900490894312f960d145166",
+      "task_id": "mt_cGllOGRhNTEzMWJmZDY1Mzc0M2U1NDQ5OTJkYTliNGY4MTA5Mjc4M2Q0",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458513348224251"
+    },
+    {
+      "name": "洞察烟斗",
+      "inspiration": "团队魔法防护",
+      "file": "equipment/pipe/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "3c1c43438cddc1b1beda401489750b9f4db0469cf190186852e2e54ae480e4db",
+      "task_id": "mt_cGk2NWJkY2YzNzAxZDdmNDRkNmY0YjA1NDgxOGRhODA3ZThhMzQ0M2I0",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458513358767364"
+    },
+    {
+      "name": "赤红甲",
+      "inspiration": "抵挡普攻",
+      "file": "equipment/crimson-guard/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "d559789c04c3151610211848f6f99904f2c89a67a23b95d68a375813086ec61d",
+      "task_id": "mt_cGkyMTJhZWJiZjA2OTk1ODgzNjM0YmNlYmVlZTZkNTFjZGQzYmNmYmIx",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458513366000469"
+    },
+    {
+      "name": "深渊之刃",
+      "inspiration": "近身强控",
+      "file": "equipment/abyssal-blade/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "5dac211f4312040804f683356e9e904b42c445acabc4acc333628f6d88495f7a",
+      "task_id": "mt_cGk0NTViZTk3MzQ2NjIzYzY0ZDE4YjdmZWNmZTYxYzA1NjA2MzZkYjE3",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458513595540315"
+    },
+    {
+      "name": "白银之锋",
+      "inspiration": "潜入与破被动",
+      "file": "equipment/silver-edge/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "1e07094c3085cb554799d0c2a42b3c552a1329544c65af79b757d4b5f39e7301",
+      "task_id": "mt_cGkwYzU2MGU5NjM5YzhiNzljNTYzMGY4OWE1Y2VlZWQ1MDNhZWQ1NjBk",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458513598530397"
+    },
+    {
+      "name": "斯嘉蒂之眼",
+      "inspiration": "减缓目标",
+      "file": "equipment/skadi/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "dd4926933911ec5f3fbca7fc27f58d49305c7bbaa914047445a53c586669ac46",
+      "task_id": "mt_cGk3Y2RhMmQ4ZmU0OTJjZDdkYWI4ZDNiMGQ0MzI5YWI2NWMwMDA1Zjc4",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458513576297711"
+    },
+    {
+      "name": "虚灵之刃",
+      "inspiration": "虚无与法术协同",
+      "file": "equipment/ethereal-blade/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "42d7746261be396537832e006200ce1be5f12712d9b4f34658b5eea0782817ff",
+      "task_id": "mt_cGkxYWU5NGQ1NzFhNWFmYTU5YzA1Yjk5ZjJlNzRiYWFjMjkyMDZkOTU1",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458513817936706"
+    },
+    {
+      "name": "护卫盾",
+      "inspiration": "物理护盾",
+      "file": "equipment/pavise/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "9bd560d83f833db838665677e18e0a63586ef28660804c71402a01dd18491da3",
+      "task_id": "mt_cGk0NjA5MDVmYTY1ZWQyYTBiYjM1YzFmMzMzNTdlYjU1MWIxMjZhODBm",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458513801905378"
+    },
+    {
+      "name": "永恒之盘",
+      "inspiration": "避免瞬间被击倒",
+      "file": "equipment/aeon-disk/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "bb7d2edcf4ec5ecf491e1079e0e06e6eec89f69456b19a35bb573a1a5ad44a11",
+      "task_id": "mt_cGliYmM4YzBiMGIxZjUyNTAxOWMyYTFlMTBkMDMxZTRjOTA5MWM5MDcw",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458513809409290"
+    },
+    {
+      "name": "幻影斧",
+      "inspiration": "分身与解控",
+      "file": "equipment/manta/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "9abfca2878d44c1a9464998cf6d20f4d497d497a6316effad8c008a5e53005a3",
+      "task_id": "mt_cGlmYzBhODQ1MjkzOTg2M2VkMzgyMWRmMmRkZDc5MTk2MTZjNWQwYWEw",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458514045084465"
+    },
+    {
+      "name": "宽容之靴",
+      "inspiration": "带队赶路与脱离",
+      "file": "equipment/boots-of-bearing/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "d3e1ebe73f38fda0696d66def432b6227ea7ea86160099dfe876b1b29ec75ee4",
+      "task_id": "mt_cGk0ZTE4ZWFhMDFmZmUwMDkyNTE2MDkzM2I0MGY4MDRkYzUwNzI0NTQ2",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458514033509642"
+    }
+  ]
+}

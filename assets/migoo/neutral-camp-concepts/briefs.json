@@ -1,0 +1,142 @@
+{
+  "model": "gpt-image-26-flare",
+  "ratio": "9:16",
+  "resolution": "1K",
+  "style": "单张 9:16 竖版、满幅原创奇幻普通单位插画。两张上传图均为 Artifact Classic 无框原画，用参考图的手绘笔触、色块、材质和边缘处理。场景、人物和生物造型、机位、动作都重新设计。普通单位的剪影和专属器物明确，在小卡能分辨；近景层次清楚，远景大色块松笔，高光收在眼、手、器物或生物壳纹这些焦点。局部点亮，其他部分保留可读的明暗层次。不要因为单位颜色把整张加同色滤镜。不需要英雄式披风、金属堆叠或发光神器，按本张具体形体和职业画。色彩自然，材质有差异，使用一致的手绘卡牌美术语言。画面延伸到四边，无卡框、文字、数字、白边、logo、UI、水印。",
+  "jobs": {
+    "neutral": [
+      {
+        "color": "neutral",
+        "slug": "reed-kobold",
+        "name": "芦灯掘工",
+        "inspiration": "狗头人营地",
+        "brief": "矮壮的长耳矿穴小妖，钻出盐碱洞，高举用植物绒纤和赤铁矿拼成的灯，腰挂小锄头。强剪影是兔形耳朵和宽釉灯。鹅卵石灰地与朱褐帽，原创种族面貌。",
+        "references": [
+          "output/blue-black-art-references/10137_psd.png",
+          "output/blue-black-art-references/10129_psd.png"
+        ]
+      },
+      {
+        "color": "neutral",
+        "slug": "chalkback-ogre",
+        "name": "白脊食人魔",
+        "inspiration": "食人魔营地",
+        "brief": "体型像搬运工的单头食人魔，背挂粗石板，双手用藤条缠一块圆扁棍，背脊天然白纹。高曙草地、浅土黄与湖绿，画面粗布和石灰强区分，原创服装与武器。",
+        "references": [
+          "output/blue-black-art-references/10092_psd.png",
+          "output/blue-black-art-references/10323_psd.png"
+        ]
+      },
+      {
+        "color": "neutral",
+        "slug": "gullcrest-harpy",
+        "name": "浮礁鸮妖",
+        "inspiration": "鹰身女妖营地",
+        "brief": "栖息在海蚀柱上的原创鸮翼生物，冠毛仿浪尖，宽翼近白、下肢像水鸟脚。盘旋下降露腹部，晨光打在少量羽毛，海青与礁壁相间。",
+        "references": [
+          "output/blue-black-art-references/10138_psd.png",
+          "output/blue-black-art-references/10355_psd.png"
+        ]
+      },
+      {
+        "color": "neutral",
+        "slug": "blackroot-satyr",
+        "name": "根冠林魔",
+        "inspiration": "萨特营地",
+        "brief": "原创鹿腿灵居者，瘦肩单手抱住空心树根，头有向背后分开的扁枝角，米色长毛沿腰。苔石与暗棕林地，侧日照有灰绿，表情机警。",
+        "references": [
+          "output/blue-black-art-references/10137_psd.png",
+          "output/blue-black-art-references/10328_psd.png"
+        ]
+      },
+      {
+        "color": "neutral",
+        "slug": "redgravel-centaur",
+        "name": "赭砾巡牧",
+        "inspiration": "半人马营地",
+        "brief": "原创四足半人马巡牧者，花斑马身，上身穿亚麻与浸油革，臂挎宽钝木刃。沿赭砾山坡下行，野花和拦路野石点到即止，造型偏游牧而非竞技兵。",
+        "references": [
+          "output/blue-black-art-references/10092_psd.png",
+          "output/blue-black-art-references/10328_psd.png"
+        ]
+      },
+      {
+        "color": "neutral",
+        "slug": "bellfang-wolf",
+        "name": "响铃独狼",
+        "inspiration": "狼群营地",
+        "brief": "白颈灰狼张大耳朵，嘴咬有洞的铜铃执骨，耳尖侧光清楚。草甸枯雪厚实，身体斜跃，身上没有人造盔甲。以表情与长耳区分单位轮廓。",
+        "references": [
+          "output/blue-black-art-references/10328_psd.png",
+          "output/blue-black-art-references/10129_psd.png"
+        ]
+      },
+      {
+        "color": "neutral",
+        "slug": "barkjaw-troll",
+        "name": "树钉投矛怪",
+        "inspiration": "巨魔营地",
+        "brief": "原创青灰长肢巨魔用一只赤脚踩住树干，用削木石片把细长骨矛磨尖，头上头巾结两短翅，远处有一小片晴日林地。瘦长体型和矛尖受暖光。",
+        "references": [
+          "output/blue-black-art-references/10138_psd.png",
+          "output/blue-black-art-references/10328_psd.png"
+        ]
+      },
+      {
+        "color": "neutral",
+        "slug": "rush-wing",
+        "name": "蒲苇大枭",
+        "inspiration": "野翼营地",
+        "brief": "巨大短喙野枭绕着芦苇间的水龙卷，把铺开的翼羽朝水面倾斜。绿褐羽面保留自然光，卷流很细，天空宽亮，重点是翅膀和眼。",
+        "references": [
+          "output/blue-black-art-references/10138_psd.png",
+          "output/blue-black-art-references/10355_psd.png"
+        ]
+      },
+      {
+        "color": "neutral",
+        "slug": "flint-golem",
+        "name": "燧片泥偶",
+        "inspiration": "泥土傀儡营地",
+        "brief": "方块状矮小泥偶踩入湿沙，双臂是并拢的燧石薄片，头顶裹一层硬泥。暖水反光照在燧石边缘，湿沙柔软对照尖硬胳膊。头身比例怪异可辨。",
+        "references": [
+          "output/blue-black-art-references/10323_psd.png",
+          "output/blue-black-art-references/10138_psd.png"
+        ]
+      },
+      {
+        "color": "neutral",
+        "slug": "tidal-ancient",
+        "name": "雷滩披甲兽",
+        "inspiration": "远古雷蜥营地",
+        "brief": "四足宽背爬行兽在潮间滩饮水，脊背像三道突出的圆片礁石，尾端缓弯，嘴边少量水气。夜雷远在云后，日照刚扫过兽甲。原创鳞片分区与体型。",
+        "references": [
+          "output/blue-black-art-references/10323_psd.png",
+          "output/blue-black-art-references/10267_psd.png"
+        ]
+      },
+      {
+        "color": "neutral",
+        "slug": "granite-towerback",
+        "name": "石塔脊巨灵",
+        "inspiration": "远古石傀儡营地",
+        "brief": "层叠花岗岩结成的古老巨灵探身跨一条干河，肩部有矮台般的石块，手掌像两扇石门。苍灰天空与赭色断层松笔，重点是比例而非光效。",
+        "references": [
+          "output/blue-black-art-references/10323_psd.png",
+          "output/blue-black-art-references/10092_psd.png"
+        ]
+      },
+      {
+        "color": "neutral",
+        "slug": "cinder-saurian",
+        "name": "煤翼幼龙",
+        "inspiration": "黑龙营地",
+        "brief": "煤灰短翅幼龙在废窑侧墙攀爬，双翼一抬一收，颊有少量暖亮短鳞，尾巴生出独特的锯形骨板。熄火石窑透进傍晚光，原创龙体与头部形状。",
+        "references": [
+          "output/blue-black-art-references/10353_psd.png",
+          "output/blue-black-art-references/10323_psd.png"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,896 @@
+{
+  "model": "gpt-image-26-flare",
+  "ratio": "9:16",
+  "resolution": "1K",
+  "style": "单张 9:16 竖版、满幅原创奇幻普通单位插画。两张上传图均为 Artifact Classic 无框原画，用参考图的手绘笔触、色块、材质和边缘处理。场景、人物和生物造型、机位、动作都重新设计。普通单位的剪影和专属器物明确，在小卡能分辨；近景层次清楚，远景大色块松笔，高光收在眼、手、器物或生物壳纹这些焦点。局部点亮，其他部分保留可读的明暗层次。不要因为单位颜色把整张加同色滤镜。不需要英雄式披风、金属堆叠或发光神器，按本张具体形体和职业画。色彩自然，材质有差异，使用一致的手绘卡牌美术语言。画面延伸到四边，无卡框、文字、数字、白边、logo、UI、水印。",
+  "jobs": {
+    "red": [
+      {
+        "color": "red",
+        "slug": "ash-drummer",
+        "name": "余烬鼓手",
+        "inspiration": "斧王背景的红雾军团",
+        "brief": "粗壮女鼓手将一面浅铜战鼓横挎在胸前，皮鼓面和锤头照到落日，远处旱草泛金。鼓与举锤动作构成完整剪影，军中传令与冲锋节奏题材。",
+        "references": [
+          "output/blue-black-art-references/10092_psd.png",
+          "output/blue-black-art-references/10323_psd.png"
+        ]
+      },
+      {
+        "color": "red",
+        "slug": "brass-ram",
+        "name": "铜额撞兽",
+        "inspiration": "半人马竞技文化",
+        "brief": "巨大的四足野羊，额前是有撞击凹痕的方铜护额，毛色灰白，压低前腿准备顶撞。风吹过开阔的高地草坡，画角上用一小段围栏交代体型。",
+        "references": [
+          "output/blue-black-art-references/10092_psd.png",
+          "output/blue-black-art-references/10177_psd.png"
+        ]
+      },
+      {
+        "color": "red",
+        "slug": "field-forger",
+        "name": "随军砧匠",
+        "inspiration": "军团指挥官的守城题材",
+        "brief": "深肤色女砧匠单膝在便携砧台旁，锤落在待修的护胸上。少量火星照着围裙褶皱，背后是傍晚城门和深青的平静面。",
+        "references": [
+          "output/blue-black-art-references/10092_psd.png",
+          "output/blue-black-art-references/10323_psd.png"
+        ]
+      },
+      {
+        "color": "red",
+        "slug": "pit-standard",
+        "name": "斗场旗手",
+        "inspiration": "半人马战行者的竞技场题材",
+        "brief": "长身棕白半人马卷起一面有破口的赭红长旗，旗杆顺着强烈的起跑倾角。侧逆光扫过四蹄和沙尘，围栏退在浅色远景。",
+        "references": [
+          "output/blue-black-art-references/10092_psd.png",
+          "output/blue-black-art-references/10177_psd.png"
+        ]
+      },
+      {
+        "color": "red",
+        "slug": "ash-wrestler",
+        "name": "熔沟摔手",
+        "inspiration": "斧王背景的红雾军团",
+        "brief": "宽背赤臂摔手套着一只巨大的朴素铁环护手，俯身在赭石峡壁之间，另一手抓一条训练用皮带。晨间冷光和铁环小暖高光。",
+        "references": [
+          "output/blue-black-art-references/10092_psd.png",
+          "output/blue-black-art-references/10328_psd.png"
+        ]
+      },
+      {
+        "color": "red",
+        "slug": "magma-salamander",
+        "name": "炭背蜥",
+        "inspiration": "熔岩地带的野生生物",
+        "brief": "肥厚橘黑火蜥从冷却熔岩管伸出三趾脚，背板间只有几粒微红炭光，湿黑岩石和明暗相间的天光交代其真实动物感。",
+        "references": [
+          "output/blue-black-art-references/10323_psd.png",
+          "output/blue-black-art-references/10092_psd.png"
+        ]
+      },
+      {
+        "color": "red",
+        "slug": "spear-yard",
+        "name": "枪阵教头",
+        "inspiration": "军团指挥官的守城题材",
+        "brief": "退役老兵用一把刃形长枪拨正附近一根练习木桩，身材瘦高、鼻梁和手指有局部阳光，背景是上午空旷的训练场，不出现其他士兵。",
+        "references": [
+          "output/blue-black-art-references/10092_psd.png",
+          "output/blue-black-art-references/10177_psd.png"
+        ]
+      },
+      {
+        "color": "red",
+        "slug": "shield-donkey",
+        "name": "盾驮骡",
+        "inspiration": "近卫军的行军后勤题材",
+        "brief": "灰耳骡驮着两面有皮带的旧红木盾，圆盾侧挂、额头有一条简单礼饰，走在石桥上。暖侧光落在鞍具，远景是暮色河谷。",
+        "references": [
+          "output/blue-black-art-references/10092_psd.png",
+          "output/blue-black-art-references/10328_psd.png"
+        ]
+      },
+      {
+        "color": "red",
+        "slug": "pike-rookie",
+        "name": "断枪新兵",
+        "inspiration": "军团指挥官的守城题材",
+        "brief": "脸有雀斑的新兵仍拿断了一截的枪杆守门，双手在胸前离得很开，手臂只裹布衣和一块铁前臂片。阴天明亮石廊下，有少年紧张感。",
+        "references": [
+          "output/blue-black-art-references/10092_psd.png",
+          "output/blue-black-art-references/10129_psd.png"
+        ]
+      },
+      {
+        "color": "red",
+        "slug": "forge-rammer",
+        "name": "嵌钉撞手",
+        "inspiration": "基恩机械与城门攻坚题材",
+        "brief": "矮个工兵两手抓一具带皮肩垫的短撞杆，前端是四颗巨大铆钉组成的圆盘。背后磨成灰的石门，手和撞杆被侧面火把照亮。",
+        "references": [
+          "output/blue-black-art-references/10323_psd.png",
+          "output/blue-black-art-references/10092_psd.png"
+        ]
+      },
+      {
+        "color": "red",
+        "slug": "ember-wasp",
+        "name": "灰烬黄蜂",
+        "inspiration": "炽火魔法与火山生物题材",
+        "brief": "鸟大的野生红腹黄蜂停在玄武岩边缘，细腰、深茶网翼、三色硬壳形成鲜明外形。短促的橙高光照着翅缘，青色天空留空间。",
+        "references": [
+          "output/blue-black-art-references/10323_psd.png",
+          "output/blue-black-art-references/10353_psd.png"
+        ]
+      },
+      {
+        "color": "red",
+        "slug": "arena-net",
+        "name": "斗场投网手",
+        "inspiration": "半人马竞技文化",
+        "brief": "赤足女投网手把一张用小铁锤压角的粗麻网甩出半圈，宽阔披肩和网络形状形成两个大色块，阴凉看台与白色砂地。",
+        "references": [
+          "output/blue-black-art-references/10092_psd.png",
+          "output/blue-black-art-references/10328_psd.png"
+        ]
+      },
+      {
+        "color": "red",
+        "slug": "smoke-rescue",
+        "name": "烟脊救兵",
+        "inspiration": "军团指挥官的守城题材",
+        "brief": "中年守军背着折叠担架，单手用厚羊毡挡住飞火从屋檐下钻出，斗篷挽起，烟后天光勾轮廓。用装备讲战线救援。",
+        "references": [
+          "output/blue-black-art-references/10092_psd.png",
+          "output/blue-black-art-references/10177_psd.png"
+        ]
+      },
+      {
+        "color": "red",
+        "slug": "cliff-falcon",
+        "name": "赤岩猎隼",
+        "inspiration": "兽王的山野狩猎题材",
+        "brief": "一只胸腹锈红的猎隼张开宽翅拂过崖顶，脚上有老旧皮绳、眼旁一线金光，背后淡紫大山和无边天色。以飞禽的姿态拉开造型。",
+        "references": [
+          "output/blue-black-art-references/10328_psd.png",
+          "output/blue-black-art-references/10129_psd.png"
+        ]
+      },
+      {
+        "color": "red",
+        "slug": "iron-distiller",
+        "name": "沸壶兵",
+        "inspiration": "基恩机械与城防题材",
+        "brief": "圆鼓鼓的黑铜压力壶架在老兵后背，以一根短粗耐热管连着双手握持的喇叭口喷头。小汤勺状泄压器在壶顶，浴场废墟上有暖雾，重色器械。",
+        "references": [
+          "output/blue-black-art-references/10323_psd.png",
+          "output/blue-black-art-references/10092_psd.png"
+        ]
+      },
+      {
+        "color": "red",
+        "slug": "march-horn",
+        "name": "长号引路人",
+        "inspiration": "红雾军团的行军题材",
+        "brief": "一位戴耳饰的瘦高山地号手把长长的弯铜号举到肩上，器物弧面和左手被拂晓点亮。长号从一端到另一端可辨，赭红旗布挂在肩部而非背景。",
+        "references": [
+          "output/blue-black-art-references/10092_psd.png",
+          "output/blue-black-art-references/10177_psd.png"
+        ]
+      },
+      {
+        "color": "red",
+        "slug": "buckler-duelist",
+        "name": "双环拳手",
+        "inspiration": "半人马竞技文化",
+        "brief": "铁灰肤色的角斗拳手套两块结构不同的环形拳盾，双拳一高一低，弓步站在褪色斗场木板上。只给环边与眼睛一点亮。",
+        "references": [
+          "output/blue-black-art-references/10092_psd.png",
+          "output/blue-black-art-references/10308_psd.png"
+        ]
+      },
+      {
+        "color": "red",
+        "slug": "red-carapace",
+        "name": "裂地甲虫",
+        "inspiration": "荒原的巨型节肢生物",
+        "brief": "一只野生血红甲虫正用宽额两角翻起一整块土，六足在白石碎片间能分别看清。朝阳在翘壳形成淡亮边，暗红甲壳哑光。",
+        "references": [
+          "output/blue-black-art-references/10323_psd.png",
+          "output/blue-black-art-references/10092_psd.png"
+        ]
+      },
+      {
+        "color": "red",
+        "slug": "parade-cook",
+        "name": "铁勺伍长",
+        "inspiration": "军团远征的营地后勤",
+        "brief": "灰白卷发大厨把长柄铁勺和一束木薪夹在臂弯，厚手套、翻起袖口和旧军徽暗示老兵。暖灶口占小块，背景是雾雨里的坡营。",
+        "references": [
+          "output/blue-black-art-references/10092_psd.png",
+          "output/blue-black-art-references/10322_psd.png"
+        ]
+      },
+      {
+        "color": "red",
+        "slug": "chain-bearer",
+        "name": "拖链巨兵",
+        "inspiration": "高地蛮族与攻城军题材",
+        "brief": "肥宽的灰肤双臂巨兵肩扛盘成一圈的粗锻链条，链条尾巴拖在坡道，白色石壁让深轮廓醒目。脖子有皮质劳动护垫而非贵族装饰。",
+        "references": [
+          "output/blue-black-art-references/10092_psd.png",
+          "output/blue-black-art-references/10177_psd.png"
+        ]
+      }
+    ],
+    "black": [
+      {
+        "color": "black",
+        "slug": "roof-ink-crow",
+        "name": "墨翅信鸦",
+        "inspiration": "幻影刺客组织的隐秘通信题材",
+        "brief": "一只原创新鸦停在有断损的烟囱口，腿环夹一支蜡封细管，半展翅膀形似黑扇。明亮雾天映出羽毛光泽。",
+        "references": [
+          "output/blue-black-art-references/10129_psd.png",
+          "output/blue-black-art-references/10416_psd.png"
+        ]
+      },
+      {
+        "color": "black",
+        "slug": "veil-tailor",
+        "name": "裁影师",
+        "inspiration": "幻影刺客组织的潜行训练题材",
+        "brief": "蒙住一只眼的老妇把一块薄灰布展开，背光下布边像溶进窗影，远处衣架构成松笔。厚木桌、磨损剪刀，焦点是织物和手势。",
+        "references": [
+          "output/blue-black-art-references/10129_psd.png",
+          "output/blue-black-art-references/10308_psd.png"
+        ]
+      },
+      {
+        "color": "black",
+        "slug": "salt-bounty",
+        "name": "盐路追猎者",
+        "inspiration": "赏金猎人的委托题材",
+        "brief": "浅灰斗笠下的年轻异族追猎者牵细绳和一面缠布短圆盾，在刺白盐地蹲下勘察一串足迹，披沙色斗篷，影子偏蓝。",
+        "references": [
+          "output/blue-black-art-references/10416_psd.png",
+          "output/blue-black-art-references/10092_psd.png"
+        ]
+      },
+      {
+        "color": "black",
+        "slug": "signet-broker",
+        "name": "封蜡掮客",
+        "inspiration": "赏金交易和泰勒庄园题材",
+        "brief": "矮小商贩立在木柜窗口，掌心托出铜印戒与半凝固的蜡封，另一手关住柜窗。紫褐衣料与暖灯相对，像人物职业肖像。",
+        "references": [
+          "output/blue-black-art-references/10322_psd.png",
+          "output/blue-black-art-references/10416_psd.png"
+        ]
+      },
+      {
+        "color": "black",
+        "slug": "crypt-leech",
+        "name": "墓泥蛭",
+        "inspiration": "瘟疫法师的疫区意象",
+        "brief": "半透明腹部的铁灰巨蛭盘在坍塌墓阶，首端有四片短骨板，局部透出淡褐分节。无剑甲人，水气和湿苔体现墓园生境。",
+        "references": [
+          "output/blue-black-art-references/10404_psd.png",
+          "output/blue-black-art-references/10354_psd.png"
+        ]
+      },
+      {
+        "color": "black",
+        "slug": "marsh-stilt",
+        "name": "踩泽行者",
+        "inspiration": "夜间潜行与沼泽地形题材",
+        "brief": "细长人在泥泽上踩着两根弯竹高跷，胸前背扁包，一根线从指间垂到水面探路，背景是浅雾芦苇。机位拉开看全身和长腿剪影。",
+        "references": [
+          "output/blue-black-art-references/10129_psd.png",
+          "output/blue-black-art-references/10404_psd.png"
+        ]
+      },
+      {
+        "color": "black",
+        "slug": "mask-tumbler",
+        "name": "铜面翻手",
+        "inspiration": "幻影刺客组织的伪装题材",
+        "brief": "街头杂耍人把椭圆半面具翻到一半，穿带灰绿菱格的短衣单腿旋身，台下无观众焦点。落日前一线光照在铜面与靴尖。",
+        "references": [
+          "output/blue-black-art-references/10308_psd.png",
+          "output/blue-black-art-references/10129_psd.png"
+        ]
+      },
+      {
+        "color": "black",
+        "slug": "bell-silencer",
+        "name": "断铃修士",
+        "inspiration": "秘密结社与法术干扰题材",
+        "brief": "闭眼修士用长木夹夹住铸钟内摆锤，左侧大钟占半幅，当机动作克制。阴凉塔楼、橙铜和灰蓝，亮点在夹口。",
+        "references": [
+          "output/blue-black-art-references/10308_psd.png",
+          "output/blue-black-art-references/10354_psd.png"
+        ]
+      },
+      {
+        "color": "black",
+        "slug": "canal-trapper",
+        "name": "暗渠钩手",
+        "inspiration": "盗贼与城防暗渠题材",
+        "brief": "戴方帽的运河钩手趴在桥旁小船上，手持长柄翻板钩检查暗渠闸门。灰天照亮水面，倒影帮助读出动作，不用夜景全黑。",
+        "references": [
+          "output/blue-black-art-references/10328_psd.png",
+          "output/blue-black-art-references/10177_psd.png"
+        ]
+      },
+      {
+        "color": "black",
+        "slug": "night-hound",
+        "name": "静步猎犬",
+        "inspiration": "赏金追踪与追猎伙伴题材",
+        "brief": "纤长的黑褐猎犬用一只爪轻踩快断的枯枝，胸口有贴皮跟踪牌，耳向前看。暮色树林有米白雾墙和几束浅侧光。",
+        "references": [
+          "output/blue-black-art-references/10328_psd.png",
+          "output/blue-black-art-references/10416_psd.png"
+        ]
+      },
+      {
+        "color": "black",
+        "slug": "key-biter",
+        "name": "咬锁鼠",
+        "inspiration": "基恩地下机械与盗窃题材",
+        "brief": "体型似猫的原创瘦鼠，嘴斜叼一枚铜钥匙，前爪搭在砖石钥匙孔。耳大身短、尾身卷圈，光从窗下落在齿尖与铜钥匙。",
+        "references": [
+          "output/blue-black-art-references/10404_psd.png",
+          "output/blue-black-art-references/10354_psd.png"
+        ]
+      },
+      {
+        "color": "black",
+        "slug": "quarry-cutter",
+        "name": "断梁客",
+        "inspiration": "高地攻城与工兵题材",
+        "brief": "阔额拆梁工用长柄楔头在战前敲一根竖梁，铁夹固定在腰上，胳膊的暖棕与粉白石灰对照。角度低，建筑裂纹简洁。",
+        "references": [
+          "output/blue-black-art-references/10092_psd.png",
+          "output/blue-black-art-references/10177_psd.png"
+        ]
+      },
+      {
+        "color": "black",
+        "slug": "silk-wasp",
+        "name": "缄口蜂",
+        "inspiration": "幽暗森林的扰敌生物题材",
+        "brief": "一只微亮靛紫甲壳的巨蜂以细丝黏住一片振动的薄木，四只透明翼错开，潮湿岩洞口有鲜明阳光。围绕一处截断振动的姿势创作。",
+        "references": [
+          "output/blue-black-art-references/10129_psd.png",
+          "output/blue-black-art-references/10354_psd.png"
+        ]
+      },
+      {
+        "color": "black",
+        "slug": "rooftop-spotter",
+        "name": "挂旗哨",
+        "inspiration": "狙击手与山地巡哨题材",
+        "brief": "布帽侦察员靠霉绿墙挂住半根三角布条，另一只手持短铜望远筒，脚踮在装饰瓦上。城市远景冷暖分明，人物紧凑有剪影。",
+        "references": [
+          "output/blue-black-art-references/10129_psd.png",
+          "output/blue-black-art-references/10092_psd.png"
+        ]
+      },
+      {
+        "color": "black",
+        "slug": "poison-apothecary",
+        "name": "簪毒药工",
+        "inspiration": "剧毒术士的毒物研究题材",
+        "brief": "高发髻老药工以骨簪搅一个扁圆药钵，瓶瓶罐罐留在昏暗上方。衣袍靛蓝、脸手浅黄、一小团绿灰烟，无配方或文字。",
+        "references": [
+          "output/blue-black-art-references/10354_psd.png",
+          "output/blue-black-art-references/10322_psd.png"
+        ]
+      },
+      {
+        "color": "black",
+        "slug": "coin-jackal",
+        "name": "叼钱胡狼",
+        "inspiration": "赏金与偏远商道题材",
+        "brief": "赭黄胡狼侧身咬一只从商车落下的绒钱袋，袋口漏出几枚钝亮钱币，白石和干草大块铺色，远方是车辙。",
+        "references": [
+          "output/blue-black-art-references/10416_psd.png",
+          "output/blue-black-art-references/10328_psd.png"
+        ]
+      },
+      {
+        "color": "black",
+        "slug": "sable-sling",
+        "name": "薄石投手",
+        "inspiration": "基恩山地远攻题材",
+        "brief": "站姿宽而矮的山地放牧人举起一柄短柄皮投石索，另一手握磨亮卵石，服饰粗织靛青与燕麦色，风大而明朗的石岭。",
+        "references": [
+          "output/blue-black-art-references/10092_psd.png",
+          "output/blue-black-art-references/10354_psd.png"
+        ]
+      },
+      {
+        "color": "black",
+        "slug": "bone-locksmith",
+        "name": "骨锁匠",
+        "inspiration": "冥界物件与秘密结社题材",
+        "brief": "佝偻工匠把一节肋骨形镂空锁定在紧凑小台钳里，一只放大镜和细长头部构成强轮廓。高窗浅蓝光照过骨器。",
+        "references": [
+          "output/blue-black-art-references/10404_psd.png",
+          "output/blue-black-art-references/10322_psd.png"
+        ]
+      },
+      {
+        "color": "black",
+        "slug": "dry-bridge-knife",
+        "name": "折桥客",
+        "inspiration": "夜间破坏与山道伏击题材",
+        "brief": "扁帽攀桥人倒挂在廊桥一根横木下，用扁铁工具拨开风化木销，腰间皮绳有弧度。俯视的浅黄河床在后，为侧身剪影提亮。",
+        "references": [
+          "output/blue-black-art-references/10328_psd.png",
+          "output/blue-black-art-references/10177_psd.png"
+        ]
+      },
+      {
+        "color": "black",
+        "slug": "moon-dredger",
+        "name": "水巷捞手",
+        "inspiration": "港口黑市与寻物题材",
+        "brief": "腰裹绳圈的宽肩捞手从河边提起一只挂满水草的镂空铁笼，笼内露出一枚蒙尘方印。夕照在水面、手臂有短高光。",
+        "references": [
+          "output/blue-black-art-references/10322_psd.png",
+          "output/blue-black-art-references/10404_psd.png"
+        ]
+      }
+    ],
+    "blue": [
+      {
+        "color": "blue",
+        "slug": "ice-archivist",
+        "name": "寒库抄录员",
+        "inspiration": "冰晶圣女的冰霜求学题材",
+        "brief": "穿鹅灰羊皮外袍的老抄录员，把薄如琉璃的冰片夹在宽木册间，一手举着带铜护圈的放大镜。深蓝冷库、苍白天光，脸和手保持暖色。",
+        "references": [
+          "output/blue-black-art-references/10277_psd.png",
+          "output/blue-black-art-references/10307_psd.png"
+        ]
+      },
+      {
+        "color": "blue",
+        "slug": "sky-messenger",
+        "name": "翼哨传令",
+        "inspiration": "天怒法师的天空王庭题材",
+        "brief": "原创矮小鸟面翼族，背上一对燕形灰蓝短羽翼，斜身穿过高塔窗台，手中握带带扣的无字封函。远处新日从云层透过，明亮大剪影。",
+        "references": [
+          "output/blue-black-art-references/10355_psd.png",
+          "output/blue-black-art-references/10307_psd.png"
+        ]
+      },
+      {
+        "color": "blue",
+        "slug": "bell-tortoise",
+        "name": "潮钟龟",
+        "inspiration": "潮汐猎人的海域题材",
+        "brief": "圆厚青灰海龟负一口裂开的小铜钟，钟的铃锤浮起，龟鳍扫过浅青海水。水下光斑只在部分鳞片和钟缘。",
+        "references": [
+          "output/blue-black-art-references/10267_psd.png",
+          "output/blue-black-art-references/10355_psd.png"
+        ]
+      },
+      {
+        "color": "blue",
+        "slug": "weather-apprentice",
+        "name": "观风学徒",
+        "inspiration": "风暴之灵的风雨意象",
+        "brief": "一位戴贴头布帽的观风学徒展开带麻片的木质手持测风盘，另一掌试风。长外套衣边吹起，灰蓝山站与晴后亮云，器物非现代技术样式。",
+        "references": [
+          "output/blue-black-art-references/10137_psd.png",
+          "output/blue-black-art-references/10353_psd.png"
+        ]
+      },
+      {
+        "color": "blue",
+        "slug": "frost-lynx",
+        "name": "霜踵山猫",
+        "inspiration": "冰霜高山的野生生物",
+        "brief": "白灰山猫在夜冻铁索桥跳过一截断木，四足与大耳清晰，尾端沾少量晶霜。浅色峡谷墙与墨青水面为反差。",
+        "references": [
+          "output/blue-black-art-references/10277_psd.png",
+          "output/blue-black-art-references/10138_psd.png"
+        ]
+      },
+      {
+        "color": "blue",
+        "slug": "rune-plumber",
+        "name": "法渠巡工",
+        "inspiration": "基恩机械与法力管路题材",
+        "brief": "高瘦巡工一肩钩着一只长嘴铜阀，蹲在浅青水槽边旋紧泄流口，头戴水滴形皮帽，暖灯来自世界中的检修小壁龛。在小图用阀门和姿势辨识。",
+        "references": [
+          "output/blue-black-art-references/10137_psd.png",
+          "output/blue-black-art-references/10323_psd.png"
+        ]
+      },
+      {
+        "color": "blue",
+        "slug": "asterite-crab",
+        "name": "星砂蟹",
+        "inspiration": "神蚀者的星界异物题材",
+        "brief": "半透明紫壳的掌宽星界蟹身体外包成一颗浅蓝晶球，刚从山洞水洼爬出，双钳粗短。周围光效只露一点星光，地面写实。",
+        "references": [
+          "output/blue-black-art-references/10267_psd.png",
+          "output/blue-black-art-references/10307_psd.png"
+        ]
+      },
+      {
+        "color": "blue",
+        "slug": "resonance-choir",
+        "name": "听晶童",
+        "inspiration": "神秘之耀与法师学院题材",
+        "brief": "穿短纱披肩的蓝肤年轻学徒，把一块镶金的大晶片举到耳边，闭目听声音。昏而暖的侧厅，透光处的指节清楚。",
+        "references": [
+          "output/blue-black-art-references/10307_psd.png",
+          "output/blue-black-art-references/10137_psd.png"
+        ]
+      },
+      {
+        "color": "blue",
+        "slug": "steam-gull",
+        "name": "铜翼鸥",
+        "inspiration": "修补匠的基恩工程题材",
+        "brief": "一架原创铜骨机械鸥，起飞姿势，双翼由宽云母板组合，海崖风车做远景。齿轮控制在翼根一小块，金属反射浅日光。",
+        "references": [
+          "output/blue-black-art-references/10323_psd.png",
+          "output/blue-black-art-references/10137_psd.png"
+        ]
+      },
+      {
+        "color": "blue",
+        "slug": "seam-weaver",
+        "name": "界缝织工",
+        "inspiration": "次元魔法与虚空意象",
+        "brief": "身形高挑的异族织工抬高有梭舌的半圆纺架，正在把一条细蓝光织入破布，背景是幽蓝矿隧与自然的侧光。身体和圆纺架层次分明。",
+        "references": [
+          "output/blue-black-art-references/10355_psd.png",
+          "output/blue-black-art-references/10267_psd.png"
+        ]
+      },
+      {
+        "color": "blue",
+        "slug": "storm-spooler",
+        "name": "引雷卷轴兵",
+        "inspiration": "撼地者的山崖与风暴意象",
+        "brief": "普通青年野战工双手转动背着的长线卷轴，顶部两根铜针遇到一小段蓝白电弧，远处高云将雨。岩灰与豆青衣物，线盘呈紧凑圆形。",
+        "references": [
+          "output/blue-black-art-references/10353_psd.png",
+          "output/blue-black-art-references/10323_psd.png"
+        ]
+      },
+      {
+        "color": "blue",
+        "slug": "coral-lancer",
+        "name": "珊枝短枪手",
+        "inspiration": "潮汐猎人背景海域",
+        "brief": "纤细的鳞肤湾岸民穿两片贝壳护肩，把珊瑚尖短枪平持向前。他站在浅水阳光里，海绿轮廓与米白礁壁分开，鱼鳃与踵粉末细节集中在一小处。",
+        "references": [
+          "output/blue-black-art-references/10267_psd.png",
+          "output/blue-black-art-references/10355_psd.png"
+        ]
+      },
+      {
+        "color": "blue",
+        "slug": "mirror-hare",
+        "name": "镜痕兔",
+        "inspiration": "星界传送题材",
+        "brief": "透明耳尖的灰兔贴地穿过一块竖立的窄蓝冰面，落地处两片水花，身后冰面反光。野兽主题，焦点在眼睛、长耳和飞跃剪影。",
+        "references": [
+          "output/blue-black-art-references/10355_psd.png",
+          "output/blue-black-art-references/10267_psd.png"
+        ]
+      },
+      {
+        "color": "blue",
+        "slug": "chime-guard",
+        "name": "听潮盾卫",
+        "inspiration": "潮汐猎人海域与港城题材",
+        "brief": "一名瘦长皮甲海关兵侧持一面盾，盾面是紧绷鼓膜，边缘挂三枚小铜铃以感知冲击。桥下白日，浅水给下方淡反光。",
+        "references": [
+          "output/blue-black-art-references/10267_psd.png",
+          "output/blue-black-art-references/10092_psd.png"
+        ]
+      },
+      {
+        "color": "blue",
+        "slug": "arc-candlemaker",
+        "name": "焰芯匠",
+        "inspiration": "食人魔魔法师的多重施法题材",
+        "brief": "一名有三指厚手的矮圆异族蜡匠，提着一根叉形铜烛杆，分别用两支颜色不同的短蜡烛校准同一小火。自然工坊光，局部亮在蜡滴。",
+        "references": [
+          "output/blue-black-art-references/10137_psd.png",
+          "output/blue-black-art-references/10307_psd.png"
+        ]
+      },
+      {
+        "color": "blue",
+        "slug": "drift-ray",
+        "name": "漂光海鳐",
+        "inspiration": "海域怪物与魔力意象",
+        "brief": "一只裙翼宽厚的鳐浮过退潮后沙洲上方，小得像一床薄毯，腹下拖一根透明气囊，只有翼尖一线生物蓝光，主体剪影优先。",
+        "references": [
+          "output/blue-black-art-references/10267_psd.png",
+          "output/blue-black-art-references/10355_psd.png"
+        ]
+      },
+      {
+        "color": "blue",
+        "slug": "glacier-mule",
+        "name": "踏霜驮夫",
+        "inspiration": "寒冬飞龙的雪山题材",
+        "brief": "强壮女性雪线搬运工背着绑有铁圈的六角冰匣，站弓步拉紧肩带，脸颊红润。晴天雪谷，冰匣折射微青，穿真实粗毛面料。",
+        "references": [
+          "output/blue-black-art-references/10277_psd.png",
+          "output/blue-black-art-references/10138_psd.png"
+        ]
+      },
+      {
+        "color": "blue",
+        "slug": "blue-brass-beetle",
+        "name": "校潮铜甲",
+        "inspiration": "修补匠与基恩机械题材",
+        "brief": "像凳子大小的铜腿甲虫机械，壳上拱了一块嵌石深蓝水准管，正用两只短钳调整地面木尺。低视角，机械与古典绘本材质融合。",
+        "references": [
+          "output/blue-black-art-references/10323_psd.png",
+          "output/blue-black-art-references/10137_psd.png"
+        ]
+      },
+      {
+        "color": "blue",
+        "slug": "cloud-ink-scout",
+        "name": "云墨引航人",
+        "inspiration": "天空王庭与侦察题材",
+        "brief": "手持一纸极简折叠风帆的轻装导航员从高悬索台踏到另一块石板，灰蓝大褶皱袍短于膝盖，苍白云层为方向感留白，风帆没有字符。",
+        "references": [
+          "output/blue-black-art-references/10355_psd.png",
+          "output/blue-black-art-references/10353_psd.png"
+        ]
+      },
+      {
+        "color": "blue",
+        "slug": "moon-current-eel",
+        "name": "涡耳短鳗",
+        "inspiration": "海域怪物与涡流题材",
+        "brief": "肥短鳗鱼有两枚像螺旋耳的肉鳍，贴着海沟水柱向上盘折，身体形似自然弯钩。浅海阳光照到腹白和水下近景，整体蓝灰绿。",
+        "references": [
+          "output/blue-black-art-references/10267_psd.png",
+          "output/blue-black-art-references/10355_psd.png"
+        ]
+      }
+    ],
+    "green": [
+      {
+        "color": "green",
+        "slug": "canopy-vet",
+        "name": "林冠兽医",
+        "inspiration": "魅惑魔女与森林疗愈题材",
+        "brief": "盘发兽医跪在透光树冠中的简易枝平台，掌心托一只受伤的小白鸟，布袋翻出两卷麻布。主剪影集中在她身上，鸟与手为一处林间暖光。",
+        "references": [
+          "output/blue-black-art-references/10328_psd.png",
+          "output/blue-black-art-references/10138_psd.png"
+        ]
+      },
+      {
+        "color": "green",
+        "slug": "greenglen-turtle",
+        "name": "苔甲陆龟",
+        "inspiration": "树精卫士的古林题材",
+        "brief": "宽壳陆龟背上附着一片淡绿蕨，正拱过局部倾倒的松木，足大而有力。林中光斑照见裂纹和活苔，头壳深浅归一。",
+        "references": [
+          "output/blue-black-art-references/10138_psd.png",
+          "output/blue-black-art-references/10328_psd.png"
+        ]
+      },
+      {
+        "color": "green",
+        "slug": "hedge-shepherd",
+        "name": "荆篱牧童",
+        "inspiration": "兽王与山野育兽题材",
+        "brief": "一个瘦小牧童把自然弯枝做成宽长牧杖，两只手把小荆条引向石墙缺口，膝部带油布绑腿。姿态上提，背景开阔早晨色。",
+        "references": [
+          "output/blue-black-art-references/10328_psd.png",
+          "output/blue-black-art-references/10138_psd.png"
+        ]
+      },
+      {
+        "color": "green",
+        "slug": "fernbark-goat",
+        "name": "蕨角山羊",
+        "inspiration": "熊战士山地部落的野地意象",
+        "brief": "一只拱背赭色岩羊立在潮湿山崖，长角有四片浅绿蕨附着，角根和雾被日光照亮，动物身体辨识度完整。远处松林用深色大块。",
+        "references": [
+          "output/blue-black-art-references/10138_psd.png",
+          "output/blue-black-art-references/10328_psd.png"
+        ]
+      },
+      {
+        "color": "green",
+        "slug": "moonseed-gatherer",
+        "name": "月籽采集人",
+        "inspiration": "露娜月林与赛莉蒙妮意象",
+        "brief": "银袖采种人站在青紫林洼，把落在半扇叶背上的荧光籽倾入一只浅瓷小盆。斗笠和盛籽大叶形状各异，月光柔冷带少量金绿。",
+        "references": [
+          "output/blue-black-art-references/10138_psd.png",
+          "output/blue-black-art-references/10307_psd.png"
+        ]
+      },
+      {
+        "color": "green",
+        "slug": "domed-mushroom",
+        "name": "伞冠孢灵",
+        "inspiration": "古林与菌落题材",
+        "brief": "圆钝近人形的菌灵用两手撑住覆苔的大伞菌冠，身上是白色菌褶和低矮粗脚，赤褐伞边只有一处透光。深绿树根区有大色块。",
+        "references": [
+          "output/blue-black-art-references/10138_psd.png",
+          "output/blue-black-art-references/10328_psd.png"
+        ]
+      },
+      {
+        "color": "green",
+        "slug": "river-vine-hand",
+        "name": "编藤渡工",
+        "inspiration": "树精卫士与林间换位题材",
+        "brief": "一位深肤宽臂编藤工侧坐在河上立桩，把两股活藤编进临时浮桥，腰侧一把骨梳和刀套。斜日光照手与藤，浅泥背景。",
+        "references": [
+          "output/blue-black-art-references/10328_psd.png",
+          "output/blue-black-art-references/10138_psd.png"
+        ]
+      },
+      {
+        "color": "green",
+        "slug": "elk-bugler",
+        "name": "鹿角巡护者",
+        "inspiration": "魅惑魔女与林间巡护题材",
+        "brief": "轻巧的原创长耳树民背一具宽角形木号，从林中跨过低根，木号有天然节疤，阳光在皮肤和绿斗篷上分出暖光。单人轮廓优先。",
+        "references": [
+          "output/blue-black-art-references/10328_psd.png",
+          "output/blue-black-art-references/10138_psd.png"
+        ]
+      },
+      {
+        "color": "green",
+        "slug": "woven-golem",
+        "name": "苇甲傀儡",
+        "inspiration": "古林守护和自然魔法题材",
+        "brief": "柳条和草绳扎出的近两人高傀儡，一只手是宽扁草垫，另一只抱石，留编柳纹与土色。站在晴天湿地，既不像人又不像木雕神像。",
+        "references": [
+          "output/blue-black-art-references/10138_psd.png",
+          "output/blue-black-art-references/10328_psd.png"
+        ]
+      },
+      {
+        "color": "green",
+        "slug": "burl-badger",
+        "name": "结根獾",
+        "inspiration": "狼人背景的森林部落题材",
+        "brief": "粗短獾扯着树根上结住的细篱架，暗棕背上有两条鲜亮奶白纹、厚爪翻土。黄绿色林冠和暖泥近景显运动。",
+        "references": [
+          "output/blue-black-art-references/10328_psd.png",
+          "output/blue-black-art-references/10138_psd.png"
+        ]
+      },
+      {
+        "color": "green",
+        "slug": "pollen-bearer",
+        "name": "授粉背篓人",
+        "inspiration": "树精卫士的生态题材",
+        "brief": "背着采粉篓的短身园丁在野花深处抖开一把圆形软毛拂子，少量淡金花粉定格。浅天、深红花和草绿围裙形状大而明确。",
+        "references": [
+          "output/blue-black-art-references/10138_psd.png",
+          "output/blue-black-art-references/10328_psd.png"
+        ]
+      },
+      {
+        "color": "green",
+        "slug": "hedge-otter",
+        "name": "浮叶水獭",
+        "inspiration": "林溪和动物伙伴题材",
+        "brief": "一只棕色水獭背着一小片扁木托盘，把溪中的翠绿大叶拖回堤岸。低贴水面、短须脸被秋日光照亮，肚子上扬，背景少杂物。",
+        "references": [
+          "output/blue-black-art-references/10328_psd.png",
+          "output/blue-black-art-references/10267_psd.png"
+        ]
+      },
+      {
+        "color": "green",
+        "slug": "stump-locker",
+        "name": "压根老匠",
+        "inspiration": "古林与古树守卫题材",
+        "brief": "身材敦实的年老木匠双手杵着一个长柄鹿角撬具，把倒地根系扶起，一束幼芽从新泥里朝上。衣袖色亚麻浅白，背景柔和橄榄绿。",
+        "references": [
+          "output/blue-black-art-references/10138_psd.png",
+          "output/blue-black-art-references/10328_psd.png"
+        ]
+      },
+      {
+        "color": "green",
+        "slug": "lichen-roamer",
+        "name": "苔衣蜗行客",
+        "inspiration": "古林与巨型无脊椎生物题材",
+        "brief": "牛犊大小的巨蜗牛在陡坡树皮横向伸出长触角，螺壳裹湿苔，背光在触角和壳口，剪影像自然的巨大螺旋。",
+        "references": [
+          "output/blue-black-art-references/10138_psd.png",
+          "output/blue-black-art-references/10328_psd.png"
+        ]
+      },
+      {
+        "color": "green",
+        "slug": "cedar-runner",
+        "name": "杉影信差",
+        "inspiration": "卓尔游侠的林中行路题材",
+        "brief": "原创短发信差跳下一棵倒杉，身后背柳条扁筒，手伸向低枝保持平衡，绿棕裤子和赤色手带形成识别点，森林晚霞照过前臂。",
+        "references": [
+          "output/blue-black-art-references/10129_psd.png",
+          "output/blue-black-art-references/10328_psd.png"
+        ]
+      },
+      {
+        "color": "green",
+        "slug": "seedhorn-scarab",
+        "name": "背籽犀甲",
+        "inspiration": "德鲁伊和播种生态题材",
+        "brief": "墨绿巨甲虫以一根宽钝额角拱走土块，背壳凹坑藏三颗饱满金栗，前脚形成强有力轮廓。下午林床暖光落在籽粒。",
+        "references": [
+          "output/blue-black-art-references/10138_psd.png",
+          "output/blue-black-art-references/10328_psd.png"
+        ]
+      },
+      {
+        "color": "green",
+        "slug": "goldleaf-fletcher",
+        "name": "金叶箭匠",
+        "inspiration": "卓尔背景的林地箭术题材",
+        "brief": "黑肤女箭匠侧坐在浅苔石上，为一根箭尾装入两片坚硬金叶，腿边搁一副短弓框。叶脉小高光，脸手温暖，石后林中亮。",
+        "references": [
+          "output/blue-black-art-references/10328_psd.png",
+          "output/blue-black-art-references/10307_psd.png"
+        ]
+      },
+      {
+        "color": "green",
+        "slug": "meadow-bell",
+        "name": "草铃牧卫",
+        "inspiration": "熊战士的护群与林边聚落题材",
+        "brief": "一名矮胖巡护者拉着一柄木柄小盾，盾的外面绑着四只木铃壳，抬盾横臂守住芦苇丛，阳光柔亮。动物纹只刻在一颗小扣上。",
+        "references": [
+          "output/blue-black-art-references/10138_psd.png",
+          "output/blue-black-art-references/10328_psd.png"
+        ]
+      },
+      {
+        "color": "green",
+        "slug": "marsh-moss-bison",
+        "name": "荇草泥牛",
+        "inspiration": "古林沼地的动物群题材",
+        "brief": "一头灰褐小野牛半身浸在浅草沼中，角上搭着两缕绿色荇草，抬头甩水。自然动物描绘，立足的大轮廓和湿皮小高光。",
+        "references": [
+          "output/blue-black-art-references/10328_psd.png",
+          "output/blue-black-art-references/10138_psd.png"
+        ]
+      },
+      {
+        "color": "green",
+        "slug": "fern-catcher",
+        "name": "孢伞捕手",
+        "inspiration": "林中孢粉及守护题材",
+        "brief": "细长半植物人站在苔藓小道，一手托粗柄圆伞网把将散开的孢子兜住。四指像枯枝、背部有窄叶、浅色大伞与深树根反差明显。",
+        "references": [
+          "output/blue-black-art-references/10138_psd.png",
+          "output/blue-black-art-references/10328_psd.png"
+        ]
+      }
+    ]
+  }
+}

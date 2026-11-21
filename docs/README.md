@@ -19,7 +19,7 @@
 | 这轮改什么、以后再改什么 | [路线图](design/roadmap.md) |
 | 为什么这样设计，哪些方案被替代，哪些还没定 | [决策记录](design/decision-log.md) |
 | 遇到的问题、处理办法、启动／发布与排查步骤 | [开发复盘与运维](development/lessons-and-operations.md) |
-| 卡牌插画的生图路线、108 试跑和素材入库 | [卡牌插画工作流与试跑记录](development/card-art-workflow.md) |
+| 卡牌插画的模型、参考图、批量出图和入库 | [卡牌插画工作流与试跑记录](development/card-art-workflow.md) · [候选插画索引](../assets/migoo/README.md#11-月-21-日候选插画) |
 | V0.4 测过什么 | [发布验证](releases/v0.4.md) |
 | V0.3 测过什么 | [历史发布验证](releases/v0.3.md)、[V0.3 规则现状](design/current-rules.md) |
 | V0.2 测过什么、结果与局限 | [V0.2 验证归档](releases/v0.2.md) |

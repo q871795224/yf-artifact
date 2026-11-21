@@ -1,0 +1,71 @@
+{
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "style": "单张 9:16 全幅原创奇幻卡牌插画。两张参考均为同一套 Artifact Classic 原版无框插画，请以参考图共同的绘画语言为主：暗部保留松动、可见的画笔和色块，低饱和的环境色，远景用空气透视和带笔触的模糊，清楚的角色剪影，焦点处收紧边缘并留少量暖色高光。比起锐化细节，优先做出接近参考图的中间调、材质笔触和叙事构图。用人物的姿势和物体之间的位置交代动作。各自使用新的角色、动作、机位和场景。限制泛光与粒子，只在作用点需要时用一小笔。整张看起来像手工绘制的奇幻插画；避开电影剧照、摄影、3D 渲染、发光描边与满画面特效。构图满版，保留安全裁切空间，画面中只有插画，无卡框、字、数字、白边、UI、箭头、棋盘、logo 或水印。",
+  "jobs": [
+    {
+      "slug": "exploit-opening",
+      "name": "破绽一击",
+      "description": "近景， 逆光照进废弃哨站。一只手握细刃，斜向越过破盾边缘，剑尖正抵在盾兵肩甲下露出的织物缝隙。用大块陈铜、粗布和灰绿暗背景，最亮处聚在剑尖和翻开的盾片。画的是识破防御空档的瞬间。",
+      "references": [
+        "output/blue-black-art-references/10308_psd.png",
+        "output/blue-black-art-references/10129_psd.png"
+      ]
+    },
+    {
+      "slug": "follow-through",
+      "name": "踏隙追击",
+      "description": "原创突袭者一步冲进拱门，靠门的守卫正朝画面侧面倒去，靴子已离开拱门中央。机位贴近地面，前景是刚空出的石阶，透过门洞看到一段通向远方塔基的路。以旧墙的棕黄、斗篷深灰和柔和斜阳区分前后，没有额外施法光效。",
+      "references": [
+        "output/blue-black-art-references/10328_psd.png",
+        "output/blue-black-art-references/10092_psd.png"
+      ]
+    },
+    {
+      "slug": "shadow-flank",
+      "name": "换影突入",
+      "description": "废弃修道院的两根石柱分开前后景。画面左前方的卫兵仍在挥剑砍向正在散掉的旧披风轮廓，右后方原创突袭者已从第二根柱边侧身出现，姿势低重心。用墨绿石地、深灰影子和一点晚霞，以前后位置表现瞬间绕到敌人背后。",
+      "references": [
+        "output/blue-black-art-references/10404_psd.png",
+        "output/blue-black-art-references/10129_psd.png"
+      ]
+    },
+    {
+      "slug": "spellbreaker-needle",
+      "name": "断咒暗针",
+      "description": "近景以一个带薄甲的施法者手掌为中心。小而清楚的暗色飞针斜向穿过两指前方正在成形的淡金法术圆弧，光弧刚断成两段，施法者的另一只手正本能地缩回。安静的灰紫和沙棕室内，针尾被窗外一线亮光照亮，断开的弧在近景一眼可辨。",
+      "references": [
+        "output/blue-black-art-references/10354_psd.png",
+        "output/blue-black-art-references/10308_psd.png"
+      ]
+    },
+    {
+      "slug": "passing-death-mark",
+      "name": "死印传递",
+      "description": "低角度。左下倒地的披甲士兵，右上另一名士兵惊觉转肩。只有一缕细暗红色法术痕，从倒地士兵胸甲上正在暗下去的烙印引向第二人亮起来的肩甲烙印。旧桦树林，泥灰与枯叶色，两个落点是画面最清楚的细节；人物姿态先于特效。",
+      "references": [
+        "output/blue-black-art-references/10416_psd.png",
+        "output/blue-black-art-references/10354_psd.png"
+      ]
+    },
+    {
+      "slug": "bounty-settlement",
+      "name": "悬赏结算",
+      "description": "旧旅店柜台的近景。一只戴旧皮手套的手把带缺口的铜悬赏徽章按在台面，另一只手正把几枚金币推过来。徽章上仅有模糊的兽首浮雕。油灯只照亮动作中心，暗处留下两人的部分轮廓，古铜、暗红、深木纹，背景松笔。",
+      "references": [
+        "output/blue-black-art-references/10322_psd.png",
+        "output/blue-black-art-references/10416_psd.png"
+      ]
+    },
+    {
+      "slug": "tower-foot-sabotage",
+      "name": "城脚暗雷",
+      "description": "贴近潮湿石地的机位，在城堡塔脚背面排水拱洞里，一个原创披灰布兜帽的破坏者正把圆形带铁箍的幻想攻城装置塞进松动的石块之间。远处城头暖灯照向另一侧，人物大部分在冷灰暗处，手与器械用一点灯光提亮。强调偷袭塔基的叙事，画在爆炸前。",
+      "references": [
+        "output/blue-black-art-references/10177_psd.png",
+        "output/blue-black-art-references/10092_psd.png"
+      ]
+    }
+  ]
+}

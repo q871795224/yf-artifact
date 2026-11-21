@@ -1,0 +1,233 @@
+{
+  "count": 12,
+  "images": [
+    {
+      "name": "芦灯掘工",
+      "inspiration": "狗头人营地",
+      "file": "neutral/reed-kobold/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "856a284381a97e591e428aa9fd1266dc7375e3cd5d5a2a8e79facb93c2bb012b",
+      "task_id": "mt_cGkwNWM4NTA4ZmM1MDkwYWYxMGI0NGRmMDNhMTA2ZTM1ZWQ3ZThjNDg5",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458511491785554"
+    },
+    {
+      "name": "白脊食人魔",
+      "inspiration": "食人魔营地",
+      "file": "neutral/chalkback-ogre/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "52ef01003cfe027b2d03bf4bb7e2030ea3fab380bd398c55f2ee7230eb579d1d",
+      "task_id": "mt_cGkzMDUwYWQxZWYxZTJmMzBhM2UzZDRhZTQyMTQzZWU4MTM3Mzc0NWQ4",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458511494292730"
+    },
+    {
+      "name": "浮礁鸮妖",
+      "inspiration": "鹰身女妖营地",
+      "file": "neutral/gullcrest-harpy/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "f00e83f7765f4bb02a72774ee970ae003e46357803d046f18e12cee01d4b44bc",
+      "task_id": "mt_cGljYjM5OTA2YWIxZDZiNzNjN2E3ZmFiNDllMmExMmFkYThkYTk2Nzdi",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458511463638277"
+    },
+    {
+      "name": "根冠林魔",
+      "inspiration": "萨特营地",
+      "file": "neutral/blackroot-satyr/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "d17698f83deedd9cd83fd41b208d28369c45fdb3793b206a0b955093838cf15e",
+      "task_id": "mt_cGk0MDQyYzM0NGY1YWQzMWZlMjBkNTUxM2RmMzE2NjA5ZjQ4MTYxY2Iz",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458511714772238"
+    },
+    {
+      "name": "赭砾巡牧",
+      "inspiration": "半人马营地",
+      "file": "neutral/redgravel-centaur/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "9585cd516569dbb43d5745a6c7cb96ea810a2876d2b459694e4df527fb58fb74",
+      "task_id": "mt_cGk2NTk2MjJiNjc1NzRlYjRkOGQ4M2ExZWI4NjczNmM4NGUwZmU2MWI2",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458511742985055"
+    },
+    {
+      "name": "响铃独狼",
+      "inspiration": "狼群营地",
+      "file": "neutral/bellfang-wolf/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "1ba34508fb8ba83d8c670682aeda5110c3438d8a862566c24318a639b02a21f6",
+      "task_id": "mt_cGlkYTQ3YzQ3MTQxMDcyZmI1OTA4NTY3NmU1NjBkY2NjNTIyYTFkZDY0",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458511729173336"
+    },
+    {
+      "name": "树钉投矛怪",
+      "inspiration": "巨魔营地",
+      "file": "neutral/barkjaw-troll/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "d753b4570f8ea933823c51b007266936789252d0d07761680241ee6e0ac24ecd",
+      "task_id": "mt_cGlhNmQ4MTVkOWIyMmZjMGU2YmRkNDg1MjM3MjdlOWQ0NTI2MzA3Y2Jl",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458511969952582"
+    },
+    {
+      "name": "蒲苇大枭",
+      "inspiration": "野翼营地",
+      "file": "neutral/rush-wing/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "38cd92e2382eb52481509b1c5379dfd5b56cd990eb4e63d83cc719115f760d46",
+      "task_id": "mt_cGk3NmViYzk2MDIwNDNkYzhjNGY3NTZkNmFhZjZkNWE3Zjg0OTZlNTAw",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458511986295628"
+    },
+    {
+      "name": "燧片泥偶",
+      "inspiration": "泥土傀儡营地",
+      "file": "neutral/flint-golem/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "3d25b8173f88b6a68d49141e55b4e4e25133dd82a6aa053e55c49c75d3b1c974",
+      "task_id": "mt_cGljMTJmZWFhY2ViODYxOGQxMzE4ZTNjZWEyZWU2MDQ3NjBiMDZkYzg5",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458511979914484"
+    },
+    {
+      "name": "雷滩披甲兽",
+      "inspiration": "远古雷蜥营地",
+      "file": "neutral/tidal-ancient/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "24b53f8e4533b0ae136c4d3088263700b2c96ad4469ecd143e1def3bbc61cc3c",
+      "task_id": "mt_cGlhYzE0ZjA3MjFmZmJjZTYxOTdjNzVhMDJiYTJjMzYyNGI3Y2FmNjc4",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458512213828880"
+    },
+    {
+      "name": "石塔脊巨灵",
+      "inspiration": "远古石傀儡营地",
+      "file": "neutral/granite-towerback/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "796beb8104ff5289ff145831ca79a92e30d5e4482b849f9e3ad1937e3da14fed",
+      "task_id": "mt_cGkwNDA2Mzc2NzBhMTA3OGZjZDVjMjI4YjRmNzM2NmE4NWQzNzVjYTE2",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458512251593564"
+    },
+    {
+      "name": "煤翼幼龙",
+      "inspiration": "黑龙营地",
+      "file": "neutral/cinder-saurian/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "16fef0d422a442b801007bedc4fd2e6e0bd8ccb96add677ccf75aeece26bc498",
+      "task_id": "mt_cGk2OGRjZDNjZWI2YTc3ZWE1MTlhYzU1Y2Y2YTY1MWMxNGI1ZWU1MGE3",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458512242385706"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "style": "单张 9:16 全幅原创奇幻英雄卡牌插画。上传的是 Artifact Classic 无框画，仅参考清晰大形、自然材质、松紧有别的绘画边缘与局部高光。形象、身份、装备、道具、体型、色彩和构图均独立设计，灵感仅限抽象战术主题。用区别于普通单位的鲜明人物特征与独有器物建立英雄感。主体在画面中部，头部、关键手势和器物容易在小图辨认，背景松笔而保留生活细节。对比拉开，暖冷层次自然，避免满画面泛光。无卡框、字、数字、UI、箭头、棋盘、logo、水印和白边，画满到四边。",
+  "jobs": [
+    {
+      "slug": "tide-beacon-keeper",
+      "name": "潮标守望",
+      "description": "海上潮汐与逆风救援题材。原创年轻沿岸引航女官，短卷发，皮质侧肩甲和乳白油布雨披，立在峭石防波堤上，用一根悬有三角铜灯的长引航杆压低海雾中的浪头。宽阔旧船帆在远处水雾里成为淡形，铜灯和海水泡沫是焦点，海青与米白主色。独特剪影靠大雨披和斜杆，不用船长制服、佩刀或帽子。",
+      "references": [
+        "output/blue-black-art-references/10267_psd.png",
+        "output/blue-black-art-references/10353_psd.png"
+      ]
+    },
+    {
+      "slug": "season-dial-cartographer",
+      "name": "轮候星官",
+      "description": "天象与天气调度题材。衰老的女性高原星象师有剃平一侧的灰发、石榴色短束袍、宽而扁的背囊。仰坐露天台阶，操作一具可折叠木石环仪，手中握压实的云形白松脂片，仪器另一侧有暖薄暮反射。远处薄雪和斜坡晚云保留大形，人物脸和器物交接处提亮。没有漂浮的成组彩球。",
+      "references": [
+        "output/blue-black-art-references/10307_psd.png",
+        "output/blue-black-art-references/10353_psd.png"
+      ]
+    },
+    {
+      "slug": "clay-seal-echoer",
+      "name": "拓咒陶师",
+      "description": "把收到的法术印进新介质的题材。原创深肤壮年陶工，手肘贴护炉皮肩，卷袖露出石粉，面貌清楚。用一把短柄骨白压印刀把眼前掠过的极淡靛蓝光痕封在一枚刚烧红的方陶印里，周围是低矮陶炉和悬干的素面胚。将明亮集中在手、陶印边和眼睛，暖赭陶土主色，侧身半蹲。",
+      "references": [
+        "output/blue-black-art-references/10137_psd.png",
+        "output/blue-black-art-references/10354_psd.png"
+      ]
+    },
+    {
+      "slug": "kettle-caravan-mechanic",
+      "name": "驼炉机匠",
+      "description": "骑乘工程与旅队火力支援题材。年轻双辫的矮个维修师侧坐在长腿的宽嘴灰色驮鸟身侧，正拧紧一壶笨重方形柴煤炉的铜箍；驮鸟头冠像断裂木片，翅膀短而圆，与重点在右侧的工匠形成双剪影。山口沙地日光，铁壶磨损、驮带和鸟羽有明确材质。原创旅队装备和异兽。",
+      "references": [
+        "output/blue-black-art-references/10092_psd.png",
+        "output/blue-black-art-references/10323_psd.png"
+      ]
+    },
+    {
+      "slug": "dawn-rekindling-crane",
+      "name": "复晓鹤",
+      "description": "神鸟在黎明再生的神话题材。原创两足长颈神鹤站在熄灭树桩上，主体为白灰羽、墨色细长喙和两枚不对称银羽冠。双翼轻掀，刚换下的旧羽在爪旁化为落灰，新羽的几根外缘被未升的太阳染成浅橙。浅胭脂天空和青灰河泥形成大块，反差聚在头和新羽。姿态沉静而有明确的大鸟轮廓。",
+      "references": [
+        "output/blue-black-art-references/10355_psd.png",
+        "output/blue-black-art-references/10138_psd.png"
+      ]
+    },
+    {
+      "slug": "gate-standard-marshal",
+      "name": "门阵统领",
+      "description": "以阵型和城门封锁为题材。年长高地统领为原创深棕皮肤女性，宽鼻梁、左眼上有淡白疤，戴锻铜冠箍，身穿石灰白布罩衫与旧锻铁护肩。左手握扁长令旗而非矛，右手把嵌石短木闸撑在台阶上示意封口；远处光照过狭窄堡廊，卷旗背面留土红小面。轮廓靠横斜木闸和肩侧旗面，局部暖光集中在统领脸和前臂。",
+      "references": [
+        "output/blue-black-art-references/10092_psd.png",
+        "output/blue-black-art-references/10177_psd.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "style": "单张 9:16 全幅原创奇幻单位插画。参考图均为 Artifact Classic 原版无框画，仅借鉴大色块、手绘材质、边缘处理和局部高光。设计原创人物、衣甲、武器和场景。单位的头、身体姿态和招牌器物形成完整清楚的大轮廓，占画面高度约七成，放于垂直中央以便小图裁切，背景主体区用较疏的色块，与人物有明确明暗区分。用漫射日光或明确单一光源，局部高光落在脸、手或器物焦点，暗部有层次。保留可见的手绘笔触，焦点清楚、远处略松，颜色自然富有变化。每张只画一个主要单位，以可反复部署的普通兵或支援者的衣着尺度呈现。画满到边，无卡框、字、数字、白边、UI、箭头、棋盘、logo 或水印。",
+  "jobs": [
+    {
+      "slug": "blue-tide-warden",
+      "name": "潮闸守卫",
+      "description": "蓝色近战控场单位，能扰动靠近的敌人站位。潮闸边，一个结实的原创港卫侧身站稳，双手持一把宽而钝的钩形长戟，一端贴近沿石台退开的潮水。灰蓝短斗篷、旧青铜甲片、粗麻靴。淡淡的海上晨光落在戟钩和握戟手上，青绿水面明亮，深色剪影清楚；器物轮廓是第一识别点。",
+      "references": [
+        "output/blue-black-art-references/10092_psd.png",
+        "output/blue-black-art-references/10267_psd.png"
+      ]
+    },
+    {
+      "slug": "blue-lamplight-attendant",
+      "name": "蓄灯侍从",
+      "description": "蓝色后排支援，收集法力供后续施法。普通年轻工坊学徒披靛青围裙短袍，托起一具手提铜架灯，灯内有几枚小而明亮的蓝白晶片；腾出另一只手拨动铜环，动作像检查仪表。工坊有高窗，日光给脸和双手暖光，灯光只照亮铜边和衣襟，皮肤和背景留自然颜色。",
+      "references": [
+        "output/blue-black-art-references/10137_psd.png",
+        "output/blue-black-art-references/10307_psd.png"
+      ]
+    },
+    {
+      "slug": "blue-glass-mortar",
+      "name": "棱镜炮手",
+      "description": "蓝色远程压制单位，可给小片区域施加压力。戴软皮护目镜的矮个工程兵蹲在一具肩宽、低三脚架上的短炮后，三块透明棱镜组成宽口炮头，炮膛有一点紫蓝折射光。衣服是米灰帆布和钴蓝护肩，浅褐山坳有清亮薄暮。人物与短炮合为一个集中轮廓，局部高光留在棱镜、螺钉和手指。",
+      "references": [
+        "output/blue-black-art-references/10137_psd.png",
+        "output/blue-black-art-references/10323_psd.png"
+      ]
+    },
+    {
+      "slug": "black-eaves-runner",
+      "name": "檐影斥候",
+      "description": "黑色轻装机动单位，擅长绕到侧后。短发斥候单膝落在一段瓦檐转角上，身躯前倾，右手抓着一对短而弯的攀墙钩，肩披烟褐短巾。雾中屋脊偏亮，让整个人的侧身动作读得出，暖橘天光点亮颧骨、钩尖和湿瓦。不需要全身黑衣或兜帽。",
+      "references": [
+        "output/blue-black-art-references/10129_psd.png",
+        "output/blue-black-art-references/10328_psd.png"
+      ]
+    },
+    {
+      "slug": "black-bounty-arbalist",
+      "name": "赏金弩手",
+      "description": "黑色远程单点，追猎有标记的目标。灰褐短发的成年佣兵在沙土渡口的白石矮墙旁持一把宽臂短弩，站姿侧开，正用食指摸索护腕上一枚铜色悬赏牌。棕红半身皮甲、靛灰领巾、午后干燥暖光，弩臂宽阔清楚，神情专注。保持一个人物主剪影和自然的明亮中间调。",
+      "references": [
+        "output/blue-black-art-references/10416_psd.png",
+        "output/blue-black-art-references/10092_psd.png"
+      ]
+    },
+    {
+      "slug": "black-wall-sapper",
+      "name": "撬墙工兵",
+      "description": "黑色攻城单位，近塔后擅长打击塔基。身材紧凑的工兵戴开脸铁盔和半身皮甲，两手肩扛一柄粗短撬墙镐，镐头一边尖、一边是厚楔；背负一块卷布和楔形铁具。背景是阳光扫过的老塔外壁，破口只作环境，亮斑落在铁楔、鼻梁和手背。宽武器剪影与轻装斥候和弩手一眼区分。",
+      "references": [
+        "output/blue-black-art-references/10092_psd.png",
+        "output/blue-black-art-references/10177_psd.png"
+      ]
+    }
+  ]
+}

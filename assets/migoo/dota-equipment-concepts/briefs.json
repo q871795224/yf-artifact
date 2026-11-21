@@ -1,0 +1,230 @@
+{
+  "model": "gpt-image-26-flare",
+  "ratio": "9:16",
+  "resolution": "1K",
+  "style": "单张 9:16 竖版手绘奇幻装备卡牌原画。第一张《刀塔》商品图提供物件类别、主色、材质和功能方向；第二张 Artifact Classic 无框原画提供笔触、明暗、色块与局部高光。发明新造型细节、外壳结构、比例和装饰，使用独立场景、视角与构图。突出单件完整器物的大剪影和三种以内主要材质，让 48 像素宽时仍能识别。器物占画面大部分，最亮一处用于关键部件；环境留松笔大形、用漫射光统一。按提示里的光源和地点变化，表现真实做工与磨损。画面只有无框纯插画，填满四边，无文字、数字、UI、徽标、水印、白边，款式和构图不能沿用参考图。",
+  "jobs": {
+    "equipment": [
+      {
+        "color": "equipment",
+        "slug": "force-staff",
+        "name": "原力法杖",
+        "inspiration": "位移与救援",
+        "brief": "灰棕木杖接三枚不对称玉石力场片，末端绑旧编绳，杖尖向上斜靠在坍塌的桥栏上。青玉吸收暖晨光，空气只随力场微弯。",
+        "references": [
+          "output/dota-native-equipment/force_staff_png.png",
+          "output/blue-black-art-references/10210_psd.png"
+        ]
+      },
+      {
+        "color": "equipment",
+        "slug": "euls-scepter",
+        "name": "风杖",
+        "inspiration": "卷风隔离",
+        "brief": "浅银色旋风杖陈列在塔楼窗口，弯头由三条锻银薄弧拼成，中央露冷青晶粒，浅帘角被风掀起。保留风卷辨识，改为不对称冶金和整柄比例。",
+        "references": [
+          "output/dota-native-equipment/cyclone_png.png",
+          "output/blue-black-art-references/10241_psd.png"
+        ]
+      },
+      {
+        "color": "equipment",
+        "slug": "ghost-scepter",
+        "name": "幽魂权杖",
+        "inspiration": "抵御物理攻势",
+        "brief": "骨白杖芯嵌在四片暗木短指状外壳之间，杖首带一笔黄绿半透明冷光，放在潮湿石龛的一只铜钩上。阴面留木纹，清楚的骨、铜、木三种材质。",
+        "references": [
+          "output/dota-native-equipment/ghost_png.png",
+          "output/blue-black-art-references/10210_psd.png"
+        ]
+      },
+      {
+        "color": "equipment",
+        "slug": "glimmer-cape",
+        "name": "微光披风",
+        "inspiration": "掩护与魔法防护",
+        "brief": "深蓝短披挂在浅灰桦木架，领口金属扣是锤打铜环，只有靠近窗侧的褶边淡入微光。内衬浅紫，保留薄厚层次，从侧后角度画完整物件。",
+        "references": [
+          "output/dota-native-equipment/glimmer_cape_png.png",
+          "output/blue-black-art-references/10202_psd.png"
+        ]
+      },
+      {
+        "color": "equipment",
+        "slug": "lotus-orb",
+        "name": "清莲宝珠",
+        "inspiration": "法术反馈",
+        "brief": "红宝珠被不同长度的六片香槟铜薄叶护住，立于浅石水盆中央，莲叶映出一点反光。俯侧视角，区别于正面商店图构图。",
+        "references": [
+          "output/dota-native-equipment/lotus_orb_png.png",
+          "output/blue-black-art-references/10232_psd.png"
+        ]
+      },
+      {
+        "color": "equipment",
+        "slug": "linkens-sphere",
+        "name": "林肯法球",
+        "inspiration": "阻挡指向法术",
+        "brief": "深海蓝球体嵌在两圈偏心古铜环中，环的一段正在挡住沿直线来的极淡蓝弧。置于高黑石柱头，内部漩纹来自玻璃厚度，外圈亮而背景平静。",
+        "references": [
+          "output/dota-native-equipment/sphere_png.png",
+          "output/blue-black-art-references/10241_psd.png"
+        ]
+      },
+      {
+        "color": "equipment",
+        "slug": "rod-of-atos",
+        "name": "阿托斯之棍",
+        "inspiration": "定身",
+        "brief": "暗银法杖横斜过荒草，杖首由两个冷灰角型压住一枚较厚红珠，杖尾有皮带，几束弯草在杖首附近贴地，暗示缠住脚步。",
+        "references": [
+          "output/dota-native-equipment/rod_of_atos_png.png",
+          "output/blue-black-art-references/10210_psd.png"
+        ]
+      },
+      {
+        "color": "equipment",
+        "slug": "desolator",
+        "name": "黯灭",
+        "inspiration": "破甲",
+        "brief": "通红弧刃为宽柄的非对称钩剑，有一小片有磨痕的硬白刃口，斜插在破旧肩甲旁的湿土里。暗几何刃骨与少量血红反光，无战斗人物。",
+        "references": [
+          "output/dota-native-equipment/desolator_png.png",
+          "output/blue-black-art-references/10234_psd.png"
+        ]
+      },
+      {
+        "color": "equipment",
+        "slug": "hurricane-pike",
+        "name": "飓风长戟",
+        "inspiration": "推离与远程对抗",
+        "brief": "修长黑木戟从石基向天空伸出，青铜枪背带侧伸的小风挡片，软垫缠住中柄，淡风吹动底部麻穗，俯崖侧光完整读出长兵器。",
+        "references": [
+          "output/dota-native-equipment/hurricane_pike_png.png",
+          "output/blue-black-art-references/10223_psd.png"
+        ]
+      },
+      {
+        "color": "equipment",
+        "slug": "nullifier",
+        "name": "否决坠饰",
+        "inspiration": "持续驱散",
+        "brief": "椭圆暗红坠核塞在不规则铁箍之间，通过扁链挂在法术工作台支架上，周围几枚玻璃药珠失去光泽。焦点是红核局部和静止铁箍。",
+        "references": [
+          "output/dota-native-equipment/nullifier_png.png",
+          "output/blue-black-art-references/10235_psd.png"
+        ]
+      },
+      {
+        "color": "equipment",
+        "slug": "pipe",
+        "name": "洞察烟斗",
+        "inspiration": "团队魔法防护",
+        "brief": "长弯铜柄烟斗躺在厚皮卷上，旧青铜斗身包浅色陶瓷座，微薄黄灰烟只遮去背景一角。炉边暖光打手工锻痕。",
+        "references": [
+          "output/dota-native-equipment/pipe_png.png",
+          "output/blue-black-art-references/10260_psd.png"
+        ]
+      },
+      {
+        "color": "equipment",
+        "slug": "crimson-guard",
+        "name": "赤红甲",
+        "inspiration": "抵挡普攻",
+        "brief": "深砖红防具靠在雕木支架，叠甲由几块有硬角的长片铆接，绑带包住下颌形前段；焦点给擦痕横过甲片的一束光。侧前角度、有独立厚度。",
+        "references": [
+          "output/dota-native-equipment/crimson_guard_png.png",
+          "output/blue-black-art-references/10232_psd.png"
+        ]
+      },
+      {
+        "color": "equipment",
+        "slug": "abyssal-blade",
+        "name": "深渊之刃",
+        "inspiration": "近身强控",
+        "brief": "铁黑方背刃挂在船坞仓间，骨白握把中段有绑布，锻刀的黑蓝面和内切刃给小范围红褐矿纹。斜向陈列并保留上下边界。",
+        "references": [
+          "output/dota-native-equipment/valve/abyssal_blade.png",
+          "output/blue-black-art-references/10234_psd.png"
+        ]
+      },
+      {
+        "color": "equipment",
+        "slug": "silver-edge",
+        "name": "白银之锋",
+        "inspiration": "潜入与破被动",
+        "brief": "长银剑与棕黑护手支在失光的旧镜边，锋口靠近冷侧光，剑尖在雾中渐隐。原创护手由两枚偏心薄翼锻成，刃上仅一段高亮。",
+        "references": [
+          "output/dota-native-equipment/valve/silver_edge.png",
+          "output/blue-black-art-references/10234_psd.png"
+        ]
+      },
+      {
+        "color": "equipment",
+        "slug": "skadi",
+        "name": "斯嘉蒂之眼",
+        "inspiration": "减缓目标",
+        "brief": "冰青冻晶深处的眼形石核包在裂开的不规则银胎中，落在雪融木箱顶。宝石像凝固的冰湖，小片清楚的霜纹绕着凹陷竖线。",
+        "references": [
+          "output/dota-native-equipment/valve/skadi.png",
+          "output/blue-black-art-references/10241_psd.png"
+        ]
+      },
+      {
+        "color": "equipment",
+        "slug": "ethereal-blade",
+        "name": "虚灵之刃",
+        "inspiration": "虚无与法术协同",
+        "brief": "翠灰色窄细刃安放在潮雾浮木上，局部透明，隔着刀体看见下方木纹，握柄是缠布与骨白弧片相间。阴天真实光照和边缘透明度表现虚灵。",
+        "references": [
+          "output/dota-native-equipment/valve/ethereal_blade.png",
+          "output/blue-black-art-references/10234_psd.png"
+        ]
+      },
+      {
+        "color": "equipment",
+        "slug": "pavise",
+        "name": "护卫盾",
+        "inspiration": "物理护盾",
+        "brief": "磨损的大盖盾靠在新兵营木墙，米金边和冷灰盾面之间有石蓝窄条，中心盾脊像一根折梁。图占主体，底边陷入软土。",
+        "references": [
+          "output/dota-native-equipment/valve/pavise.png",
+          "output/blue-black-art-references/10232_psd.png"
+        ]
+      },
+      {
+        "color": "equipment",
+        "slug": "aeon-disk",
+        "name": "永恒之盘",
+        "inspiration": "避免瞬间被击倒",
+        "brief": "一个金属环盘压着紫芯，放在带支脚的石台，偏心刻纹由几根凸起齿槽构成，像快要合上的古老机关。冷灰背景与有限黄铜亮度。",
+        "references": [
+          "output/dota-native-equipment/valve/aeon_disk.png",
+          "output/blue-black-art-references/10241_psd.png"
+        ]
+      },
+      {
+        "color": "equipment",
+        "slug": "manta",
+        "name": "幻影斧",
+        "inspiration": "分身与解控",
+        "brief": "完整蓝钢战斧竖靠在黑石镜旁，两道镜中不完全一致的淡轮廓投向内壁。铜铆钉、束布柄与青钢刃清楚，装饰用独立几何结构。",
+        "references": [
+          "output/dota-native-equipment/valve/manta.png",
+          "output/blue-black-art-references/10234_psd.png"
+        ]
+      },
+      {
+        "color": "equipment",
+        "slug": "boots-of-bearing",
+        "name": "宽容之靴",
+        "inspiration": "带队赶路与脱离",
+        "brief": "一对厚底行军靴放在山路石堆，红灰织带与较宽小牛皮鞋面，鞋筒的铜绳扣像小方向翼，暖日扫过积尘而非魔法泛光。",
+        "references": [
+          "output/dota-native-equipment/valve/boots_of_bearing.png",
+          "output/blue-black-art-references/10260_psd.png"
+        ]
+      }
+    ]
+  }
+}

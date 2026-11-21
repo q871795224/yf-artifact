@@ -1,0 +1,130 @@
+{
+  "images": [
+    {
+      "name": "破绽一击",
+      "image": "exploit-opening/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "047305e46b13bc05a9bbf73e7823b759fbc3a3584c8317416e8009950c120934",
+      "task_id": "mt_cGkwNDJlMDBjMWM0N2U3ZjA3ZTZhZWZhYmE3YzZkNzhlMGFhM2YxYmNh",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458485207336167"
+    },
+    {
+      "name": "踏隙追击",
+      "image": "follow-through/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "b7eb4e569cf13e940a0baad70ab2f1d0137a98cc567e69a00913dc4b330e5725",
+      "task_id": "mt_cGk2OThmNzdlMTMyNWQxNTc2OWIxYmI4NDhlOTU1MDllYjllZGEzMmRk",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458485224162081"
+    },
+    {
+      "name": "换影突入",
+      "image": "shadow-flank/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "7c5a2a2beadaf2cc0e00629b56fb4e5af10e96717782981b63245e6a776ef1e8",
+      "task_id": "mt_cGlhYzBjOGJjMzhlZjdmYmE4M2Q3MjMxNmJkNzZhOTg5ZmZlMDFlNmQ2",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458485199234276"
+    },
+    {
+      "name": "断咒暗针",
+      "image": "spellbreaker-needle/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "8b0732918fad4022a4b9b768c59d3eec408e7dae777019a8cbb5207a42b8c4ae",
+      "task_id": "mt_cGlhZGRlMjZiYWJkZGQzNWRiYzIzYWMwOThhZWQ2ZjhjMWEyOTkxZjE0",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458485495472934"
+    },
+    {
+      "name": "死印传递",
+      "image": "passing-death-mark/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "089073aed6aa8456e02fed6c125eeb6b390d322543b9f37a1fb5a9533294e6c9",
+      "task_id": "mt_cGk3YWFjYzZkNDk0NDkxZmZmZGVmZjljMzlmYTMyMjczMzg3MmFiNzA0",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458485487109372"
+    },
+    {
+      "name": "悬赏结算",
+      "image": "bounty-settlement/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "5118d401c9f82956f39889e2b86eab8dfd35508cd1d77dd9b8d9348f14883213",
+      "task_id": "mt_cGk5NmUyZDI1YTIxMGQ1MjcwMDg2MDliYzAzZmYzZTgyYjU1NzA1Yzdj",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458485507638553"
+    },
+    {
+      "name": "城脚暗雷",
+      "image": "tower-foot-sabotage/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "54f96e208d9eeb701674af5be037c0c6345735f6b1b7572527dc2c349ae15ebf",
+      "task_id": "mt_cGk3YjU3YTgzMmNjNWMyMWY1YjRlMTIwZDdhYjM2YjYwNGQzMjlkYmJl",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1458485713355602"
+    }
+  ]
+}
