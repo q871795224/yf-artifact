@@ -347,7 +347,7 @@ button,input,select{
   grid-area:1 / 1;
   color:#e4a28e;
 }
-#sound-option[hidden]{display:none}
+#sound-option[hidden],#tower-style-option[hidden]{display:none}
 .preview-cell img{
   display:block;
   position:absolute;

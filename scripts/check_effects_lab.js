@@ -58,6 +58,22 @@ async function checkEffectsLab(page) {
   check(await page.locator('#effect-layer [data-effect="aura"] rect').count() === 8, "Aura highlights all eight neighboring cells");
   await page.locator('[data-kind="tower"]').click();
   check((await page.locator("#source-unit img").getAttribute("src")).endsWith("/1000.webp"), "Tower attacks use the local tower artwork");
+  const towerSprites = page.locator('#effect-layer [data-effect="tower"] image');
+  await page.locator("#tower-style").selectOption("particles");
+  const urls = await towerSprites.evaluateAll(sprites => [...new Set(sprites.map(sprite => sprite.getAttribute("href")))]);
+  check(urls.length === 3 && await page.evaluate(async (files) => {
+    const textures = files.map(file => { const img = new Image(); img.src = file; return img.decode(); });
+    return Promise.all(textures).then(() => true, () => false);
+  }, urls), "The textured cannon uses three local particle textures");
+  await scrub(0.74);
+  const impact = await frame();
+  await scrub(1);
+  check(await towerSprites.evaluateAll(sprites => sprites.every(sprite => getComputedStyle(sprite).opacity === "0")),
+    "All textured particles vanish at the end");
+  await scrub(0.74);
+  check(JSON.stringify(await frame()) === JSON.stringify(impact), "The textured impact can be scrubbed deterministically");
+  await page.locator("#tower-style").selectOption("original");
+  check(await towerSprites.count() === 0, "Switching back restores the original cannon effect");
   await page.setViewportSize({ width: 390, height: 844 });
   const sizes = {};
   for (const columns of [6, 5]) {

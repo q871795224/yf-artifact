@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>特效工作台 · Artifact</title>
   <link rel="icon" href="../references/artifact-classic/assets/mobile/ingame_image/10033.webp">
-  <link rel="stylesheet" href="style.css?v=clash-1">
-  <script src="../prototype/effects.js?v=clash-1" defer></script>
-  <script src="app.js?v=clash-1" defer></script>
+  <link rel="stylesheet" href="style.css?v=tower-particles">
+  <script src="../prototype/effects.js?v=tower-particles" defer></script>
+  <script src="app.js?v=tower-particles" defer></script>
 </head>
 <body>
   <header class="app-header">
@@ -71,6 +71,7 @@
       <fieldset class="scene-settings"><legend>预览场景</legend>
         <label for="direction">方向<select id="direction"><option value="N">↑ 上</option><option value="NE">↗ 右上</option><option value="E">→ 右</option><option value="SE">↘ 右下</option><option value="S">↓ 下</option><option value="SW">↙ 左下</option><option value="W">← 左</option><option value="NW">↖ 左上</option></select></label>
         <label for="distance">距离<select id="distance"><option value="1">一格</option><option value="2" selected>两格</option></select></label>
+        <label id="tower-style-option" for="tower-style" hidden>炮击样式<select id="tower-style"><option value="original">原版线条</option><option value="particles">粒子贴图</option></select></label>
       </fieldset>
       <p class="visual-note">这里只调视觉效果。演示数字不会修改游戏里的伤害规则。</p>
       <section class="preset-editor">

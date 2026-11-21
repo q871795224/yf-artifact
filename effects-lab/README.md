@@ -1,5 +1,24 @@
 # 本地特效工作台
 
+## Godot 三维工作台
+
+[打开桌面浏览器预览](http://127.0.0.1:18772/effects-lab/3d/web/)。独立项目在 [3d/project.godot](3d/project.godot)。棋盘是五列八排的 3D 台面，使用项目插画作棋子，带塔、牌堆和中央河道。可切换近战挥砍、防御塔炮击和范围法术，调俯视角、回看指定帧和慢放。
+
+点棋子或使用「看卡图」可打开完整插画。棋盘上的插画为等比取景，完整插画使用 640 像素宽的 WebP。
+
+两座塔复用 Kenney Castle Kit 2.0 的 `tower-square.glb` 和配套色板，在 Godot 内按棋格缩放并加阵营色标。炮击复用 Effekseer 官方样例的 `Burst01`、`Particle03` 和 `Particle04_bokashi_soft` 贴图，在 Godot 里按起火、飞行、命中和消散布置。两套素材均为 CC0。 [Kenney 原包](https://kenney.nl/assets/castle-kit) · [下载镜像版本](https://github.com/Evolis-Work/kenney-castle-kit/tree/83e2f3c1cb8e88cac430f7098006d8c5ae36f126) · [Effekseer 官方样例](https://effekseer.github.io/en/contributes/Effekseer01/index.html)
+
+在 Godot 4.6.2 安装官方导出模板后，从仓库根目录构建。浏览器版使用 Compatibility 渲染器和无多线程的 Web 导出。当前演示用 Dummy 音频驱动，可在局域网 HTTP 地址打开。
+
+```sh
+mkdir -p effects-lab/3d/web
+godot --headless --path effects-lab/3d --export-release Web "$PWD/effects-lab/3d/web/index.html"
+```
+
+启动 `python3 scripts/serve_prototype.py --port 18772` 后访问预览。直接在 Godot 里运行时，按 `1`、`2`、`3` 选择演出，空格重播，`V` 切换俯视角。
+
+## 浏览器二维工作台
+
 设计沿革见 [决策记录](../docs/design/decision-log.md)；共享库、缓存、自动化与自启的坑点见 [开发复盘与运维](../docs/development/lessons-and-operations.md)。
 
 双击根目录的 `打开特效工作台.command`，或访问 <http://127.0.0.1:8741/effects-lab/>。当前电脑已安装 macOS LaunchAgent，由 Python 静态服务器在后台提供页面；每次登录 macOS 后自动启动，关闭终端不影响服务，进程退出后会自动拉起。只监听本机 `127.0.0.1:8741`，无需联网。
@@ -42,6 +61,8 @@ launchctl bootstrap "gui/$(id -u)" /Users/yifei.chen/Library/LaunchAgents/com.yi
 预设与当前工作参数保存在该浏览器的本地存储中。不同浏览器、不同访问地址的记录可能不共享；从本地文件切换到 HTTP 地址时，可先导出 JSON，再在新地址导入。重要的方案请导出 JSON；存储不可用时页面仍可预览与导出。
 
 ## 新增效果
+
+- 炮击粒子小样：打开 [炮击预览](http://127.0.0.1:8741/effects-lab/?effect=tower)，用「炮击样式」在同一块五列八排棋盘切换原版线条与粒子贴图。两种样式共用飞行和命中时点。粒子版加入顺着弹道消散的余烬、命中火花和后续烟尘。转到工作台的时间轴可以逐帧检查。三张纹理来自 Godot 官方 2D Particles 示例，随附 MIT 许可。 [示例源码](https://github.com/godotengine/godot-demo-projects/tree/b4eff8de9d7ba5a4f1a2dea8bae60f28816b7eea/2d/particles) · [许可](particles/LICENSE.md)
 
 - 雷击：上方落雷、分叉电弧、二次闪击与落点冲击，适合宙斯等法术。
 - 眩晕：头顶星环与三颗绕行星芒，单位暂时失色；没有伤害数字。

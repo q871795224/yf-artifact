@@ -1,0 +1,246 @@
+{
+  "created_on": "2026-11-20",
+  "status": "completed",
+  "scope": "最近设计的两英雄、两专属、两推进法术及两解场法术，每种一张插画；不包括已取消的基地与尚未定案的普通单位。",
+  "live_models_verified": true,
+  "live_balance_verified": true,
+  "charged_submissions": 8,
+  "output_directory": "assets/migoo",
+  "generation_constraints": "执行前必须通过 yf-migoo 实时核对模型、比例、分辨率、额度及暂停日期。现有模型与尺寸字段仅为偏好，不视为已核实可用参数。保持 skill 的日期、免费额度与审批检查，不绕过。",
+  "jobs": [
+    {
+      "asset_key": "hero-timbersaw",
+      "name": "伐木机",
+      "kind": "Hero",
+      "color": "red",
+      "prompt": "我们新设计的卡什么的都没有图，要让 migoo 参考现有的图和画风，只要图（卡面），不要上面的 UI、数据、文字，风格要尽可能保持一致。",
+      "notes": "生成单张完整竖版卡牌插画原画。参考图片只用于角色材质、绘画笔触、光照、色彩和世界观，不复刻其中任何界面或印刷元素。统一为 Dota / Artifact 暗黑奇幻半写实厚涂，清晰的大形、可见的手绘笔触、自然材质、戏剧性侧逆光、克制的体积光与空气透视。与参考图属于同一套游戏美术。主角或核心动作放在中央，关键武器完整，四边保留少量可裁切空间；画面自然延伸至边缘，不为标题或属性预留空白。画面只有插画，无卡框、无卡背、无边框、无文字、无数字、无字体、无卡名、无按钮、无属性图标、无棋盘格、无 UI、无 Logo、无水印。参考图已有文字、卡框或右下角水印一律不得继承。\n本张内容：主角是驾驶圆滚滚伐木机械外骨骼的小型工程师，机身用磨损的黄铜、暗铁与木构件制成，巨大的圆形锯片、卷链和机械夹臂是清晰辨识点。表现沉重却灵活的近身作战姿态，机械与驾驶员构成一个完整主体。黑岩与枯林战场，温暖橙红逆光、火星和木屑，金属有厚涂笔触而非摄影或塑料玩具质感。不要额外添加技能图标。\n角色识别以第一张伐木机原版参考为准：紫色皮肤的小型尖耳工程师，带护目镜的安全帽，兴奋而紧张的表情，驾驶巨大红色圆锯机械；重绘为本套统一无字插画，不保留参考卡上的 UI。",
+      "reference_images": [
+        "https://steamcdn-a.akamaihd.net/apps/583950/icons/set01/10022_large_english.3caf68ef0547dd05e142a6c263e16c9de71b8638.png",
+        "assets/custom/originals/dire-melee.png",
+        "references/artifact-classic/assets/large_image/10054.png"
+      ],
+      "count": 1,
+      "resolution_preference": "1K",
+      "ratio_preference": "9:16",
+      "recommended_model": "gpt-image-26-flare",
+      "status": "completed",
+      "downloaded_files": [
+        "assets/migoo/hero-timbersaw/original.png"
+      ],
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "asset_key": "hero-drow-ranger",
+      "name": "卓尔游侠",
+      "kind": "Hero",
+      "color": "green",
+      "prompt": "我们新设计的卡什么的都没有图，要让 migoo 参考现有的图和画风，只要图（卡面），不要上面的 UI、数据、文字，风格要尽可能保持一致。",
+      "notes": "生成单张完整竖版卡牌插画原画。参考图片只用于角色材质、绘画笔触、光照、色彩和世界观，不复刻其中任何界面或印刷元素。统一为 Dota / Artifact 暗黑奇幻半写实厚涂，清晰的大形、可见的手绘笔触、自然材质、戏剧性侧逆光、克制的体积光与空气透视。与参考图属于同一套游戏美术。主角或核心动作放在中央，关键武器完整，四边保留少量可裁切空间；画面自然延伸至边缘，不为标题或属性预留空白。画面只有插画，无卡框、无卡背、无边框、无文字、无数字、无字体、无卡名、无按钮、无属性图标、无棋盘格、无 UI、无 Logo、无水印。参考图已有文字、卡框或右下角水印一律不得继承。\n本张内容：主角是苍蓝灰肤色、银白长发的冷峻女弓手，深蓝兜帽与深色轻甲，手持修长战弓，完整可读的弓与拉弦动作，形象简洁有辨识度。青绿森林与苔藓石径，紫色灌木，冷青林间光与柔和暖色轮廓光，保持 Artifact 式手绘幻想肖像，不使用动漫、写实人像摄影或过度性感姿态。\n角色识别以第一张卓尔原版参考为准，保留银发、苍蓝肤色、深蓝兜帽与轻甲的轮廓；构图重新创作，不保留任何参考卡 UI。",
+      "reference_images": [
+        "https://steamcdn-a.akamaihd.net/apps/583950/icons/set01/10032_large_english.021671e5f589107162b79d280b7baee4e3740dfa.png",
+        "assets/custom/originals/radiant-ranged.png",
+        "references/artifact-classic/assets/large_image/10014.png"
+      ],
+      "count": 1,
+      "resolution_preference": "1K",
+      "ratio_preference": "9:16",
+      "recommended_model": "gpt-image-26-flare",
+      "status": "completed",
+      "downloaded_files": [
+        "assets/migoo/hero-drow-ranger/original.png"
+      ],
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "asset_key": "signature-timber-chain",
+      "name": "伐木锯链",
+      "kind": "Signature",
+      "color": "red",
+      "prompt": "我们新设计的卡什么的都没有图，要让 migoo 参考现有的图和画风，只要图（卡面），不要上面的 UI、数据、文字，风格要尽可能保持一致。",
+      "notes": "生成单张完整竖版卡牌插画原画。参考图片只用于角色材质、绘画笔触、光照、色彩和世界观，不复刻其中任何界面或印刷元素。统一为 Dota / Artifact 暗黑奇幻半写实厚涂，清晰的大形、可见的手绘笔触、自然材质、戏剧性侧逆光、克制的体积光与空气透视。与参考图属于同一套游戏美术。主角或核心动作放在中央，关键武器完整，四边保留少量可裁切空间；画面自然延伸至边缘，不为标题或属性预留空白。画面只有插画，无卡框、无卡背、无边框、无文字、无数字、无字体、无卡名、无按钮、无属性图标、无棋盘格、无 UI、无 Logo、无水印。参考图已有文字、卡框或右下角水印一律不得继承。\n本张内容：动态法术插画：圆形锯片伐木机沿绷紧的链钩斜向拉动机身，链条和锯刃切开前方战场，木屑、尘土和少量橙色火星划出清晰的运动弧线；一个残破的敌方盔甲或正在消散的敌兵轮廓提示补刀进场。核心是链钩牵引与机械位移，不画挥舞法杖、传送门、爆炸火球或鲜血特写。背景采用夜魇枯林与暗色岩地。\n角色识别以第一张伐木机原版参考为准：紫色皮肤的小型尖耳工程师，带护目镜的安全帽，兴奋而紧张的表情，驾驶巨大红色圆锯机械；重绘为本套统一无字插画，不保留参考卡上的 UI。",
+      "reference_images": [
+        "https://steamcdn-a.akamaihd.net/apps/583950/icons/set01/10022_large_english.3caf68ef0547dd05e142a6c263e16c9de71b8638.png",
+        "assets/custom/originals/dire-melee.png",
+        "references/artifact-classic/assets/large_image/10054.png"
+      ],
+      "count": 1,
+      "resolution_preference": "1K",
+      "ratio_preference": "9:16",
+      "recommended_model": "gpt-image-26-flare",
+      "status": "completed",
+      "downloaded_files": [
+        "assets/migoo/signature-timber-chain/original.png"
+      ],
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "asset_key": "signature-gust",
+      "name": "狂风",
+      "kind": "Signature",
+      "color": "green",
+      "prompt": "我们新设计的卡什么的都没有图，要让 migoo 参考现有的图和画风，只要图（卡面），不要上面的 UI、数据、文字，风格要尽可能保持一致。",
+      "notes": "生成单张完整竖版卡牌插画原画。参考图片只用于角色材质、绘画笔触、光照、色彩和世界观，不复刻其中任何界面或印刷元素。统一为 Dota / Artifact 暗黑奇幻半写实厚涂，清晰的大形、可见的手绘笔触、自然材质、戏剧性侧逆光、克制的体积光与空气透视。与参考图属于同一套游戏美术。主角或核心动作放在中央，关键武器完整，四边保留少量可裁切空间；画面自然延伸至边缘，不为标题或属性预留空白。画面只有插画，无卡框、无卡背、无边框、无文字、无数字、无字体、无卡名、无按钮、无属性图标、无棋盘格、无 UI、无 Logo、无水印。参考图已有文字、卡框或右下角水印一律不得继承。\n本张内容：动态法术插画：银白发深蓝兜帽的苍蓝肤色女弓手侧身向前释放一束宽阔的冷青色狂风，风中交织落叶和灰尘，前方两三名敌兵被吹离原本紧凑的阵型，斗篷与盾牌明显后倾。以真实画面的风势表达沉默与拆阵，不画禁言图标、叉号、符号、箭头或声波 UI。森林战场，整体色调承接天辉参考图。\n角色识别以第一张卓尔原版参考为准，保留银发、苍蓝肤色、深蓝兜帽与轻甲的轮廓；构图重新创作，不保留任何参考卡 UI。",
+      "reference_images": [
+        "https://steamcdn-a.akamaihd.net/apps/583950/icons/set01/10032_large_english.021671e5f589107162b79d280b7baee4e3740dfa.png",
+        "assets/custom/originals/radiant-ranged.png",
+        "references/artifact-classic/assets/large_image/10014.png"
+      ],
+      "count": 1,
+      "resolution_preference": "1K",
+      "ratio_preference": "9:16",
+      "recommended_model": "gpt-image-26-flare",
+      "status": "completed",
+      "downloaded_files": [
+        "assets/migoo/signature-gust/original.png"
+      ],
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "asset_key": "spell-breakthrough-charge",
+      "name": "破阵冲锋",
+      "kind": "Spell",
+      "color": "red",
+      "prompt": "我们新设计的卡什么的都没有图，要让 migoo 参考现有的图和画风，只要图（卡面），不要上面的 UI、数据、文字，风格要尽可能保持一致。",
+      "notes": "生成单张完整竖版卡牌插画原画。参考图片只用于角色材质、绘画笔触、光照、色彩和世界观，不复刻其中任何界面或印刷元素。统一为 Dota / Artifact 暗黑奇幻半写实厚涂，清晰的大形、可见的手绘笔触、自然材质、戏剧性侧逆光、克制的体积光与空气透视。与参考图属于同一套游戏美术。主角或核心动作放在中央，关键武器完整，四边保留少量可裁切空间；画面自然延伸至边缘，不为标题或属性预留空白。画面只有插画，无卡框、无卡背、无边框、无文字、无数字、无字体、无卡名、无按钮、无属性图标、无棋盘格、无 UI、无 Logo、无水印。参考图已有文字、卡框或右下角水印一律不得继承。\n本张内容：一名重甲英雄从己方普通步兵之间的空隙冲向前方，宽厚武器随冲势前倾，披风和尘土形成强烈方向感；周围友军让出道路，后方只是模糊敌军轮廓。表达英雄带头突进与当轮爆发，不画瞬移光门、棋盘格、脚印路线或箭头。暗色石板战场和橙红侧逆光，金属质感与夜魇参考一致。",
+      "reference_images": [
+        "assets/custom/originals/dire-melee.png",
+        "references/artifact-classic/assets/large_image/10054.png"
+      ],
+      "count": 1,
+      "resolution_preference": "1K",
+      "ratio_preference": "9:16",
+      "recommended_model": "gpt-image-26-flare",
+      "status": "completed",
+      "downloaded_files": [
+        "assets/migoo/spell-breakthrough-charge/original.png"
+      ],
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "asset_key": "spell-coordinated-march",
+      "name": "协同行军",
+      "kind": "Spell",
+      "color": "green",
+      "prompt": "我们新设计的卡什么的都没有图，要让 migoo 参考现有的图和画风，只要图（卡面），不要上面的 UI、数据、文字，风格要尽可能保持一致。",
+      "notes": "生成单张完整竖版卡牌插画原画。参考图片只用于角色材质、绘画笔触、光照、色彩和世界观，不复刻其中任何界面或印刷元素。统一为 Dota / Artifact 暗黑奇幻半写实厚涂，清晰的大形、可见的手绘笔触、自然材质、戏剧性侧逆光、克制的体积光与空气透视。与参考图属于同一套游戏美术。主角或核心动作放在中央，关键武器完整，四边保留少量可裁切空间；画面自然延伸至边缘，不为标题或属性预留空白。画面只有插画，无卡框、无卡背、无边框、无文字、无数字、无字体、无卡名、无按钮、无属性图标、无棋盘格、无 UI、无 Logo、无水印。参考图已有文字、卡框或右下角水印一律不得继承。\n本张内容：一支天辉小队在森林石径上同步前进，前方持盾战士、木质树精步兵和后方弓手形成紧密有序的小队，友军正穿过前排腾出的通道。表现部队协作向前占领空间，动作自然，画面有明确前后纵深，不画排队表格或棋盘格。青绿苔藓、紫色灌木、冷青微光，暖色边缘光，统一厚涂笔触。",
+      "reference_images": [
+        "assets/custom/originals/radiant-ranged.png",
+        "references/artifact-classic/assets/large_image/10014.png"
+      ],
+      "count": 1,
+      "resolution_preference": "1K",
+      "ratio_preference": "9:16",
+      "recommended_model": "gpt-image-26-flare",
+      "status": "completed",
+      "downloaded_files": [
+        "assets/migoo/spell-coordinated-march/original.png"
+      ],
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "asset_key": "spell-mighty-swing",
+      "name": "巨力挥舞",
+      "kind": "Spell",
+      "color": "red",
+      "prompt": "我们新设计的卡什么的都没有图，要让 migoo 参考现有的图和画风，只要图（卡面），不要上面的 UI、数据、文字，风格要尽可能保持一致。",
+      "notes": "生成单张完整竖版卡牌插画原画。参考图片只用于角色材质、绘画笔触、光照、色彩和世界观，不复刻其中任何界面或印刷元素。统一为 Dota / Artifact 暗黑奇幻半写实厚涂，清晰的大形、可见的手绘笔触、自然材质、戏剧性侧逆光、克制的体积光与空气透视。与参考图属于同一套游戏美术。主角或核心动作放在中央，关键武器完整，四边保留少量可裁切空间；画面自然延伸至边缘，不为标题或属性预留空白。画面只有插画，无卡框、无卡背、无边框、无文字、无数字、无字体、无卡名、无按钮、无属性图标、无棋盘格、无 UI、无 Logo、无水印。参考图已有文字、卡框或右下角水印一律不得继承。\n本张内容：借用参考图中蒙面重甲巨剑战士的设计语言：蓝色皮肤或深蓝内衬，厚重银铁与金属护甲，双手巨剑正在完成一次横向大幅挥舞，前方一排敌军被强劲的实体剑势击退，三处武器碰撞火星说明范围打击。英雄与巨剑是核心，动作夸张但结构可信；不要用魔法火球或全屏法阵代替物理挥砍，不画血腥断肢。暗岩地、橙红火光与强烈明暗对比，沿用参考图粗厚的绘画笔触。",
+      "reference_images": [
+        "assets/custom/originals/dire-melee.png",
+        "references/artifact-classic/assets/large_image/10054.png"
+      ],
+      "count": 1,
+      "resolution_preference": "1K",
+      "ratio_preference": "9:16",
+      "recommended_model": "gpt-image-26-flare",
+      "status": "completed",
+      "downloaded_files": [
+        "assets/migoo/spell-mighty-swing/original.png"
+      ],
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    },
+    {
+      "asset_key": "spell-green-row-assault",
+      "name": "绿色选行攻击法术（未命名）",
+      "kind": "Spell",
+      "color": "green",
+      "prompt": "我们新设计的卡什么的都没有图，要让 migoo 参考现有的图和画风，只要图（卡面），不要上面的 UI、数据、文字，风格要尽可能保持一致。",
+      "notes": "生成单张完整竖版卡牌插画原画。参考图片只用于角色材质、绘画笔触、光照、色彩和世界观，不复刻其中任何界面或印刷元素。统一为 Dota / Artifact 暗黑奇幻半写实厚涂，清晰的大形、可见的手绘笔触、自然材质、戏剧性侧逆光、克制的体积光与空气透视。与参考图属于同一套游戏美术。主角或核心动作放在中央，关键武器完整，四边保留少量可裁切空间；画面自然延伸至边缘，不为标题或属性预留空白。画面只有插画，无卡框、无卡背、无边框、无文字、无数字、无字体、无卡名、无按钮、无属性图标、无棋盘格、无 UI、无 Logo、无水印。参考图已有文字、卡框或右下角水印一律不得继承。\n本张内容：天辉军队从不同纵深位置向同一段敌方战线发起同步攻击：近处持盾步兵出剑，后排弓手放箭，树精远程兵释放克制的青色能量，远处敌兵与一座石塔位于同一段自然战线。重点表现已有部队合力出击并推进胜势，不把战场画成棋盘，不画行号、目标框、射程圆或指令箭头。森林与破损石路，敌塔只是叙事背景，保持单张完整动态插画。",
+      "reference_images": [
+        "assets/custom/originals/radiant-ranged.png",
+        "references/artifact-classic/assets/large_image/10014.png"
+      ],
+      "count": 1,
+      "resolution_preference": "1K",
+      "ratio_preference": "9:16",
+      "recommended_model": "gpt-image-26-flare",
+      "status": "completed",
+      "downloaded_files": [
+        "assets/migoo/spell-green-row-assault/original.png"
+      ],
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      }
+    }
+  ],
+  "credits_before": {
+    "free": 95,
+    "paid": 0,
+    "balance": 95
+  },
+  "requested_model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "listed_credits_per_image": 5.33,
+  "credits_after_observed": {
+    "free": 92,
+    "paid": 0,
+    "balance": 92
+  }
+}

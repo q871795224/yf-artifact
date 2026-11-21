@@ -1,6 +1,6 @@
 """Growth Demo presentation adapter, sharing turn/replay transport with V0.3."""
 from copy import deepcopy
-from growth_cards import RELEASE_VERSION, PANELS, ITEMS
+from growth_cards import DROW, TIMBERSAW, RELEASE_VERSION, PANELS, ITEMS
 from simulate_match import CARDS
 from growth_match import GLOBAL_SKILLS, GLOBAL_SKILL_COST, SHOP_SOURCES, GrowthMatch
 from playable_match import PlaySession, action_view, StaleAction
@@ -33,7 +33,8 @@ class GrowthSession(PlaySession):
         if kind in ('card','item','move'):
             return super()._describe(action,team)
         names={'chen':'劝化','purify':'洗礼','swap':'换位','redirect':'引导箭头',
-               'blink':'跳刀','bkb':'黑皇杖','mek':'梅肯斯姆','midas':'点金手','hex':'邪恶镰刀','silence':'紫苑'}
+               'blink':'跳刀','bkb':'黑皇杖','mek':'梅肯斯姆','midas':'点金手','hex':'邪恶镰刀','silence':'紫苑',
+               'whirl':'死亡旋风','multishot':'数箭齐发'}
         unit=next(u for u in self.game.field(team) if u.uid==actor)
         return prefix+unit.name+'使用'+names[kind]
 
@@ -93,7 +94,8 @@ class GrowthSession(PlaySession):
                  pendingLevel=u.pending_level if u.hero else None,
                  panels=PANELS.get(u.hero),debuffs=deepcopy(u.debuffs),buffs=deepcopy(u.buffs),
                  forcedTarget=u.forced_uid,retaliate=self.game.retaliate(u))
-        v['skillKind']='chen' if u.hero==10017 else 'purify' if u.hero==10044 else {'swap':'swap','redirect':'redirect'}.get(CARDS[u.card_id].get('effect'))
+        skills={10017:'chen',10044:'purify',TIMBERSAW:'whirl',DROW:'multishot'}
+        v['skillKind']=skills.get(u.hero) or {'swap':'swap','redirect':'redirect'}.get(CARDS[u.card_id].get('effect'))
         return v
 
     def _frame(self,*args,**kwargs):
@@ -105,6 +107,7 @@ class GrowthSession(PlaySession):
 
     def snapshot(self):
         v=super().snapshot()
+        v['matchup']={'player':self.game.deck_names[0],'opponent':self.game.deck_names[1]}
         kind,name=GLOBAL_SKILLS[0]
         v['globalSkill']={'kind':kind,'name':name,'cost':GLOBAL_SKILL_COST,'used':self.game.global_skill_used[0]}
         v['cardCosts']={cid:self.game.card_cost(cid,0) for cid in self.game.hand[0]}

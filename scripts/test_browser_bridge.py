@@ -68,7 +68,8 @@ class StaticBuildTests(unittest.TestCase):
             out = Path(temp) / 'site'
             first = build(out)
             self.assertGreater(first['bytes'], 10000000)
-            self.assertLess(first['bytes'], 18000000)
+            # The expanded playable card pool adds about 3 MB of on-demand WebP art.
+            self.assertLess(first['bytes'], 20000000)
             self.assertIn('"browser"', (out/'prototype/runtime-config.js').read_text())
             bundle = json.loads((out/'prototype/engine-files.json').read_text())
             engine = next(f for f in bundle['files'] if f['path'] == 'scripts/playable_match.py')
@@ -79,6 +80,7 @@ class StaticBuildTests(unittest.TestCase):
             self.assertTrue((out/'vendor/pyodide/pyodide.asm.wasm').is_file())
             self.assertTrue((out/'references/artifact-classic/assets/mobile/mini_image/10020.webp').is_file())
             self.assertFalse(list((out/'references/artifact-classic/assets').rglob('*.png')))
+            self.assertFalse(list((out/'prototype/assets').rglob('*.png')))
             self.assertTrue((out/'runtime-cache.js').is_file())
             self.assertFalse((out/'output').exists())
             self.assertFalse((out/'effects-lab').exists())

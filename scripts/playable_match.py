@@ -129,10 +129,18 @@ def action_view(game, action, version, team=0):
         index = int(actor)
         card_id = game.hand[team][index] if kind == 'card' else game.item_hand[team][index][0]
         view.update(index=index, card_id=card_id)
-    if kind in ('move', 'horn', 'blink') or (kind == 'card' and ',' in target):
+    if kind in ('move', 'horn', 'blink', 'multishot') or (kind == 'card' and ',' in target and '|' not in target and '@' not in target):
         view['row'], view['col'] = map(int, target.split(','))
-    if '|' in target:
+    if '@' in target:
+        from growth_match import parse_march
+        moves = parse_march(target)
+        origins = {u.uid:u.pos for u in game.field(team)}
+        view['march'] = [{'unit':uid,'row':pos[0],'col':pos[1]} for uid,pos in moves]
+        view['centers'] = game.march_centers([origins[uid] for uid,_ in moves])
+    elif '|' in target:
         view['firstTarget'], view['secondTarget'] = target.split('|')
+        if ',' in view['secondTarget']:
+            view['secondRow'], view['secondCol'] = map(int, view['secondTarget'].split(','))
     elif kind == 'rally_swap':
         view['firstTarget'], view['secondTarget'] = actor, target
         if ',' in target:

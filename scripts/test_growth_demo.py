@@ -3,6 +3,7 @@ from copy import deepcopy
 import unittest
 
 from growth_cards import CATALOG, ITEMS, PANELS, RANGED_CREEP, SIGNATURES, default_deck, validate_deck, full_deck
+from growth_cards import CHARGE, DROW, GUST, MARCH, TIMBERSAW, TIMBER_CHAIN, opponent_presets
 from growth_match import GrowthMatch, GrowthUnit
 from growth_playable import GrowthSession
 from browser_bridge import BrowserBridge
@@ -35,6 +36,127 @@ def do(g,kind,actor,target,team=0):
 
 
 class GrowthTests(unittest.TestCase):
+    def test_timber_chain_clears_lethal_landing_before_moving(self):
+        g=empty()
+        caster=unit('timber',1,TIMBERSAW,(3,2),2)
+        landing=unit('landing',0,1006,(4,3))
+        landing.hp=2
+        adjacent=[unit('east',0,1006,(3,3)),unit('south',0,1006,(4,2))]
+        g.units=[caster,landing,*adjacent]
+        g.hand[1]=[TIMBER_CHAIN]
+        landing.buffs['bkb']=True
+        self.assertNotIn('4,3',g.card_targets(TIMBER_CHAIN,1))
+        landing.buffs.clear()
+        caster.moved=True
+        do(g,'card',0,'4,3',team=1)
+        self.assertEqual((caster.pos,g.mana[1],g.gold[1]),((4,3),8,1))
+        self.assertEqual([u.hp for u in adjacent],[2,2])
+        self.assertNotIn(landing,g.units)
+
+    def test_whirl_respects_magic_immunity_and_multishot_rotates_four_cells(self):
+        g=empty()
+        timber=unit('timber',1,TIMBERSAW,(3,2))
+        drow=unit('drow',0,DROW,(4,2))
+        drow.buffs['bkb']=True
+        watchers=[unit('side',1,61003,(3,3)),unit('back',1,1006,(2,2)),
+                  unit('far',1,1006,(2,3))]
+        g.units=[timber,drow,*watchers]
+        do(g,'whirl','timber','timber',team=1)
+        self.assertEqual((drow.hp,timber.cd),(5,2))
+        do(g,'multishot','drow','3,2')
+        self.assertEqual((timber.hp,watchers[0].hp,watchers[1].hp,watchers[2].hp,drow.cd),(4,2,1,4,3))
+
+    def test_gust_pushes_farther_targets_first_and_applies_silence_when_blocked(self):
+        g=empty()
+        drow=unit('drow',0,DROW,(4,1),2)
+        near=unit('near',1,1006,(3,1))
+        far=unit('far',1,1006,(2,1))
+        blocked=unit('blocked',1,1006,(3,2))
+        obstacle=unit('obstacle',0,1006,(2,2))
+        immune=unit('immune',1,1006,(3,0))
+        immune.buffs['bkb']=True
+        g.units=[drow,near,far,blocked,obstacle,immune]
+        g.hand[0]=[GUST]
+        do(g,'card',0,'3,1')
+        self.assertEqual([u.pos for u in (near,far,blocked,immune)],[(2,1),(1,1),(3,2),(3,0)])
+        self.assertTrue(all(u.debuffs.get('silence') and not u.moved for u in (near,far,blocked)))
+        self.assertNotIn('silence',immune.debuffs)
+
+    def test_advance_cards_can_move_twice_and_march_can_fill_vacated_tile(self):
+        g=empty()
+        hero=unit('hero',1,TIMBERSAW,(3,0))
+        obstacle=unit('ally',1,1006,(4,0))
+        g.units=[hero,obstacle]
+        g.hand[1]=[CHARGE]
+        hero.moved=True
+        do(g,'card',0,'hero|5,0',team=1)
+        self.assertEqual((hero.pos,hero.temporary_attack,g.mana[1]),((5,0),2,8))
+        lead=unit('lead',0,1006,(3,1))
+        rear=unit('rear',0,DROW,(5,1))
+        flank=unit('flank',0,1006,(4,3))
+        g.units=[rear,flank,lead]
+        g.hand[0]=[MARCH]
+        rear.moved=True
+        do(g,'card',0,'lead@2,1;flank@3,3;rear@3,1')
+        self.assertEqual(([lead.pos,flank.pos,rear.pos],g.mana[0]),([(2,1),(3,3),(3,1)],7))
+
+    def test_expansion_signature_is_generated_once_and_experiment_replays(self):
+        g=GrowthMatch(13,trace=False,experiment='combined')
+        drow=next(u for u in g.units if u.hero==DROW)
+        self.assertEqual(g.hand[0].count(GUST)+g.deck[0].count(GUST),2)
+        drow.pending_level=2
+        g.round=3
+        g.start_round()
+        drow.pending_level=3
+        g.round=4
+        g.start_round()
+        self.assertEqual(g.hand[0].count(GUST)+g.deck[0].count(GUST),3)
+        s=GrowthSession(13,g.deck_config[0])
+        self.assertEqual(s.game.rosters,g.rosters)
+        self.assertEqual(s.export()['deck_config']['experiment'],'combined')
+
+    def test_tower_destruction_has_no_base_and_counts_only_remaining_health(self):
+        g=empty()
+        g.forts[1].hp=3
+        g.damage_fort(1,100)
+        g.check_victory()
+        self.assertEqual((g.finished,g.winner,g.end_reason),(True,0,'tower-destroyed'))
+        self.assertEqual((g.forts[1].stage,g.forts[1].hp),('tower',0))
+        self.assertEqual(g.stats[0]['building_damage'],3)
+        self.assertEqual(g.stats[0]['towers_destroyed'],1)
+        g.damage_fort(1,5)
+        self.assertEqual(g.stats[0]['towers_destroyed'],1)
+
+    def test_same_combat_can_destroy_both_towers_and_draw(self):
+        g=empty()
+        g.units=[unit('a',0,1006,(2,2)),unit('b',1,1006,(5,2))]
+        for fort in g.forts:
+            fort.hp=2
+        g.combat()
+        self.assertEqual((g.finished,g.winner,g.end_reason),(True,None,'simultaneous'))
+        self.assertEqual([(f.stage,f.hp) for f in g.forts],[('tower',0),('tower',0)])
+        self.assertEqual([s['towers_destroyed'] for s in g.stats],[1,1])
+
+    def test_lethal_forecast_and_session_finish_at_tower_without_shop(self):
+        session=GrowthSession(13)
+        g=session.game=empty()
+        g.units=[unit('a',0,1006,(2,2))]
+        g.forts[1].hp=1
+        before=deepcopy(g.__dict__)
+        self.assertEqual(session.combat_forecast()['forts'][1],
+                         {'team':1,'hp':0,'destroyed':True})
+        self.assertEqual(g.__dict__,before)
+        frames=[]
+        session._combat(frames)
+        state=session.snapshot()
+        self.assertEqual((state['phase'],state['winner'],state['endReason']),
+                         ('finished',0,'tower-destroyed'))
+        self.assertEqual(state['actions'],[])
+        self.assertNotIn('shop',state)
+        with self.assertRaises(InvalidAction):
+            session.apply(session.version,'next_round')
+        self.assertEqual(session.export()['reason'],'tower-destroyed')
+
     def test_opening_and_supply_are_one_hero_one_creep_then_one_each(self):
         g=GrowthMatch(13,trace=False)
         self.assertEqual([len(g.field(t)) for t in (0,1)],[2,2])
@@ -106,6 +228,36 @@ class GrowthTests(unittest.TestCase):
         g.combat()
         self.assertEqual(enemy.hp,1)
 
+    def test_nonheroes_stay_in_legal_tower_attack_positions(self):
+        for team,row in ((0,1),(1,6)):
+            for cid in (1006,RANGED_CREEP,61003,64002):
+                with self.subTest(team=team,card=cid):
+                    g=empty()
+                    creep=unit('creep',team,cid,(row,1))
+                    g.units=[creep]
+                    g.auto_move()
+                    self.assertEqual(creep.pos,(row,1))
+                    g.combat()
+                    self.assertLess(g.forts[1-team].hp,40)
+
+    def test_creeps_do_not_march_or_chase_into_enemy_fountain(self):
+        for team,edge in ((0,0),(1,7)):
+            with self.subTest(team=team):
+                g=empty()
+                near=1 if team==0 else 6
+                fresh=unit('fresh',team,1006,(2 if team==0 else 5,0))
+                fresh.first_move=True
+                g.units=[fresh]
+                g.auto_move()
+                self.assertEqual(fresh.pos,(near,0))
+                defender=unit('defender',1-team,1006,(edge,2))
+                fresh.target_uid=defender.uid
+                fresh.ordered=True
+                g.units.append(defender)
+                g.chase()
+                self.assertEqual(fresh.pos,(near,1))
+                self.assertEqual(fresh.target_uid,defender.uid)
+
     def test_auto_reinforcements_use_multiple_legal_columns_deterministically(self):
         def columns(seed):
             g=GrowthMatch(seed)
@@ -124,6 +276,40 @@ class GrowthTests(unittest.TestCase):
         g=GrowthMatch(13)
         self.assertIn((7,2),g.fountain_positions(0))
         self.assertIn((0,2),g.fountain_positions(1))
+
+    def test_reinforcement_uses_only_free_fountain_cells_and_skips_full_fountain(self):
+        g=empty()
+        for team,row in ((0,7),(1,0)):
+            g.units.extend(unit(f'{team}-{col}',team,1006,(row,col)) for col in range(4))
+        g.round=6
+        g.start_round()
+        for team,row in ((0,7),(1,0)):
+            creep=g.field(team)[-1]
+            self.assertEqual((creep.pos,creep.card_id),((row,4),RANGED_CREEP))
+        before=len(g.units)
+        g.round=7
+        g.start_round()
+        self.assertEqual(len(g.units),before)
+        g.check()
+
+    def test_fresh_creeps_march_around_forward_towers_and_follow_vacated_cells(self):
+        for team,row in ((0,7),(1,0)):
+            with self.subTest(team=team):
+                g=empty()
+                creep=unit('fresh',team,1006,(row,2))
+                creep.first_move=True
+                g.units=[creep]
+                g.auto_move()
+                self.assertEqual(creep.pos[0],5 if team==0 else 2)
+                self.assertEqual(abs(creep.pos[1]-2),1)
+                g.check()
+                front=unit('front',team,1006,(4 if team==0 else 3,0))
+                back=unit('back',team,1006,(5 if team==0 else 2,0))
+                g.units=[front,back]
+                g.auto_move()
+                self.assertEqual(front.pos,(3 if team==0 else 4,0))
+                self.assertEqual(back.pos,(4 if team==0 else 3,0))
+                g.check()
 
     def test_global_swap_allows_two_heroes_and_updates_targets(self):
         g=empty()
@@ -528,7 +714,7 @@ class GrowthTests(unittest.TestCase):
         g.equip(h,65012);do(g,'bkb','h','self')
         self.assertEqual(g.attack(h),1)
 
-    def test_full_ai_match_reaches_base_victory_with_valid_states(self):
+    def test_full_ai_match_reaches_tower_victory_with_valid_states(self):
         g=GrowthMatch(4,trace=False)
         for r in range(1,121):
             g.round=r;g.start_round();g.auto_move();g.reveal()
@@ -543,7 +729,8 @@ class GrowthTests(unittest.TestCase):
             g.combat();g.check()
             if g.finished:break
         self.assertTrue(g.finished)
-        self.assertEqual(g.forts[1-g.winner].stage,'base')
+        self.assertEqual(g.end_reason,'tower-destroyed')
+        self.assertTrue(all(f.stage=='tower' for f in g.forts))
         self.assertLessEqual(g.forts[1-g.winner].hp,0)
 
     def test_deck_validation_and_nine_fixed_signatures(self):
@@ -563,6 +750,27 @@ class GrowthTests(unittest.TestCase):
         replay=BrowserBridge('growth-test').request('/api/games/'+'a'*32,None,after['save'])
         self.assertEqual(replay['data']['state'],after['data']['state'])
         self.assertEqual(after['save']['deck_config'],config)
+
+    def test_selected_ai_deck_is_validated_and_snapshotted_for_replay(self):
+        pressure,equipment=opponent_presets()
+        self.assertNotEqual(pressure['deck'],equipment['deck'])
+        config={**default_deck(),'name':'我的搭配',
+                'opponent':{**equipment['deck'],'name':equipment['name']}}
+        game_id='b'*32
+        bridge=BrowserBridge('deck-lobby-test')
+        opened=bridge.request('/api/games',{'seed':13,'deck_config':config},new_id=game_id)
+        self.assertEqual(opened['status'],200)
+        self.assertEqual(bridge.session.game.deck_config[1],equipment['deck'])
+        self.assertEqual(opened['data']['state']['matchup'],{'player':'我的搭配','opponent':'装备成长'})
+        updated=bridge.request('/api/games/'+game_id+'/actions',{'version':0,'action_id':'pass'})
+        exported=bridge.request('/api/games/'+game_id+'/export',None)
+        self.assertEqual(exported['data']['deck_config']['opponent'],config['opponent'])
+        restored=BrowserBridge('deck-lobby-test').request('/api/games/'+game_id,None,updated['save'])
+        self.assertEqual(restored['data']['state'],updated['data']['state'])
+        invalid={**default_deck(),'opponent':default_deck(0)}
+        rejected=bridge.request('/api/games',{'seed':13,'deck_config':invalid},new_id='c'*32)
+        self.assertEqual(rejected['status'],400)
+        self.assertEqual(bridge.game_id,game_id)
 
 
 if __name__=='__main__':unittest.main()

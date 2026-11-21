@@ -1,0 +1,246 @@
+{
+  "created_on": "2026-11-20",
+  "provider": "Migoo via migoo-imagegen",
+  "requested_model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "aspect_ratio": "9:16",
+  "count": 8,
+  "credits_before_observed": {
+    "free": 95,
+    "paid": 0,
+    "balance": 95
+  },
+  "credits_after_observed": {
+    "free": 92,
+    "paid": 0,
+    "balance": 92
+  },
+  "credit_note": "账户读数为 95→92，近期交易同时列出该批八笔各 -1；余额差与交易合计尚不一致，不将差额作为精确批次成本。",
+  "assets": [
+    {
+      "asset_key": "hero-timbersaw",
+      "name": "伐木机",
+      "kind": "Hero",
+      "color": "red",
+      "path": "assets/migoo/hero-timbersaw/original.png",
+      "width": 768,
+      "height": 1360,
+      "size_bytes": 1802892,
+      "sha256": "fd8e6caa05e7134da8080e9c03ee9bb15672584f577458e93c1b7c7de5cd76de",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "reference_images": [
+        "https://steamcdn-a.akamaihd.net/apps/583950/icons/set01/10022_large_english.3caf68ef0547dd05e142a6c263e16c9de71b8638.png",
+        "assets/custom/originals/dire-melee.png",
+        "references/artifact-classic/assets/large_image/10054.png"
+      ],
+      "visual_review": "inspected_no_card_frame_text_numbers_ui_or_watermark",
+      "integration": "expansion_preview",
+      "card_id": 10022,
+      "preview_path": "prototype/assets/cards/10022.webp",
+      "preview_sha256": "1dc98dfd0647436581f55553b077330af3335cfc6cf001e8263042b8a6794a4c"
+    },
+    {
+      "asset_key": "hero-drow-ranger",
+      "name": "卓尔游侠",
+      "kind": "Hero",
+      "color": "green",
+      "path": "assets/migoo/hero-drow-ranger/original.png",
+      "width": 768,
+      "height": 1360,
+      "size_bytes": 1808350,
+      "sha256": "0e77579076d697eb80b4af21c9c25834db0361c6bb3eddc094df3c2c410bfee6",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "reference_images": [
+        "https://steamcdn-a.akamaihd.net/apps/583950/icons/set01/10032_large_english.021671e5f589107162b79d280b7baee4e3740dfa.png",
+        "assets/custom/originals/radiant-ranged.png",
+        "references/artifact-classic/assets/large_image/10014.png"
+      ],
+      "visual_review": "inspected_no_card_frame_text_numbers_ui_or_watermark",
+      "integration": "expansion_preview",
+      "card_id": 10032,
+      "preview_path": "prototype/assets/cards/10032.webp",
+      "preview_sha256": "f871576b69f42801074140cbcc5f2fa67edf644459d3dbc1c4c066f5aa766a76"
+    },
+    {
+      "asset_key": "signature-timber-chain",
+      "name": "伐木锯链",
+      "kind": "Signature",
+      "color": "red",
+      "path": "assets/migoo/signature-timber-chain/original.png",
+      "width": 768,
+      "height": 1360,
+      "size_bytes": 1959875,
+      "sha256": "9fb0cf8e8e8d9b8911e90eb76a5e82de505645c6d66c9a08da5368dfabd63176",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "reference_images": [
+        "https://steamcdn-a.akamaihd.net/apps/583950/icons/set01/10022_large_english.3caf68ef0547dd05e142a6c263e16c9de71b8638.png",
+        "assets/custom/originals/dire-melee.png",
+        "references/artifact-classic/assets/large_image/10054.png",
+        "assets/migoo/hero-timbersaw/original.png"
+      ],
+      "visual_review": "inspected_no_card_frame_text_numbers_ui_or_watermark",
+      "integration": "expansion_preview",
+      "card_id": 63007,
+      "preview_path": "prototype/assets/cards/63007.webp",
+      "preview_sha256": "b5f52f40811e58a5276b64584f961ddf91b11084f7546e9cb8d68135cf8553e0"
+    },
+    {
+      "asset_key": "signature-gust",
+      "name": "狂风",
+      "kind": "Signature",
+      "color": "green",
+      "path": "assets/migoo/signature-gust/original.png",
+      "width": 768,
+      "height": 1360,
+      "size_bytes": 2040489,
+      "sha256": "dd18c7359763fa61c35ed4980278a72cd6b5683eaed065ddcdf074509409b1cf",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "reference_images": [
+        "https://steamcdn-a.akamaihd.net/apps/583950/icons/set01/10032_large_english.021671e5f589107162b79d280b7baee4e3740dfa.png",
+        "assets/custom/originals/radiant-ranged.png",
+        "references/artifact-classic/assets/large_image/10014.png",
+        "assets/migoo/hero-drow-ranger/original.png"
+      ],
+      "visual_review": "inspected_no_card_frame_text_numbers_ui_or_watermark",
+      "integration": "expansion_preview",
+      "card_id": 63008,
+      "preview_path": "prototype/assets/cards/63008.webp",
+      "preview_sha256": "95a8c1f20f82bef11cb30b9c49cb352795759250e13c377ab5406d1dc88b85d4"
+    },
+    {
+      "asset_key": "spell-breakthrough-charge",
+      "name": "破阵冲锋",
+      "kind": "Spell",
+      "color": "red",
+      "path": "assets/migoo/spell-breakthrough-charge/original.png",
+      "width": 768,
+      "height": 1360,
+      "size_bytes": 1656863,
+      "sha256": "c431adb756bb32db614867ac2886ff1ddf6f6dbe5b736435cfe2863d3c12a073",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "reference_images": [
+        "assets/custom/originals/dire-melee.png",
+        "references/artifact-classic/assets/large_image/10054.png"
+      ],
+      "visual_review": "inspected_no_card_frame_text_numbers_ui_or_watermark",
+      "integration": "expansion_preview",
+      "card_id": 62020,
+      "preview_path": "prototype/assets/cards/62020.webp",
+      "preview_sha256": "86e030b10da957a1a21474a44ab2e1f12a185af49b4b3c9f2db340b1bc57c092"
+    },
+    {
+      "asset_key": "spell-coordinated-march",
+      "name": "协同行军",
+      "kind": "Spell",
+      "color": "green",
+      "path": "assets/migoo/spell-coordinated-march/original.png",
+      "width": 768,
+      "height": 1360,
+      "size_bytes": 2005844,
+      "sha256": "96a8d24e5a0b40bbca5521af594ebed43c2671b32d9ebc6ee6b703985d266aae",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "reference_images": [
+        "assets/custom/originals/radiant-ranged.png",
+        "references/artifact-classic/assets/large_image/10014.png"
+      ],
+      "visual_review": "inspected_no_card_frame_text_numbers_ui_or_watermark",
+      "integration": "expansion_preview",
+      "card_id": 62021,
+      "preview_path": "prototype/assets/cards/62021.webp",
+      "preview_sha256": "b8c8f70ea351f8a80602be4651f3c2994ba993779046c42bfd835108b8879d08"
+    },
+    {
+      "asset_key": "spell-mighty-swing",
+      "name": "巨力挥舞",
+      "kind": "Spell",
+      "color": "red",
+      "path": "assets/migoo/spell-mighty-swing/original.png",
+      "width": 768,
+      "height": 1360,
+      "size_bytes": 1741284,
+      "sha256": "2440fe473d6a615d16d3f1b9dd2d7cd49ec96a1d943abd241d898e3512d7dcaa",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "reference_images": [
+        "assets/custom/originals/dire-melee.png",
+        "references/artifact-classic/assets/large_image/10054.png"
+      ],
+      "visual_review": "inspected_no_card_frame_text_numbers_ui_or_watermark",
+      "integration": "not_integrated"
+    },
+    {
+      "asset_key": "spell-green-row-assault",
+      "name": "绿色选行攻击法术（未命名）",
+      "kind": "Spell",
+      "color": "green",
+      "path": "assets/migoo/spell-green-row-assault/original.png",
+      "width": 768,
+      "height": 1360,
+      "size_bytes": 2017211,
+      "sha256": "b8748ae35db6c3894f168d20130962ad145ebf850410717d0d2bcf87aea43301",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "reference_images": [
+        "assets/custom/originals/radiant-ranged.png",
+        "references/artifact-classic/assets/large_image/10014.png",
+        "assets/migoo/hero-drow-ranger/original.png"
+      ],
+      "visual_review": "inspected_no_card_frame_text_numbers_ui_or_watermark",
+      "integration": "not_integrated"
+    }
+  ]
+}

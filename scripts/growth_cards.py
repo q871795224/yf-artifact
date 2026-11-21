@@ -5,8 +5,15 @@ from simulate_match import CARDS
 
 RELEASE_VERSION = '0.4'
 RANGED_CREEP = 64004
+TIMBERSAW, DROW = 10022, 10032
+TIMBER_CHAIN, GUST = 63007, 63008
+CHARGE, MARCH = 62020, 62021
+EXPERIMENTS = ('heroes', 'spells', 'combined')
 ROSTERS = ((10014, 10017, 10044), (10020, 10069, 10054))
+EXPANSION_ROSTERS = ((10014, 10017, DROW), (10020, 10069, TIMBERSAW))
 PANELS = {
+    TIMBERSAW: ((2, 0, 7), (3, 0, 9), (4, 0, 11)),
+    DROW: ((2, 0, 5), (3, 0, 6), (4, 0, 7)),
     10020: ((3, 0, 5), (4, 1, 8), (6, 2, 10)),
     10069: ((3, 0, 5), (4, 0, 7), (6, 1, 8)),
     10054: ((3, 0, 7), (4, 0, 9), (5, 0, 11)),
@@ -66,7 +73,10 @@ for i,(name,cost,effect,text,art) in enumerate(SPELLS):
     # An absent reference image uses an available hero portrait, never a broken URL.
     card(62001+i,name,'Spell',cost,text,'red' if i<9 else 'green',art if art in CARDS else (10020 if i<9 else 10044),effect=effect)
 
-SIGNATURES = {10020:63001,10069:63002,10054:63003,10014:63004,10017:63005,10044:63006}
+card(CHARGE,'破阵冲锋','Spell',2,'一名友方英雄沿正交直线移动1或2格，本轮+2攻击。','red',10297,effect='charge')
+card(MARCH,'协同行军','Spell',3,'选定九格区域，至多三名友军各向敌方泉水前进1或2格。','green',10311,effect='march')
+
+SIGNATURES = {TIMBERSAW:TIMBER_CHAIN,DROW:GUST,10020:63001,10069:63002,10054:63003,10014:63004,10017:63005,10044:63006}
 for hero,name,cost,level,effect,text in [
  (10020,'狂战士之吼',4,1,'roar','斧王八邻敌人本轮嘲讽锁定到斧王。未移动者在交战前追击；斧王不增加攻击次数。'),
  (10069,'决斗',2,3,'duel','选择军团正四邻敌方英雄，本轮双方相互锁定；一方死亡后存活者永久+1攻击。'),
@@ -77,6 +87,10 @@ for hero,name,cost,level,effect,text in [
 ]:
     card(SIGNATURES[hero],name,'Spell',cost,text,CARDS[hero]['colors'][0],hero,
          hero_id=hero, unlock_level=level, effect=effect)
+card(TIMBER_CHAIN,'伐木锯链','Spell',2,'移动至距离恰为2的空格或可被击杀的敌方格。中间格和落点敌人受2魔法伤害。','red',10020,hero_id=TIMBERSAW,unlock_level=2,effect='timber_chain')
+card(GUST,'狂风','Spell',3,'以数箭齐发的范围沉默敌人至回合结束，并沿施放方向推退1格。','green',10044,hero_id=DROW,unlock_level=2,effect='gust')
+GENERATED_SIGNATURES = {TIMBERSAW:TIMBER_CHAIN,DROW:GUST}
+
 for level in (1,2,3):
     card(64000+level,f'{level}级灵狼','Creep',0,'召出后不随狼人升级。','green',10112,
          attack=level,armor=0,hit_points=3,effect='')
@@ -111,13 +125,18 @@ for args in [
 # Custom IDs cannot alter an original card's rules in historical experiments.
 CARDS.update(CATALOG)
 
-def default_deck(team=0):
+def default_deck(team=0, new_spells=False):
     color='green' if team==0 else 'red'
     ordinary=[cid for cid,c in CATALOG.items() if c['card_type'] in ('Creep','Spell') and c['colors']==[color] and not c.get('hero_id') and cid<63000]
     # Two of every unit, then nine simple spells.
     units=[cid for cid in ordinary if CATALOG[cid]['card_type']=='Creep']
     spells=[cid for cid in ordinary if CATALOG[cid]['card_type']=='Spell']
-    return {'ordinary':units*2+spells[:9], 'items':[65001,65004,65007,65010,65011,65012,65013,65014,65015,65018]}
+    ordinary=units*2+spells[:9]
+    if new_spells:
+        # Replace two copies within the existing 21-card ordinary deck.
+        for cid in ((62010,62012) if team==0 else (62001,62003)):
+            ordinary[ordinary.index(cid)]=MARCH if team==0 else CHARGE
+    return {'ordinary':ordinary, 'items':[65001,65004,65007,65010,65011,65012,65013,65014,65015,65018]}
 
 def validate_deck(config,team=0):
     config=deepcopy(default_deck(team) if config is None else config)
@@ -136,13 +155,48 @@ def validate_deck(config,team=0):
                 raise ValueError('构筑包含不属于当前阵营或不可构筑的卡牌。')
     return config
 
-def full_deck(config,team):
-    return config['ordinary']+[SIGNATURES[h] for h in ROSTERS[team] for _ in range(3)]
+def opponent_presets(new_spells=False):
+    templates=(
+        ('pressure','前线压迫','低费单位持续补线，先锋掷斧手处理邻近守军。',
+         ((61001,3),(61002,3),(61003,2),(61004,2),(61005,1),(61006,3),
+          (62002,1),(62004,2),(62006,2),(62009,2)),
+         (65001,65004,65007,65010,65011,65014,65018,65019,65021,65002),
+         (62002,62004)),
+        ('equipment','装备成长','用重装卫士站稳战场，把金币投入高阶武器与护甲。',
+         ((61001,1),(61002,2),(61003,2),(61004,2),(61005,3),(61006,2),
+          (62004,3),(62007,2),(62009,2),(62008,1),(62006,1)),
+         (65002,65003,65005,65006,65008,65009,65011,65012,65014,65017),
+         (62007,62008)),
+    )
+    presets=[]
+    for key,name,description,cards,items,replacements in templates:
+        ordinary=[cid for cid,count in cards for _ in range(count)]
+        if new_spells:
+            for cid in replacements:
+                ordinary[ordinary.index(cid)]=CHARGE
+        deck=validate_deck({'ordinary':ordinary,'items':list(items)},1)
+        presets.append({'id':key,'name':name,'description':description,'deck':deck})
+    return presets
+
+def full_deck(config,team,roster=None):
+    if roster is None:
+        roster=ROSTERS[team]
+    return config['ordinary']+[SIGNATURES[h] for h in roster for _ in range(2 if h in GENERATED_SIGNATURES else 3)]
 
 def catalog_view():
-    heroes=[{k:deepcopy(v) for k,v in CARDS[h].items() if k in ('card_id','card_name','card_text','card_type','attack','armor','hit_points','colors')} for roster in ROSTERS for h in roster]
+    heroes=[{k:deepcopy(v) for k,v in CARDS[h].items() if k in ('card_id','card_name','card_text','card_type','attack','armor','hit_points','colors')} for h in PANELS]
+    hero_art={TIMBERSAW:(10020,'主动CD2：自身八邻敌人各受1魔法伤害。'),DROW:(10044,'主动CD3：选正交距离1或2的中心，对中心、前方与两侧的敌人各造成3物理伤害。')}
     for h in heroes:
+        if h['card_id'] in hero_art:
+            h['art_id'],description=hero_art[h['card_id']]
+            h['card_text']['schinese']=description
+            h['custom_art']=True
         if h['card_id']==10044:
             h['card_name']['schinese']='全能骑士'
-    return {'release':RELEASE_VERSION,'cards':list(CATALOG.values())+heroes,'rosters':ROSTERS,
-            'panels':PANELS,'signatures':SIGNATURES,'defaultDeck':default_deck()}
+    illustrated={CHARGE,MARCH,TIMBER_CHAIN,GUST,61007,62013,65011}
+    cards=[dict(c,custom_art=True) if cid in illustrated else c for cid,c in CATALOG.items()]
+    return {'release':RELEASE_VERSION,'cards':cards+heroes,'rosters':ROSTERS,
+            'panels':PANELS,'signatures':SIGNATURES,'defaultDeck':default_deck(),
+            'expansionRosters':EXPANSION_ROSTERS,'expansionDeck':default_deck(new_spells=True),
+            'redDeck':default_deck(1),'expansionRedDeck':default_deck(1,new_spells=True),
+            'opponentPresets':opponent_presets(),'expansionOpponentPresets':opponent_presets(new_spells=True)}

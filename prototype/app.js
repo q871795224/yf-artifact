@@ -12,7 +12,12 @@ const esc = (value) =>
       ],
   );
 const cardName = (id) => CARDS[id]?.card_name.schinese || "未知卡牌";
-const image = (id, kind = "mini_image") => `${ASSETS}${kind}/${CARDS[id]?.art_id || id}.webp`;
+// The numbered illustrations are bundled with the client so art updates leave replay rules intact.
+const illustratedCardRanges = [[61001, 61012], [62001, 62019], [63001, 63006], [65001, 65022]];
+const hasCustomCardArt = (id) => CARDS[id]?.custom_art
+  || illustratedCardRanges.some(([first, last]) => id >= first && id <= last);
+const image = (id, kind = "mini_image") => hasCustomCardArt(id)
+  ? `assets/cards/${id}.webp` : `${ASSETS}${kind}/${CARDS[id]?.art_id || id}.webp`;
 const isDireMelee = (u) => u.id === 1006 && u.team === "enemy";
 const unitArt = (u) => u.id === 64004 ? (u.team === "enemy" ? "dire-ranged" : "radiant-ranged")
   : isDireMelee(u) ? "dire-melee" : null;
@@ -60,7 +65,7 @@ const HEROES = {
 const RULES = {
   10355:
     "在英雄周围八格或己方泉水选择空格，召唤三名 2 攻／4 血近战兵。位置不足时只召唤能容纳的数量。",
-  10352: "对敌方当前防御塔或基地造成 6 点伤害。新出现的基地在下回合才能受伤。",
+  10352: "对敌方防御塔造成 6 点伤害。",
   10402: "对所有敌方单位造成 2 点普通伤害，受护甲影响。",
   10344: "本回合己方英雄获得 4 顺势：普攻目标两侧各一格受到 4 点溅射伤害。",
   10425:
@@ -81,12 +86,13 @@ const RULES = {
     "随机获得本场装备池的一件装备，放入物品手牌；该装备已经付费，使用时不再花金币。",
 };
 const SLOT_NAMES = { Weapon: "武器", Armor: "护甲", Accessory: "饰品" };
-const storageKey = "yf-artifact-match-v04";
-const deckStorageKey = "yf-artifact-deck-v04";
+const expansion = new URLSearchParams(location.search).get("expansion") === "1";
+const storageKey = expansion ? "yf-artifact-expansion-match" : "yf-artifact-match-v04";
+const deckStorageKey = expansion ? "yf-artifact-expansion-deck" : "yf-artifact-deck-v04";
 let growthCatalog = null, deckDraft = null;
 const cardCost = (id) => view?.cardCosts?.[id] ?? CARDS[id].mana_cost;
 const skillKind = (u) => u.skillKind || HEROES[u.id]?.kind;
-const skillName = (u) => ({chen:"劝化",purify:"洗礼",swap:"换位",redirect:"引导箭头"})[skillKind(u)] || "被动技能";
+const skillName = (u) => ({chen:"劝化",purify:"洗礼",swap:"换位",redirect:"引导箭头",whirl:"死亡旋风",multishot:"数箭齐发"})[skillKind(u)] || "被动技能";
 const statusNames = {attack_down:"减攻",unprepared:"等待装备",hex:"妖术",silence:"沉默",taunt:"嘲讽"};
 const statusText = (u) => Object.keys(u.debuffs || {}).map(k => statusNames[k] || k).join("、");
 if (window.ArtifactAPI.browserMode) {
@@ -156,6 +162,11 @@ function targetAt(row, col) {
   if (!mode) return [];
   const unit = view.units.find((u) => u.row === row && u.col === col);
   return mode.choices.filter((a) => {
+    if (mode.kind === "march") {
+      if (!mode.center) return a.centers.some(([r,c]) => r === row && c === col);
+      if (mode.marchUnit) return a.march.some(m => m.unit === mode.marchUnit && m.row === row && m.col === col);
+      return unit && !mode.moves.includes(unit.key) && a.march.some(m => m.unit === unit.key);
+    }
     if (a.kind === "stun") {
       const h = selectedUnit(),
         dr = row - h.row,
@@ -226,7 +237,7 @@ function renderBoard(previous) {
           u.stunned ? "stunned" : "",
           focus?.target === u.key ? "current-target" : "",
           prediction?.dies ? "forecast-death" : "",
-          unitArt(u) ? "custom-unit-art" : "",
+          unitArt(u) || hasCustomCardArt(u.id) ? "custom-unit-art" : "",
         );
         content = `<img class="unit-art" src="${unitImage(u)}" alt=""><span class="unit-vignette"></span>${u.hero ? pip(u.id) : ""}${u.level ? `<span class="level-badge">Lv${u.level}</span>` : ""}${u.debuffs?.silence || u.debuffs?.hex || u.forcedTarget || u.buffs?.bkb ? `<span class="status-badge">${u.buffs?.bkb ? "BKB" : u.debuffs.hex ? "妖" : u.forcedTarget ? "嘲" : "默"}</span>` : ""}<span class="unit-stats">${stats(u)}</span>${u.armor ? `<span class="armor-badge">${icon("shield")}${u.armor}</span>` : ""}${u.stunned ? '<span class="stun-badge">晕</span>' : ""}${prediction && prediction.hp !== u.hp ? `<span class="forecast-hp" title="按当前局面交战后的生命">→ ${prediction.hp} ♥</span>` : ""}${prediction?.dies ? '<span class="forecast-cross" aria-label="预计交战阵亡">×</span>' : ""}`;
       }
@@ -237,6 +248,8 @@ function renderBoard(previous) {
         content = `<span class="structure-art">${icon(fort.stage === "tower" ? "tower" : "base")}</span><span class="structure-label">${fort.stage === "tower" ? "塔" : "基地"}${fort.ready ? "" : " · 待激活"}</span><span class="unit-stats">${stats(fort)}</span>${prediction && prediction.hp !== fort.hp ? `<span class="forecast-hp">→ ${prediction.hp} ♥</span>` : ""}${prediction?.destroyed ? '<span class="forecast-cross">×</span>' : ""}`;
       }
       const possible = targetAt(row, col);
+      if (mode?.kind === "march" && mode.preview.some(([r,c]) => r === row && c === col))
+        classes.push("reachable");
       if (possible.length)
         classes.push(
           mode.kind === "move"
@@ -260,7 +273,9 @@ function renderUnit() {
   const u = selectedUnit();
   panel.hidden = !u || u.row === null || busy || (mode && mode.kind !== "move");
   prompt.hidden = !mode;
-  prompt.innerHTML = mode ? `<span>${esc(mode.hint)}</span><button data-action="cancel" aria-label="取消选择目标">取消</button>` : "";
+  const ready = mode?.kind === "march" && !mode.marchUnit && mode.moves.length &&
+    mode.choices.some(a => a.march.length === mode.moves.length);
+  prompt.innerHTML = mode ? `<span>${esc(mode.hint)}</span>${ready ? '<button data-action="confirm-march">确认行军</button>' : ""}<button data-action="cancel" aria-label="取消选择目标">取消</button>` : "";
   if (panel.hidden) return;
   const mine = u.team === "ally" && (u.hero || u.skillKind);
     const skill = skillKind(u) ? actionFor(skillKind(u), u.key) : [];
@@ -315,6 +330,23 @@ function unavailableReason(id, isItem, index) {
   }
   return "当前没有合法目标或可部署的空格";
 }
+function cardTypeLabel(card) {
+  if (card.card_type === "Item") return SLOT_NAMES[card.sub_type] || "消耗品";
+  return card.card_type === "Creep" ? "单位" : "法术";
+}
+function cardFace(id, cost, {paid = false, detail = false} = {}) {
+  const c = CARDS[id], item = c.card_type === "Item";
+  const kind = paid ? "已付费" : cardTypeLabel(c);
+  const stats = c.card_type === "Creep"
+    ? `<span class="face-unit-stats">${icon("sword")}${c.attack}${icon("heart")}${c.hit_points}</span>`
+    : "";
+  return `<span class="card-face identity-${identity(id)} ${item ? "gold-face" : ""} ${detail ? "full-face" : ""}">
+    <span class="face-heading"><span class="card-cost">${cost}</span><span class="face-title">${esc(cardName(id))}</span></span>
+    <span class="card-art"><img ${detail ? 'class="detail-art"' : ""} src="${image(id)}" alt=""></span>
+    <span class="face-footer"><span>${kind}</span>${stats}</span>
+  </span>`;
+}
+
 function renderHand() {
   if (!view) return;
   const item = tab === "items",
@@ -340,7 +372,7 @@ function renderHand() {
         const usable = actions().some(
           (a) => a.kind === (item ? "item" : "card") && a.index === index,
         );
-        return `<button class="hand-card identity-${identity(id)} ${item ? "item-card" : ""} ${usable ? "" : "unavailable"}" data-card="${id}" data-index="${index}" data-item="${item}" aria-label="${cardName(id)}，${cost}${item ? "金币" : "法力"}，查看详情"><span class="card-art"><img src="${image(id)}" alt=""></span><span class="card-cost">${cost}</span><span class="hand-card-title">${cardName(id)}</span>${item ? "" : pip(id)}<span class="card-kind">${paid ? "已付费" : item ? (c.sub_type === "Consumable" ? "消耗品" : "装备") : c.card_type === "Creep" ? "单位" : "法术"}</span></button>`;
+        return `<button class="hand-card ${item ? "item-card" : ""} ${usable ? "" : "unavailable"}" data-card="${id}" data-index="${index}" data-item="${item}" aria-label="${esc(cardName(id))}，${cost}${item ? "金币" : "法力"}，查看详情">${cardFace(id,cost,{paid})}</button>`;
       })
       .join("") || '<span class="empty-hand">暂无手牌</span>';
   $("#hand").scrollLeft = scroll;
@@ -428,6 +460,7 @@ function render(previous) {
   renderHand();
 }
 function openDetail(content) {
+  $("#close-detail").hidden = !view;
   if (!$("#detail-dialog").open) returnFocus = document.activeElement;
   $("#detail-body").innerHTML = content;
   if (!$("#detail-dialog").open) $("#detail-dialog").showModal();
@@ -448,8 +481,9 @@ function showUnit(u) {
   if (!u) return;
   const prediction = view.phase === "action" ? view.forecast?.units[u.key] : null;
   const gear = u.equipment.map((e) => cardName(e.id)).join("、");
+  const customArt = unitArt(u) || hasCustomCardArt(u.id);
   openDetail(
-    `<h2 id="detail-title" class="detail-heading">${u.hero ? pip(u.id) : ""}${unitName(u)}</h2><p class="detail-subtitle">${u.team === "ally" ? "我方" : "敌方"}${u.hero ? "英雄" : "单位"} · ${u.row === null ? `等待第 ${u.due} 回合登场` : `第 ${u.row + 1} 排，第 ${u.col + 1} 列`}</p><div class="detail-layout"><img class="detail-art" src="${unitImage(u, "large_image")}" alt="${unitName(u)}${unitArt(u) ? "立绘" : "原版卡面"}"><div class="detail-copy"><div class="detail-stats">${stats(u)}${u.armor ? `<span class="stat">${icon("shield")}${u.armor}</span>` : ""}</div><p>${esc(HEROES[u.id]?.text || CARDS[u.id]?.card_text.schinese || "近战一格，自动移动与交战。")}</p><p class="detail-muted">射程 ${u.range} 格${u.siege ? ` · 攻城 ${u.siege}` : ""}${u.cleave ? ` · 顺势 ${u.cleave}` : ""}${u.regeneration ? ` · 恢复 ${u.regeneration}` : ""}</p>${u.row !== null ? `<p class="detail-muted">${esc(targetDescription(u))}</p>` : ""}${prediction ? `<p class="forecast-detail">当前局面直接交战：${prediction.dies ? "预计阵亡" : `预计剩余 ${prediction.hp} 生命`}。对手行动后会更新。</p>` : ""}${gear ? `<p class="detail-muted">装备：${esc(gear)}</p>` : ""}${u.level ? `<p class="growth-progress">Lv${u.level} · 经验 ${u.xp}${u.level < 3 ? ` / ${u.level === 1 ? 3 : 6}` : ""}${u.pendingLevel > u.level ? ` · 下轮升至Lv${u.pendingLevel}` : ""}</p><p class="detail-muted">成长（攻/甲/血）：${u.panels.map((p,i)=>`Lv${i+1} ${p.join("/")}`).join(" → ")}</p>` : ""}${statusText(u) ? `<p class="detail-muted">负面状态：${esc(statusText(u))}</p>` : ""}${u.buffs?.bkb ? '<p class="detail-muted">BKB：本轮魔法、负面状态免疫</p>' : ""}${u.cooldown ? `<p class="detail-muted">技能冷却 ${u.cooldown} 回合</p>` : ""}</div></div><p class="detail-note">${unitArt(u) ? "使用自制立绘。" : "沿用原版立绘。"}当前能力和攻血以战场数值为准。</p>`,
+    `<h2 id="detail-title" class="detail-heading">${u.hero ? pip(u.id) : ""}${unitName(u)}</h2><p class="detail-subtitle">${u.team === "ally" ? "我方" : "敌方"}${u.hero ? "英雄" : "单位"} · ${u.row === null ? `等待第 ${u.due} 回合登场` : `第 ${u.row + 1} 排，第 ${u.col + 1} 列`}</p><div class="detail-layout"><img class="detail-art" src="${unitImage(u, "large_image")}" alt="${unitName(u)}${customArt ? "立绘" : "原版卡面"}"><div class="detail-copy"><div class="detail-stats">${stats(u)}${u.armor ? `<span class="stat">${icon("shield")}${u.armor}</span>` : ""}</div><p>${esc(HEROES[u.id]?.text || CARDS[u.id]?.card_text.schinese || "近战一格，自动移动与交战。")}</p><p class="detail-muted">射程 ${u.range} 格${u.siege ? ` · 攻城 ${u.siege}` : ""}${u.cleave ? ` · 顺势 ${u.cleave}` : ""}${u.regeneration ? ` · 恢复 ${u.regeneration}` : ""}</p>${u.row !== null ? `<p class="detail-muted">${esc(targetDescription(u))}</p>` : ""}${prediction ? `<p class="forecast-detail">当前局面直接交战：${prediction.dies ? "预计阵亡" : `预计剩余 ${prediction.hp} 生命`}。对手行动后会更新。</p>` : ""}${gear ? `<p class="detail-muted">装备：${esc(gear)}</p>` : ""}${u.level ? `<p class="growth-progress">Lv${u.level} · 经验 ${u.xp}${u.level < 3 ? ` / ${u.level === 1 ? 3 : 6}` : ""}${u.pendingLevel > u.level ? ` · 下轮升至Lv${u.pendingLevel}` : ""}</p><p class="detail-muted">成长（攻/甲/血）：${u.panels.map((p,i)=>`Lv${i+1} ${p.join("/")}`).join(" → ")}</p>` : ""}${statusText(u) ? `<p class="detail-muted">负面状态：${esc(statusText(u))}</p>` : ""}${u.buffs?.bkb ? '<p class="detail-muted">BKB：本轮魔法、负面状态免疫</p>' : ""}${u.cooldown ? `<p class="detail-muted">技能冷却 ${u.cooldown} 回合</p>` : ""}</div></div><p class="detail-note">${customArt ? "使用自制立绘。" : "沿用原版立绘。"}当前能力和攻血以战场数值为准。</p>`,
   );
 }
 function showEquipment(u) {
@@ -489,7 +523,14 @@ function showCard(id, index, item) {
           : "施放"
       : "选择目标";
   openDetail(
-    `<h2 id="detail-title" class="detail-heading">${item ? "" : pip(id)}${cardName(id)}</h2><p class="detail-subtitle">${item ? "物品 · 金币支付" : "普通牌 · 法力支付"}</p><div class="detail-layout"><img class="detail-art" src="${image(id, "large_image")}" alt="${cardName(id)}参考立绘"><div class="detail-copy"><div class="detail-cost ${item ? "item" : ""}">${icon(item ? "coin" : "mana")}${cost}</div><p>${esc(RULES[id] || c.card_text.schinese).replace(/\n+/g, "<br>")}</p>${item && c.sub_type !== "Consumable" ? '<p class="detail-muted">穿戴占一次行动；替换同槽旧装备。</p>' : ""}${c.card_type === "Creep" ? `<div class="detail-stats">${icon("sword")}${c.attack}${icon("heart")}${c.hit_points}</div>` : ""}</div></div><button class="detail-action" id="play-card" data-id="${id}" data-index="${index}" data-item="${item}" ${choices.length ? "" : "disabled"}>${esc(label)}</button>${item ? "" : `<button class="quiet-button" id="reforge-card" data-index="${index}" data-item="${item}" ${actions().some(a => a.kind === "reforge" && a.actor === String(index)) ? "" : "disabled"}>重铸 · 1行动 / 0法力</button><p class="detail-muted">先抽一张，再将本卡放回原牌库；牌库为空时不可重铸。物品不能重铸。</p>`}`,
+    `<h2 id="detail-title" class="sr-only">${esc(cardName(id))}</h2>
+    <div class="detail-layout framed-card-detail">${cardFace(id,cost,{paid:item && view.items[index].paid,detail:true})}
+      <div class="detail-copy"><p class="card-detail-type">${item ? "金币" : "法力"} ${cost} · ${cardTypeLabel(c)}</p>
+      <p>${esc(RULES[id] || c.card_text.schinese).replace(/\n+/g, "<br>")}</p>
+      ${item && c.sub_type !== "Consumable" ? '<p class="detail-muted">穿戴占一次行动，同槽装备会被替换。</p>' : ""}
+      ${c.card_type === "Creep" ? `<div class="detail-stats" aria-label="攻击、护甲、生命">${icon("sword")}${c.attack}${icon("shield")}${c.armor}${icon("heart")}${c.hit_points}</div>` : ""}</div></div>
+    <button class="detail-action" id="play-card" data-id="${id}" data-index="${index}" data-item="${item}" ${choices.length ? "" : "disabled"}>${esc(label)}</button>
+    ${item ? "" : `<button class="quiet-button" id="reforge-card" data-index="${index}" data-item="${item}" ${actions().some(a => a.kind === "reforge" && a.actor === String(index)) ? "" : "disabled"}>重铸 · 1行动 / 0法力</button><p class="detail-muted">先抽一张，再将本卡放回原牌库；牌库为空时不可重铸。</p>`}`,
   );
 }
 function setMode(kind, choices, hint) {
@@ -503,6 +544,11 @@ function chooseCard(index, item) {
   );
   if (!choices.length) return;
   closeDetail();
+  if (choices[0].march) {
+    mode = {kind:"march", choices, moves:[], preview:[], hint:"协同行军 · 选择九格区域的中心"};
+    renderBoard(); renderUnit();
+    return;
+  }
   if (
     ["all", "self", "draw", "ticket", "improvement", "fort"].includes(
       choices[0].target,
@@ -516,7 +562,7 @@ function chooseCard(index, item) {
     item ? "item" : "card",
     choices,
     choices[0].row !== undefined
-      ? `${cardName(id)} · 选择部署空格`
+      ? `${cardName(id)} · 选择高亮位置`
       : `${cardName(id)} · 选择高亮单位`,
   );
 }
@@ -560,6 +606,10 @@ function unitAction(kind) {
       return;
     }
     const choices = actionFor(skillKind(u), u.key);
+    if (skillKind(u) === "whirl" && choices.length) {
+      perform(choices[0].id);
+      return;
+    }
     if (choices.length)
       setMode(
         "skill",
@@ -582,9 +632,29 @@ function cellClick(row, col) {
   if (mode && !(mode.kind === "move" && u)) {
     const choices = targetAt(row, col);
     if (choices.length) {
+      if (mode.kind === "march") {
+        mode.choices = choices;
+        if (!mode.center) {
+          mode.center = [row,col];
+          mode.hint = "协同行军 · 选择区域内的友军";
+        } else if (!mode.marchUnit) {
+          mode.marchUnit = u.key;
+          mode.hint = "协同行军 · 选择前进落点";
+        } else {
+          mode.moves.push(mode.marchUnit);
+          mode.preview.push([row,col]);
+          mode.marchUnit = null;
+          const ready = choices.some(a => a.march.length === mode.moves.length);
+          mode.hint = !ready ? "协同行军 · 继续选择会腾出路线的友军"
+            : choices.every(a => a.march.length === mode.moves.length)
+              ? "协同行军 · 确认本次移动" : "协同行军 · 确认移动，或继续选择友军";
+        }
+        renderBoard(); renderUnit();
+        return;
+      }
       if (choices[0].firstTarget) {
         if (mode.kind === "rally_swap") selected = u.key;
-        mode.choices = choices.map(a => ({...a, target:a.secondTarget, firstTarget:null}));
+        mode.choices = choices.map(a => ({...a, target:a.secondTarget, firstTarget:null, row:a.secondRow ?? a.row, col:a.secondCol ?? a.col}));
         mode.hint = mode.kind === "rally_swap" ? "调位 · 选择相邻友军或空格" : "已选定施法单位 · 再选择高亮目标";
         renderBoard(); renderUnit();
         return;
@@ -641,7 +711,7 @@ function showLog(enemyOnly = false) {
 }
 function showHelp() {
   openDetail(
-    `<h2 id="detail-title" class="detail-heading">单路战场</h2><div class="help-copy"><p><b>行动：</b>打牌、移动英雄、使用技能、穿戴或使用装备，每次占一个行动，随后由对手回应。普通攻击自动进行。打不到主动指定或受控锁定的目标时，未移动的单位在交战前尝试追击。重铸消耗一次行动、0法力，先抽牌再将原牌归库。</p><p><b>预测：</b>箭头表示普攻目标；灰色头像和红叉表示预计阵亡，→ 后的数字表示交战后的生命。预测按当前局面双方直接交战计算，对手行动后会更新。</p><p><b>交战：</b>双方连续让过后，先处理仇恨追击，再由所有单位与建筑同时结算攻击。恢复在阵亡清理前结算。交战后可查看损伤，再打开采购。</p><p><b>移动：</b>点己方英雄显示可移动格；棋子上的按钮用于技能和装备，长按查看详情。点空格或取消退出选择，不占行动。英雄每回合移动一次，平时八邻一格；从泉水出生／返场后的首次移动最多两格，不能穿过单位。小兵自动向前推进。</p><p><b>仇恨与箭头：</b>绿色为我方，红色为敌方；远程虚线指向具体目标。自动仇恨保留仍在射程内的旧目标；目标出射程后选择四向射程内最近敌人，同距离按固定顺序；没有单位可打时才攻击建筑。英雄不自动保护转火，这条只作用于小兵和建筑。</p><p><b>全局技能：</b>每方每轮一次，2 法力，消耗一次行动。绿色调位可移到八邻空格，或与八邻友军交换。红色指引攻击可选场上敌军，让目标周围八格的可行动友军集火。</p><p><b>出牌：</b>普通牌需要对应颜色英雄在场；眩晕仍提供颜色。起手5张，后续每轮抽1张；首轮1法力，每轮刷新并加1，上限10。所有专属卡都要求对应英雄在场并达到解锁等级；阵亡保留等级，返场后可继续使用。</p><p><b>成长：</b>英雄在场且存活到回合末获得1经验，3/6经验分别升至2/3级，下轮生效。死亡保留等级、经验与永久强化，升级增加的生命直接补到当前生命。</p><p><b>金币：</b>无工资，敌方小兵死亡 +1，英雄死亡 +5。开局发一张物品；交战后可从三个货源选购一件，或跳过。购入手牌的物品已经支付。</p><p><b>装备：</b>武器、护甲、饰品各一件，同类替换。主动效果消耗一次行动、0法力，有冷却。沉默不禁装备，妖术禁装备主动、保留被动。BKB驱散全部负面状态，并在本轮免疫魔法伤害和新增负面状态。</p><p><b>胜负：</b>先摧毁 40 血防御塔，再摧毁同位置的 80 血基地。基地下一回合激活。塔攻击 4，基地攻击 8；进入敌方泉水会受到 10 点范围伤害。</p><p>当前固定阵容与候选牌池，双方交替获得每回合先手。右上角可查看记录和导出本局。</p></div>`,
+    `<h2 id="detail-title" class="detail-heading">单路战场</h2><div class="help-copy"><p><b>行动：</b>打牌、移动英雄、使用技能、穿戴或使用装备，每次占一个行动，随后由对手回应。普通攻击自动进行。打不到主动指定或受控锁定的目标时，未移动的单位在交战前尝试追击。重铸消耗一次行动、0法力，先抽牌再将原牌归库。</p><p><b>预测：</b>箭头表示普攻目标；灰色头像和红叉表示预计阵亡，→ 后的数字表示交战后的生命。预测按当前局面双方直接交战计算，对手行动后会更新。</p><p><b>交战：</b>双方连续让过后，先处理仇恨追击，再由所有单位与建筑同时结算攻击。恢复在阵亡清理前结算。交战后可查看损伤，再打开采购。</p><p><b>移动：</b>点己方英雄显示可移动格；棋子上的按钮用于技能和装备，长按查看详情。点空格或取消退出选择，不占行动。英雄每回合移动一次，平时八邻一格；从泉水出生／返场后的首次移动最多两格，不能穿过单位。小兵自动向前推进。</p><p><b>仇恨与箭头：</b>绿色为我方，红色为敌方；远程虚线指向具体目标。自动仇恨保留仍在射程内的旧目标；目标出射程后选择四向射程内最近敌人，同距离按固定顺序；没有单位可打时才攻击建筑。英雄不自动保护转火，这条只作用于小兵和建筑。</p><p><b>全局技能：</b>每方每轮一次，2 法力，消耗一次行动。绿色调位可移到八邻空格，或与八邻友军交换。红色指引攻击可选场上敌军，让目标周围八格的可行动友军集火。</p><p><b>出牌：</b>普通牌需要对应颜色英雄在场；眩晕仍提供颜色。起手5张，后续每轮抽1张；首轮1法力，每轮刷新并加1，上限10。所有专属卡都要求对应英雄在场并达到解锁等级；阵亡保留等级，返场后可继续使用。</p><p><b>成长：</b>英雄在场且存活到回合末获得1经验，3/6经验分别升至2/3级，下轮生效。死亡保留等级、经验与永久强化，升级增加的生命直接补到当前生命。</p><p><b>金币：</b>无工资，敌方小兵死亡 +1，英雄死亡 +5。开局发一张物品；交战后可从三个货源选购一件，或跳过。购入手牌的物品已经支付。</p><p><b>装备：</b>武器、护甲、饰品各一件，同类替换。主动效果消耗一次行动、0法力，有冷却。沉默不禁装备，妖术禁装备主动、保留被动。BKB驱散全部负面状态，并在本轮免疫魔法伤害和新增负面状态。</p><p><b>胜负：</b>摧毁敌方 40 血防御塔即可获胜，双方塔同时被摧毁则平局，不再出现基地。塔位于每方从中线往后数的第三排，占中央一格，攻击 4，每次交战攻击八邻内一名敌军；进入敌方泉水会受到 10 点范围伤害。</p><p>当前固定阵容与候选牌池，双方交替获得每回合先手。右上角可查看记录和导出本局。</p></div>`,
   );
 }
 function showResult() {
@@ -650,13 +720,13 @@ function showResult() {
   const title = draw
     ? "同归于尽"
     : won
-      ? "基地已摧毁 · 胜利"
+      ? "防御塔已摧毁 · 胜利"
       : view.endReason === "conceded"
         ? "本局认输"
-        : "基地失守 · 失利";
+        : "防御塔失守 · 失利";
   const stats = view.stats[0];
   openDetail(
-    `<div class="result-mark">${icon("tower")}</div><h2 id="detail-title" class="result-title">${title}</h2><p class="result-subtitle">${view.endReason === "conceded" ? "你结束了这场对局" : draw ? "双方基地同时被摧毁" : won ? "敌方基地已被摧毁" : "我方基地已被摧毁"}</p><div class="result-stats"><span><b>${view.round}</b>回合</span><span><b>${stats.hero_kills || 0}</b>英雄击杀</span><span><b>${stats.gold_spent || 0}</b>花费金币</span></div><button class="detail-action" id="result-new">再来一局</button><button class="quiet-button" id="result-export">导出本局记录</button>`,
+    `<div class="result-mark">${icon("tower")}</div><h2 id="detail-title" class="result-title">${title}</h2><p class="result-subtitle">${view.endReason === "conceded" ? "你结束了这场对局" : draw ? "双方防御塔同时被摧毁" : won ? "敌方防御塔已被摧毁" : "我方防御塔已被摧毁"}</p><div class="result-stats"><span><b>${view.round}</b>回合</span><span><b>${stats.hero_kills || 0}</b>英雄击杀</span><span><b>${stats.gold_spent || 0}</b>花费金币</span></div><button class="detail-action" id="result-new">再来一局</button><button class="quiet-button" id="result-export">导出本局记录</button>`,
   );
 }
 function showShop() {
@@ -716,11 +786,6 @@ async function showPlaytests() {
   } catch {
     toast("打不开浏览器对局归档。仍可导出当前一局。");
   }
-}
-function confirmNew() {
-  openDetail(
-    `<h2 id="detail-title" class="detail-heading">开始新一局？</h2><p class="sheet-note">当前浏览器将切换到新对局。需要保留这局时，可以先导出记录。</p><button class="detail-action" id="confirm-new">开始新一局</button><button class="quiet-button" id="keep-playing">继续当前对局</button>`,
-  );
 }
 function confirmConcede() {
   openDetail(
@@ -801,58 +866,235 @@ function showReconnect(error) {
     `<h2 id="detail-title" class="detail-heading">重新载入战场</h2><p class="sheet-note">${esc(error.status || window.ArtifactAPI.browserMode ? error.message : "请确认电脑上的游戏服务仍在运行，手机和电脑处于同一网络。")}</p><button class="detail-action" id="retry-connect">重试</button><button class="quiet-button" id="recover-new">开始新一局</button>`,
   );
 }
-function savedDeck() {
-  try { return JSON.parse(localStorage.getItem(deckStorageKey)) || growthCatalog.defaultDeck; }
-  catch { return growthCatalog.defaultDeck; }
+function defaultDeck(color = "green") {
+  if (color === "red") return expansion ? growthCatalog.expansionRedDeck : growthCatalog.redDeck;
+  return expansion ? growthCatalog.expansionDeck : growthCatalog.defaultDeck;
 }
+
+const canBuild = (card, color) => card && card.card_id < (expansion ? 63000 : 62020)
+  && ["Creep", "Spell"].includes(card.card_type) && card.colors.includes(color);
+const cardCounts = (ids) => ids.reduce((counts, id) => (counts[id] = (counts[id] || 0) + 1, counts), {});
+const copyPile = ({ordinary, items}) => ({ordinary:[...ordinary],items:[...items]});
+const deckColors = {green:"绿色",red:"红色"};
+const starterName = "绿色预设";
+const savedLibraryKey = `${deckStorageKey}-library-v1`;
+let setup = {deckId:null, opponentId:"pressure"};
+let deckBackToSetup = false;
+
+function validPiles(deck, color) {
+  return deck && Array.isArray(deck.ordinary) && Array.isArray(deck.items)
+    && deck.ordinary.length === 21 && deck.items.length === 10
+    && deck.ordinary.every(id => Number.isInteger(id) && canBuild(CARDS[id], color))
+    && deck.items.every(id => Number.isInteger(id) && CARDS[id]?.card_type === "Item")
+    && [deck.ordinary, deck.items].every(pile => Object.values(cardCounts(pile)).every(n => n <= 3));
+}
+
+function readLibrary() {
+  try {
+    const saved = localStorage.getItem(savedLibraryKey);
+    if (saved !== null) {
+      const decks = JSON.parse(saved);
+      if (Array.isArray(decks)) return decks.filter(d =>
+        d && typeof d.id === "string" && d.id.length && typeof d.name === "string" && d.name.trim().length
+        && d.name.length <= 40 && Object.hasOwn(deckColors,d.color) && validPiles(d,d.color));
+    }
+    const old = JSON.parse(localStorage.getItem(deckStorageKey));
+    if (validPiles(old,"green")) return [{id:"previous-deck", name:"已保存牌组", color:"green", ...copyPile(old)}];
+  } catch {
+    // Allow the preset to start a match when browser storage is unavailable.
+  }
+  return [];
+}
+
+function opponentPresets() {
+  return expansion ? growthCatalog.expansionOpponentPresets : growthCatalog.opponentPresets;
+}
+
+function showMatchSetup(message = "") {
+  const decks = readLibrary();
+  const green = decks.filter(d => d.color === "green");
+  const red = decks.filter(d => d.color === "red");
+  const presets = opponentPresets();
+  if (setup.deckId === null) setup.deckId = green.find(d => d.id === "previous-deck")?.id || "";
+  if (!green.some(d => d.id === setup.deckId)) setup.deckId = "";
+  if (setup.opponentId === "saved" && !red.length) setup.opponentId = presets[0].id;
+  const options = [{id:"",name:starterName}, ...green].map(d =>
+    `<option value="${esc(d.id)}" ${d.id === setup.deckId ? "selected" : ""}>${esc(d.name)}</option>`).join("");
+  const opponents = [...presets,{id:"saved", name:"随机自存牌组",
+    description:red.length ? `从 ${red.length} 副红色牌组里随机挑选。` : "保存一副红色牌组后可选。"}];
+  openDetail(`
+    <div class="match-lobby">
+      <header class="lobby-banner">
+        <h2 id="detail-title" class="lobby-title">开始对局</h2>
+        <div class="lobby-portraits" aria-hidden="true"><img src="assets/cards/10032.webp" alt=""><img src="assets/cards/10022.webp" alt=""></div>
+      </header>
+      <label class="lobby-field">我方牌组 <select id="match-deck">${options}</select></label>
+      <fieldset class="opponent-picker"><legend>AI 对手</legend>${opponents.map(o => `
+        <label class="opponent-choice">
+          <input type="radio" name="opponent" value="${o.id}" ${o.id === setup.opponentId ? "checked" : ""} ${o.id === "saved" && !red.length ? "disabled" : ""}>
+          <span><b>${esc(o.name)}</b><small>${esc(o.description)}</small></span>
+        </label>`).join("")}</fieldset>
+      ${message ? `<p class="lobby-error" role="status">${esc(message)}</p>` : ""}
+      <div class="lobby-buttons">
+        <button class="quiet-button" id="open-deck-library">管理牌组</button>
+        <button class="detail-action" id="start-match">开始战斗</button>
+      </div>
+    </div>`);
+}
+
+function showDeckLibrary() {
+  deckDraft = null;
+  const decks = readLibrary();
+  const group = (color) => {
+    const cards = decks.filter(d => d.color === color);
+    return `<section class="library-group identity-${color}">
+      <div class="library-heading"><h3>${deckColors[color]}牌组</h3><button class="quiet-button" data-new-deck="${color}">新建</button></div>
+      ${cards.length ? cards.map(d => `<button class="library-entry" data-edit-deck="${esc(d.id)}"><span>${esc(d.name)}</span><small>编辑</small></button>`).join("") : '<p class="sheet-note">还没有保存的牌组。</p>'}
+    </section>`;
+  };
+  openDetail(`<h2 id="detail-title" class="detail-heading">我的牌组</h2>${group("green")}${group("red")}
+    ${deckBackToSetup || !view ? '<button class="quiet-button" id="deck-to-lobby">返回开局</button>' : ""}`);
+}
+
 function showDeckBuilder() {
-  if (!deckDraft) deckDraft = structuredClone(savedDeck());
-  const counts = (ids) => ids.reduce((acc,id)=>(acc[id]=(acc[id]||0)+1,acc),{});
-  const normal = counts(deckDraft.ordinary), items = counts(deckDraft.items);
-  const total = deckDraft.ordinary.length + 9;
-  const rows = (isItem) => growthCatalog.cards.filter(c => isItem ? c.card_type === "Item" : c.card_id < 63000 && ["Creep","Spell"].includes(c.card_type) && c.colors.includes("green")).map(c => {
-    const n = (isItem ? items : normal)[c.card_id] || 0;
-    return `<div class="deck-row"><img src="${image(c.card_id)}" alt=""><span><b>${esc(cardName(c.card_id))}</b><small>${isItem ? `${c.gold_cost}金 · ${SLOT_NAMES[c.sub_type] || "消耗品"}` : `${c.mana_cost}费${c.card_type === "Creep" ? ` · ${c.attack}/${c.armor}/${c.hit_points}` : ""}`} · ${esc(c.card_text.schinese)}</small></span><button data-deck-id="${c.card_id}" data-deck-item="${isItem}" data-delta="-1" ${n ? "" : "disabled"} aria-label="减少${esc(cardName(c.card_id))}">−</button><b>${n}</b><button data-deck-id="${c.card_id}" data-deck-item="${isItem}" data-delta="1" ${n>=3 ? "disabled" : ""} aria-label="增加${esc(cardName(c.card_id))}">+</button></div>`;
-  }).join("");
-  openDetail(`<h2 id="detail-title" class="detail-heading">绿色牌组构筑</h2><p class="sheet-note">狼人、陈、全能骑士。固定9张专属（每名3张）＋21张自选；物品牌10张。同名最多3张，保存后用于下一局。</p><p class="growth-progress" role="status">普通 ${total}/30 · 物品 ${deckDraft.items.length}/10</p><details open><summary>普通牌 · ${deckDraft.ordinary.length}/21 自选</summary>${rows(false)}</details><details><summary>物品牌 · ${deckDraft.items.length}/10</summary>${rows(true)}</details><details><summary>固定专属9张</summary>${growthCatalog.rosters[0].map(h=>`<p>${esc(cardName(Number(growthCatalog.signatures[h])))} ×3</p>`).join("")}</details><button class="detail-action" id="save-deck" ${total===30 && deckDraft.items.length===10 ? "" : "disabled"}>保存构筑</button><button class="quiet-button" id="reset-deck">恢复默认构筑</button><p class="detail-muted" id="deck-save-status"></p>`);
+  const {color, name} = deckDraft;
+  const ordinary = cardCounts(deckDraft.ordinary), items = cardCounts(deckDraft.items);
+  const roster = (expansion ? growthCatalog.expansionRosters : growthCatalog.rosters)[color === "green" ? 0 : 1];
+  const signatureCount = expansion ? 8 : 9;
+  const rows = (isItem) => growthCatalog.cards.filter(c =>
+    isItem ? c.card_type === "Item" : canBuild(c, color)).map(c => {
+      const id = c.card_id, count = (isItem ? items : ordinary)[id] || 0;
+      const limit = isItem ? deckDraft.items.length >= 10 : deckDraft.ordinary.length >= 21;
+      const label = isItem ? `${c.gold_cost} 金 · ${SLOT_NAMES[c.sub_type] || "消耗品"}`
+        : `${c.mana_cost} 费 · ${cardTypeLabel(c)}`;
+      return `<div class="deck-row"><img src="${image(id)}" alt="" loading="lazy"><span><b>${esc(cardName(id))}</b><small>${esc(label)} · ${esc(c.card_text.schinese)}</small></span>
+        <button data-deck-id="${id}" data-deck-item="${isItem}" data-delta="-1" ${count ? "" : "disabled"} aria-label="减少${esc(cardName(id))}">−</button>
+        <b>${count}</b><button data-deck-id="${id}" data-deck-item="${isItem}" data-delta="1" ${count >= 3 || limit ? "disabled" : ""} aria-label="增加${esc(cardName(id))}">+</button></div>`;
+    }).join("");
+  openDetail(`<div class="deck-editor">
+    <h2 id="detail-title" class="detail-heading">${deckColors[color]}牌组构筑</h2>
+    <label class="lobby-field">牌组名称 <input id="deck-name" type="text" maxlength="40" value="${esc(name)}"></label>
+    <div class="deck-edit-summary"><span>普通 ${deckDraft.ordinary.length + signatureCount}/${21 + signatureCount}</span><span>物品 ${deckDraft.items.length}/10</span></div>
+    <details id="ordinary-deck" open><summary>普通自选牌 ${deckDraft.ordinary.length}/21</summary>${rows(false)}</details>
+    <details id="item-deck"><summary>物品牌 ${deckDraft.items.length}/10</summary>${rows(true)}</details>
+    <details id="signature-deck"><summary>固定专属 ${signatureCount} 张</summary>
+      ${roster.map(h => `<p>${esc(cardName(h))} · ${esc(cardName(Number(growthCatalog.signatures[h])))} ×${[10022,10032].includes(h) ? 2 : 3}</p>`).join("")}
+    </details>
+    <div class="deck-editor-actions">
+      <p class="detail-muted" id="deck-save-status" role="status"></p>
+      <div class="lobby-buttons">
+        <button class="quiet-button" id="back-to-decks">我的牌组</button>
+        <button class="quiet-button" id="copy-deck">复制</button>
+        <button class="detail-action" id="save-deck" ${name.trim() && validPiles(deckDraft,color) ? "" : "disabled"}>保存牌组</button>
+      </div>
+    </div>
+  </div>`);
 }
-$("#detail-body").addEventListener("click", e => {
-  const button=e.target.closest("[data-deck-id]");
-  if (button && !button.disabled) {
-    const list=button.dataset.deckItem === "true" ? deckDraft.items : deckDraft.ordinary;
-    const id=Number(button.dataset.deckId);
-    const scroll=$("#detail-dialog").scrollTop;
-    const itemOpen=$("#detail-body details:nth-of-type(2)")?.open;
-    if (button.dataset.delta === "1") list.push(id);
+
+function saveDeckDraft() {
+  if (!deckDraft.name.trim() || !validPiles(deckDraft,deckDraft.color)) return;
+  const deck = {...deckDraft, ...copyPile(deckDraft), name:deckDraft.name.trim()};
+  const decks = readLibrary();
+  const old = decks.findIndex(d => d.id === deck.id);
+  if (old >= 0) decks[old] = deck;
+  else {
+    deck.id = Array.from(crypto.getRandomValues(new Uint32Array(4)), n => n.toString(16).padStart(8,"0")).join("");
+    decks.push(deck);
+  }
+  try {
+    localStorage.setItem(savedLibraryKey,JSON.stringify(decks));
+    deckDraft.id = deck.id;
+    if (deck.color === "green") setup.deckId = deck.id;
+    $("#deck-save-status").textContent = `已保存「${deck.name}」`;
+  } catch {
+    $("#deck-save-status").textContent = "浏览器无法保存牌组，请检查存储设置。";
+  }
+}
+
+$("#detail-body").addEventListener("input", ({target}) => {
+  if (target.id === "deck-name" && deckDraft) {
+    deckDraft.name = target.value;
+    $("#save-deck").disabled = !deckDraft.name.trim() || !validPiles(deckDraft,deckDraft.color);
+  }
+  if (target.id === "match-deck") setup.deckId = target.value;
+  if (target.name === "opponent" && target.checked) setup.opponentId = target.value;
+});
+
+$("#detail-body").addEventListener("click", (event) => {
+  const element = event.target.closest("button");
+  if (!element || element.disabled) return;
+  if (element.id === "open-deck-library") { deckBackToSetup = true; showDeckLibrary(); }
+  if (element.id === "deck-to-lobby") showMatchSetup();
+  if (element.id === "back-to-decks") showDeckLibrary();
+  if (element.id === "start-match") createGame();
+  if (element.id === "save-deck") saveDeckDraft();
+  if (element.id === "copy-deck" && deckDraft) {
+    deckDraft = {...deckDraft, id:null, name:`${deckDraft.name.slice(0,37)} 副本`};
+    showDeckBuilder();
+    $("#deck-name").focus();
+    $("#deck-name").select();
+  }
+  if (element.dataset.newDeck) {
+    const color = element.dataset.newDeck;
+    deckDraft = {id:null, name:`${deckColors[color]}牌组`, color, ...copyPile(defaultDeck(color))};
+    showDeckBuilder();
+    $("#deck-name").focus();
+    $("#deck-name").select();
+  }
+  if (element.dataset.editDeck) {
+    const saved = readLibrary().find(d => d.id === element.dataset.editDeck);
+    if (saved) { deckDraft = {...saved, ...copyPile(saved)}; showDeckBuilder(); }
+  }
+  if (element.dataset.deckId && deckDraft) {
+    const {deckItem,deckId,delta} = element.dataset;
+    const list = deckItem === "true" ? deckDraft.items : deckDraft.ordinary;
+    const id = Number(deckId);
+    const dialog = $("#detail-dialog");
+    const scroll = dialog.scrollTop;
+    const open = ["ordinary-deck","item-deck","signature-deck"].filter(key => $(`#${key}`).open);
+    if (delta === "1") list.push(id);
     else list.splice(list.indexOf(id),1);
     showDeckBuilder();
-    if (itemOpen) $("#detail-body details:nth-of-type(2)").open=true;
-    $("#detail-dialog").scrollTop=scroll;
-    document.querySelector(`[data-deck-id="${id}"][data-delta="${button.dataset.delta}"]`)?.focus({preventScroll:true});
-  }
-  if (e.target.closest("#reset-deck")) {deckDraft=structuredClone(growthCatalog.defaultDeck);showDeckBuilder();}
-  if (e.target.closest("#save-deck")) {
-    try {localStorage.setItem(deckStorageKey,JSON.stringify(deckDraft));$("#deck-save-status").textContent="已保存，下一局生效。";}
-    catch {$("#deck-save-status").textContent="浏览器无法保存构筑，请检查存储设置。";}
+    for (const key of ["ordinary-deck","item-deck","signature-deck"]) $(`#${key}`).open = open.includes(key);
+    dialog.scrollTop = scroll;
+    document.querySelector(`[data-deck-id="${id}"][data-delta="${delta}"]`)?.focus({preventScroll:true});
   }
 });
+
 async function createGame() {
-  if (busy && view) return;
+  if (busy) return;
+  const decks = readLibrary();
+  const yours = decks.find(d => d.id === setup.deckId && d.color === "green");
+  const presets = opponentPresets();
+  const preset = presets.find(p => p.id === setup.opponentId) || presets[0];
+  let opponent = {...copyPile(preset.deck),name:preset.name};
+  if (setup.opponentId === "saved") {
+    const pool = decks.filter(d => d.color === "red");
+    if (!pool.length) { showMatchSetup("请先保存一副红色牌组。"); return; }
+    const drawn = pool[Math.floor(Math.random() * pool.length)];
+    opponent = {...copyPile(drawn),name:drawn.name};
+  }
+  const deck = {...copyPile(yours || defaultDeck()), name:yours?.name || starterName, opponent};
+  if (expansion) deck.experiment = "combined";
   busy = true;
-  mode = null;
-  selected = null;
-  tab = "cards";
-  $("#hand").scrollLeft = 0;
-  closeDetail();
-  $("#scene-dialog").close();
-  if (view) render();
+  const start = $("#start-match");
+  if (start) { start.disabled = true; start.textContent = "准备战场…"; }
   try {
-    await applyPacket(await api("/api/games", {deck_config: savedDeck()}));
-    toast("对局开始 · 双方每次行动后交替操作");
+    const packet = await api("/api/games", {deck_config:deck});
+    selected = null;
+    reviewingAction = null;
+    mode = null;
+    tab = "cards";
+    $("#hand").scrollLeft = 0;
+    closeDetail();
+    await applyPacket(packet);
+    toast(`对手使用「${opponent.name}」`);
   } catch (error) {
-    showReconnect(error);
+    busy = false;
+    showMatchSetup(error.message);
   }
 }
+
 async function bootstrap() {
   busy = true;
   gameId = savedId();
@@ -862,25 +1104,23 @@ async function bootstrap() {
       for (const card of growthCatalog.cards) CARDS[card.card_id] = card;
       Object.assign(HEROES, {
         10014:{text:"八邻其他友军获得1/1/2攻击，随狼人等级变化。"},
-        10017:{kind:"chen",skill:"劝化",text:"主动CD4：控制距离2内敌方非英雄单位。唯一远程英雄，射程2。"},
+        10017:{kind:"chen",skill:"劝化",text:"主动CD4：控制距离2内敌方非英雄单位。正交射程2。"},
+        10022:{text:CARDS[10022]?.card_text.schinese},
+        10032:{text:CARDS[10032]?.card_text.schinese},
         10044:{kind:"purify",skill:"洗礼",text:"主动CD2：自己或八邻友军恢复1/2/3生命。"},
         10054:{text:"固定分裂1/2/2，攻击目标两侧敌人；攻击提高不影响分裂。"},
         10069:{text:"二级起反伤2：受到普攻并实际掉血时触发，受护甲减免。"}
       });
     }
     if (gameId) await applyPacket(await api(`/api/games/${gameId}`));
-    else await createGame();
+    else { busy = false; showMatchSetup(); }
   } catch (error) {
-    if (error.status === 404) {
+    if (error.status === 404 || error.status === 409) {
       gameId = null;
       rememberId(null);
       view = null;
-      await createGame();
-      toast(
-        window.ArtifactAPI.browserMode
-          ? "已开始一场新的浏览器对局"
-          : "服务已重新启动，已开始一场新对局",
-      );
+      busy = false;
+      showMatchSetup("旧对局已到期，可以开始一局新对局。");
     } else showReconnect(error);
   }
 }
@@ -892,7 +1132,13 @@ $("#unit-panel").addEventListener("click", (e) => {
   const button = e.target.closest("[data-action]");
   if (button && !button.disabled) unitAction(button.dataset.action);
 });
-$("#target-prompt").addEventListener("click", (e) => { if (e.target.closest("[data-action=cancel]")) cancelMode(); });
+$("#target-prompt").addEventListener("click", (e) => {
+  if (e.target.closest("[data-action=cancel]")) cancelMode();
+  if (e.target.closest("[data-action=confirm-march]") && mode?.kind === "march" && !mode.marchUnit) {
+    const choice = mode.choices.find(a => a.march.length === mode.moves.length);
+    if (choice) perform(choice.id);
+  }
+});
 let holdTimer = null, heldCell = null, suppressCellClick = false, holdOrigin = null;
 function cancelHold() { clearTimeout(holdTimer); holdTimer = null; }
 $("#board").addEventListener("pointerdown", (e) => {
@@ -981,10 +1227,7 @@ $("#detail-body").addEventListener("click", (e) => {
     tab = "items";
     renderHand();
   }
-  if (e.target.closest("#confirm-new") || e.target.closest("#result-new")) {
-    busy = false;
-    createGame();
-  }
+  if (e.target.closest("#result-new")) showMatchSetup();
   if (e.target.closest("#confirm-concede")) {
     closeDetail();
     perform("concede");
@@ -998,7 +1241,8 @@ $("#detail-body").addEventListener("click", (e) => {
   if (e.target.closest("#recover-new")) {
     busy = false;
     view = null;
-    createGame();
+    if (growthCatalog) showMatchSetup();
+    else bootstrap();
   }
 });
 $("#pass-button").addEventListener("click", () => {
@@ -1017,14 +1261,15 @@ $("#global-skill").addEventListener("click", () => {
   const hint = kind === "rally_swap" ? "选择要调位的友军" : "选择要集火的敌军";
   setMode(kind, actions().filter(a => a.kind === kind), `${name} · ${cost} 费 · ${hint}`);
 });
-$("#close-detail").addEventListener("click", closeDetail);
+$("#close-detail").addEventListener("click", () => { if (!busy) closeDetail(); });
+$("#detail-dialog").addEventListener("cancel", (event) => { if (!view || busy) event.preventDefault(); });
 $("#detail-dialog").addEventListener("close", () => {
   if (returnFocus?.isConnected) returnFocus.focus({ preventScroll: true });
 });
 $("#menu-button").addEventListener("click", () => {
   if (!view) return;
   $("#match-summary").textContent =
-    `已进行 ${view.version} 次操作`;
+    view.matchup ? `${view.matchup.player} 对 ${view.matchup.opponent}` : `已进行 ${view.version} 次操作`;
   $("#menu-button").setAttribute("aria-expanded", "true");
   $("#scene-dialog").showModal();
 });
@@ -1036,7 +1281,7 @@ $("#scene-dialog").addEventListener("close", () => {
 document.querySelectorAll("[data-menu]").forEach((b) =>
   b.addEventListener("click", () => {
     $("#scene-dialog").close();
-    ({ roster: showRoster, log: showLog, help: showHelp, export: exportMatch, deck: showDeckBuilder,
+    ({ roster: showRoster, log: showLog, help: showHelp, export: exportMatch, deck: () => { deckBackToSetup = false; showDeckLibrary(); },
        playtests: showPlaytests, import: () => $("#replay-file").click() })[
       b.dataset.menu
     ]();
@@ -1062,7 +1307,7 @@ $("#new-game-button").addEventListener("click", () => {
     return;
   }
   $("#scene-dialog").close();
-  confirmNew();
+  showMatchSetup();
 });
 $("#concede-button").addEventListener("click", () => {
   if (busy) return;
@@ -1074,7 +1319,7 @@ $("#enemy-info").addEventListener("click", () => {
 });
 function showFort(f) {
   const prediction = view.phase === "action" ? view.forecast?.forts.find((p) => p.team === f.team) : null;
-  openDetail(`<h2 id="detail-title" class="detail-heading">${f.team === 0 ? "我方" : "敌方"}${f.stage === "tower" ? "防御塔" : "基地"}</h2><p class="sheet-note">生命 ${f.hp}/${f.maxHp} · 攻击 ${f.attack} · 每轮攻击一个目标</p><p class="help-copy">位于第 ${f.row + 1} 排中央，占一格，不可通行或部署单位。单位按四正向射程攻击建筑。建筑攻击周围 ${f.reach ?? 2} 格内的一名敌军，含斜角。</p><p class="help-copy">${f.ready ? "破塔后原格出现基地，下一回合激活；泉水本身不能被攻击。" : "刚出现的基地将在下回合开始后激活，本回合不会攻击或受到伤害。"}</p>${prediction ? `<p class="forecast-detail">当前直接交战：${prediction.destroyed ? f.stage === "tower" ? "预计破塔" : "预计摧毁基地" : `预计剩余 ${prediction.hp} 生命`}。</p>` : ""}`);
+  openDetail(`<h2 id="detail-title" class="detail-heading">${f.team === 0 ? "我方" : "敌方"}${f.stage === "tower" ? "防御塔" : "基地"}</h2><p class="sheet-note">生命 ${f.hp}/${f.maxHp} · 攻击 ${f.attack} · 每轮攻击一个目标</p><p class="help-copy">位于第 ${f.row + 1} 排中央，占一格，不可通行或部署单位。单位按四正向射程攻击建筑。建筑攻击周围 ${f.reach ?? 2} 格内的一名敌军，含斜角。</p><p class="help-copy">摧毁敌方防御塔即可获胜；双方塔同时被摧毁则平局。泉水本身不能被攻击。</p>${prediction ? `<p class="forecast-detail">当前直接交战：${prediction.destroyed ? f.stage === "tower" ? "预计破塔" : "预计摧毁基地" : `预计剩余 ${prediction.hp} 生命`}。</p>` : ""}`);
 }
 document.querySelectorAll(".fort").forEach((el) => {
   el.tabIndex = 0;

@@ -8,7 +8,6 @@ async (page) => {
   await page.waitForFunction(() => growthCatalog && (!busy || document.querySelector('#recover-new')));
   if (await page.locator('#recover-new').isVisible()) {
     await page.locator('#recover-new').click();
-    await page.waitForFunction(() => view && !busy);
   }
   await page.evaluate(async () => {
     closeDetail();
@@ -26,12 +25,13 @@ async (page) => {
   check(await page.locator('.hand-card').count() === 5,'Five starting ordinary cards');
   await page.getByRole('button',{name:'对局菜单',exact:true}).click();
   await page.locator('[data-menu="deck"]').click();
+  await page.locator('[data-new-deck="green"]').click();
   check(await page.locator('.deck-row').count() === 38,'All green ordinary cards and 22 item types in deck builder');
   await page.locator('[data-deck-id="61007"][data-delta="-1"]').click();
   check(await page.locator('#save-deck').isDisabled(),'Incomplete deck cannot be saved');
   await page.locator('[data-deck-id="61007"][data-delta="1"]').click();
   await page.locator('#save-deck').click();
-  check(await page.evaluate(()=>JSON.parse(localStorage.getItem(deckStorageKey)).ordinary.length === 21),'Deck saved with 21 selected cards plus nine signatures');
+  check(await page.evaluate(()=>readLibrary().some(d=>d.id === deckDraft.id && d.ordinary.length === 21)),'Deck saved with 21 selected cards plus nine signatures');
   await page.locator('#close-detail').click();
   const before = await page.evaluate(()=>({mana:view.mana,version:view.version,hand:view.hand.length}));
   await page.locator('.hand-card').first().click();

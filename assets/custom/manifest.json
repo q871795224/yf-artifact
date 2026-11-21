@@ -100,6 +100,2156 @@
       },
       "usage": "天辉攻城车；石木混合投石车，森林石径背景。",
       "integration": "pending"
+    },
+    {
+      "id": "unit-61001",
+      "name": {
+        "schinese": "前线新兵"
+      },
+      "card_type": "Creep",
+      "source": {
+        "path": "assets/custom/originals/unit-61001.png",
+        "provided_filename": "imagen_original_1795189631_7b179908.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "5a700401b4ada122463e75dc79ee246da9d277b47b3070d64890583eade58c27"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/61001.webp",
+        "large_image": "prototype/assets/cards/61001.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk5YTY3YjZhNmE2OWM1MThjYTA5YmI5ZTU0MGE5ZmQ2M2I1ZWY2YTQ3",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 61001,
+      "derived_sha256": "5026a85ddc9013662b99a0efda78145ee813ebe6142a59315ca3f4e093847fc6"
+    },
+    {
+      "id": "unit-61002",
+      "name": {
+        "schinese": "嗜战斗士"
+      },
+      "card_type": "Creep",
+      "source": {
+        "path": "assets/custom/originals/unit-61002.png",
+        "provided_filename": "imagen_original_1795189633_f5c14d8f.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "636743260f47a34caceb15ec394fc7fcccabecf6032424a755fde493c2eae760"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/61002.webp",
+        "large_image": "prototype/assets/cards/61002.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk2YjNiMTFiYjc5ODcwZGNiMzY5MjZiNTQ2MjIyNGJkOTViMmZkMTQ1",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 61002,
+      "derived_sha256": "c87cfd28ecfc67dafeceefe4a0e528e2defc21a70d1a64b0ad2d4f86ae2ab22b"
+    },
+    {
+      "id": "unit-61003",
+      "name": {
+        "schinese": "披甲步兵"
+      },
+      "card_type": "Creep",
+      "source": {
+        "path": "assets/custom/originals/unit-61003.png",
+        "provided_filename": "imagen_original_1795189767_2689b270.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "8c9697cb7fcb7ff85568ac661dcc52ccb72d5c570567f518cb2779ae6e342322"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/61003.webp",
+        "large_image": "prototype/assets/cards/61003.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk4YTVjNDBlNTA3N2M5NTg5MzlmZTk1OGE1MWI0NWFiZTAzNTIzMzgw",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 61003,
+      "derived_sha256": "d8ffd56c3d7f1927f52fc9cda56a558a6e9c91b90fb3c8f8dcfd0322bed01270"
+    },
+    {
+      "id": "unit-61004",
+      "name": {
+        "schinese": "破势战士"
+      },
+      "card_type": "Creep",
+      "source": {
+        "path": "assets/custom/originals/unit-61004.png",
+        "provided_filename": "imagen_original_1795189635_49706627.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "45a0f9c3fd73e16f876cda4b863086b2ad233bce9a79b39ff06ae3f1e681ef7d"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/61004.webp",
+        "large_image": "prototype/assets/cards/61004.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk2MmVkZmUzYzBhNDgzNzVmYWMwZWY3ZjRjODRlNzRlMDBiNjU2YjFl",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 61004,
+      "derived_sha256": "e0e348972a3d1ee8282d76155f2ab81bc1e894712723fe2e2514fbf0311eebc3"
+    },
+    {
+      "id": "unit-61005",
+      "name": {
+        "schinese": "重装卫士"
+      },
+      "card_type": "Creep",
+      "source": {
+        "path": "assets/custom/originals/unit-61005.png",
+        "provided_filename": "imagen_original_1795189669_33f8273d.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "534ace694ac3c9d7846543f31df43da7c7b57621bbfa779d3d7efe967c125794"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/61005.webp",
+        "large_image": "prototype/assets/cards/61005.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk1OTMyNzViNzI2NDVmZDIyZGMwZjJiOGNlYmM0ZWNkNTBmODIxMDc4",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 61005,
+      "derived_sha256": "9acf022d685c380708320b8816c81a972734935669bea88d2610e6742540c3c6"
+    },
+    {
+      "id": "unit-61006",
+      "name": {
+        "schinese": "先锋掷斧手"
+      },
+      "card_type": "Creep",
+      "source": {
+        "path": "assets/custom/originals/unit-61006.png",
+        "provided_filename": "imagen_original_1795189667_c0703edd.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "0570ec13ce8a63a1a3111cfe51bb520124029ef42d0597830cf3b0e3af0e3d49"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/61006.webp",
+        "large_image": "prototype/assets/cards/61006.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk1OGUwOGE3ODZhNjlmNGIzOGI0NzEzZWZmZTAyOTIxNmI3NjRiN2Iw",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 61006,
+      "derived_sha256": "92ad3cbcf3f31696bb55176a69cbdfb2eb10eff5b3a97834f1c1b30f75b01c0d"
+    },
+    {
+      "id": "unit-61007",
+      "name": {
+        "schinese": "萌芽守卫"
+      },
+      "card_type": "Creep",
+      "source": {
+        "path": "assets/custom/originals/unit-61007.png",
+        "provided_filename": "imagen_original_1795189677_728d4710.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "db7f79a3a4762dde840da63bf44fdcd0f2057ead0aaf6128feef5c0024fe3161"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/61007.webp",
+        "large_image": "prototype/assets/cards/61007.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGkxNTkzZjc1NjAxNGIwN2MxN2ViZjU2NGZlN2FiZGU5N2RkMDJjNzBi",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 61007,
+      "preview_path": "prototype/assets/cards/61007.webp",
+      "preview_sha256": "a4026d1c9d1002d4ab78203c115425a8a9422f8f7728ab5b43a5ce9de481ebc4",
+      "derived_sha256": "a4026d1c9d1002d4ab78203c115425a8a9422f8f7728ab5b43a5ce9de481ebc4"
+    },
+    {
+      "id": "unit-61008",
+      "name": {
+        "schinese": "共生幼苗"
+      },
+      "card_type": "Creep",
+      "source": {
+        "path": "assets/custom/originals/unit-61008.png",
+        "provided_filename": "imagen_original_1795189776_a97566da.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "4017e4f4c208b2433cd6024cbee7111e5285b8c6bcb495420ea2bf6ba04e90da"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/61008.webp",
+        "large_image": "prototype/assets/cards/61008.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk4YTMxOWVjNDFkYzVmZDJmM2Q4ZWU1YzFhNTU0ZTgwYjRjNGJkMDcz",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 61008,
+      "derived_sha256": "5e757778f59d81b12336d99036911716873c5de3d885d664ca7d5fef4c3f114b"
+    },
+    {
+      "id": "unit-61009",
+      "name": {
+        "schinese": "林间向导"
+      },
+      "card_type": "Creep",
+      "source": {
+        "path": "assets/custom/originals/unit-61009.png",
+        "provided_filename": "imagen_original_1795189711_4656925b.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "c6dc9a2bab0f5bb7293736a98493b646ab866ea7d3ee1e6e18759834ab864015"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/61009.webp",
+        "large_image": "prototype/assets/cards/61009.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk0MDRhNGMwMzY1OWU2NTE0NWNhZjIxMTJiODFlZWMxMGI5ZWM4YmYw",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 61009,
+      "derived_sha256": "fde86ff9b48b768e3d6e3d96197ab2dc13d065e5ba243bbae7f41c527f06d103"
+    },
+    {
+      "id": "unit-61010",
+      "name": {
+        "schinese": "复苏守卫"
+      },
+      "card_type": "Creep",
+      "source": {
+        "path": "assets/custom/originals/unit-61010.png",
+        "provided_filename": "imagen_original_1795189711_c296c192.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "4aa35aa3e8c706d5f1c8b4f2cfd9cb1543432a1578a88cec08df83f00f9b6102"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/61010.webp",
+        "large_image": "prototype/assets/cards/61010.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGlmZTYxZDk2ZDc5ODc1YTU5MWI4NmIyZDExMWZjY2IzZWY1NTFmZjk3",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 61010,
+      "derived_sha256": "3453b40dbf3a60ced2dc318e2dcd50a8767da58ce358a30f68cb43c73b883551"
+    },
+    {
+      "id": "unit-61011",
+      "name": {
+        "schinese": "战场引路人"
+      },
+      "card_type": "Creep",
+      "source": {
+        "path": "assets/custom/originals/unit-61011.png",
+        "provided_filename": "imagen_original_1795189713_ad225b38.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "9590e3bd87573dcd7907c11c7df861bbad33d0d3b1f2b996a9a85b7920014155"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/61011.webp",
+        "large_image": "prototype/assets/cards/61011.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk3ZDAyMmE0NTA3MzlmYTQzMGY5Y2U3ZGIzMWM4MmI3ZTE2Y2Q1MTMx",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 61011,
+      "derived_sha256": "35f052f5c540ae5f7d6e64a7a72969278e981180831f6faf0ea90803a68496d2"
+    },
+    {
+      "id": "unit-61012",
+      "name": {
+        "schinese": "古林修复者"
+      },
+      "card_type": "Creep",
+      "source": {
+        "path": "assets/custom/originals/unit-61012.png",
+        "provided_filename": "imagen_original_1795189769_6d3f0a50.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "1b7586f41eec4ce24bd25c3f59aee2a6c36f4ddf9e9715221c46db4a526206f2"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/61012.webp",
+        "large_image": "prototype/assets/cards/61012.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk5OWI1MWJjMGY4OTg1NjIwZTA0OGVmNDM2YzBlNzZiODdhMzA5ZmJh",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 61012,
+      "derived_sha256": "1c4ebb33335e6a2530e8564873063b2fe3e8324cc6b242dac9a56e34036ae132"
+    },
+    {
+      "id": "spell-62001",
+      "name": {
+        "schinese": "新命令"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/spell-62001.png",
+        "provided_filename": "imagen_original_1795189890_ef3c556c.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "5eecbf7d27934fc94ce9cdf41b32710145efedfd4d3d6668ae593a0768982726"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/62001.webp",
+        "large_image": "prototype/assets/cards/62001.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk1Y2IyNWM3YzUwMDcyNjBjZDgwYzg0YTBlNzZjY2QyYjNiYzdkZGJj",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 62001,
+      "derived_sha256": "18b5f4be4651e3899a6238b2c2beb1e2de95a532e2cf995a928fb303005d97e2"
+    },
+    {
+      "id": "spell-62002",
+      "name": {
+        "schinese": "鞭笞"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/spell-62002.png",
+        "provided_filename": "imagen_original_1795189897_74686597.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "70f7d52e7ad3276edd4c371f7348ff8dc0a41364805a6e6158e5823c5b0c30c0"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/62002.webp",
+        "large_image": "prototype/assets/cards/62002.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGkyMTI2NTBiZjU2ODM0M2MyOGE1ODYzMTViYTg2NGY1N2JhNDA5M2E0",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 62002,
+      "derived_sha256": "6a6a5a13af2e6f2bdb1dbea80ddf34554056bde05b5a4771f50179f7581140d3"
+    },
+    {
+      "id": "spell-62003",
+      "name": {
+        "schinese": "惹是生非"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/spell-62003.png",
+        "provided_filename": "imagen_original_1795189908_00cc8b41.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "60c34b2efc10036e42adf5ab7770251baf50c02bce945e40301a58099d744682"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/62003.webp",
+        "large_image": "prototype/assets/cards/62003.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGljYzJhNmM1MGRlNWY5ZTY2NzBkY2U4MDMyM2ZkZTgzMGM0OTM4YWFj",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 62003,
+      "derived_sha256": "cb7e380f51db1f84f444e391375723936263f78ea2e7c925b77c5e0f07222d3e"
+    },
+    {
+      "id": "spell-62004",
+      "name": {
+        "schinese": "战斗训练"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/spell-62004.png",
+        "provided_filename": "imagen_original_1795189930_7d98a49e.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "affbeb747088a5a67ffc9fb886ef1205a9d53a1478c48ec4fa175394b8588478"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/62004.webp",
+        "large_image": "prototype/assets/cards/62004.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk3ODRjZDZhOGUyNGU0NWFjYTNjNTIyOTkwNTJkZWNlZDgxYjUwNTcx",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 62004,
+      "derived_sha256": "3deba206004abffd2b59dce129ea422e5c7e8587c371c08d825c592add997a0a"
+    },
+    {
+      "id": "spell-62005",
+      "name": {
+        "schinese": "浴血奋战"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/spell-62005.png",
+        "provided_filename": "imagen_original_1795189937_0e5b0703.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "6026259f2094ed4ba54ab0ddd0d9acd19e44b16f42f08dbad639120f87c964c1"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/62005.webp",
+        "large_image": "prototype/assets/cards/62005.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGlhYmNhNzg5OWZhZjRjZTZiY2ViNTI2MmU3ZDg2N2ZjMmJlZjQ4YWVm",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 62005,
+      "derived_sha256": "8b24f6d1d241587d5874b9e8a485ed97a7e436d69a198014a6c1b1c3423b2917"
+    },
+    {
+      "id": "spell-62006",
+      "name": {
+        "schinese": "一扫而空"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/spell-62006.png",
+        "provided_filename": "imagen_original_1795189956_c0d7f322.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "786ce3fccf4e0d36179618aa78889db4beff8bd8a32c92dd51cbad14553d63d1"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/62006.webp",
+        "large_image": "prototype/assets/cards/62006.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk5ZTRlYjljMTAyYzRiMzE2YThhMmZiYjIzOWMzNWVjMzYxN2M4MmJj",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 62006,
+      "derived_sha256": "2aa62e8b99f4838128dfc023b1a70b87516acb4df5e6e5cf09b6c850d8cdc487"
+    },
+    {
+      "id": "spell-62007",
+      "name": {
+        "schinese": "致残重击"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/spell-62007.png",
+        "provided_filename": "imagen_original_1795189976_f1fd4e64.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "b70ba26c5b5d4776888b0fc4ffc706d76cfa3c98f98b27c7f037f621ad0aa032"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/62007.webp",
+        "large_image": "prototype/assets/cards/62007.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGkwNDdkYjJjMWU3MGVkYTFjZDgxMzNjZGViYWE0ZGY2OGJmNWQzOGIx",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 62007,
+      "derived_sha256": "a511d802ee2214019d30ed2e060ce70c003c25ce4dd11da7655a9e5fa605bd84"
+    },
+    {
+      "id": "spell-62008",
+      "name": {
+        "schinese": "废话少说"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/spell-62008.png",
+        "provided_filename": "imagen_original_1795189974_43e0c1d4.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "12e39f12854928b99accc18eb1c56b2d9e86e7622ae284f3b6bc32560768f8f0"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/62008.webp",
+        "large_image": "prototype/assets/cards/62008.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGkwMWZhMWY4Y2M0MzM0NWNiZTRiOWU3Y2FkNDdjMzMwMzYyZmM5MjQz",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 62008,
+      "derived_sha256": "c230f6d320f34a3633cb7e80fdf43bc73f6b6e21101c862f62115803f9ca6369"
+    },
+    {
+      "id": "spell-62009",
+      "name": {
+        "schinese": "胜利时刻"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/spell-62009.png",
+        "provided_filename": "imagen_original_1795189991_54a5cbd9.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "54c634bc24d76dc5954c40b8b95d9aec9c3975ecff4c29ebdbd208cc7b4f6bab"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/62009.webp",
+        "large_image": "prototype/assets/cards/62009.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGllYmIzYzlmMGM5NmVkMzBmNGMyZTY2MmQ0MzJlMTQ5ZjFjOGRjYzll",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 62009,
+      "derived_sha256": "66ff0cb2320799a256b869c8643f4835db2d984ce2ad9d8b54745a22cf3c7f42"
+    },
+    {
+      "id": "spell-62010",
+      "name": {
+        "schinese": "绕树"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/spell-62010.png",
+        "provided_filename": "imagen_original_1795190013_657ec0b1.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "22c6760c7a86ed490e990c9b7dd335622ce08c0f0ce8966f27e12f2ba3a279b9"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/62010.webp",
+        "large_image": "prototype/assets/cards/62010.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGlhZDk5MjQxMWY0ZWNlY2U5YzhiNzI5NjY0ODIwZmMxOWM4YmI1MjIx",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 62010,
+      "derived_sha256": "be749cc6aa19d3a2edc51a025a30d16d4e186485fae7888a0b8648c0fa517e3e"
+    },
+    {
+      "id": "spell-62011",
+      "name": {
+        "schinese": "治疗"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/spell-62011.png",
+        "provided_filename": "imagen_original_1795190017_2c33dbae.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "fef5288b2b959fa72589f65fc31dc7eb901f5d533f6d7fca72fddc0f4202f72d"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/62011.webp",
+        "large_image": "prototype/assets/cards/62011.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGllY2IyYjQ1NmNlYWU1MmM3YTdiMGVhNTk3ZTUwODU2ZWUwZGE0M2Vi",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 62011,
+      "derived_sha256": "264f6d1d10b991e7d73cd5b7a42d127ab223688351836177447754fe54412e63"
+    },
+    {
+      "id": "spell-62012",
+      "name": {
+        "schinese": "呵斥"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/spell-62012.png",
+        "provided_filename": "imagen_original_1795190028_c363741d.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "fca4bd1250b9e308a612a553c33522990c6460d2eb7fc3b80d3d51e4edbc48fd"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/62012.webp",
+        "large_image": "prototype/assets/cards/62012.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGljN2E2M2Y0MDVkMzFjNTFiYTA3NjAwMDEzNmEyN2JiYTQxYjdmMWZi",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 62012,
+      "derived_sha256": "39c5f437230adcd63b7852c21159a067e5bf96989344d86d7a8bf7170693dab8"
+    },
+    {
+      "id": "spell-62013",
+      "name": {
+        "schinese": "铁树枝干守护"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/spell-62013.png",
+        "provided_filename": "imagen_original_1795190142_f2146f22.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "2025fa66f7b914ba9e161ae5162534a437d2fbcb627e6f1e753021e64e1b116a"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/62013.webp",
+        "large_image": "prototype/assets/cards/62013.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk5MDNlNmRhNjYzMzc0Y2ZiYjkxODQwNTZlMTgyOGIzYzQwMmY4MTZk",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10297,
+          10169
+        ]
+      },
+      "integration": "linked",
+      "card_id": 62013,
+      "preview_path": "prototype/assets/cards/62013.webp",
+      "preview_sha256": "4f2230147953bab051d1b0aca422227d4469fe870bac1301ff97d9d23b74da63",
+      "derived_sha256": "4f2230147953bab051d1b0aca422227d4469fe870bac1301ff97d9d23b74da63"
+    },
+    {
+      "id": "spell-62014",
+      "name": {
+        "schinese": "魔霭福泽"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/spell-62014.png",
+        "provided_filename": "imagen_original_1795190180_836768f1.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "c726caece159cb4672888a5dde7fec13809db0fd544e477d0ff16dbacba3b526"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/62014.webp",
+        "large_image": "prototype/assets/cards/62014.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGljNmVhZWNjYWJiZjc1ZTM0YzE2OWVhZGZiNjU1NWNjMTliNGY1YzM2",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10355,
+          10311
+        ]
+      },
+      "integration": "linked",
+      "card_id": 62014,
+      "derived_sha256": "58de225a3c45fa67ac4e1a7ed5e7030a8d5180e96ba67c3cf13c6194375b7efe"
+    },
+    {
+      "id": "spell-62015",
+      "name": {
+        "schinese": "武装叛军"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/spell-62015.png",
+        "provided_filename": "imagen_original_1795190180_050ae213.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "6892460cad65e874319e3a2c909bc6f4f21799696aaa85ec0d234eb39308a9d1"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/62015.webp",
+        "large_image": "prototype/assets/cards/62015.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk3MDZjZjg5OGM4NDQ3NjlhNzEwZjlhYTYyMWU3MTdjNGEzYzUyMTcy",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10425,
+          10297
+        ]
+      },
+      "integration": "linked",
+      "card_id": 62015,
+      "derived_sha256": "ca6ce2c527e029407d7e9f946e713caa0115c758ec39a53a45bdb621281b9ad9"
+    },
+    {
+      "id": "spell-62016",
+      "name": {
+        "schinese": "妙手回春"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/spell-62016.png",
+        "provided_filename": "imagen_original_1795190177_beeb3702.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "6e55f966369230bf964cf310593909c1a4a15fb42ee473ff2dfd63678df5ac41"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/62016.webp",
+        "large_image": "prototype/assets/cards/62016.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGkzYjU0ZTJhMzdmMGM0MGQxYjZmYWRmZTY5Zjk0Yzg0NGE5MjdmMDZh",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10402,
+          10169
+        ]
+      },
+      "integration": "linked",
+      "card_id": 62016,
+      "derived_sha256": "4f37a74fcae3900e17d23f903210055d6f95b9d5e2cce8a0949d837b1d74397e"
+    },
+    {
+      "id": "spell-62017",
+      "name": {
+        "schinese": "攻其不备"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/spell-62017.png",
+        "provided_filename": "imagen_original_1795190210_e2a70783.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "91b802de8a4444ba60a78f0f4886a67794afeb3ad18911279a54ad133108b6d1"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/62017.webp",
+        "large_image": "prototype/assets/cards/62017.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGkwOGZlYTZmOTE3ZGYwMzcxMGE5Y2JlMjA5MWJlOTViODdlN2Y3ODJi",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10354,
+          10353
+        ]
+      },
+      "integration": "linked",
+      "card_id": 62017,
+      "derived_sha256": "559ffaa003949c254abcaff0efe4ef579bd99c7f994729fdf3ca661c92cebb99"
+    },
+    {
+      "id": "spell-62018",
+      "name": {
+        "schinese": "恫吓"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/spell-62018.png",
+        "provided_filename": "imagen_original_1795190218_58ad8cc8.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "0e38556e73c19783b1eb9429d6dc48d86e6d06d029be470a7d989e7a898e16f7"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/62018.webp",
+        "large_image": "prototype/assets/cards/62018.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk4YWYxZDk4NDEyN2UxNjBjNTAzYzEyZjI4MTMxOTQ1MzM0ZGI2ZDJh",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10355,
+          10352
+        ]
+      },
+      "integration": "linked",
+      "card_id": 62018,
+      "derived_sha256": "67d199de6b9453c3f65fb78371972567c9af7eb95ea0b7044d966113d889cdb7"
+    },
+    {
+      "id": "spell-62019",
+      "name": {
+        "schinese": "衰退诅咒"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/spell-62019.png",
+        "provided_filename": "imagen_original_1795190233_36c34eab.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "cbd74da79965c80399bf3044627d6ac59731dffc51ffebb347e0cfdf2afdae6d"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/62019.webp",
+        "large_image": "prototype/assets/cards/62019.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk5YmJmYjc2YmJlY2Q1YzIzZmMxNjVlZWRkZmNjYTAzMDIxNmZjY2Ey",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10412,
+          10410
+        ]
+      },
+      "integration": "linked",
+      "card_id": 62019,
+      "derived_sha256": "4fb91b8666318c9cd3a3403570e4e76afd42dff084875c548c22f0c81dea4737"
+    },
+    {
+      "id": "signature-63001",
+      "name": {
+        "schinese": "狂战士之吼"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/signature-63001.png",
+        "provided_filename": "imagen_original_1795189816_d60a996e.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "e29fac8289da2855fc14d1d3df6f4ca28bbc6aa61c25041556d5b73645895d8e"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/63001.webp",
+        "large_image": "prototype/assets/cards/63001.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGlmZjM2ZDE1NDNiOTMyNTU2MDUxNDdkYjc0YTFjNTA4N2E0OTI3M2Jk",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 63001,
+      "derived_sha256": "cce93055f91d653a0dddc6c5f7188f0594a9383aa073e8b874a4c58b0b979617"
+    },
+    {
+      "id": "signature-63002",
+      "name": {
+        "schinese": "决斗"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/signature-63002.png",
+        "provided_filename": "imagen_original_1795189815_8c626224.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "fd21c50cdb9210032b2089ba66064846999fe0c6b44a70702fc9ddeee8de0d90"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/63002.webp",
+        "large_image": "prototype/assets/cards/63002.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk2NjkxZDEyODY3YmQzNWExYjRjY2U1YmRjNjg0MTU4NDEyOTY5ZWE1",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 63002,
+      "derived_sha256": "6aa5939c0f105f9e228c265eb3c6b515821a2ac184816c3dab718417c5ca9e2f"
+    },
+    {
+      "id": "signature-63003",
+      "name": {
+        "schinese": "神之力量"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/signature-63003.png",
+        "provided_filename": "imagen_original_1795189822_cf5acfa8.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "baadf56b204313db32657fd8b9da8bf7433a67d180d25f199f3d08f5c5bc70e7"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/63003.webp",
+        "large_image": "prototype/assets/cards/63003.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGllYWM3NDNjMjU2MjAwYWYyOWUzY2ZhMzM0MWZhY2Q4YjIzMDE0MTM5",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 63003,
+      "derived_sha256": "8e2a3965b02bcd230cfc0cebb17556fe920fa580346c765d3af28051123ba579"
+    },
+    {
+      "id": "signature-63004",
+      "name": {
+        "schinese": "野蛮灵狼"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/signature-63004.png",
+        "provided_filename": "imagen_original_1795189852_f3f6eaf6.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "44d8521fe4dd3c72c945fec3c1fbe93f07b4e880a881a9fcf2b07687d20f5f8e"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/63004.webp",
+        "large_image": "prototype/assets/cards/63004.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGkyMGE2YTczY2Q5ZmUwNTRiYzhiNTcwNGI4NDUwNjkzY2Y0MmQxMDQy",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 63004,
+      "derived_sha256": "ed04a69f3b5b5a65966303c2a03de1bb0c208b22b3d7af75da87064e0eb46a65"
+    },
+    {
+      "id": "signature-63005",
+      "name": {
+        "schinese": "上帝之手"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/signature-63005.png",
+        "provided_filename": "imagen_original_1795189857_2ddd7044.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "796334e17d4da86ade8c67d17849ceec2786aabf7ba96c215523f20063626feb"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/63005.webp",
+        "large_image": "prototype/assets/cards/63005.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGlhOTJhMjQ4ODAyOTYzYjBjZjk2YjM3ZWNjOTY5NGY3Y2FiNmNiZDkx",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 63005,
+      "derived_sha256": "f97b568fd53d19b720f1d464cf08eee45aae14eed966c052b874c85624d115de"
+    },
+    {
+      "id": "signature-63006",
+      "name": {
+        "schinese": "全视者恩泽"
+      },
+      "card_type": "Spell",
+      "source": {
+        "path": "assets/custom/originals/signature-63006.png",
+        "provided_filename": "imagen_original_1795189866_97484327.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "2f5f307e7e806f71de0030743de5227c03cf6a67270d8f3e9e7cf669f298a56e"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/63006.webp",
+        "large_image": "prototype/assets/cards/63006.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGkyZGM0NDA5YmMzZWQ1OTA5ZWQ2Y2RkODZhMTRkNzVkMWZiNmY2MDUw",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        }
+      },
+      "integration": "linked",
+      "card_id": 63006,
+      "derived_sha256": "c0fe0b3fc9b631115c5267cefe2a8b41a29504d2d0eb95606f002a86ceca84f2"
+    },
+    {
+      "id": "item-65001",
+      "name": {
+        "schinese": "短剑"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-65001.png",
+        "provided_filename": "imagen_original_1795190375_ec3ca1b5.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "8a5d01207114b358120f91f25ebbe63d6de0794301b04e2569dabe05d88313db"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/65001.webp",
+        "large_image": "prototype/assets/cards/65001.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk0M2QzNjAyZTc0MzA2YjY5ODYyNzY5ZTMxOTMzYTkxNjM0ZDg4N2U4",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10212,
+          3001
+        ]
+      },
+      "integration": "linked",
+      "card_id": 65001,
+      "derived_sha256": "36b355e706f303c2f8d6df3bdfae3db132f1332c634dacdfdf112ca3cb35295e"
+    },
+    {
+      "id": "item-65002",
+      "name": {
+        "schinese": "阔剑"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-65002.png",
+        "provided_filename": "imagen_original_1795190372_b497086d.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "c3bd510743fdc7c6204b963c2496c0ec8dcea93cfcd4cebf220a528e9270eac2"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/65002.webp",
+        "large_image": "prototype/assets/cards/65002.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk1YmQxYWFiNzZmMjA2YzBiNmY3NmIxNzg5ZDZlMWRkZjgxZmYzNjk0",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10223,
+          10252
+        ]
+      },
+      "integration": "linked",
+      "card_id": 65002,
+      "derived_sha256": "78f76bee8a093ffd1c9c8c0c2330d5099ea081c5bfa534aca1c8b923e730a0fc"
+    },
+    {
+      "id": "item-65003",
+      "name": {
+        "schinese": "大剑"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-65003.png",
+        "provided_filename": "imagen_original_1795190376_0011042f.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "9cb569f00d24d7e880356666919ce62a40deceac06d5006a3b8244310183ba27"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/65003.webp",
+        "large_image": "prototype/assets/cards/65003.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGliYTEzMmQwY2UxOTY5NTdmMTYwZDQ4MDAyMTBhYzA0MWRlODU1OGZm",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10215,
+          10263
+        ]
+      },
+      "integration": "linked",
+      "card_id": 65003,
+      "derived_sha256": "f95fb4565bac3640f79e46995276c735acf90865c722694169e88017e2b5c1d2"
+    },
+    {
+      "id": "item-65004",
+      "name": {
+        "schinese": "皮甲"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-65004.png",
+        "provided_filename": "imagen_original_1795190402_3825b8e7.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "18e75f64885299cf96eaa99954873b5c32788a2f91b5b4c9c449926ad5b14d4b"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/65004.webp",
+        "large_image": "prototype/assets/cards/65004.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGkwYTdlMDZiNzY4YzM5N2Y5MDA1MDkzNDk2NTlmMDNjMWY5NTU2ZjRh",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10213,
+          10214
+        ]
+      },
+      "integration": "linked",
+      "card_id": 65004,
+      "derived_sha256": "1ba0cc189423c164bda9f1e095f51539f13d9b68e72f360f2869d91db1c6ede5"
+    },
+    {
+      "id": "item-65005",
+      "name": {
+        "schinese": "锁子甲"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-65005.png",
+        "provided_filename": "imagen_original_1795190408_668dcbe9.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "56ce9f2a39ac0ec3e8a805ca459f3f269d620f414b1813b0ef7dc12dc5d5dc1e"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/65005.webp",
+        "large_image": "prototype/assets/cards/65005.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGljYjg2ZDVhN2FhMDg3Y2QxMDVhODRkYjJhNjM2YzgxYzRmODNlMTU1",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10208,
+          3001
+        ]
+      },
+      "integration": "linked",
+      "card_id": 65005,
+      "derived_sha256": "b5a5a350c2cc6752faa033a416240e36550a9bfa7f8895adc04738714dd5da80"
+    },
+    {
+      "id": "item-65006",
+      "name": {
+        "schinese": "板甲"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-65006.png",
+        "provided_filename": "imagen_original_1795190411_84950b75.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "864f8c8d9979718394bfd8061a0470c23199e726d4a0e92e9368324155cbad02"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/65006.webp",
+        "large_image": "prototype/assets/cards/65006.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk3NmZkMGI2ZGQxMzNhYTM5OWU4MWU4ZDUzOWE0Y2Y1MDhiMDRkNzQ1",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10214,
+          10208
+        ]
+      },
+      "integration": "linked",
+      "card_id": 65006,
+      "derived_sha256": "f469bb50212d87805ad4fa7510cc95d071feb46c9779adc5ed945f2e7aa27daa"
+    },
+    {
+      "id": "item-65012",
+      "name": {
+        "schinese": "黑皇杖"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-65012.png",
+        "provided_filename": "imagen_original_1795190140_150ef8a4.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "c108e74b90c042223548844d054e0c3d96cab9324885cf7d1242cbd7846b59cf"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/65012.webp",
+        "large_image": "prototype/assets/cards/65012.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk1ZTZiZWU2Zjg0ZTY4NGJjY2IzMWI3ZDU3ZWE0OTllN2M1OWFiMmE4",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10260,
+          10211
+        ]
+      },
+      "integration": "linked",
+      "card_id": 65012,
+      "derived_sha256": "e182331657cd06ba315c4d6b844da25e464374b7868124b89b4d8d7f9ec40d9f"
+    },
+    {
+      "id": "item-65013",
+      "name": {
+        "schinese": "梅肯斯姆"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-65013.png",
+        "provided_filename": "imagen_original_1795190257_cbc0b547.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "e829833d309ecac166643826f0dac9f44c4cccd35ce8a2da9f2f75d36efb9ab9"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/65013.webp",
+        "large_image": "prototype/assets/cards/65013.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGljZTRlMDQ1YzU3NmU1Yzg3NDkxM2MxYjRmNDgwNGMzNzI5OGIyNDli",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10211,
+          3003
+        ]
+      },
+      "integration": "linked",
+      "card_id": 65013,
+      "derived_sha256": "4f30bd1b47446badd7a05a360ce3b9a6955c6bfde3e91ee5b822b2af005b7689"
+    },
+    {
+      "id": "item-65014",
+      "name": {
+        "schinese": "点金手"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-65014.png",
+        "provided_filename": "imagen_original_1795190262_7ca415e4.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "9ba6a0fde194b3b7a865c84da57a1586d2dda7b248834244edaf290eafb5553e"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/65014.webp",
+        "large_image": "prototype/assets/cards/65014.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk3NGI1ZDQzZjA3NjQzMzU1N2ViMjAzYjRhOGNhOTViODVjMTU1NWUz",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10216,
+          10223
+        ]
+      },
+      "integration": "linked",
+      "card_id": 65014,
+      "derived_sha256": "c31bb7f6259338e9516ecb9f4b3db46a9f78270f3ee4171342eb2d01f211eee6"
+    },
+    {
+      "id": "item-65015",
+      "name": {
+        "schinese": "邪恶镰刀"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-65015.png",
+        "provided_filename": "imagen_original_1795190270_eff47053.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "eb1e5c9a046fb1202a29d3bf3f43929e92157285cbe4dbe9c736472d18a86a77"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/65015.webp",
+        "large_image": "prototype/assets/cards/65015.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk3ZDUxYjI3NTIwYmE1NDk0MDhhMmY3NzJmZDY1YTE3NDY2OWRjMmMy",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10252,
+          10354
+        ]
+      },
+      "integration": "linked",
+      "card_id": 65015,
+      "derived_sha256": "83312ed9e1b34b7e15e99c7cabfdd01966b24b60f4add556a3e8c78e632b1589"
+    },
+    {
+      "id": "item-65016",
+      "name": {
+        "schinese": "紫苑"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-65016.png",
+        "provided_filename": "imagen_original_1795190297_61ab2ff0.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "344edb4ebac20915ee90ef73136da16f2dee64a5fea34abe04c72382a2f37977"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/65016.webp",
+        "large_image": "prototype/assets/cards/65016.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk1ODdmYWY3YjRlZTk4NWRkZTZlMDM3MTFlMDI3YjY5ZTkwNGVkOWQx",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10256,
+          10355
+        ]
+      },
+      "integration": "linked",
+      "card_id": 65016,
+      "derived_sha256": "6e3fa76637b05203e9d73171d2423974f18895f0ad7b9a5eb6b50d1838f885e6"
+    },
+    {
+      "id": "item-65017",
+      "name": {
+        "schinese": "圣剑"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-65017.png",
+        "provided_filename": "imagen_original_1795190302_82f76a01.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "34853806f808ef287bb1bd2120185106da820d7b0fc0bc1d054a5e632a7339e3"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/65017.webp",
+        "large_image": "prototype/assets/cards/65017.webp"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGljZGExNGQ3OTRmZWUzZmE3NDhiNzk1NDVhZTIxZmI5ZTk0ZWM0YWI2",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10212,
+          10425
+        ]
+      },
+      "integration": "linked",
+      "card_id": 65017,
+      "derived_sha256": "41774f5560e69af50f176e892eaa0ec9d3d69ef780001a0439d23a2ad7d8244f"
+    },
+    {
+      "id": "item-battle-fury",
+      "name": {
+        "schinese": "狂战斧"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-battle-fury.png",
+        "provided_filename": "imagen_original_1795190340_8d173eda.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "89cb91166da157ea9a5ada4477809ff17838d5e287ef5b14e857e65a2501b1b3"
+      },
+      "images": {
+        "mini_image": "assets/custom/originals/item-battle-fury.png",
+        "large_image": "assets/custom/originals/item-battle-fury.png"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk0MDBiYjBmM2UwOTBlNDU5YTcwYWUwY2ZiMjVlN2Q3ODI5OTAwNDIy",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10223,
+          10344
+        ]
+      },
+      "integration": "pending"
+    },
+    {
+      "id": "item-maelstrom",
+      "name": {
+        "schinese": "电锤"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-maelstrom.png",
+        "provided_filename": "imagen_original_1795190334_c877d48a.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "5fded6841d46c6d97e37f276d99da3f18dc6b3eb75a2a17963e229c3ff82d694"
+      },
+      "images": {
+        "mini_image": "assets/custom/originals/item-maelstrom.png",
+        "large_image": "assets/custom/originals/item-maelstrom.png"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk3ZDUyMWIwZmE4NDMzMWQ3ZmQ0MWU1MWU2ZGNkZDQ0MjVkNDMxYmYx",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10223,
+          10412
+        ]
+      },
+      "integration": "pending"
+    },
+    {
+      "id": "item-meteor-hammer",
+      "name": {
+        "schinese": "陨星锤"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-meteor-hammer.png",
+        "provided_filename": "imagen_original_1795190134_e4917b21.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "4b85ba3268c9468dac1ae7cede998d440a7e146032e4d5a997d7ebad524a7a71"
+      },
+      "images": {
+        "mini_image": "assets/custom/originals/item-meteor-hammer.png",
+        "large_image": "assets/custom/originals/item-meteor-hammer.png"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGljMmY5YzgyYWI1ZDc5ZGE3NTQ1NzY4YjI0YmVmM2UwMjE5NGMwYWYx",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10223,
+          10353
+        ]
+      },
+      "integration": "pending"
+    },
+    {
+      "id": "item-radiance",
+      "name": {
+        "schinese": "辉耀"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-radiance.png",
+        "provided_filename": "imagen_original_1795190339_d7c67ad9.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "edcfd921280475484e1f92c4e4d9921f766fda69ef498666277789d15cc50614"
+      },
+      "images": {
+        "mini_image": "assets/custom/originals/item-radiance.png",
+        "large_image": "assets/custom/originals/item-radiance.png"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGkxN2Q0MTAyZGVmOWMxOWNlZGFjNzIzNWZlZjVlYzAzMDE3NzU1NTcy",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10212,
+          10425
+        ]
+      },
+      "integration": "pending"
+    },
+    {
+      "id": "item-shivas-guard",
+      "name": {
+        "schinese": "希瓦的守护"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-shivas-guard.png",
+        "provided_filename": "imagen_original_1795190304_6ea09909.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "8d1e3c7a76a8619ff4660a566cc87ccac923bc86fb99421587d5e42f51690e9a"
+      },
+      "images": {
+        "mini_image": "assets/custom/originals/item-shivas-guard.png",
+        "large_image": "assets/custom/originals/item-shivas-guard.png"
+      },
+      "generation": {
+        "provider": "Migoo",
+        "task_id": "mt_cGk0MjZhYmM2MGQzYzIwY2VlNTRiMDM2ZDdjODY3NGUxNjUxZTA3ODc1",
+        "applied": {
+          "models": [
+            "GPT Image 2.6 Flare"
+          ],
+          "resolution": "1K",
+          "aspect_ratio": "9:16"
+        },
+        "style_reference_card_ids": [
+          10208,
+          10412
+        ]
+      },
+      "integration": "pending"
+    },
+    {
+      "id": "item-65007",
+      "name": {
+        "schinese": "旅者斗篷"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-65007.png",
+        "provided_filename": "item-65007_00001_.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "37656f14b48e987188c0cf16b2a27ca8c8afb349eb49a365eb2305a38c82e104"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/65007.webp",
+        "large_image": "prototype/assets/cards/65007.webp"
+      },
+      "generation": {
+        "provider": "Local",
+        "host": "108",
+        "engine": "ComfyUI",
+        "model": "Z-Image Turbo INT8 ConvRot",
+        "mode": "text-to-image",
+        "stage": "candidate",
+        "prompt_id": "d6b572e0-91c4-41a2-82dc-f7c30f2e5786",
+        "seed": 20326128,
+        "steps": 8,
+        "seconds": 23.3
+      },
+      "integration": "linked",
+      "card_id": 65007,
+      "derived_sha256": "bf1ebfb36064ed04bbb5b31d275dc046f9d3dd9dcbc1fa361059959e119fbf01"
+    },
+    {
+      "id": "item-65008",
+      "name": {
+        "schinese": "毛皮大衣"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-65008.png",
+        "provided_filename": "item-65008_00001_.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "216bd655eb4b474b8ab7f147a2b85be5787524c3650ea337c808813b31a858fd"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/65008.webp",
+        "large_image": "prototype/assets/cards/65008.webp"
+      },
+      "generation": {
+        "provider": "Local",
+        "host": "108",
+        "engine": "ComfyUI",
+        "model": "Z-Image Turbo INT8 ConvRot",
+        "mode": "text-to-image",
+        "stage": "candidate",
+        "prompt_id": "a36ebeac-031b-4424-8580-19474845c59e",
+        "seed": 20326129,
+        "steps": 8,
+        "seconds": 12.0
+      },
+      "integration": "linked",
+      "card_id": 65008,
+      "derived_sha256": "24ebc50523b28e850c9511b9a02816e0478b90a4100588c11667db605b72af19"
+    },
+    {
+      "id": "item-65009",
+      "name": {
+        "schinese": "生命斗篷"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-65009.png",
+        "provided_filename": "item-65009_00001_.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "9bedbcd6cbe09db57128f9bb55b9b71661ca261bb7e366d699dca7ad2a1eaee1"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/65009.webp",
+        "large_image": "prototype/assets/cards/65009.webp"
+      },
+      "generation": {
+        "provider": "Local",
+        "host": "108",
+        "engine": "ComfyUI",
+        "model": "Z-Image Turbo INT8 ConvRot",
+        "mode": "text-to-image",
+        "stage": "candidate",
+        "prompt_id": "45a5f9da-0ead-4c82-b8e8-ba45532a1e98",
+        "seed": 20326130,
+        "steps": 8,
+        "seconds": 8.0
+      },
+      "integration": "linked",
+      "card_id": 65009,
+      "derived_sha256": "8830798b037295c76a917161ae6e3e8364f5a9bd29cf5037992388c626745bbf"
+    },
+    {
+      "id": "item-65010",
+      "name": {
+        "schinese": "跳刀"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-65010.png",
+        "provided_filename": "item-65010_00001_.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "6a248c9e9c4051dd3cff943e256d4ecbfd54c307e137c4b456ce68127c40b109"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/65010.webp",
+        "large_image": "prototype/assets/cards/65010.webp"
+      },
+      "generation": {
+        "provider": "Local",
+        "host": "108",
+        "engine": "ComfyUI",
+        "model": "Z-Image Turbo INT8 ConvRot",
+        "mode": "text-to-image",
+        "stage": "candidate",
+        "prompt_id": "ffd269c7-4d86-432f-b7c0-52f417b3a580",
+        "seed": 20326131,
+        "steps": 8,
+        "seconds": 8.0
+      },
+      "integration": "linked",
+      "card_id": 65010,
+      "derived_sha256": "0cd71518822e4b6c8adfdf433e6f991d816d4e35af14800fa50b1f3e951369ce"
+    },
+    {
+      "id": "item-65011",
+      "name": {
+        "schinese": "刃甲"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-65011.png",
+        "provided_filename": "item-65011_00001_.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "9030227344c79359413a053efadda08c9d5d1dea2d89096e0a47d07f50121afe"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/65011.webp",
+        "large_image": "prototype/assets/cards/65011.webp"
+      },
+      "generation": {
+        "provider": "Local",
+        "host": "108",
+        "engine": "ComfyUI",
+        "model": "Z-Image Turbo INT8 ConvRot",
+        "mode": "text-to-image",
+        "stage": "candidate",
+        "prompt_id": "20549ecf-70a2-49c8-955f-cfea37f6bbe1",
+        "seed": 20326132,
+        "steps": 8,
+        "seconds": 8.0
+      },
+      "integration": "linked",
+      "card_id": 65011,
+      "preview_path": "prototype/assets/cards/65011.webp",
+      "preview_sha256": "462497362069386475b91873eea9e3f6bbf45625174163e7474fd2bbe57e6b50",
+      "derived_sha256": "462497362069386475b91873eea9e3f6bbf45625174163e7474fd2bbe57e6b50"
+    },
+    {
+      "id": "item-65018",
+      "name": {
+        "schinese": "魔龙枪"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-65018.png",
+        "provided_filename": "item-65018_00001_.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "3169237e913c4561af05330eced9b10b62c1627da243d1f20551c9ba6b426924"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/65018.webp",
+        "large_image": "prototype/assets/cards/65018.webp"
+      },
+      "generation": {
+        "provider": "Local",
+        "host": "108",
+        "engine": "ComfyUI",
+        "model": "Z-Image Turbo INT8 ConvRot",
+        "mode": "text-to-image",
+        "stage": "candidate",
+        "prompt_id": "1b518319-589c-4aef-9db0-76aa18bea980",
+        "seed": 20326139,
+        "steps": 8,
+        "seconds": 8.0
+      },
+      "integration": "linked",
+      "card_id": 65018,
+      "derived_sha256": "ce8ac5173ec86f8a16c9ca3585a85cbfbbf2a3d556f3ac4090bcdd3dcdf8f3c8"
+    },
+    {
+      "id": "item-65019",
+      "name": {
+        "schinese": "治疗药膏"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-65019.png",
+        "provided_filename": "item-65019_00001_.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "1b6d65ff73101bca3a4d03deae20e0f0e4eddeec0d6e5666c9cf386b161fb382"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/65019.webp",
+        "large_image": "prototype/assets/cards/65019.webp"
+      },
+      "generation": {
+        "provider": "Local",
+        "host": "108",
+        "engine": "ComfyUI",
+        "model": "Z-Image Turbo INT8 ConvRot",
+        "mode": "text-to-image",
+        "stage": "candidate",
+        "prompt_id": "9349b623-03ec-4ba5-bf11-18c37c07c0a0",
+        "seed": 20326140,
+        "steps": 8,
+        "seconds": 8.0
+      },
+      "integration": "linked",
+      "card_id": 65019,
+      "derived_sha256": "e4d1a54ce359ed03a84d2a3b9a2d474b42d0e3e54e88b7cc66efb6f2b86aaf4f"
+    },
+    {
+      "id": "item-65020",
+      "name": {
+        "schinese": "回春药水"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-65020.png",
+        "provided_filename": "item-65020_00001_.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "79ef7d67ba237b2aa83fa0a886676848eef10cb76ae689dea7120eba9167f32e"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/65020.webp",
+        "large_image": "prototype/assets/cards/65020.webp"
+      },
+      "generation": {
+        "provider": "Local",
+        "host": "108",
+        "engine": "ComfyUI",
+        "model": "Z-Image Turbo INT8 ConvRot",
+        "mode": "text-to-image",
+        "stage": "candidate",
+        "prompt_id": "c8fbbc36-bfa5-4282-82de-1c90602b6eec",
+        "seed": 20326141,
+        "steps": 8,
+        "seconds": 8.0
+      },
+      "integration": "linked",
+      "card_id": 65020,
+      "derived_sha256": "9ca8d3295215d63f989db25ea55309701b7e827359058afff1668a301bd54a5f"
+    },
+    {
+      "id": "item-65021",
+      "name": {
+        "schinese": "知识秘典"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-65021.png",
+        "provided_filename": "item-65021-clean_00001_.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "15cb30f9de88332942c5b73389415c6b20b1eed113392acc6b9c52472f70c5cb"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/65021.webp",
+        "large_image": "prototype/assets/cards/65021.webp"
+      },
+      "generation": {
+        "provider": "Local",
+        "host": "108",
+        "engine": "ComfyUI",
+        "model": "Z-Image Turbo INT8 ConvRot",
+        "mode": "text-to-image",
+        "stage": "candidate",
+        "prompt_id": "004091c2-da98-4c8c-acb6-559416a03b40",
+        "seed": 20326142,
+        "steps": 8,
+        "seconds": 36.7
+      },
+      "integration": "linked",
+      "card_id": 65021,
+      "derived_sha256": "2b4aa70b007c245c9909c5093c25b01a034f7aa3bf004a3aedfc923936430394"
+    },
+    {
+      "id": "item-65022",
+      "name": {
+        "schinese": "回城卷轴"
+      },
+      "card_type": "Item",
+      "source": {
+        "path": "assets/custom/originals/item-65022.png",
+        "provided_filename": "item-65022_00001_.png",
+        "width": 768,
+        "height": 1360,
+        "sha256": "044a4ef116a820333c98d3626c7a87878d973f14c790f06930d32654734d5fe5"
+      },
+      "images": {
+        "mini_image": "prototype/assets/cards/65022.webp",
+        "large_image": "prototype/assets/cards/65022.webp"
+      },
+      "generation": {
+        "provider": "Local",
+        "host": "108",
+        "engine": "ComfyUI",
+        "model": "Z-Image Turbo INT8 ConvRot",
+        "mode": "text-to-image",
+        "stage": "candidate",
+        "prompt_id": "1b9a082a-f304-4568-ade0-a867eaafb31b",
+        "seed": 20326143,
+        "steps": 8,
+        "seconds": 8.0
+      },
+      "integration": "linked",
+      "card_id": 65022,
+      "derived_sha256": "1527f0974455b408c1ddceec7d6772e7c69e5a5b847e0e8045c859a60fa13648"
     }
   ]
 }

@@ -271,9 +271,48 @@
       }
     } else if (kind === "tower") {
       const arc = (t) => ({ x: from.x + dx * t, y: from.y + dy * t - Math.sin(Math.PI * t) * 62 });
-      const points = Array.from({ length: 21 }, (_, n) => { const at = arc(n / 20); return `${n ? "L" : "M"}${at.x},${at.y}`; }).join(" ");
-      const trail = line(points, p.width, p.color);
-      trail.setAttribute("stroke-dasharray", "3 8"); fade(trail, 0.15, 0.82);
+      const textures = scene.towerTextures;
+      if (textures) {
+        const particle = (texture, at, { vx = 0, vy = 0, size, start, peak, end, opacity, scale }) => {
+          const sprite = add("image", { href: textures[texture], width: size, height: size,
+            x: at.x - size / 2, y: at.y - size / 2 });
+          sprite.style.transformOrigin = `${at.x}px ${at.y}px`;
+          if (texture !== "smoke") glow(sprite);
+          animate(sprite, [
+            { opacity: 0, transform: "scale(.45)", offset: 0 },
+            { opacity: 0, transform: "scale(.45)", offset: start },
+            { opacity, transform: "scale(1)", offset: peak },
+            { opacity: 0, transform: `translate(${vx}px,${vy}px) scale(${scale})`, offset: end },
+            { opacity: 0, offset: 1 },
+          ]);
+        };
+        // The trail appears behind the projectile. Smoke expands after the brief impact.
+        for (let i = 0; i < 9; i++) {
+          const t = i / 9, start = 0.21 + t * 0.48;
+          particle("fire", arc(t), {
+            vx: -dx / length * 9, vy: -dy / length * 9, size: 14 * p.strength,
+            start, peak: start + 0.025, end: start + 0.12, opacity: 0.65, scale: 0.4,
+          });
+        }
+        for (const [vx, vy, delay] of [[-22, -14, 0], [0, -30, 0.025], [20, -11, 0.05]]) {
+          particle("smoke", to, {
+            vx: vx * p.strength, vy: vy * p.strength, size: 34 * p.strength,
+            start: 0.68 + delay, peak: 0.76 + delay, end: 1, opacity: 0.42, scale: 1.8,
+          });
+        }
+        particle("fire", to, { size: 74 * p.strength, start: 0.665, peak: 0.70, end: 0.81, opacity: 1, scale: 1.45 });
+        for (let i = 0; i < 8; i++) {
+          const angle = i * Math.PI / 4 + 0.2, radius = (23 + i % 3 * 11) * p.strength;
+          particle("spark", to, {
+            vx: Math.cos(angle) * radius, vy: Math.sin(angle) * radius, size: 12 * p.strength,
+            start: 0.67, peak: 0.71, end: 0.88 + i % 3 * 0.035, opacity: 0.9, scale: 0.35,
+          });
+        }
+      } else {
+        const points = Array.from({ length: 21 }, (_, n) => { const at = arc(n / 20); return `${n ? "L" : "M"}${at.x},${at.y}`; }).join(" ");
+        const trail = line(points, p.width, p.color);
+        trail.setAttribute("stroke-dasharray", "3 8"); fade(trail, 0.15, 0.82);
+      }
       const charge = glow(add("circle", { cx: from.x, cy: from.y, r: 20 * p.strength, fill: "#fff0cb", stroke: p.color, "stroke-width": p.width }));
       charge.style.transformOrigin = `${from.x}px ${from.y}px`;
       animate(charge, [{ opacity: 0, transform: "scale(0.2)", offset: 0 }, { opacity: 0.9, transform: "scale(1)", offset: 0.18 }, { opacity: 0, transform: "scale(1.4)", offset: 0.27 }, { opacity: 0, offset: 1 }]);
@@ -282,7 +321,8 @@
         const at = arc(n / 20); return { transform: `translate(${at.x}px,${at.y}px)`, opacity: n === 20 ? 0 : 1, offset: 0.2 + n / 20 * 0.48 };
       });
       animate(shell, [{ transform: `translate(${from.x}px,${from.y}px)`, opacity: 0, offset: 0 }, { transform: `translate(${from.x}px,${from.y}px)`, opacity: 0, offset: 0.19 }, ...flight, { opacity: 0, offset: 1 }]);
-      ring(to, 0.67); burst(to, 0.68); number(false, 0.68, to, 0.04); flash(scene.targetElement, 0.68);
+      if (!textures) { ring(to, 0.67); burst(to, 0.68); }
+      number(false, 0.68, to, 0.04); flash(scene.targetElement, 0.68);
     }
     return {
       duration: p.duration, root,

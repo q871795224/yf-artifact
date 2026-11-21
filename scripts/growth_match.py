@@ -5,8 +5,28 @@ from dataclasses import dataclass, field
 
 from simulate_heroes import EIGHT, CARDINAL, distance, valid
 from simulate_match import Match, BattleUnit, Fort, CARDS
-from growth_cards import PANELS, ITEMS, ROSTERS, SIGNATURES, RANGED_CREEP, validate_deck, full_deck
+from growth_cards import (PANELS, ITEMS, ROSTERS, EXPANSION_ROSTERS, RANGED_CREEP,
+                          DROW, TIMBERSAW, GENERATED_SIGNATURES, EXPERIMENTS,
+                          validate_deck, default_deck, full_deck)
 
+
+def pos_text(pos):
+    return f'{pos[0]},{pos[1]}'
+
+
+def parse_pos(text):
+    return tuple(map(int,text.split(',')))
+
+
+def parse_march(text):
+    return [(uid,parse_pos(pos)) for uid,pos in (step.split('@') for step in text.split(';'))]
+
+def deck_name(value, fallback):
+    if value is None:
+        return fallback
+    if not isinstance(value,str) or not 1<=len(value.strip())<=40:
+        raise ValueError('牌组名称须为 1 至 40 个字符。')
+    return value.strip()
 GLOBAL_SKILLS = (('rally_swap', '调位'), ('direct_attack', '指引攻击'))
 GLOBAL_SKILL_COST = 2
 SHOP_SOURCES = ('神秘商店', '物品牌堆', '消耗品')
@@ -52,17 +72,43 @@ class GrowthUnit(BattleUnit):
 
     @property
     def reach(self):
-        if self.hero==10017:
+        if self.hero in (10017,DROW):
             return 2+(65018 in self.equipment.values())
         return 2 if self.card_id==RANGED_CREEP else 1
 
 
 class GrowthMatch(Match):
-    def __init__(self, seed=13, deck_config=None, trace=True):
+    def __init__(self, seed=13, deck_config=None, trace=True, experiment=None):
         self.seed,self.trace,self.round=seed,trace,0
         self.columns,self.targeting,self.protection,self.tower_attack=5,'aggro',True,4
-        self.rosters=ROSTERS
-        self.deck_config=[validate_deck(deck_config),validate_deck(None,1)]
+        opponent,name=None,None
+        if isinstance(deck_config,dict):
+            deck_config=dict(deck_config)
+            experiment=deck_config.pop('experiment',experiment)
+            name=deck_config.pop('name',None)
+            opponent=deck_config.pop('opponent',None)
+        if experiment is not None and experiment not in EXPERIMENTS:
+            raise ValueError('未知的扩充实验。')
+        self.experiment=experiment
+        self.rosters=EXPANSION_ROSTERS if experiment in ('heroes','combined') else ROSTERS
+        new_spells=experiment in ('spells','combined')
+        opponent_name=None
+        if opponent is None:
+            enemy_deck=default_deck(1,new_spells)
+        else:
+            if not isinstance(opponent,dict):
+                raise ValueError('敌方牌组格式无效。')
+            enemy_deck=dict(opponent)
+            opponent_name=enemy_deck.pop('name',None)
+        self.deck_names=(deck_name(name,'绿色预设'),deck_name(opponent_name,'红色预设'))
+        self.deck_config=[validate_deck(default_deck(0,new_spells) if deck_config is None else deck_config),
+                          validate_deck(enemy_deck,1)]
+        if name is not None:
+            self.deck_config[0]['name']=self.deck_names[0]
+        if opponent is not None:
+            self.deck_config[0]['opponent']={**deepcopy(self.deck_config[1]),'name':self.deck_names[1]}
+        if experiment:
+            self.deck_config[0]['experiment']=experiment
         self.forts=[Fort(t,position=(6 if t==0 else 1,2)) for t in (0,1)]
         self.finished,self.winner,self.end_reason=False,None,None
         self.stats=[Counter(),Counter()]
@@ -75,6 +121,7 @@ class GrowthMatch(Match):
         self.first_spell=[False,False]
         self.probes=False
         self.created=0
+        self.first_tower_hit=None
         self.duels=[]
         self.force_combat=False
         self.global_skill_used=[False,False]
@@ -87,7 +134,7 @@ class GrowthMatch(Match):
                 self.units.append(GrowthUnit(f'{"AB"[team]}H{n+1}',team,h,PANELS[h][0][2],(row,columns[0]) if n==0 else None,
                     card_id=h,due=n+1 if n else 0,first_move=False if n==0 else True,next_cd=2 if h==10044 else 4))
             self.create_unit(team,1006,(row,columns[1]),trigger=False).first_move=False
-            self.deck[team]=full_deck(self.deck_config[team],team)
+            self.deck[team]=full_deck(self.deck_config[team],team,roster)
             self.item_deck[team]=list(self.deck_config[team]['items'])
             self.rng(f'deck:{team}').shuffle(self.deck[team])
             self.rng(f'items:{team}').shuffle(self.item_deck[team])
@@ -113,8 +160,14 @@ class GrowthMatch(Match):
             u.gear_cds={k:max(0,v-1) for k,v in u.gear_cds.items()}
             if u.pending_level>u.level:
                 before=u.max_hp
+                old_level=u.level
                 u.level=u.pending_level
                 u.hp+=u.max_hp-before
+                if old_level<2<=u.level and u.hero in GENERATED_SIGNATURES:
+                    sig=GENERATED_SIGNATURES[u.hero]
+                    self.hand[u.team].append(sig)
+                    self.stats[u.team][f'generated_{sig}']+=1
+                    self.record(f'{u.uid}解锁并获得{CARDS[sig]["card_name"]["schinese"]}')
                 self.record(f'{u.uid}升至{u.level}级，生命上限增加{u.max_hp-before}')
             if u.hero and u.pos is None and self.round>=u.due:
                 self.spawn_hero(u)
@@ -160,16 +213,42 @@ class GrowthMatch(Match):
         return min(10,self.round)
 
     def fort_reach(self,fort):
-        return 1 if fort.stage=='tower' else super().fort_reach(fort)
+        return 1
+
+    def damage_fort(self,team,amount):
+        fort=self.forts[team]
+        if self.round<fort.active_from or fort.hp<=0:
+            return
+        actual=min(fort.hp,max(0,amount))
+        fort.hp-=actual
+        if actual and self.first_tower_hit is None:
+            self.first_tower_hit=self.round
+        self.stats[1-team]['building_damage']+=actual
+        self.record(f'{fort.uid}塔受到 {actual} 伤害，剩余 {fort.hp}')
+        if fort.hp==0:
+            self.stats[1-team]['towers_destroyed']+=1
+            self.record(f'{fort.uid}塔被摧毁')
+
+    def check_victory(self):
+        # Combat applies both towers' damage before resolving the result.
+        dead=[f.team for f in self.forts if f.hp<=0]
+        if dead:
+            self.finished=True
+            self.winner=1-dead[0] if len(dead)==1 else None
+            self.end_reason='tower-destroyed' if len(dead)==1 else 'simultaneous'
 
     def fountain_positions(self,team):
         occupied={u.pos for u in self.field()}|self.blocked_positions()
         return [(7 if team==0 else 0,c) for c in range(self.columns) if (7 if team==0 else 0,c) not in occupied]
 
     def stops_marching(self,u):
-        if u.card_id==RANGED_CREEP and (self.target(u) or self.building_target(u)):
+        if self.building_target(u) or (u.card_id==RANGED_CREEP and self.target(u)):
             return True
         return super().stops_marching(u)
+
+    def can_auto_move_to(self,u,pos):
+        enemy_fountain=0 if u.team==0 else 7
+        return (u.hero or pos[0]!=enemy_fountain) and super().can_auto_move_to(u,pos)
 
     def spawn_hero(self,u):
         cells=self.fountain_positions(u.team)
@@ -452,6 +531,70 @@ class GrowthMatch(Match):
     def direct_attack_units(self,team,target):
         return [u for u in self.commandable(team) if distance(u.pos,target.pos)==1]
 
+    def advance_options(self,u,directions,occupied):
+        for dr,dc in directions:
+            for step in (1,2):
+                pos=(u.pos[0]+dr*step,u.pos[1]+dc*step)
+                if not valid(pos,self.columns) or (pos in occupied and occupied[pos]!=u.team):
+                    break
+                if pos not in occupied:
+                    yield pos
+
+    def occupied_teams(self):
+        return {**{p:-1 for p in self.blocked_positions()},**{u.pos:u.team for u in self.field()}}
+
+    def march_centers(self,positions):
+        rows,cols=zip(*positions)
+        return [(r,c) for r in range(max(0,max(rows)-1),min(7,min(rows)+1)+1)
+                      for c in range(max(0,max(cols)-1),min(self.columns-1,min(cols)+1)+1)]
+
+    def march_targets(self,team):
+        direction=1 if team else -1
+        friends=sorted(self.commandable(team),key=lambda u:(-direction*u.pos[0],u.pos[1]))
+        occupied=self.occupied_teams()
+
+        def plans(start,steps,origins):
+            if len(steps)==3:
+                return
+            for i in range(start,len(friends)):
+                u=friends[i]
+                region=origins+[u.pos]
+                if not self.march_centers(region):
+                    continue
+                for pos in self.advance_options(u,((direction,0),),occupied):
+                    moves=steps+[f'{u.uid}@{pos_text(pos)}']
+                    yield ';'.join(moves)
+                    del occupied[u.pos]
+                    occupied[pos]=team
+                    yield from plans(i+1,moves,region)
+                    del occupied[pos]
+                    occupied[u.pos]=team
+        return list(plans(0,[],[]))
+
+    def fan_centers(self,u):
+        return [p for dr,dc in CARDINAL for n in (1,2)
+                if valid(p:=(u.pos[0]+dr*n,u.pos[1]+dc*n),self.columns)]
+
+    def fan(self,u,center):
+        r,c=center
+        dr=(r>u.pos[0])-(r<u.pos[0])
+        dc=(c>u.pos[1])-(c<u.pos[1])
+        cells={center,(r+dr,c+dc),(r-dc,c+dr),(r+dc,c-dr)}
+        return (dr,dc),[v for v in self.field(1-u.team) if v.pos in cells]
+
+    def chain_cells(self,u,end):
+        r,c=u.pos
+        if r!=end[0] and c!=end[1]:
+            return {end,(r,end[1]),(end[0],c)}
+        return {end,((r+end[0])//2,(c+end[1])//2)}
+
+    def area_value(self,targets,amount,kind):
+        value=0
+        for target in targets:
+            damage=self.damage_amount(target,amount,kind)
+            value+=min(damage,target.hp)*.8+(3 if target.hero else 1.5)*(damage>=target.hp)
+        return value
+
     def card_targets(self,cid,team):
         c=CARDS[cid]
         friends,foes=self.field(team),self.field(1-team)
@@ -466,6 +609,26 @@ class GrowthMatch(Match):
         if c['card_type']=='Creep':
             return [f'{r},{col}' for r,col in self.spawn_positions(team)] if len(friends)<24 else []
         effect=c['effect']
+        if effect=='charge':
+            occupied=self.occupied_teams()
+            return [f'{u.uid}|{pos_text(p)}' for u in self.commandable(team) if u.hero
+                    for p in self.advance_options(u,CARDINAL,occupied)]
+        if effect=='march':
+            return self.march_targets(team)
+        if effect in ('timber_chain','gust'):
+            if not self.can_skill(caster):
+                return []
+            if effect=='gust':
+                return [pos_text(p) for p in self.fan_centers(caster)]
+            if caster.forced_uid:
+                return []
+            units_at={u.pos:u for u in units}
+            blocked=self.blocked_positions()
+            return [pos_text(pos) for r in range(8) for col in range(self.columns)
+                    if (pos:=(r,col)) not in blocked
+                    and abs(r-caster.pos[0])+abs(col-caster.pos[1])==2
+                    and (pos not in units_at or (units_at[pos].team!=team
+                         and self.damage_amount(units_at[pos],2,'magic')>=units_at[pos].hp))]
         if effect=='duel':
             return [u.uid for u in foes if u.hero and abs(u.pos[0]-caster.pos[0])+abs(u.pos[1]-caster.pos[1])==1 and not u.forced_uid and not caster.forced_uid and not u.buffs.get('bkb')]
         if effect=='wolves':
@@ -509,6 +672,11 @@ class GrowthMatch(Match):
                 for p in self.reachable(u):
                     add('move',u.uid,f'{p[0]},{p[1]}')
             if self.can_skill(u) and u.cd==0:
+                if u.hero==TIMBERSAW:
+                    add('whirl',u.uid,u.uid)
+                if u.hero==DROW:
+                    for p in self.fan_centers(u):
+                        add('multishot',u.uid,pos_text(p))
                 if u.hero==10017 and len(friends)<24:
                     for v in foes:
                         if not v.hero and distance(u.pos,v.pos)<=2:
@@ -543,11 +711,14 @@ class GrowthMatch(Match):
                         for v in foes:
                             if distance(u.pos,v.pos)==1 and (active!='midas' or not v.hero):
                                 add(active,u.uid,v.uid)
+        card_options={}
         for i,cid in enumerate(self.hand[team]):
             if self.deck[team]:
                 add('reforge',i,'draw')
             if self.card_cost(cid,team)<=self.mana[team]:
-                for t in self.card_targets(cid,team):
+                if cid not in card_options:
+                    card_options[cid]=self.card_targets(cid,team)
+                for t in card_options[cid]:
                     add('card',i,t)
         for i,(cid,paid) in enumerate(self.item_hand[team]):
             if (0 if paid else ITEMS[cid]['gold_cost'])>self.gold[team]:
@@ -615,6 +786,19 @@ class GrowthMatch(Match):
                     u.target_uid=target.uid
                     u.ordered=True
                 self.record(f'{"AB"[team]}全局技能 指引攻击：{",".join(u.uid for u in units)} → {target.uid}')
+        elif kind in ('whirl','multishot'):
+            if kind=='whirl':
+                actor.cd=2
+                for v in self.field(1-team):
+                    if distance(actor.pos,v.pos)==1:
+                        self.hurt(v,1,actor,'magic')
+            else:
+                actor.cd=3
+                _,enemies=self.fan(actor,parse_pos(target_id))
+                for v in enemies:
+                    self.hurt(v,3,actor)
+            self.stats[team][f'skill_{kind}']+=1
+            self.record(f'{actor.uid}使用{"死亡旋风" if kind=="whirl" else "数箭齐发"}')
         elif kind in ('chen','purify','swap','redirect'):
             actor.cd=4 if kind=='chen' else 2 if kind in ('purify','redirect') else 1
             if kind=='chen':
@@ -637,6 +821,7 @@ class GrowthMatch(Match):
             cost=self.card_cost(cid,team)
             self.mana[team]-=cost
             self.stats[team]['cards_played']+=1
+            self.stats[team][f'card_used_{cid}']+=1
             self.play_card(cid,target_id,team)
             self.record(f'{"AB"[team]}出牌 {CARDS[cid]["card_name"]["schinese"]}，消耗{cost}法力')
         elif kind=='item':
@@ -692,7 +877,32 @@ class GrowthMatch(Match):
         friends,foes=self.field(team),self.field(1-team)
         caster=next((u for u in friends if u.hero==c.get('hero_id')),None)
         effect=c['effect']
-        if effect in ('orders','pick','juke'):
+        if effect=='charge':
+            uid,dest=target_id.split('|')
+            self.move_unit(index[uid],parse_pos(dest))
+            index[uid].temporary_attack+=2
+        elif effect=='march':
+            for uid,dest in parse_march(target_id):
+                self.move_unit(index[uid],dest)
+        elif effect=='timber_chain':
+            end=parse_pos(target_id)
+            cells=self.chain_cells(caster,end)
+            for v in foes:
+                if v.pos in cells:
+                    self.hurt(v,2,caster,'magic')
+            self.cleanup()
+            self.move_unit(caster,end)
+        elif effect=='gust':
+            (dr,dc),enemies=self.fan(caster,parse_pos(target_id))
+            affected=[u for u in enemies if self.negative(u,'silence')]
+            occupied=self.occupied_teams()
+            for u in sorted(affected,key=lambda u:-(u.pos[0]*dr+u.pos[1]*dc)):
+                dest=(u.pos[0]+dr,u.pos[1]+dc)
+                if valid(dest,self.columns) and dest not in occupied:
+                    del occupied[u.pos]
+                    occupied[dest]=u.team
+                    u.pos=dest
+        elif effect in ('orders','pick','juke'):
             a,b=(index[k] for k in target_id.split('|'))
             if effect=='orders':
                 a.target_uid=b.uid
@@ -777,7 +987,7 @@ class GrowthMatch(Match):
             target=self.aggro_target(u)
             if not target:
                 continue
-            choices=[p for dr,dc in EIGHT if valid(p:=(u.pos[0]+dr,u.pos[1]+dc),self.columns) and p not in occupied]
+            choices=[p for dr,dc in EIGHT if self.can_auto_move_to(u,p:=(u.pos[0]+dr,u.pos[1]+dc)) and p not in occupied]
             def merit(p):
                 legal=(p[0]==target.pos[0] or p[1]==target.pos[1]) and distance(p,target.pos)<=u.reach
                 return (not legal,distance(p,target.pos),abs(p[0]-target.pos[0])+abs(p[1]-target.pos[1]),p)
@@ -874,6 +1084,10 @@ class GrowthMatch(Match):
                 foe=self.aggro_target(actor)
                 destination=foe.pos if foe else self.forts[1-team].position
                 value=max(value,(distance(actor.pos,destination)-distance(p,destination))*.7)
+            elif kind=='whirl':
+                value=self.area_value([v for v in self.field(1-team) if distance(actor.pos,v.pos)==1],1,'magic')
+            elif kind=='multishot':
+                value=self.area_value(self.fan(actor,parse_pos(target_id))[1],3,'physical')
             elif kind=='chen':
                 value=5+self.attack(target)+target.hp*.3
             elif kind=='purify':
@@ -904,6 +1118,25 @@ class GrowthMatch(Match):
                 if c['card_type']=='Creep':
                     r,col=map(int,target_id.split(','))
                     value=2+c['attack']*.7+c['hit_points']*.15-distance((r,col),self.forts[1-team].position)*.15
+                elif effect=='charge':
+                    uid,dest=target_id.split('|')
+                    u=index[uid]
+                    pos=parse_pos(dest)
+                    value=self.position_score(u,pos)-self.position_score(u,u.pos)+1
+                elif effect=='march':
+                    fort=self.forts[1-team].position
+                    value=sum((abs(index[uid].pos[0]-fort[0])-abs(pos[0]-fort[0]))*.75
+                              for uid,pos in parse_march(target_id))-.75
+                elif effect=='timber_chain':
+                    u=next(h for h in self.field(team) if h.hero==TIMBERSAW)
+                    pos=parse_pos(target_id)
+                    hits=[v for v in self.field(1-team) if v.pos in self.chain_cells(u,pos)]
+                    value=self.area_value(hits,2,'magic')+self.position_score(u,pos)-self.position_score(u,u.pos)
+                elif effect=='gust':
+                    u=next(h for h in self.field(team) if h.hero==DROW)
+                    hits=self.fan(u,parse_pos(target_id))[1]
+                    value=sum(2 if v.hero and not v.debuffs.get('silence') else .4
+                              for v in hits if not v.buffs.get('bkb'))
                 elif effect in ('train','blessing','armor','cleave','favor'):
                     value=(3 if target.team==team else -3)+(1 if self.target(target) else 0)
                 elif effect in ('cripple','unprepared'):

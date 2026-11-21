@@ -2,6 +2,11 @@
 (() => {
   const $ = (s) => document.querySelector(s);
   const FX = window.ArtifactFX;
+  const towerTextures = {
+    fire: "./particles/fire_particle.png",
+    smoke: "./particles/smoke_particle.png",
+    spark: "./particles/spark_particle2.png",
+  };
   const storageKey = "yf-artifact-effects-lab-v1";
   const directions = { N: [-1, 0, "上"], NE: [-1, 1, "右上"], E: [0, 1, "右"], SE: [1, 1, "右下"], S: [1, 0, "下"], SW: [1, -1, "左下"], W: [0, -1, "左"], NW: [-1, -1, "左上"] };
   const icons = {
@@ -142,7 +147,9 @@
   }
   function rebuild(progress = 0.5, resume = false) {
     cancelAnimationFrame(raf); controller?.dispose();
-    controller = FX.create($("#effect-layer"), kind, buildScene(), params);
+    const scene = buildScene();
+    if (kind === "tower" && $("#tower-style").value === "particles") scene.towerTextures = towerTextures;
+    controller = FX.create($("#effect-layer"), kind, scene, params);
     controller.setRate(Number($("#rate").value));
     controller.seek(progress * params.duration);
     playing = false;
@@ -161,6 +168,7 @@
     $("#distance").value = fixedDistance(kind) ?? sceneSettings.distance;
     $("#distance").disabled = fixedDistance(kind) !== undefined;
     $("#sound-option").hidden = kind !== "clash";
+    $("#tower-style-option").hidden = kind !== "tower";
     document.querySelectorAll(".effect-option").forEach((b) => { b.classList.toggle("active", b.dataset.kind === kind); b.setAttribute("aria-pressed", b.dataset.kind === kind); });
     updateJSON();
   }
@@ -204,6 +212,7 @@
   $("#next-frame").addEventListener("click", () => seek(controller.time + 1000 / 60));
   $("#timeline").addEventListener("input", (event) => seek(Number(event.target.value)));
   $("#rate").addEventListener("change", (event) => controller.setRate(Number(event.target.value)));
+  $("#tower-style").addEventListener("change", () => rebuild(controller.time / controller.duration, playing));
   $("#preview-size").addEventListener("change", (event) => $("#preview-board").style.setProperty("--preview-width", event.target.value + "px"));
   $("#preset-name").addEventListener("input", () => { updateJSON(); persist(); });
   $("#save-preset").addEventListener("click", () => {
@@ -249,11 +258,16 @@
     }
   } catch { notice("没有读到有效的本地记录，已使用默认参数。可通过 JSON 导入备份。"); }
   updateSaved();
-  if (new URLSearchParams(location.search).get("effect") === "clash") {
-    kind = "clash";
+  const initialEffect = new URLSearchParams(location.search).get("effect");
+  if (["clash", "tower"].includes(initialEffect)) {
+    kind = initialEffect;
     params = FX.defaults(kind);
-    sceneSettings = { direction: "N", distance: 1, columns: 5 };
-    $("#preset-name").value = "双单位对撞 · 自定义";
+    sceneSettings = { direction: kind === "tower" ? "NW" : "N", distance: 1, columns: 5 };
+    $("#preset-name").value = FX.catalog[kind].name + " · 自定义";
+    if (kind === "tower") {
+      params = { ...params, duration: 720 };
+      $("#tower-style").value = "particles";
+    }
   }
-  updateControls(); rebuild(kind === "clash" ? 0 : 0.5);
+  updateControls(); rebuild(initialEffect === "tower" ? 0.74 : kind === "clash" ? 0 : 0.5);
 })();

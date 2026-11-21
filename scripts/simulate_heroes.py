@@ -280,6 +280,9 @@ class Game:
         return any(distance(unit.pos,foe.pos)==1 and (unit.pos[0]==foe.pos[0] or unit.pos[1]==foe.pos[1])
                    for foe in self.field(1-unit.team))
 
+    def can_auto_move_to(self,unit,pos):
+        return valid(pos,self.columns)
+
     def auto_move(self):
         fresh = {u.uid for u in self.field() if not u.hero and u.first_move}
         if self.round == 1:
@@ -302,7 +305,7 @@ class Game:
                     for pos in choices:
                         blocker = occupied.get(pos)
                         vacates = blocker and blocker.team == team and blocker.uid in intents
-                        if valid(pos, self.columns) and pos not in self.blocked_positions() and (blocker is None or vacates):
+                        if self.can_auto_move_to(unit,pos) and pos not in self.blocked_positions() and (blocker is None or vacates):
                             intents[unit.uid] = pos
                             break
             groups = defaultdict(list)
