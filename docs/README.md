@@ -6,6 +6,7 @@
 
 | 想了解什么 | 文档 |
 | --- | --- |
+| 调整竖屏棋盘、棋位、端景或木纹 | [Godot 棋盘试作复盘](development/portrait-board-study.md) |
 | 这轮交付了什么，节奏实验、插画和三维演出验证得出什么 | [成长 Demo 试玩与美术验证](development/playable-preview-2026-11-21.md) |
 | 当前源码怎么玩，哪些只是原型数值 | [当前本地实现](design/growth-implementation.md) |
 | 四色优势弱项、解场／控制／推进／攻塔，以及如何审阅和反驳设计 | [四色设计规范与审阅大纲](design/color-design-guidelines.md) |
