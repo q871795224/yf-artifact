@@ -1,0 +1,41 @@
+{
+  "hero": "gyrocopter",
+  "name": "矮人直升机",
+  "english_name": "Gyrocopter",
+  "render": "output/dota-hero-art-references/valve/gyrocopter.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/gyrocopter.png",
+  "sha256": "ecaeff9d43eb84156ae1697d4d9e95ddd7e01376e8dfc6eff51aca26edfc0127",
+  "classic_hero_exists": false,
+  "reference_note": "Official transparent render",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/gyrocopter.png",
+      "sha256": "ecaeff9d43eb84156ae1697d4d9e95ddd7e01376e8dfc6eff51aca26edfc0127",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/gyrocopter.png"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10025_cropped.png",
+      "sha256": "beb16ce1fd3645da63be4f6ff6019fcb1896e626a454f3cdab0213f51071e24a",
+      "media_id": "1459227570668377"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10022_cropped.png",
+      "sha256": "8f00ae99ac0a79b88f23726228d85d5dbfeaa158bd9a057df686502248ec4731",
+      "media_id": "1459227570545468"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or review",
+  "authorization": "User requested this additional twenty; agent selected roster and disclosed 18 remaining new heroes plus 2 existing Classic heroes repainted",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk2MTY0Y2ZmODlkNGEzNmJhMDdlYjE0NWI5OTI1NGIwNGM1MGFkNjFl",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

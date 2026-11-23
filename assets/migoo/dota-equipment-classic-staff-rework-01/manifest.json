@@ -1,0 +1,44 @@
+{
+  "submitted_count": 3,
+  "workflow": "User reviews on Migoo",
+  "revisions": [
+    {
+      "item_id": "ghost",
+      "name": "幽魂权杖·直头短柄修订",
+      "task_id": "mt_cGlkNmExMjExOGI0NjIxZDkyOWM5ZmFkZjJiMGQxOTA5YTY4NmI2MzAy",
+      "source_task": "mt_cGkxMDMxYjg2ODk1OGRiY2RhZTEyZGVkNGNlYmM2ZjQ5MDdhNGRlOGQ4",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "requested_changes": "Straight coaxial head and shaft; shorten handle about 20%; preserve identity/materials/palette/style",
+      "prompt": "assets/migoo/dota-equipment-classic-staff-rework-01/ghost-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-staff-rework-01/ghost-v01/notes.txt"
+    },
+    {
+      "item_id": "force_staff",
+      "name": "原力法杖·直头短柄修订",
+      "task_id": "mt_cGk4Mjk4NTFmMDBjYjY3Nzg1MzI3M2NiOWIyMjU3NjExOGViZGUwMmMy",
+      "source_task": "mt_cGliMTA5NTY4ZTAwNDI2ZDliNTg2YjI1ZGIxN2FmZDBmZTQyYzJlM2Uy",
+      "last_observed_status": "generating",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": null,
+      "requested_changes": "Straight coaxial head and shaft; shorten handle about 20%; preserve identity/materials/palette/style",
+      "prompt": "assets/migoo/dota-equipment-classic-staff-rework-01/force_staff-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-staff-rework-01/force_staff-v01/notes.txt"
+    },
+    {
+      "item_id": "cyclone",
+      "name": "Eul的神圣法杖·直头短柄修订",
+      "task_id": "mt_cGkyOGFlYmZiOGViMWM2NzcxODBlNmQ4ZDFjNjI1MmE5ZjBmNTJlNWFk",
+      "source_task": "mt_cGlkOTRiOWYxMTA5YjY1MGUzMDllNDMxMTczMDIwOWVlZGQxMjhiYmFh",
+      "last_observed_status": "generating",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": null,
+      "requested_changes": "Straight coaxial head and shaft; shorten handle about 20%; preserve identity/materials/palette/style",
+      "prompt": "assets/migoo/dota-equipment-classic-staff-rework-01/cyclone-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-staff-rework-01/cyclone-v01/notes.txt"
+    }
+  ]
+}

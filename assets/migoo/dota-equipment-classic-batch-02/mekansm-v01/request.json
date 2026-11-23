@@ -1,0 +1,44 @@
+{
+  "hero": "mekansm",
+  "kind": "equipment",
+  "name": "梅肯斯姆",
+  "english_name": "Mekansm",
+  "icon": "output/dota-native-equipment/valve/mekansm.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/mekansm.png",
+  "sha256": "7e13e06c5fd09fa01e0f1f493934d19ee77cb791186674e905b714e18cec157d",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/mekansm.png",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/mekansm.png",
+      "sha256": "7e13e06c5fd09fa01e0f1f493934d19ee77cb791186674e905b714e18cec157d"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10210_cropped.png",
+      "media_id": "1459240187683645",
+      "sha256": "653d31b394383641fe1dfbff72696ce7107227666e0adf4445fc8474845e57da"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10232_cropped.png",
+      "media_id": "1459239926359306",
+      "sha256": "f9298ce686f7f5c05a82ad42c92b6d08d6dfe6880349aeb1664e566952961ce0"
+    }
+  ],
+  "classic_style_ids": [
+    10210,
+    10232
+  ],
+  "workflow": "Submit and report only; user reviews on Migoo",
+  "authorization": "User approved first ten equipment images and requested twenty additional equipment images",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGlmMzA4ZGQzYWZjZjA0OGE2MGY0MzQyNjdmMzQyODdmNDc5YTdlOGVj",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

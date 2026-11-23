@@ -1,0 +1,6 @@
+Migoo 额度：余额 100，免费 100，付费 0，冻结 0。
+Uploading output/dota-hero-art-references/valve/ancient_apparition.png (2067981 bytes)
+Uploading output/classic-full-art/set01/full_art/10038_psd.png (1422540 bytes)
+Uploading output/classic-full-art/set01/full_art/10064_psd.png (1262451 bytes)
+Task mt_cGlmMTdiNjkzY2Q1MzZlYWZhOWIwOTA2YWRiNGZmYzMwMjhlMzlhYjk1 started; if this command is interrupted, run migoo task get mt_cGlmMTdiNjkzY2Q1MzZlYWZhOWIwOTA2YWRiNGZmYzMwMjhlMzlhYjk1 --wait
+Saved assets/migoo/dota-hero-role-concepts/ancient_apparition/mt_cGlmMTdiNjkzY2Q1MzZlYWZhOWIwOTA2YWRiNGZmYzMwMjhlMzlhYjk1_1.png

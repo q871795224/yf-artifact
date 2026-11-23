@@ -1,0 +1,21 @@
+{
+  "approved_first_ten": true,
+  "next_batch_count": 20,
+  "next_batch_roster": "batch-twenty-roster.json; selected by agent at explicit user request",
+  "workflow": "Submit and report only; user reviews on Migoo. No generated-art inspection or downloads. Status queries only for releasing submission slots.",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "identity_reference": "Valve official default transparent hero render",
+  "style_reference": "Artifact Classic client full art, with white margins removed",
+  "per_hero_direction": "Independent camera, pose, scene, light and palette; preserve canonical identity, species and equipment",
+  "observed_service_concurrency_limit": 3,
+  "policy_pause_on": "2026-11-24",
+  "policy_timezone": "Asia/Shanghai",
+  "authorized_total_heroes": 90,
+  "submitted_total_heroes": 90,
+  "latest_manifest": "all-90-submissions.json",
+  "latest_task_id_list": "all-90-task-ids.tsv",
+  "remaining_37_heroes": "User explicitly stopped further hero generation; do not generate the remaining 37",
+  "next_work": "Ten Dota equipment illustrations in Classic painting style"
+}

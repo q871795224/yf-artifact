@@ -1,0 +1,121 @@
+{
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "jobs": [
+    {
+      "slug": "01-maned-prowler",
+      "name": "鬃背巡兽",
+      "description": "为yf-artifact画一张Dota世界观普通单位卡图，工作名「鬃背巡兽」。以第一张漫画局部的长白鬃、深额头、长尾与四足为基础发展普通单位。画面动作为平视侧面跨过浅溪，右前爪刚落水。全幅主色为青绿溪水、黑褐皮毛、白鬃。用光为阴天柔光与水面冷反光。角色体态和器物构成清楚的大轮廓，场景与构图独立设计，少量生活磨损集中在触地处和器物握持处。",
+      "notes": "竖幅9:16满版Artifact Classic风格无框单位插画。第一张为Dota官方漫画中配角或生物的局部参考，用于族群体态和装备线索，后两张为Classic无框画，只参考笔触、材质、空间与明暗。描绘单个普通单位，完整全身，头顶、双脚或四足、尾部和招牌器物均在画内。按本张指定的镜头、动作、主色与光向绘制，高光和细部集中在脸、手或招牌器物，背景留松笔大色块。普通居民、低阶兵和生物的实用尺度。可见手绘笔触，自然材质，48像素小图仍读得出轮廓。画面到四边，没有文字、对话框、卡框、漫画分镜、数字、UI、logo、水印或白边。",
+      "references": [
+        "assets/migoo/comic-npc-batch-03/references/01-long-maned-prowler.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10082.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10328.jpg"
+      ],
+      "subject": [
+        "01-long-maned-prowler"
+      ],
+      "camera": "平视侧面跨过浅溪，右前爪刚落水",
+      "light": "阴天柔光与水面冷反光",
+      "palette": "青绿溪水、黑褐皮毛、白鬃",
+      "source_comic": "Are We Heroes Yet?",
+      "original_comic_image": "output/dota-comic-npc-exploration/awhy/01.jpg"
+    },
+    {
+      "slug": "02-horned-pack-beast",
+      "name": "长角驮商兽",
+      "description": "为yf-artifact画一张Dota世界观普通单位卡图，工作名「长角驮商兽」。以第一张漫画局部的青蓝短粗四足、深红骨质角、钝口吻为基础发展普通单位。画面动作为后侧三分之四缓步上坡，侧头看向来路，背两只木货箱与卷毯。全幅主色为青蓝皮、赭红角、米黄沙路。用光为正午顶光、箱底短硬阴影。角色体态和器物构成清楚的大轮廓，场景与构图独立设计，少量生活磨损集中在触地处和器物握持处。",
+      "notes": "竖幅9:16满版Artifact Classic风格无框单位插画。第一张为Dota官方漫画中配角或生物的局部参考，用于族群体态和装备线索，后两张为Classic无框画，只参考笔触、材质、空间与明暗。描绘单个普通单位，完整全身，头顶、双脚或四足、尾部和招牌器物均在画内。按本张指定的镜头、动作、主色与光向绘制，高光和细部集中在脸、手或招牌器物，背景留松笔大色块。普通居民、低阶兵和生物的实用尺度。可见手绘笔触，自然材质，48像素小图仍读得出轮廓。画面到四边，没有文字、对话框、卡框、漫画分镜、数字、UI、logo、水印或白边。",
+      "references": [
+        "assets/migoo/comic-npc-batch-03/references/02-pack-beast.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10087.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10416.jpg"
+      ],
+      "subject": [
+        "02-pack-beast"
+      ],
+      "camera": "后侧三分之四缓步上坡，侧头看向来路，背两只木货箱与卷毯",
+      "light": "正午顶光、箱底短硬阴影",
+      "palette": "青蓝皮、赭红角、米黄沙路",
+      "source_comic": "Are We Heroes Yet?",
+      "original_comic_image": "output/dota-comic-npc-exploration/awhy/02.jpg"
+    },
+    {
+      "slug": "03-mud-armored-beast",
+      "name": "浅泥披甲兽",
+      "description": "为yf-artifact画一张Dota世界观普通单位卡图，工作名「浅泥披甲兽」。以第一张漫画局部的灰白厚皮、宽背、低头、长鼻角与朴素护鼻片为基础发展普通单位。画面动作为近地三分之四俯身顶开一段倒木，四脚踩在湿泥上。全幅主色为灰白厚皮、墨绿湿地、旧铜护具。用光为雨后冷散射光，背脊宽亮面，腹下整块软暗。角色体态和器物构成清楚的大轮廓，场景与构图独立设计，少量生活磨损集中在触地处和器物握持处。",
+      "notes": "竖幅9:16满版Artifact Classic风格无框单位插画。第一张为Dota官方漫画中配角或生物的局部参考，用于族群体态和装备线索，后两张为Classic无框画，只参考笔触、材质、空间与明暗。描绘单个普通单位，完整全身，头顶、双脚或四足、尾部和招牌器物均在画内。按本张指定的镜头、动作、主色与光向绘制，高光和细部集中在脸、手或招牌器物，背景留松笔大色块。普通居民、低阶兵和生物的实用尺度。可见手绘笔触，自然材质，48像素小图仍读得出轮廓。画面到四边，没有文字、对话框、卡框、漫画分镜、数字、UI、logo、水印或白边。",
+      "references": [
+        "assets/migoo/comic-npc-batch-03/references/03-armored-rhino.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10323.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10267.jpg"
+      ],
+      "subject": [
+        "03-armored-rhino"
+      ],
+      "camera": "近地三分之四俯身顶开一段倒木，四脚踩在湿泥上",
+      "light": "雨后冷散射光，背脊宽亮面，腹下整块软暗",
+      "palette": "灰白厚皮、墨绿湿地、旧铜护具",
+      "source_comic": "Are We Heroes Yet?",
+      "original_comic_image": "output/dota-comic-npc-exploration/awhy/07.jpg"
+    },
+    {
+      "slug": "04-camp-bell-guard",
+      "name": "林营铜铃守卫",
+      "description": "为yf-artifact画一张Dota世界观普通单位卡图，工作名「林营铜铃守卫」。以第一张漫画局部的青蓝皮肤、宽口、大腹、粗臂、低阶营地居民为基础发展普通单位。画面动作为正面偏侧站起，一手摇小铜铃，一手扶住粗短木棒。全幅主色为蓝绿皮、浅褐围布、亮灰营地。用光为清晨右侧暖日光，营棚左侧冷灰暗面。角色体态和器物构成清楚的大轮廓，场景与构图独立设计，少量生活磨损集中在触地处和器物握持处。",
+      "notes": "竖幅9:16满版Artifact Classic风格无框单位插画。第一张为Dota官方漫画中配角或生物的局部参考，用于族群体态和装备线索，后两张为Classic无框画，只参考笔触、材质、空间与明暗。描绘单个普通单位，完整全身，头顶、双脚或四足、尾部和招牌器物均在画内。按本张指定的镜头、动作、主色与光向绘制，高光和细部集中在脸、手或招牌器物，背景留松笔大色块。普通居民、低阶兵和生物的实用尺度。可见手绘笔触，自然材质，48像素小图仍读得出轮廓。画面到四边，没有文字、对话框、卡框、漫画分镜、数字、UI、logo、水印或白边。",
+      "references": [
+        "assets/migoo/comic-npc-batch-03/references/04-camp-brute.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10092.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10137.jpg"
+      ],
+      "subject": [
+        "04-camp-brute"
+      ],
+      "camera": "正面偏侧站起，一手摇小铜铃，一手扶住粗短木棒",
+      "light": "清晨右侧暖日光，营棚左侧冷灰暗面",
+      "palette": "蓝绿皮、浅褐围布、亮灰营地",
+      "source_comic": "Are We Heroes Yet?",
+      "original_comic_image": "output/dota-comic-npc-exploration/awhy3/19.jpg"
+    },
+    {
+      "slug": "05-long-limbed-scavenger",
+      "name": "长肢拾荒者",
+      "description": "为yf-artifact画一张Dota世界观普通单位卡图，工作名「长肢拾荒者」。以第一张漫画局部的瘦长非人体态、褐色毛皮、弯腿、前倾长臂为基础发展普通单位。画面动作为高位俯看跨过斜倒树干，一手拖一只扁藤筐，一手撑木头。全幅主色为赭褐毛、苔灰木、浅紫阴地。用光为林隙一小束斜白光照手和筐沿，其他保留浅冷阴影。角色体态和器物构成清楚的大轮廓，场景与构图独立设计，少量生活磨损集中在触地处和器物握持处。保持参考中非人的长脸、弯腿与低伏体态，四肢比例夸张，面部具有兽形口吻。",
+      "notes": "竖幅9:16满版Artifact Classic风格无框单位插画。第一张为Dota官方漫画中配角或生物的局部参考，用于族群体态和装备线索，后两张为Classic无框画，只参考笔触、材质、空间与明暗。描绘单个普通单位，完整全身，头顶、双脚或四足、尾部和招牌器物均在画内。按本张指定的镜头、动作、主色与光向绘制，高光和细部集中在脸、手或招牌器物，背景留松笔大色块。普通居民、低阶兵和生物的实用尺度。可见手绘笔触，自然材质，48像素小图仍读得出轮廓。画面到四边，没有文字、对话框、卡框、漫画分镜、数字、UI、logo、水印或白边。",
+      "references": [
+        "assets/migoo/comic-npc-batch-03/references/05-long-limbed-camp-creature.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10129.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10328.jpg"
+      ],
+      "subject": [
+        "05-long-limbed-camp-creature"
+      ],
+      "camera": "高位俯看跨过斜倒树干，一手拖一只扁藤筐，一手撑木头",
+      "light": "林隙一小束斜白光照手和筐沿，其他保留浅冷阴影",
+      "palette": "赭褐毛、苔灰木、浅紫阴地",
+      "source_comic": "Are We Heroes Yet?",
+      "original_comic_image": "output/dota-comic-npc-exploration/awhy3/19.jpg"
+    },
+    {
+      "slug": "06-fanged-gate-guard",
+      "name": "獠牙门卫",
+      "description": "为yf-artifact画一张Dota世界观普通单位卡图，工作名「獠牙门卫」。以第一张漫画局部的蓝灰面部、突出的獠牙、窄额、旧包颊头盔为基础发展普通单位。画面动作为略低机位侧视守在窄石门，双手拄一把钝头短戟，肩膀略缩。全幅主色为灰蓝皮、哑铁、浅米色石墙。用光为门外明亮冷天光，头盔下短而清楚的阴影。角色体态和器物构成清楚的大轮廓，场景与构图独立设计，少量生活磨损集中在触地处和器物握持处。",
+      "notes": "竖幅9:16满版Artifact Classic风格无框单位插画。第一张为Dota官方漫画中配角或生物的局部参考，用于族群体态和装备线索，后两张为Classic无框画，只参考笔触、材质、空间与明暗。描绘单个普通单位，完整全身，头顶、双脚或四足、尾部和招牌器物均在画内。按本张指定的镜头、动作、主色与光向绘制，高光和细部集中在脸、手或招牌器物，背景留松笔大色块。普通居民、低阶兵和生物的实用尺度。可见手绘笔触，自然材质，48像素小图仍读得出轮廓。画面到四边，没有文字、对话框、卡框、漫画分镜、数字、UI、logo、水印或白边。",
+      "references": [
+        "assets/migoo/comic-npc-batch-03/references/06-fanged-guard.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10092.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10360.jpg"
+      ],
+      "subject": [
+        "06-fanged-guard"
+      ],
+      "camera": "略低机位侧视守在窄石门，双手拄一把钝头短戟，肩膀略缩",
+      "light": "门外明亮冷天光，头盔下短而清楚的阴影",
+      "palette": "灰蓝皮、哑铁、浅米色石墙",
+      "source_comic": "The Last Castle",
+      "original_comic_image": "output/dota-comic-npc-exploration/lastcastle/05.jpg"
+    }
+  ]
+}

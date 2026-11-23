@@ -1,0 +1,37 @@
+{
+  "hero": "Medusa",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/medusa.png",
+      "sha256": "7148de42878aa871bd069a07b0031dcf74828c4403b7a5b617fe3ff292069af6"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-drow-style-cropped.png",
+      "sha256": "8b097f0a16dca85624a45928f24f2781ad358bffd31fefb52605e2caa2688670"
+    },
+    {
+      "path": "output/classic-full-art/set01/full_art/10046_psd.png",
+      "sha256": "e8e2f0fd17126b819c6e821295d57f9118eca51a3ca3fa6dd46f234e5705cfd8"
+    }
+  ],
+  "prompt_file": "prompt.txt",
+  "notes_file": "notes.txt",
+  "review_gate": "Review first sample before generating other heroes",
+  "balance_before": {
+    "free": 95,
+    "paid": 0
+  },
+  "listed_price": 5.33,
+  "task_id": "mt_cGlkNmI5YTU5OTE1NGE2ZGM2NjUyZTI2ZmY4MzEwZWE1NzhiYTY0MDRh",
+  "submit_free_balance_reported": 94,
+  "user_review": "User approved all first ten images",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ],
+  "output": "original.png"
+}

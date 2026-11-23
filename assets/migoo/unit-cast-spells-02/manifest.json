@@ -1,0 +1,706 @@
+{
+  "images": [
+    {
+      "slug": "01-scorching-sand",
+      "name": "赤砂灼足",
+      "image": "01-scorching-sand/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "a919650d2549cb02c49c38c59ca18ddd6f3339e33ebe25c0fbd9bad8ce36b670",
+      "task_id": "mt_cGk0YTA2MTViYjZmN2Q2MDczYmJiNTljNzVjOTkyYzRjM2M5Zjc2NjBm",
+      "media_id": "1459241635554105",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-bell-guard.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10424.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10315.jpg"
+      ],
+      "cast": [
+        {
+          "name": "林营铜铃守卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/04-camp-bell-guard/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-bell-guard.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10424",
+        "10315"
+      ],
+      "kind": "灼烧"
+    },
+    {
+      "slug": "02-spore-slumber",
+      "name": "孢幕催眠",
+      "image": "02-spore-slumber/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "4624a2493390f585d80429ccf5766593f7462c7613a86a66c9a3126356bb3e25",
+      "task_id": "mt_cGkzOTNjZWE4ZDBkNTQ2NWU2NGRlZGVjMDg1MGJjMTEwMzU5NjU5ZWRj",
+      "media_id": "1459241382135032",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-maned-beast.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10377.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10422.jpg"
+      ],
+      "cast": [
+        {
+          "name": "暮坡嗅迹兽",
+          "source_image": "assets/migoo/comic-npc-batch-05/01-evening-trail-sniffer/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-maned-beast.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10377",
+        "10422"
+      ],
+      "kind": "催眠"
+    },
+    {
+      "slug": "03-resonant-repulse",
+      "name": "铃震退敌",
+      "image": "03-resonant-repulse/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "321b0fbcb3947f515dd8f0bc22e94c2c0248d1856b8d94375e3088e3a179fc0b",
+      "task_id": "mt_cGk2NWRhYTlkNjkxZDEzOTRlMGI3NTdiOGQ1MjQxZTQ1NDY4N2M1MTQ4",
+      "media_id": "1459241502508278",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-bell-guard.jpg",
+        "assets/migoo/unit-cast-spells-02/references/unit-fanged-guard.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10293.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10303.jpg"
+      ],
+      "cast": [
+        {
+          "name": "林营铜铃守卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/04-camp-bell-guard/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-bell-guard.jpg"
+        },
+        {
+          "name": "獠牙门卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/06-fanged-gate-guard/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-fanged-guard.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10293",
+        "10303"
+      ],
+      "kind": "震退"
+    },
+    {
+      "slug": "04-sand-shell",
+      "name": "砂壳护身",
+      "image": "04-sand-shell/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "2352247ede5fa54ef3020203d67d5d825d16467a725bf0c9eb7be225df93bd55",
+      "task_id": "mt_cGlkMjlkZDlmZDEyYzdmNGY3NDc1M2MxNzM4MzU4ZGYzNWM3ZjU1Njhk",
+      "media_id": "1459241866003727",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-armored-beast.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10290.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10287.jpg"
+      ],
+      "cast": [
+        {
+          "name": "浅泥披甲兽",
+          "source_image": "assets/migoo/comic-npc-batch-03/03-mud-armored-beast/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-armored-beast.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10290",
+        "10287"
+      ],
+      "kind": "护甲"
+    },
+    {
+      "slug": "05-ember-renewal",
+      "name": "薪火复苏",
+      "image": "05-ember-renewal/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "2a81a65fa2a502c8a99c9fadf68ea00dd9c492ac361a16537f1725e8b469a312",
+      "task_id": "mt_cGllOWFmNDFhMjQ2ZWY5ZWFmNmNjYjBkODNjZGJmM2Q3Y2I3NzgzYmVh",
+      "media_id": "1459241603032346",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-root-weaver.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10373.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10358.jpg"
+      ],
+      "cast": [
+        {
+          "name": "藤索编结工",
+          "source_image": "assets/migoo/comic-npc-batch-05/09-root-rope-weaver/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-root-weaver.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10373",
+        "10358"
+      ],
+      "kind": "复苏"
+    },
+    {
+      "slug": "06-burden-reversal",
+      "name": "重压转嫁",
+      "image": "06-burden-reversal/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "d0b5949677f95f5737b79127e6e9c32c9052be072556964fc09a982af5969795",
+      "task_id": "mt_cGlkNzJlZjBhYWZjODM2NzIxZjM2YTVjYmM3YWFiNzI3YWEwMDM5YmRk",
+      "media_id": "1459241728476394",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-water-beast.jpg",
+        "assets/migoo/unit-cast-spells-02/references/unit-bell-guard.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10403.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10280.jpg"
+      ],
+      "cast": [
+        {
+          "name": "山口驮水兽",
+          "source_image": "assets/migoo/comic-npc-batch-05/02-pass-water-carrier/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-water-beast.jpg"
+        },
+        {
+          "name": "林营铜铃守卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/04-camp-bell-guard/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-bell-guard.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10403",
+        "10280"
+      ],
+      "kind": "转嫁"
+    },
+    {
+      "slug": "07-suspended-disarm",
+      "name": "夺刃悬锋",
+      "image": "07-suspended-disarm/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "5ed685ccc65eada9f25325b540231e1850d50e2caed39eabe51bab92e2c40afc",
+      "task_id": "mt_cGkwYTRlOTdlNGQ0NGQ4Nzk5NmMwZDIzZDQ0NmM2YTVhNzM3NjU4MTNk",
+      "media_id": "1459242129408850",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-automaton.jpg",
+        "assets/migoo/unit-cast-spells-02/references/unit-fanged-guard.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10306.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10396.jpg"
+      ],
+      "cast": [
+        {
+          "name": "仓场筛砂偶",
+          "source_image": "assets/migoo/comic-npc-batch-05/10-yard-sifting-automaton/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-automaton.jpg"
+        },
+        {
+          "name": "獠牙门卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/06-fanged-gate-guard/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-fanged-guard.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10306",
+        "10396"
+      ],
+      "kind": "缴械"
+    },
+    {
+      "slug": "08-shadow-stitch",
+      "name": "缝影禁步",
+      "image": "08-shadow-stitch/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "97544af647514151b4593b8105108953e7155c4bface498beeffd2abccef2d8e",
+      "task_id": "mt_cGlhZjE1MTQyOTFhMTdiZmE0ZjUxMTZlZTgzNmJiNGE3MWM1ZjMxYjJi",
+      "media_id": "1459241828197179",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-bridge-scout.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10404.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10298.jpg"
+      ],
+      "cast": [
+        {
+          "name": "窄桥探哨",
+          "source_image": "assets/migoo/comic-npc-batch-05/05-narrow-bridge-scout/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-bridge-scout.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10404",
+        "10298"
+      ],
+      "kind": "定身"
+    },
+    {
+      "slug": "09-muted-conch",
+      "name": "封喉噤声",
+      "image": "09-muted-conch/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "fa081db2a117c56456d011d72973984759164c6a6ca035baeabb0283a3397a5a",
+      "task_id": "mt_cGkzMTc3OTc3YTVhODUyZTdiMWJiNTc3MGIxZTQ4ZGM5NjVhNjc4ODI1",
+      "media_id": "1459241947030788",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-fish-lamp.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10295.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10326.jpg"
+      ],
+      "cast": [
+        {
+          "name": "潮沟灯侍",
+          "source_image": "assets/migoo/comic-npc-batch-05/08-tidal-lamp-attendant/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-fish-lamp.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10295",
+        "10326"
+      ],
+      "kind": "沉默"
+    },
+    {
+      "slug": "10-wayclaim-dash",
+      "name": "夺路抢先",
+      "image": "10-wayclaim-dash/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "af4cad27e9fb36c3d2fc0bb5eb267ee6cdd6d4121653a58187361063ab19016a",
+      "task_id": "mt_cGlhZjZlMjZmMTEwNWViZDdiMzQ5MjQ0NDk2YjIxNDVkNjFiZmVmNTM2",
+      "media_id": "1459242355098907",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-maned-beast.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10399.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10313.jpg"
+      ],
+      "cast": [
+        {
+          "name": "暮坡嗅迹兽",
+          "source_image": "assets/migoo/comic-npc-batch-05/01-evening-trail-sniffer/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-maned-beast.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10399",
+        "10313"
+      ],
+      "kind": "加速"
+    },
+    {
+      "slug": "11-lifting-taint",
+      "name": "净秽剥离",
+      "image": "11-lifting-taint/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "453df349003ab89087268d9b77f0ab7866145537c76e41f8a39073ce08917cbe",
+      "task_id": "mt_cGlhNzFhOWNkOGM0Y2Y2M2E1NWI2MWIxMTc1YjBkMGQwMDllZGFmMzFi",
+      "media_id": "1459242067821824",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-frog-shield.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10382.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10340.jpg"
+      ],
+      "cast": [
+        {
+          "name": "芦岸护篓兵",
+          "source_image": "assets/migoo/lore-unit-batch-02/03-reedbank-buckler/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-frog-shield.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10382",
+        "10340"
+      ],
+      "kind": "净化"
+    },
+    {
+      "slug": "12-dread-projection",
+      "name": "惊魇投影",
+      "image": "12-dread-projection/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "9f08f1f0cf98e3100697a6250fbaae10c764a4bac0b835301de7b78424695294",
+      "task_id": "mt_cGljOGQ5ZGFjMDc5MTVhYzQ0OWVkMWY2MDU0ZTk0ZDNhNGIzMzY4NmNk",
+      "media_id": "1459242176087273",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-armored-beast.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10379.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10422.jpg"
+      ],
+      "cast": [
+        {
+          "name": "浅泥披甲兽",
+          "source_image": "assets/migoo/comic-npc-batch-03/03-mud-armored-beast/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-armored-beast.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10379",
+        "10422"
+      ],
+      "kind": "恐惧"
+    },
+    {
+      "slug": "13-molten-gutter",
+      "name": "熔沟迸流",
+      "image": "13-molten-gutter/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "f361269496b69bd22f5fbf9eb4bd8f3ee40773a161d944c0f75d76ac8b5f7b0c",
+      "task_id": "mt_cGkzMzMxNWIyNmI0YmY4ZmYwZGFmOWQzNzM4ODdhNzM3MjUxYzNhODA4",
+      "media_id": "1459242557465859",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/classic-10315.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10424.jpg"
+      ],
+      "cast": [],
+      "classic_art_ids": [
+        "10315",
+        "10424"
+      ],
+      "kind": "环境法术"
+    },
+    {
+      "slug": "14-iron-core-gathering",
+      "name": "磁屑聚核",
+      "image": "14-iron-core-gathering/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "0dd8916779ee0ac8be470d7434373a8e356119178e90ff43d2db61392b57e961",
+      "task_id": "mt_cGkwYzI0MWM1MzY3Zjg5MWIzMWRkYmNkNTI1ZGEwNDg1YWE5YTg4YWEx",
+      "media_id": "1459242282280186",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/classic-10268.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10376.jpg"
+      ],
+      "cast": [],
+      "classic_art_ids": [
+        "10268",
+        "10376"
+      ],
+      "kind": "环境法术"
+    },
+    {
+      "slug": "15-spore-chainburst",
+      "name": "毒蕈连爆",
+      "image": "15-spore-chainburst/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "04b68bc9901460c755206c792abb3d79f6b1a40b2ef090192a8f58389df0afd5",
+      "task_id": "mt_cGk4YWQ3YzliOTdhYTk1OGQ5NTY4YmExYjAzZDk5MGZjZjBlMTJmNDEy",
+      "media_id": "1459242402596101",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/classic-10002.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10142.jpg"
+      ],
+      "cast": [],
+      "classic_art_ids": [
+        "10002",
+        "10142"
+      ],
+      "kind": "环境法术"
+    },
+    {
+      "slug": "16-eclipse-stillness",
+      "name": "日蚀静场",
+      "image": "16-eclipse-stillness/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "d2e19a1ffcf95731f5e8a5c5c4825d04d9992561bc2e3314a2795b52d3615de9",
+      "task_id": "mt_cGljZTNmM2E4NDgxN2M5MTQ3M2MzMDdiN2Q0MDA1ODVlYzI1NTI1ZTBl",
+      "media_id": "1459242765378394",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/classic-10007.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10377.jpg"
+      ],
+      "cast": [],
+      "classic_art_ids": [
+        "10007",
+        "10377"
+      ],
+      "kind": "环境法术"
+    },
+    {
+      "slug": "17-salt-unmaking",
+      "name": "盐蚀散械",
+      "image": "17-salt-unmaking/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "aa6b3b38be7f7b5ba0097c18e8e386de4ac546f259cd550fe11ddddeed864b18",
+      "task_id": "mt_cGkyOWE4ZTZmYzc2MjM0NTE1MDA3ZjcyNDRlZGRhMWNmZjU5NDIwYzAy",
+      "media_id": "1459242495894363",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/classic-10142.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10305.jpg"
+      ],
+      "cast": [],
+      "classic_art_ids": [
+        "10142",
+        "10305"
+      ],
+      "kind": "环境法术"
+    },
+    {
+      "slug": "18-paper-bird-wayfinding",
+      "name": "纸鸢引路",
+      "image": "18-paper-bird-wayfinding/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "f70b21b415c225e5b80535e588ceba3a43c961ee27e65121e1d1229963b9a1d8",
+      "task_id": "mt_cGlhM2EzOWMxNjY5ZTBhMmI4YTMyZjg4ZGNjMjU0OGRhMmM0MDllMTdk",
+      "media_id": "1459242633880410",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/classic-10307.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10334.jpg"
+      ],
+      "cast": [],
+      "classic_art_ids": [
+        "10307",
+        "10334"
+      ],
+      "kind": "环境法术"
+    },
+    {
+      "slug": "19-refracted-maze",
+      "name": "折光迷径",
+      "image": "19-refracted-maze/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "7fba58f91f8eae32cef2a6de38be5b93a944231bc6dfa003b673ff6ef574da41",
+      "task_id": "mt_cGllOGY1ZDQ3ZDhhM2ExYWYyN2JjMDQ5MjUzY2QxYmI4OTQ5NmVjZDg2",
+      "media_id": "1459242993132805",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/classic-10298.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10307.jpg"
+      ],
+      "cast": [],
+      "classic_art_ids": [
+        "10298",
+        "10307"
+      ],
+      "kind": "环境法术"
+    },
+    {
+      "slug": "20-well-star-call",
+      "name": "枯井唤星",
+      "image": "20-well-star-call/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "661d74bf9c9b8c3302cf51b91390581b55438596a9361e0ddbab51462b74734d",
+      "task_id": "mt_cGk4ZjhiOTY0ODYzODIxYjZkYzQ0Mjc0NmZkZDFlZGMwODQ3YjNmODU5",
+      "media_id": "1459242676970311",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/classic-10334.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10319.jpg"
+      ],
+      "cast": [],
+      "classic_art_ids": [
+        "10334",
+        "10319"
+      ],
+      "kind": "环境法术"
+    }
+  ]
+}

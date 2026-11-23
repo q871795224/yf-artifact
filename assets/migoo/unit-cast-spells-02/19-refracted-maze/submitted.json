@@ -1,0 +1,16 @@
+{
+  "task_id": "mt_cGllOGY1ZDQ3ZDhhM2ExYWYyN2JjMDQ5MjUzY2QxYmI4OTQ5NmVjZDg2",
+  "status": "generating",
+  "media_type": "image",
+  "phase_message": "Migoo is generating the image. This usually takes a few minutes.",
+  "events": [
+    {
+      "type": "status",
+      "text": "Migoo is generating the image. This usually takes a few minutes.",
+      "at_ms": 1795365427493
+    }
+  ],
+  "cursor": "1795365427493",
+  "next_poll_seconds": 30,
+  "outputs": []
+}

@@ -1,0 +1,42 @@
+{
+  "hero": "life_stealer",
+  "name": "噬魂鬼",
+  "english_name": "Lifestealer",
+  "render": "output/dota-hero-art-references/valve/life_stealer.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/life_stealer.png",
+  "sha256": "46db6527269efa68f3646819f3254800cd28395c97a1c234b8bf80e0dc9b819d",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "generating",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/life_stealer.png",
+      "sha256": "46db6527269efa68f3646819f3254800cd28395c97a1c234b8bf80e0dc9b819d"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10070_cropped.png",
+      "sha256": "ecb1ed9c3485e1d54a3f0cb5aff2bf989f0e6fe46ec4c69dc35b1185fd8dd503"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10038_cropped.png",
+      "sha256": "4b81f25a9e3b11ba3cf240847395e16e44175377ef71ff57637b72407e62804a"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or visual reviews",
+  "authorization": "User explicitly requested another agent-selected twenty heroes and submission through the reusable script",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGkzMTI4NmUxNTkxZDg2MzUwYzg3MjQ3ZTBlZjNiZDBmYTc4MTQ0ZGQ5",
+  "actual_models": null
+}

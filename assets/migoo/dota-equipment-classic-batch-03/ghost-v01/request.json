@@ -1,0 +1,46 @@
+{
+  "hero": "ghost",
+  "kind": "equipment",
+  "name": "幽魂权杖",
+  "english_name": "Ghost Scepter",
+  "icon": "output/dota-native-equipment/ghost_png.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/ghost.png",
+  "sha256": "51c714813b8018dfbfaf1574300cfad7a81ea8bb14d94138c878c58634eb4a3c",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/ghost_png.png",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/ghost.png",
+      "sha256": "51c714813b8018dfbfaf1574300cfad7a81ea8bb14d94138c878c58634eb4a3c"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10210_cropped.png",
+      "media_id": "1459240187683645",
+      "sha256": "653d31b394383641fe1dfbff72696ce7107227666e0adf4445fc8474845e57da"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10224_cropped.png",
+      "media_id": "1459239138518268",
+      "sha256": "6d67f5e3bdf3c47cfae2d365ca89cc7d307336e5bb1f4ce51ef48e27698c15e3"
+    }
+  ],
+  "classic_style_ids": [
+    10210,
+    10224
+  ],
+  "workflow": "Submit and report only; no generated-output download or inspection",
+  "authorization": "User requested twenty additional equipment images after accepting prior batches",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGkxMDMxYjg2ODk1OGRiY2RhZTEyZGVkNGNlYmM2ZjQ5MDdhNGRlOGQ4",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ],
+  "latest_revision_task_id": "mt_cGlkNmExMjExOGI0NjIxZDkyOWM5ZmFkZjJiMGQxOTA5YTY4NmI2MzAy",
+  "revision_manifest": "assets/migoo/dota-equipment-classic-staff-rework-01/manifest.json"
+}

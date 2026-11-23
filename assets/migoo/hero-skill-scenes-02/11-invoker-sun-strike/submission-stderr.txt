@@ -1,0 +1,5 @@
+Migoo 额度：余额 10，免费 10，付费 0，冻结 0。
+Uploading assets/migoo/hero-skill-scenes-02/references/hero-invoker.jpg (179357 bytes)
+Uploading assets/migoo/hero-skill-scenes-02/references/unit-bell-guard.jpg (241639 bytes)
+Uploading assets/migoo/hero-skill-scenes-02/references/classic-10353.jpg (139436 bytes)
+Uploading assets/migoo/hero-skill-scenes-02/references/classic-10424.jpg (269525 bytes)

@@ -1,0 +1,333 @@
+{
+  "heroes": [
+    {
+      "hero": "antimage",
+      "name": "敌法师",
+      "english_name": "Anti-Mage",
+      "render": "output/dota-hero-art-references/valve/antimage.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/antimage.png",
+      "sha256": "d4fdd146d46d512142a655d3f2974136f21a0c09669a4cf8f238309c65bd2931",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "faceless_void",
+      "name": "虚空假面",
+      "english_name": "Faceless Void",
+      "render": "output/dota-hero-art-references/valve/faceless_void.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/faceless_void.png",
+      "sha256": "a002b80e9289a5052b0f959d75d9f72040991937fb0a27f315f8288aac0d7878",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "spectre",
+      "name": "幽鬼",
+      "english_name": "Spectre",
+      "render": "output/dota-hero-art-references/valve/spectre.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/spectre.png",
+      "sha256": "c730bb02437a77af4f531e3a9a704d267bfff2350d5f4304753899cf0db80066",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "phantom_lancer",
+      "name": "幻影长矛手",
+      "english_name": "Phantom Lancer",
+      "render": "output/dota-hero-art-references/valve/phantom_lancer.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/phantom_lancer.png",
+      "sha256": "55ddbc9766c7726c42bfe4b0c8fa717cc14de68e51f46c7ed3bd27ac784087e3",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "naga_siren",
+      "name": "娜迦海妖",
+      "english_name": "Naga Siren",
+      "render": "output/dota-hero-art-references/valve/naga_siren.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/naga_siren.png",
+      "sha256": "035ebf7faba4b21e6057cc81179c97011f207657cc2fa58c59fddfca8a760985",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "terrorblade",
+      "name": "恐怖利刃",
+      "english_name": "Terrorblade",
+      "render": "output/dota-hero-art-references/valve/terrorblade.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/terrorblade.png",
+      "sha256": "52e7c1d8ce0b3d070683bec660cf0050444d39d6ade0925dfed9922ae0edad0e",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "chaos_knight",
+      "name": "混沌骑士",
+      "english_name": "Chaos Knight",
+      "render": "output/dota-hero-art-references/valve/chaos_knight.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/chaos_knight.png",
+      "sha256": "bc48d2827500ac8f4bcaed804740026880d5700a969ba43a8c3c43b9c20506e9",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "dragon_knight",
+      "name": "龙骑士",
+      "english_name": "Dragon Knight",
+      "render": "output/dota-hero-art-references/valve/dragon_knight.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/dragon_knight.png",
+      "sha256": "41fa12e0bb12eaa9c7aa542c2f1c54202a132d2cf59a38d1cc425d434735c462",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "tiny",
+      "name": "小小",
+      "english_name": "Tiny",
+      "render": "output/dota-hero-art-references/valve/tiny.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/tiny.png",
+      "sha256": "abad6c6adc04c8485067535135709b5d4c584d9200d62627e18c19752b670e3e",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "jakiro",
+      "name": "杰奇洛",
+      "english_name": "Jakiro",
+      "render": "output/dota-hero-art-references/valve/jakiro.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/jakiro.png",
+      "sha256": "303942571216ec40dbe927f3d6689f1f6af86977c4d6935818e47c3c1d64bb28",
+      "dimensions": [
+        2880,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "phoenix",
+      "name": "凤凰",
+      "english_name": "Phoenix",
+      "render": "output/dota-hero-art-references/valve/phoenix.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/phoenix.png",
+      "sha256": "b9604037d2f9b7b15ca0d37bbe286c5f77ab3fb62e58c7d9cca9c2f628dcc2b8",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "enigma",
+      "name": "谜团",
+      "english_name": "Enigma",
+      "render": "output/dota-hero-art-references/valve/enigma.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/enigma.png",
+      "sha256": "40a14085780955b247b64c5e8123e7e12e6cccf1757e3acd8ee0c2928863b8c7",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "night_stalker",
+      "name": "暗夜魔王",
+      "english_name": "Night Stalker",
+      "render": "output/dota-hero-art-references/valve/night_stalker.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/night_stalker.png",
+      "sha256": "fa8ccc59c04e3118ea51f6952ea376a808430a559257225d48730fe718722670",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "broodmother",
+      "name": "育母蜘蛛",
+      "english_name": "Broodmother",
+      "render": "output/dota-hero-art-references/valve/broodmother.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/broodmother.png",
+      "sha256": "13763588b23cb67322a47e9d72596c350fbe3a2456fa7a784d06a25114393e1e",
+      "dimensions": [
+        2880,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "nyx_assassin",
+      "name": "司夜刺客",
+      "english_name": "Nyx Assassin",
+      "render": "output/dota-hero-art-references/valve/nyx_assassin.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/nyx_assassin.png",
+      "sha256": "b02a2c524143291cb208dc4086dd39a7b652dcc7da9dc45c97369345f0389461",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "disruptor",
+      "name": "干扰者",
+      "english_name": "Disruptor",
+      "render": "output/dota-hero-art-references/valve/disruptor.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/disruptor.png",
+      "sha256": "1a6349112203de7d7e4a41f05394ba5b3beea049d57c21e02d7b0b46637c8fab",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "witch_doctor",
+      "name": "巫医",
+      "english_name": "Witch Doctor",
+      "render": "output/dota-hero-art-references/valve/witch_doctor.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/witch_doctor.png",
+      "sha256": "7733430c74924dcb0b504320f7d61f6c87918e293ed8b1d1e2010bd920e84fb4",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "shadow_shaman",
+      "name": "暗影萨满",
+      "english_name": "Shadow Shaman",
+      "render": "output/dota-hero-art-references/valve/shadow_shaman.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/shadow_shaman.png",
+      "sha256": "eef43a1a30f5de880c090b5884f4edede74c9fc7c7dfa92159462adf5b2fc07c",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "rubick",
+      "name": "拉比克",
+      "english_name": "Rubick",
+      "render": "output/dota-hero-art-references/valve/rubick.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/rubick.png",
+      "sha256": "172e7b40b43bfd2561778f14842ea1367ff6f93e549044315e42d985b0203990",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "invoker",
+      "name": "祈求者",
+      "english_name": "Invoker",
+      "render": "output/dota-hero-art-references/valve/invoker.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/invoker.png",
+      "sha256": "9b0ab824d84f162ba530c65c33bc568b456914509e46d93c1805453c31f97e59",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    }
+  ],
+  "classic_overlap": [],
+  "requested_model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "workflow": "submit_only",
+  "free_before": 83,
+  "paid_before": 0,
+  "status": "ready_to_submit",
+  "listed_total": 106.6
+}

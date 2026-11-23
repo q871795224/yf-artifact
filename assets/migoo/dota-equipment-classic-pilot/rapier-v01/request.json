@@ -1,0 +1,43 @@
+{
+  "hero": "rapier",
+  "kind": "equipment",
+  "name": "圣剑",
+  "english_name": "Divine Rapier",
+  "icon": "output/dota-native-equipment/valve/rapier.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/rapier.png",
+  "classic_card_id": null,
+  "sha256": "1cd79e31891f7b9ab273c915cfac56d9b86f49a5f78ebd32936ec8701f1d43dc",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/rapier.png",
+      "sha256": "1cd79e31891f7b9ab273c915cfac56d9b86f49a5f78ebd32936ec8701f1d43dc",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/rapier.png"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10263_cropped.png",
+      "sha256": "0a642defad353380b55512c08e3c4143e3b5ae57ae8c24e2a61d273891e92910"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10256_cropped.png",
+      "sha256": "c7bfd096b2881379a3ea4ec7c36dd631df9044448a7e3e4afbe97b02c5ee0e42"
+    }
+  ],
+  "classic_style_ids": [
+    10263,
+    10256
+  ],
+  "workflow": "Submit and report only; user reviews on Migoo; no generated-art download or inspection",
+  "authorization": "User requested an initial ten Dota equipment paintings in Classic style, with agent choosing the items",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGkzYjVhMDFhNTZkOWM1Njg4YWU2ZTgxZWYyOGZmY2I1N2U3NDRmMTc0",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

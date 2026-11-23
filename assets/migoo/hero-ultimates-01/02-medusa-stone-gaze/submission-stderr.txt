@@ -1,0 +1,5 @@
+Migoo 额度：余额 1，免费 1，付费 0，冻结 0。
+Uploading assets/migoo/hero-ultimates-01/references/hero-medusa.jpg (139621 bytes)
+Uploading assets/migoo/hero-ultimates-01/references/hero-pudge.jpg (131375 bytes)
+Uploading assets/migoo/hero-ultimates-01/references/classic-10267.jpg (244138 bytes)
+Uploading assets/migoo/hero-ultimates-01/references/classic-10379.jpg (184542 bytes)

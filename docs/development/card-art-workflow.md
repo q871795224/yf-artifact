@@ -1,23 +1,25 @@
 # 卡牌插画工作流与试跑记录
 
+当前生图入口已整理为[项目卡图 skill](../../.agents/skills/artifact-card-art/SKILL.md)，按类别查找[资源库](../../assets/art-library/README.md)和[参考归档](../../references/card-art/README.md)。下文保留早期模型试跑、旧操作方式和当时结论；现在常用“只提交，由用户在 Migoo 看图”，不默认下载和接入。历史余额、价格和暂停日期不作为实时依据。
+
 更新于 2026-11-22。批量出图用 Migoo 的 GPT Image 2.6 Flare。从黑色法术起，卡图的画风主要参考 Artifact Classic 客户端无框原画，装备另用对应《刀塔》图标参考品类、主色与材质。11 月 21 日新增 150 张候选图，原图、缩略预览、提示词和任务记录见[候选插画索引](../../assets/migoo/README.md#11-月-21-日候选插画)。
 
 ## 出图决策
 
 1. 按当前卡池和扩充方案核对缺图。规则已定的图用卡牌编号跟踪。储备图先定可画的动作或角色用途，用独立名称管理。法术先确定画面要读出的是攻击方向、目标变化还是站位变化。单位先确定体型、姿态和招牌器物。 [当前卡池](../../scripts/growth_cards.py) · [扩充方案](../design/demo-expansion-proposal.md)
-2. 画面方向明确时直接用 Flare 出主图。需要试主体或构图时，可在 108 的 WSL 用 Z-Image Turbo 试画。目标接近 Classic 画风时，每张用两张同题材的无框原画，分别参考绘画笔触、光线和空间感。
-3. 每张单独写地点、时段、主光和动作。强调自然材质、清楚的大色块和松紧有别的边缘。高光集中到脸、手、器物或法术作用点，背景保留较宽的明暗层次。英雄和野怪从《刀塔》的职业、能力主题和营地生态取材，外形与构图独立设计。
+2. 画面方向明确时直接用 Flare 出主图。早期曾在 108 的 WSL 用 Z-Image Turbo 试主体或构图；仅在用户当前明确要求连接该机器时使用。目标接近 Classic 画风时，每张用两张同题材的无框原画，分别参考绘画笔触、光线和空间感。
+3. 每张单独写地点、时段、主光和动作。强调自然材质、清楚的大色块和松紧有别的边缘。高光集中到脸、手、器物或法术作用点，背景保留较宽的明暗层次。早期原创概念曾从《刀塔》的职业、能力主题和营地生态取材，独立设计外形。画原版英雄或装备时保留身份、种族、装备和标志性特征，只重新设计动作、镜头、场景和光线；普通单位与野怪按实际任务保留族群特征。
 4. 以 9:16 满版纯插画交付，检查卡框、文字、编号、水印和白边。缩到约 48 像素宽看主体轮廓、武器和动作。保存原图、提示词、参考图、模型、尺寸和 SHA-256，选定主图与接入试玩分别记录。 [正式素材索引](../../assets/custom/README.md)
 
 ## 参考图来源
 
 | 用途 | 来源 | 本地位置与恢复 |
 | --- | --- | --- |
-| Classic 无框原画 | 在 108 的 WSL 用 Source 2 Viewer CLI 从 Classic 的 `game/dcg/pak01_dir.vpk` 导出。两个卡包共 326 张 `full_art`，分辨率为 1024×1024，部分图有白边 | WSL 项目下的 `output/research/export/art_all/panorama/images/card_art/set00/full_art` 和 `set01/full_art`。文件按 `<卡牌 ID>_psd.png` 命名，本机已选参考在 `output/blue-black-art-references/` |
+| Classic 无框原画 | 在 108 的 WSL 用 Source 2 Viewer CLI 从 Classic 的 `game/dcg/pak01_dir.vpk` 导出。两个卡包共 326 张 `full_art`，分辨率为 1024×1024，部分图有白边 | 完整原图已同步到本机的 `output/classic-full-art/set00/full_art/` 和 `set01/full_art/`，文件按 `<卡牌 ID>_psd.png` 命名。整包哈希见同目录的 `SHA256SUMS`，也可以在[插画审阅页](http://127.0.0.1:8741/effects-lab/art-review.html)筛选无框原画 |
 | 《刀塔》装备图标 | 从 108 的 Steam 客户端 `game/dota/pak01_dir.vpk` 导出 `panorama/images/items/`。本批 12 件来自 VPK，另 8 件来自 Valve 的 Steam CDN | WSL 项目下的 `output/research/export/dota-native-items/panorama/images/items/`。本机客户端样图在 `output/dota-native-equipment/`，补齐的官方图标在其 `valve/` 子目录。CDN 为 `cdn.cloudflare.steamstatic.com`，路径为 `apps/dota2/images/dota_react/items/<物品 ID>.png` |
 | 已有自制参考 | 只在早期批次混用。蓝色法术每张用了 Classic 无框图和一张已有自制图 | 参考路径在[蓝色法术提示词](../../assets/migoo/blue-spell-concepts/briefs.json)逐张记录 |
 
-`briefs.json` 保留每张实际上传的路径和顺序。参考缓存和生成日志在 Git 忽略的 `output/` 下，恢复时按提示词记录里的卡牌 ID 或物品 ID 找回对应文件。装备生成时，第一张参考用对应官方图标，第二张用同类 Classic 插画。
+`briefs.json` 保留每张实际上传的路径和顺序。上一批用的 Classic 选图仍在 `output/blue-black-art-references/`，后续可从完整原图目录按卡牌 ID 选图。参考缓存和生成日志在 Git 忽略的 `output/` 下。装备生成时，第一张参考用对应官方图标，第二张用同类 Classic 插画。
 
 ## Migoo 批量生成与验收
 

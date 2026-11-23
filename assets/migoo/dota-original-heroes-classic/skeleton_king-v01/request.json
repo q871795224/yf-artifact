@@ -1,0 +1,44 @@
+{
+  "hero": "skeleton_king",
+  "name": "冥魂大帝",
+  "english_name": "Wraith King",
+  "render": "output/dota-hero-art-references/valve/skeleton_king.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/skeleton_king.png",
+  "sha256": "3675add42685950a6344a422382ec237bddced852450ac90600c006cb9d1a8c1",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/skeleton_king.png",
+      "sha256": "3675add42685950a6344a422382ec237bddced852450ac90600c006cb9d1a8c1"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10054_cropped.png",
+      "sha256": "418eaa7727b6bb10467d183a4b968ef662874081dfb97a5b631088d333a5458b"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10038_cropped.png",
+      "sha256": "4b81f25a9e3b11ba3cf240847395e16e44175377ef71ff57637b72407e62804a"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or visual reviews",
+  "authorization": "User explicitly requested another agent-selected twenty heroes and submission through the reusable script",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGllN2ZkYmJjMzcwODI1OGExNTg5MGM2MDUxNTNhZTFlMTAwZDIxNjFl",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

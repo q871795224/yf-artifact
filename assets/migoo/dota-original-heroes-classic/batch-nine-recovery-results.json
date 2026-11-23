@@ -1,0 +1,26 @@
+[
+  {
+    "hero": "morphling",
+    "status": "completed",
+    "exit_code": 0,
+    "task_id": "mt_cGljZTE5ZDc4OTYxMjk1ZWViZDdlYmMxYzBhN2FjYTA4NTQwMzViM2U3"
+  },
+  {
+    "hero": "sand_king",
+    "status": "completed",
+    "exit_code": 0,
+    "task_id": "mt_cGliM2Q4NGViNjU2YzhjNGFkNDhkMGQ1ODY5YWQ1MWFkZjliZWM0Nzhj"
+  },
+  {
+    "hero": "slark",
+    "status": "completed",
+    "exit_code": 0,
+    "task_id": "mt_cGliMDMzMzY1MDNhODMwOGE2NTVhODlmN2FjOTM1NjIwMzdhYjZmMTk3"
+  },
+  {
+    "hero": "visage",
+    "status": "completed",
+    "exit_code": 0,
+    "task_id": "mt_cGlhNTE0MWI1MzBlNmI5NDM2MmQ2NzlkNDJkMWI2OWEzMzVhMTgzMzI2"
+  }
+]

@@ -1,0 +1,4 @@
+Migoo 额度：余额 91，免费 91，付费 0，冻结 0。
+Uploading assets/migoo/comic-npc-batch-04/references/01-long-maned-prowler.jpg (121754 bytes)
+Uploading assets/migoo/comic-npc-batch-04/references/classic-10087.jpg (213575 bytes)
+Uploading assets/migoo/comic-npc-batch-04/references/classic-10416.jpg (259986 bytes)

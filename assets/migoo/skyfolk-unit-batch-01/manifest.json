@@ -1,0 +1,353 @@
+[
+  {
+    "slug": "01-marching-banner",
+    "name": "行伍旗手",
+    "task_id": "mt_cGkzYzBjNGU0MzkwYTk2ODAyYTg4OWEyNWQ1MjY5YmQyODZjNTMwNTlk",
+    "outputs": [
+      {
+        "media_id": "1459196389466925",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795359758_8dc0cfb0.png",
+        "title": "birdfolk_standard_bearer_card_art",
+        "size_bytes": 1736151
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-01/01-marching-banner/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "68601b9d46da98354488df03c7683c3a392645bdbae825f673cc9ccf657ee6cd",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-01/references/user-01.png",
+      "assets/migoo/skyfolk-unit-batch-01/references/classic-10177.png",
+      "assets/migoo/skyfolk-unit-batch-01/references/classic-10092.png"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "slug": "02-rooftop-slinger",
+    "name": "碎石投手",
+    "task_id": "mt_cGkyNzRhMDE3OWJhYjIyYjAzNzJhOGRlYzIxNTBjYjI4YmYxOGI3YTVj",
+    "outputs": [
+      {
+        "media_id": "1459196549776202",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795359778_034224fc.png",
+        "title": "birdfolk_stone_thrower",
+        "size_bytes": 1821273
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-01/02-rooftop-slinger/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "02384bbb82cd9da9500cee3bbaf2ee4ea1a82739f8ac858f95d5d9b69c222cd1",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-01/references/user-02.png",
+      "assets/migoo/skyfolk-unit-batch-01/references/classic-10129.png",
+      "assets/migoo/skyfolk-unit-batch-01/references/classic-10328.png"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "slug": "03-windbreak-shield",
+    "name": "风口盾卒",
+    "task_id": "mt_cGllNTJiZDk2ZDI5ZWY0MGRjMDZiYjFiOGViYTliYmZkZTg1NDAxNWM0",
+    "outputs": [
+      {
+        "media_id": "1459196532368180",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795359775_a15e0901.png",
+        "title": "yf_artifact_bird_shieldbearer",
+        "size_bytes": 1938578
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-01/03-windbreak-shield/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "dfe23671b3cdf3bfec588d8a32703cad7dfab555e76de95b67cb2b5896ae01ea",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-01/references/user-03.png",
+      "assets/migoo/skyfolk-unit-batch-01/references/classic-10092.png",
+      "assets/migoo/skyfolk-unit-batch-01/references/classic-10360.png"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "slug": "04-alley-axeman",
+    "name": "巷口斧兵",
+    "task_id": "mt_cGk5ODFmNzg1OGM3NjBmMDczNTFhOWVhMjI5ZWE5YWFmOTc0Zjk5YTA2",
+    "outputs": [
+      {
+        "media_id": "1459199136638206",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795360093_dc7f1369.png",
+        "title": "鸟族巷口斧兵立绘",
+        "size_bytes": 1797481
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-01/04-alley-axeman/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "5151ea96aadce22845d1b16a41976404b97788c15b88b7688979b364bd04f384",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-01/references/user-04.png",
+      "assets/migoo/skyfolk-unit-batch-01/references/classic-10328.png",
+      "assets/migoo/skyfolk-unit-batch-01/references/classic-10416.png"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "slug": "05-gate-checker",
+    "name": "关门验货员",
+    "task_id": "mt_cGk0MWY5MDRhNTU3NzAyYjlhYTgyZjVmYmNmZjhmMzE2YjNjNjAzNTY0",
+    "outputs": [
+      {
+        "media_id": "1459198904116017",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795360065_1ba3264b.png",
+        "title": "heron_inspector_standee",
+        "size_bytes": 1522488
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-01/05-gate-checker/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "a4a86daf9df54185818630f2d9e6aa799b2e47fb5f5d3622ccb2e42d0db9200f",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-01/references/user-05.png",
+      "assets/migoo/skyfolk-unit-batch-01/references/classic-10092.png",
+      "assets/migoo/skyfolk-unit-batch-01/references/classic-10322.png"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "slug": "06-ladder-watch",
+    "name": "夜梯巡哨",
+    "task_id": "mt_cGlkYzFjMDM3Y2RkMWRiOWQyMmUxNmJlZWUxMTlhOWIwYTNiYTYzOTgy",
+    "outputs": [
+      {
+        "media_id": "1459199263499058",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795360109_04fc1b84.png",
+        "title": "翼裔巡哨原创小兵立绘",
+        "size_bytes": 1647548
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-01/06-ladder-watch/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "1f0a4e12fa4789c957707fdfed1393aaddfe7ad9b7fbcb0bc8d63d9387c24000",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-01/references/user-06.png",
+      "assets/migoo/skyfolk-unit-batch-01/references/user-07.png",
+      "assets/migoo/skyfolk-unit-batch-01/references/classic-10129.png",
+      "assets/migoo/skyfolk-unit-batch-01/references/classic-10085.png"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "slug": "07-armor-apprentice",
+    "name": "铆甲学徒",
+    "task_id": "mt_cGliMWExNDliYzQ2ZDNhNjJhOWUwNDYzNjJjYjJiMjliYjQxMzQ0ZDE2",
+    "outputs": [
+      {
+        "media_id": "1459200814064422",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795360298_b7f93695.png",
+        "title": "鸟族铆甲学徒卡牌立绘",
+        "size_bytes": 1496260
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-01/07-armor-apprentice/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "1b50ce54a9a7c1d9d216af24f25ccbf64173a7cc0a7da63a4613e417d0baef8d",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-01/references/blacksmith.png",
+      "assets/migoo/skyfolk-unit-batch-01/references/classic-10092.png",
+      "assets/migoo/skyfolk-unit-batch-01/references/classic-10323.png"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "slug": "08-road-spearman",
+    "name": "边道长矛步卒",
+    "task_id": "mt_cGlkODliNGEyNjAxYTNkNWU5NTczM2U4MWVlMzU2YzYwNDJkN2Q4MDQy",
+    "outputs": [
+      {
+        "media_id": "1459204323140384",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795360727_232fdfaf.png",
+        "title": "yf_artifact_spearman",
+        "size_bytes": 1764743
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-01/08-road-spearman/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "5b413f3a2d1610d0b931fe18b17b319c547772ec48f5f955233bcc0c45355159",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-01/references/user-08.png",
+      "assets/migoo/skyfolk-unit-batch-01/references/classic-10177.png",
+      "assets/migoo/skyfolk-unit-batch-01/references/classic-10092.png"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "slug": "09-stonegully-beast",
+    "name": "石沟巡兽",
+    "task_id": "mt_cGk0NDdmYmZhNjVhMWFmMmYyMGIyMTYzOTE1ZTg2MmJiNTE2NDZiMTlj",
+    "outputs": [
+      {
+        "media_id": "1459200848028488",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795360302_5751a620.png",
+        "title": "石沟巡兽立绘",
+        "size_bytes": 1717853
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-01/09-stonegully-beast/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "31adec34f5e0ade94c5db47ee556ec4c9135db49acd5ba4c61829d2fd7e960b6",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-01/references/user-10.png",
+      "assets/migoo/skyfolk-unit-batch-01/references/classic-10328.png",
+      "assets/migoo/skyfolk-unit-batch-01/references/classic-10085.png"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "slug": "10-reed-ferryman",
+    "name": "芦湾渡工",
+    "task_id": "mt_cGk5OTVkZGMxZmM3NWMzMDA5M2YzYWQ0NGY3YTUzMjUzYjhkYWUyZDU2",
+    "outputs": [
+      {
+        "media_id": "1459202268177246",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795360476_e0493893.png",
+        "title": "蛙族渡工立绘",
+        "size_bytes": 1959794
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-01/10-reed-ferryman/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "73991242ccd7b0d63482708c65f3c53eb18d3f479fd5a68419eba6e126ad0762",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-01/references/user-12.png",
+      "assets/migoo/skyfolk-unit-batch-01/references/classic-10092.png",
+      "assets/migoo/skyfolk-unit-batch-01/references/classic-10328.png"
+    ],
+    "review_status": "approved"
+  }
+]

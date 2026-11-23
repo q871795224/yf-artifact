@@ -1,0 +1,36 @@
+{
+  "hero": "shadow_demon",
+  "name": "暗影恶魔",
+  "english_name": "Shadow Demon",
+  "render": "output/dota-hero-art-references/valve/shadow_demon.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/shadow_demon.png",
+  "sha256": "7fba97a2e6ddc0de4bb7d1193ceace2d9724990e209e9d9e4a1a49bdf5106dc6",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/shadow_demon.png",
+      "sha256": "7fba97a2e6ddc0de4bb7d1193ceace2d9724990e209e9d9e4a1a49bdf5106dc6"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10046_cropped.png",
+      "sha256": "2ee670ea907999f2afaf0f134f5d506140562257f25454c3047d29f994f21e7d"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10038_cropped.png",
+      "sha256": "4b81f25a9e3b11ba3cf240847395e16e44175377ef71ff57637b72407e62804a"
+    }
+  ],
+  "workflow": "submit_only; no generated-art downloads or review",
+  "authorization": "User explicitly requested twenty more agent-selected canonical heroes",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGliMDY2ZDg0NzgwMGFmZGY0ZGI3M2UwYWUzNGM4NDc1Yzc5MGI1NzU3",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "hero": "sand_king",
+  "name": "沙王",
+  "status": "failed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/sand_king.png",
+      "sha256": "327cc73d790cd683c62e89eb5fb478d667bd7f8c19e72c7607da4941d34fbc65"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10070_cropped.png",
+      "sha256": "ecb1ed9c3485e1d54a3f0cb5aff2bf989f0e6fe46ec4c69dc35b1185fd8dd503"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10033_cropped.png",
+      "sha256": "7490de525670351be81c87b3364d56de3af33e4449e71802c1410dad6fc0fea8"
+    }
+  ],
+  "prompt_file": "prompt.txt",
+  "notes_file": "notes.txt",
+  "authorized": "User approved Medusa sample and explicitly requested submitting remaining nine together",
+  "batch_balance_before": {
+    "free": 94,
+    "paid": 0
+  },
+  "listed_price": 5.33,
+  "task_id": "mt_cGlhZjQ5YjMxOGNiYzk0MmNiYzY1MTdiZTI5MGZhNDAwODg4ZjMxOTk5",
+  "actual_models": null,
+  "cli_exit_code": 1
+}

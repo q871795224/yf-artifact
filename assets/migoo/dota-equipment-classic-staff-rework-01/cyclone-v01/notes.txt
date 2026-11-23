@@ -1,0 +1,9 @@
+LOCAL REVISION OF THE SOURCE TASK IMAGE, not a new item concept. Use the completed source-task illustration itself as the base visual. User corrections take priority over the original icon and original bent-head instructions.
+
+Eul的神圣法杖保留象牙白/银白材质和青蓝风核。原先向侧面弯垂的杖头改成沿笔直中轴向上延伸的居中头部，风纹和小螺旋只围绕中轴排布，不再形成向单侧弯下的牧杖式大钩。头部核心、连接颈和握柄共线。
+
+GEOMETRY: The rigid physical staff must form one continuous STRAIGHT longitudinal axis from butt through handle, neck and center of the head. Center the head on that axis. Remove any sideways crook, kink, bowed neck, leaning head or drooping cap. The object may keep its original diagonal placement in the image; straight refers to its actual geometry, not forcing a vertical composition. Keep recognizable ornament and material, but arrange ornaments around the straight axis rather than making a one-sided hook.
+
+PROPORTIONS: Shorten only the long lower shaft/handle by approximately twenty percent relative to the source image. Keep head size and shaft thickness essentially unchanged; do not shrink the whole object or compress the head. Make the new staff a complete coherent object with clear physical support.
+
+PRESERVE: Keep the original setting, overall camera direction, main lighting, color palette, tactile hand-painted Artifact Classic finish and other objects as close as possible. Repaint the corrected geometry and its local contact shadows naturally into the original illustration. Full-bleed 9:16, requested 1K. No card border, text, logo, watermark, characters or extra staffs. One corrected illustration.

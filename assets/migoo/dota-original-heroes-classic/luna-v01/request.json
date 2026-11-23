@@ -1,0 +1,39 @@
+{
+  "hero": "luna",
+  "name": "露娜",
+  "english_name": "Luna",
+  "render": "output/dota-hero-art-references/valve/luna.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/luna.png",
+  "sha256": "ebbeaa8c65817e44a36a96a2af59f57d5315799a8d745b5210c4aad755b24589",
+  "classic_hero_exists": true,
+  "reference_note": "Official transparent render",
+  "status": "generating",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/luna.png",
+      "sha256": "ebbeaa8c65817e44a36a96a2af59f57d5315799a8d745b5210c4aad755b24589",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/luna.png"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10047_cropped.png",
+      "sha256": "3571bcb9be23ee305506acecee5c07b942e7b07424a1b57a4ac4a8ff9fc85d7e",
+      "media_id": "1459226674341118"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10064_cropped.png",
+      "sha256": "1824b122ea11a72965a178100d872ee132903a4f84f55efff5bc9e9feee69c64",
+      "media_id": "1459226672956217"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or review",
+  "authorization": "User requested this additional twenty; agent selected roster and disclosed 18 remaining new heroes plus 2 existing Classic heroes repainted",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGllMDYzMTExMmM0NWRkNWIyNmNkN2IyOWFiM2JjZGVjZjE2YTRjYzYz",
+  "actual_models": null
+}

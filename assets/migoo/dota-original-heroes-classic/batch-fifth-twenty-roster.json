@@ -1,0 +1,215 @@
+{
+  "heroes": [
+    {
+      "hero": "warlock",
+      "name": "术士",
+      "english_name": "Warlock",
+      "render": "output/dota-hero-art-references/valve/warlock-portrait.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/warlock.png",
+      "sha256": "3506327d6355935de965a9ddb52790f46d9b5602fc10e0c05ee59b83687a56c1",
+      "classic_hero_exists": false,
+      "reference_note": "Official hero portrait identifies the human Warlock; official full-body website poster is his summoned golem and must not define hero identity."
+    },
+    {
+      "hero": "gyrocopter",
+      "name": "矮人直升机",
+      "english_name": "Gyrocopter",
+      "render": "output/dota-hero-art-references/valve/gyrocopter.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/gyrocopter.png",
+      "sha256": "ecaeff9d43eb84156ae1697d4d9e95ddd7e01376e8dfc6eff51aca26edfc0127",
+      "classic_hero_exists": false,
+      "reference_note": "Official transparent render"
+    },
+    {
+      "hero": "keeper_of_the_light",
+      "name": "光之守卫",
+      "english_name": "Keeper of the Light",
+      "render": "output/dota-hero-art-references/valve/keeper_of_the_light.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/keeper_of_the_light.png",
+      "sha256": "4011aaca16abd169bbc4630f5bd87c3154752eeac9792e5cab3c079e5746bbcf",
+      "classic_hero_exists": false,
+      "reference_note": "Official transparent render"
+    },
+    {
+      "hero": "troll_warlord",
+      "name": "巨魔战将",
+      "english_name": "Troll Warlord",
+      "render": "output/dota-hero-art-references/valve/troll_warlord.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/troll_warlord.png",
+      "sha256": "9f39745734f2e3461800cf5bc2564e050a7fae78713834a62619d559eae8850a",
+      "classic_hero_exists": false,
+      "reference_note": "Official transparent render"
+    },
+    {
+      "hero": "elder_titan",
+      "name": "上古巨神",
+      "english_name": "Elder Titan",
+      "render": "output/dota-hero-art-references/valve/elder_titan.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/elder_titan.png",
+      "sha256": "566c1498d24f6ae13d532242fa6d25c7c117a3f3ef9d88b2edfdecb1a61caaad",
+      "classic_hero_exists": false,
+      "reference_note": "Official transparent render"
+    },
+    {
+      "hero": "abyssal_underlord",
+      "name": "孽主",
+      "english_name": "Underlord",
+      "render": "output/dota-hero-art-references/valve/abyssal_underlord.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/abyssal_underlord.png",
+      "sha256": "9185343cab5db00ccce9fe4deae27bf8cdbd04a770bbd7a6dab9916031d5609c",
+      "classic_hero_exists": false,
+      "reference_note": "Official transparent render"
+    },
+    {
+      "hero": "monkey_king",
+      "name": "齐天大圣",
+      "english_name": "Monkey King",
+      "render": "output/dota-hero-art-references/valve/monkey_king.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/monkey_king.png",
+      "sha256": "9097827d1e6f68bdbfca2b2c898bf1e51d3f64ae3874b7458b360ff54435b7d3",
+      "classic_hero_exists": false,
+      "reference_note": "Official transparent render"
+    },
+    {
+      "hero": "pangolier",
+      "name": "石鳞剑士",
+      "english_name": "Pangolier",
+      "render": "output/dota-hero-art-references/valve/pangolier.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/pangolier.png",
+      "sha256": "60407d7c4644790c5f9fa8446eef4f3a47926c0f20ddf1974a06bff808dd69de",
+      "classic_hero_exists": false,
+      "reference_note": "Official transparent render"
+    },
+    {
+      "hero": "dark_willow",
+      "name": "邪影芳灵",
+      "english_name": "Dark Willow",
+      "render": "output/dota-hero-art-references/valve/dark_willow.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/dark_willow.png",
+      "sha256": "98fb7268cb1f574b1e54170dc63c9e3f7e6b600cd0a225945c1f5eaa5b85bce3",
+      "classic_hero_exists": false,
+      "reference_note": "Official transparent render"
+    },
+    {
+      "hero": "grimstroke",
+      "name": "天涯墨客",
+      "english_name": "Grimstroke",
+      "render": "output/dota-hero-art-references/valve/grimstroke.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/grimstroke.png",
+      "sha256": "50ac6dd1c31280c153570d2f9e4adb1fb0cb897731d50876217288601d4639c4",
+      "classic_hero_exists": false,
+      "reference_note": "Official transparent render"
+    },
+    {
+      "hero": "snapfire",
+      "name": "电炎绝手",
+      "english_name": "Snapfire",
+      "render": "output/dota-hero-art-references/valve/snapfire.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/snapfire.png",
+      "sha256": "742aa9ef743cacf395f67e5d6fdf595fb4fef8c527fd0dc67f6968cceb7a98b5",
+      "classic_hero_exists": false,
+      "reference_note": "Official transparent render"
+    },
+    {
+      "hero": "dawnbreaker",
+      "name": "破晓辰星",
+      "english_name": "Dawnbreaker",
+      "render": "output/dota-hero-art-references/valve/dawnbreaker.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/dawnbreaker.png",
+      "sha256": "6234ef4a55ffd0ad006e57796f7d507efeb4ceafddf457074e4ae1aef94c4ea8",
+      "classic_hero_exists": false,
+      "reference_note": "Official transparent render"
+    },
+    {
+      "hero": "marci",
+      "name": "玛西",
+      "english_name": "Marci",
+      "render": "output/dota-hero-art-references/valve/marci.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/marci.png",
+      "sha256": "e0cf643e733b128b2072b7beb5fe16a5a5ac2c2426c6f076d9591ba8934fb66e",
+      "classic_hero_exists": false,
+      "reference_note": "Official transparent render"
+    },
+    {
+      "hero": "primal_beast",
+      "name": "獸",
+      "english_name": "Primal Beast",
+      "render": "output/dota-hero-art-references/valve/primal_beast.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/primal_beast.png",
+      "sha256": "c29e0bab3e34b09c49f6a86e379728afffd98ceacb84cc863ba788720eeb25f0",
+      "classic_hero_exists": false,
+      "reference_note": "Official transparent render"
+    },
+    {
+      "hero": "muerta",
+      "name": "琼英碧灵",
+      "english_name": "Muerta",
+      "render": "output/dota-hero-art-references/valve/muerta.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/muerta.png",
+      "sha256": "538013896a3517208b34b0baba13a931c1b72fa326b219a40b44154a1dbed8da",
+      "classic_hero_exists": false,
+      "reference_note": "Official transparent render"
+    },
+    {
+      "hero": "ringmaster",
+      "name": "百戏大王",
+      "english_name": "Ringmaster",
+      "render": "output/dota-hero-art-references/valve/ringmaster.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/ringmaster.png",
+      "sha256": "13887a6528628e415c7d0d7880f309b43bd107d76f50054125be2c75d5a261d1",
+      "classic_hero_exists": false,
+      "reference_note": "Official transparent render"
+    },
+    {
+      "hero": "kez",
+      "name": "凯",
+      "english_name": "Kez",
+      "render": "output/dota-hero-art-references/valve/kez.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/kez.png",
+      "sha256": "b05a1a30c9dcfcdb7cfc1be57bfb56275c6a786727cbc7d3430934ecb9c1bb77",
+      "classic_hero_exists": false,
+      "reference_note": "Official transparent render"
+    },
+    {
+      "hero": "largo",
+      "name": "拉戈",
+      "english_name": "Largo",
+      "render": "output/dota-hero-art-references/valve/largo.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/largo.png",
+      "sha256": "855a0d8194a04c6252b9aa0a898869d5671b863f21e050d497c5e6f2b589ff7f",
+      "classic_hero_exists": false,
+      "reference_note": "Official transparent render"
+    },
+    {
+      "hero": "earthshaker",
+      "name": "撼地者",
+      "english_name": "Earthshaker",
+      "render": "output/dota-hero-art-references/valve/earthshaker.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/earthshaker.png",
+      "sha256": "2b36fe589cded82b0927f49bb761459f6cbf3956f22a940eaf8fa0d46d33da26",
+      "classic_hero_exists": true,
+      "reference_note": "Official transparent render"
+    },
+    {
+      "hero": "luna",
+      "name": "露娜",
+      "english_name": "Luna",
+      "render": "output/dota-hero-art-references/valve/luna.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/luna.png",
+      "sha256": "ebbeaa8c65817e44a36a96a2af59f57d5315799a8d745b5210c4aad755b24589",
+      "classic_hero_exists": true,
+      "reference_note": "Official transparent render"
+    }
+  ],
+  "classic_overlap": [
+    "earthshaker",
+    "luna"
+  ],
+  "overlap_with_previous_generated_or_prepared": [],
+  "requested_model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "workflow": "submit_only",
+  "selection_note": "18 remaining unpainted Dota heroes without Classic cards plus fresh canonical paintings for Earthshaker and Luna; user was informed.",
+  "status": "ready_to_submit"
+}

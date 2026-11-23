@@ -1,0 +1,128 @@
+{
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "style": "竖版9:16原创风格化奇幻卡图，概括手绘大色面、明显明暗对比、夸张轮廓、自然笔触。两张参考只看体态职业与油画明暗，使用原创人物、服装、面貌、装备、构图和姿势。单个主角，细节从简，无字、卡框、标志或水印。",
+  "jobs": [
+    {
+      "slug": "legion-drummer",
+      "name": "古铜军团鼓手",
+      "inspiration": "古铜军团",
+      "description": "瘦小的新兵斜背浅黄铜鼓，在明亮的灰白城门前一手举鼓槌，陶红短衣，宽云。",
+      "references": [
+        "output/dota-lore-references/user-panels/gold-helmet-spearmen.png",
+        "output/classic-full-art/set01/full_art/10087_psd.png"
+      ]
+    },
+    {
+      "slug": "frog-netter",
+      "name": "水寨撒网手",
+      "inspiration": "大屿前来",
+      "description": "大眼短腿的藏青蛙形船工，从木舟甩开扇形渔网，背景是浅金日出与青色水面。",
+      "references": [
+        "output/dota-lore-references/user-panels/frog-villagers.png",
+        "output/classic-full-art/set01/full_art/10102_psd.png"
+      ]
+    },
+    {
+      "slug": "carnival-track-greaser",
+      "name": "狗头人轨道养护工",
+      "inspiration": "暗黑狂欢",
+      "description": "瘦高机械狗头人工人提着大肚油壶俯身给铁轨加油，黄铜关节，雨后乳白天光，紫灰货车。",
+      "references": [
+        "output/dota-lore-references/client/panorama/images/events/dark_carnival/visual_novel/portraits/automaton_kobold/automaton_kobold_idle_png.png",
+        "output/classic-full-art/set01/full_art/10092_psd.png"
+      ]
+    },
+    {
+      "slug": "legion-water-bearer",
+      "name": "古铜军团水囊兵",
+      "inspiration": "古铜军团",
+      "description": "戴简朴圆盔的随军杂役，低头把鼓鼓的水囊递过磨损石栏，冷灰布和浅赭晒墙。",
+      "references": [
+        "output/dota-lore-references/user-panels/gold-helmet-spearmen.png",
+        "output/classic-full-art/set01/full_art/10082_psd.png"
+      ]
+    },
+    {
+      "slug": "frog-basket-vendor",
+      "name": "水寨篮贩",
+      "inspiration": "大屿前来",
+      "description": "短胖翠绿蛙形小贩抱着装满贝壳的篮子，斜坐粉白渡口，浅海蓝背景。",
+      "references": [
+        "output/dota-lore-references/official/largo/004.webp",
+        "output/classic-full-art/set01/full_art/10087_psd.png"
+      ]
+    },
+    {
+      "slug": "carnival-fish-ticketkeeper",
+      "name": "鱼人检票员",
+      "inspiration": "暗黑狂欢",
+      "description": "宽鳍矮鱼人在薄荷绿售票棚探头，摆起一把夸张的大号验票钳，干净暖灯。",
+      "references": [
+        "output/dota-lore-references/client/panorama/images/events/dark_carnival/visual_novel/portraits/witch_fish/witch_fish_idle_png.png",
+        "output/classic-full-art/set01/full_art/10082_psd.png"
+      ]
+    },
+    {
+      "slug": "legion-bridge-lookout",
+      "name": "古铜军团桥哨",
+      "inspiration": "古铜军团",
+      "description": "年轻轻装桥哨扶一柄短斧看向身后，青灰雾桥、鲜明的锈红斗篷，黄铜盔小而朴素。",
+      "references": [
+        "output/dota-lore-references/user-panels/gold-helmet-spearmen.png",
+        "output/classic-full-art/set01/full_art/10082_psd.png"
+      ]
+    },
+    {
+      "slug": "frog-reed-weaver",
+      "name": "蛙族编苇工",
+      "inspiration": "大屿前来",
+      "description": "高圆眼睛的浅橄榄蛙形手艺人弯腰提起圆形芦苇席，亮紫衣摆，河岸浅土。",
+      "references": [
+        "output/dota-lore-references/user-panels/frog-villagers.png",
+        "output/classic-full-art/set01/full_art/10102_psd.png"
+      ]
+    },
+    {
+      "slug": "carnival-treant-propkeeper",
+      "name": "树人道具管理员",
+      "inspiration": "暗黑狂欢",
+      "description": "修长树人扛着两个纸月亮道具穿过烟蓝帘幕后方，暗红叶冠和浅黄纸月，动作轻快。",
+      "references": [
+        "output/dota-lore-references/client/panorama/images/events/dark_carnival/visual_novel/portraits/witch_treant/witch_treant_idle_png.png",
+        "output/classic-full-art/set01/full_art/10087_psd.png"
+      ]
+    },
+    {
+      "slug": "carnival-rigging-helper",
+      "name": "车队绕索工",
+      "inspiration": "暗黑狂欢",
+      "description": "壮实车队女工拢紧肩头一卷粗索，浅黄篷布，蓝布衣袖，浅色街道倒影。",
+      "references": [
+        "output/dota-lore-references/client/panorama/images/events/dark_carnival/visual_novel/portraits/lorenzo/lorenzo_idle_png.png",
+        "output/classic-full-art/set01/full_art/10092_psd.png"
+      ]
+    },
+    {
+      "slug": "legion-supply-runner",
+      "name": "古铜军团辎重学徒",
+      "inspiration": "古铜军团",
+      "description": "斜挎两截木箱的矮个随军学徒跨过浅石阶，旧铜圆盔配琥珀灰布衣，姿态笨拙，灰白天光。",
+      "references": [
+        "output/dota-lore-references/user-panels/gold-helmet-spearmen.png",
+        "output/classic-full-art/set01/full_art/10092_psd.png"
+      ]
+    },
+    {
+      "slug": "frog-shell-sorter",
+      "name": "蛙族贝壳分拣手",
+      "inspiration": "大屿前来",
+      "description": "矮圆橄榄蛙披青布，在日晒水台前用蹼手抬一只浅色托盘，盘中只有几枚夸张圆贝壳，水面反青。",
+      "references": [
+        "output/dota-lore-references/user-panels/frog-villagers.png",
+        "output/classic-full-art/set01/full_art/10082_psd.png"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+Migoo 额度：余额 52，免费 52，付费 0，冻结 0。
+Uploading assets/migoo/unit-cast-spells-01/references/unit-maned-beast.jpg (241670 bytes)
+Uploading assets/migoo/unit-cast-spells-01/references/unit-water-beast.jpg (290310 bytes)
+Uploading assets/migoo/unit-cast-spells-01/references/classic-10339.jpg (286220 bytes)
+Uploading assets/migoo/unit-cast-spells-01/references/classic-10413.jpg (312271 bytes)

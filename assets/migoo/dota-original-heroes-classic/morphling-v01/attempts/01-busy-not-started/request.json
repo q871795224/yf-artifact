@@ -1,0 +1,34 @@
+{
+  "hero": "morphling",
+  "name": "变体精灵",
+  "status": "failed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/morphling.png",
+      "sha256": "87e77d01850b42d18dfbc72b096374e0ad0ea47a3a68eb9335dadfd3a503add9"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10024_cropped.png",
+      "sha256": "cd957f8c128298830840f1873be5025aab8a9cd33c87f6183bb64b9a3e434188"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10355_cropped.png",
+      "sha256": "d271b9bdae6431e027a602db19f845e19786f8b08d1460873df0c7ef82de1dec"
+    }
+  ],
+  "prompt_file": "prompt.txt",
+  "notes_file": "notes.txt",
+  "authorized": "User approved Medusa sample and explicitly requested submitting remaining nine together",
+  "batch_balance_before": {
+    "free": 94,
+    "paid": 0
+  },
+  "listed_price": 5.33,
+  "task_id": "mt_cGljZWI4YTJhZWY5ZTAzYTEzYTc4YzRhMjhlNDczZTQ2NTVkNTRjNWM5",
+  "actual_models": null,
+  "cli_exit_code": 1
+}

@@ -1,0 +1,310 @@
+{
+  "submitted_count": 10,
+  "scope": "Initial ten equipment pilot only; user reviews on Migoo before any expansion",
+  "model_requested": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "updated_at": "2026-11-23T00:32:04.441095+08:00",
+  "balance_before": {
+    "free": 55,
+    "paid": 0
+  },
+  "balance_after": {
+    "balance": 45,
+    "paid": 0,
+    "free": 45,
+    "frozen": 0
+  },
+  "balance_note": "Other account activity overlaps. Do not attribute the account balance difference to these ten images.",
+  "equipment": [
+    {
+      "item_id": "blink",
+      "name": "闪烁匕首",
+      "english_name": "Blink Dagger",
+      "classic_card_id": 10206,
+      "task_id": "mt_cGk0MDUyM2E2MDVmMWVmMTg3MTY3NjQ2ZjQ4NWIyNzYyMDY0MWZkYWI1",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-pilot/blink-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-pilot/blink-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/valve/blink.png",
+          "sha256": "bc6401dfb8b64e07f4e450a351751755e154f5554f0bb9d14b96a3117092b5ac",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/blink.png"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10206_cropped.png",
+          "sha256": "b8aab6728084de24cb33b6057407e497397b4c6a99b0238c258cd473375e3594"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10256_cropped.png",
+          "sha256": "c7bfd096b2881379a3ea4ec7c36dd631df9044448a7e3e4afbe97b02c5ee0e42"
+        }
+      ]
+    },
+    {
+      "item_id": "phase_boots",
+      "name": "相位鞋",
+      "english_name": "Phase Boots",
+      "classic_card_id": 10203,
+      "task_id": "mt_cGk4MWVkMjRhZWQ2NDNiNWE4MzY4MzBlZjc0YWZjNzU3NmIxNzgwM2Mz",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-pilot/phase_boots-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-pilot/phase_boots-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/valve/phase_boots.png",
+          "sha256": "f194592b0300a80abadcc15e0793ba6c9c85c391b9360d36b39570ca900d55d7",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/phase_boots.png"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10203_cropped.png",
+          "sha256": "f673398c827611f895ee172b35d22384e0c2302da855cf7cca69994ed2166ac4"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10237_cropped.png",
+          "sha256": "198c5d59fb6e17d029e64ec3e7a65c4d16866575ed6c63fd86005731b3eca6a8"
+        }
+      ]
+    },
+    {
+      "item_id": "helm_of_the_dominator",
+      "name": "支配头盔",
+      "english_name": "Helm of the Dominator",
+      "classic_card_id": 10224,
+      "task_id": "mt_cGljMmFkZjA5NzdiOWNhOTEyNzJlOTc4YTY1NjVjMDY0OTdkMWU5NDhj",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-pilot/helm_of_the_dominator-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-pilot/helm_of_the_dominator-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/valve/helm_of_the_dominator.png",
+          "sha256": "4e9a7c4d9ce2c4eb9b996617d9d12518bf990438415d6e9587079980b4aa3334",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/helm_of_the_dominator.png"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10224_cropped.png",
+          "sha256": "6d67f5e3bdf3c47cfae2d365ca89cc7d307336e5bb1f4ce51ef48e27698c15e3"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10232_cropped.png",
+          "sha256": "f9298ce686f7f5c05a82ad42c92b6d08d6dfe6880349aeb1664e566952961ce0"
+        }
+      ]
+    },
+    {
+      "item_id": "shivas_guard",
+      "name": "希瓦的守护",
+      "english_name": "Shiva's Guard",
+      "classic_card_id": 10248,
+      "task_id": "mt_cGk3Yjc1M2RkYjJjMDJhNWUxNzI3NmNkNWVhN2U0OWUyZjJkYWE4MWIz",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-pilot/shivas_guard-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-pilot/shivas_guard-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/valve/shivas_guard.png",
+          "sha256": "efe5cb009d650da58a041c5f35dbe6a4bd2be035876f254c82a115b5010631a6",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/shivas_guard.png"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10248_cropped.png",
+          "sha256": "a542eb3593c412809964a97cffce6fb45483ab995788c060e39a2cf6cf9d5f76"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10203_cropped.png",
+          "sha256": "f673398c827611f895ee172b35d22384e0c2302da855cf7cca69994ed2166ac4"
+        }
+      ]
+    },
+    {
+      "item_id": "platemail",
+      "name": "板甲",
+      "english_name": "Platemail",
+      "classic_card_id": 10237,
+      "task_id": "mt_cGkwOTUyYWZmZmExNDk1ZjRiYmU2NjA0NmM0NzViN2UzZDg1ZjRiNTZh",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-pilot/platemail-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-pilot/platemail-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/valve/platemail.png",
+          "sha256": "2b2be346bde57942f70dc243e9714147150a1087579aa28728cf5fd566cdde8a",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/platemail.png"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10237_cropped.png",
+          "sha256": "198c5d59fb6e17d029e64ec3e7a65c4d16866575ed6c63fd86005731b3eca6a8"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10232_cropped.png",
+          "sha256": "f9298ce686f7f5c05a82ad42c92b6d08d6dfe6880349aeb1664e566952961ce0"
+        }
+      ]
+    },
+    {
+      "item_id": "black_king_bar",
+      "name": "黑皇杖",
+      "english_name": "Black King Bar",
+      "classic_card_id": null,
+      "task_id": "mt_cGliNmJhNjNlYWQ3OTBmZmQwMTAyMThiMDVjMzM4NWQ1ZTM0NWNjOWM2",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-pilot/black_king_bar-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-pilot/black_king_bar-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/valve/black_king_bar.png",
+          "sha256": "09c7e6cbdaf3c2dff83fbfa04e038e7fc96e71e875eae8fe114e0c3bfe0ee8a6",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/black_king_bar.png"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10224_cropped.png",
+          "sha256": "6d67f5e3bdf3c47cfae2d365ca89cc7d307336e5bb1f4ce51ef48e27698c15e3"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10210_cropped.png",
+          "sha256": "653d31b394383641fe1dfbff72696ce7107227666e0adf4445fc8474845e57da"
+        }
+      ]
+    },
+    {
+      "item_id": "rapier",
+      "name": "圣剑",
+      "english_name": "Divine Rapier",
+      "classic_card_id": null,
+      "task_id": "mt_cGkzYjVhMDFhNTZkOWM1Njg4YWU2ZTgxZWYyOGZmY2I1N2U3NDRmMTc0",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-pilot/rapier-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-pilot/rapier-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/valve/rapier.png",
+          "sha256": "1cd79e31891f7b9ab273c915cfac56d9b86f49a5f78ebd32936ec8701f1d43dc",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/rapier.png"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10263_cropped.png",
+          "sha256": "0a642defad353380b55512c08e3c4143e3b5ae57ae8c24e2a61d273891e92910"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10256_cropped.png",
+          "sha256": "c7bfd096b2881379a3ea4ec7c36dd631df9044448a7e3e4afbe97b02c5ee0e42"
+        }
+      ]
+    },
+    {
+      "item_id": "butterfly",
+      "name": "蝴蝶",
+      "english_name": "Butterfly",
+      "classic_card_id": null,
+      "task_id": "mt_cGliZmUzM2I5MWMwYWEzODM1NWI1ZjRlZDgyODFiMGQ3NDViYTJjMDFh",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-pilot/butterfly-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-pilot/butterfly-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/valve/butterfly.png",
+          "sha256": "4d5b67589f5ffc41cb168c9af85d034cba96314272e8e0afc98e314374fc3479",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/butterfly.png"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10206_cropped.png",
+          "sha256": "b8aab6728084de24cb33b6057407e497397b4c6a99b0238c258cd473375e3594"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10256_cropped.png",
+          "sha256": "c7bfd096b2881379a3ea4ec7c36dd631df9044448a7e3e4afbe97b02c5ee0e42"
+        }
+      ]
+    },
+    {
+      "item_id": "heart",
+      "name": "恐鳌之心",
+      "english_name": "Heart of Tarrasque",
+      "classic_card_id": null,
+      "task_id": "mt_cGk4NjliMWVkMTg1YjQ4MmUzYzQxMTM1YmEyMmFjNjI1ZjFhZjhjMWYz",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-pilot/heart-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-pilot/heart-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/valve/heart.png",
+          "sha256": "1e391cf72f30b83aceba691c0ecfe095e697316cd5c0045bcef0c6c1794210f1",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/heart.png"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10220_cropped.png",
+          "sha256": "94e86bdcca1d7da96e12bef7a63ad6477c49e2fe5e91dc3c8e44eba4a54ec860"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10232_cropped.png",
+          "sha256": "f9298ce686f7f5c05a82ad42c92b6d08d6dfe6880349aeb1664e566952961ce0"
+        }
+      ]
+    },
+    {
+      "item_id": "mjollnir",
+      "name": "雷神之锤",
+      "english_name": "Mjollnir",
+      "classic_card_id": null,
+      "task_id": "mt_cGlmOWE5MGZmYjY5NDUyZmY2MWRmZmRiZDZhNTlmODYyMmVlNzdmODM3",
+      "last_observed_status": "generating",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": null,
+      "prompt": "assets/migoo/dota-equipment-classic-pilot/mjollnir-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-pilot/mjollnir-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/valve/mjollnir.png",
+          "sha256": "9436d5938984120cb1a81e7ba5b58df8926a8faf907b907f0285239f58ebdeef",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/mjollnir.png"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10210_cropped.png",
+          "sha256": "653d31b394383641fe1dfbff72696ce7107227666e0adf4445fc8474845e57da"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10223_cropped.png",
+          "sha256": "9c39054e64fd53f1fc77873f123d8604e34c4fa8c4a5c08eb07a135405407649"
+        }
+      ]
+    }
+  ],
+  "user_review": "User approved the visual quality and explicitly requested twenty additional equipment illustrations"
+}

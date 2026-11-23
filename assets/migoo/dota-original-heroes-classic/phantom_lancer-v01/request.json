@@ -1,0 +1,44 @@
+{
+  "hero": "phantom_lancer",
+  "name": "幻影长矛手",
+  "english_name": "Phantom Lancer",
+  "render": "output/dota-hero-art-references/valve/phantom_lancer.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/phantom_lancer.png",
+  "sha256": "55ddbc9766c7726c42bfe4b0c8fa717cc14de68e51f46c7ed3bd27ac784087e3",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/phantom_lancer.png",
+      "sha256": "55ddbc9766c7726c42bfe4b0c8fa717cc14de68e51f46c7ed3bd27ac784087e3"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10023_cropped.png",
+      "sha256": "e0437540e2bf5b079a450d76bad5d6bb0fcd07a7036109410b0d79a0b697c925"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10070_cropped.png",
+      "sha256": "ecb1ed9c3485e1d54a3f0cb5aff2bf989f0e6fe46ec4c69dc35b1185fd8dd503"
+    }
+  ],
+  "workflow": "submit_only; no image download or generated-art review",
+  "authorization": "User explicitly delegated selecting twenty and requested submission plus reporting only",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGlhNjg3Y2YxZjcwYTIwYmUwZGFiNjUzZWE3MjNjOGVlYzYxZWRlZTMy",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

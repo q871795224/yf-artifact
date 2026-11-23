@@ -1,0 +1,44 @@
+{
+  "hero": "crimson_guard",
+  "kind": "equipment",
+  "name": "赤红甲",
+  "english_name": "Crimson Guard",
+  "icon": "output/dota-native-equipment/crimson_guard_png.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/crimson_guard.png",
+  "sha256": "dfe7760c6062dd8ca1cae5886f07a221f876296f16a652713f0e34859f1ef703",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/crimson_guard_png.png",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/crimson_guard.png",
+      "sha256": "dfe7760c6062dd8ca1cae5886f07a221f876296f16a652713f0e34859f1ef703"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10237_cropped.png",
+      "media_id": "1459238887335158",
+      "sha256": "198c5d59fb6e17d029e64ec3e7a65c4d16866575ed6c63fd86005731b3eca6a8"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10224_cropped.png",
+      "media_id": "1459239138518268",
+      "sha256": "6d67f5e3bdf3c47cfae2d365ca89cc7d307336e5bb1f4ce51ef48e27698c15e3"
+    }
+  ],
+  "classic_style_ids": [
+    10237,
+    10224
+  ],
+  "workflow": "Submit and report only; no generated-output download or inspection",
+  "authorization": "User requested twenty additional equipment images after accepting prior batches",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGlhZTEyMjQ1MGY0MjU4ZTBmZmNkNmIyMjQ5ZDk5NDAzZTJjYjNjMTlj",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

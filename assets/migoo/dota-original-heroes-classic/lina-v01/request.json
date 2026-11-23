@@ -1,0 +1,44 @@
+{
+  "hero": "lina",
+  "name": "莉娜",
+  "english_name": "Lina",
+  "render": "output/dota-hero-art-references/valve/lina.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/lina.png",
+  "sha256": "c49dd12c2a160eb257b9db9cf177f779ed4d93b7be82c7cd2419d55ef6211086",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/lina.png",
+      "sha256": "c49dd12c2a160eb257b9db9cf177f779ed4d93b7be82c7cd2419d55ef6211086"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10054_cropped.png",
+      "sha256": "418eaa7727b6bb10467d183a4b968ef662874081dfb97a5b631088d333a5458b"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10036_cropped.png",
+      "sha256": "39fcad1fd65e1bde36d838daa970f343c9548038c8e01a02c14d8b2c3d7e4270"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or visual reviews",
+  "authorization": "User explicitly requested another agent-selected twenty heroes and submission through the reusable script",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGllZWM0Yjc0ZjhjNzUzMWMwY2MxNWRlYWZlZGQyODU0Y2JlMmMzNmEw",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

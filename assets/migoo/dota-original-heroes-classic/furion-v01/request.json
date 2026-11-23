@@ -1,0 +1,36 @@
+{
+  "hero": "furion",
+  "name": "先知",
+  "english_name": "Nature's Prophet",
+  "render": "output/dota-hero-art-references/valve/furion.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/furion.png",
+  "sha256": "1cd07e602868b74cb21e43c77abe2c3c238775f30ca8defc0ed669fe715a5306",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/furion.png",
+      "sha256": "1cd07e602868b74cb21e43c77abe2c3c238775f30ca8defc0ed669fe715a5306"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10036_cropped.png",
+      "sha256": "39fcad1fd65e1bde36d838daa970f343c9548038c8e01a02c14d8b2c3d7e4270"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10033_cropped.png",
+      "sha256": "7490de525670351be81c87b3364d56de3af33e4449e71802c1410dad6fc0fea8"
+    }
+  ],
+  "workflow": "submit_only; no generated-art downloads or review",
+  "authorization": "User explicitly requested twenty more agent-selected canonical heroes",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGkwNzE5MGU4ZWE0ZWZhNjgxMmQ2OTM2MzgxNThjOWExOGM5OGMzZjAy",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

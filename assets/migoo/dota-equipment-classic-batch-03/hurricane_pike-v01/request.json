@@ -1,0 +1,44 @@
+{
+  "hero": "hurricane_pike",
+  "kind": "equipment",
+  "name": "飓风长戟",
+  "english_name": "Hurricane Pike",
+  "icon": "output/dota-native-equipment/hurricane_pike_png.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/hurricane_pike.png",
+  "sha256": "dcd6d1c06116cd155b3925ab1a3b1900f607f5a5b2bfc4bb0962a5db9af4ee3b",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/hurricane_pike_png.png",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/hurricane_pike.png",
+      "sha256": "dcd6d1c06116cd155b3925ab1a3b1900f607f5a5b2bfc4bb0962a5db9af4ee3b"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10223_cropped.png",
+      "media_id": "1459240187847486",
+      "sha256": "9c39054e64fd53f1fc77873f123d8604e34c4fa8c4a5c08eb07a135405407649"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10256_cropped.png",
+      "media_id": "1459239670531346",
+      "sha256": "c7bfd096b2881379a3ea4ec7c36dd631df9044448a7e3e4afbe97b02c5ee0e42"
+    }
+  ],
+  "classic_style_ids": [
+    10223,
+    10256
+  ],
+  "workflow": "Submit and report only; no generated-output download or inspection",
+  "authorization": "User requested twenty additional equipment images after accepting prior batches",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk2NDYyOGM0MDgwYTI4MWQ4ZjQzZWRiMzBhNjgyY2VjMjRjZTVlZDNm",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

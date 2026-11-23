@@ -1,0 +1,20 @@
+{
+  "heroes": [
+    "morphling",
+    "ancient_apparition",
+    "juggernaut",
+    "rattletrap",
+    "sand_king",
+    "pudge",
+    "slark",
+    "weaver",
+    "visage"
+  ],
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 9,
+  "listed_total": 47.97,
+  "free_before": 94,
+  "paid_before": 0
+}

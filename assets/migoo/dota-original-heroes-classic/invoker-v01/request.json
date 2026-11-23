@@ -1,0 +1,42 @@
+{
+  "hero": "invoker",
+  "name": "祈求者",
+  "english_name": "Invoker",
+  "render": "output/dota-hero-art-references/valve/invoker.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/invoker.png",
+  "sha256": "9b0ab824d84f162ba530c65c33bc568b456914509e46d93c1805453c31f97e59",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "generating",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/invoker.png",
+      "sha256": "9b0ab824d84f162ba530c65c33bc568b456914509e46d93c1805453c31f97e59"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10064_cropped.png",
+      "sha256": "1824b122ea11a72965a178100d872ee132903a4f84f55efff5bc9e9feee69c64"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10047_cropped.png",
+      "sha256": "3571bcb9be23ee305506acecee5c07b942e7b07424a1b57a4ac4a8ff9fc85d7e"
+    }
+  ],
+  "workflow": "submit_only; no image download or generated-art review",
+  "authorization": "User explicitly delegated selecting twenty and requested submission plus reporting only",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGlhZjg3ZWFlZjIzZTA5NDczNzU4MzdkY2Y1MWI0MDdmNGM2ZjE4ODc1",
+  "actual_models": null
+}

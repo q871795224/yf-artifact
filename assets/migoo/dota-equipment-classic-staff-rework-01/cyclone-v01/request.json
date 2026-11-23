@@ -1,0 +1,19 @@
+{
+  "hero": "cyclone",
+  "kind": "equipment_revision",
+  "name": "Eul的神圣法杖·直头短柄修订",
+  "status": "generating",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "source_task": "mt_cGlkOTRiOWYxMTA5YjY1MGUzMDllNDMxMTczMDIwOWVlZGQxMjhiYmFh",
+  "references": [],
+  "user_revision": "Straight coaxial head and shaft; shorten handle about 20%; preserve identity/materials/palette/style",
+  "workflow": "Submit only; user reviews on Migoo",
+  "authorization": "User explicitly requested these three revisions",
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGkyOGFlYmZiOGViMWM2NzcxODBlNmQ4ZDFjNjI1MmE5ZjBmNTJlNWFk",
+  "actual_models": null
+}

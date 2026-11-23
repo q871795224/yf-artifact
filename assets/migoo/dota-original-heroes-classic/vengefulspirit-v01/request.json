@@ -1,0 +1,44 @@
+{
+  "hero": "vengefulspirit",
+  "name": "复仇之魂",
+  "english_name": "Vengeful Spirit",
+  "render": "output/dota-hero-art-references/valve/vengefulspirit.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/vengefulspirit.png",
+  "sha256": "799da102ccf5df90fe63e12d0d24fe2409e1b310ef72a241a4ceaa4d932b1151",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/vengefulspirit.png",
+      "sha256": "799da102ccf5df90fe63e12d0d24fe2409e1b310ef72a241a4ceaa4d932b1151"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10047_cropped.png",
+      "sha256": "3571bcb9be23ee305506acecee5c07b942e7b07424a1b57a4ac4a8ff9fc85d7e"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10028_cropped.png",
+      "sha256": "b7c9bc857f51b9cb45d394b66271784a243901a6e157dcad1bfc2604f04bbc81"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or visual reviews",
+  "authorization": "User explicitly requested another agent-selected twenty heroes and submission through the reusable script",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGlmMjc0NGYwODdiOWU3MWIzZGNmMzI3YzhlYzJmNzIyYjRjZDI3ZjU3",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

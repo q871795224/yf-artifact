@@ -1,0 +1,56 @@
+[
+  {
+    "hero": "slark",
+    "status": "failed",
+    "exit_code": 1,
+    "task_id": "mt_cGkzMTZiNzYwY2RiYTE4MGNmOWFkOWYwZWUyZDIzMTdjYTkzMmQ0OWI5"
+  },
+  {
+    "hero": "visage",
+    "status": "failed",
+    "exit_code": 1,
+    "task_id": "mt_cGlmMTAyZjlkNzliZTAwNmUwZGVkMzc3NGJjZTliNDdkYmEyMTc2YmU1"
+  },
+  {
+    "hero": "sand_king",
+    "status": "failed",
+    "exit_code": 1,
+    "task_id": "mt_cGlhZjQ5YjMxOGNiYzk0MmNiYzY1MTdiZTI5MGZhNDAwODg4ZjMxOTk5"
+  },
+  {
+    "hero": "pudge",
+    "status": "completed",
+    "exit_code": 0,
+    "task_id": "mt_cGk0YTBmZGFmZDA2MjA0NjE3MDdlY2EwNzMyZWI4MTIwMmIyYmFkMjI5"
+  },
+  {
+    "hero": "morphling",
+    "status": "failed",
+    "exit_code": 1,
+    "task_id": "mt_cGljZWI4YTJhZWY5ZTAzYTEzYTc4YzRhMjhlNDczZTQ2NTVkNTRjNWM5"
+  },
+  {
+    "hero": "weaver",
+    "status": "completed",
+    "exit_code": 0,
+    "task_id": "mt_cGk3ZDNlZjM5YTcwYjMwNWY0YjYyMmY3NDgwNzc1MjFkYTFiZGE5OGU0"
+  },
+  {
+    "hero": "ancient_apparition",
+    "status": "completed",
+    "exit_code": 0,
+    "task_id": "mt_cGlmYjRkMTQwYWMzOWI1YjYzMjJkYzc2N2NhZWU2MzdhOWM2OTc0ZTRm"
+  },
+  {
+    "hero": "juggernaut",
+    "status": "completed",
+    "exit_code": 0,
+    "task_id": "mt_cGlmMTU4Mjc3MDk2ZmUxMTM3NDc5MzJjMWUxYzhhYzE3YTkwMjE2YmUz"
+  },
+  {
+    "hero": "rattletrap",
+    "status": "completed",
+    "exit_code": 0,
+    "task_id": "mt_cGkwNDRmODZjYjVjYzA1Y2ViN2M4OGY2ZjgxMTg3YzdjM2I1MDQxMTBi"
+  }
+]

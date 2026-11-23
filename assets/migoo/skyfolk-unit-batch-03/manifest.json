@@ -1,0 +1,940 @@
+[
+  {
+    "slug": "27-ditch-fork-frog",
+    "name": "浅沟投叉兵",
+    "task_id": "mt_cGllYWJmYWExNDMzNTdmMTE0YTE0OTk3MzQ4NzhlMjBmYmZiYTg5OGI4",
+    "outputs": [
+      {
+        "media_id": "1459226907706147",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795363484_874534cc.png",
+        "title": "shallow_ditch_spearthrower",
+        "size_bytes": 1664689
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-03/27-ditch-fork-frog/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "b69e5216a89c814b542104f72b9380120a029c50fefae3cc066ca948b3ba5fe8",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-03/references/frog.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png"
+    ],
+    "review_status": "pending"
+  },
+  {
+    "slug": "28-wicker-pack-frog",
+    "name": "苇盾背夫",
+    "task_id": "mt_cGk3OGNjMzMzZDk5MTc4MmZlYmEwMGYwN2I4M2ExZGJjY2Q5NzE0YTUw",
+    "outputs": [
+      {
+        "media_id": "1459230200120567",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795363885_4b8091ad.png",
+        "title": "苇盾背夫",
+        "size_bytes": 1824212
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-03/28-wicker-pack-frog/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "7e54ddecca0a1d78834d74e20025ac2c15f8a5adf2800032493b8d558405141c",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-03/references/frog.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png"
+    ],
+    "review_status": "pending",
+    "submitted_references": [
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/frog.png",
+        "argument": "1459226724229975"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png",
+        "argument": "1459227096392528"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png",
+        "argument": "1459227102717155"
+      }
+    ]
+  },
+  {
+    "slug": "29-channel-pole-fish",
+    "name": "渡汊探竿手",
+    "task_id": "mt_cGkwOGVmOThmZDdjZmQ4OTA0YmIwYjEzNjhjY2U4NGU4NWU4NGU1YmY1",
+    "outputs": [
+      {
+        "media_id": "1459227329856742",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795363535_0cbfdd94.png",
+        "title": "渡汊探竿手",
+        "size_bytes": 1838256
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-03/29-channel-pole-fish/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "a6bb2de1764bc8c73a6c25a196a6ba01f854dedc8bd056ce59fa5b02295811ca",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-03/references/fish.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10085.png"
+    ],
+    "review_status": "pending"
+  },
+  {
+    "slug": "30-roof-tile-bird",
+    "name": "羽巷补瓦匠",
+    "task_id": "mt_cGk0MTgxNjlhNTY1M2JjMmI2ZWZjMjk2MjQ1YThmMmU4Y2IyZGM5ZjNj",
+    "outputs": [
+      {
+        "media_id": "1459227290288954",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795363530_105d71e2.png",
+        "title": "羽巷补瓦匠",
+        "size_bytes": 1724418
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-03/30-roof-tile-bird/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "68d48966e42629c04fe3b5ae467f17f7f8fd5aca9fefb85c35cc9b30d4ba0e78",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-03/references/market-bird.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10129.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png"
+    ],
+    "review_status": "pending"
+  },
+  {
+    "slug": "31-root-digger-bird",
+    "name": "羽民挖根人",
+    "task_id": "mt_cGllYTdlYTJkMjg5YWU4OGExZjBkMTA0MzEyYWNhY2VhOGRhN2U4OGY4",
+    "outputs": [
+      {
+        "media_id": "1459230702388030",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795363947_c3ad3d9d.png",
+        "title": "羽民挖根人",
+        "size_bytes": 1853409
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-03/31-root-digger-bird/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "3fba9697bfbbacb3a01033d82f0e128f58b4c366ca14896715e28d35cf63425d",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-03/references/broad-bird.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png"
+    ],
+    "review_status": "pending",
+    "submitted_references": [
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/broad-bird.png",
+        "argument": "1459224594400493"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png",
+        "argument": "1459227102717155"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png",
+        "argument": "1459227096392528"
+      }
+    ]
+  },
+  {
+    "slug": "32-road-cobbler",
+    "name": "雨棚补靴匠",
+    "task_id": "mt_cGllYzZhYTkwZDVlNDkwNWQ5ZDJlNGFiNTYzZDc4Yzc4MzM1NzIwZGQ2",
+    "outputs": [
+      {
+        "media_id": "1459230912963418",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795363972_18dfad19.png",
+        "title": "雨棚补靴匠",
+        "size_bytes": 1744691
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-03/32-road-cobbler/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "6d6073da91ca1acb4924fad104bb1e5e8aa7a4fe985248d9b8b1edc5aac4ba28",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-03/references/guard.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10322.png"
+    ],
+    "review_status": "pending",
+    "submitted_references": [
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/guard.png",
+        "argument": "1459222529746161"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png",
+        "argument": "1459227096392528"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10322.png",
+        "argument": "1459220542383336"
+      }
+    ]
+  },
+  {
+    "slug": "33-pass-sawyer",
+    "name": "关隘拉锯工",
+    "task_id": "mt_cGk5YmU2MDQyYTY4MzUwMzZhMjMwNDAwMTU1OWRhZjc4MzdjMWViNTE0",
+    "outputs": [
+      {
+        "media_id": "1459231147475806",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795364001_38c5d874.png",
+        "title": "关隘拉锯工",
+        "size_bytes": 1625866
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-03/33-pass-sawyer/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "6343ee39c827b85bdbf59d95fc33bc407b9942072f7a4ac42fc621e81cc0d242",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-03/references/guard.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10177.png"
+    ],
+    "review_status": "pending",
+    "submitted_references": [
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/guard.png",
+        "argument": "1459222529746161"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png",
+        "argument": "1459227096392528"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10177.png",
+        "argument": "1459222531048248"
+      }
+    ]
+  },
+  {
+    "slug": "34-wall-bug-catcher",
+    "name": "苔墙捉虫童",
+    "task_id": "mt_cGllODFmNDNkYTMzOTFmMDI3OGVmNzc3ZDllNTZhNDlkNTQzYmJhNzY2",
+    "outputs": [
+      {
+        "media_id": "1459231539381043",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795364049_b264f19d.png",
+        "title": "moss_wall_bug_catcher_boy",
+        "size_bytes": 1822582
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-03/34-wall-bug-catcher/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "3894f05bbe0b3d0510d61e979d4a716ef506bfc61cc1bc318685bb90e517666f",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-03/references/market-bird.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10085.png"
+    ],
+    "review_status": "pending",
+    "submitted_references": [
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/market-bird.png",
+        "argument": "1459227100382008"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png",
+        "argument": "1459227102717155"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10085.png",
+        "argument": "1459227102020409"
+      }
+    ]
+  },
+  {
+    "slug": "35-insect-spice-vendor",
+    "name": "夜市香料贩",
+    "task_id": "mt_cGk4ODM5MmRjOTcwNzRiOGEyNTllYWUxYzg2NzYxNGUwZTI1MzcxYTJm",
+    "outputs": [
+      {
+        "media_id": "1459231778456856",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795364078_dc8efe00.png",
+        "title": "夜市香料贩",
+        "size_bytes": 1662444
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-03/35-insect-spice-vendor/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "3be6027fe6ef4a272bb78ab2e19cf744fd557b19887316d6e59bec4e4ef3c228",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-03/references/insect.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10322.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png"
+    ],
+    "review_status": "pending",
+    "submitted_references": [
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/insect.png",
+        "argument": "1459223179461454"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10322.png",
+        "argument": "1459220542383336"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png",
+        "argument": "1459227096392528"
+      }
+    ]
+  },
+  {
+    "slug": "36-stone-ditch-dredger",
+    "name": "石渠疏浚工",
+    "task_id": "mt_cGliYThiMDJkYjBkN2Y0NTFjYTUxMTUwOWYzNTIwZGNkZWIxMDFkNmVk",
+    "outputs": [
+      {
+        "media_id": "1459232199918856",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795364129_633cdc1b.png",
+        "title": "stone_canal_dredger",
+        "size_bytes": 1943719
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-03/36-stone-ditch-dredger/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "dc1cae7f8131ccadd5217942413b22a69d5dae507c6c863b3e30be703d2bb184",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-03/references/fish.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png"
+    ],
+    "review_status": "pending",
+    "submitted_references": [
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/fish.png",
+        "argument": "1459227109630803"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png",
+        "argument": "1459227096392528"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png",
+        "argument": "1459227102717155"
+      }
+    ]
+  },
+  {
+    "slug": "37-leaf-wrapped-sprout",
+    "name": "落叶裹身灵",
+    "task_id": "mt_cGk5MzQwOWQyNWI5MGQ2ZWM2OGQzMTU1OWNkZWVkMTg5ZTIzNDIyOGZl",
+    "outputs": [
+      {
+        "media_id": "1459232424370979",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795364157_02799469.png",
+        "title": "落叶裹身灵",
+        "size_bytes": 1814834
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-03/37-leaf-wrapped-sprout/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "bac40415a4cd3e8ed61df3ab98f7bf6791582ca47b69910a54d29f84c7c7f829",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-03/references/treant.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10085.png"
+    ],
+    "review_status": "pending",
+    "submitted_references": [
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/treant.png",
+        "argument": "1459218047493348"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png",
+        "argument": "1459227102717155"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10085.png",
+        "argument": "1459227102020409"
+      }
+    ]
+  },
+  {
+    "slug": "38-gravel-turner-crab",
+    "name": "砾滩翻石蟹",
+    "task_id": "mt_cGlkNTJmNzI1YTRiNDhiNzRhMmEyMGRjYWQ1NjRmZGFiYmUxOGZlMzAx",
+    "outputs": [
+      {
+        "media_id": "1459232669713193",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795364187_fdae97fa.png",
+        "title": "砾滩翻石蟹",
+        "size_bytes": 1735442
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-03/38-gravel-turner-crab/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "a4ea3160e3776d794316e8afc53d0ab36cc062f0b3909ff54e7864ad8b65e6cd",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-03/references/waterside.webp",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10085.png"
+    ],
+    "review_status": "pending",
+    "submitted_references": [
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/waterside.webp",
+        "argument": "1459219311051563"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png",
+        "argument": "1459227102717155"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10085.png",
+        "argument": "1459227102020409"
+      }
+    ]
+  },
+  {
+    "slug": "39-grain-cheek-rodent",
+    "name": "苇尾仓鼠",
+    "task_id": "mt_cGkyMmJkNGI5NDllNmQ0YzM0MGZjNGM1NDAzZDdiNDY4ZDdlZDI2NmRh",
+    "outputs": [
+      {
+        "media_id": "1459232910451966",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795364216_dbbe648a.png",
+        "title": "苇尾仓鼠",
+        "size_bytes": 1743754
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-03/39-grain-cheek-rodent/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "aa98898db59c0eb2d92789b3e4bb9f3e64cf0bdfcc7edabcf22348d96bb1890d",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-03/references/beast.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10085.png"
+    ],
+    "review_status": "pending",
+    "submitted_references": [
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/beast.png",
+        "argument": "/Users/yifei.chen/sgw/person-project/yf-artifact/assets/migoo/skyfolk-unit-batch-03/references/beast.png"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png",
+        "argument": "1459227102717155"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10085.png",
+        "argument": "1459227102020409"
+      }
+    ]
+  },
+  {
+    "slug": "40-oil-can-automaton",
+    "name": "铜罐运油偶",
+    "task_id": "mt_cGk1NWE1NWJmOGJjOWU5YzlkNzc2N2VhZjhmOGZhM2EyOTNmODg5Mjdl",
+    "outputs": [
+      {
+        "media_id": "1459233131603211",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795364243_ce9a1bfe.png",
+        "title": "铜罐运油偶",
+        "size_bytes": 1559361
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-03/40-oil-can-automaton/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "ea99f6208f18b4c470e96a35600e73a33be87210aced10cf32cfeb3179d1aa46",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-03/references/automaton.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10323.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png"
+    ],
+    "review_status": "pending",
+    "submitted_references": [
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/automaton.png",
+        "argument": "1459218056332125"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10323.png",
+        "argument": "1459222525674312"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png",
+        "argument": "1459227096392528"
+      }
+    ]
+  },
+  {
+    "slug": "41-slope-cart-hand",
+    "name": "斜坡推车人",
+    "task_id": "mt_cGllYzcyMWY5OTI2MTBmMDFhN2ExYjUyYjQwYjFhZDkyY2FlOGQ4MjI5",
+    "outputs": [
+      {
+        "media_id": "1459233346446584",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795364269_3f6c95f8.png",
+        "title": "斜坡推车人",
+        "size_bytes": 1736928
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-03/41-slope-cart-hand/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "95caf380cef5379779d70e3b11399dfa6c3c5f726a8b0f89f7a5903091056ae2",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-03/references/winged-worker.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10177.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png"
+    ],
+    "review_status": "pending",
+    "submitted_references": [
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/winged-worker.png",
+        "argument": "1459215064245488"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10177.png",
+        "argument": "1459222531048248"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png",
+        "argument": "1459227096392528"
+      }
+    ]
+  },
+  {
+    "slug": "42-saltcliff-horn-bird",
+    "name": "盐崖号角兵",
+    "task_id": "mt_cGkxMmU2YmFkMjRkNjc4MDlkZjdkMmUzNjhhM2I1MTI0MjEzMzkzYjEw",
+    "outputs": [
+      {
+        "media_id": "1459233753981737",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795364319_c261f516.png",
+        "title": "saltcliff_horn_soldier",
+        "size_bytes": 1702670
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-03/42-saltcliff-horn-bird/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "3a845fee0bfe32fbf60cbb90574609b25b9738ab5945bc7fa73113bdadc4ecdb",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-03/references/light-bird.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10177.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png"
+    ],
+    "review_status": "pending",
+    "submitted_references": [
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/light-bird.png",
+        "argument": "/Users/yifei.chen/sgw/person-project/yf-artifact/assets/migoo/skyfolk-unit-batch-03/references/light-bird.png"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10177.png",
+        "argument": "1459222531048248"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png",
+        "argument": "1459227096392528"
+      }
+    ]
+  },
+  {
+    "slug": "43-frog-barrel-washer",
+    "name": "蛙族洗桶人",
+    "task_id": "mt_cGk0ODhlODY2YjQ4Yzc1MThiZWViZjRiNmEwMjlkMzBlNDc0ZjRjMTQ0",
+    "outputs": [
+      {
+        "media_id": "1459233963524919",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795364344_229361ec.png",
+        "title": "蛙族洗桶人",
+        "size_bytes": 1892522
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-03/43-frog-barrel-washer/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "5984e27e2a862868e27ce06bf830393d0118ec25d0ff2950e83cbe79eb057bb2",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-03/references/frog.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png"
+    ],
+    "review_status": "pending",
+    "submitted_references": [
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/frog.png",
+        "argument": "1459226724229975"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png",
+        "argument": "1459227096392528"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png",
+        "argument": "1459227102717155"
+      }
+    ]
+  },
+  {
+    "slug": "44-palisade-stake-hauler",
+    "name": "木栅搬桩工",
+    "task_id": "mt_cGk3ODVjMTE1ZGVjZmEzODdlZmMyMGM0MWVhZmZiOWM3MGEyOWQwZjNj",
+    "outputs": [
+      {
+        "media_id": "1459234180965197",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795364371_711b3eac.png",
+        "title": "木栅搬桩工_插画",
+        "size_bytes": 1570790
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-03/44-palisade-stake-hauler/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "d2d3f80361b5275b8a979c74c995e4c5e66fee722b2ea7e18b5cf97695ffa4f4",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-03/references/automaton.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10323.png"
+    ],
+    "review_status": "pending",
+    "submitted_references": [
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/automaton.png",
+        "argument": "1459218056332125"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png",
+        "argument": "1459227096392528"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10323.png",
+        "argument": "1459222525674312"
+      }
+    ]
+  },
+  {
+    "slug": "45-field-spear-collector",
+    "name": "野地拾矛人",
+    "task_id": "mt_cGk1ZWQ3Mjc3NmZlODRjZDI1MmUwNGI0MWE2MGU4OTE3NDA4NWVjZmQy",
+    "outputs": [
+      {
+        "media_id": "1459234413888295",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795364400_45be619e.png",
+        "title": "野地拾矛人",
+        "size_bytes": 1902248
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-03/45-field-spear-collector/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "2bf92dce30fa81bf0a50554cf9cde37f448c2f4f44c1049eb1322cb2fbc4b2c7",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-03/references/light-bird.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10177.png"
+    ],
+    "review_status": "pending",
+    "submitted_references": [
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/light-bird.png",
+        "argument": "/Users/yifei.chen/sgw/person-project/yf-artifact/assets/migoo/skyfolk-unit-batch-03/references/light-bird.png"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png",
+        "argument": "1459227102717155"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10177.png",
+        "argument": "1459222531048248"
+      }
+    ]
+  },
+  {
+    "slug": "46-moss-horn-calf",
+    "name": "苔角幼兽",
+    "task_id": "mt_cGlkMzQyYzA0N2FiYTE2YzBkZjU3ZjczOWQxOWFiNmJiZjAzM2QwM2Vm",
+    "outputs": [
+      {
+        "media_id": "1459234639487776",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795364428_62b29e6f.png",
+        "title": "苔角幼兽插画",
+        "size_bytes": 1843247
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-03/46-moss-horn-calf/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "1861c92da001604248f6ea1c8e5723bf00637bb5d63722276f93235029ac7c69",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-03/references/beast.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png",
+      "assets/migoo/skyfolk-unit-batch-03/references/classic-10085.png"
+    ],
+    "review_status": "pending",
+    "submitted_references": [
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/beast.png",
+        "argument": "/Users/yifei.chen/sgw/person-project/yf-artifact/assets/migoo/skyfolk-unit-batch-03/references/beast.png"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png",
+        "argument": "1459227102717155"
+      },
+      {
+        "reference": "assets/migoo/skyfolk-unit-batch-03/references/classic-10085.png",
+        "argument": "1459227102020409"
+      }
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+{
+  "hero": "warlock",
+  "name": "术士",
+  "english_name": "Warlock",
+  "render": "output/dota-hero-art-references/valve/warlock-portrait.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/warlock.png",
+  "sha256": "3506327d6355935de965a9ddb52790f46d9b5602fc10e0c05ee59b83687a56c1",
+  "classic_hero_exists": false,
+  "reference_note": "Official hero portrait identifies the human Warlock; official full-body website poster is his summoned golem and must not define hero identity.",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/warlock-portrait.png",
+      "sha256": "3506327d6355935de965a9ddb52790f46d9b5602fc10e0c05ee59b83687a56c1",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/heroes/warlock.png"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10038_cropped.png",
+      "sha256": "4b81f25a9e3b11ba3cf240847395e16e44175377ef71ff57637b72407e62804a",
+      "media_id": "1459224386413367"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10054_cropped.png",
+      "sha256": "418eaa7727b6bb10467d183a4b968ef662874081dfb97a5b631088d333a5458b",
+      "media_id": "1459226064594197"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or review",
+  "authorization": "User requested this additional twenty; agent selected roster and disclosed 18 remaining new heroes plus 2 existing Classic heroes repainted",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGlhNzg4MDI1NDYxNDgxYzQwODhjMDQwYzYyNGE2NjBlZGRjNDA5M2U4",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

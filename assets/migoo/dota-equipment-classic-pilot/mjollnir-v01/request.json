@@ -1,0 +1,41 @@
+{
+  "hero": "mjollnir",
+  "kind": "equipment",
+  "name": "雷神之锤",
+  "english_name": "Mjollnir",
+  "icon": "output/dota-native-equipment/valve/mjollnir.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/mjollnir.png",
+  "classic_card_id": null,
+  "sha256": "9436d5938984120cb1a81e7ba5b58df8926a8faf907b907f0285239f58ebdeef",
+  "status": "generating",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/mjollnir.png",
+      "sha256": "9436d5938984120cb1a81e7ba5b58df8926a8faf907b907f0285239f58ebdeef",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/mjollnir.png"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10210_cropped.png",
+      "sha256": "653d31b394383641fe1dfbff72696ce7107227666e0adf4445fc8474845e57da"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10223_cropped.png",
+      "sha256": "9c39054e64fd53f1fc77873f123d8604e34c4fa8c4a5c08eb07a135405407649"
+    }
+  ],
+  "classic_style_ids": [
+    10210,
+    10223
+  ],
+  "workflow": "Submit and report only; user reviews on Migoo; no generated-art download or inspection",
+  "authorization": "User requested an initial ten Dota equipment paintings in Classic style, with agent choosing the items",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGlmOWE5MGZmYjY5NDUyZmY2MWRmZmRiZDZhNTlmODYyMmVlNzdmODM3",
+  "actual_models": null
+}

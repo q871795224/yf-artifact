@@ -1,0 +1,4 @@
+Migoo 额度：余额 60，免费 60，付费 0，冻结 0。
+Uploading assets/migoo/comic-npc-batch-05/references/automaton-kobold.png (2292864 bytes)
+Uploading assets/migoo/comic-npc-batch-05/references/classic-10137.jpg (234142 bytes)
+Uploading assets/migoo/comic-npc-batch-05/references/classic-10323.jpg (167575 bytes)

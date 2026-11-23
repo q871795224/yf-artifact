@@ -1,0 +1,2 @@
+Task mt_cGk1ZDkzOTNmYjc0NGIyMTZiMjhjNTgxYWMyZDEzNzgwNTE4YzIzYjVm started; if this command is interrupted, run migoo task get mt_cGk1ZDkzOTNmYjc0NGIyMTZiMjhjNTgxYWMyZDEzNzgwNTE4YzIzYjVm --wait
+Saved assets/migoo/hero-skill-scenes-02/16-lich-chain-frost/mt_cGk1ZDkzOTNmYjc0NGIyMTZiMjhjNTgxYWMyZDEzNzgwNTE4YzIzYjVm_1.png

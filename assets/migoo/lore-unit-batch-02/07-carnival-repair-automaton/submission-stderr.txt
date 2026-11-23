@@ -1,0 +1,4 @@
+Migoo 额度：余额 87，免费 87，付费 0，冻结 0。
+Uploading assets/migoo/lore-unit-batch-02/references/automaton-kobold.png (2292864 bytes)
+Uploading assets/migoo/lore-unit-batch-02/references/classic-10137.png (1248101 bytes)
+Uploading assets/migoo/lore-unit-batch-02/references/classic-10323.png (1224775 bytes)

@@ -1,0 +1,44 @@
+{
+  "hero": "windrunner",
+  "name": "风行者",
+  "english_name": "Windranger",
+  "render": "output/dota-hero-art-references/valve/windrunner.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/windrunner.png",
+  "sha256": "2af6282991294e397eac8529a49d7656047f4f66295a647d1a5d8ba47808f290",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/windrunner.png",
+      "sha256": "2af6282991294e397eac8529a49d7656047f4f66295a647d1a5d8ba47808f290"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10032_cropped.png",
+      "sha256": "8b097f0a16dca85624a45928f24f2781ad358bffd31fefb52605e2caa2688670"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10036_cropped.png",
+      "sha256": "39fcad1fd65e1bde36d838daa970f343c9548038c8e01a02c14d8b2c3d7e4270"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or visual reviews",
+  "authorization": "User explicitly requested another agent-selected twenty heroes and submission through the reusable script",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGkyOTQxM2NmYWM0YWJiYzMwMDQ4ZGNkODczODc3ZDAxMTY4YTZiOTll",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "style": "一张竖版9:16、满版原创奇幻营地插画。最后一张参考只看 Classic 插画的手绘笔触、明暗和色块，之前的灰底图分别是 Dota 客户端原模型的家族成员，从中读出身体结构、体型差别和分工。本图采用原创脸型、角与羽毛的细节、道具设计、配色、环境和取景。保持明显的奇幻造型夸张、扎实的手绘笔触和成片的哑光色块。人物轮廓分开、全身清楚，脸和标志道具集中到中间方形，按提示词给定数量。无文字、卡框、格子、标志、UI、水印或白边，不复刻已有虚拟资产的设计或参考图姿势。",
+  "jobs": [
+    {
+      "slug": "kobold-drift-camp",
+      "name": "矿道狗头人三员",
+      "inspiration": "狗头人营地",
+      "description": "三只同族矿道狗头人排成高低错落的横向浅弧。第一只身形低而前倾，脊背是一包浅赭麻布，第二只瘦高，两手斜架短凿叉，第三只更宽阔，手拿一轮打结测绳。共通是豌豆状大耳尖、窄吻与蹼形小脚，肤色分别浅绿、青灰和淡蓝。选土黄洞口的白昼天光，矿壁只保留大赭石面。",
+      "references": [
+        "output/dota-neutral-client-render/shots/n_creep_kobold_c-2.png",
+        "output/dota-neutral-client-render/shots/n_creep_kobold_b-2.png",
+        "output/dota-neutral-client-render/shots/n_creep_kobold_a-2.png",
+        "output/classic-full-art/set01/full_art/10092_psd.png"
+      ]
+    },
+    {
+      "slug": "centaur-valley-pair",
+      "name": "山口半人马二员",
+      "inspiration": "半人马营地",
+      "description": "两只新设计的四足半人马从浅灰山口走出，一前一后并肩而不互相遮脸。先行者窄肩、高腰、草棕马身，腰边一把短木斧。壮实同伴肩比头宽，低头倾斜握一根有扁石头的原木长杖，毛色灰蓝、耳后短宽圆角。上身与马躯连接清楚，配苔青山坡和亮银雾。",
+      "references": [
+        "output/dota-neutral-client-render/shots/n_creep_centaur_med-1.png",
+        "output/dota-neutral-client-render/shots/n_creep_centaur_lrg-2.png",
+        "output/classic-full-art/set01/full_art/10082_psd.png"
+      ]
+    },
+    {
+      "slug": "harpy-crag-pair",
+      "name": "双翼礁巡队",
+      "inspiration": "鹰身女妖营地",
+      "description": "两只原创鹰身女妖同框，体型和翼形不同。侦察者细长，铜赭飞羽斜收像燕翼，停在干净的浅黄石柱上。另一只更大，暗紫和淡蓝羽面展开一道弧，转身穿过后方空气。各有两只爪和一双翼，脸清楚，远处浅沙云和松淡蓝海面，不画多余手臂。",
+      "references": [
+        "output/dota-neutral-client-render/shots/n_creep_harpy_a-2.png",
+        "output/dota-neutral-client-render/shots/n_creep_harpy_b-2.png",
+        "output/classic-full-art/set01/full_art/10138_psd.png"
+      ]
+    },
+    {
+      "slug": "satyr-ravine-trio",
+      "name": "谷地萨特三员",
+      "inspiration": "萨特营地",
+      "description": "三只另设计的萨特在谷地石阶合站。小成员浅灰细角、腿直、手捧圆叶；中成员钴蓝毛皮、矮宽角、长前臂拎藤捆；最大成员暗紫胭脂色身体、宽肩和扁弧角，斜抱厚根锤。共同点是兽面、长臂、毛腿和裂蹄。选明亮薄雾与青松背景，身体清楚分三组。",
+      "references": [
+        "output/dota-neutral-client-render/shots/n_creep_satyr_b-2.png",
+        "output/dota-neutral-client-render/shots/n_creep_satyr_c-2.png",
+        "output/dota-neutral-client-render/shots/n_creep_satyr_a-2.png",
+        "output/classic-full-art/set01/full_art/10137_psd.png"
+      ]
+    },
+    {
+      "slug": "forest-troll-camp-pair",
+      "name": "森林巨魔营地二员",
+      "inspiration": "森林巨魔营地",
+      "description": "两个重新设计的森林巨魔在一个有柔光的临溪营地，体型长短拉开。年轻的青苔绿、比同伴矮而宽，左手撑一面小圆皮鼓，右手放低短刃；高个祭司淡黄绿长肩，戴素布头带，将一束米白草立在粗木杖顶部。共同特征长尖鼻、微露牙、瘦臂和三趾大脚，背后暖绿阔叶大色面。",
+      "references": [
+        "output/dota-neutral-client-render/shots/n_creep_forest_troll_berserker-2.png",
+        "output/dota-neutral-client-render/shots/n_creep_forest_troll_high_priest-2.png",
+        "output/classic-full-art/set01/full_art/10138_psd.png"
+      ]
+    }
+  ]
+}

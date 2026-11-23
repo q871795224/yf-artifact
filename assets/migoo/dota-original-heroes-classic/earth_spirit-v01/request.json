@@ -1,0 +1,48 @@
+{
+  "hero": "earth_spirit",
+  "name": "大地之灵",
+  "english_name": "Earth Spirit",
+  "render": "output/dota-hero-art-references/valve/earth_spirit.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/earth_spirit.png",
+  "sha256": "1657bd5db348d5c679dc0a6c938f6464cd6c284cd5e34d2dde5c8c4e3c5267f2",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/earth_spirit.png",
+      "sha256": "1657bd5db348d5c679dc0a6c938f6464cd6c284cd5e34d2dde5c8c4e3c5267f2"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10033_cropped.png",
+      "sha256": "7490de525670351be81c87b3364d56de3af33e4449e71802c1410dad6fc0fea8"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10025_cropped.png",
+      "sha256": "beb16ce1fd3645da63be4f6ff6019fcb1896e626a454f3cdab0213f51071e24a"
+    }
+  ],
+  "workflow": "submit_only; no generated-art downloads or review",
+  "authorization": "User explicitly requested twenty more agent-selected canonical heroes",
+  "listed_price": 5.33,
+  "attempt": 3,
+  "cli_exit_code": 0,
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ],
+  "previous_attempts": [
+    {
+      "task_id": "mt_cGk3N2Q3NmJiNGYyNjI5YmIyOTFmNDI1N2EyMzBlN2NhZTdiMzVkM2Jj",
+      "error": {
+        "code": "task_failed",
+        "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+        "retryable": true,
+        "reason": "busy"
+      }
+    }
+  ],
+  "resume_authorization": "User explicitly extended pause to 2026-11-24 00:00 Asia/Shanghai",
+  "task_id": "mt_cGlmZDY4MjgwNTE1MDhlNWJjMmYwZTFiMTdlYWI2OTE2YjY1MmIzOTJh"
+}

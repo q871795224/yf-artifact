@@ -1,0 +1,562 @@
+[
+  {
+    "slug": "11-market-weigher",
+    "name": "悬市秤货人",
+    "task_id": "mt_cGk4NjdlN2E3YjJmYjk4ZDNiNjI5Mzg0MWJkNWNjM2E0ZTU2MmI2ODNh",
+    "outputs": [
+      {
+        "media_id": "1459220740613402",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795362731_b4233444.png",
+        "title": "悬市秤货人",
+        "size_bytes": 1518463
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-02/11-market-weigher/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "8b6e04a72a0d0d263c9aeaf314938fc9bb21000298b4bd84692745a9ed625f15",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-02/references/market-bird.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10322.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10092.png"
+    ],
+    "review_status": "pending"
+  },
+  {
+    "slug": "12-awning-tailor",
+    "name": "缝篷裁衣匠",
+    "task_id": "mt_cGk2YmZkOGRhNTliOTkzZTAxZDBkYjIwZDNiMWU3NTc4MGNhZDVhZDVk",
+    "outputs": [
+      {
+        "media_id": "1459213923943676",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795361899_c506f09e.png",
+        "title": "缝篷裁衣匠",
+        "size_bytes": 1511624
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-02/12-awning-tailor/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "f8512655e2dd45d1694d7edccd332b56699cd74caa0380dfdb8f873f837f6dd1",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-02/references/broad-bird.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10092.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10322.png"
+    ],
+    "review_status": "pending"
+  },
+  {
+    "slug": "13-snow-path-clearer",
+    "name": "雪径铲道工",
+    "task_id": "mt_cGk5NzQ3MTU5NmY0ZGFiZmNmYjYyNTNiODg2NzQxODA2YTY4NjA3ZWNj",
+    "outputs": [
+      {
+        "media_id": "1459215260394739",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795362062_3e3dc462.png",
+        "title": "雪径铲道工立绘",
+        "size_bytes": 1632642
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-02/13-snow-path-clearer/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "3feb579b4807822f4e640cc3ca6b38869e5a1cf2eef2416d85b4f0085dfd3d55",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-02/references/winter-bird.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10177.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10092.png"
+    ],
+    "review_status": "pending"
+  },
+  {
+    "slug": "14-cliff-rope-hand",
+    "name": "悬梯收绳工",
+    "task_id": "mt_cGkxYjcyNWJkNzhiNGQ2OTk5MDE1NzRhMGU3ODBjZjM1Mzc0YTg3NWYw",
+    "outputs": [
+      {
+        "media_id": "1459215261033716",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795362062_60d29ef3.png",
+        "title": "悬梯收绳工立绘",
+        "size_bytes": 1928030
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-02/14-cliff-rope-hand/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "7a3bc43d82bd6424aea00b500d8394f1dd4ae9afaff38cf31af06e5f7676c058",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-02/references/winged-worker.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10129.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10328.png"
+    ],
+    "review_status": "pending"
+  },
+  {
+    "slug": "15-reed-whistler",
+    "name": "虫族传哨员",
+    "task_id": "mt_cGk0MjM2OWQxMWNmZDFjMDdiY2VhZmUyZjc3NTMxYTEzNmVhZTViM2Fk",
+    "outputs": [
+      {
+        "media_id": "1459216909329686",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795362263_d57c3767.png",
+        "title": "虫族传哨员",
+        "size_bytes": 1690893
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-02/15-reed-whistler/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "b86cec51219b1d9f07cb62537a29bbbd14491faff2298282f91d8f0de730e3ff",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-02/references/insect.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10328.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10085.png"
+    ],
+    "review_status": "pending"
+  },
+  {
+    "slug": "16-shallows-clam-diver",
+    "name": "鱼族采贝人",
+    "task_id": "mt_cGliYjQyYmVkMzllZmM1NjhlZWEyMmZmNTk2ODBjN2VlOTI2YWMyYTQ1",
+    "outputs": [
+      {
+        "media_id": "1459216954925897",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795362268_16a4d7c2.png",
+        "title": "fishfolk_shell_gatherer",
+        "size_bytes": 1886481
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-02/16-shallows-clam-diver/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "486e45a74feefd3c77405e57ee63dce6e5dde81207ed8b7fe93d2d5e773b0abf",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-02/references/fish.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10092.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10328.png"
+    ],
+    "review_status": "pending"
+  },
+  {
+    "slug": "17-twig-scavenger",
+    "name": "枝灵拾柴者",
+    "task_id": "mt_cGk3MmNjYmZlYmVjZjVhNzEyY2QzMTNlMWI3YzI5Y2I0ZjdjOTI2NWQy",
+    "outputs": [
+      {
+        "media_id": "1459218271601910",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795362429_7fb5abde.png",
+        "title": "枝灵拾柴者立绘",
+        "size_bytes": 1947299
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-02/17-twig-scavenger/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "cb2344fe18e7a260088b0646848346990b5eef136caf54703de02f555b06edb5",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-02/references/treant.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10328.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10085.png"
+    ],
+    "review_status": "pending"
+  },
+  {
+    "slug": "18-brass-street-sweeper",
+    "name": "铜皮扫街偶",
+    "task_id": "mt_cGliNTlkNmVmZmFmZDg2NDgyNTY0YTlmMzZmOTI1ZDRiYWRmYjQ1OWFi",
+    "outputs": [
+      {
+        "media_id": "1459218260034831",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795362428_4e5285f2.png",
+        "title": "copper_street_sweeper_automaton",
+        "size_bytes": 1976446
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-02/18-brass-street-sweeper/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "53624d109e528b5f57d9bbaef88a22b0b8041e691fd3194da32308a8de5ba814",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-02/references/automaton.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10323.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10092.png"
+    ],
+    "review_status": "pending"
+  },
+  {
+    "slug": "19-camp-porridge-cook",
+    "name": "军灶舀粥人",
+    "task_id": "mt_cGk4YTE4ZmM3ZTFhMWY5NzUzNzIxZDE2MDkwNzI2MWQzOTkzNmIwMzEz",
+    "outputs": [
+      {
+        "media_id": "1459219481085201",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795362577_53271feb.png",
+        "title": "军灶舀粥人",
+        "size_bytes": 1531731
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-02/19-camp-porridge-cook/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "9df2b167765cd96151759941e44f50487a2998b0af91f073c5e2ef6665321059",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-02/references/guard.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10092.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10177.png"
+    ],
+    "review_status": "pending"
+  },
+  {
+    "slug": "20-reedland-pack-snail",
+    "name": "泥滩驮壳螺",
+    "task_id": "mt_cGkyNGZlMmI1NDJhOWVlZTY3NmI5ZmNiMWE3MTRjNDA4ZTQ3OTQyMDZi",
+    "outputs": [
+      {
+        "media_id": "1459219534381860",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795362583_f37ca711.png",
+        "title": "泥滩驮壳螺",
+        "size_bytes": 1767734
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-02/20-reedland-pack-snail/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "83c0e680e4287ed6008311543f92b1ee0ed2316dae208d80521cc9b6e3726e5c",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-02/references/waterside.webp",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10328.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10085.png"
+    ],
+    "review_status": "pending"
+  },
+  {
+    "slug": "21-winged-courier",
+    "name": "羽巷送信脚夫",
+    "task_id": "mt_cGk0M2FhNzhjYjBjZGIyZGYwMTI0NTk1YmNkYjc3ODJjMjQ4M2JjYTM0",
+    "outputs": [
+      {
+        "media_id": "1459222726968108",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795362973_21273465.png",
+        "title": "羽巷送信脚夫",
+        "size_bytes": 1877995
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-02/21-winged-courier/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "d343217cabe40a576770398da81abe1602518420e31f966463ea13ae94e3a136",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-02/references/market-bird.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10129.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10177.png"
+    ],
+    "review_status": "pending"
+  },
+  {
+    "slug": "22-field-watch-bird",
+    "name": "田埂看守",
+    "task_id": "mt_cGk4N2ZjZjJjMzA0MDNjZDA3OWVlNjQ5NDlmZWNhNTRkYmIzNTIzMDU4",
+    "outputs": [
+      {
+        "media_id": "1459224770553119",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795363223_87cbe61f.png",
+        "title": "田埂看守立绘",
+        "size_bytes": 1772955
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-02/22-field-watch-bird/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "9f98844df1d106c7c0f245cb2ac664f6dbcc87a876b65812dd664e4d285e4eca",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-02/references/broad-bird.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10328.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10092.png"
+    ],
+    "review_status": "pending"
+  },
+  {
+    "slug": "23-bridge-paver",
+    "name": "石桥补路工",
+    "task_id": "mt_cGllNDI4YTMzOWU5ZmM3MjI0NDRhYTY2NDRiZTE3NTdjYWMzYTcwN2Nh",
+    "outputs": [
+      {
+        "media_id": "1459222709200135",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795362971_d8f2bdcc.png",
+        "title": "石桥补路工_立绘",
+        "size_bytes": 1618364
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-02/23-bridge-paver/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "ac3584cd21376d718e8152c6ba9a4f687e951cc0f24f9d4141a89e9b734a1024",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-02/references/guard.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10092.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10323.png"
+    ],
+    "review_status": "pending"
+  },
+  {
+    "slug": "24-reed-water-carrier",
+    "name": "芦棚挑水人",
+    "task_id": "mt_cGk4Mjg4NWUyY2Y2MmEzMWFlNWU4NDJlMjkwNjQzM2MyZGVmM2JiODc2",
+    "outputs": [
+      {
+        "media_id": "1459223373776108",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795363052_a52edbda.png",
+        "title": "芦棚挑水人立绘",
+        "size_bytes": 1815762
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-02/24-reed-water-carrier/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "6fbd516590a42a4605b1b2cff455ca9353e8180e76b2b2a717e962b276dc4954",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-02/references/insect.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10328.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10085.png"
+    ],
+    "review_status": "pending"
+  },
+  {
+    "slug": "25-salt-flat-fish",
+    "name": "鱼族晒盐工",
+    "task_id": "mt_cGlkZjFlNjJmYzcxMGUxOTJhY2Q5MDFlYWYzM2RjODNlNjUwN2Y1ZDVm",
+    "outputs": [
+      {
+        "media_id": "1459223398794482",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795363055_9d1abf49.png",
+        "title": "鱼族晒盐工",
+        "size_bytes": 1831652
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-02/25-salt-flat-fish/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "3bced4e287fb10803f0f8d5213b8b27bcd495dcfaac2e88752a421c67ecc6645",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-02/references/fish.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10092.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10328.png"
+    ],
+    "review_status": "pending"
+  },
+  {
+    "slug": "26-raft-knot-frog",
+    "name": "筏沿结绳工",
+    "task_id": "mt_cGlhMjgzNmVjOGQzMjFhYzVkZDAyYWNlY2M1ZjkzZDdmNDZhOGU5YzUw",
+    "outputs": [
+      {
+        "media_id": "1459223291118819",
+        "type": "image",
+        "mime_type": "image/png",
+        "width": 768,
+        "height": 1360,
+        "duration_ms": null,
+        "name": "imagen_original_1795363042_fd0e9a96.png",
+        "title": "筏沿结绳工立绘",
+        "size_bytes": 1643523
+      }
+    ],
+    "applied": {
+      "models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "resolution": "1K",
+      "aspect_ratio": "9:16"
+    },
+    "file": "assets/migoo/skyfolk-unit-batch-02/26-raft-knot-frog/original.png",
+    "width": 768,
+    "height": 1360,
+    "sha256": "faa68872b53a441b177b366e93e6ed27db1ad770fc7c2c75d8a7aa1c776be0aa",
+    "references": [
+      "assets/migoo/skyfolk-unit-batch-02/references/frog.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10092.png",
+      "assets/migoo/skyfolk-unit-batch-02/references/classic-10328.png"
+    ],
+    "review_status": "pending"
+  }
+]

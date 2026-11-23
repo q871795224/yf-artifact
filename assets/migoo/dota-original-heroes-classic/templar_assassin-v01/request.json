@@ -1,0 +1,36 @@
+{
+  "hero": "templar_assassin",
+  "name": "圣堂刺客",
+  "english_name": "Templar Assassin",
+  "render": "output/dota-hero-art-references/valve/templar_assassin.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/templar_assassin.png",
+  "sha256": "7fb78df87ac115d6c8733f432554c8e9a1709b55ee301954a81f5129302e021e",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/templar_assassin.png",
+      "sha256": "7fb78df87ac115d6c8733f432554c8e9a1709b55ee301954a81f5129302e021e"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10047_cropped.png",
+      "sha256": "3571bcb9be23ee305506acecee5c07b942e7b07424a1b57a4ac4a8ff9fc85d7e"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10064_cropped.png",
+      "sha256": "1824b122ea11a72965a178100d872ee132903a4f84f55efff5bc9e9feee69c64"
+    }
+  ],
+  "workflow": "submit_only; no generated-art downloads or review",
+  "authorization": "User explicitly requested twenty more agent-selected canonical heroes",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGlhY2I4ZDgzOTA0YzE4NGFjZjQwYmNhMjY1N2U3M2VlYWRiYzg4OWIw",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

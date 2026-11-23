@@ -1,0 +1,37 @@
+{
+  "hero": "wisp",
+  "name": "艾欧",
+  "english_name": "Io",
+  "render": "output/dota-hero-art-references/valve/wisp.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/wisp.png",
+  "sha256": "3998042f6909b7aa35c832abb93fd9b7b92a3c20c23e068172ff57d92ab30d17",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/wisp.png",
+      "sha256": "3998042f6909b7aa35c832abb93fd9b7b92a3c20c23e068172ff57d92ab30d17"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10355_cropped.png",
+      "sha256": "d271b9bdae6431e027a602db19f845e19786f8b08d1460873df0c7ef82de1dec"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10010_cropped.png",
+      "sha256": "8f7b5240ccf4797b0e744273bb66c1a936ddf4ff32fc7f167aebc3f6449914e7"
+    }
+  ],
+  "workflow": "submit_only; no generated-art downloads or review",
+  "authorization": "User explicitly requested twenty more agent-selected canonical heroes",
+  "listed_price": 5.33,
+  "attempt": 2,
+  "cli_exit_code": 0,
+  "resume_authorization": "User explicitly extended pause to 2026-11-24 00:00 Asia/Shanghai",
+  "task_id": "mt_cGkzMDUyOTZhOWU4YTU4ZmVlZmUyYzEzMTQxNDhkMzliYWQ3NWI5Yjdi",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

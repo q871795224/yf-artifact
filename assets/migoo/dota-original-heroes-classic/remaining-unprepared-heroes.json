@@ -1,0 +1,92 @@
+[
+  {
+    "hero": "warlock",
+    "name": "Warlock",
+    "id": 37
+  },
+  {
+    "hero": "gyrocopter",
+    "name": "Gyrocopter",
+    "id": 72
+  },
+  {
+    "hero": "keeper_of_the_light",
+    "name": "Keeper of the Light",
+    "id": 90
+  },
+  {
+    "hero": "troll_warlord",
+    "name": "Troll Warlord",
+    "id": 95
+  },
+  {
+    "hero": "elder_titan",
+    "name": "Elder Titan",
+    "id": 103
+  },
+  {
+    "hero": "abyssal_underlord",
+    "name": "Underlord",
+    "id": 108
+  },
+  {
+    "hero": "monkey_king",
+    "name": "Monkey King",
+    "id": 114
+  },
+  {
+    "hero": "pangolier",
+    "name": "Pangolier",
+    "id": 120
+  },
+  {
+    "hero": "dark_willow",
+    "name": "Dark Willow",
+    "id": 119
+  },
+  {
+    "hero": "grimstroke",
+    "name": "Grimstroke",
+    "id": 121
+  },
+  {
+    "hero": "snapfire",
+    "name": "Snapfire",
+    "id": 128
+  },
+  {
+    "hero": "dawnbreaker",
+    "name": "Dawnbreaker",
+    "id": 135
+  },
+  {
+    "hero": "marci",
+    "name": "Marci",
+    "id": 136
+  },
+  {
+    "hero": "primal_beast",
+    "name": "Primal Beast",
+    "id": 137
+  },
+  {
+    "hero": "muerta",
+    "name": "Muerta",
+    "id": 138
+  },
+  {
+    "hero": "ringmaster",
+    "name": "Ringmaster",
+    "id": 131
+  },
+  {
+    "hero": "kez",
+    "name": "Kez",
+    "id": 145
+  },
+  {
+    "hero": "largo",
+    "name": "Largo",
+    "id": 155
+  }
+]

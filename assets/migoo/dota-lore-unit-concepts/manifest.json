@@ -1,0 +1,194 @@
+{
+  "images": [
+    {
+      "name": "林地矛兵",
+      "image": "legion-woodland-spearman/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "d4af333e10cee22beb71050143d2933081c824c8cff53998b9054c8d99d6491a",
+      "task_id": "mt_cGljZjNmZWIzNWJhNjM1OTEyNDI1YWQ4MmZlMTdkNTJlYTgwMjUwMjY1",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459209774425329",
+      "inspiration": "古铜军团"
+    },
+    {
+      "name": "步盾兵",
+      "image": "legion-shield-infantry/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "96f014aa2a576e8fbd45624aa2020623debd1a856e5552abdf4d58f432f60ba5",
+      "task_id": "mt_cGkxMTA3ZjU4YjM3Y2QyOGRkNWVjNGE3OTIyNjkzOTQ1NTAxY2I2YzI0",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459209839862592",
+      "inspiration": "古铜军团"
+    },
+    {
+      "name": "旗队传令兵",
+      "image": "legion-standard-runner/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "3b8b3b060dd509385a868adac66b1260d4120b21ea0cea2764af2f7cbd825849",
+      "task_id": "mt_cGkyZGRkMzgxODU3ZDg3ZjhiNjQ4NTM0ODY4ODc4ZTg0ZjgxNDgxNDE2",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459209839715615",
+      "inspiration": "古铜军团"
+    },
+    {
+      "name": "水寨撑篙手",
+      "image": "reed-harbor-punter/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "04b424e11015e11bccc29e7774012c5705163bfbccf6fc6354e9ca2bd6bc04f2",
+      "task_id": "mt_cGkxYmUyZDc0MjIyNzY4NDM2YmY5YTE3N2ZjNjY3ZDc5YWU4MTFmN2I2",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459210296313096",
+      "inspiration": "大屿前来"
+    },
+    {
+      "name": "浅滩巡守",
+      "image": "reed-shoal-watch/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "8822338a0b3b293c0b0590db38407dc421487c984741c564cb6462c417622860",
+      "task_id": "mt_cGk0ZjRmZmFhMTlkNDFiNjQyNGY4ZDI0M2ZlNmJhYWQyMWNlZjg0ZDZi",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459210228753646",
+      "inspiration": "大屿前来"
+    },
+    {
+      "name": "蛙族乐徒",
+      "image": "reed-bard-apprentice/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "bced96cf098b68c454675a2960be763cb800d6abc853e6bad599a7d61891bcaf",
+      "task_id": "mt_cGljMjUyN2Y4ZWJjZjgzMzIwMGUyYzIzZWU5NTNjNTc0YjY2ZmUzZTEz",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459210243122432",
+      "inspiration": "大屿前来"
+    },
+    {
+      "name": "机械狗头人工兵",
+      "image": "carnival-kobold-mechanic/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "cace26e4b628c72e69882a23cec749e4dfdfe912111c5562135fc81c5b11b0d7",
+      "task_id": "mt_cGkxNjYxYjkwNzFlYzBjOWQ0OWRkM2QxZTU4MzYxYWNiOWJmNjE5YzU3",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459210788635440",
+      "inspiration": "暗黑狂欢"
+    },
+    {
+      "name": "鱼人灯吏",
+      "image": "carnival-fish-lamplighter/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "f24c4af8e59b6c6432605b5e7dbd7e27213d255a4481166766f84930cba4886a",
+      "task_id": "mt_cGljZjRlNzI4NmY1M2JlMWYxMWJkZGM0Y2RlOWMwMmI4ZWM3ZDEzMmRj",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459210893640944",
+      "inspiration": "暗黑狂欢"
+    },
+    {
+      "name": "树人车场勤杂",
+      "image": "carnival-treant-yardhand/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "87f8546c79effe588f3cf05cb6086581c53c47a23c32f0542a7b800bb668f9d4",
+      "task_id": "mt_cGlhNjMyN2I2OTU1ZTVjOWNhNTE5NTVkNmM2ZjMzNmNlOWY4ZmMxYjdh",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459210779157295",
+      "inspiration": "暗黑狂欢"
+    },
+    {
+      "name": "车队修补匠",
+      "image": "carnival-wagon-patcher/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "32df4336ca3474783e3041b3dde761e8f9612714bb1c42cad60d1afeb88a7535",
+      "task_id": "mt_cGlhZjM4NTkzMzdkNDc2YWM1MjBjNTIzODNhNDE2YzBiNjgzMDE4YTcx",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459211377296670",
+      "inspiration": "暗黑狂欢"
+    }
+  ]
+}

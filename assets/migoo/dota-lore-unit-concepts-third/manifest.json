@@ -1,0 +1,232 @@
+{
+  "images": [
+    {
+      "name": "古铜军团营桩兵",
+      "image": "legion-ground-staker/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "75730cac87eb6526175ef5c2b01460f8ff5198a84e89fbdbd87e621200176234",
+      "task_id": "mt_cGljZDdiM2JjNDlkOTk4MzJjN2I3NjIzZGNlY2NkNGRhNTU1MGY5MWQy",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459229762684129",
+      "inspiration": "古铜军团"
+    },
+    {
+      "name": "古铜军团驮兽牵引手",
+      "image": "legion-pack-handler/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "ac1b464b0d78885a3bd7db99b1c91672903ff2d1c230c065d91472adf2880678",
+      "task_id": "mt_cGkxY2UzODRmZDAxMzllYjFiNWJjZTBhNzc5NjRlNTc3MjJhNmMzMTRl",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459229752271669",
+      "inspiration": "古铜军团"
+    },
+    {
+      "name": "古铜军团包扎员",
+      "image": "legion-field-dresser/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "fd84fe7d734000aa42ffa3fac9e5d4f8c4d2dd12622d2dc785731a71c27a5357",
+      "task_id": "mt_cGlkYjA2NTBkOGZmMzg5ZDQxOGYxNTJjMzA4M2FmOTlmMWFmMWY2NWQx",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459229778543419",
+      "inspiration": "古铜军团"
+    },
+    {
+      "name": "古铜军团山口哨兵",
+      "image": "legion-pass-sentry/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "8a6ecbb6312cca9f5aac79542b119836336a34199886bbf67da3eca8b7c6cee8",
+      "task_id": "mt_cGljYjQ0YWY1MmZlZjQ0NjhiODc2OWNkNGViZTI1NGMwZTg1MTdkZTky",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459229991691083",
+      "inspiration": "古铜军团"
+    },
+    {
+      "name": "水寨浮灯管理员",
+      "image": "frog-lantern-tender/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "82f9b7b77746850602e87378b3e33c8ccbd93656f5795f5fcb21db05db169d60",
+      "task_id": "mt_cGlkZDBlMWUyOGY5M2QwNGM1OTVhOWYwMGFkYjdmYTcxMzViMjgzY2Zi",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459230828454710",
+      "inspiration": "大屿前来"
+    },
+    {
+      "name": "水寨潜水系缆手",
+      "image": "frog-rope-diver/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "a8ed0be4d599f17723ae9c1281852dd86468f7847f4a54971be92f9228c19563",
+      "task_id": "mt_cGk4MzQ0N2U3YTNkYzYxNjJkY2NiZjFkYjE0ZmYyNTgzY2ZkNjZlYWM1",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459229991109450",
+      "inspiration": "大屿前来"
+    },
+    {
+      "name": "水寨陶罐匠",
+      "image": "frog-clay-potter/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "d9ced0ec628c63285ed360a3135c70d9617a7f990866e8a7d773b07412a7fcdc",
+      "task_id": "mt_cGlmM2MzNDZjY2NmNGRlODkyNDAwMWE5MzVhNTExYWI2MTA2MTZiMmE4",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459230189429549",
+      "inspiration": "大屿前来"
+    },
+    {
+      "name": "水寨水闸工",
+      "image": "frog-lock-gate-worker/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "528a0870a198e672c5cff754170f5c91e339847594033eef0ff90dbbea7e7583",
+      "task_id": "mt_cGkxNWU1MGY5NTk5ZTc1ZmNlNGIxNjE5NGQxMDllZjFhNWNmYmQxMzM1",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459230223663961",
+      "inspiration": "大屿前来"
+    },
+    {
+      "name": "机械狗头人信号工",
+      "image": "carnival-kobold-signal/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "40a611756eb50c5b2778c5fc908a4431602ef4a161fe3a2a1fe2485a12492e31",
+      "task_id": "mt_cGk3Y2VlNmQzMmU5ZmQyYTQyNDQ0YWYyNmZiYWI5MDBkOTQ5MDY5NWJi",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459231062180686",
+      "inspiration": "暗黑狂欢"
+    },
+    {
+      "name": "鱼人渡梯工",
+      "image": "carnival-fish-gangway/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "ce26f0a2bc3e05f4be7550adccfb786b94f48038044f3a871a363a1a475e50c3",
+      "task_id": "mt_cGlmOGRlYTljYTI5NTc2MWMxMWE2OTM2NTIzOTdiYjgwMWQxNzg1ZWFi",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459230631887687",
+      "inspiration": "暗黑狂欢"
+    },
+    {
+      "name": "树人车厢点货员",
+      "image": "carnival-treant-crate-tally/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "9188f894b314f2feba37d7e1ed45bd5220b31f60838813c6095f99b3a2e27711",
+      "task_id": "mt_cGllZGRjOWQzNjE5YzU0NTcyOTlkZWU4N2FiZTEzZDM0ZjFjMzIzMzdj",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459231279727903",
+      "inspiration": "暗黑狂欢"
+    },
+    {
+      "name": "车队戏服裁补匠",
+      "image": "carnival-costume-mender/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "d0ccff15a3ffa3213c7cd8e6bf960442b5ebc7b5deef39813d89c419af22df19",
+      "task_id": "mt_cGkwMGRiMTJlOThiZTQzOTVjNmM5N2Q2ZGE4N2M4M2JlOWNhMmJhYTZl",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459231500027149",
+      "inspiration": "暗黑狂欢"
+    }
+  ]
+}

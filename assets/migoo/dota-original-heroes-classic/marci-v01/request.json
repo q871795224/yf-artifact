@@ -1,0 +1,41 @@
+{
+  "hero": "marci",
+  "name": "玛西",
+  "english_name": "Marci",
+  "render": "output/dota-hero-art-references/valve/marci.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/marci.png",
+  "sha256": "e0cf643e733b128b2072b7beb5fe16a5a5ac2c2426c6f076d9591ba8934fb66e",
+  "classic_hero_exists": false,
+  "reference_note": "Official transparent render",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/marci.png",
+      "sha256": "e0cf643e733b128b2072b7beb5fe16a5a5ac2c2426c6f076d9591ba8934fb66e",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/marci.png"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10047_cropped.png",
+      "sha256": "3571bcb9be23ee305506acecee5c07b942e7b07424a1b57a4ac4a8ff9fc85d7e",
+      "media_id": "1459226674341118"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10064_cropped.png",
+      "sha256": "1824b122ea11a72965a178100d872ee132903a4f84f55efff5bc9e9feee69c64",
+      "media_id": "1459226672956217"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or review",
+  "authorization": "User requested this additional twenty; agent selected roster and disclosed 18 remaining new heroes plus 2 existing Classic heroes repainted",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGllMGQ4YTE5ZWExMmRlMzMxNTVmMzJhYmJhNTgwYTNkOWRkMTQwYTk2",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

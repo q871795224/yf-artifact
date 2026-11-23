@@ -1,0 +1,142 @@
+{
+  "10024": {
+    "source": "output/classic-full-art/set01/full_art/10024_psd.png",
+    "box": [
+      108,
+      0,
+      932,
+      1024
+    ],
+    "output": "output/dota-hero-art-references/review/classic-cropped/10024_cropped.png"
+  },
+  "10355": {
+    "source": "output/classic-full-art/set01/full_art/10355_psd.png",
+    "box": [
+      0,
+      73,
+      1024,
+      1023
+    ],
+    "output": "output/dota-hero-art-references/review/classic-cropped/10355_cropped.png"
+  },
+  "10038": {
+    "source": "output/classic-full-art/set01/full_art/10038_psd.png",
+    "box": [
+      41,
+      0,
+      984,
+      1024
+    ],
+    "output": "output/dota-hero-art-references/review/classic-cropped/10038_cropped.png"
+  },
+  "10064": {
+    "source": "output/classic-full-art/set01/full_art/10064_psd.png",
+    "box": [
+      98,
+      0,
+      924,
+      1024
+    ],
+    "output": "output/dota-hero-art-references/review/classic-cropped/10064_cropped.png"
+  },
+  "10054": {
+    "source": "output/classic-full-art/set01/full_art/10054_psd.png",
+    "box": [
+      107,
+      0,
+      929,
+      1024
+    ],
+    "output": "output/dota-hero-art-references/review/classic-cropped/10054_cropped.png"
+  },
+  "10047": {
+    "source": "output/classic-full-art/set01/full_art/10047_psd.png",
+    "box": [
+      87,
+      0,
+      957,
+      1024
+    ],
+    "output": "output/dota-hero-art-references/review/classic-cropped/10047_cropped.png"
+  },
+  "10025": {
+    "source": "output/classic-full-art/set01/full_art/10025_psd.png",
+    "box": [
+      93,
+      0,
+      917,
+      1024
+    ],
+    "output": "output/dota-hero-art-references/review/classic-cropped/10025_cropped.png"
+  },
+  "10022": {
+    "source": "output/classic-full-art/set01/full_art/10022_psd.png",
+    "box": [
+      105,
+      0,
+      1014,
+      1024
+    ],
+    "output": "output/dota-hero-art-references/review/classic-cropped/10022_cropped.png"
+  },
+  "10070": {
+    "source": "output/classic-full-art/set01/full_art/10070_psd.png",
+    "box": [
+      96,
+      0,
+      926,
+      1024
+    ],
+    "output": "output/dota-hero-art-references/review/classic-cropped/10070_cropped.png"
+  },
+  "10033": {
+    "source": "output/classic-full-art/set01/full_art/10033_psd.png",
+    "box": [
+      105,
+      0,
+      916,
+      1024
+    ],
+    "output": "output/dota-hero-art-references/review/classic-cropped/10033_cropped.png"
+  },
+  "10023": {
+    "source": "output/classic-full-art/set01/full_art/10023_psd.png",
+    "box": [
+      107,
+      0,
+      916,
+      1024
+    ],
+    "output": "output/dota-hero-art-references/review/classic-cropped/10023_cropped.png"
+  },
+  "10028": {
+    "source": "output/classic-full-art/set01/full_art/10028_psd.png",
+    "box": [
+      64,
+      0,
+      986,
+      1024
+    ],
+    "output": "output/dota-hero-art-references/review/classic-cropped/10028_cropped.png"
+  },
+  "10010": {
+    "source": "output/classic-full-art/set01/full_art/10010_psd.png",
+    "box": [
+      96,
+      0,
+      926,
+      1024
+    ],
+    "output": "output/dota-hero-art-references/review/classic-cropped/10010_cropped.png"
+  },
+  "10046": {
+    "source": "output/classic-full-art/set01/full_art/10046_psd.png",
+    "box": [
+      108,
+      0,
+      947,
+      1024
+    ],
+    "output": "output/dota-hero-art-references/review/classic-cropped/10046_cropped.png"
+  }
+}

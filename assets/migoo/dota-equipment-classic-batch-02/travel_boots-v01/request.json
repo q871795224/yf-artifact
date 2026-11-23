@@ -1,0 +1,44 @@
+{
+  "hero": "travel_boots",
+  "kind": "equipment",
+  "name": "远行鞋",
+  "english_name": "Boots of Travel",
+  "icon": "output/dota-native-equipment/valve/travel_boots.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/travel_boots.png",
+  "sha256": "051716f4d23494aa0f259cc77ee1e0b19c0511c00923889844d711dc53930e03",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/travel_boots.png",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/travel_boots.png",
+      "sha256": "051716f4d23494aa0f259cc77ee1e0b19c0511c00923889844d711dc53930e03"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10203_cropped.png",
+      "media_id": "1459238626796797",
+      "sha256": "f673398c827611f895ee172b35d22384e0c2302da855cf7cca69994ed2166ac4"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10224_cropped.png",
+      "media_id": "1459239138518268",
+      "sha256": "6d67f5e3bdf3c47cfae2d365ca89cc7d307336e5bb1f4ce51ef48e27698c15e3"
+    }
+  ],
+  "classic_style_ids": [
+    10203,
+    10224
+  ],
+  "workflow": "Submit and report only; user reviews on Migoo",
+  "authorization": "User approved first ten equipment images and requested twenty additional equipment images",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGljZWNhMmI3ZjY0NGJkZjQxZDk3NTg0YmFmMjMzMGEzNTkxOThlZTdj",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

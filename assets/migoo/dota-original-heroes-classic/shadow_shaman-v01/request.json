@@ -1,0 +1,44 @@
+{
+  "hero": "shadow_shaman",
+  "name": "暗影萨满",
+  "english_name": "Shadow Shaman",
+  "render": "output/dota-hero-art-references/valve/shadow_shaman.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/shadow_shaman.png",
+  "sha256": "eef43a1a30f5de880c090b5884f4edede74c9fc7c7dfa92159462adf5b2fc07c",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/shadow_shaman.png",
+      "sha256": "eef43a1a30f5de880c090b5884f4edede74c9fc7c7dfa92159462adf5b2fc07c"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10033_cropped.png",
+      "sha256": "7490de525670351be81c87b3364d56de3af33e4449e71802c1410dad6fc0fea8"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10023_cropped.png",
+      "sha256": "e0437540e2bf5b079a450d76bad5d6bb0fcd07a7036109410b0d79a0b697c925"
+    }
+  ],
+  "workflow": "submit_only; no image download or generated-art review",
+  "authorization": "User explicitly delegated selecting twenty and requested submission plus reporting only",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGllYWM0M2I2MzkxNjM2YzJkODA0ODc3ZDlmYTQzYmE5ZDMyNzQ4YjEx",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

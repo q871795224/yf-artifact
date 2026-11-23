@@ -1,0 +1,44 @@
+{
+  "hero": "witch_doctor",
+  "name": "巫医",
+  "english_name": "Witch Doctor",
+  "render": "output/dota-hero-art-references/valve/witch_doctor.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/witch_doctor.png",
+  "sha256": "7733430c74924dcb0b504320f7d61f6c87918e293ed8b1d1e2010bd920e84fb4",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/witch_doctor.png",
+      "sha256": "7733430c74924dcb0b504320f7d61f6c87918e293ed8b1d1e2010bd920e84fb4"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10038_cropped.png",
+      "sha256": "4b81f25a9e3b11ba3cf240847395e16e44175377ef71ff57637b72407e62804a"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10036_cropped.png",
+      "sha256": "39fcad1fd65e1bde36d838daa970f343c9548038c8e01a02c14d8b2c3d7e4270"
+    }
+  ],
+  "workflow": "submit_only; no image download or generated-art review",
+  "authorization": "User explicitly delegated selecting twenty and requested submission plus reporting only",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGlhY2RkMjIwMzQ4ZGY3ZWY4MDRkYWU3MmM2MDBhMzhjMTgzZjBiNDYy",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

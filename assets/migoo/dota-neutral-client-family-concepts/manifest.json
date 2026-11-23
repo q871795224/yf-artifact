@@ -1,0 +1,99 @@
+{
+  "images": [
+    {
+      "name": "矿道狗头人三员",
+      "image": "kobold-drift-camp/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "2ba0b81d4509c1475b160221acd956945805b61582d41e72d06470933c5655cf",
+      "task_id": "mt_cGkyYzMyYTc3ZjM4YjMwYTU4MDk4MTU0NmExZjg2YTQyODY5MGRlZmVk",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459243144676581",
+      "inspiration": "狗头人营地"
+    },
+    {
+      "name": "山口半人马二员",
+      "image": "centaur-valley-pair/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "6570fa82fa63a2c24b67d7319638080c962e34e7f535f6f1f3f21be4a7c3c151",
+      "task_id": "mt_cGkzYmJhYjc5YmE0MDgwYmRmMzQzM2IzMTkwMTIxOTg0ZTVhYTJkMjI0",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459243120567095",
+      "inspiration": "半人马营地"
+    },
+    {
+      "name": "双翼礁巡队",
+      "image": "harpy-crag-pair/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "07187ebeb80030eae9c639b38b9ef37f92a2e71305733be9e154036225f50e57",
+      "task_id": "mt_cGk1ZmMwZDlkNjRhMjM3NzE1MmJmN2ZmMzcyMDNiMTQ1ZGYwYzgxNWU2",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459243116790608",
+      "inspiration": "鹰身女妖营地"
+    },
+    {
+      "name": "谷地萨特三员",
+      "image": "satyr-ravine-trio/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "3938f1eb2d995b1da3f48ed60fff2210101dc24017ff9241a3e471cbe54eaa33",
+      "task_id": "mt_cGk4M2M2ZDA3M2Q4NTdiMmFjMzlkMzE2MGY3NTIwOWM1YWMwNTI0NDQ3",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459243398882119",
+      "inspiration": "萨特营地"
+    },
+    {
+      "name": "森林巨魔营地二员",
+      "image": "forest-troll-camp-pair/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "392624699d432f3db9682a24727b712fb7351c7a0a8de56a499ae70f3ca9e687",
+      "task_id": "mt_cGkzMzM3YTQwZjNiYjQzZjAyOWU5OGRmODBjNTNjODBjOTI2OWE5NmM4",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459243355464979",
+      "inspiration": "森林巨魔营地"
+    }
+  ]
+}

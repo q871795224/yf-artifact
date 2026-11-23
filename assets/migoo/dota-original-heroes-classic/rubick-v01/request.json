@@ -1,0 +1,42 @@
+{
+  "hero": "rubick",
+  "name": "拉比克",
+  "english_name": "Rubick",
+  "render": "output/dota-hero-art-references/valve/rubick.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/rubick.png",
+  "sha256": "172e7b40b43bfd2561778f14842ea1367ff6f93e549044315e42d985b0203990",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "generating",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/rubick.png",
+      "sha256": "172e7b40b43bfd2561778f14842ea1367ff6f93e549044315e42d985b0203990"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10046_cropped.png",
+      "sha256": "2ee670ea907999f2afaf0f134f5d506140562257f25454c3047d29f994f21e7d"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10038_cropped.png",
+      "sha256": "4b81f25a9e3b11ba3cf240847395e16e44175377ef71ff57637b72407e62804a"
+    }
+  ],
+  "workflow": "submit_only; no image download or generated-art review",
+  "authorization": "User explicitly delegated selecting twenty and requested submission plus reporting only",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGkyMGI4MjZjMmI2YzlkMDQzNTc1NTZkNWNkM2VlNmU5NDE5ZjdiNWE0",
+  "actual_models": null
+}

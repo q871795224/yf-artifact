@@ -1,0 +1,43 @@
+{
+  "hero": "butterfly",
+  "kind": "equipment",
+  "name": "蝴蝶",
+  "english_name": "Butterfly",
+  "icon": "output/dota-native-equipment/valve/butterfly.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/butterfly.png",
+  "classic_card_id": null,
+  "sha256": "4d5b67589f5ffc41cb168c9af85d034cba96314272e8e0afc98e314374fc3479",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/butterfly.png",
+      "sha256": "4d5b67589f5ffc41cb168c9af85d034cba96314272e8e0afc98e314374fc3479",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/butterfly.png"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10206_cropped.png",
+      "sha256": "b8aab6728084de24cb33b6057407e497397b4c6a99b0238c258cd473375e3594"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10256_cropped.png",
+      "sha256": "c7bfd096b2881379a3ea4ec7c36dd631df9044448a7e3e4afbe97b02c5ee0e42"
+    }
+  ],
+  "classic_style_ids": [
+    10206,
+    10256
+  ],
+  "workflow": "Submit and report only; user reviews on Migoo; no generated-art download or inspection",
+  "authorization": "User requested an initial ten Dota equipment paintings in Classic style, with agent choosing the items",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGliZmUzM2I5MWMwYWEzODM1NWI1ZjRlZDgyODFiMGQ3NDViYTJjMDFh",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

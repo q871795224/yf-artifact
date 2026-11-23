@@ -1,0 +1,41 @@
+{
+  "hero": "elder_titan",
+  "name": "上古巨神",
+  "english_name": "Elder Titan",
+  "render": "output/dota-hero-art-references/valve/elder_titan.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/elder_titan.png",
+  "sha256": "566c1498d24f6ae13d532242fa6d25c7c117a3f3ef9d88b2edfdecb1a61caaad",
+  "classic_hero_exists": false,
+  "reference_note": "Official transparent render",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/elder_titan.png",
+      "sha256": "566c1498d24f6ae13d532242fa6d25c7c117a3f3ef9d88b2edfdecb1a61caaad",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/elder_titan.png"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10033_cropped.png",
+      "sha256": "7490de525670351be81c87b3364d56de3af33e4449e71802c1410dad6fc0fea8",
+      "media_id": "1459225499902800"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10046_cropped.png",
+      "sha256": "2ee670ea907999f2afaf0f134f5d506140562257f25454c3047d29f994f21e7d",
+      "media_id": "1459225734038776"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or review",
+  "authorization": "User requested this additional twenty; agent selected roster and disclosed 18 remaining new heroes plus 2 existing Classic heroes repainted",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk0NGNmNTdkOWFkODMzYTg4OTlhZGQxZjM3MjkzYzk5MjRiNmQ4ZDFl",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

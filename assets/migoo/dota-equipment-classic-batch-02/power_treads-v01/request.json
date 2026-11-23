@@ -1,0 +1,44 @@
+{
+  "hero": "power_treads",
+  "kind": "equipment",
+  "name": "动力鞋",
+  "english_name": "Power Treads",
+  "icon": "output/dota-native-equipment/valve/power_treads.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/power_treads.png",
+  "sha256": "ff73d7df1b889a463b9e771c4fbbfa6f875123e3c7480bf4869ff86f99d9ea7f",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/power_treads.png",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/power_treads.png",
+      "sha256": "ff73d7df1b889a463b9e771c4fbbfa6f875123e3c7480bf4869ff86f99d9ea7f"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10203_cropped.png",
+      "media_id": "1459238626796797",
+      "sha256": "f673398c827611f895ee172b35d22384e0c2302da855cf7cca69994ed2166ac4"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10237_cropped.png",
+      "media_id": "1459238887335158",
+      "sha256": "198c5d59fb6e17d029e64ec3e7a65c4d16866575ed6c63fd86005731b3eca6a8"
+    }
+  ],
+  "classic_style_ids": [
+    10203,
+    10237
+  ],
+  "workflow": "Submit and report only; user reviews on Migoo",
+  "authorization": "User approved first ten equipment images and requested twenty additional equipment images",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGkxNjZkNDMyZWM3ZDkyNzE0MTAyMmYxMTZiNzRmYTU3NDIxYzE0MzJj",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

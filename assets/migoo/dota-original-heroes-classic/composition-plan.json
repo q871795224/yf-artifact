@@ -1,0 +1,85 @@
+{
+  "gate": "No remaining hero generation before sample review. All identities must be rechecked against the corresponding Valve render before submission.",
+  "heroes": [
+    {
+      "hero": "medusa",
+      "name": "美杜莎",
+      "shot": "低机位三分之四中景；蛇尾构成不对称 S 形，转身引弓",
+      "palette": "冷绿、蓝黑、旧金",
+      "light": "左上自然天光与水面反光",
+      "state": "sample_in_progress"
+    },
+    {
+      "hero": "morphling",
+      "name": "变体精灵",
+      "shot": "近水面广角；保留水元素人形头部与躯干，侧向冲成浪峰",
+      "palette": "青蓝、冷白、深海绿",
+      "light": "阴天漫射与浪尖透光",
+      "state": "planned_only"
+    },
+    {
+      "hero": "ancient_apparition",
+      "name": "远古冰魄",
+      "shot": "远中景仰视；原版寒冰幽魂悬浮在峡谷上部，碎冰轨迹贯穿纵深",
+      "palette": "冰青、紫灰、雪白",
+      "light": "暴风雪中的逆光",
+      "state": "planned_only"
+    },
+    {
+      "hero": "juggernaut",
+      "name": "主宰",
+      "shot": "贴近斩击的侧前方中近景；原版白面具与长刀清晰，躯干扭转",
+      "palette": "骨白、赭红、墨绿",
+      "light": "林间单侧日光",
+      "state": "planned_only"
+    },
+    {
+      "hero": "rattletrap",
+      "name": "发条技师",
+      "shot": "高角度俯视；原版矮壮机械装甲在窄巷转向，齿轮装置切割空间",
+      "palette": "铁灰、旧红、淡黄",
+      "light": "阴天顶光与炉口微光",
+      "state": "planned_only"
+    },
+    {
+      "hero": "sand_king",
+      "name": "沙王",
+      "shot": "极低机位大透视；原版巨蝎侧向破沙，螯与弯曲尾刺形成独特剪影",
+      "palette": "沙白、紫褐、暗金",
+      "light": "强烈白昼斜光",
+      "state": "planned_only"
+    },
+    {
+      "hero": "pudge",
+      "name": "帕吉",
+      "shot": "近景侧视；保留肥硕缝合屠夫、钩链和屠刀，后仰拖拽钩链",
+      "palette": "灰绿、冷肉色、锈红",
+      "light": "雾港清晨的大片冷天光",
+      "state": "planned_only"
+    },
+    {
+      "hero": "slark",
+      "name": "斯拉克",
+      "shot": "岩缝内向外看的斜向低机位；原版鱼人蹬壁跃出，弯刀与尾鳍分离可读",
+      "palette": "靛蓝、紫灰、银白",
+      "light": "洞口月光",
+      "state": "planned_only"
+    },
+    {
+      "hero": "weaver",
+      "name": "编织者",
+      "shot": "近俯视；原版多足甲虫沿破碎石面横向穿行，触肢和背甲形状清楚",
+      "palette": "青绿、暗红、石白",
+      "light": "明亮漫射天光",
+      "state": "planned_only"
+    },
+    {
+      "hero": "visage",
+      "name": "维萨吉",
+      "shot": "远景向上看；原版石像鬼在倾斜钟楼间展翼，双佣兽处于不同纵深",
+      "palette": "铅灰、幽青、粉白",
+      "light": "暮色天空反衬石质身体",
+      "state": "planned_only"
+    }
+  ]
+}

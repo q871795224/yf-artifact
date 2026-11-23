@@ -1,0 +1,44 @@
+{
+  "hero": "phoenix",
+  "name": "凤凰",
+  "english_name": "Phoenix",
+  "render": "output/dota-hero-art-references/valve/phoenix.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/phoenix.png",
+  "sha256": "b9604037d2f9b7b15ca0d37bbe286c5f77ab3fb62e58c7d9cca9c2f628dcc2b8",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/phoenix.png",
+      "sha256": "b9604037d2f9b7b15ca0d37bbe286c5f77ab3fb62e58c7d9cca9c2f628dcc2b8"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10054_cropped.png",
+      "sha256": "418eaa7727b6bb10467d183a4b968ef662874081dfb97a5b631088d333a5458b"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10046_cropped.png",
+      "sha256": "2ee670ea907999f2afaf0f134f5d506140562257f25454c3047d29f994f21e7d"
+    }
+  ],
+  "workflow": "submit_only; no image download or generated-art review",
+  "authorization": "User explicitly delegated selecting twenty and requested submission plus reporting only",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk5OWY3ZTM3NWEwYzQwOWI3NDRmYmZmMzhiZWNiOWI2ZTZjZmQzZDRi",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

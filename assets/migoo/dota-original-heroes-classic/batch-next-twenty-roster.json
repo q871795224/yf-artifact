@@ -1,0 +1,332 @@
+{
+  "heroes": [
+    {
+      "hero": "doom_bringer",
+      "name": "末日使者",
+      "english_name": "Doom",
+      "render": "output/dota-hero-art-references/valve/doom_bringer.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/doom_bringer.png",
+      "sha256": "beb8460b666a3d38698b891918101bb7acfa9006f6d9b42ce9c4a9e73f41ccef",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "nevermore",
+      "name": "影魔",
+      "english_name": "Shadow Fiend",
+      "render": "output/dota-hero-art-references/valve/nevermore.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/nevermore.png",
+      "sha256": "b2a1eca0287cd049390a5192b4d3e4f37dcb5f0ef83684fc9698f792cee11d51",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "razor",
+      "name": "剃刀",
+      "english_name": "Razor",
+      "render": "output/dota-hero-art-references/valve/razor.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/razor.png",
+      "sha256": "f4619a4c5b2b5de69c77d949ba47b11944ae316e91cc03202cd26743c18eaef8",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "leshrac",
+      "name": "拉席克",
+      "english_name": "Leshrac",
+      "render": "output/dota-hero-art-references/valve/leshrac.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/leshrac.png",
+      "sha256": "769cb3925d054498535b70f8615ef496397eba813d1a66e869a27b1ae9a0572e",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "death_prophet",
+      "name": "死亡先知",
+      "english_name": "Death Prophet",
+      "render": "output/dota-hero-art-references/valve/death_prophet.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/death_prophet.png",
+      "sha256": "4eadb2b4a439528107f84d98624514d5d229bdf521738938d7f62a3f1f37242c",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "vengefulspirit",
+      "name": "复仇之魂",
+      "english_name": "Vengeful Spirit",
+      "render": "output/dota-hero-art-references/valve/vengefulspirit.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/vengefulspirit.png",
+      "sha256": "799da102ccf5df90fe63e12d0d24fe2409e1b310ef72a241a4ceaa4d932b1151",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "dazzle",
+      "name": "戴泽",
+      "english_name": "Dazzle",
+      "render": "output/dota-hero-art-references/valve/dazzle.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/dazzle.png",
+      "sha256": "84bb98fa028cf28bf5da394e1e47ad5f1466f6034fff2b417c783c9a7ca10bb3",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "bane",
+      "name": "祸乱之源",
+      "english_name": "Bane",
+      "render": "output/dota-hero-art-references/valve/bane.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/bane.png",
+      "sha256": "c3fee82bda9532d4bede4a65da4a4115bea224309c7e00785c8c3f9bf363db23",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "puck",
+      "name": "帕克",
+      "english_name": "Puck",
+      "render": "output/dota-hero-art-references/valve/puck.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/puck.png",
+      "sha256": "068a78b898f1086e8985436b63ae1d262335744dcf02930f6280b2462717eef5",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "queenofpain",
+      "name": "痛苦女王",
+      "english_name": "Queen of Pain",
+      "render": "output/dota-hero-art-references/valve/queenofpain.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/queenofpain.png",
+      "sha256": "666a5a646a48d4140e0a73b9bcdf6c1310d0c36dce0cf07c981b5b279a323eda",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "windrunner",
+      "name": "风行者",
+      "english_name": "Windranger",
+      "render": "output/dota-hero-art-references/valve/windrunner.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/windrunner.png",
+      "sha256": "2af6282991294e397eac8529a49d7656047f4f66295a647d1a5d8ba47808f290",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "lina",
+      "name": "莉娜",
+      "english_name": "Lina",
+      "render": "output/dota-hero-art-references/valve/lina.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/lina.png",
+      "sha256": "c49dd12c2a160eb257b9db9cf177f779ed4d93b7be82c7cd2419d55ef6211086",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "kunkka",
+      "name": "昆卡",
+      "english_name": "Kunkka",
+      "render": "output/dota-hero-art-references/valve/kunkka.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/kunkka.png",
+      "sha256": "20f344672227bfab0daaac6862ae8ee802d9f2308d955e0f9c04104a324ff109",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "slardar",
+      "name": "斯拉达",
+      "english_name": "Slardar",
+      "render": "output/dota-hero-art-references/valve/slardar.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/slardar.png",
+      "sha256": "b52a66dd12418d7d6031f3fe746422cdeef7ed4b0211c368551883bc740a43a0",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "tusk",
+      "name": "巨牙海民",
+      "english_name": "Tusk",
+      "render": "output/dota-hero-art-references/valve/tusk.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/tusk.png",
+      "sha256": "6826652d7d91b9daad0ee58739a40df918ee284af9a5b2948f07f058d0bf4ac5",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "spirit_breaker",
+      "name": "裂魂人",
+      "english_name": "Spirit Breaker",
+      "render": "output/dota-hero-art-references/valve/spirit_breaker.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/spirit_breaker.png",
+      "sha256": "7668a1019ceacbb63488a01ebbdc1afe1250615dce05fb8bce56d955c031199d",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "alchemist",
+      "name": "炼金术士",
+      "english_name": "Alchemist",
+      "render": "output/dota-hero-art-references/valve/alchemist.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/alchemist.png",
+      "sha256": "d0bf99cebc0d707ce6f520091538d0e1671bbaa9031128f60db499c5631090a6",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "skeleton_king",
+      "name": "冥魂大帝",
+      "english_name": "Wraith King",
+      "render": "output/dota-hero-art-references/valve/skeleton_king.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/skeleton_king.png",
+      "sha256": "3675add42685950a6344a422382ec237bddced852450ac90600c006cb9d1a8c1",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "undying",
+      "name": "不朽尸王",
+      "english_name": "Undying",
+      "render": "output/dota-hero-art-references/valve/undying.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/undying.png",
+      "sha256": "6375d8da26b71b109c8ff78de0caf20214ecbbd7e2e3099e728efc51b12879eb",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    },
+    {
+      "hero": "life_stealer",
+      "name": "噬魂鬼",
+      "english_name": "Lifestealer",
+      "render": "output/dota-hero-art-references/valve/life_stealer.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/life_stealer.png",
+      "sha256": "46db6527269efa68f3646819f3254800cd28395c97a1c234b8bf80e0dc9b819d",
+      "dimensions": [
+        1440,
+        1440
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    }
+  ],
+  "classic_overlap": [],
+  "overlap_with_first_thirty": [],
+  "requested_model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "workflow": "submit_only",
+  "status": "ready_to_submit",
+  "listed_total": 106.6
+}

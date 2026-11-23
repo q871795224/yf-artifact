@@ -1,0 +1,244 @@
+{
+  "requested": 20,
+  "submitted_count": 20,
+  "failed_count": 0,
+  "workflow": "submit only; status queries release concurrency slots; no downloads",
+  "tasks": [
+    {
+      "hero": "assault",
+      "name": "强袭胸甲",
+      "task_id": "mt_cGk5ZjhlZmQzZTA1YTczNTBlNjA0OTBkYTE0ZmJhNmY3YTM1NDRiMzcw",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "blade_mail",
+      "name": "刃甲",
+      "task_id": "mt_cGk2NTRhNTAxNTk4ZGUzZTE0MjUwYjdjMGI5MDZlZGE0OTJiNGU2ZDVi",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "sheepstick",
+      "name": "邪恶镰刀",
+      "task_id": "mt_cGk3MDI4YjljZjBjNGE1NmFhZDI3ZDlkZDY3Zjg3YTU1MTYxYThhNzk5",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "orchid",
+      "name": "紫怨",
+      "task_id": "mt_cGk1OTRhMzI0ODM1MDkxNzRiMDhlYzJkZTkzMTEwMDZhYTRiNmE3NWRl",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "bloodthorn",
+      "name": "血棘",
+      "task_id": "mt_cGk1MjIzZmRkMDM0ODRkMTliMWM5MDQyNzA3NzFlMDMyNzRjNDc4Njc3",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "greater_crit",
+      "name": "代达罗斯之殇",
+      "task_id": "mt_cGkzNTU2OTFkZmJjOGI4NzA5YjY3NjJiMjVhNjNkNzI1NmExMjU3Mjgx",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 2,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "monkey_king_bar",
+      "name": "金箍棒",
+      "task_id": "mt_cGlmODc5Mzk4MTMxNjE3N2FlMTYzYjJjNjZlOTY1OTJlMGU0YWY4MTUw",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "sange_and_yasha",
+      "name": "散夜对剑",
+      "task_id": "mt_cGkxMTM0YWJlMzJiMTAwYWYwZjI5YTQyMTYxNWVjY2IwOTQ3YzE1NDQ4",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "satanic",
+      "name": "撒旦之邪力",
+      "task_id": "mt_cGk2ODQxYjIxMzk0Y2FiZDQ3MjllNzgxNmIyOTA5YWEyZDEwMzM3ZjFh",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "refresher",
+      "name": "刷新球",
+      "task_id": "mt_cGkyZjk3ZWMxNzZjYWFiZjFlZDcxZGRjMjE0MjY0MDZiMjViMDEyYjc1",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "octarine_core",
+      "name": "玲珑心",
+      "task_id": "mt_cGlmZTg1Mjk4ZmIyZmYzYzU0NzcwYjQ1YTcxNGVlOTk0ZWNlY2IyOGUx",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "ultimate_scepter",
+      "name": "阿哈利姆神杖",
+      "task_id": "mt_cGljODRmYzM2YzgxZmQ5MDgxYjJiMzFmMjhkODVkZDA2ODk0YjUyZDhm",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "bfury",
+      "name": "狂战斧",
+      "task_id": "mt_cGk2M2E2ZGZkMmNhZmQ4NGMzMDJjMTUzZGM2Nzg2ZDVhNmU3MmVkZTJl",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "power_treads",
+      "name": "动力鞋",
+      "task_id": "mt_cGkxNjZkNDMyZWM3ZDkyNzE0MTAyMmYxMTZiNzRmYTU3NDIxYzE0MzJj",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "travel_boots",
+      "name": "远行鞋",
+      "task_id": "mt_cGljZWNhMmI3ZjY0NGJkZjQxZDk3NTg0YmFmMjMzMGEzNTkxOThlZTdj",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "mekansm",
+      "name": "梅肯斯姆",
+      "task_id": "mt_cGlmMzA4ZGQzYWZjZjA0OGE2MGY0MzQyNjdmMzQyODdmNDc5YTdlOGVj",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "guardian_greaves",
+      "name": "卫士胫甲",
+      "task_id": "mt_cGkwNGE2MDVlODE3MTBkNDJjOWE2ZjQ3ZjU5ZjVjMWNlYmZiMGYzMDJm",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "vladmir",
+      "name": "弗拉迪米尔的祭品",
+      "task_id": "mt_cGllNDM1NGM2MjlmZGJkZTY5MmMxMDIxNjk2NDIxYTc2ZTNiZDQ2ZTkx",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "vanguard",
+      "name": "先锋盾",
+      "task_id": "mt_cGllZmMyNjk0ZmVjNTJmYjVhNGQ4N2RlMjQyNWIzYzQyZTZmNzg4NTE3",
+      "status": "generating",
+      "model": "gpt-image-26-flare",
+      "actual_models": null,
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "dragon_lance",
+      "name": "魔龙枪",
+      "task_id": "mt_cGlhNjFhYmY0NjU2ODE0MTg1YWQzNTIwNDgwNjFhOTk1MzZlZDU0ZWU2",
+      "status": "generating",
+      "model": "gpt-image-26-flare",
+      "actual_models": null,
+      "attempt": 1,
+      "cli_exit_code": 0
+    }
+  ]
+}

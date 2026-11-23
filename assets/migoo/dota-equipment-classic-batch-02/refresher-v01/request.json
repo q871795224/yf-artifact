@@ -1,0 +1,44 @@
+{
+  "hero": "refresher",
+  "kind": "equipment",
+  "name": "刷新球",
+  "english_name": "Refresher Orb",
+  "icon": "output/dota-native-equipment/valve/refresher.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/refresher.png",
+  "sha256": "a16da11b821f6fd2a9f89b364ef6caa47f10e6ac1b3bdd302c9ca2bfcdb7eab9",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/refresher.png",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/refresher.png",
+      "sha256": "a16da11b821f6fd2a9f89b364ef6caa47f10e6ac1b3bdd302c9ca2bfcdb7eab9"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10220_cropped.png",
+      "media_id": "1459239929078573",
+      "sha256": "94e86bdcca1d7da96e12bef7a63ad6477c49e2fe5e91dc3c8e44eba4a54ec860"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10248_cropped.png",
+      "media_id": "1459238619309329",
+      "sha256": "a542eb3593c412809964a97cffce6fb45483ab995788c060e39a2cf6cf9d5f76"
+    }
+  ],
+  "classic_style_ids": [
+    10220,
+    10248
+  ],
+  "workflow": "Submit and report only; user reviews on Migoo",
+  "authorization": "User approved first ten equipment images and requested twenty additional equipment images",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGkyZjk3ZWMxNzZjYWFiZjFlZDcxZGRjMjE0MjY0MDZiMjViMDEyYjc1",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

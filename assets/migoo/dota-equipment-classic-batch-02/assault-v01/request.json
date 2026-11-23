@@ -1,0 +1,44 @@
+{
+  "hero": "assault",
+  "kind": "equipment",
+  "name": "强袭胸甲",
+  "english_name": "Assault Cuirass",
+  "icon": "output/dota-native-equipment/valve/assault.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/assault.png",
+  "sha256": "1ce6e8e7e95e5d9d1bc9b4257c64fee575f22efbe9fee8322c46e07a059c55a8",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/assault.png",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/assault.png",
+      "sha256": "1ce6e8e7e95e5d9d1bc9b4257c64fee575f22efbe9fee8322c46e07a059c55a8"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10237_cropped.png",
+      "media_id": "1459238887335158",
+      "sha256": "198c5d59fb6e17d029e64ec3e7a65c4d16866575ed6c63fd86005731b3eca6a8"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10232_cropped.png",
+      "media_id": "1459239926359306",
+      "sha256": "f9298ce686f7f5c05a82ad42c92b6d08d6dfe6880349aeb1664e566952961ce0"
+    }
+  ],
+  "classic_style_ids": [
+    10237,
+    10232
+  ],
+  "workflow": "Submit and report only; user reviews on Migoo",
+  "authorization": "User approved first ten equipment images and requested twenty additional equipment images",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk5ZjhlZmQzZTA1YTczNTBlNjA0OTBkYTE0ZmJhNmY3YTM1NDRiMzcw",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

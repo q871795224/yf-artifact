@@ -1,0 +1,44 @@
+{
+  "hero": "spirit_breaker",
+  "name": "裂魂人",
+  "english_name": "Spirit Breaker",
+  "render": "output/dota-hero-art-references/valve/spirit_breaker.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/spirit_breaker.png",
+  "sha256": "7668a1019ceacbb63488a01ebbdc1afe1250615dce05fb8bce56d955c031199d",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/spirit_breaker.png",
+      "sha256": "7668a1019ceacbb63488a01ebbdc1afe1250615dce05fb8bce56d955c031199d"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10033_cropped.png",
+      "sha256": "7490de525670351be81c87b3364d56de3af33e4449e71802c1410dad6fc0fea8"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10046_cropped.png",
+      "sha256": "2ee670ea907999f2afaf0f134f5d506140562257f25454c3047d29f994f21e7d"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or visual reviews",
+  "authorization": "User explicitly requested another agent-selected twenty heroes and submission through the reusable script",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk1NWRlZmU3YTA4YjdlZDgyOTc2NjU4ZmYxMTg5YjQyNjE2NTRiMWZi",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

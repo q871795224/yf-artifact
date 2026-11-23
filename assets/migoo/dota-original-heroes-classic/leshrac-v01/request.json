@@ -1,0 +1,44 @@
+{
+  "hero": "leshrac",
+  "name": "拉席克",
+  "english_name": "Leshrac",
+  "render": "output/dota-hero-art-references/valve/leshrac.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/leshrac.png",
+  "sha256": "769cb3925d054498535b70f8615ef496397eba813d1a66e869a27b1ae9a0572e",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/leshrac.png",
+      "sha256": "769cb3925d054498535b70f8615ef496397eba813d1a66e869a27b1ae9a0572e"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10028_cropped.png",
+      "sha256": "b7c9bc857f51b9cb45d394b66271784a243901a6e157dcad1bfc2604f04bbc81"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10036_cropped.png",
+      "sha256": "39fcad1fd65e1bde36d838daa970f343c9548038c8e01a02c14d8b2c3d7e4270"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or visual reviews",
+  "authorization": "User explicitly requested another agent-selected twenty heroes and submission through the reusable script",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGkzNmExNTBlNWZlMTI4ZDA1MGZiOWRkZDQ2YmFlNDI2N2Q1ZGM5ODU4",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

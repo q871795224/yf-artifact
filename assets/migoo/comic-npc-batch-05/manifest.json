@@ -1,0 +1,254 @@
+{
+  "images": [
+    {
+      "slug": "01-evening-trail-sniffer",
+      "name": "暮坡嗅迹兽",
+      "image": "01-evening-trail-sniffer/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "70509e5d5afdcb751480ceed9eb13a4bf58f300702dfeee11bce165bea87d455",
+      "task_id": "mt_cGk0YmM5OThjMmQ1YmQ3ZTc4MmUxMTEzMmNhNGQwYzA5Y2NlNmQ0Mzdl",
+      "media_id": "1459231293465387",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-05/references/01-long-maned-prowler.jpg",
+        "assets/migoo/comic-npc-batch-05/references/classic-10082.jpg",
+        "assets/migoo/comic-npc-batch-05/references/classic-10328.jpg"
+      ]
+    },
+    {
+      "slug": "02-pass-water-carrier",
+      "name": "山口驮水兽",
+      "image": "02-pass-water-carrier/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "eed74fbcd00cf37f5c0568e2698d8d6605b1f4ff06514ca162aba4e7addf3fec",
+      "task_id": "mt_cGkyNWY1NGYwNzM1ZjYyN2FmMzU0MmJkYzAwNmM0ZDVjOGZkZGY5Zjc3",
+      "media_id": "1459231723414320",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-05/references/02-pack-beast.jpg",
+        "assets/migoo/comic-npc-batch-05/references/classic-10087.jpg",
+        "assets/migoo/comic-npc-batch-05/references/classic-10416.jpg"
+      ]
+    },
+    {
+      "slug": "03-low-wall-breaker",
+      "name": "矮墙破障兽",
+      "image": "03-low-wall-breaker/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "870c09f8171c1d15e8227c4fc2b15fe12511dab862a2c6352c22e8391fc78e8e",
+      "task_id": "mt_cGlmYmQzMTQwMjY1ZjFlNmY1NDc1ZjIwMjMxMDI0MDc5YmI3MjM0NjVl",
+      "media_id": "1459232353542996",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-05/references/03-armored-rhino.jpg",
+        "assets/migoo/comic-npc-batch-05/references/classic-10092.jpg",
+        "assets/migoo/comic-npc-batch-05/references/classic-10323.jpg"
+      ]
+    },
+    {
+      "slug": "04-quay-pile-driver",
+      "name": "石埠钉桩手",
+      "image": "04-quay-pile-driver/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "5694c0058002ebedb49439a9bbd28db002c8423928c3a7e3fadc613ab7c5588b",
+      "task_id": "mt_cGkzODIyYTZlNjM0YTE2ZTcwY2FmMDVmYmRkOGI0Mjg4NWFjZWU0MmMw",
+      "media_id": "1459232185050360",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-05/references/04-camp-brute.jpg",
+        "assets/migoo/comic-npc-batch-05/references/classic-10137.jpg",
+        "assets/migoo/comic-npc-batch-05/references/classic-10323.jpg"
+      ]
+    },
+    {
+      "slug": "05-narrow-bridge-scout",
+      "name": "窄桥探哨",
+      "image": "05-narrow-bridge-scout/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "8658a0f0a3a6af4efd96f7e1a96735d0ffd64ba836fdb2282479e688e0d40f11",
+      "task_id": "mt_cGk1ZDg3ZTFiMWFmODE0ZjZjOWE5ZjViNDNiYmZmNjRhZDEwYTllYzJh",
+      "media_id": "1459232457892653",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-05/references/05-long-limbed-camp-creature.jpg",
+        "assets/migoo/comic-npc-batch-05/references/classic-10129.jpg",
+        "assets/migoo/comic-npc-batch-05/references/classic-10416.jpg"
+      ]
+    },
+    {
+      "slug": "06-gate-weighing-clerk",
+      "name": "关口称货员",
+      "image": "06-gate-weighing-clerk/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "bb351a841d923908f0678ebb17ff6823e9fb3d3c974aa1fbae1c3d103cf96dec",
+      "task_id": "mt_cGlmNWMyODg4NzYwMWE5MDNlODkxMDgyYzNkY2VmNDc2YWU3NWM2NTNk",
+      "media_id": "1459233254359862",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-05/references/06-fanged-guard.jpg",
+        "assets/migoo/comic-npc-batch-05/references/classic-10092.jpg",
+        "assets/migoo/comic-npc-batch-05/references/classic-10307.jpg"
+      ]
+    },
+    {
+      "slug": "07-reed-bay-basket-carrier",
+      "name": "蒲湾抬篓工",
+      "image": "07-reed-bay-basket-carrier/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "b191c4b60fab4eeb9b4700d560b8ac0065f546e10c5ecfb79860a37ff00c7f79",
+      "task_id": "mt_cGlkMzAzNTQ5NDNjM2JmNjJhZTNiZTZlYmY3ODQ2YzI1NTI2NTljOGNl",
+      "media_id": "1459232754164960",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-05/references/frog-people.png",
+        "assets/migoo/comic-npc-batch-05/references/classic-10082.jpg",
+        "assets/migoo/comic-npc-batch-05/references/classic-10322.jpg"
+      ]
+    },
+    {
+      "slug": "08-tidal-lamp-attendant",
+      "name": "潮沟灯侍",
+      "image": "08-tidal-lamp-attendant/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "12021dbb795b77020b90d1b68176de21404aa540fa3d45e19ce9aa5e0a02f71a",
+      "task_id": "mt_cGkzYTRjODE2MzM5MGE1MWM0YmY4NzYzODgwMjgzMGMxYmJiYjE5NTRk",
+      "media_id": "1459233036092242",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-05/references/fish-witch.jpg",
+        "assets/migoo/comic-npc-batch-05/references/classic-10267.jpg",
+        "assets/migoo/comic-npc-batch-05/references/classic-10354.jpg"
+      ]
+    },
+    {
+      "slug": "09-root-rope-weaver",
+      "name": "藤索编结工",
+      "image": "09-root-rope-weaver/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "fb51771f2c4d49e47fa37a971e88d071e5f7f5cf4d8488067d9d0e23bb8bd41c",
+      "task_id": "mt_cGkyMDg1OTc1ZTZmMWVhNDY0ZTAxMzI1ZGJlZTQwZTdiMWU4YmI5ZmY4",
+      "media_id": "1459233467974923",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-05/references/treant-witch.jpg",
+        "assets/migoo/comic-npc-batch-05/references/classic-10177.jpg",
+        "assets/migoo/comic-npc-batch-05/references/classic-10328.jpg"
+      ]
+    },
+    {
+      "slug": "10-yard-sifting-automaton",
+      "name": "仓场筛砂偶",
+      "image": "10-yard-sifting-automaton/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "e57d50698ea6c92989356ac5ade70d948e22529bcb39b8922a54da94b87be985",
+      "task_id": "mt_cGljZjE0MGRjNTI2NzM2MjQ3OWQ3NTQ4NDE4OTZkMGU2MmQzM2MwMTU2",
+      "media_id": "1459233124140283",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-05/references/automaton-kobold.png",
+        "assets/migoo/comic-npc-batch-05/references/classic-10137.jpg",
+        "assets/migoo/comic-npc-batch-05/references/classic-10323.jpg"
+      ]
+    }
+  ]
+}

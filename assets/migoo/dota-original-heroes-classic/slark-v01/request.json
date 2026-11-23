@@ -1,0 +1,46 @@
+{
+  "hero": "slark",
+  "name": "斯拉克",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/slark.png",
+      "sha256": "fac4f25047f47d47c48b71c5267bfbb2826c12ea686347bd835ee4e3b07fae1c"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10047_cropped.png",
+      "sha256": "3571bcb9be23ee305506acecee5c07b942e7b07424a1b57a4ac4a8ff9fc85d7e"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10023_cropped.png",
+      "sha256": "e0437540e2bf5b079a450d76bad5d6bb0fcd07a7036109410b0d79a0b697c925"
+    }
+  ],
+  "prompt_file": "prompt.txt",
+  "notes_file": "notes.txt",
+  "authorized": "User approved Medusa sample and explicitly requested submitting remaining nine together",
+  "batch_balance_before": {
+    "free": 94,
+    "paid": 0
+  },
+  "listed_price": 5.33,
+  "task_id": "mt_cGliMDMzMzY1MDNhODMwOGE2NTVhODlmN2FjOTM1NjIwMzdhYjZmMTk3",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ],
+  "cli_exit_code": 0,
+  "previous_attempts": [
+    {
+      "task_id": "mt_cGkzMTZiNzYwY2RiYTE4MGNmOWFkOWYwZWUyZDIzMTdjYTkzMmQ0OWI5",
+      "status": "failed",
+      "reason": "busy; service explicitly confirmed generation did not start",
+      "record": "attempts/01-busy-not-started"
+    }
+  ],
+  "attempt": 2,
+  "user_review": "User approved all first ten images"
+}

@@ -1,0 +1,44 @@
+{
+  "hero": "lotus_orb",
+  "kind": "equipment",
+  "name": "清莲宝珠",
+  "english_name": "Lotus Orb",
+  "icon": "output/dota-native-equipment/lotus_orb_png.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/lotus_orb.png",
+  "sha256": "d4f3b18e6991becd6b399ee518915855fd3149c4f648f3090d867ba89e7f8458",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/lotus_orb_png.png",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/lotus_orb.png",
+      "sha256": "d4f3b18e6991becd6b399ee518915855fd3149c4f648f3090d867ba89e7f8458"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10220_cropped.png",
+      "media_id": "1459239929078573",
+      "sha256": "94e86bdcca1d7da96e12bef7a63ad6477c49e2fe5e91dc3c8e44eba4a54ec860"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10232_cropped.png",
+      "media_id": "1459239926359306",
+      "sha256": "f9298ce686f7f5c05a82ad42c92b6d08d6dfe6880349aeb1664e566952961ce0"
+    }
+  ],
+  "classic_style_ids": [
+    10220,
+    10232
+  ],
+  "workflow": "Submit and report only; no generated-output download or inspection",
+  "authorization": "User requested twenty additional equipment images after accepting prior batches",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGkwMmMwZmExODEyODc2ZmI1NmIwN2I3OWY3YmMzYzEyZjE1YWNkZjJm",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

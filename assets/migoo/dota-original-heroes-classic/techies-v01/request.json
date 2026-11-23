@@ -1,0 +1,56 @@
+{
+  "hero": "techies",
+  "name": "工程师",
+  "english_name": "Techies",
+  "render": "output/dota-hero-art-references/valve/techies.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/techies.png",
+  "sha256": "bd0ffb6f83f8e61275180691457439bbf396bd4b23273703da73bc121494df91",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/techies.png",
+      "sha256": "bd0ffb6f83f8e61275180691457439bbf396bd4b23273703da73bc121494df91"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10025_cropped.png",
+      "sha256": "beb16ce1fd3645da63be4f6ff6019fcb1896e626a454f3cdab0213f51071e24a"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10022_cropped.png",
+      "sha256": "8f00ae99ac0a79b88f23726228d85d5dbfeaa158bd9a057df686502248ec4731"
+    }
+  ],
+  "workflow": "submit_only; no generated-art downloads or review",
+  "authorization": "User explicitly requested twenty more agent-selected canonical heroes",
+  "listed_price": 5.33,
+  "attempt": 3,
+  "cli_exit_code": 0,
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ],
+  "previous_attempts": [
+    {
+      "task_id": "mt_cGkwM2I2OGVlMWVkYjIzODU0OWZjZDQzN2YxYjg5NmZhNWE0NjUwNmJi",
+      "error": {
+        "code": "task_failed",
+        "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+        "retryable": true,
+        "reason": "busy"
+      }
+    },
+    {
+      "task_id": "mt_cGljOGNkODhkMTdjZjg0NjkzNmI1OGMzNTQ5Njc5M2NjNDc1ZDljYzAw",
+      "error": {
+        "code": "task_failed",
+        "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+        "retryable": true,
+        "reason": "busy"
+      }
+    }
+  ],
+  "task_id": "mt_cGk4NzZhZGEwN2E5Yjg0MDY1MGE4MWE4NGM1NjkzYmFjYTIyYjVlM2U5"
+}

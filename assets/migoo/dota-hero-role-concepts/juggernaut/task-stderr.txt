@@ -1,0 +1,6 @@
+Migoo 额度：余额 99，免费 99，付费 0，冻结 0。
+Uploading output/dota-hero-art-references/valve/juggernaut.png (1180425 bytes)
+Uploading output/classic-full-art/set01/full_art/10054_psd.png (1290747 bytes)
+Uploading output/classic-full-art/set01/full_art/10047_psd.png (1320686 bytes)
+Task mt_cGkzM2I0ZWIxNjM4YjIzODAzZTEzMjM0NDA0MjFjZDVjNjhiMzcxMzAw started; if this command is interrupted, run migoo task get mt_cGkzM2I0ZWIxNjM4YjIzODAzZTEzMjM0NDA0MjFjZDVjNjhiMzcxMzAw --wait
+Saved assets/migoo/dota-hero-role-concepts/juggernaut/mt_cGkzM2I0ZWIxNjM4YjIzODAzZTEzMjM0NDA0MjFjZDVjNjhiMzcxMzAw_1.png

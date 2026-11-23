@@ -1,0 +1,136 @@
+{
+  "images": [
+    {
+      "hero": "medusa",
+      "task_id": "mt_cGlkNmI5YTU5OTE1NGE2ZGM2NjUyZTI2ZmY4MzEwZWE1NzhiYTY0MDRh",
+      "status": "completed",
+      "user_approved": true,
+      "path": "assets/migoo/dota-original-heroes-classic/medusa-v01/original.png",
+      "width": 768,
+      "height": 1360,
+      "sha256": "b46b96fafe724d88d1be3971643137eb057026122a7ec2401bb5c2c140e97ce2",
+      "applied_models": [
+        "GPT Image 2.6 Flare"
+      ]
+    },
+    {
+      "hero": "morphling",
+      "task_id": "mt_cGljZTE5ZDc4OTYxMjk1ZWViZDdlYmMxYzBhN2FjYTA4NTQwMzViM2U3",
+      "status": "completed",
+      "user_approved": true,
+      "path": "assets/migoo/dota-original-heroes-classic/morphling-v01/original.png",
+      "width": 768,
+      "height": 1360,
+      "sha256": "201e2f422948e199600abb277b6621546a8095b1c4abe637672ae4fe06de36bb",
+      "applied_models": [
+        "GPT Image 2.6 Flare"
+      ]
+    },
+    {
+      "hero": "ancient_apparition",
+      "task_id": "mt_cGlmYjRkMTQwYWMzOWI1YjYzMjJkYzc2N2NhZWU2MzdhOWM2OTc0ZTRm",
+      "status": "completed",
+      "user_approved": true,
+      "path": "assets/migoo/dota-original-heroes-classic/ancient_apparition-v01/original.png",
+      "width": 768,
+      "height": 1360,
+      "sha256": "eafabf1b8e1872e0e4fb1518c97b586d7153b19d6d998405b2ce3099df5b9060",
+      "applied_models": [
+        "GPT Image 2.6 Flare"
+      ]
+    },
+    {
+      "hero": "juggernaut",
+      "task_id": "mt_cGlmMTU4Mjc3MDk2ZmUxMTM3NDc5MzJjMWUxYzhhYzE3YTkwMjE2YmUz",
+      "status": "completed",
+      "user_approved": true,
+      "path": "assets/migoo/dota-original-heroes-classic/juggernaut-v01/original.png",
+      "width": 768,
+      "height": 1360,
+      "sha256": "ec4bf767ab83b2d9ff26cf7afb13317d1abff4233bbbacc4ec09f88b63e89a1c",
+      "applied_models": [
+        "GPT Image 2.6 Flare"
+      ]
+    },
+    {
+      "hero": "rattletrap",
+      "task_id": "mt_cGkwNDRmODZjYjVjYzA1Y2ViN2M4OGY2ZjgxMTg3YzdjM2I1MDQxMTBi",
+      "status": "completed",
+      "user_approved": true,
+      "path": "assets/migoo/dota-original-heroes-classic/rattletrap-v01/original.png",
+      "width": 768,
+      "height": 1360,
+      "sha256": "776ee82e1990630dcc4e25415d18a3bb606bee446cd52f5f083e47fb833408b0",
+      "applied_models": [
+        "GPT Image 2.6 Flare"
+      ]
+    },
+    {
+      "hero": "sand_king",
+      "task_id": "mt_cGliM2Q4NGViNjU2YzhjNGFkNDhkMGQ1ODY5YWQ1MWFkZjliZWM0Nzhj",
+      "status": "completed",
+      "user_approved": true,
+      "path": "assets/migoo/dota-original-heroes-classic/sand_king-v01/original.png",
+      "width": 768,
+      "height": 1360,
+      "sha256": "7f87ea6e4f5804bdd6b6a89ddb28f27dc05aabf4c864ff8b8f9c50954c247fab",
+      "applied_models": [
+        "GPT Image 2.6 Flare"
+      ]
+    },
+    {
+      "hero": "pudge",
+      "task_id": "mt_cGk0YTBmZGFmZDA2MjA0NjE3MDdlY2EwNzMyZWI4MTIwMmIyYmFkMjI5",
+      "status": "completed",
+      "user_approved": true,
+      "path": "assets/migoo/dota-original-heroes-classic/pudge-v01/original.png",
+      "width": 768,
+      "height": 1360,
+      "sha256": "5814999651d32edc902bef9e932f6aec7b17bcd28c174094c673fd951ba23c06",
+      "applied_models": [
+        "GPT Image 2.6 Flare"
+      ]
+    },
+    {
+      "hero": "slark",
+      "task_id": "mt_cGliMDMzMzY1MDNhODMwOGE2NTVhODlmN2FjOTM1NjIwMzdhYjZmMTk3",
+      "status": "completed",
+      "user_approved": true,
+      "path": "assets/migoo/dota-original-heroes-classic/slark-v01/original.png",
+      "width": 768,
+      "height": 1360,
+      "sha256": "7b20e801b8a2c4be94157f5ffe7222c8793588535767cab3f569b83f76464dc1",
+      "applied_models": [
+        "GPT Image 2.6 Flare"
+      ]
+    },
+    {
+      "hero": "weaver",
+      "task_id": "mt_cGk3ZDNlZjM5YTcwYjMwNWY0YjYyMmY3NDgwNzc1MjFkYTFiZGE5OGU0",
+      "status": "completed",
+      "user_approved": true,
+      "path": "assets/migoo/dota-original-heroes-classic/weaver-v01/original.png",
+      "width": 768,
+      "height": 1360,
+      "sha256": "ef7e287bf697c1e9fa1ed06bde73a3a2e7673d3e4b2805b052f0b239e9a04b52",
+      "applied_models": [
+        "GPT Image 2.6 Flare"
+      ]
+    },
+    {
+      "hero": "visage",
+      "task_id": "mt_cGlhNTE0MWI1MzBlNmI5NDM2MmQ2NzlkNDJkMWI2OWEzMzVhMTgzMzI2",
+      "status": "completed",
+      "user_approved": true,
+      "path": "assets/migoo/dota-original-heroes-classic/visage-v01/original.png",
+      "width": 768,
+      "height": 1360,
+      "sha256": "548dda73771701c077da02f40e9d43f7da35321c55230b2d8af2405ef302f993",
+      "applied_models": [
+        "GPT Image 2.6 Flare"
+      ]
+    }
+  ],
+  "user_approved": true,
+  "count": 10
+}

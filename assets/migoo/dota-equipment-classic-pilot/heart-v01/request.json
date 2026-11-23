@@ -1,0 +1,43 @@
+{
+  "hero": "heart",
+  "kind": "equipment",
+  "name": "恐鳌之心",
+  "english_name": "Heart of Tarrasque",
+  "icon": "output/dota-native-equipment/valve/heart.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/heart.png",
+  "classic_card_id": null,
+  "sha256": "1e391cf72f30b83aceba691c0ecfe095e697316cd5c0045bcef0c6c1794210f1",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/heart.png",
+      "sha256": "1e391cf72f30b83aceba691c0ecfe095e697316cd5c0045bcef0c6c1794210f1",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/heart.png"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10220_cropped.png",
+      "sha256": "94e86bdcca1d7da96e12bef7a63ad6477c49e2fe5e91dc3c8e44eba4a54ec860"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10232_cropped.png",
+      "sha256": "f9298ce686f7f5c05a82ad42c92b6d08d6dfe6880349aeb1664e566952961ce0"
+    }
+  ],
+  "classic_style_ids": [
+    10220,
+    10232
+  ],
+  "workflow": "Submit and report only; user reviews on Migoo; no generated-art download or inspection",
+  "authorization": "User requested an initial ten Dota equipment paintings in Classic style, with agent choosing the items",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk4NjliMWVkMTg1YjQ4MmUzYzQxMTM1YmEyMmFjNjI1ZjFhZjhjMWYz",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "hero": "nevermore",
+  "name": "影魔",
+  "english_name": "Shadow Fiend",
+  "render": "output/dota-hero-art-references/valve/nevermore.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/nevermore.png",
+  "sha256": "b2a1eca0287cd049390a5192b4d3e4f37dcb5f0ef83684fc9698f792cee11d51",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/nevermore.png",
+      "sha256": "b2a1eca0287cd049390a5192b4d3e4f37dcb5f0ef83684fc9698f792cee11d51"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10046_cropped.png",
+      "sha256": "2ee670ea907999f2afaf0f134f5d506140562257f25454c3047d29f994f21e7d"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10038_cropped.png",
+      "sha256": "4b81f25a9e3b11ba3cf240847395e16e44175377ef71ff57637b72407e62804a"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or visual reviews",
+  "authorization": "User explicitly requested another agent-selected twenty heroes and submission through the reusable script",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGllMWY1ZjNiMmU5YTlkNzk4MzgwOWU5ZmNlZDU2N2MyYWZjYzJmYjFk",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "style": "一张竖版9:16、满版原创奇幻野怪卡牌插画。参考图一只提取家族的基础体态、材质或技能光色，参考图二只观察手绘笔触与明暗。重新设计面貌、细部、道具、配色、机位与构图，禁止复制已有角色模型、徽记或画面。画法有概括的大色块、清楚的剪影和自然厚涂笔触。单体按描述只画一只，家族按描述限定数量，成员彼此分开、大小体态明显，主轮廓集中于中央方形。无文字、卡框、标志、UI、贴纸、水印和白边。",
+  "jobs": [
+    {
+      "slug": "pinecone-forager",
+      "name": "松毬采集者",
+      "inspiration": "松毬野怪｜单体",
+      "description": "只看参考一右侧小体型。设计拳头大的原创球果小兽，从湿润苔藓上挪动，栗红层片像叠起的薄叶，两只明亮的青豆眼和一根弯树梗，头顶无叶盾和旗饰。拖一截短小木耙，浅金林下天光，灰绿草面。只画这一个小家伙。",
+      "references": [
+        "output/dota-neutral-references/valve-731-new-creeps.png",
+        "output/classic-full-art/set01/full_art/10138_psd.png"
+      ]
+    },
+    {
+      "slug": "frost-ledge-hauler",
+      "name": "霜崖冰偶",
+      "inspiration": "远古冰霜｜单体",
+      "description": "参考一左侧宽体野怪只用来看大体块。绘制原创深青冰偶，宽肩如两块横卧的蓝灰冻岩，头像倾斜的石楔，没有长角，一条胳膊推着大块冻裂的原木。露顶逆光来自淡粉晨雾，脚下浅灰冰河，沉重而清晰。",
+      "references": [
+        "output/dota-neutral-references/valve-731-new-creeps.png",
+        "output/classic-full-art/set01/full_art/10095_psd.png"
+      ]
+    },
+    {
+      "slug": "glacier-drift-seer",
+      "name": "冰谷引雾巫",
+      "inspiration": "远古冰霜｜单体",
+      "description": "参考一中央细高野怪只用来看体型。设计原创穴居寒地巫者，窄肩披毛灰紫斗篷，头部有短侧角和下垂甲片，双手捧一只穿孔的灰石熏炉，白雾往侧方流。浅绿极光、灰蓝崖壁，胳膊和法器做出清晰轮廓。",
+      "references": [
+        "output/dota-neutral-references/valve-731-new-creeps.png",
+        "output/classic-full-art/set01/full_art/10137_psd.png"
+      ]
+    },
+    {
+      "slug": "harpy-rain-watch",
+      "name": "雨礁翼哨",
+      "inspiration": "鹰身女妖｜单体",
+      "description": "只从技能图标参考蓝白闪电光色。原创鹰身女妖停在雨湿的灰石尖柱，显眼的近侧宽翼像一把开着的深紫灰扇，后侧翼半收，长爪钩住石缘。白腹和暗蓝羽毛之间保留一小块暖赭色，远处云亮，脸和单翼边缘优先读出来。",
+      "references": [
+        "output/dota-neutral-references/icons/harpy_storm_chain_lightning.png",
+        "output/classic-full-art/set01/full_art/10082_psd.png"
+      ]
+    },
+    {
+      "slug": "mudbank-boulder",
+      "name": "河湾泥偶",
+      "inspiration": "泥土傀儡｜单体",
+      "description": "从图标参考圆卵石轮廓和亮眼。原创河泥小傀儡仰头从沙洲上站起，厚厚的赭褐泥壳混着嵌进体内的浅色卵石，脸是横向狭窄石缝和两只淡青眼。抱一块扁石，晴空倒影与沙地作为大亮面，单只生物。",
+      "references": [
+        "output/dota-neutral-references/icons/mud_golem_rock_destroy.png",
+        "output/classic-full-art/set01/full_art/10095_psd.png"
+      ]
+    },
+    {
+      "slug": "mudbank-split-clutch",
+      "name": "泥偶裂片一家",
+      "inspiration": "泥土傀儡｜家族同框",
+      "description": "三个成员且各自独立。中央是一只宽厚扁肩泥偶，左边是暖赭圆小偶，右边是蓝灰窄小偶。大的低下身，两只小的跨过一块开裂石壳。统一湿泥和圆卵石材质，以颜色和体型区分，河岸光线温软，三张脸在画面中央且显出高差。",
+      "references": [
+        "output/dota-neutral-references/icons/mud_golem_hurl_boulder.png",
+        "output/classic-full-art/set01/full_art/10095_psd.png"
+      ]
+    },
+    {
+      "slug": "satyr-gully-kin",
+      "name": "萨特沟谷一家",
+      "inspiration": "萨特｜家族同框",
+      "description": "三只原创山沟萨特，以裂蹄、粗毛与角形成共同点。左边小个子橙灰短角捧一只铃，右边中等体型披蓝毡转动木环，后方高个子暗红宽角伸手拨开树枝。疏林天光偏浅青，有宽窄和高低三种轮廓，三双眼和各自器物完整可见。",
+      "references": [
+        "output/dota-neutral-references/icons/satyr_hellcaller_shockwave.png",
+        "output/classic-full-art/set01/full_art/10137_psd.png"
+      ]
+    },
+    {
+      "slug": "forest-troll-hollow-kin",
+      "name": "林地巨魔营地",
+      "inspiration": "森林巨魔｜家族同框",
+      "description": "两只原创森林巨魔坐在倒木旁，前边瘦短的年轻成员整理木矛，后边高肩的年长草药师拿起一束浅黄草叶。巨魔共用长鼻、突出尖牙和青灰皮肤，分别配灰蓝薄皮衣与浅赭披肩。亮绿树缝，以两人剪影和手持物讲清分工。",
+      "references": [
+        "output/dota-neutral-references/icons/forest_troll_high_priest_heal.png",
+        "output/classic-full-art/set01/full_art/10138_psd.png"
+      ]
+    }
+  ]
+}

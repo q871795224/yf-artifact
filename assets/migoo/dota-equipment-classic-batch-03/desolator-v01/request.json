@@ -1,0 +1,44 @@
+{
+  "hero": "desolator",
+  "kind": "equipment",
+  "name": "黯灭",
+  "english_name": "Desolator",
+  "icon": "output/dota-native-equipment/desolator_png.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/desolator.png",
+  "sha256": "de7dfc2f4a1aca8b46f3cff7ab71306b89af127133a8fba4f7bd7632e76ee469",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/desolator_png.png",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/desolator.png",
+      "sha256": "de7dfc2f4a1aca8b46f3cff7ab71306b89af127133a8fba4f7bd7632e76ee469"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10263_cropped.png",
+      "media_id": "1459239391798496",
+      "sha256": "0a642defad353380b55512c08e3c4143e3b5ae57ae8c24e2a61d273891e92910"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10256_cropped.png",
+      "media_id": "1459239670531346",
+      "sha256": "c7bfd096b2881379a3ea4ec7c36dd631df9044448a7e3e4afbe97b02c5ee0e42"
+    }
+  ],
+  "classic_style_ids": [
+    10263,
+    10256
+  ],
+  "workflow": "Submit and report only; no generated-output download or inspection",
+  "authorization": "User requested twenty additional equipment images after accepting prior batches",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGlkMmU3NThiZTcxMTdjODU4NzVlYWZmYTc4OGM2Mjc1ZmRjYWUxZmJh",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

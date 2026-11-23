@@ -1,0 +1,44 @@
+{
+  "hero": "bane",
+  "name": "祸乱之源",
+  "english_name": "Bane",
+  "render": "output/dota-hero-art-references/valve/bane.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/bane.png",
+  "sha256": "c3fee82bda9532d4bede4a65da4a4115bea224309c7e00785c8c3f9bf363db23",
+  "dimensions": [
+    1024,
+    1024
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/bane.png",
+      "sha256": "c3fee82bda9532d4bede4a65da4a4115bea224309c7e00785c8c3f9bf363db23"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10028_cropped.png",
+      "sha256": "b7c9bc857f51b9cb45d394b66271784a243901a6e157dcad1bfc2604f04bbc81"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10038_cropped.png",
+      "sha256": "4b81f25a9e3b11ba3cf240847395e16e44175377ef71ff57637b72407e62804a"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or visual reviews",
+  "authorization": "User explicitly requested another agent-selected twenty heroes and submission through the reusable script",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGlmY2RkYjRhNDk1ZDYzYmE1NzAwMWJjNTNmODNhY2ZlNDgxNGVmODY4",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

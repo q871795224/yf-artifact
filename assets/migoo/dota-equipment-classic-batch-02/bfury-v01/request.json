@@ -1,0 +1,44 @@
+{
+  "hero": "bfury",
+  "kind": "equipment",
+  "name": "狂战斧",
+  "english_name": "Battle Fury",
+  "icon": "output/dota-native-equipment/valve/bfury.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/bfury.png",
+  "sha256": "d495e668565b981156357645bb4c091eead7c9e38221e96adb2a4e10fe7916f2",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/bfury.png",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/bfury.png",
+      "sha256": "d495e668565b981156357645bb4c091eead7c9e38221e96adb2a4e10fe7916f2"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10223_cropped.png",
+      "media_id": "1459240187847486",
+      "sha256": "9c39054e64fd53f1fc77873f123d8604e34c4fa8c4a5c08eb07a135405407649"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10263_cropped.png",
+      "media_id": "1459239391798496",
+      "sha256": "0a642defad353380b55512c08e3c4143e3b5ae57ae8c24e2a61d273891e92910"
+    }
+  ],
+  "classic_style_ids": [
+    10223,
+    10263
+  ],
+  "workflow": "Submit and report only; user reviews on Migoo",
+  "authorization": "User approved first ten equipment images and requested twenty additional equipment images",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk2M2E2ZGZkMmNhZmQ4NGMzMDJjMTUzZGM2Nzg2ZDVhNmU3MmVkZTJl",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

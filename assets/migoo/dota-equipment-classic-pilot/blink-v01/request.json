@@ -1,0 +1,43 @@
+{
+  "hero": "blink",
+  "kind": "equipment",
+  "name": "闪烁匕首",
+  "english_name": "Blink Dagger",
+  "icon": "output/dota-native-equipment/valve/blink.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/blink.png",
+  "classic_card_id": 10206,
+  "sha256": "bc6401dfb8b64e07f4e450a351751755e154f5554f0bb9d14b96a3117092b5ac",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/blink.png",
+      "sha256": "bc6401dfb8b64e07f4e450a351751755e154f5554f0bb9d14b96a3117092b5ac",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/blink.png"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10206_cropped.png",
+      "sha256": "b8aab6728084de24cb33b6057407e497397b4c6a99b0238c258cd473375e3594"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10256_cropped.png",
+      "sha256": "c7bfd096b2881379a3ea4ec7c36dd631df9044448a7e3e4afbe97b02c5ee0e42"
+    }
+  ],
+  "classic_style_ids": [
+    10206,
+    10256
+  ],
+  "workflow": "Submit and report only; user reviews on Migoo; no generated-art download or inspection",
+  "authorization": "User requested an initial ten Dota equipment paintings in Classic style, with agent choosing the items",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk0MDUyM2E2MDVmMWVmMTg3MTY3NjQ2ZjQ4NWIyNzYyMDY0MWZkYWI1",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

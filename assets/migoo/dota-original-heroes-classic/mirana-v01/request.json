@@ -1,0 +1,36 @@
+{
+  "hero": "mirana",
+  "name": "米拉娜",
+  "english_name": "Mirana",
+  "render": "output/dota-hero-art-references/valve/mirana.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/mirana.png",
+  "sha256": "e039e07d356138261e1bbf5e85c7995c746a756544a1e4e377c1b9c41a69b507",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/mirana.png",
+      "sha256": "e039e07d356138261e1bbf5e85c7995c746a756544a1e4e377c1b9c41a69b507"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10032_cropped.png",
+      "sha256": "8b097f0a16dca85624a45928f24f2781ad358bffd31fefb52605e2caa2688670"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10010_cropped.png",
+      "sha256": "8f7b5240ccf4797b0e744273bb66c1a936ddf4ff32fc7f167aebc3f6449914e7"
+    }
+  ],
+  "workflow": "submit_only; no generated-art downloads or review",
+  "authorization": "User explicitly requested twenty more agent-selected canonical heroes",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk4NDUzNjQ2ODY2NjA0MjRiZWIxZjE2NTM5MzJlNDU4YWJkMzM3MDkz",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

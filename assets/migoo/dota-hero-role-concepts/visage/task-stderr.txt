@@ -1,0 +1,6 @@
+Migoo 额度：余额 96，免费 96，付费 0，冻结 0。
+Uploading output/dota-hero-art-references/valve/visage.png (971834 bytes)
+Uploading output/classic-full-art/set01/full_art/10138_psd.png (1218221 bytes)
+Uploading output/classic-full-art/set01/full_art/10010_psd.png (1496652 bytes)
+Task mt_cGlkYmIyY2Y4YTM1YjdkZDEyYWM5ODNkZGE3MTMzYzI5NWMwOTk3NWVl started; if this command is interrupted, run migoo task get mt_cGlkYmIyY2Y4YTM1YjdkZDEyYWM5ODNkZGE3MTMzYzI5NWMwOTk3NWVl --wait
+Saved assets/migoo/dota-hero-role-concepts/visage/mt_cGlkYmIyY2Y4YTM1YjdkZDEyYWM5ODNkZGE3MTMzYzI5NWMwOTk3NWVl_1.png

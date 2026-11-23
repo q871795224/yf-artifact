@@ -1,0 +1,40 @@
+{
+  "images": [
+    {
+      "name": "前线新兵",
+      "image": "frontline-recruit/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "9762cd009199bc62157cdacac25b9791f8b12e98181a7276ffbdce5d343d347e",
+      "task_id": "mt_cGk5ZWNiNmFiOTMzNzY4OTJlZDhhNjkyZDA1NDkwZWNhMDk3ZGMzZmYz",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459127677142296"
+    },
+    {
+      "name": "前线新兵（木面岩甲）",
+      "image": "frontline-recruit-bark-and-stone/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "d08fa6ad1f8bd9d041acd5f66aa44a22162b3bea34488d0bb0b503a776af6222",
+      "task_id": "mt_cGk3ZjQ2Yjg3ZmY3NDM2YTE1ZmE3MzA3ZjA2NjU2OTk0ZDI3ZDI3MzFj",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459140183557385"
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "images": [
+    {
+      "slug": "01-sven-gods-strength",
+      "name": "斯温·神之力量",
+      "image": "01-sven-gods-strength/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "39bedb659023d0114e12c2af0ff97f70f8c2e49fb5aa6dbefc67b6af5d35f7ac",
+      "task_id": "mt_cGk5M2IxOGIwNzQ1M2IzNjA0MzJjNzIzZjAzMTIyZGUyZTdjOTU4MjMy",
+      "media_id": "1459255374390501",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-ultimates-01/references/hero-sven.jpg",
+        "assets/migoo/hero-ultimates-01/references/unit-bell-guard.jpg",
+        "assets/migoo/hero-ultimates-01/references/classic-10330.jpg",
+        "assets/migoo/hero-ultimates-01/references/classic-10425.jpg"
+      ],
+      "cast": [
+        {
+          "name": "斯温",
+          "source_image": "output/dota-hero-art-references/valve/sven.png",
+          "reference": "assets/migoo/hero-ultimates-01/references/hero-sven.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "林营铜铃守卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/04-camp-bell-guard/original.png",
+          "reference": "assets/migoo/hero-ultimates-01/references/unit-bell-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "classic_art_ids": [
+        "10330",
+        "10425"
+      ],
+      "kind": "英雄技能",
+      "hero": "斯温",
+      "skill_name": "神之力量",
+      "ability_key": "sven_gods_strength",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=18"
+    },
+    {
+      "slug": "02-medusa-stone-gaze",
+      "name": "美杜莎·石化凝视",
+      "image": "02-medusa-stone-gaze/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "09cf5adaa05cf669b36382d9c20d28b5e3eda2e086f8f99c030a443cf7647788",
+      "task_id": "mt_cGk1MWE3ODYyNTZkYjc2NGViOWNlNmY4NGNiMmVmYWVmYzdjMGI2NDgz",
+      "media_id": "1459255642760031",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-ultimates-01/references/hero-medusa.jpg",
+        "assets/migoo/hero-ultimates-01/references/hero-pudge.jpg",
+        "assets/migoo/hero-ultimates-01/references/classic-10267.jpg",
+        "assets/migoo/hero-ultimates-01/references/classic-10379.jpg"
+      ],
+      "cast": [
+        {
+          "name": "美杜莎",
+          "source_image": "output/dota-hero-art-references/valve/medusa.png",
+          "reference": "assets/migoo/hero-ultimates-01/references/hero-medusa.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "帕吉",
+          "source_image": "output/dota-hero-art-references/valve/pudge.png",
+          "reference": "assets/migoo/hero-ultimates-01/references/hero-pudge.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "classic_art_ids": [
+        "10267",
+        "10379"
+      ],
+      "kind": "英雄技能",
+      "hero": "美杜莎",
+      "skill_name": "石化凝视",
+      "ability_key": "medusa_stone_gaze",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=94"
+    },
+    {
+      "slug": "03-queenofpain-sonic-wave",
+      "name": "痛苦女王·超声冲击波",
+      "image": "03-queenofpain-sonic-wave/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "39331c803d1ad86a6701081d314cf237f2ec4983957c4858465203caf9a441b0",
+      "task_id": "mt_cGlmNjBmYWNlOGFmNzVmYzBlZWRlMGNlY2U3OWM1OGU4NDUwODZhMDgz",
+      "media_id": "1459255877862656",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-ultimates-01/references/hero-queenofpain.jpg",
+        "assets/migoo/hero-ultimates-01/references/hero-lina.jpg",
+        "assets/migoo/hero-ultimates-01/references/classic-10339.jpg",
+        "assets/migoo/hero-ultimates-01/references/classic-10353.jpg"
+      ],
+      "cast": [
+        {
+          "name": "痛苦女王",
+          "source_image": "output/dota-hero-art-references/valve/queenofpain.png",
+          "reference": "assets/migoo/hero-ultimates-01/references/hero-queenofpain.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "莉娜",
+          "source_image": "output/dota-hero-art-references/valve/lina.png",
+          "reference": "assets/migoo/hero-ultimates-01/references/hero-lina.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "classic_art_ids": [
+        "10339",
+        "10353"
+      ],
+      "kind": "英雄技能",
+      "hero": "痛苦女王",
+      "skill_name": "超声冲击波",
+      "ability_key": "queenofpain_sonic_wave",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=39"
+    },
+    {
+      "slug": "04-doom-bringer-doom",
+      "name": "末日使者·末日",
+      "image": "04-doom-bringer-doom/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "fb2678507c02408b06fae74ababd3bb2111057917ff623485425cd772f4e47fb",
+      "task_id": "mt_cGllNGY5NTE2Zjk3MmYxM2ViNjgwYWUxYWIwY2NiNzJhYjIyMzhkYjIx",
+      "media_id": "1459256142414684",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-ultimates-01/references/hero-doom_bringer.jpg",
+        "assets/migoo/hero-ultimates-01/references/hero-pudge.jpg",
+        "assets/migoo/hero-ultimates-01/references/classic-10319.jpg",
+        "assets/migoo/hero-ultimates-01/references/classic-10424.jpg"
+      ],
+      "cast": [
+        {
+          "name": "末日使者",
+          "source_image": "output/dota-hero-art-references/valve/doom_bringer.png",
+          "reference": "assets/migoo/hero-ultimates-01/references/hero-doom_bringer.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "帕吉",
+          "source_image": "output/dota-hero-art-references/valve/pudge.png",
+          "reference": "assets/migoo/hero-ultimates-01/references/hero-pudge.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "classic_art_ids": [
+        "10319",
+        "10424"
+      ],
+      "kind": "英雄技能",
+      "hero": "末日使者",
+      "skill_name": "末日",
+      "ability_key": "doom_bringer_doom",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=69"
+    }
+  ]
+}

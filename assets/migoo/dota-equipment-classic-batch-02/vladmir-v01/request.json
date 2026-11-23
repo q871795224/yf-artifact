@@ -1,0 +1,44 @@
+{
+  "hero": "vladmir",
+  "kind": "equipment",
+  "name": "弗拉迪米尔的祭品",
+  "english_name": "Vladmir's Offering",
+  "icon": "output/dota-native-equipment/valve/vladmir.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/vladmir.png",
+  "sha256": "749ec25bc12f5cd3ea12f59b530203611ff8d66acc0a89c3e4cc057ad7b2e239",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/vladmir.png",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/vladmir.png",
+      "sha256": "749ec25bc12f5cd3ea12f59b530203611ff8d66acc0a89c3e4cc057ad7b2e239"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10224_cropped.png",
+      "media_id": "1459239138518268",
+      "sha256": "6d67f5e3bdf3c47cfae2d365ca89cc7d307336e5bb1f4ce51ef48e27698c15e3"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10232_cropped.png",
+      "media_id": "1459239926359306",
+      "sha256": "f9298ce686f7f5c05a82ad42c92b6d08d6dfe6880349aeb1664e566952961ce0"
+    }
+  ],
+  "classic_style_ids": [
+    10224,
+    10232
+  ],
+  "workflow": "Submit and report only; user reviews on Migoo",
+  "authorization": "User approved first ten equipment images and requested twenty additional equipment images",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGllNDM1NGM2MjlmZGJkZTY5MmMxMDIxNjk2NDIxYTc2ZTNiZDQ2ZTkx",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

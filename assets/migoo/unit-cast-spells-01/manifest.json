@@ -1,0 +1,371 @@
+{
+  "images": [
+    {
+      "slug": "01-frost-snare",
+      "name": "凝霜缚足",
+      "image": "01-frost-snare/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "cf6eaeeda78181acceb905c087f3c4ae69f8556ac6a93940dd3d84a6f4dfebd6",
+      "task_id": "mt_cGljYzYwMDNiNzBjNjIxYWJiNzhlNDA3ZTU5NjljODJiZWIxY2RjZThm",
+      "media_id": "1459237824111887",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-01/references/unit-frog-shield.jpg",
+        "assets/migoo/unit-cast-spells-01/references/classic-10277.jpg",
+        "assets/migoo/unit-cast-spells-01/references/classic-10318.jpg"
+      ],
+      "cast": [
+        {
+          "name": "芦岸护篓兵",
+          "source_image": "assets/migoo/lore-unit-batch-02/03-reedbank-buckler/original.png",
+          "reference": "assets/migoo/unit-cast-spells-01/references/unit-frog-shield.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10277",
+        "10318"
+      ],
+      "kind": "控制"
+    },
+    {
+      "slug": "02-tidal-ward",
+      "name": "潮幕护持",
+      "image": "02-tidal-ward/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "82b2e41d1c0b348131dc57615018c2199454e72fc98c72922f40dcc6aae7f826",
+      "task_id": "mt_cGlhNmQ3NDUzZjFjYzkxNzRmYWMxM2I1YTI4MGUyMjgyNmFhNjMwMmRj",
+      "media_id": "1459237914821455",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-01/references/unit-fish-lamp.jpg",
+        "assets/migoo/unit-cast-spells-01/references/unit-frog-shield.jpg",
+        "assets/migoo/unit-cast-spells-01/references/classic-10324.jpg",
+        "assets/migoo/unit-cast-spells-01/references/classic-10382.jpg"
+      ],
+      "cast": [
+        {
+          "name": "潮沟灯侍",
+          "source_image": "assets/migoo/comic-npc-batch-05/08-tidal-lamp-attendant/original.png",
+          "reference": "assets/migoo/unit-cast-spells-01/references/unit-fish-lamp.jpg"
+        },
+        {
+          "name": "芦岸护篓兵",
+          "source_image": "assets/migoo/lore-unit-batch-02/03-reedbank-buckler/original.png",
+          "reference": "assets/migoo/unit-cast-spells-01/references/unit-frog-shield.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10324",
+        "10382"
+      ],
+      "kind": "护持"
+    },
+    {
+      "slug": "03-conducted-strike",
+      "name": "引雷贯锁",
+      "image": "03-conducted-strike/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "b7ecbd3b9aa1ca08c2b51334918126d42ee18e6b180f62f2d06a571438adf917",
+      "task_id": "mt_cGkxNzRjYzdmNTQyMjFmODJhNzNkOWI2MTY0ODZjNTQyNDI5ZTc4OGY3",
+      "media_id": "1459237792564491",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-01/references/unit-repair-automaton.jpg",
+        "assets/migoo/unit-cast-spells-01/references/classic-10352.jpg",
+        "assets/migoo/unit-cast-spells-01/references/classic-10412.jpg"
+      ],
+      "cast": [
+        {
+          "name": "巡场检修偶",
+          "source_image": "assets/migoo/lore-unit-batch-02/07-carnival-repair-automaton/original.png",
+          "reference": "assets/migoo/unit-cast-spells-01/references/unit-repair-automaton.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10352",
+        "10412"
+      ],
+      "kind": "攻击"
+    },
+    {
+      "slug": "04-root-drag",
+      "name": "藤攫拖拽",
+      "image": "04-root-drag/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "dc34e2a5791aaca43d64c3413fed67c97774247a283e875c3c7a42b2ff4c7678",
+      "task_id": "mt_cGllZjEwNDExYjk5YjAwOThhNTNjNGJiOGE3ZWRmNDU0MDFjYzVlYjBl",
+      "media_id": "1459238110045427",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-01/references/unit-root-weaver.jpg",
+        "assets/migoo/unit-cast-spells-01/references/unit-fanged-guard.jpg",
+        "assets/migoo/unit-cast-spells-01/references/classic-10417.jpg",
+        "assets/migoo/unit-cast-spells-01/references/classic-10324.jpg"
+      ],
+      "cast": [
+        {
+          "name": "藤索编结工",
+          "source_image": "assets/migoo/comic-npc-batch-05/09-root-rope-weaver/original.png",
+          "reference": "assets/migoo/unit-cast-spells-01/references/unit-root-weaver.jpg"
+        },
+        {
+          "name": "獠牙门卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/06-fanged-gate-guard/original.png",
+          "reference": "assets/migoo/unit-cast-spells-01/references/unit-fanged-guard.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10417",
+        "10324"
+      ],
+      "kind": "控制"
+    },
+    {
+      "slug": "05-shadow-step",
+      "name": "跃影换位",
+      "image": "05-shadow-step/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "899b37ea67fc4c7c04fce170e252a9fed164b7144e9c55448f4e57836680467d",
+      "task_id": "mt_cGkyMDI4N2E3ZDk0NDAyMmRiMmIwZWJlYzc4ZDAyMTVhOTM3Zjg4MmM4",
+      "media_id": "1459238365136157",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-01/references/unit-bridge-scout.jpg",
+        "assets/migoo/unit-cast-spells-01/references/classic-10404.jpg",
+        "assets/migoo/unit-cast-spells-01/references/classic-10355.jpg"
+      ],
+      "cast": [
+        {
+          "name": "窄桥探哨",
+          "source_image": "assets/migoo/comic-npc-batch-05/05-narrow-bridge-scout/original.png",
+          "reference": "assets/migoo/unit-cast-spells-01/references/unit-bridge-scout.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10404",
+        "10355"
+      ],
+      "kind": "位移"
+    },
+    {
+      "slug": "06-gale-shove",
+      "name": "疾风推阵",
+      "image": "06-gale-shove/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "88cb7a92fdcbb1d075e0489a2b22c10c3decf7b697f9af94e996230f0a9ca729",
+      "task_id": "mt_cGk2YTM0M2ViZDAyNjY2OTkwNDA4YzVmZTc4NjdjYTE2NTI4M2IwZDYx",
+      "media_id": "1459238102271217",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-01/references/unit-maned-beast.jpg",
+        "assets/migoo/unit-cast-spells-01/references/unit-water-beast.jpg",
+        "assets/migoo/unit-cast-spells-01/references/classic-10339.jpg",
+        "assets/migoo/unit-cast-spells-01/references/classic-10413.jpg"
+      ],
+      "cast": [
+        {
+          "name": "暮坡嗅迹兽",
+          "source_image": "assets/migoo/comic-npc-batch-05/01-evening-trail-sniffer/original.png",
+          "reference": "assets/migoo/unit-cast-spells-01/references/unit-maned-beast.jpg"
+        },
+        {
+          "name": "山口驮水兽",
+          "source_image": "assets/migoo/comic-npc-batch-05/02-pass-water-carrier/original.png",
+          "reference": "assets/migoo/unit-cast-spells-01/references/unit-water-beast.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10339",
+        "10413"
+      ],
+      "kind": "扰动"
+    },
+    {
+      "slug": "07-armor-sear",
+      "name": "蚀甲灼痕",
+      "image": "07-armor-sear/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "46ae3124bbaf6172db20e47255282f357c6491afac263670d72b6e33ca415843",
+      "task_id": "mt_cGkwODVkNTlkMGZmYWJhODhiMTVlZTcwYWMxYWY4N2I3ZTdiZDY0ODA3",
+      "media_id": "1459238577030406",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-01/references/unit-fanged-guard.jpg",
+        "assets/migoo/unit-cast-spells-01/references/classic-10367.jpg",
+        "assets/migoo/unit-cast-spells-01/references/classic-10308.jpg"
+      ],
+      "cast": [
+        {
+          "name": "獠牙门卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/06-fanged-gate-guard/original.png",
+          "reference": "assets/migoo/unit-cast-spells-01/references/unit-fanged-guard.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10367",
+        "10308"
+      ],
+      "kind": "削弱"
+    },
+    {
+      "slug": "08-spring-rift",
+      "name": "裂地涌泉",
+      "image": "08-spring-rift/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "8e64b1ade2fb18e40787a044c0bcd967595c6c781bf49b4efb69ff5582b0ba53",
+      "task_id": "mt_cGk0MDJmZjJjYzg3MzMxZGFkNzQzYWI3NGUzNjk4MTIzZjJhMzA5OGI2",
+      "media_id": "1459238748169468",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-01/references/classic-10352.jpg",
+        "assets/migoo/unit-cast-spells-01/references/classic-10324.jpg"
+      ],
+      "cast": [],
+      "classic_art_ids": [
+        "10352",
+        "10324"
+      ],
+      "kind": "环境法术"
+    },
+    {
+      "slug": "09-hovering-barricade",
+      "name": "悬石封径",
+      "image": "09-hovering-barricade/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "b05ae73613d5f0ec9184fd9b4bb46e234c2057e909bc0b8b425a25523aee3194",
+      "task_id": "mt_cGk5NTI5ZTdmZTA5M2ZjMmNiMmFiMjBlMzg3NGM4YjYyYjlhZTdkYzIy",
+      "media_id": "1459238451127549",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-01/references/classic-10347.jpg",
+        "assets/migoo/unit-cast-spells-01/references/classic-10324.jpg"
+      ],
+      "cast": [],
+      "classic_art_ids": [
+        "10347",
+        "10324"
+      ],
+      "kind": "环境法术"
+    },
+    {
+      "slug": "10-reversed-sands",
+      "name": "逆沙回时",
+      "image": "10-reversed-sands/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "980fc6d27781aa6ce6cb9b8cf8b1a5a1d7a70f43033a9de275e06ae205cdc399",
+      "task_id": "mt_cGkxMDk3YjQxMGY1NzIyYmMxZTAyYmU5YzkyMzUxN2QwNGExMGIxNmYx",
+      "media_id": "1459238797534045",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/unit-cast-spells-01/references/classic-10355.jpg",
+        "assets/migoo/unit-cast-spells-01/references/classic-10404.jpg"
+      ],
+      "cast": [],
+      "classic_art_ids": [
+        "10355",
+        "10404"
+      ],
+      "kind": "环境法术"
+    }
+  ]
+}

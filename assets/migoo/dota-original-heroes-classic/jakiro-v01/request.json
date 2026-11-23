@@ -1,0 +1,44 @@
+{
+  "hero": "jakiro",
+  "name": "杰奇洛",
+  "english_name": "Jakiro",
+  "render": "output/dota-hero-art-references/valve/jakiro.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/jakiro.png",
+  "sha256": "303942571216ec40dbe927f3d6689f1f6af86977c4d6935818e47c3c1d64bb28",
+  "dimensions": [
+    2880,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/jakiro.png",
+      "sha256": "303942571216ec40dbe927f3d6689f1f6af86977c4d6935818e47c3c1d64bb28"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10010_cropped.png",
+      "sha256": "8f7b5240ccf4797b0e744273bb66c1a936ddf4ff32fc7f167aebc3f6449914e7"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10064_cropped.png",
+      "sha256": "1824b122ea11a72965a178100d872ee132903a4f84f55efff5bc9e9feee69c64"
+    }
+  ],
+  "workflow": "submit_only; no image download or generated-art review",
+  "authorization": "User explicitly delegated selecting twenty and requested submission plus reporting only",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGlkYjNhODhlMGU0NWU4MDhlNGNlYjJjMDgzMzllMzRjODljOWI0NWI1",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

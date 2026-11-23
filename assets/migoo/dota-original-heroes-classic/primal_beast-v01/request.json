@@ -1,0 +1,41 @@
+{
+  "hero": "primal_beast",
+  "name": "獸",
+  "english_name": "Primal Beast",
+  "render": "output/dota-hero-art-references/valve/primal_beast.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/primal_beast.png",
+  "sha256": "c29e0bab3e34b09c49f6a86e379728afffd98ceacb84cc863ba788720eeb25f0",
+  "classic_hero_exists": false,
+  "reference_note": "Official transparent render",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/primal_beast.png",
+      "sha256": "c29e0bab3e34b09c49f6a86e379728afffd98ceacb84cc863ba788720eeb25f0",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/primal_beast.png"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10070_cropped.png",
+      "sha256": "ecb1ed9c3485e1d54a3f0cb5aff2bf989f0e6fe46ec4c69dc35b1185fd8dd503",
+      "media_id": "1459227574215487"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10028_cropped.png",
+      "sha256": "b7c9bc857f51b9cb45d394b66271784a243901a6e157dcad1bfc2604f04bbc81",
+      "media_id": "1459226678666066"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or review",
+  "authorization": "User requested this additional twenty; agent selected roster and disclosed 18 remaining new heroes plus 2 existing Classic heroes repainted",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk3MmY2YzlkZDg3ZWJjYWJiYzhmOTg0NzM4YjZjNjI5NjBkZWY2Y2Vk",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

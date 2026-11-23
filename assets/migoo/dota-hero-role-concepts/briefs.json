@@ -1,0 +1,108 @@
+{
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "style": "单张原创奇幻英雄插画，9:16 满版。第一张图片仅作为选题资料，画成下面文字指定的全新角色，独立设计五官、种族、服装、道具、配色、姿态和构图。第二、三张为无框绘画资料，分别参考笔触与明暗组织，不带入它们的人物和场景。清晰的大色块，真实材质，焦点边缘清楚、外围松笔，背景服务于剪影。保留单一视觉焦点和可读手势，缩至约48像素宽仍能看清关键动作。画到四边，画面中没有卡框、字、数字、标识、水印和白边。",
+  "jobs": [
+    {
+      "slug": "medusa",
+      "name": "盐镜守门人",
+      "description": "横向拦截的石化画面。人类盐矿女守门人，剃短黑发、蜡白工装和赭色围腰，双脚撑开，侧身用一面扁六角旧铜镜封住巷口。中景侧视，铜镜在左前方占一块亮面，镜光扫过贴地盐尘，远处闯入者一只靴子正在变成灰白石壳，仅留腿和影。干盐矿壁从右侧反暖光，铜绿与奶白为主。",
+      "references": [
+        "output/dota-hero-art-references/valve/medusa.png",
+        "output/classic-full-art/set01/full_art/10046_psd.png",
+        "output/classic-full-art/set01/full_art/10267_psd.png"
+      ]
+    },
+    {
+      "slug": "morphling",
+      "name": "河口撑桥灵",
+      "description": "近水面低机位，中广角镜头。河口泥灵是覆有粗芦苇的扁宽四足无脸生物，背脊如一笼湿柳条，伏在断桥下面。右前肢延展为厚重泥浆拱梁，从画面底部斜顶落下的旧桥板，桥板占上角形成清楚的受力关系。阴天漫射光，淤泥黄褐、旧木暖灰和潮水暗豆绿。画出水和泥的重量，关键焦点在拱梁接触桥板的位置。",
+      "references": [
+        "output/dota-hero-art-references/valve/morphling.png",
+        "output/classic-full-art/set01/full_art/10024_psd.png",
+        "output/classic-full-art/set01/full_art/10010_psd.png"
+      ]
+    },
+    {
+      "slug": "ancient_apparition",
+      "name": "雪原封脉师",
+      "description": "近景俯拍，主角是坐伏担架旁的旧雪原医师，深褐面孔，红褐毛毡斗篷，双手端一口宽扁的裂纹白陶钵。有人从画面边缘伸手，一丝暖金治疗光在钵口结成不透明的霜壳，冻住光的瞬间是唯一焦点。医师短卷头发留少量侧光，毡和新霜有清楚的材质差，夜间帐篷外的蓝灰冷色只留在角落。",
+      "references": [
+        "output/dota-hero-art-references/valve/ancient_apparition.png",
+        "output/classic-full-art/set01/full_art/10038_psd.png",
+        "output/classic-full-art/set01/full_art/10064_psd.png"
+      ]
+    },
+    {
+      "slug": "juggernaut",
+      "name": "风崖环刃客",
+      "description": "完整侧视的宽步旋身，矮壮的白发老年剑客穿砖红短褂和黑色绑腿，双手用短柄宽铁刀作横向劈斩。画面在动作刚停住的一帧，刀刃水平、衣角反向卷起，飞扬的浅赭沙尘划出一段断弧。风崖正午苍白日光和轮廓分明的岩影，露出侧脸和站稳的足部。",
+      "references": [
+        "output/dota-hero-art-references/valve/juggernaut.png",
+        "output/classic-full-art/set01/full_art/10054_psd.png",
+        "output/classic-full-art/set01/full_art/10047_psd.png"
+      ]
+    },
+    {
+      "slug": "rattletrap",
+      "name": "闸廊锁匠",
+      "description": "直斜透视俯瞰木闸廊。纤瘦的短发女技师身着琥珀色防水工装，坐在半高梁上踏住宽棘轮，脚下空间被前后两扇相向滑行的锻铁栅门切成窄格。停在近处的闸门留空隙，让轮廓完整。窗上漏下锐利白色条光，烟黑铁、旧木与琥珀成三大色块，屈膝的技师和棘轮是焦点。",
+      "references": [
+        "output/dota-hero-art-references/valve/rattletrap.png",
+        "output/classic-full-art/set01/full_art/10092_psd.png",
+        "output/classic-full-art/set01/full_art/10322_psd.png"
+      ]
+    },
+    {
+      "slug": "sand_king",
+      "name": "沙脊潜行兽",
+      "description": "架空沙海的非人英雄，主体为披层叠白垩骨板的巨大钻沙蜥，鳄形低头，两只阔掌踏出沙脊，宽扁鼻梁从画面左下破土，岩脊和尾迹向右上退远。极低贴地透视，夕阳从背后照亮绢状沙浪，黑紫大阴影压住近景。非人剪影为一大一小两段骨板，焦点是破土的脸和前爪。",
+      "references": [
+        "output/dota-hero-art-references/valve/sand_king.png",
+        "output/classic-full-art/set01/full_art/10070_psd.png",
+        "output/classic-full-art/set01/full_art/10033_psd.png"
+      ]
+    },
+    {
+      "slug": "pudge",
+      "name": "渡口拖缆人",
+      "description": "浓雾渡口，主角是高瘦的年长拉船工，单膝在石阶上踩实，芦编护胸外罩靛灰防水披肩。右手紧握麻绳，左手掌心在绳上借力，一枚沉重的三齿系船钩沿画面斜线拖来卡住另一端的木船。雨刚停，钴蓝清晨和大片乳灰水面形成高明度冷蓝画面，一点朱红浮标，纤维拉紧和人物向后倾的重心交代拉拽。用偏远的三分之四侧面构图。",
+      "references": [
+        "output/dota-hero-art-references/valve/pudge.png",
+        "output/classic-full-art/set01/full_art/10024_psd.png",
+        "output/classic-full-art/set01/full_art/10328_psd.png"
+      ]
+    },
+    {
+      "slug": "slark",
+      "name": "礁缝脱身客",
+      "description": "近地洞口侧视，一只灰白长尾的原创两栖异族从潮湿岩缝钻出，中等细瘦体型，前肢低伏，左后足刚甩落缠住脚踝的麻网，姿态像贴岩跳跃。斑点皮肤在洞口天光下干净，月下薰衣草紫岩海作宽背景，岩缝暗紫石压着画面边缘，主光冷白而有硬度，整张以紫灰和近黑为主。一条很明确的尾部弧线带动动作，主体身上仅一片破旧浅皮护具。",
+      "references": [
+        "output/dota-hero-art-references/valve/slark.png",
+        "output/classic-full-art/set01/full_art/10047_psd.png",
+        "output/classic-full-art/set01/full_art/10354_psd.png"
+      ]
+    },
+    {
+      "slug": "weaver",
+      "name": "回纬纺师",
+      "description": "正上方俯拍，棕肤的黑发男纺师跪在石制织架下，穿青瓷色长衣，拉回一根鲜红的织线。织线经过的裂瓷从散开的缺片逆次拼回，碎片从画面下角往织架一端收束。明亮阴天从头顶照下来，陶白和饱和孔雀绿在画面铺成大色块，近似白昼自然光，纪时动作由一根线和唯一一只拉线的手读出。",
+      "references": [
+        "output/dota-hero-art-references/valve/weaver.png",
+        "output/classic-full-art/set01/full_art/10307_psd.png",
+        "output/classic-full-art/set01/full_art/10355_psd.png"
+      ]
+    },
+    {
+      "slug": "visage",
+      "name": "石檐唤鸦人",
+      "description": "仰看破钟楼的巨大三角尖顶。一个皮肤粗糙、夹灰短辫的中年巡钟人跨坐尖顶，执长木槌落向铁板，身边两尊花岗岩雕成的乌鸦各伸开一只宽翼，从屋檐起飞。第一只落在近处左上角，第二只在穹顶后的小块暮光中，厚重岩片对比人物浅白织衣。天空为粉白色薄雾，钟楼下方一大片带淡紫的铅灰暗面，近黑岩鸦横过最亮的天空，画面接近银灰单色。",
+      "references": [
+        "output/dota-hero-art-references/valve/visage.png",
+        "output/classic-full-art/set01/full_art/10138_psd.png",
+        "output/classic-full-art/set01/full_art/10010_psd.png"
+      ]
+    }
+  ]
+}

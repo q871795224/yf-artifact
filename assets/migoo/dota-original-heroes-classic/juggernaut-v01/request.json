@@ -1,0 +1,37 @@
+{
+  "hero": "juggernaut",
+  "name": "主宰",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/juggernaut.png",
+      "sha256": "3d70771cc3d9a3e71f476b0ec2349c88d55ff8f9199bd11289b4f77e5138f590"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10054_cropped.png",
+      "sha256": "418eaa7727b6bb10467d183a4b968ef662874081dfb97a5b631088d333a5458b"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10047_cropped.png",
+      "sha256": "3571bcb9be23ee305506acecee5c07b942e7b07424a1b57a4ac4a8ff9fc85d7e"
+    }
+  ],
+  "prompt_file": "prompt.txt",
+  "notes_file": "notes.txt",
+  "authorized": "User approved Medusa sample and explicitly requested submitting remaining nine together",
+  "batch_balance_before": {
+    "free": 94,
+    "paid": 0
+  },
+  "listed_price": 5.33,
+  "task_id": "mt_cGlmMTU4Mjc3MDk2ZmUxMTM3NDc5MzJjMWUxYzhhYzE3YTkwMjE2YmUz",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ],
+  "cli_exit_code": 0,
+  "user_review": "User approved all first ten images"
+}

@@ -1,0 +1,128 @@
+{
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "style": "一张竖版9:16、满版、原创奇幻卡牌人物插画。参考图一提取族群体态、时代和职业用具，参考图二观察手绘色块和明暗。重新设计面貌、衣服、道具、姿势和构图。同一个世界里的普通角色，轻微夸张的比例、质朴笔触、简明大色块，脸、手和招牌道具落在中心方形内，背景少而分明。单一主体，无文字、卡框、标志、对话框、水印和白边。",
+  "jobs": [
+    {
+      "slug": "legion-ground-staker",
+      "name": "古铜军团营桩兵",
+      "inspiration": "古铜军团",
+      "description": "一个粗壮营地士兵侧身举起浅木槌，把短桩夯进浅紫泥土。羊毛罩衫、小圆铜盔和墨蓝绑腿。黄昏营帐只留珊瑚红大色面，大木槌靠近头肩",
+      "references": [
+        "output/dota-lore-references/user-panels/gold-helmet-spearmen.png",
+        "output/classic-full-art/set01/full_art/10092_psd.png"
+      ]
+    },
+    {
+      "slug": "legion-pack-handler",
+      "name": "古铜军团驮兽牵引手",
+      "inspiration": "古铜军团",
+      "description": "短发牵引手穿赭红布外衣、深绿护肩和一只小铜扣，手上举起一圈缰绳，身边只有一截毛茸茸的原创驮兽侧脸。冷灰谷地和风里白云，轻装有亲和力",
+      "references": [
+        "output/dota-lore-references/client/panorama/images/comics/tipofthespear/002_png.png",
+        "output/classic-full-art/set01/full_art/10087_psd.png"
+      ]
+    },
+    {
+      "slug": "legion-field-dresser",
+      "name": "古铜军团包扎员",
+      "inspiration": "古铜军团",
+      "description": "营地包扎员站在一束从帐布缝落下的白光里，用一只大卷布压在膝前的药匣上。圆肩厚白布袍、暗赭围裙、旧铜手镯，背景带一点暗蓝和鼠尾草绿",
+      "references": [
+        "output/dota-lore-references/client/panorama/images/comics/tipofthespear/002_png.png",
+        "output/classic-full-art/set01/full_art/10092_psd.png"
+      ]
+    },
+    {
+      "slug": "legion-pass-sentry",
+      "name": "古铜军团山口哨兵",
+      "inspiration": "古铜军团",
+      "description": "瘦削山口哨兵半跪举一面小块铜片向远处反光传讯。窄兜帽和浅蓝羊毛肩套，碎雪、灰岩、冷亮天际，镜面形成小而最亮的视觉焦点",
+      "references": [
+        "output/dota-lore-references/user-panels/gold-helmet-spearmen.png",
+        "output/classic-full-art/set01/full_art/10082_psd.png"
+      ]
+    },
+    {
+      "slug": "frog-lantern-tender",
+      "name": "水寨浮灯管理员",
+      "inspiration": "大屿前来",
+      "description": "矮胖橙褐蛙形族人在浅水台边用两只宽蹼手扶一盏半圆形纸浮灯。灯面暖白，暮色偏靛紫，水中只有两三块安静的长倒影。脸与灯集中在画面中上部",
+      "references": [
+        "output/dota-lore-references/official/largo/004.webp",
+        "output/classic-full-art/set01/full_art/10087_psd.png"
+      ]
+    },
+    {
+      "slug": "frog-rope-diver",
+      "name": "水寨潜水系缆手",
+      "inspiration": "大屿前来",
+      "description": "浅黄蛙形潜水工从发绿的水中冒出圆眼，宽蹼掌正托起粗绳打结。背带只有深青与铁红两块颜色，水线横切画面，芦苇和灰木浮台简化成两块边景",
+      "references": [
+        "output/dota-lore-references/user-panels/frog-villagers.png",
+        "output/classic-full-art/set01/full_art/10102_psd.png"
+      ]
+    },
+    {
+      "slug": "frog-clay-potter",
+      "name": "水寨陶罐匠",
+      "inspiration": "大屿前来",
+      "description": "圆脸蛙形陶匠从低石凳举起一只带大耳柄的乳黄陶罐对着窗光，皮肤深青，罩布赭粉，工棚暖灰。眼睛、罐口和大蹼手能在方形裁切里同时看懂",
+      "references": [
+        "output/dota-lore-references/user-panels/frog-villagers.png",
+        "output/classic-full-art/set01/full_art/10092_psd.png"
+      ]
+    },
+    {
+      "slug": "frog-lock-gate-worker",
+      "name": "水寨水闸工",
+      "inspiration": "大屿前来",
+      "description": "身形高瘦的灰绿色蛙形水工在水闸桥上同时用两手扳一根长木柄。亚麻黄布马甲，桥下是暗群青水色，背景晒亮的木栏，构图突出生物侧脸与斜跨的长柄",
+      "references": [
+        "output/dota-lore-references/official/largo/004.webp",
+        "output/classic-full-art/set01/full_art/10082_psd.png"
+      ]
+    },
+    {
+      "slug": "carnival-kobold-signal",
+      "name": "机械狗头人信号工",
+      "inspiration": "暗黑狂欢",
+      "description": "矮机械狗头人踮脚托着一个切角白玻璃信号筒，尖吻、圆球轴关节、极少铆钉；壳体以浅黄铜配黑绿。背景是清亮雪灰车站与一块深红车篷",
+      "references": [
+        "output/dota-lore-references/client/panorama/images/events/dark_carnival/visual_novel/portraits/automaton_kobold/automaton_kobold_idle_png.png",
+        "output/classic-full-art/set01/full_art/10092_psd.png"
+      ]
+    },
+    {
+      "slug": "carnival-fish-gangway",
+      "name": "鱼人渡梯工",
+      "inspiration": "暗黑狂欢",
+      "description": "宽鳍的小个鱼人双臂搭在一架收起的软梯上，梯子形成浅黄矩形剪影。鱼皮靛蓝，斜披褪绿雨布。背景是薄橙云光和深色水边车厢，脚掌宽短",
+      "references": [
+        "output/dota-lore-references/client/panorama/images/events/dark_carnival/visual_novel/portraits/witch_fish/witch_fish_idle_png.png",
+        "output/classic-full-art/set01/full_art/10082_psd.png"
+      ]
+    },
+    {
+      "slug": "carnival-treant-crate-tally",
+      "name": "树人车厢点货员",
+      "inspiration": "暗黑狂欢",
+      "description": "细长树形族人抬起一只带嫩叶的枝条手，把一只用绳扎过的小木箱推到车沿。灰银树皮、麦秆色叶冠、淡紫腰布，背景冷土红车板与清淡天光，无文字",
+      "references": [
+        "output/dota-lore-references/client/panorama/images/events/dark_carnival/visual_novel/portraits/witch_treant/witch_treant_idle_png.png",
+        "output/classic-full-art/set01/full_art/10087_psd.png"
+      ]
+    },
+    {
+      "slug": "carnival-costume-mender",
+      "name": "车队戏服裁补匠",
+      "inspiration": "暗黑狂欢",
+      "description": "一位胖矮的成熟女裁补匠别起深褐发辫，斜身拎起一角很大的青紫戏服布，指尖捏着线卷。赭白帐篷天光，少量金黄布边，画面突出布块和脸的对照",
+      "references": [
+        "output/dota-lore-references/client/panorama/images/events/dark_carnival/visual_novel/portraits/bex_bog/bex_idle_png.png",
+        "output/classic-full-art/set01/full_art/10092_psd.png"
+      ]
+    }
+  ]
+}

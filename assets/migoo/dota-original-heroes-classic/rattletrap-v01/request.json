@@ -1,0 +1,37 @@
+{
+  "hero": "rattletrap",
+  "name": "发条技师",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/rattletrap.png",
+      "sha256": "a279164aa76204f3a15b53c10e1b3b44a3da60ccc5da5dd3d6c3b95e1732e414"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10025_cropped.png",
+      "sha256": "beb16ce1fd3645da63be4f6ff6019fcb1896e626a454f3cdab0213f51071e24a"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10022_cropped.png",
+      "sha256": "8f00ae99ac0a79b88f23726228d85d5dbfeaa158bd9a057df686502248ec4731"
+    }
+  ],
+  "prompt_file": "prompt.txt",
+  "notes_file": "notes.txt",
+  "authorized": "User approved Medusa sample and explicitly requested submitting remaining nine together",
+  "batch_balance_before": {
+    "free": 94,
+    "paid": 0
+  },
+  "listed_price": 5.33,
+  "task_id": "mt_cGkwNDRmODZjYjVjYzA1Y2ViN2M4OGY2ZjgxMTg3YzdjM2I1MDQxMTBi",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ],
+  "cli_exit_code": 0,
+  "user_review": "User approved all first ten images"
+}

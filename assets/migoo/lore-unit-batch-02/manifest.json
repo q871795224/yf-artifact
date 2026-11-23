@@ -1,0 +1,255 @@
+{
+  "images": [
+    {
+      "slug": "01-pier-net-mender",
+      "name": "栈桥补网工",
+      "image": "01-pier-net-mender/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "320c40e4298f2f6e6c93b9df4b76c69fb68e0bf274553099fac26cdbb8866b24",
+      "task_id": "mt_cGk3MDMzYjM4ZTg3OTgzMjVkYzE4YTU0OGU5NDMyZmZjNTFmMTE1Y2Rl",
+      "media_id": "1459201559290690",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/lore-unit-batch-02/references/frog-people.png",
+        "assets/migoo/lore-unit-batch-02/references/classic-10082.png",
+        "assets/migoo/lore-unit-batch-02/references/classic-10322.png"
+      ]
+    },
+    {
+      "slug": "02-shallows-pathfinder",
+      "name": "浅滩探路者",
+      "image": "02-shallows-pathfinder/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "09f146c01f96aecac4115370c891a0fd7e4b8ebca98635e0ed0a71cce078ca4e",
+      "task_id": "mt_cGk2MDA5MzdhYzJhZjU1NTEzYWYyNWNhOGEyNDI2MmVjYzc0ZTBkMzYw",
+      "media_id": "1459204625802527",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/lore-unit-batch-02/references/upload/frog-people.jpg",
+        "assets/migoo/lore-unit-batch-02/references/upload/classic-10092.jpg",
+        "assets/migoo/lore-unit-batch-02/references/upload/classic-10267.jpg"
+      ]
+    },
+    {
+      "slug": "03-reedbank-buckler",
+      "name": "芦岸护篓兵",
+      "image": "03-reedbank-buckler/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "58b3ef0e983c899dd82762984a7e9f50699541271751c64a8a9eff9bdb0e2cf1",
+      "task_id": "mt_cGlmOTlkZmM0NGQ4MTE0MDQ5MDg5YzA1ZmUyMDc3NTc0NzRjN2FiM2Yz",
+      "media_id": "1459204582294806",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/lore-unit-batch-02/references/upload/frog-people.jpg",
+        "assets/migoo/lore-unit-batch-02/references/upload/classic-10092.jpg",
+        "assets/migoo/lore-unit-batch-02/references/upload/classic-10360.jpg"
+      ]
+    },
+    {
+      "slug": "04-legion-load-bearer",
+      "name": "随军辎重手",
+      "image": "04-legion-load-bearer/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "c8a4b9265288bd7a10e55f900f1fa33438cf5703853280581bc6387d12b9ac2e",
+      "task_id": "mt_cGk5NThjZDYwODY1NTA5OGEyNGEwZDg0NmFiNjMzMzI5OWVhNjI4NjRj",
+      "media_id": "1459202599437598",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/lore-unit-batch-02/references/legion-soldiers.png",
+        "assets/migoo/lore-unit-batch-02/references/legion-equipment.png",
+        "assets/migoo/lore-unit-batch-02/references/classic-10087.png",
+        "assets/migoo/lore-unit-batch-02/references/classic-10416.png"
+      ]
+    },
+    {
+      "slug": "05-legion-dispatch-runner",
+      "name": "队列传令兵",
+      "image": "05-legion-dispatch-runner/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "e742152888bc96c3f739c8cf0a7d54541b73ffb4b3a767358bf68e17121a19dc",
+      "task_id": "mt_cGliMDdjMWVlMmY4MGU0Y2ExYTQ5MmRkYWY4MDk1MTBiOTk5Y2NhNjJm",
+      "media_id": "1459204909966564",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/lore-unit-batch-02/references/upload/legion-soldiers.jpg",
+        "assets/migoo/lore-unit-batch-02/references/upload/classic-10129.jpg",
+        "assets/migoo/lore-unit-batch-02/references/upload/classic-10328.jpg"
+      ]
+    },
+    {
+      "slug": "06-camp-armor-mender",
+      "name": "营地补甲匠",
+      "image": "06-camp-armor-mender/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "459b007fa970037ed2449a0e6af31dc656d78ca599927161fed98edde76b797f",
+      "task_id": "mt_cGlmNzVhNmNmNzNkZWVjNzMyNzdmYWI1NGU0OGRlODY1ZTM3NmY1YTBm",
+      "media_id": "1459204889773318",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/lore-unit-batch-02/references/upload/legion-equipment.jpg",
+        "assets/migoo/lore-unit-batch-02/references/upload/classic-10137.jpg",
+        "assets/migoo/lore-unit-batch-02/references/upload/classic-10177.jpg"
+      ]
+    },
+    {
+      "slug": "07-carnival-repair-automaton",
+      "name": "巡场检修偶",
+      "image": "07-carnival-repair-automaton/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "ed8434b06cce06a5292d9a6342f4927eaa0f3359de0222815fe07b47cc0d169e",
+      "task_id": "mt_cGkyYmJlZjdmMTI5YTQ5MWEwNjk0MGMzMjk3YmY1NzZkNWE3OWU2NDM4",
+      "media_id": "1459203404809486",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/lore-unit-batch-02/references/automaton-kobold.png",
+        "assets/migoo/lore-unit-batch-02/references/classic-10137.png",
+        "assets/migoo/lore-unit-batch-02/references/classic-10323.png"
+      ]
+    },
+    {
+      "slug": "08-ditch-herbalist",
+      "name": "河沟采药人",
+      "image": "08-ditch-herbalist/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "b664cca32720b9ddec36036455817dafadcb6f109783758785968998ab8b52fb",
+      "task_id": "mt_cGk2MWQxNjljNTU4ODQ2OWRlYzg3Zjc4ZWM3NGQwMjc4YmM1N2NmYWE0",
+      "media_id": "1459205194801996",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/lore-unit-batch-02/references/upload/fish-witch.jpg",
+        "assets/migoo/lore-unit-batch-02/references/upload/classic-10267.jpg",
+        "assets/migoo/lore-unit-batch-02/references/upload/classic-10354.jpg"
+      ]
+    },
+    {
+      "slug": "09-leaf-lantern-hanger",
+      "name": "棚外挂灯工",
+      "image": "09-leaf-lantern-hanger/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "95dcd51e1554c80de18129c2d76ed32f5dd8cf556c8f1659f07e8beba4a1db3c",
+      "task_id": "mt_cGllNjk5NzI1MGY3ZjMzZGI3MWIyMjY4ZWZmNjQ4MGEyMjkxZGYxMTM5",
+      "media_id": "1459205176656672",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/lore-unit-batch-02/references/upload/treant-witch.jpg",
+        "assets/migoo/lore-unit-batch-02/references/upload/classic-10082.jpg",
+        "assets/migoo/lore-unit-batch-02/references/upload/classic-10087.jpg"
+      ]
+    },
+    {
+      "slug": "10-market-ledger-keeper",
+      "name": "集市账房",
+      "image": "10-market-ledger-keeper/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "369bddf7824000db5a2c8cafd0f923a86ad40716d913853c7908b516a8cf9bf3",
+      "task_id": "mt_cGliZDJjNDQ3YWJhMjU5YTc5ODdhMGZiZGI4M2Y1YmU2NzAxZTczNjhj",
+      "media_id": "1459204563067737",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/lore-unit-batch-02/references/upload/lorenzo.jpg",
+        "assets/migoo/lore-unit-batch-02/references/upload/classic-10092.jpg",
+        "assets/migoo/lore-unit-batch-02/references/upload/classic-10307.jpg"
+      ]
+    }
+  ]
+}

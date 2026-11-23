@@ -1,0 +1,52 @@
+{
+  "hero": "kez",
+  "name": "凯",
+  "english_name": "Kez",
+  "render": "output/dota-hero-art-references/valve/kez.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/kez.png",
+  "sha256": "b05a1a30c9dcfcdb7cfc1be57bfb56275c6a786727cbc7d3430934ecb9c1bb77",
+  "classic_hero_exists": false,
+  "reference_note": "Official transparent render",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/kez.png",
+      "sha256": "b05a1a30c9dcfcdb7cfc1be57bfb56275c6a786727cbc7d3430934ecb9c1bb77",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/kez.png"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10047_cropped.png",
+      "sha256": "3571bcb9be23ee305506acecee5c07b942e7b07424a1b57a4ac4a8ff9fc85d7e",
+      "media_id": "1459226674341118"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10054_cropped.png",
+      "sha256": "418eaa7727b6bb10467d183a4b968ef662874081dfb97a5b631088d333a5458b",
+      "media_id": "1459226064594197"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or review",
+  "authorization": "User requested this additional twenty; agent selected roster and disclosed 18 remaining new heroes plus 2 existing Classic heroes repainted",
+  "listed_price": 5.33,
+  "attempt": 2,
+  "cli_exit_code": 0,
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ],
+  "previous_attempts": [
+    {
+      "task_id": "mt_cGk2ZDRiMDdmYzVmZDBmMjMxYzVlYjFkZGVlODNjYWU5NzFlZDg0OTBh",
+      "error": {
+        "code": "task_failed",
+        "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+        "retryable": true,
+        "reason": "busy"
+      }
+    }
+  ],
+  "task_id": "mt_cGliN2M0ODhkYjJjYjA4ZTIwMGZmNzdiZmJiYTA4MTdiMjcwYTUzMjM4"
+}

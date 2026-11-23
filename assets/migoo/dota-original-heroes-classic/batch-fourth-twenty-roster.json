@@ -1,0 +1,171 @@
+{
+  "heroes": [
+    {
+      "hero": "ember_spirit",
+      "name": "灰烬之灵",
+      "english_name": "Ember Spirit",
+      "render": "output/dota-hero-art-references/valve/ember_spirit.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/ember_spirit.png",
+      "sha256": "6a55cada9040853fb48e42659b452f9a58ac5ba8b594a64a69e0c0186b66f9d0"
+    },
+    {
+      "hero": "earth_spirit",
+      "name": "大地之灵",
+      "english_name": "Earth Spirit",
+      "render": "output/dota-hero-art-references/valve/earth_spirit.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/earth_spirit.png",
+      "sha256": "1657bd5db348d5c679dc0a6c938f6464cd6c284cd5e34d2dde5c8c4e3c5267f2"
+    },
+    {
+      "hero": "void_spirit",
+      "name": "虚无之灵",
+      "english_name": "Void Spirit",
+      "render": "output/dota-hero-art-references/valve/void_spirit.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/void_spirit.png",
+      "sha256": "5cfa9532ae70afb303c81b6c712a88db1fe914c867cf0175ac609dc9ddcb6049"
+    },
+    {
+      "hero": "wisp",
+      "name": "艾欧",
+      "english_name": "Io",
+      "render": "output/dota-hero-art-references/valve/wisp.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/wisp.png",
+      "sha256": "3998042f6909b7aa35c832abb93fd9b7b92a3c20c23e068172ff57d92ab30d17"
+    },
+    {
+      "hero": "oracle",
+      "name": "神谕者",
+      "english_name": "Oracle",
+      "render": "output/dota-hero-art-references/valve/oracle.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/oracle.png",
+      "sha256": "06212fd064317bfade00666b47b6aaa7db1d974ef2632fe81ab4fe475711b44a"
+    },
+    {
+      "hero": "arc_warden",
+      "name": "天穹守望者",
+      "english_name": "Arc Warden",
+      "render": "output/dota-hero-art-references/valve/arc_warden.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/arc_warden.png",
+      "sha256": "ab0412c52625494b7105731b83a69c402d0500b465ce71af49212941175733fc"
+    },
+    {
+      "hero": "brewmaster",
+      "name": "酒仙",
+      "english_name": "Brewmaster",
+      "render": "output/dota-hero-art-references/valve/brewmaster.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/brewmaster.png",
+      "sha256": "7ce77ffe06412e1770aee4082d8df08e92d5bf53015b0033d9bc90aebe4498d9"
+    },
+    {
+      "hero": "batrider",
+      "name": "蝙蝠骑士",
+      "english_name": "Batrider",
+      "render": "output/dota-hero-art-references/valve/batrider.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/batrider.png",
+      "sha256": "d92e05c6f1b4762158f3a9cf76f26cc99f30595141b45664c622d9b99c2aa155"
+    },
+    {
+      "hero": "clinkz",
+      "name": "克林克兹",
+      "english_name": "Clinkz",
+      "render": "output/dota-hero-art-references/valve/clinkz.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/clinkz.png",
+      "sha256": "d29236468bc80be446d5f226045583ea2555805c090523497bbd23e2b09229c3"
+    },
+    {
+      "hero": "riki",
+      "name": "力丸",
+      "english_name": "Riki",
+      "render": "output/dota-hero-art-references/valve/riki.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/riki.png",
+      "sha256": "5a7111e1f7226c04c943797618da26b865a439f9356eb0240531c0a9a3a849ad"
+    },
+    {
+      "hero": "templar_assassin",
+      "name": "圣堂刺客",
+      "english_name": "Templar Assassin",
+      "render": "output/dota-hero-art-references/valve/templar_assassin.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/templar_assassin.png",
+      "sha256": "7fb78df87ac115d6c8733f432554c8e9a1709b55ee301954a81f5129302e021e"
+    },
+    {
+      "hero": "techies",
+      "name": "工程师",
+      "english_name": "Techies",
+      "render": "output/dota-hero-art-references/valve/techies.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/techies.png",
+      "sha256": "bd0ffb6f83f8e61275180691457439bbf396bd4b23273703da73bc121494df91"
+    },
+    {
+      "hero": "mirana",
+      "name": "米拉娜",
+      "english_name": "Mirana",
+      "render": "output/dota-hero-art-references/valve/mirana.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/mirana.png",
+      "sha256": "e039e07d356138261e1bbf5e85c7995c746a756544a1e4e377c1b9c41a69b507"
+    },
+    {
+      "hero": "lone_druid",
+      "name": "德鲁伊",
+      "english_name": "Lone Druid",
+      "render": "output/dota-hero-art-references/valve/lone_druid.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/lone_druid.png",
+      "sha256": "ed0a97d01549c6f8693a5f913b86a08c87b25cc9c15c5ec09e79ef61f88c3241"
+    },
+    {
+      "hero": "furion",
+      "name": "先知",
+      "english_name": "Nature's Prophet",
+      "render": "output/dota-hero-art-references/valve/furion.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/furion.png",
+      "sha256": "1cd07e602868b74cb21e43c77abe2c3c238775f30ca8defc0ed669fe715a5306"
+    },
+    {
+      "hero": "silencer",
+      "name": "沉默术士",
+      "english_name": "Silencer",
+      "render": "output/dota-hero-art-references/valve/silencer.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/silencer.png",
+      "sha256": "32e95e1f3a86538fd535f7424ed0c3945afb45de72072f86a72b7e380070fd25"
+    },
+    {
+      "hero": "hoodwink",
+      "name": "森海飞霞",
+      "english_name": "Hoodwink",
+      "render": "output/dota-hero-art-references/valve/hoodwink.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/hoodwink.png",
+      "sha256": "7b26073df634c0d051b844e931062600016e14a495685d7bb658eca831fb2369"
+    },
+    {
+      "hero": "shadow_demon",
+      "name": "暗影恶魔",
+      "english_name": "Shadow Demon",
+      "render": "output/dota-hero-art-references/valve/shadow_demon.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/shadow_demon.png",
+      "sha256": "7fba97a2e6ddc0de4bb7d1193ceace2d9724990e209e9d9e4a1a49bdf5106dc6"
+    },
+    {
+      "hero": "huskar",
+      "name": "哈斯卡",
+      "english_name": "Huskar",
+      "render": "output/dota-hero-art-references/valve/huskar.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/huskar.png",
+      "sha256": "9766fc7ae89b0b01da22bb71121fa260b39b3f76ec31656ef4961403277f7819"
+    },
+    {
+      "hero": "mars",
+      "name": "玛尔斯",
+      "english_name": "Mars",
+      "render": "output/dota-hero-art-references/valve/mars.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/mars.png",
+      "sha256": "66f69df27d062290358666a9844b261f277f84258763fbb36fe109b3396b929e"
+    }
+  ],
+  "classic_overlap": [],
+  "overlap_with_first_fifty": [],
+  "requested_model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "workflow": "submit_only",
+  "status": "ready_to_submit"
+}

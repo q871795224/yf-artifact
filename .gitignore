@@ -7,3 +7,22 @@ dist/
 node_modules/
 .venv/
 desktop/.godot/
+
+# Local work records and editor state; originals stay on this machine.
+temp/
+.idea/
+.agents/skills/migoo-imagegen
+/imagen_original_*.png
+
+# Raw Migoo receipts may contain expiring signed download URLs.
+# Portable prompts, task IDs and curated metadata are indexed in assets/art-library/.
+assets/migoo/**/task-result.json
+assets/migoo/**/attempt-*.json
+assets/migoo/**/admission-status.json
+assets/migoo/**/submission-result.json
+assets/migoo/**/retrieval-stdout.json
+assets/migoo/**/result.json
+assets/migoo/**/source-task.json
+assets/migoo/**/*.log
+assets/migoo/**/*.lock
+assets/migoo/**/account-*.json

@@ -1,0 +1,43 @@
+{
+  "hero": "shivas_guard",
+  "kind": "equipment",
+  "name": "希瓦的守护",
+  "english_name": "Shiva's Guard",
+  "icon": "output/dota-native-equipment/valve/shivas_guard.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/shivas_guard.png",
+  "classic_card_id": 10248,
+  "sha256": "efe5cb009d650da58a041c5f35dbe6a4bd2be035876f254c82a115b5010631a6",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/shivas_guard.png",
+      "sha256": "efe5cb009d650da58a041c5f35dbe6a4bd2be035876f254c82a115b5010631a6",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/shivas_guard.png"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10248_cropped.png",
+      "sha256": "a542eb3593c412809964a97cffce6fb45483ab995788c060e39a2cf6cf9d5f76"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10203_cropped.png",
+      "sha256": "f673398c827611f895ee172b35d22384e0c2302da855cf7cca69994ed2166ac4"
+    }
+  ],
+  "classic_style_ids": [
+    10248,
+    10203
+  ],
+  "workflow": "Submit and report only; user reviews on Migoo; no generated-art download or inspection",
+  "authorization": "User requested an initial ten Dota equipment paintings in Classic style, with agent choosing the items",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk3Yjc1M2RkYjJjMDJhNWUxNzI3NmNkNWVhN2U0OWUyZjJkYWE4MWIz",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

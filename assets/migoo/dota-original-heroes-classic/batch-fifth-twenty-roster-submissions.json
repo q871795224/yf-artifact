@@ -1,0 +1,246 @@
+{
+  "requested": 20,
+  "submitted_count": 20,
+  "failed_count": 0,
+  "workflow": "submit only; status queries release concurrency slots; no downloads",
+  "tasks": [
+    {
+      "hero": "warlock",
+      "name": "术士",
+      "task_id": "mt_cGlhNzg4MDI1NDYxNDgxYzQwODhjMDQwYzYyNGE2NjBlZGRjNDA5M2U4",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "gyrocopter",
+      "name": "矮人直升机",
+      "task_id": "mt_cGk2MTY0Y2ZmODlkNGEzNmJhMDdlYjE0NWI5OTI1NGIwNGM1MGFkNjFl",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "keeper_of_the_light",
+      "name": "光之守卫",
+      "task_id": "mt_cGlmYTE4MWVjMzAwMGQ2YWJiYTNiYmM5NDZhMjJlOTkxMTAxZjVmMmVj",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "troll_warlord",
+      "name": "巨魔战将",
+      "task_id": "mt_cGllODZmMGY5NzM3MzE1NmIwNGFlNzY5NmQ1OWMwMWZmNWVkOGRhZmM5",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "elder_titan",
+      "name": "上古巨神",
+      "task_id": "mt_cGk0NGNmNTdkOWFkODMzYTg4OTlhZGQxZjM3MjkzYzk5MjRiNmQ4ZDFl",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "abyssal_underlord",
+      "name": "孽主",
+      "task_id": "mt_cGkyNjdlM2JmZTkzOTliNzZkZGEyYjNhMzBlNDA2MjdlNGFjOTdlYjlh",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "monkey_king",
+      "name": "齐天大圣",
+      "task_id": "mt_cGlmZjVkMmU0NTMzNjlhOTdjYTA5YjMzNTkyNDJjMzA3NmVlNDg5MDFm",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 2,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "pangolier",
+      "name": "石鳞剑士",
+      "task_id": "mt_cGk3ZDRlMTM2NmVkOTYxYmZjM2U3MDgyYzdmMmFkNDFmNTg0MTYxOGY3",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "dark_willow",
+      "name": "邪影芳灵",
+      "task_id": "mt_cGlkOWFmNjJkYzRjMGZhZmMzZGM0YWE5M2NhZGNhOWYyNGExNDU1NjY5",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 2,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "grimstroke",
+      "name": "天涯墨客",
+      "task_id": "mt_cGlhOGYwMGUxNjlkMzBlZjcyMzc4NDVmZTEyMDdiNzViN2I2ZDIwNGJi",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 2,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "snapfire",
+      "name": "电炎绝手",
+      "task_id": "mt_cGk2NmEyNTU4OWIyYjI2YzdjMGQ3YTUwNWQ0OGEwZTRiNGIyNmFkYzNh",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 2,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "dawnbreaker",
+      "name": "破晓辰星",
+      "task_id": "mt_cGk4NzM4NDc2NGYxYzcxMzU4OGQ1ODNjMTAyNmRlODFlMjM0ZjU2YmNk",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "marci",
+      "name": "玛西",
+      "task_id": "mt_cGllMGQ4YTE5ZWExMmRlMzMxNTVmMzJhYmJhNTgwYTNkOWRkMTQwYTk2",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "primal_beast",
+      "name": "獸",
+      "task_id": "mt_cGk3MmY2YzlkZDg3ZWJjYWJiYzhmOTg0NzM4YjZjNjI5NjBkZWY2Y2Vk",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "muerta",
+      "name": "琼英碧灵",
+      "task_id": "mt_cGkyMzMwNzEyZGE2NTk3NWNkYWViYzM4MzJlMTRhNGE0ZjI0M2M4OGFm",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "ringmaster",
+      "name": "百戏大王",
+      "task_id": "mt_cGk1MjJkYzQ1NTVjYmFjYmVmZTQ4MGIxNWM1NjQ3Nzg5MzI4ZjI0Y2Nl",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "kez",
+      "name": "凯",
+      "task_id": "mt_cGliN2M0ODhkYjJjYjA4ZTIwMGZmNzdiZmJiYTA4MTdiMjcwYTUzMjM4",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 2,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "largo",
+      "name": "拉戈",
+      "task_id": "mt_cGkzYmMzMTliMTdiMTVhYTkzOTlkYTEyZGJmNTM4ZDFiZTljY2NmNzFh",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "earthshaker",
+      "name": "撼地者",
+      "task_id": "mt_cGlmM2NlOGU2ZWFmZTdjMzA0MDA1YmU0OWYyMTY2YTk2MzFlMGI3NmM5",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 2,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "luna",
+      "name": "露娜",
+      "task_id": "mt_cGllMDYzMTExMmM0NWRkNWIyNmNkN2IyOWFiM2JjZGVjZjE2YTRjYzYz",
+      "status": "generating",
+      "model": "gpt-image-26-flare",
+      "actual_models": null,
+      "attempt": 1,
+      "cli_exit_code": 0
+    }
+  ]
+}

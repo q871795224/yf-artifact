@@ -1,0 +1,243 @@
+{
+  "requested": 20,
+  "submitted_count": 20,
+  "workflow": "submit only; status queries release concurrency slots; no downloads",
+  "tasks": [
+    {
+      "hero": "antimage",
+      "name": "敌法师",
+      "task_id": "mt_cGkwZjE1MzUxNTFhZTI2MTM1NGEzMjdjZDBhZDQzZDgwM2M5MWI1NzYx",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "faceless_void",
+      "name": "虚空假面",
+      "task_id": "mt_cGliMzExZmYyMzRjMDkwYjZhMDlkNWM1NjE5YjU1OTMyNTZhZWNiYzhm",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "spectre",
+      "name": "幽鬼",
+      "task_id": "mt_cGlhZTA1NjM1NTUwNzUzOTA2NTVjNmU3NzQxMTYxYWQ1Y2I0NTc1ZDlm",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "phantom_lancer",
+      "name": "幻影长矛手",
+      "task_id": "mt_cGlhNjg3Y2YxZjcwYTIwYmUwZGFiNjUzZWE3MjNjOGVlYzYxZWRlZTMy",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "naga_siren",
+      "name": "娜迦海妖",
+      "task_id": "mt_cGljN2UyM2QwODFjOTNjNjA1NDRlMjg5ZjM0MDY1ZTM3MmZhNjc2YmQ1",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "terrorblade",
+      "name": "恐怖利刃",
+      "task_id": "mt_cGk0Y2U5OWNhNDlmMzUxZWVjMzA5M2E5NDhhMTBiNjFhZmVhOGEyZTcy",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "chaos_knight",
+      "name": "混沌骑士",
+      "task_id": "mt_cGkxMmY3ZmUzNzE5NDk1NjJmMGYyZjI1Y2EyMDUyODY3Y2IyYTkzZTU4",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "dragon_knight",
+      "name": "龙骑士",
+      "task_id": "mt_cGliYzViM2RiMzkxZTg3ZWZiYjBjN2I3ZTI5ZGEyZmI5MjNlYTI3ZmM2",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "tiny",
+      "name": "小小",
+      "task_id": "mt_cGk1MTAxZDkwYjdiYTlkN2UxZmYxMzVjMWQ5NTAyOGE0YzI3MzBlMGM2",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "jakiro",
+      "name": "杰奇洛",
+      "task_id": "mt_cGlkYjNhODhlMGU0NWU4MDhlNGNlYjJjMDgzMzllMzRjODljOWI0NWI1",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "phoenix",
+      "name": "凤凰",
+      "task_id": "mt_cGk5OWY3ZTM3NWEwYzQwOWI3NDRmYmZmMzhiZWNiOWI2ZTZjZmQzZDRi",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "enigma",
+      "name": "谜团",
+      "task_id": "mt_cGkwODZiMWY4NTc4YzFhNzgxNDJjNWVkODRlMjcwNDUyOGY3ZjFjM2Mz",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "night_stalker",
+      "name": "暗夜魔王",
+      "task_id": "mt_cGkzZTVlODE2YjE2N2FmMjdhMzkyMzBlOTFiMmY1NjQzYzUzMmM4OTcw",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "broodmother",
+      "name": "育母蜘蛛",
+      "task_id": "mt_cGliYzExMjE2NGRjMjM2NjdmMDA5ODE5Njk4ZDg3OTkzMjhhNWI0NjU1",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "nyx_assassin",
+      "name": "司夜刺客",
+      "task_id": "mt_cGk5YTM4NjUyNjk5MjA5MGYwZjdhYzY3MDhiYjU0NjdjOTE2NTE0MjQw",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "disruptor",
+      "name": "干扰者",
+      "task_id": "mt_cGk2NTRkZjMzOGZmN2JjZDk3ZGM5YmEyY2EwOWZmYjI1ZTc4YTJhYzM2",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "witch_doctor",
+      "name": "巫医",
+      "task_id": "mt_cGlhY2RkMjIwMzQ4ZGY3ZWY4MDRkYWU3MmM2MDBhMzhjMTgzZjBiNDYy",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "shadow_shaman",
+      "name": "暗影萨满",
+      "task_id": "mt_cGllYWM0M2I2MzkxNjM2YzJkODA0ODc3ZDlmYTQzYmE5ZDMyNzQ4YjEx",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "rubick",
+      "name": "拉比克",
+      "task_id": "mt_cGkyMGI4MjZjMmI2YzlkMDQzNTc1NTZkNWNkM2VlNmU5NDE5ZjdiNWE0",
+      "status": "generating",
+      "model": "gpt-image-26-flare",
+      "actual_models": null,
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "invoker",
+      "name": "祈求者",
+      "task_id": "mt_cGlhZjg3ZWFlZjIzZTA5NDczNzU4MzdkY2Y1MWI0MDdmNGM2ZjE4ODc1",
+      "status": "generating",
+      "model": "gpt-image-26-flare",
+      "actual_models": null,
+      "attempt": 1,
+      "cli_exit_code": 0
+    }
+  ]
+}

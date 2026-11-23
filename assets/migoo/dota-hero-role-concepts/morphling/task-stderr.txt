@@ -1,0 +1,6 @@
+Migoo 额度：余额 100，免费 100，付费 0，冻结 0。
+Uploading output/dota-hero-art-references/valve/morphling.png (1866148 bytes)
+Uploading output/classic-full-art/set01/full_art/10024_psd.png (1176969 bytes)
+Uploading output/classic-full-art/set01/full_art/10010_psd.png (1496652 bytes)
+Task mt_cGlkZmRiNjQ5MmZkMTRhYzI4OWYwMWNhMTJhM2YzNmE4YTZhZTJkNWYx started; if this command is interrupted, run migoo task get mt_cGlkZmRiNjQ5MmZkMTRhYzI4OWYwMWNhMTJhM2YzNmE4YTZhZTJkNWYx --wait
+Saved assets/migoo/dota-hero-role-concepts/morphling/mt_cGlkZmRiNjQ5MmZkMTRhYzI4OWYwMWNhMTJhM2YzNmE4YTZhZTJkNWYx_1.png

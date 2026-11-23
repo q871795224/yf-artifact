@@ -1,0 +1,5 @@
+Migoo 额度：余额 5，免费 5，付费 0，冻结 0。
+Uploading assets/migoo/hero-skill-scenes-02/references/hero-mirana.jpg (161389 bytes)
+Uploading assets/migoo/hero-skill-scenes-02/references/hero-sand_king.jpg (146582 bytes)
+Uploading assets/migoo/hero-skill-scenes-02/references/classic-10270.jpg (197796 bytes)
+Uploading assets/migoo/hero-skill-scenes-02/references/classic-10313.jpg (287681 bytes)

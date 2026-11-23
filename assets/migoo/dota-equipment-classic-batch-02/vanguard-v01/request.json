@@ -1,0 +1,42 @@
+{
+  "hero": "vanguard",
+  "kind": "equipment",
+  "name": "先锋盾",
+  "english_name": "Vanguard",
+  "icon": "output/dota-native-equipment/valve/vanguard.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/vanguard.png",
+  "sha256": "8ee1666cfe96e721b363c12254f0322034059b9db8a067d98dc527d3594ae711",
+  "status": "generating",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/vanguard.png",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/vanguard.png",
+      "sha256": "8ee1666cfe96e721b363c12254f0322034059b9db8a067d98dc527d3594ae711"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10232_cropped.png",
+      "media_id": "1459239926359306",
+      "sha256": "f9298ce686f7f5c05a82ad42c92b6d08d6dfe6880349aeb1664e566952961ce0"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10224_cropped.png",
+      "media_id": "1459239138518268",
+      "sha256": "6d67f5e3bdf3c47cfae2d365ca89cc7d307336e5bb1f4ce51ef48e27698c15e3"
+    }
+  ],
+  "classic_style_ids": [
+    10232,
+    10224
+  ],
+  "workflow": "Submit and report only; user reviews on Migoo",
+  "authorization": "User approved first ten equipment images and requested twenty additional equipment images",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGllZmMyNjk0ZmVjNTJmYjVhNGQ4N2RlMjQyNWIzYzQyZTZmNzg4NTE3",
+  "actual_models": null
+}

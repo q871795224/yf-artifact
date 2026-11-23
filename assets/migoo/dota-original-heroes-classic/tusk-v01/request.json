@@ -1,0 +1,44 @@
+{
+  "hero": "tusk",
+  "name": "巨牙海民",
+  "english_name": "Tusk",
+  "render": "output/dota-hero-art-references/valve/tusk.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/tusk.png",
+  "sha256": "6826652d7d91b9daad0ee58739a40df918ee284af9a5b2948f07f058d0bf4ac5",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/tusk.png",
+      "sha256": "6826652d7d91b9daad0ee58739a40df918ee284af9a5b2948f07f058d0bf4ac5"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10070_cropped.png",
+      "sha256": "ecb1ed9c3485e1d54a3f0cb5aff2bf989f0e6fe46ec4c69dc35b1185fd8dd503"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10064_cropped.png",
+      "sha256": "1824b122ea11a72965a178100d872ee132903a4f84f55efff5bc9e9feee69c64"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or visual reviews",
+  "authorization": "User explicitly requested another agent-selected twenty heroes and submission through the reusable script",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGkwNmJmMDFkZGFmZjQ2OTQ1MzBjNDEwN2I0MDYyZTkwMTE1YTVmMjdk",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "assets/migoo/skyfolk-unit-batch-03/references/automaton.png": {
+    "media_id": "1459218056332125",
+    "name": "automaton.png",
+    "width": 1680,
+    "height": 1680
+  },
+  "assets/migoo/skyfolk-unit-batch-03/references/broad-bird.png": {
+    "media_id": "1459224594400493",
+    "name": "broad-bird.png",
+    "width": 2000,
+    "height": 2250
+  },
+  "assets/migoo/skyfolk-unit-batch-03/references/classic-10085.png": {
+    "media_id": "1459227102020409",
+    "name": "classic-10085.png",
+    "width": 1024,
+    "height": 1024
+  },
+  "assets/migoo/skyfolk-unit-batch-03/references/classic-10092.png": {
+    "media_id": "1459227096392528",
+    "name": "classic-10092.png",
+    "width": 1024,
+    "height": 1024
+  },
+  "assets/migoo/skyfolk-unit-batch-03/references/classic-10129.png": {
+    "media_id": "1459227096507660",
+    "name": "classic-10129.png",
+    "width": 1024,
+    "height": 1024
+  },
+  "assets/migoo/skyfolk-unit-batch-03/references/classic-10177.png": {
+    "media_id": "1459222531048248",
+    "name": "classic-10177.png",
+    "width": 1024,
+    "height": 1024
+  },
+  "assets/migoo/skyfolk-unit-batch-03/references/classic-10322.png": {
+    "media_id": "1459220542383336",
+    "name": "classic-10322.png",
+    "width": 1024,
+    "height": 1024
+  },
+  "assets/migoo/skyfolk-unit-batch-03/references/classic-10323.png": {
+    "media_id": "1459222525674312",
+    "name": "classic-10323.png",
+    "width": 1024,
+    "height": 1024
+  },
+  "assets/migoo/skyfolk-unit-batch-03/references/classic-10328.png": {
+    "media_id": "1459227102717155",
+    "name": "classic-10328.png",
+    "width": 1024,
+    "height": 1024
+  },
+  "assets/migoo/skyfolk-unit-batch-03/references/fish.png": {
+    "media_id": "1459227109630803",
+    "name": "fish.png",
+    "width": 1680,
+    "height": 1680
+  },
+  "assets/migoo/skyfolk-unit-batch-03/references/frog.png": {
+    "media_id": "1459226724229975",
+    "name": "frog.png",
+    "width": 442,
+    "height": 466
+  },
+  "assets/migoo/skyfolk-unit-batch-03/references/guard.png": {
+    "media_id": "1459222529746161",
+    "name": "guard.png",
+    "width": 2000,
+    "height": 2250
+  },
+  "assets/migoo/skyfolk-unit-batch-03/references/insect.png": {
+    "media_id": "1459223179461454",
+    "name": "insect.png",
+    "width": 902,
+    "height": 562
+  },
+  "assets/migoo/skyfolk-unit-batch-03/references/market-bird.png": {
+    "media_id": "1459227100382008",
+    "name": "market-bird.png",
+    "width": 2000,
+    "height": 2250
+  },
+  "assets/migoo/skyfolk-unit-batch-03/references/treant.png": {
+    "media_id": "1459218047493348",
+    "name": "treant.png",
+    "width": 2800,
+    "height": 1680
+  },
+  "assets/migoo/skyfolk-unit-batch-03/references/waterside.webp": {
+    "media_id": "1459219311051563",
+    "name": "waterside.webp",
+    "width": null,
+    "height": null
+  },
+  "assets/migoo/skyfolk-unit-batch-03/references/winged-worker.png": {
+    "media_id": "1459215064245488",
+    "name": "winged-worker.png",
+    "width": 394,
+    "height": 532
+  }
+}

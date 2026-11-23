@@ -1,0 +1,44 @@
+{
+  "hero": "tiny",
+  "name": "小小",
+  "english_name": "Tiny",
+  "render": "output/dota-hero-art-references/valve/tiny.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/tiny.png",
+  "sha256": "abad6c6adc04c8485067535135709b5d4c584d9200d62627e18c19752b670e3e",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/tiny.png",
+      "sha256": "abad6c6adc04c8485067535135709b5d4c584d9200d62627e18c19752b670e3e"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10033_cropped.png",
+      "sha256": "7490de525670351be81c87b3364d56de3af33e4449e71802c1410dad6fc0fea8"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10070_cropped.png",
+      "sha256": "ecb1ed9c3485e1d54a3f0cb5aff2bf989f0e6fe46ec4c69dc35b1185fd8dd503"
+    }
+  ],
+  "workflow": "submit_only; no image download or generated-art review",
+  "authorization": "User explicitly delegated selecting twenty and requested submission plus reporting only",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk1MTAxZDkwYjdiYTlkN2UxZmYxMzVjMWQ5NTAyOGE0YzI3MzBlMGM2",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

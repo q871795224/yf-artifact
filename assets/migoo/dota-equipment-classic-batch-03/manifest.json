@@ -1,0 +1,624 @@
+{
+  "submitted_equipment_count": 20,
+  "additional_revision_count": 3,
+  "updated_at": "2026-11-23T00:59:08.952604+08:00",
+  "workflow": "Submit only; user reviews on Migoo",
+  "balance_before": {
+    "free": 19,
+    "paid": 0
+  },
+  "balance_after": {
+    "balance": 3,
+    "paid": 0,
+    "free": 3,
+    "frozen": 0
+  },
+  "balance_note": "Concurrent activity; not a per-batch cost calculation.",
+  "equipment": [
+    {
+      "item_id": "force_staff",
+      "name": "原力法杖",
+      "english_name": "Force Staff",
+      "task_id": "mt_cGk4Mjk4NTFmMDBjYjY3Nzg1MzI3M2NiOWIyMjU3NjExOGViZGUwMmMy",
+      "last_observed_status": "generating",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-batch-03/force_staff-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-batch-03/force_staff-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/force_staff_png.png",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/force_staff.png",
+          "sha256": "7930fb1f364b369c81163b5094ce976b5d2e92e490b2415bc0c14051d6098243"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10210_cropped.png",
+          "media_id": "1459240187683645",
+          "sha256": "653d31b394383641fe1dfbff72696ce7107227666e0adf4445fc8474845e57da"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10206_cropped.png",
+          "media_id": "1459239677297466",
+          "sha256": "b8aab6728084de24cb33b6057407e497397b4c6a99b0238c258cd473375e3594"
+        }
+      ],
+      "original_task_id": "mt_cGliMTA5NTY4ZTAwNDI2ZDliNTg2YjI1ZGIxN2FmZDBmZTQyYzJlM2Uy",
+      "revision_note": "Straight coaxial head and shaft; shorten handle about 20%; preserve identity/materials/palette/style",
+      "revision_manifest": "assets/migoo/dota-equipment-classic-staff-rework-01/manifest.json"
+    },
+    {
+      "item_id": "cyclone",
+      "name": "Eul的神圣法杖",
+      "english_name": "Eul's Scepter of Divinity",
+      "task_id": "mt_cGkyOGFlYmZiOGViMWM2NzcxODBlNmQ4ZDFjNjI1MmE5ZjBmNTJlNWFk",
+      "last_observed_status": "generating",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-batch-03/cyclone-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-batch-03/cyclone-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/cyclone_png.png",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/cyclone.png",
+          "sha256": "84b91bdc689bec7bcb958b72ee90f847bcdfef98064d765bc7abe882367610ec"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10210_cropped.png",
+          "media_id": "1459240187683645",
+          "sha256": "653d31b394383641fe1dfbff72696ce7107227666e0adf4445fc8474845e57da"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10248_cropped.png",
+          "media_id": "1459238619309329",
+          "sha256": "a542eb3593c412809964a97cffce6fb45483ab995788c060e39a2cf6cf9d5f76"
+        }
+      ],
+      "original_task_id": "mt_cGlkOTRiOWYxMTA5YjY1MGUzMDllNDMxMTczMDIwOWVlZGQxMjhiYmFh",
+      "revision_note": "Straight coaxial head and shaft; shorten handle about 20%; preserve identity/materials/palette/style",
+      "revision_manifest": "assets/migoo/dota-equipment-classic-staff-rework-01/manifest.json"
+    },
+    {
+      "item_id": "ghost",
+      "name": "幽魂权杖",
+      "english_name": "Ghost Scepter",
+      "task_id": "mt_cGlkNmExMjExOGI0NjIxZDkyOWM5ZmFkZjJiMGQxOTA5YTY4NmI2MzAy",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-batch-03/ghost-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-batch-03/ghost-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/ghost_png.png",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/ghost.png",
+          "sha256": "51c714813b8018dfbfaf1574300cfad7a81ea8bb14d94138c878c58634eb4a3c"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10210_cropped.png",
+          "media_id": "1459240187683645",
+          "sha256": "653d31b394383641fe1dfbff72696ce7107227666e0adf4445fc8474845e57da"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10224_cropped.png",
+          "media_id": "1459239138518268",
+          "sha256": "6d67f5e3bdf3c47cfae2d365ca89cc7d307336e5bb1f4ce51ef48e27698c15e3"
+        }
+      ],
+      "original_task_id": "mt_cGkxMDMxYjg2ODk1OGRiY2RhZTEyZGVkNGNlYmM2ZjQ5MDdhNGRlOGQ4",
+      "revision_note": "Straight coaxial head and shaft; shorten handle about 20%; preserve identity/materials/palette/style",
+      "revision_manifest": "assets/migoo/dota-equipment-classic-staff-rework-01/manifest.json"
+    },
+    {
+      "item_id": "glimmer_cape",
+      "name": "微光披风",
+      "english_name": "Glimmer Cape",
+      "task_id": "mt_cGk5OTViMDViMjA2OWJmZmMzMTA1Yzc2NDIzOGIwNzFlZGQwN2JmODkx",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-batch-03/glimmer_cape-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-batch-03/glimmer_cape-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/glimmer_cape_png.png",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/glimmer_cape.png",
+          "sha256": "502124c248345e11562cfc6baf14bb4efe1b57038f0b504862891cd1fde5b213"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10203_cropped.png",
+          "media_id": "1459238626796797",
+          "sha256": "f673398c827611f895ee172b35d22384e0c2302da855cf7cca69994ed2166ac4"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10237_cropped.png",
+          "media_id": "1459238887335158",
+          "sha256": "198c5d59fb6e17d029e64ec3e7a65c4d16866575ed6c63fd86005731b3eca6a8"
+        }
+      ]
+    },
+    {
+      "item_id": "lotus_orb",
+      "name": "清莲宝珠",
+      "english_name": "Lotus Orb",
+      "task_id": "mt_cGkwMmMwZmExODEyODc2ZmI1NmIwN2I3OWY3YmMzYzEyZjE1YWNkZjJm",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-batch-03/lotus_orb-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-batch-03/lotus_orb-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/lotus_orb_png.png",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/lotus_orb.png",
+          "sha256": "d4f3b18e6991becd6b399ee518915855fd3149c4f648f3090d867ba89e7f8458"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10220_cropped.png",
+          "media_id": "1459239929078573",
+          "sha256": "94e86bdcca1d7da96e12bef7a63ad6477c49e2fe5e91dc3c8e44eba4a54ec860"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10232_cropped.png",
+          "media_id": "1459239926359306",
+          "sha256": "f9298ce686f7f5c05a82ad42c92b6d08d6dfe6880349aeb1664e566952961ce0"
+        }
+      ]
+    },
+    {
+      "item_id": "sphere",
+      "name": "林肯法球",
+      "english_name": "Linken's Sphere",
+      "task_id": "mt_cGllMmNlM2EwMmRiY2IwNTIwYmIyNzM1MDFiZTZlNWI1MzcwNjFiODcw",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-batch-03/sphere-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-batch-03/sphere-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/sphere_png.png",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/sphere.png",
+          "sha256": "ee1837321c81e1f1666c06b50a6e65dbae8063d630de6919814bed028f7e7a79"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10220_cropped.png",
+          "media_id": "1459239929078573",
+          "sha256": "94e86bdcca1d7da96e12bef7a63ad6477c49e2fe5e91dc3c8e44eba4a54ec860"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10248_cropped.png",
+          "media_id": "1459238619309329",
+          "sha256": "a542eb3593c412809964a97cffce6fb45483ab995788c060e39a2cf6cf9d5f76"
+        }
+      ]
+    },
+    {
+      "item_id": "rod_of_atos",
+      "name": "阿托斯之棍",
+      "english_name": "Rod of Atos",
+      "task_id": "mt_cGk0NWIyMDI3MWVjNDI3YzBkZjdjNWEwODViYzlmMjQyZjI0NzlmN2Q4",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-batch-03/rod_of_atos-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-batch-03/rod_of_atos-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/rod_of_atos_png.png",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/rod_of_atos.png",
+          "sha256": "3d446e72f0179dea3d2defc1de63280ed755f1fb8b62cccb16758d2bd3119f0d"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10210_cropped.png",
+          "media_id": "1459240187683645",
+          "sha256": "653d31b394383641fe1dfbff72696ce7107227666e0adf4445fc8474845e57da"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10256_cropped.png",
+          "media_id": "1459239670531346",
+          "sha256": "c7bfd096b2881379a3ea4ec7c36dd631df9044448a7e3e4afbe97b02c5ee0e42"
+        }
+      ]
+    },
+    {
+      "item_id": "desolator",
+      "name": "黯灭",
+      "english_name": "Desolator",
+      "task_id": "mt_cGlkMmU3NThiZTcxMTdjODU4NzVlYWZmYTc4OGM2Mjc1ZmRjYWUxZmJh",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-batch-03/desolator-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-batch-03/desolator-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/desolator_png.png",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/desolator.png",
+          "sha256": "de7dfc2f4a1aca8b46f3cff7ab71306b89af127133a8fba4f7bd7632e76ee469"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10263_cropped.png",
+          "media_id": "1459239391798496",
+          "sha256": "0a642defad353380b55512c08e3c4143e3b5ae57ae8c24e2a61d273891e92910"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10256_cropped.png",
+          "media_id": "1459239670531346",
+          "sha256": "c7bfd096b2881379a3ea4ec7c36dd631df9044448a7e3e4afbe97b02c5ee0e42"
+        }
+      ]
+    },
+    {
+      "item_id": "hurricane_pike",
+      "name": "飓风长戟",
+      "english_name": "Hurricane Pike",
+      "task_id": "mt_cGk2NDYyOGM0MDgwYTI4MWQ4ZjQzZWRiMzBhNjgyY2VjMjRjZTVlZDNm",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-batch-03/hurricane_pike-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-batch-03/hurricane_pike-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/hurricane_pike_png.png",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/hurricane_pike.png",
+          "sha256": "dcd6d1c06116cd155b3925ab1a3b1900f607f5a5b2bfc4bb0962a5db9af4ee3b"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10223_cropped.png",
+          "media_id": "1459240187847486",
+          "sha256": "9c39054e64fd53f1fc77873f123d8604e34c4fa8c4a5c08eb07a135405407649"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10256_cropped.png",
+          "media_id": "1459239670531346",
+          "sha256": "c7bfd096b2881379a3ea4ec7c36dd631df9044448a7e3e4afbe97b02c5ee0e42"
+        }
+      ]
+    },
+    {
+      "item_id": "nullifier",
+      "name": "否决坠饰",
+      "english_name": "Nullifier",
+      "task_id": "mt_cGlmZTA1ZWM0MjRhYTQ2ZmNmNGM2ZjcxNDQ5Yjk3Yzg4Mzc0NWYwZmQz",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-batch-03/nullifier-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-batch-03/nullifier-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/nullifier_png.png",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/nullifier.png",
+          "sha256": "672b875531f89691ac27171bb2e1ee96e2bf71257117bf81a860635886615a84"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10232_cropped.png",
+          "media_id": "1459239926359306",
+          "sha256": "f9298ce686f7f5c05a82ad42c92b6d08d6dfe6880349aeb1664e566952961ce0"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10220_cropped.png",
+          "media_id": "1459239929078573",
+          "sha256": "94e86bdcca1d7da96e12bef7a63ad6477c49e2fe5e91dc3c8e44eba4a54ec860"
+        }
+      ]
+    },
+    {
+      "item_id": "pipe",
+      "name": "洞察烟斗",
+      "english_name": "Pipe of Insight",
+      "task_id": "mt_cGk0NTZhNTUwMjJiZjU0Y2NiZWY2ZGNlOTk0ODhiYjIxZmFjMDFjYmU3",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-batch-03/pipe-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-batch-03/pipe-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/pipe_png.png",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/pipe.png",
+          "sha256": "2594eb14cc6d5a83eb24bf455c691c403505bb696541e75b4ab870dc296ef351"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10224_cropped.png",
+          "media_id": "1459239138518268",
+          "sha256": "6d67f5e3bdf3c47cfae2d365ca89cc7d307336e5bb1f4ce51ef48e27698c15e3"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10232_cropped.png",
+          "media_id": "1459239926359306",
+          "sha256": "f9298ce686f7f5c05a82ad42c92b6d08d6dfe6880349aeb1664e566952961ce0"
+        }
+      ]
+    },
+    {
+      "item_id": "crimson_guard",
+      "name": "赤红甲",
+      "english_name": "Crimson Guard",
+      "task_id": "mt_cGlhZTEyMjQ1MGY0MjU4ZTBmZmNkNmIyMjQ5ZDk5NDAzZTJjYjNjMTlj",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-batch-03/crimson_guard-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-batch-03/crimson_guard-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/crimson_guard_png.png",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/crimson_guard.png",
+          "sha256": "dfe7760c6062dd8ca1cae5886f07a221f876296f16a652713f0e34859f1ef703"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10237_cropped.png",
+          "media_id": "1459238887335158",
+          "sha256": "198c5d59fb6e17d029e64ec3e7a65c4d16866575ed6c63fd86005731b3eca6a8"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10224_cropped.png",
+          "media_id": "1459239138518268",
+          "sha256": "6d67f5e3bdf3c47cfae2d365ca89cc7d307336e5bb1f4ce51ef48e27698c15e3"
+        }
+      ]
+    },
+    {
+      "item_id": "abyssal_blade",
+      "name": "深渊之刃",
+      "english_name": "Abyssal Blade",
+      "task_id": "mt_cGlhODJhMTEyN2IyYzljMGI4NTYzODJkYzFkYzIwMjAxNDNjYWY1MTBi",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-batch-03/abyssal_blade-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-batch-03/abyssal_blade-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/valve/abyssal_blade.png",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/abyssal_blade.png",
+          "sha256": "c56be982369a6251e0dc1c89b76c1bd14fb6324071541d781d458f20ede5a47a"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10263_cropped.png",
+          "media_id": "1459239391798496",
+          "sha256": "0a642defad353380b55512c08e3c4143e3b5ae57ae8c24e2a61d273891e92910"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10256_cropped.png",
+          "media_id": "1459239670531346",
+          "sha256": "c7bfd096b2881379a3ea4ec7c36dd631df9044448a7e3e4afbe97b02c5ee0e42"
+        }
+      ]
+    },
+    {
+      "item_id": "silver_edge",
+      "name": "白银之锋",
+      "english_name": "Silver Edge",
+      "task_id": "mt_cGk2YmU5NGU1M2QwMTlmZWE2YmQwOTM2Mjk0MGZkOGE2NjM3MTVmYmM2",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-batch-03/silver_edge-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-batch-03/silver_edge-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/valve/silver_edge.png",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/silver_edge.png",
+          "sha256": "537ff3ea373d9d5487c9db738bd32c158249ba27ef3256606a0677f4fb0314bd"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10256_cropped.png",
+          "media_id": "1459239670531346",
+          "sha256": "c7bfd096b2881379a3ea4ec7c36dd631df9044448a7e3e4afbe97b02c5ee0e42"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10263_cropped.png",
+          "media_id": "1459239391798496",
+          "sha256": "0a642defad353380b55512c08e3c4143e3b5ae57ae8c24e2a61d273891e92910"
+        }
+      ]
+    },
+    {
+      "item_id": "skadi",
+      "name": "斯嘉蒂之眼",
+      "english_name": "Eye of Skadi",
+      "task_id": "mt_cGlmNGY1NzUxZDliYzFmZjQ0MzdmODQzMGQ4Yjg0OWM5MDFhN2NkOGE3",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-batch-03/skadi-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-batch-03/skadi-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/valve/skadi.png",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/skadi.png",
+          "sha256": "6d57dc0c7d13362216bade9dad71d833d32fdefae8b57e3faea8c6d282120637"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10248_cropped.png",
+          "media_id": "1459238619309329",
+          "sha256": "a542eb3593c412809964a97cffce6fb45483ab995788c060e39a2cf6cf9d5f76"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10232_cropped.png",
+          "media_id": "1459239926359306",
+          "sha256": "f9298ce686f7f5c05a82ad42c92b6d08d6dfe6880349aeb1664e566952961ce0"
+        }
+      ]
+    },
+    {
+      "item_id": "ethereal_blade",
+      "name": "虚灵之刃",
+      "english_name": "Ethereal Blade",
+      "task_id": "mt_cGkzNzBkNGQzNzhkMmJlYmFiNjFmYzQxODc3OTYzNTYzMmEwY2UzZjNl",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-batch-03/ethereal_blade-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-batch-03/ethereal_blade-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/valve/ethereal_blade.png",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/ethereal_blade.png",
+          "sha256": "4c58046da1badb823c34c54a0d1b4af0ec60fb5252db2d624381e527f33629e9"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10206_cropped.png",
+          "media_id": "1459239677297466",
+          "sha256": "b8aab6728084de24cb33b6057407e497397b4c6a99b0238c258cd473375e3594"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10256_cropped.png",
+          "media_id": "1459239670531346",
+          "sha256": "c7bfd096b2881379a3ea4ec7c36dd631df9044448a7e3e4afbe97b02c5ee0e42"
+        }
+      ]
+    },
+    {
+      "item_id": "pavise",
+      "name": "护卫盾",
+      "english_name": "Pavise",
+      "task_id": "mt_cGk2YTUyNzk1YjkyYjFjOTkxNzljNjFkYjg4YWJhZmI2NzhjNDEwMWU3",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-batch-03/pavise-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-batch-03/pavise-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/valve/pavise.png",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/pavise.png",
+          "sha256": "d5bdc76ea12d146b7a2cbcb8210b056ff5c8db3f6715b9de56d873bbe4441f94"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10232_cropped.png",
+          "media_id": "1459239926359306",
+          "sha256": "f9298ce686f7f5c05a82ad42c92b6d08d6dfe6880349aeb1664e566952961ce0"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10237_cropped.png",
+          "media_id": "1459238887335158",
+          "sha256": "198c5d59fb6e17d029e64ec3e7a65c4d16866575ed6c63fd86005731b3eca6a8"
+        }
+      ]
+    },
+    {
+      "item_id": "aeon_disk",
+      "name": "永恒之盘",
+      "english_name": "Aeon Disk",
+      "task_id": "mt_cGliNGRmZTcyZWNhNmY2ZjUxZWE5MDk2YzQ0YTZiYjJlNzU1YjhlYzc5",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-equipment-classic-batch-03/aeon_disk-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-batch-03/aeon_disk-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/valve/aeon_disk.png",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/aeon_disk.png",
+          "sha256": "986041d01dc774f1f3ad1b07d5e0265b9de20cd95aab7199b32d67d089947742"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10220_cropped.png",
+          "media_id": "1459239929078573",
+          "sha256": "94e86bdcca1d7da96e12bef7a63ad6477c49e2fe5e91dc3c8e44eba4a54ec860"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10232_cropped.png",
+          "media_id": "1459239926359306",
+          "sha256": "f9298ce686f7f5c05a82ad42c92b6d08d6dfe6880349aeb1664e566952961ce0"
+        }
+      ]
+    },
+    {
+      "item_id": "manta",
+      "name": "幻影斧",
+      "english_name": "Manta Style",
+      "task_id": "mt_cGkyMzg0ZjU0OTI0YmU2Mjg1NGU5NTY1Zjc5YmEyMGE5MzFkN2RmYTgy",
+      "last_observed_status": "generating",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": null,
+      "prompt": "assets/migoo/dota-equipment-classic-batch-03/manta-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-batch-03/manta-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/valve/manta.png",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/manta.png",
+          "sha256": "5c31692d0825e3dcba13d18bf3d9a832d36eb4779aaeaa05eb6bde00c0458056"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10206_cropped.png",
+          "media_id": "1459239677297466",
+          "sha256": "b8aab6728084de24cb33b6057407e497397b4c6a99b0238c258cd473375e3594"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10256_cropped.png",
+          "media_id": "1459239670531346",
+          "sha256": "c7bfd096b2881379a3ea4ec7c36dd631df9044448a7e3e4afbe97b02c5ee0e42"
+        }
+      ]
+    },
+    {
+      "item_id": "boots_of_bearing",
+      "name": "宽容之靴",
+      "english_name": "Boots of Bearing",
+      "task_id": "mt_cGllOTUyMjY2NThmODg3MTEwNWFlYTNkNjcyNzNlY2YyN2RlZTBlMzA0",
+      "last_observed_status": "generating",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": null,
+      "prompt": "assets/migoo/dota-equipment-classic-batch-03/boots_of_bearing-v01/prompt.txt",
+      "notes": "assets/migoo/dota-equipment-classic-batch-03/boots_of_bearing-v01/notes.txt",
+      "references": [
+        {
+          "path": "output/dota-native-equipment/valve/boots_of_bearing.png",
+          "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/boots_of_bearing.png",
+          "sha256": "ab6540ba99dd6299d908497f884fe90b09735ed42ee56e070287dbaced866666"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10203_cropped.png",
+          "media_id": "1459238626796797",
+          "sha256": "f673398c827611f895ee172b35d22384e0c2302da855cf7cca69994ed2166ac4"
+        },
+        {
+          "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10224_cropped.png",
+          "media_id": "1459239138518268",
+          "sha256": "6d67f5e3bdf3c47cfae2d365ca89cc7d307336e5bb1f4ce51ef48e27698c15e3"
+        }
+      ]
+    }
+  ]
+}

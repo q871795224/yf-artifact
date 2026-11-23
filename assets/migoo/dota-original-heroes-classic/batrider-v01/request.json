@@ -1,0 +1,56 @@
+{
+  "hero": "batrider",
+  "name": "蝙蝠骑士",
+  "english_name": "Batrider",
+  "render": "output/dota-hero-art-references/valve/batrider.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/batrider.png",
+  "sha256": "d92e05c6f1b4762158f3a9cf76f26cc99f30595141b45664c622d9b99c2aa155",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/batrider.png",
+      "sha256": "d92e05c6f1b4762158f3a9cf76f26cc99f30595141b45664c622d9b99c2aa155"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10022_cropped.png",
+      "sha256": "8f00ae99ac0a79b88f23726228d85d5dbfeaa158bd9a057df686502248ec4731"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10028_cropped.png",
+      "sha256": "b7c9bc857f51b9cb45d394b66271784a243901a6e157dcad1bfc2604f04bbc81"
+    }
+  ],
+  "workflow": "submit_only; no generated-art downloads or review",
+  "authorization": "User explicitly requested twenty more agent-selected canonical heroes",
+  "listed_price": 5.33,
+  "attempt": 3,
+  "cli_exit_code": 0,
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ],
+  "previous_attempts": [
+    {
+      "task_id": "mt_cGljZmY1MjI5Zjc1YWY5MDEzNjBiMmE2NjVmOTkyMjk0OGY4NzM2ZWMw",
+      "error": {
+        "code": "task_failed",
+        "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+        "retryable": true,
+        "reason": "busy"
+      }
+    },
+    {
+      "task_id": "mt_cGliMGUwOWM4ZmQzOGJmZjZiNDhlNDUwODY1MWFlNmJjNjZhYjQzMzNh",
+      "error": {
+        "code": "task_failed",
+        "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+        "retryable": true,
+        "reason": "busy"
+      }
+    }
+  ],
+  "task_id": "mt_cGkzMWJhM2EzZDBjMzUwMDZkMTFhYmQ2NzliYzI4YjQ3NTc3MmM4M2Qy"
+}

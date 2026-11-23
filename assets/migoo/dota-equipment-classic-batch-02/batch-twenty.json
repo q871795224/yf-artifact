@@ -1,0 +1,198 @@
+{
+  "heroes": [
+    {
+      "hero": "assault",
+      "kind": "equipment",
+      "name": "强袭胸甲",
+      "english_name": "Assault Cuirass",
+      "icon": "output/dota-native-equipment/valve/assault.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/assault.png",
+      "sha256": "1ce6e8e7e95e5d9d1bc9b4257c64fee575f22efbe9fee8322c46e07a059c55a8"
+    },
+    {
+      "hero": "blade_mail",
+      "kind": "equipment",
+      "name": "刃甲",
+      "english_name": "Blade Mail",
+      "icon": "output/dota-native-equipment/valve/blade_mail.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/blade_mail.png",
+      "sha256": "ddd6c814e6d398cb1f87abb2f65012cbeef065cb5930af0474fc7077706821bb"
+    },
+    {
+      "hero": "sheepstick",
+      "kind": "equipment",
+      "name": "邪恶镰刀",
+      "english_name": "Scythe of Vyse",
+      "icon": "output/dota-native-equipment/valve/sheepstick.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/sheepstick.png",
+      "sha256": "2c432399fddbb9d47478b2f83f8b93f53a8ac1c29996ec47dfce5e503fcaec0a"
+    },
+    {
+      "hero": "orchid",
+      "kind": "equipment",
+      "name": "紫怨",
+      "english_name": "Orchid Malevolence",
+      "icon": "output/dota-native-equipment/valve/orchid.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/orchid.png",
+      "sha256": "0207dcc8990d46ff7e7dc3a70936dc6766751916f3364c56ebc69c2151f24a99"
+    },
+    {
+      "hero": "bloodthorn",
+      "kind": "equipment",
+      "name": "血棘",
+      "english_name": "Bloodthorn",
+      "icon": "output/dota-native-equipment/valve/bloodthorn.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/bloodthorn.png",
+      "sha256": "c1eb474f97ea3063fd15663cae1513195449f761397d0e1e2394abb04a139102"
+    },
+    {
+      "hero": "greater_crit",
+      "kind": "equipment",
+      "name": "代达罗斯之殇",
+      "english_name": "Daedalus",
+      "icon": "output/dota-native-equipment/valve/greater_crit.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/greater_crit.png",
+      "sha256": "b594acd3d2197d8175d0521edc068e0bb9ed190eb117f0f9d48f7684d146424e"
+    },
+    {
+      "hero": "monkey_king_bar",
+      "kind": "equipment",
+      "name": "金箍棒",
+      "english_name": "Monkey King Bar",
+      "icon": "output/dota-native-equipment/valve/monkey_king_bar.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/monkey_king_bar.png",
+      "sha256": "efb03b97f0a357e403b504c0e1297d32768e2e658b5f6bbd74e686e442e81b03"
+    },
+    {
+      "hero": "sange_and_yasha",
+      "kind": "equipment",
+      "name": "散夜对剑",
+      "english_name": "Sange and Yasha",
+      "icon": "output/dota-native-equipment/valve/sange_and_yasha.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/sange_and_yasha.png",
+      "sha256": "743620026bc90cfbcb2878fe67dea5fe57eb1acbaa44a8f2e9ff02e4d2df7d5c"
+    },
+    {
+      "hero": "satanic",
+      "kind": "equipment",
+      "name": "撒旦之邪力",
+      "english_name": "Satanic",
+      "icon": "output/dota-native-equipment/valve/satanic.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/satanic.png",
+      "sha256": "e3d1a98d1bdf739fffb2c0e338d28d7e30476beefa914c5f7735ddc16450711f"
+    },
+    {
+      "hero": "refresher",
+      "kind": "equipment",
+      "name": "刷新球",
+      "english_name": "Refresher Orb",
+      "icon": "output/dota-native-equipment/valve/refresher.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/refresher.png",
+      "sha256": "a16da11b821f6fd2a9f89b364ef6caa47f10e6ac1b3bdd302c9ca2bfcdb7eab9"
+    },
+    {
+      "hero": "octarine_core",
+      "kind": "equipment",
+      "name": "玲珑心",
+      "english_name": "Octarine Core",
+      "icon": "output/dota-native-equipment/valve/octarine_core.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/octarine_core.png",
+      "sha256": "c5c5773fe519c748fc8e1e6b56da4d07a276c4e0503368c01d03e5c28c71b1eb"
+    },
+    {
+      "hero": "ultimate_scepter",
+      "kind": "equipment",
+      "name": "阿哈利姆神杖",
+      "english_name": "Aghanim's Scepter",
+      "icon": "output/dota-native-equipment/valve/ultimate_scepter.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/ultimate_scepter.png",
+      "sha256": "a2e37040d90d987932686105567dd963f18caedd498f03ae26f0f10f9e20634f"
+    },
+    {
+      "hero": "bfury",
+      "kind": "equipment",
+      "name": "狂战斧",
+      "english_name": "Battle Fury",
+      "icon": "output/dota-native-equipment/valve/bfury.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/bfury.png",
+      "sha256": "d495e668565b981156357645bb4c091eead7c9e38221e96adb2a4e10fe7916f2"
+    },
+    {
+      "hero": "power_treads",
+      "kind": "equipment",
+      "name": "动力鞋",
+      "english_name": "Power Treads",
+      "icon": "output/dota-native-equipment/valve/power_treads.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/power_treads.png",
+      "sha256": "ff73d7df1b889a463b9e771c4fbbfa6f875123e3c7480bf4869ff86f99d9ea7f"
+    },
+    {
+      "hero": "travel_boots",
+      "kind": "equipment",
+      "name": "远行鞋",
+      "english_name": "Boots of Travel",
+      "icon": "output/dota-native-equipment/valve/travel_boots.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/travel_boots.png",
+      "sha256": "051716f4d23494aa0f259cc77ee1e0b19c0511c00923889844d711dc53930e03"
+    },
+    {
+      "hero": "mekansm",
+      "kind": "equipment",
+      "name": "梅肯斯姆",
+      "english_name": "Mekansm",
+      "icon": "output/dota-native-equipment/valve/mekansm.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/mekansm.png",
+      "sha256": "7e13e06c5fd09fa01e0f1f493934d19ee77cb791186674e905b714e18cec157d"
+    },
+    {
+      "hero": "guardian_greaves",
+      "kind": "equipment",
+      "name": "卫士胫甲",
+      "english_name": "Guardian Greaves",
+      "icon": "output/dota-native-equipment/valve/guardian_greaves.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/guardian_greaves.png",
+      "sha256": "ee5e10086efdfe50f0b2d905b89de34181103d538ecd61b4d5327e870d3fdbf5"
+    },
+    {
+      "hero": "vladmir",
+      "kind": "equipment",
+      "name": "弗拉迪米尔的祭品",
+      "english_name": "Vladmir's Offering",
+      "icon": "output/dota-native-equipment/valve/vladmir.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/vladmir.png",
+      "sha256": "749ec25bc12f5cd3ea12f59b530203611ff8d66acc0a89c3e4cc057ad7b2e239"
+    },
+    {
+      "hero": "vanguard",
+      "kind": "equipment",
+      "name": "先锋盾",
+      "english_name": "Vanguard",
+      "icon": "output/dota-native-equipment/valve/vanguard.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/vanguard.png",
+      "sha256": "8ee1666cfe96e721b363c12254f0322034059b9db8a067d98dc527d3594ae711"
+    },
+    {
+      "hero": "dragon_lance",
+      "kind": "equipment",
+      "name": "魔龙枪",
+      "english_name": "Dragon Lance",
+      "icon": "output/dota-native-equipment/valve/dragon_lance.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/dragon_lance.png",
+      "sha256": "97fbff35dbdefe9b62fe56c5110e814a89691c7e6e6b05fb91c1bc9b82048b47"
+    }
+  ],
+  "kind": "equipment",
+  "count": 20,
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "workflow": "Submit only; user reviews on Migoo; no generated-output downloads or inspection",
+  "pause_on": "2026-11-24",
+  "balance_before": {
+    "free": 43,
+    "paid": 0
+  },
+  "listed_price_per_image": 5.33,
+  "status": "ready_to_submit",
+  "review_gate": "Submit exactly these twenty; no unrequested further batches."
+}

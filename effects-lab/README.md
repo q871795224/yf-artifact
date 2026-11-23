@@ -1,5 +1,7 @@
 # 本地特效工作台
 
+卡图资源查找见[分类索引](../assets/art-library/README.md)，生图与返工见[项目 skill](../.agents/skills/artifact-card-art/SKILL.md)。
+
 ## Godot 三维工作台
 
 [打开桌面浏览器预览](http://127.0.0.1:18772/effects-lab/3d/web/)。独立项目在 [3d/project.godot](3d/project.godot)。棋盘是五列八排的 3D 台面，使用项目插画作棋子，带塔、牌堆和中央河道。可切换近战挥砍、防御塔炮击和范围法术，调俯视角、回看指定帧和慢放。
@@ -27,7 +29,13 @@ godot --headless --path effects-lab/3d --export-release Web "$PWD/effects-lab/3d
 
 ## 素材库
 
-从页首“素材库”进入 <http://127.0.0.1:8741/effects-lab/assets.html>。默认以整页卡牌画廊展示 310 条原版完整卡面及项目已采用的自制图，可按名称、英文名、ID、类型及本地来源筛选；切换到小兵／召唤单位可浏览其中 50 条。原版使用本地 `cards.json` 与素材清单，自制图读取 `assets/custom/manifest.json`；不修改原作数据。
+从页首“插画审阅”进入 <http://127.0.0.1:8741/effects-lab/art-review.html>。当前卡池取自试玩引擎，可查规则、数值和在用图片。项目候选按批次浏览，Artifact Classic 可以切换卡面、头像、局内图标及本地已有的无框原画。用“小图检查”看 48 像素的棋盘裁切，点图片上的加号可跨集合选两张对照。详情里的状态和修改意见保存在当前浏览器。
+
+卡池或素材更新后，在仓库根目录运行 `python3 scripts/build_art_review.py` 刷新本地索引。加 `--cache-classic` 下载未缓存的 Classic 卡面。索引和缓存均放在 `output/art-review/`，由已有的本地服务提供。
+
+Classic 客户端的无框图导出后，保留 `set00/full_art/` 和 `set01/full_art/` 两级目录，放入 `output/classic-full-art/`。重建索引后，按文件名里的卡牌 ID 对应原版条目。只有原画文件的 ID 也可以单独查看。
+
+旧版素材工具仍可在 <http://127.0.0.1:8741/effects-lab/assets.html> 打开。原版使用本地 `cards.json` 与素材清单，自制图读取 `assets/custom/manifest.json`。
 
 图片版本可切换方形头像、完整卡面、局内图标；原版本地已有 59 个条目的图片，共 130 张；另有已采用的自制夜魇近战小兵图，搜索“夜魇”可查看，打开原图进入保留的 PNG。其余条目从原索引 Valve CDN 加载，需联网，旧链接可能失效。点击卡牌打开大图详情，可切换图片版本、打开原图、复制名称和 ID；关闭后保留筛选与浏览位置。用户浏览并提供选中的卡牌名称或 ID 后，再单独选取素材。此页需要通过本地 HTTP 服务访问，不支持直接双击 HTML 读取 JSON。
 

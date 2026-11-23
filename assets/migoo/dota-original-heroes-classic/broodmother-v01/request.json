@@ -1,0 +1,44 @@
+{
+  "hero": "broodmother",
+  "name": "育母蜘蛛",
+  "english_name": "Broodmother",
+  "render": "output/dota-hero-art-references/valve/broodmother.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/broodmother.png",
+  "sha256": "13763588b23cb67322a47e9d72596c350fbe3a2456fa7a784d06a25114393e1e",
+  "dimensions": [
+    2880,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/broodmother.png",
+      "sha256": "13763588b23cb67322a47e9d72596c350fbe3a2456fa7a784d06a25114393e1e"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10028_cropped.png",
+      "sha256": "b7c9bc857f51b9cb45d394b66271784a243901a6e157dcad1bfc2604f04bbc81"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10038_cropped.png",
+      "sha256": "4b81f25a9e3b11ba3cf240847395e16e44175377ef71ff57637b72407e62804a"
+    }
+  ],
+  "workflow": "submit_only; no image download or generated-art review",
+  "authorization": "User explicitly delegated selecting twenty and requested submission plus reporting only",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGliYzExMjE2NGRjMjM2NjdmMDA5ODE5Njk4ZDg3OTkzMjhhNWI0NjU1",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

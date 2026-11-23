@@ -1,0 +1,44 @@
+{
+  "hero": "enigma",
+  "name": "谜团",
+  "english_name": "Enigma",
+  "render": "output/dota-hero-art-references/valve/enigma.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/enigma.png",
+  "sha256": "40a14085780955b247b64c5e8123e7e12e6cccf1757e3acd8ee0c2928863b8c7",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/enigma.png",
+      "sha256": "40a14085780955b247b64c5e8123e7e12e6cccf1757e3acd8ee0c2928863b8c7"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10355_cropped.png",
+      "sha256": "d271b9bdae6431e027a602db19f845e19786f8b08d1460873df0c7ef82de1dec"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10046_cropped.png",
+      "sha256": "2ee670ea907999f2afaf0f134f5d506140562257f25454c3047d29f994f21e7d"
+    }
+  ],
+  "workflow": "submit_only; no image download or generated-art review",
+  "authorization": "User explicitly delegated selecting twenty and requested submission plus reporting only",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGkwODZiMWY4NTc4YzFhNzgxNDJjNWVkODRlMjcwNDUyOGY3ZjFjM2Mz",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

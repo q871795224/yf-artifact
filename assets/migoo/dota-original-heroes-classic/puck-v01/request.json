@@ -1,0 +1,44 @@
+{
+  "hero": "puck",
+  "name": "帕克",
+  "english_name": "Puck",
+  "render": "output/dota-hero-art-references/valve/puck.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/puck.png",
+  "sha256": "068a78b898f1086e8985436b63ae1d262335744dcf02930f6280b2462717eef5",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/puck.png",
+      "sha256": "068a78b898f1086e8985436b63ae1d262335744dcf02930f6280b2462717eef5"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10036_cropped.png",
+      "sha256": "39fcad1fd65e1bde36d838daa970f343c9548038c8e01a02c14d8b2c3d7e4270"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10010_cropped.png",
+      "sha256": "8f7b5240ccf4797b0e744273bb66c1a936ddf4ff32fc7f167aebc3f6449914e7"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or visual reviews",
+  "authorization": "User explicitly requested another agent-selected twenty heroes and submission through the reusable script",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk2ZTRjNmY2NTBmYjM3OWIyYmVkYzg2ZjFjYzg4ZDFiNzVkMmFhZmVk",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

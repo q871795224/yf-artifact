@@ -1,0 +1,21 @@
+{
+  "model_id": "gpt-image-26-flare",
+  "name": "GPT Image 2.6 Flare",
+  "description": "Flexible · High-fidelity",
+  "price": "auto: 5.33 / image; 1K: 5.33 / image; 2K: 10.67 / image; 4K: 17.67 / image",
+  "ratios": [
+    "1:1",
+    "2:3",
+    "3:2",
+    "3:4",
+    "4:3",
+    "4:5",
+    "9:16",
+    "16:9"
+  ],
+  "resolutions": [
+    "1K",
+    "2K",
+    "4K"
+  ]
+}

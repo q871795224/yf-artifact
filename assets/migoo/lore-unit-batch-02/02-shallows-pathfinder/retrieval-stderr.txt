@@ -1,0 +1,2 @@
+Task mt_cGk2MDA5MzdhYzJhZjU1NTEzYWYyNWNhOGEyNDI2MmVjYzc0ZTBkMzYw started; if this command is interrupted, run migoo task get mt_cGk2MDA5MzdhYzJhZjU1NTEzYWYyNWNhOGEyNDI2MmVjYzc0ZTBkMzYw --wait
+Saved assets/migoo/lore-unit-batch-02/02-shallows-pathfinder/mt_cGk2MDA5MzdhYzJhZjU1NTEzYWYyNWNhOGEyNDI2MmVjYzc0ZTBkMzYw_1.png

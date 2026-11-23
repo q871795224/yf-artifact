@@ -1,0 +1,4 @@
+interface:
+  display_name: "Artifact 卡图生图"
+  short_description: "按英雄、装备、单位与法术组织参考图、提示词、批量提交和返工"
+  default_prompt: "使用 $artifact-card-art，先查本项目资源索引，再按类别准备卡图参考和提示词，并沿用已确认的 Migoo 提交方式。"

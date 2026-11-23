@@ -1,0 +1,36 @@
+{
+  "hero": "lone_druid",
+  "name": "德鲁伊",
+  "english_name": "Lone Druid",
+  "render": "output/dota-hero-art-references/valve/lone_druid.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/lone_druid.png",
+  "sha256": "ed0a97d01549c6f8693a5f913b86a08c87b25cc9c15c5ec09e79ef61f88c3241",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/lone_druid.png",
+      "sha256": "ed0a97d01549c6f8693a5f913b86a08c87b25cc9c15c5ec09e79ef61f88c3241"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10036_cropped.png",
+      "sha256": "39fcad1fd65e1bde36d838daa970f343c9548038c8e01a02c14d8b2c3d7e4270"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10070_cropped.png",
+      "sha256": "ecb1ed9c3485e1d54a3f0cb5aff2bf989f0e6fe46ec4c69dc35b1185fd8dd503"
+    }
+  ],
+  "workflow": "submit_only; no generated-art downloads or review",
+  "authorization": "User explicitly requested twenty more agent-selected canonical heroes",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk4MDI4MmFhZjdiYzE5NmJmNDdlMzhmYzA0OWI0ZTVjNjk2MTdjODI1",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

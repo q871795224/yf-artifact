@@ -1,0 +1,5 @@
+Migoo 额度：余额 1，免费 1，付费 0，冻结 0。
+Uploading assets/migoo/hero-ultimates-01/references/hero-queenofpain.jpg (148908 bytes)
+Uploading assets/migoo/hero-ultimates-01/references/hero-lina.jpg (129387 bytes)
+Uploading assets/migoo/hero-ultimates-01/references/classic-10339.jpg (269733 bytes)
+Uploading assets/migoo/hero-ultimates-01/references/classic-10353.jpg (139436 bytes)

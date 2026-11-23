@@ -1,0 +1,44 @@
+{
+  "hero": "disruptor",
+  "name": "干扰者",
+  "english_name": "Disruptor",
+  "render": "output/dota-hero-art-references/valve/disruptor.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/disruptor.png",
+  "sha256": "1a6349112203de7d7e4a41f05394ba5b3beea049d57c21e02d7b0b46637c8fab",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/disruptor.png",
+      "sha256": "1a6349112203de7d7e4a41f05394ba5b3beea049d57c21e02d7b0b46637c8fab"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10064_cropped.png",
+      "sha256": "1824b122ea11a72965a178100d872ee132903a4f84f55efff5bc9e9feee69c64"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10046_cropped.png",
+      "sha256": "2ee670ea907999f2afaf0f134f5d506140562257f25454c3047d29f994f21e7d"
+    }
+  ],
+  "workflow": "submit_only; no image download or generated-art review",
+  "authorization": "User explicitly delegated selecting twenty and requested submission plus reporting only",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk2NTRkZjMzOGZmN2JjZDk3ZGM5YmEyY2EwOWZmYjI1ZTc4YTJhYzM2",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

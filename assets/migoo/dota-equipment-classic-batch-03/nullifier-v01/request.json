@@ -1,0 +1,44 @@
+{
+  "hero": "nullifier",
+  "kind": "equipment",
+  "name": "否决坠饰",
+  "english_name": "Nullifier",
+  "icon": "output/dota-native-equipment/nullifier_png.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/nullifier.png",
+  "sha256": "672b875531f89691ac27171bb2e1ee96e2bf71257117bf81a860635886615a84",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/nullifier_png.png",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/nullifier.png",
+      "sha256": "672b875531f89691ac27171bb2e1ee96e2bf71257117bf81a860635886615a84"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10232_cropped.png",
+      "media_id": "1459239926359306",
+      "sha256": "f9298ce686f7f5c05a82ad42c92b6d08d6dfe6880349aeb1664e566952961ce0"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10220_cropped.png",
+      "media_id": "1459239929078573",
+      "sha256": "94e86bdcca1d7da96e12bef7a63ad6477c49e2fe5e91dc3c8e44eba4a54ec860"
+    }
+  ],
+  "classic_style_ids": [
+    10232,
+    10220
+  ],
+  "workflow": "Submit and report only; no generated-output download or inspection",
+  "authorization": "User requested twenty additional equipment images after accepting prior batches",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGlmZTA1ZWM0MjRhYTQ2ZmNmNGM2ZjcxNDQ5Yjk3Yzg4Mzc0NWYwZmQz",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

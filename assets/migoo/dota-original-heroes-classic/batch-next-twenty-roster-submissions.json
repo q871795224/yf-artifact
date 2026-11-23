@@ -1,0 +1,245 @@
+{
+  "requested": 20,
+  "submitted_count": 20,
+  "workflow": "submit only; status queries release concurrency slots; no downloads",
+  "tasks": [
+    {
+      "hero": "doom_bringer",
+      "name": "末日使者",
+      "task_id": "mt_cGk5NWRlM2ZjZGZjMDBhYzFkZWZlNGY0NmNhMDYzMDcyM2EwYWI5ZmE1",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "nevermore",
+      "name": "影魔",
+      "task_id": "mt_cGllMWY1ZjNiMmU5YTlkNzk4MzgwOWU5ZmNlZDU2N2MyYWZjYzJmYjFk",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "razor",
+      "name": "剃刀",
+      "task_id": "mt_cGk3YTljOTg1ZjdjODdhZDU5MzA5NWEwMzQ4OTQ3OGQ2YjE1NzYwODQ1",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "leshrac",
+      "name": "拉席克",
+      "task_id": "mt_cGkzNmExNTBlNWZlMTI4ZDA1MGZiOWRkZDQ2YmFlNDI2N2Q1ZGM5ODU4",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "death_prophet",
+      "name": "死亡先知",
+      "task_id": "mt_cGliZDRhZjEzYTdiOTc0YzdjMGU2MDFiODEwYWZlYWNkZTJlZTNlYjgz",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "vengefulspirit",
+      "name": "复仇之魂",
+      "task_id": "mt_cGlmMjc0NGYwODdiOWU3MWIzZGNmMzI3YzhlYzJmNzIyYjRjZDI3ZjU3",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "dazzle",
+      "name": "戴泽",
+      "task_id": "mt_cGljN2IwZDNjMzg5MTdhNzg1MWYzYjk3MjM5NzE1MjlhODE2YzUwYmZm",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "bane",
+      "name": "祸乱之源",
+      "task_id": "mt_cGlmY2RkYjRhNDk1ZDYzYmE1NzAwMWJjNTNmODNhY2ZlNDgxNGVmODY4",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "puck",
+      "name": "帕克",
+      "task_id": "mt_cGk2ZTRjNmY2NTBmYjM3OWIyYmVkYzg2ZjFjYzg4ZDFiNzVkMmFhZmVk",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "queenofpain",
+      "name": "痛苦女王",
+      "task_id": "mt_cGk1NGEzYTBjZDJkZmNlYjQyNzM1MjA2YjlhMzQ1MGVmYzVmZjYyMDRi",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "windrunner",
+      "name": "风行者",
+      "task_id": "mt_cGkyOTQxM2NmYWM0YWJiYzMwMDQ4ZGNkODczODc3ZDAxMTY4YTZiOTll",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "lina",
+      "name": "莉娜",
+      "task_id": "mt_cGllZWM0Yjc0ZjhjNzUzMWMwY2MxNWRlYWZlZGQyODU0Y2JlMmMzNmEw",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "kunkka",
+      "name": "昆卡",
+      "task_id": "mt_cGljYTYzYmQ2NDQ1YzE0YjNmNzVhZWQwOGE5Y2QxMGIxZWM2MjExNmQy",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "slardar",
+      "name": "斯拉达",
+      "task_id": "mt_cGk4ZDJkODE4OTU3ZmVjZTRmOGU5ZTc2OGE2NjRlMjA0OGIxMjljNjRh",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "tusk",
+      "name": "巨牙海民",
+      "task_id": "mt_cGkwNmJmMDFkZGFmZjQ2OTQ1MzBjNDEwN2I0MDYyZTkwMTE1YTVmMjdk",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "spirit_breaker",
+      "name": "裂魂人",
+      "task_id": "mt_cGk1NWRlZmU3YTA4YjdlZDgyOTc2NjU4ZmYxMTg5YjQyNjE2NTRiMWZi",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "alchemist",
+      "name": "炼金术士",
+      "task_id": "mt_cGllMjMxNDBjMjQwYzAwOTg3NDM2NmNkNWQzMTc0ZDEzMDdhYmMwY2Zh",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "skeleton_king",
+      "name": "冥魂大帝",
+      "task_id": "mt_cGllN2ZkYmJjMzcwODI1OGExNTg5MGM2MDUxNTNhZTFlMTAwZDIxNjFl",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "undying",
+      "name": "不朽尸王",
+      "task_id": "mt_cGljNGI2YWIwM2QzNDIwODZlMmI0YWRhOTQyMTAxYmQyZGMxNzYzNmUy",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "life_stealer",
+      "name": "噬魂鬼",
+      "task_id": "mt_cGkzMTI4NmUxNTkxZDg2MzUwYzg3MjQ3ZTBlZjNiZDBmYTc4MTQ0ZGQ5",
+      "status": "generating",
+      "model": "gpt-image-26-flare",
+      "actual_models": null,
+      "attempt": 1,
+      "cli_exit_code": 0
+    }
+  ]
+}

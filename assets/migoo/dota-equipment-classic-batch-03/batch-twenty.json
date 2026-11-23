@@ -1,0 +1,199 @@
+{
+  "heroes": [
+    {
+      "hero": "force_staff",
+      "kind": "equipment",
+      "name": "原力法杖",
+      "english_name": "Force Staff",
+      "icon": "output/dota-native-equipment/force_staff_png.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/force_staff.png",
+      "sha256": "7930fb1f364b369c81163b5094ce976b5d2e92e490b2415bc0c14051d6098243"
+    },
+    {
+      "hero": "cyclone",
+      "kind": "equipment",
+      "name": "Eul的神圣法杖",
+      "english_name": "Eul's Scepter of Divinity",
+      "icon": "output/dota-native-equipment/cyclone_png.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/cyclone.png",
+      "sha256": "84b91bdc689bec7bcb958b72ee90f847bcdfef98064d765bc7abe882367610ec"
+    },
+    {
+      "hero": "ghost",
+      "kind": "equipment",
+      "name": "幽魂权杖",
+      "english_name": "Ghost Scepter",
+      "icon": "output/dota-native-equipment/ghost_png.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/ghost.png",
+      "sha256": "51c714813b8018dfbfaf1574300cfad7a81ea8bb14d94138c878c58634eb4a3c"
+    },
+    {
+      "hero": "glimmer_cape",
+      "kind": "equipment",
+      "name": "微光披风",
+      "english_name": "Glimmer Cape",
+      "icon": "output/dota-native-equipment/glimmer_cape_png.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/glimmer_cape.png",
+      "sha256": "502124c248345e11562cfc6baf14bb4efe1b57038f0b504862891cd1fde5b213"
+    },
+    {
+      "hero": "lotus_orb",
+      "kind": "equipment",
+      "name": "清莲宝珠",
+      "english_name": "Lotus Orb",
+      "icon": "output/dota-native-equipment/lotus_orb_png.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/lotus_orb.png",
+      "sha256": "d4f3b18e6991becd6b399ee518915855fd3149c4f648f3090d867ba89e7f8458"
+    },
+    {
+      "hero": "sphere",
+      "kind": "equipment",
+      "name": "林肯法球",
+      "english_name": "Linken's Sphere",
+      "icon": "output/dota-native-equipment/sphere_png.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/sphere.png",
+      "sha256": "ee1837321c81e1f1666c06b50a6e65dbae8063d630de6919814bed028f7e7a79"
+    },
+    {
+      "hero": "rod_of_atos",
+      "kind": "equipment",
+      "name": "阿托斯之棍",
+      "english_name": "Rod of Atos",
+      "icon": "output/dota-native-equipment/rod_of_atos_png.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/rod_of_atos.png",
+      "sha256": "3d446e72f0179dea3d2defc1de63280ed755f1fb8b62cccb16758d2bd3119f0d"
+    },
+    {
+      "hero": "desolator",
+      "kind": "equipment",
+      "name": "黯灭",
+      "english_name": "Desolator",
+      "icon": "output/dota-native-equipment/desolator_png.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/desolator.png",
+      "sha256": "de7dfc2f4a1aca8b46f3cff7ab71306b89af127133a8fba4f7bd7632e76ee469"
+    },
+    {
+      "hero": "hurricane_pike",
+      "kind": "equipment",
+      "name": "飓风长戟",
+      "english_name": "Hurricane Pike",
+      "icon": "output/dota-native-equipment/hurricane_pike_png.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/hurricane_pike.png",
+      "sha256": "dcd6d1c06116cd155b3925ab1a3b1900f607f5a5b2bfc4bb0962a5db9af4ee3b"
+    },
+    {
+      "hero": "nullifier",
+      "kind": "equipment",
+      "name": "否决坠饰",
+      "english_name": "Nullifier",
+      "icon": "output/dota-native-equipment/nullifier_png.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/nullifier.png",
+      "sha256": "672b875531f89691ac27171bb2e1ee96e2bf71257117bf81a860635886615a84"
+    },
+    {
+      "hero": "pipe",
+      "kind": "equipment",
+      "name": "洞察烟斗",
+      "english_name": "Pipe of Insight",
+      "icon": "output/dota-native-equipment/pipe_png.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/pipe.png",
+      "sha256": "2594eb14cc6d5a83eb24bf455c691c403505bb696541e75b4ab870dc296ef351"
+    },
+    {
+      "hero": "crimson_guard",
+      "kind": "equipment",
+      "name": "赤红甲",
+      "english_name": "Crimson Guard",
+      "icon": "output/dota-native-equipment/crimson_guard_png.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/crimson_guard.png",
+      "sha256": "dfe7760c6062dd8ca1cae5886f07a221f876296f16a652713f0e34859f1ef703"
+    },
+    {
+      "hero": "abyssal_blade",
+      "kind": "equipment",
+      "name": "深渊之刃",
+      "english_name": "Abyssal Blade",
+      "icon": "output/dota-native-equipment/valve/abyssal_blade.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/abyssal_blade.png",
+      "sha256": "c56be982369a6251e0dc1c89b76c1bd14fb6324071541d781d458f20ede5a47a"
+    },
+    {
+      "hero": "silver_edge",
+      "kind": "equipment",
+      "name": "白银之锋",
+      "english_name": "Silver Edge",
+      "icon": "output/dota-native-equipment/valve/silver_edge.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/silver_edge.png",
+      "sha256": "537ff3ea373d9d5487c9db738bd32c158249ba27ef3256606a0677f4fb0314bd"
+    },
+    {
+      "hero": "skadi",
+      "kind": "equipment",
+      "name": "斯嘉蒂之眼",
+      "english_name": "Eye of Skadi",
+      "icon": "output/dota-native-equipment/valve/skadi.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/skadi.png",
+      "sha256": "6d57dc0c7d13362216bade9dad71d833d32fdefae8b57e3faea8c6d282120637"
+    },
+    {
+      "hero": "ethereal_blade",
+      "kind": "equipment",
+      "name": "虚灵之刃",
+      "english_name": "Ethereal Blade",
+      "icon": "output/dota-native-equipment/valve/ethereal_blade.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/ethereal_blade.png",
+      "sha256": "4c58046da1badb823c34c54a0d1b4af0ec60fb5252db2d624381e527f33629e9"
+    },
+    {
+      "hero": "pavise",
+      "kind": "equipment",
+      "name": "护卫盾",
+      "english_name": "Pavise",
+      "icon": "output/dota-native-equipment/valve/pavise.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/pavise.png",
+      "sha256": "d5bdc76ea12d146b7a2cbcb8210b056ff5c8db3f6715b9de56d873bbe4441f94"
+    },
+    {
+      "hero": "aeon_disk",
+      "kind": "equipment",
+      "name": "永恒之盘",
+      "english_name": "Aeon Disk",
+      "icon": "output/dota-native-equipment/valve/aeon_disk.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/aeon_disk.png",
+      "sha256": "986041d01dc774f1f3ad1b07d5e0265b9de20cd95aab7199b32d67d089947742"
+    },
+    {
+      "hero": "manta",
+      "kind": "equipment",
+      "name": "幻影斧",
+      "english_name": "Manta Style",
+      "icon": "output/dota-native-equipment/valve/manta.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/manta.png",
+      "sha256": "5c31692d0825e3dcba13d18bf3d9a832d36eb4779aaeaa05eb6bde00c0458056"
+    },
+    {
+      "hero": "boots_of_bearing",
+      "kind": "equipment",
+      "name": "宽容之靴",
+      "english_name": "Boots of Bearing",
+      "icon": "output/dota-native-equipment/valve/boots_of_bearing.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/boots_of_bearing.png",
+      "sha256": "ab6540ba99dd6299d908497f884fe90b09735ed42ee56e070287dbaced866666"
+    }
+  ],
+  "kind": "equipment",
+  "count": 20,
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "workflow": "Submit only; user reviews on Migoo",
+  "pause_on": "2026-11-24",
+  "balance_before": {
+    "free": 19,
+    "paid": 0
+  },
+  "listed_price_per_image": 5.33,
+  "selection_note": "Disjoint from the 30 approved-workflow equipment items. Repaint canonical equipment rather than reuse the older redesigned equipment concept set.",
+  "status": "ready_to_submit",
+  "scope": "Exactly these twenty; no more heroes or unrequested equipment."
+}

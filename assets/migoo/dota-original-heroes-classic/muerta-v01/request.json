@@ -1,0 +1,41 @@
+{
+  "hero": "muerta",
+  "name": "琼英碧灵",
+  "english_name": "Muerta",
+  "render": "output/dota-hero-art-references/valve/muerta.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/muerta.png",
+  "sha256": "538013896a3517208b34b0baba13a931c1b72fa326b219a40b44154a1dbed8da",
+  "classic_hero_exists": false,
+  "reference_note": "Official transparent render",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/muerta.png",
+      "sha256": "538013896a3517208b34b0baba13a931c1b72fa326b219a40b44154a1dbed8da",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/muerta.png"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10047_cropped.png",
+      "sha256": "3571bcb9be23ee305506acecee5c07b942e7b07424a1b57a4ac4a8ff9fc85d7e",
+      "media_id": "1459226674341118"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10038_cropped.png",
+      "sha256": "4b81f25a9e3b11ba3cf240847395e16e44175377ef71ff57637b72407e62804a",
+      "media_id": "1459224386413367"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or review",
+  "authorization": "User requested this additional twenty; agent selected roster and disclosed 18 remaining new heroes plus 2 existing Classic heroes repainted",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGkyMzMwNzEyZGE2NTk3NWNkYWViYzM4MzJlMTRhNGE0ZjI0M2M4OGFm",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "hero": "monkey_king_bar",
+  "kind": "equipment",
+  "name": "金箍棒",
+  "english_name": "Monkey King Bar",
+  "icon": "output/dota-native-equipment/valve/monkey_king_bar.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/monkey_king_bar.png",
+  "sha256": "efb03b97f0a357e403b504c0e1297d32768e2e658b5f6bbd74e686e442e81b03",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/monkey_king_bar.png",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/monkey_king_bar.png",
+      "sha256": "efb03b97f0a357e403b504c0e1297d32768e2e658b5f6bbd74e686e442e81b03"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10210_cropped.png",
+      "media_id": "1459240187683645",
+      "sha256": "653d31b394383641fe1dfbff72696ce7107227666e0adf4445fc8474845e57da"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10224_cropped.png",
+      "media_id": "1459239138518268",
+      "sha256": "6d67f5e3bdf3c47cfae2d365ca89cc7d307336e5bb1f4ce51ef48e27698c15e3"
+    }
+  ],
+  "classic_style_ids": [
+    10210,
+    10224
+  ],
+  "workflow": "Submit and report only; user reviews on Migoo",
+  "authorization": "User approved first ten equipment images and requested twenty additional equipment images",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGlmODc5Mzk4MTMxNjE3N2FlMTYzYjJjNjZlOTY1OTJlMGU0YWY4MTUw",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

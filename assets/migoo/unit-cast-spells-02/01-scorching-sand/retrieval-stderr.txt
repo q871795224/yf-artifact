@@ -1,0 +1,2 @@
+Task mt_cGk0YTA2MTViYjZmN2Q2MDczYmJiNTljNzVjOTkyYzRjM2M5Zjc2NjBm started; if this command is interrupted, run migoo task get mt_cGk0YTA2MTViYjZmN2Q2MDczYmJiNTljNzVjOTkyYzRjM2M5Zjc2NjBm --wait
+Saved assets/migoo/unit-cast-spells-02/01-scorching-sand/mt_cGk0YTA2MTViYjZmN2Q2MDczYmJiNTljNzVjOTkyYzRjM2M5Zjc2NjBm_1.png

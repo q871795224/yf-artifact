@@ -1,0 +1,44 @@
+{
+  "hero": "sange_and_yasha",
+  "kind": "equipment",
+  "name": "散夜对剑",
+  "english_name": "Sange and Yasha",
+  "icon": "output/dota-native-equipment/valve/sange_and_yasha.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/sange_and_yasha.png",
+  "sha256": "743620026bc90cfbcb2878fe67dea5fe57eb1acbaa44a8f2e9ff02e4d2df7d5c",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/sange_and_yasha.png",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/sange_and_yasha.png",
+      "sha256": "743620026bc90cfbcb2878fe67dea5fe57eb1acbaa44a8f2e9ff02e4d2df7d5c"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10256_cropped.png",
+      "media_id": "1459239670531346",
+      "sha256": "c7bfd096b2881379a3ea4ec7c36dd631df9044448a7e3e4afbe97b02c5ee0e42"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10263_cropped.png",
+      "media_id": "1459239391798496",
+      "sha256": "0a642defad353380b55512c08e3c4143e3b5ae57ae8c24e2a61d273891e92910"
+    }
+  ],
+  "classic_style_ids": [
+    10256,
+    10263
+  ],
+  "workflow": "Submit and report only; user reviews on Migoo",
+  "authorization": "User approved first ten equipment images and requested twenty additional equipment images",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGkxMTM0YWJlMzJiMTAwYWYwZjI5YTQyMTYxNWVjY2IwOTQ3YzE1NDQ4",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

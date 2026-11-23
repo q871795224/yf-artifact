@@ -1,0 +1,1025 @@
+{
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "jobs": [
+    {
+      "slug": "01-zuus-thundergods-wrath",
+      "name": "宙斯·雷神之怒",
+      "hero": "宙斯",
+      "hero_key": "zuus",
+      "skill_name": "雷神之怒",
+      "ability_key": "zuus_thundergods_wrath",
+      "ability_description": "用闪电打击所有敌方英雄，对他们造成伤害，无论他们身在何处。在打击前提供每个英雄的真实视域。",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=22",
+      "kind": "英雄技能",
+      "description": "为yf-artifact画Dota 2英雄宙斯施放「雷神之怒」的全新技能场景。宙斯位于左下前景台阶，保留官方白须、发型、蓝白服饰与电光气质，张臂向上引雷。中景帕吉与远景莉娜分别处于两条岔路，头顶各有一根清楚的金白落雷同时击下，衣摆、铁链和石屑被电力掀起。把三位英雄放在三个不同尺度的位置，最亮的两处落雷点在中间和右上，云层只留两道有力量的主雷痕。",
+      "notes": "竖幅9:16满版Artifact Classic画法的Dota英雄技能插画。前面的官方英雄渲染与既有单位原图提供角色身份与造型，末尾两张Classic无框原画提供可见手绘笔触、自然材质、大明暗、边缘虚实与空间层次。保留每位英雄的原版面貌、非人头形或发型、标志衣装、武器和配色，把角色与目标一同重新绘制进本张动作场景。技能方向、受力姿态、召唤关系或状态变化清楚，技能作用点最亮最精细，其他位置保留松紧笔触与自然受光，角色可半身或局部入画，画面主题是正在发生的技能。画满到四边，没有卡框、文字、数字、技能图标、UI、漫画分格、气泡、logo、水印或白边。 本张有3张角色造型参考，顺序为宙斯、帕吉、莉娜。末尾两张是Classic画风参考。镜头为高位斜俯广景，宙斯在前、两名敌方英雄处于不同纵深，主色为宙斯银白与蓝衣、金白雷光、远处红发和灰白身形，用光为乌云自然冷光，落雷处局部白亮。官方技能说明为用闪电打击所有敌方英雄，对他们造成伤害，无论他们身在何处。在打击前提供每个英雄的真实视域。",
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-zuus.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-pudge.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-lina.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10278.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10412.jpg"
+      ],
+      "subject": [
+        "zuus",
+        "pudge",
+        "lina"
+      ],
+      "cast": [
+        {
+          "name": "宙斯",
+          "source_image": "output/dota-hero-art-references/valve/zuus.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-zuus.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "帕吉",
+          "source_image": "output/dota-hero-art-references/valve/pudge.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-pudge.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        },
+        {
+          "name": "莉娜",
+          "source_image": "output/dota-hero-art-references/valve/lina.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-lina.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "prop_references": [],
+      "classic_art_ids": [
+        "10278",
+        "10412"
+      ],
+      "camera": "高位斜俯广景，宙斯在前、两名敌方英雄处于不同纵深",
+      "palette": "宙斯银白与蓝衣、金白雷光、远处红发和灰白身形",
+      "light": "乌云自然冷光，落雷处局部白亮"
+    },
+    {
+      "slug": "02-crystal-maiden-freezing-field",
+      "name": "水晶室女·极寒领域",
+      "hero": "水晶室女",
+      "hero_key": "crystal_maiden",
+      "skill_name": "极寒领域",
+      "ability_key": "crystal_maiden_freezing_field",
+      "ability_description": "持续施法 - 以水晶室女为中心召唤%num_explosions%次随机冰爆轰炸敌人，将其减速并造成大量伤害。持续%abilitychanneltime%秒。",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=5",
+      "kind": "英雄技能",
+      "description": "为yf-artifact画Dota 2英雄水晶室女施放「极寒领域」的全新技能场景。水晶室女站在冻岩后方，保留官方金发、蓝白衣装、毛领和法杖，举杖持续施法。她周围几处冰晶正在由近及远错开炸起，近景蛙兵压盾缩身，侧面獠牙门卫抬臂后退。冰爆有大有小，较近两簇形成前景白色尖面，人物在冰隙间可辨，场景以浅赭山岩衬出冷冰场。",
+      "notes": "竖幅9:16满版Artifact Classic画法的Dota英雄技能插画。前面的官方英雄渲染与既有单位原图提供角色身份与造型，末尾两张Classic无框原画提供可见手绘笔触、自然材质、大明暗、边缘虚实与空间层次。保留每位英雄的原版面貌、非人头形或发型、标志衣装、武器和配色，把角色与目标一同重新绘制进本张动作场景。技能方向、受力姿态、召唤关系或状态变化清楚，技能作用点最亮最精细，其他位置保留松紧笔触与自然受光，角色可半身或局部入画，画面主题是正在发生的技能。画满到四边，没有卡框、文字、数字、技能图标、UI、漫画分格、气泡、logo、水印或白边。 本张有3张角色造型参考，顺序为水晶室女、芦岸护篓兵、獠牙门卫。末尾两张是Classic画风参考。镜头为低角度看冰场边缘，水晶室女居中偏后，主色为白蓝法袍、冷白冰、浅赭岩与少量绿灰敌兵，用光为午后冷天光，冰爆局部透亮。官方技能说明为持续施法 - 以水晶室女为中心召唤%num_explosions%次随机冰爆轰炸敌人，将其减速并造成大量伤害。持续%abilitychanneltime%秒。",
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-crystal_maiden.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-frog-shield.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-fanged-guard.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10011.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10318.jpg"
+      ],
+      "subject": [
+        "crystal_maiden",
+        "frog-shield",
+        "fanged-guard"
+      ],
+      "cast": [
+        {
+          "name": "水晶室女",
+          "source_image": "output/dota-hero-art-references/valve/crystal_maiden.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-crystal_maiden.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "芦岸护篓兵",
+          "source_image": "assets/migoo/lore-unit-batch-02/03-reedbank-buckler/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-frog-shield.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        },
+        {
+          "name": "獠牙门卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/06-fanged-gate-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-fanged-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "prop_references": [],
+      "classic_art_ids": [
+        "10011",
+        "10318"
+      ],
+      "camera": "低角度看冰场边缘，水晶室女居中偏后",
+      "palette": "白蓝法袍、冷白冰、浅赭岩与少量绿灰敌兵",
+      "light": "午后冷天光，冰爆局部透亮"
+    },
+    {
+      "slug": "03-lion-finger-of-death",
+      "name": "莱恩·死亡之指",
+      "hero": "莱恩",
+      "hero_key": "lion",
+      "skill_name": "死亡之指",
+      "ability_key": "lion_finger_of_death",
+      "ability_description": "撕裂一个敌方单位，将其折磨得死去活来，并造成巨大伤害。使用死亡之指后，莱恩的手臂增强了力量，使他可以发动带有分裂效果的近战攻击，攻击距离为%punch_attack_range%，并拥有移动速度加成。每次技能或重拳击杀英雄后都会分别使技能和重拳永久获得额外伤害和攻击力。技能设为多样施法（右键点击技能栏图标）后可以禁用近战攻击。",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=26",
+      "kind": "英雄技能",
+      "description": "为yf-artifact画Dota 2英雄莱恩施放「死亡之指」的全新技能场景。莱恩在左前景抬起恶魔化的手指，保留官方角形面孔、异化巨手、法杖与紫红衣装，一道粗短红白魔力从指尖直贯右中景蓝皮营地守卫的胸前甲布。目标上身后仰、双手张开，铜铃被甩到一旁，冲击点用一小团白亮与裂开的地尘表现。人物皮肤与身体完整，焦点是指尖、贯穿空间的单根魔力束和受力姿态。",
+      "notes": "竖幅9:16满版Artifact Classic画法的Dota英雄技能插画。前面的官方英雄渲染与既有单位原图提供角色身份与造型，末尾两张Classic无框原画提供可见手绘笔触、自然材质、大明暗、边缘虚实与空间层次。保留每位英雄的原版面貌、非人头形或发型、标志衣装、武器和配色，把角色与目标一同重新绘制进本张动作场景。技能方向、受力姿态、召唤关系或状态变化清楚，技能作用点最亮最精细，其他位置保留松紧笔触与自然受光，角色可半身或局部入画，画面主题是正在发生的技能。画满到四边，没有卡框、文字、数字、技能图标、UI、漫画分格、气泡、logo、水印或白边。 本张有2张角色造型参考，顺序为莱恩、林营铜铃守卫。末尾两张是Classic画风参考。镜头为侧面近景，莱恩的指尖与受击点位于同一斜线，主色为莱恩暗红紫、蓝皮敌兵、炭黑石地、红白魔法，用光为深暗环境，红白攻击线短而集中。官方技能说明为撕裂一个敌方单位，将其折磨得死去活来，并造成巨大伤害。使用死亡之指后，莱恩的手臂增强了力量，使他可以发动带有分裂效果的近战攻击，攻击距离为%punch_attack_range%，并拥有移动速度加成。每次技能或重拳击杀英雄后都会分别使技能和重拳永久获得额外伤害和攻击力。技能设为多样施法（右键点击技能栏图标）后可以禁用近战攻击。",
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-lion.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-bell-guard.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10354.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10315.jpg"
+      ],
+      "subject": [
+        "lion",
+        "bell-guard"
+      ],
+      "cast": [
+        {
+          "name": "莱恩",
+          "source_image": "output/dota-hero-art-references/valve/lion.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-lion.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "林营铜铃守卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/04-camp-bell-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-bell-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "prop_references": [],
+      "classic_art_ids": [
+        "10354",
+        "10315"
+      ],
+      "camera": "侧面近景，莱恩的指尖与受击点位于同一斜线",
+      "palette": "莱恩暗红紫、蓝皮敌兵、炭黑石地、红白魔法",
+      "light": "深暗环境，红白攻击线短而集中"
+    },
+    {
+      "slug": "04-shadow-shaman-mass-serpent-ward",
+      "name": "暗影萨满·群蛇守卫",
+      "hero": "暗影萨满",
+      "hero_key": "shadow_shaman",
+      "skill_name": "群蛇守卫",
+      "ability_key": "shadow_shaman_mass_serpent_ward",
+      "ability_description": "召唤%ward_count%个群蛇守卫攻击敌方单位和建筑。守卫免疫魔法。非英雄单位和幻象对毒蛇守卫造成25%伤害。",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=27",
+      "kind": "英雄技能",
+      "description": "为yf-artifact画Dota 2英雄暗影萨满施放「群蛇守卫」的全新技能场景。暗影萨满位于左下半身，保留官图面貌、头饰、衣装与双持器具，正把群蛇守卫召到石地。中央斧王站在由六只蛇形图腾守卫围出的空间中，红皮大斧明显。蛇卫为插地的金褐盘蛇柱，张开的蛇口朝向中央，其中两只刚从碎土中升起。强调召唤完成与包围关系，蛇卫大小随透视递减，萨满与斧王之间留清楚视线。",
+      "notes": "竖幅9:16满版Artifact Classic画法的Dota英雄技能插画。前面的官方英雄渲染与既有单位原图提供角色身份与造型，末尾两张Classic无框原画提供可见手绘笔触、自然材质、大明暗、边缘虚实与空间层次。保留每位英雄的原版面貌、非人头形或发型、标志衣装、武器和配色，把角色与目标一同重新绘制进本张动作场景。技能方向、受力姿态、召唤关系或状态变化清楚，技能作用点最亮最精细，其他位置保留松紧笔触与自然受光，角色可半身或局部入画，画面主题是正在发生的技能。画满到四边，没有卡框、文字、数字、技能图标、UI、漫画分格、气泡、logo、水印或白边。 本张有2张角色造型参考，顺序为暗影萨满、斧王。角色图后另有一张技能图标，仅参考召唤守卫的头形、器物与材质，绘成场景中的实体。末尾两张是Classic画风参考。镜头为高位斜俯，蛇形守卫围出不规则包围圈，主色为暗影萨满金褐紫、蛇卫旧金与黑、斧王赤红，用光为午后暖日光，蛇卫口缘有少量法力亮点。官方技能说明为召唤%ward_count%个群蛇守卫攻击敌方单位和建筑。守卫免疫魔法。非英雄单位和幻象对毒蛇守卫造成25%伤害。",
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-shadow_shaman.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-axe.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/summon-shadow_shaman_mass_serpent_ward.png",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10335.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10417.jpg"
+      ],
+      "subject": [
+        "shadow_shaman",
+        "axe"
+      ],
+      "cast": [
+        {
+          "name": "暗影萨满",
+          "source_image": "output/dota-hero-art-references/valve/shadow_shaman.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-shadow_shaman.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "斧王",
+          "source_image": "output/dota-hero-art-references/valve/axe.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-axe.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "prop_references": [
+        "assets/migoo/hero-skill-scenes-02/references/summon-shadow_shaman_mass_serpent_ward.png"
+      ],
+      "classic_art_ids": [
+        "10335",
+        "10417"
+      ],
+      "camera": "高位斜俯，蛇形守卫围出不规则包围圈",
+      "palette": "暗影萨满金褐紫、蛇卫旧金与黑、斧王赤红",
+      "light": "午后暖日光，蛇卫口缘有少量法力亮点"
+    },
+    {
+      "slug": "05-witch-doctor-death-ward",
+      "name": "巫医·死亡守卫",
+      "hero": "巫医",
+      "hero_key": "witch_doctor",
+      "skill_name": "死亡守卫",
+      "ability_key": "witch_doctor_death_ward",
+      "ability_description": "持续施法 - 召唤一个死亡守卫，会优先攻击其攻击距离内的敌方英雄。最多持续%abilitychanneltime%秒。死亡守卫拥有%bonus_accuracy%%%额外必中率。",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=30",
+      "kind": "英雄技能",
+      "description": "为yf-artifact画Dota 2英雄巫医施放「死亡守卫」的全新技能场景。巫医在左后方半身持续施法，保留官方紫色皮肤、骨饰、面貌和长杖。近景中央插着一根带面具兽首的木制死亡守卫，图腾口射出一段紧凑粉紫攻击，打向右侧急退的蓝皮营地守卫，目标缩肩护胸。镜头放低，图腾与攻击线是主角，巫医手势和目标的失衡反应在两端，背景为淡暖灰旧院。",
+      "notes": "竖幅9:16满版Artifact Classic画法的Dota英雄技能插画。前面的官方英雄渲染与既有单位原图提供角色身份与造型，末尾两张Classic无框原画提供可见手绘笔触、自然材质、大明暗、边缘虚实与空间层次。保留每位英雄的原版面貌、非人头形或发型、标志衣装、武器和配色，把角色与目标一同重新绘制进本张动作场景。技能方向、受力姿态、召唤关系或状态变化清楚，技能作用点最亮最精细，其他位置保留松紧笔触与自然受光，角色可半身或局部入画，画面主题是正在发生的技能。画满到四边，没有卡框、文字、数字、技能图标、UI、漫画分格、气泡、logo、水印或白边。 本张有2张角色造型参考，顺序为巫医、林营铜铃守卫。角色图后另有一张技能图标，仅参考召唤守卫的头形、器物与材质，绘成场景中的实体。末尾两张是Classic画风参考。镜头为贴地侧视，巫医在后引导、死亡守卫占近景，主色为巫医深紫、图腾暗木、蓝皮敌人、粉紫弹道，用光为黄昏柔光，守卫射口局部紫亮。官方技能说明为持续施法 - 召唤一个死亡守卫，会优先攻击其攻击距离内的敌方英雄。最多持续%abilitychanneltime%秒。死亡守卫拥有%bonus_accuracy%%%额外必中率。",
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-witch_doctor.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-bell-guard.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/summon-witch_doctor_death_ward.png",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10319.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10353.jpg"
+      ],
+      "subject": [
+        "witch_doctor",
+        "bell-guard"
+      ],
+      "cast": [
+        {
+          "name": "巫医",
+          "source_image": "output/dota-hero-art-references/valve/witch_doctor.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-witch_doctor.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "林营铜铃守卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/04-camp-bell-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-bell-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "prop_references": [
+        "assets/migoo/hero-skill-scenes-02/references/summon-witch_doctor_death_ward.png"
+      ],
+      "classic_art_ids": [
+        "10319",
+        "10353"
+      ],
+      "camera": "贴地侧视，巫医在后引导、死亡守卫占近景",
+      "palette": "巫医深紫、图腾暗木、蓝皮敌人、粉紫弹道",
+      "light": "黄昏柔光，守卫射口局部紫亮"
+    },
+    {
+      "slug": "06-dazzle-shallow-grave",
+      "name": "戴泽·薄葬",
+      "hero": "戴泽",
+      "hero_key": "dazzle",
+      "skill_name": "薄葬",
+      "ability_key": "dazzle_shallow_grave",
+      "ability_description": "友军身受薄葬的福佑，在其保护下不论受到多大的伤害都不会阵亡。对该友军的治疗效果在持续时间内也会根据其生命值得到增强。",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=50",
+      "kind": "英雄技能",
+      "description": "为yf-artifact画Dota 2英雄戴泽施放「薄葬」的全新技能场景。戴泽在左侧近景伸出一只手，保留官方粉紫皮肤、骨饰、头部与法杖识别。前景蛙族护篓兵单膝撑地，藤盾倾在身侧，神情疲惫却仍睁眼。几段很薄的紫红护命光沿蛙兵肩背和手腕立起，飞来的小碎石在皮肤前停住一瞬。画面聚焦戴泽伸手、蛙兵还在使力的指蹼与贴身祝福，表现濒危中的保护。",
+      "notes": "竖幅9:16满版Artifact Classic画法的Dota英雄技能插画。前面的官方英雄渲染与既有单位原图提供角色身份与造型，末尾两张Classic无框原画提供可见手绘笔触、自然材质、大明暗、边缘虚实与空间层次。保留每位英雄的原版面貌、非人头形或发型、标志衣装、武器和配色，把角色与目标一同重新绘制进本张动作场景。技能方向、受力姿态、召唤关系或状态变化清楚，技能作用点最亮最精细，其他位置保留松紧笔触与自然受光，角色可半身或局部入画，画面主题是正在发生的技能。画满到四边，没有卡框、文字、数字、技能图标、UI、漫画分格、气泡、logo、水印或白边。 本张有2张角色造型参考，顺序为戴泽、芦岸护篓兵。末尾两张是Classic画风参考。镜头为蛙兵面部与戴泽伸手的近景，主色为戴泽粉紫与骨白、墨绿蛙皮、米黄藤盾，用光为柔暗环境，紫红祝福边缘微亮。官方技能说明为友军身受薄葬的福佑，在其保护下不论受到多大的伤害都不会阵亡。对该友军的治疗效果在持续时间内也会根据其生命值得到增强。",
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-dazzle.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-frog-shield.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10370.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10338.jpg"
+      ],
+      "subject": [
+        "dazzle",
+        "frog-shield"
+      ],
+      "cast": [
+        {
+          "name": "戴泽",
+          "source_image": "output/dota-hero-art-references/valve/dazzle.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-dazzle.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "芦岸护篓兵",
+          "source_image": "assets/migoo/lore-unit-batch-02/03-reedbank-buckler/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-frog-shield.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "prop_references": [],
+      "classic_art_ids": [
+        "10370",
+        "10338"
+      ],
+      "camera": "蛙兵面部与戴泽伸手的近景",
+      "palette": "戴泽粉紫与骨白、墨绿蛙皮、米黄藤盾",
+      "light": "柔暗环境，紫红祝福边缘微亮"
+    },
+    {
+      "slug": "07-kunkka-ghostship",
+      "name": "昆卡·幽灵船",
+      "hero": "昆卡",
+      "hero_key": "kunkka",
+      "skill_name": "幽灵船",
+      "ability_key": "kunkka_ghostship",
+      "ability_description": "召唤一艘幽灵船驶过战场，直到撞成粉碎，残骸周围的敌人将会因撞击受到伤害并眩晕。被幽灵船碰到的友军会获得2倍效果的统帅朗姆酒。",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=23",
+      "kind": "英雄技能",
+      "description": "为yf-artifact画Dota 2英雄昆卡施放「幽灵船」的全新技能场景。昆卡位于左前景，保留官方海军面貌、蓝金衣装与长剑，侧身挥剑指向右前方。巨大的半透明幽灵船从他后方斜冲过画面，船艏与破帆形成最强轮廓，船腹下卷起带木屑的幽蓝浪。右中景莉娜急转身后撤，红发和裙摆向船的冲击方向飘起。让幽船、剑指方向与目标位置在同一条斜线上，港岸用暖灰褐色衬出青色船体。",
+      "notes": "竖幅9:16满版Artifact Classic画法的Dota英雄技能插画。前面的官方英雄渲染与既有单位原图提供角色身份与造型，末尾两张Classic无框原画提供可见手绘笔触、自然材质、大明暗、边缘虚实与空间层次。保留每位英雄的原版面貌、非人头形或发型、标志衣装、武器和配色，把角色与目标一同重新绘制进本张动作场景。技能方向、受力姿态、召唤关系或状态变化清楚，技能作用点最亮最精细，其他位置保留松紧笔触与自然受光，角色可半身或局部入画，画面主题是正在发生的技能。画满到四边，没有卡框、文字、数字、技能图标、UI、漫画分格、气泡、logo、水印或白边。 本张有2张角色造型参考，顺序为昆卡、莉娜。末尾两张是Classic画风参考。镜头为低位从船艏下望入战场，昆卡在前景侧身挥剑，主色为幽灵青、昆卡蓝金、莉娜红衣、浅褐港岸，用光为阴天海港天光，幽船船肋透出冷亮。官方技能说明为召唤一艘幽灵船驶过战场，直到撞成粉碎，残骸周围的敌人将会因撞击受到伤害并眩晕。被幽灵船碰到的友军会获得2倍效果的统帅朗姆酒。",
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-kunkka.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-lina.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10355.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10198.jpg"
+      ],
+      "subject": [
+        "kunkka",
+        "lina"
+      ],
+      "cast": [
+        {
+          "name": "昆卡",
+          "source_image": "output/dota-hero-art-references/valve/kunkka.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-kunkka.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "莉娜",
+          "source_image": "output/dota-hero-art-references/valve/lina.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-lina.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "prop_references": [],
+      "classic_art_ids": [
+        "10355",
+        "10198"
+      ],
+      "camera": "低位从船艏下望入战场，昆卡在前景侧身挥剑",
+      "palette": "幽灵青、昆卡蓝金、莉娜红衣、浅褐港岸",
+      "light": "阴天海港天光，幽船船肋透出冷亮"
+    },
+    {
+      "slug": "08-tidehunter-ravage",
+      "name": "潮汐猎人·毁灭",
+      "hero": "潮汐猎人",
+      "hero_key": "tidehunter",
+      "skill_name": "毁灭",
+      "ability_key": "tidehunter_ravage",
+      "ability_description": "猛击地面，触手向各个方向穿出，伤害并眩晕附近所有敌方单位。",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=29",
+      "kind": "英雄技能",
+      "description": "为yf-artifact画Dota 2英雄潮汐猎人施放「毁灭」的全新技能场景。潮汐猎人位于石场中央，保留官方巨大的海怪头形、绿皮、锚与沉重躯干，双臂向外张开。周围地面被毁灭技能顶开，数根粗海兽触须从不规则裂缝中向外扬起。前景獠牙门卫和侧面白鬃巡兽被冲击抬离地面，脚下有明确空隙。触须从中央向四周伸展，角色只占较小面积，用尺度和离地姿态交代范围冲击。",
+      "notes": "竖幅9:16满版Artifact Classic画法的Dota英雄技能插画。前面的官方英雄渲染与既有单位原图提供角色身份与造型，末尾两张Classic无框原画提供可见手绘笔触、自然材质、大明暗、边缘虚实与空间层次。保留每位英雄的原版面貌、非人头形或发型、标志衣装、武器和配色，把角色与目标一同重新绘制进本张动作场景。技能方向、受力姿态、召唤关系或状态变化清楚，技能作用点最亮最精细，其他位置保留松紧笔触与自然受光，角色可半身或局部入画，画面主题是正在发生的技能。画满到四边，没有卡框、文字、数字、技能图标、UI、漫画分格、气泡、logo、水印或白边。 本张有3张角色造型参考，顺序为潮汐猎人、獠牙门卫、暮坡嗅迹兽。末尾两张是Classic画风参考。镜头为高位斜俯，潮汐居中、触须向外展开，主色为潮汐暗绿、触须灰粉、米白石场、少量蓝灰角色，用光为明亮阴天，裂缝与触须根部深暗。官方技能说明为猛击地面，触手向各个方向穿出，伤害并眩晕附近所有敌方单位。",
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-tidehunter.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-fanged-guard.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-maned-beast.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10323.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10415.jpg"
+      ],
+      "subject": [
+        "tidehunter",
+        "fanged-guard",
+        "maned-beast"
+      ],
+      "cast": [
+        {
+          "name": "潮汐猎人",
+          "source_image": "output/dota-hero-art-references/valve/tidehunter.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-tidehunter.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "獠牙门卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/06-fanged-gate-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-fanged-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        },
+        {
+          "name": "暮坡嗅迹兽",
+          "source_image": "assets/migoo/comic-npc-batch-05/01-evening-trail-sniffer/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-maned-beast.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "prop_references": [],
+      "classic_art_ids": [
+        "10323",
+        "10415"
+      ],
+      "camera": "高位斜俯，潮汐居中、触须向外展开",
+      "palette": "潮汐暗绿、触须灰粉、米白石场、少量蓝灰角色",
+      "light": "明亮阴天，裂缝与触须根部深暗"
+    },
+    {
+      "slug": "09-magnataur-reverse-polarity",
+      "name": "马格纳斯·两极反转",
+      "hero": "马格纳斯",
+      "hero_key": "magnataur",
+      "skill_name": "两极反转",
+      "ability_key": "magnataur_reverse_polarity",
+      "ability_description": "马格纳斯改变物质的属性，将附近的敌人拖拽至他的前方，并且以震击对他们造成伤害和眩晕。",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=97",
+      "kind": "英雄技能",
+      "description": "为yf-artifact画Dota 2英雄马格纳斯施放「两极反转」的全新技能场景。马格纳斯在中央低头发力，保留官方角形、宽厚四足身躯、蓝色甲片与长柄武器。主宰从左侧、蛙族藤盾兵从右后方同时被拉向他，二者脚跟在浅砂地上拖出汇向中心的轨迹，衣物和武器也向内倾。中央一圈很薄的空气扭曲压低尘土，力量由姿态与拖痕表达，镜头贴地看清马格纳斯沉稳的四足和周围失衡的目标。",
+      "notes": "竖幅9:16满版Artifact Classic画法的Dota英雄技能插画。前面的官方英雄渲染与既有单位原图提供角色身份与造型，末尾两张Classic无框原画提供可见手绘笔触、自然材质、大明暗、边缘虚实与空间层次。保留每位英雄的原版面貌、非人头形或发型、标志衣装、武器和配色，把角色与目标一同重新绘制进本张动作场景。技能方向、受力姿态、召唤关系或状态变化清楚，技能作用点最亮最精细，其他位置保留松紧笔触与自然受光，角色可半身或局部入画，画面主题是正在发生的技能。画满到四边，没有卡框、文字、数字、技能图标、UI、漫画分格、气泡、logo、水印或白边。 本张有3张角色造型参考，顺序为马格纳斯、主宰、芦岸护篓兵。末尾两张是Classic画风参考。镜头为贴地前侧，马格纳斯居中，敌人的脚印向他汇聚，主色为马格纳斯灰褐与蓝甲、主宰白红、浅砂地，用光为清亮侧光，受力点与武器边缘较亮。官方技能说明为马格纳斯改变物质的属性，将附近的敌人拖拽至他的前方，并且以震击对他们造成伤害和眩晕。",
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-magnataur.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-juggernaut.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-frog-shield.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10361.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10268.jpg"
+      ],
+      "subject": [
+        "magnataur",
+        "juggernaut",
+        "frog-shield"
+      ],
+      "cast": [
+        {
+          "name": "马格纳斯",
+          "source_image": "output/dota-hero-art-references/valve/magnataur.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-magnataur.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "主宰",
+          "source_image": "output/dota-hero-art-references/valve/juggernaut.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-juggernaut.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        },
+        {
+          "name": "芦岸护篓兵",
+          "source_image": "assets/migoo/lore-unit-batch-02/03-reedbank-buckler/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-frog-shield.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "prop_references": [],
+      "classic_art_ids": [
+        "10361",
+        "10268"
+      ],
+      "camera": "贴地前侧，马格纳斯居中，敌人的脚印向他汇聚",
+      "palette": "马格纳斯灰褐与蓝甲、主宰白红、浅砂地",
+      "light": "清亮侧光，受力点与武器边缘较亮"
+    },
+    {
+      "slug": "10-enigma-black-hole",
+      "name": "谜团·黑洞",
+      "hero": "谜团",
+      "hero_key": "enigma",
+      "skill_name": "黑洞",
+      "ability_key": "enigma_black_hole",
+      "ability_description": "持续施法 - 召唤一个强引力漩涡吸住敌方单位。被黑洞影响的单位不能移动、攻击或施法。",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=33",
+      "kind": "英雄技能",
+      "description": "为yf-artifact画Dota 2英雄谜团施放「黑洞」的全新技能场景。谜团在左下角伸手施法，保留官方无实体的紫黑身躯、发光眼与下方涡旋形态。画面中央偏右出现一个吞光的扭曲漩涡，附近碎石、灰尘和斯温的披布都被拉向核心；斯温保留蓝色全盔、红布和巨剑，一腿拖地、一臂试图撑住斜石。漩涡中心近黑，边缘只留一段弯曲细光，靠近核心的石柱线条被拉弯，人物与受力方向清楚。",
+      "notes": "竖幅9:16满版Artifact Classic画法的Dota英雄技能插画。前面的官方英雄渲染与既有单位原图提供角色身份与造型，末尾两张Classic无框原画提供可见手绘笔触、自然材质、大明暗、边缘虚实与空间层次。保留每位英雄的原版面貌、非人头形或发型、标志衣装、武器和配色，把角色与目标一同重新绘制进本张动作场景。技能方向、受力姿态、召唤关系或状态变化清楚，技能作用点最亮最精细，其他位置保留松紧笔触与自然受光，角色可半身或局部入画，画面主题是正在发生的技能。画满到四边，没有卡框、文字、数字、技能图标、UI、漫画分格、气泡、logo、水印或白边。 本张有2张角色造型参考，顺序为谜团、斯温。末尾两张是Classic画风参考。镜头为斜俯看中空扭曲区域，谜团在左下边缘引导，主色为谜团深紫黑、斯温蓝甲红布、暖灰废墟，用光为黑洞周围有窄光边，场景自然光偏暖。官方技能说明为持续施法 - 召唤一个强引力漩涡吸住敌方单位。被黑洞影响的单位不能移动、攻击或施法。",
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-enigma.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-sven.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10267.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10315.jpg"
+      ],
+      "subject": [
+        "enigma",
+        "sven"
+      ],
+      "cast": [
+        {
+          "name": "谜团",
+          "source_image": "output/dota-hero-art-references/valve/enigma.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-enigma.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "斯温",
+          "source_image": "output/dota-hero-art-references/valve/sven.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-sven.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "prop_references": [],
+      "classic_art_ids": [
+        "10267",
+        "10315"
+      ],
+      "camera": "斜俯看中空扭曲区域，谜团在左下边缘引导",
+      "palette": "谜团深紫黑、斯温蓝甲红布、暖灰废墟",
+      "light": "黑洞周围有窄光边，场景自然光偏暖"
+    },
+    {
+      "slug": "11-invoker-sun-strike",
+      "name": "祈求者·阳炎冲击",
+      "hero": "祈求者",
+      "hero_key": "invoker",
+      "skill_name": "阳炎冲击",
+      "ability_key": "invoker_sun_strike",
+      "ability_description": "向目标区域释放毁灭性的阳炎之光能量，一旦能量着陆，将对区域内的敌人进行灼烧。伤害取决于火元素等级，区域内敌人将平摊所有伤害。",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=74",
+      "kind": "英雄技能",
+      "description": "为yf-artifact画Dota 2英雄祈求者施放「阳炎冲击」的全新技能场景。祈求者位于右前景半身，保留官方浅发、高领白金紫色衣装与三色法球，一只手指向远处石地。远处蓝皮营地守卫脚下刚亮起一个很浅的灼热点，随即从正上方落下一束直而短的白金日炎，目标抬臂躲避，地面石砂向外翻。焦点在远处的精准落点与祈求者指向它的手势，炎柱只覆盖目标周围小区域，赤褐环境与白金技能光形成对比。",
+      "notes": "竖幅9:16满版Artifact Classic画法的Dota英雄技能插画。前面的官方英雄渲染与既有单位原图提供角色身份与造型，末尾两张Classic无框原画提供可见手绘笔触、自然材质、大明暗、边缘虚实与空间层次。保留每位英雄的原版面貌、非人头形或发型、标志衣装、武器和配色，把角色与目标一同重新绘制进本张动作场景。技能方向、受力姿态、召唤关系或状态变化清楚，技能作用点最亮最精细，其他位置保留松紧笔触与自然受光，角色可半身或局部入画，画面主题是正在发生的技能。画满到四边，没有卡框、文字、数字、技能图标、UI、漫画分格、气泡、logo、水印或白边。 本张有2张角色造型参考，顺序为祈求者、林营铜铃守卫。末尾两张是Classic画风参考。镜头为远近层次强烈，祈求者在前景，目标与落日柱在远处，主色为祈求者白金与紫、白金日炎、赤褐岩地、蓝皮目标，用光为干燥白昼自然光，落点爆出集中金白光。官方技能说明为向目标区域释放毁灭性的阳炎之光能量，一旦能量着陆，将对区域内的敌人进行灼烧。伤害取决于火元素等级，区域内敌人将平摊所有伤害。",
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-invoker.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-bell-guard.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10353.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10424.jpg"
+      ],
+      "subject": [
+        "invoker",
+        "bell-guard"
+      ],
+      "cast": [
+        {
+          "name": "祈求者",
+          "source_image": "output/dota-hero-art-references/valve/invoker.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-invoker.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "林营铜铃守卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/04-camp-bell-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-bell-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "prop_references": [],
+      "classic_art_ids": [
+        "10353",
+        "10424"
+      ],
+      "camera": "远近层次强烈，祈求者在前景，目标与落日柱在远处",
+      "palette": "祈求者白金与紫、白金日炎、赤褐岩地、蓝皮目标",
+      "light": "干燥白昼自然光，落点爆出集中金白光"
+    },
+    {
+      "slug": "12-phoenix-supernova",
+      "name": "凤凰·超新星",
+      "hero": "凤凰",
+      "hero_key": "phoenix",
+      "skill_name": "超新星",
+      "ability_key": "phoenix_supernova",
+      "ability_description": "凤凰十分乐意终结自己现在的生命来换取重生。将自己变为一颗燃烧的恒星，灼烧附近一大片区域内的敌人。恒星拥有若干格生命。非英雄单位和幻象对恒星造成25%伤害。经过%abilityduration%秒后恒星将会爆炸，眩晕周围所有敌人。而凤凰的生命和魔法值都会回到满状态，并且所有技能的冷却时间都会刷新。\n\n驱散类型：强驱散",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=110",
+      "kind": "英雄技能",
+      "description": "为yf-artifact画Dota 2英雄凤凰施放「超新星」的全新技能场景。凤凰正化为一颗悬在低空的燃烧恒星，中心是明亮金橙球体，球壳里隐约可见原版凤凰的鸟形与红金羽焰，两片逐渐收拢的火翼融入球面。下方斧王举着大斧靠近，红皮、黑发与肩甲受恒星照亮，身体后仰抵抗热浪。低角度把恒星放在中上部，凤凰身份通过焰翼与内部鸟形表达，球周几片火羽和上升灰烬最精细，深灰暮空保持大块空间。",
+      "notes": "竖幅9:16满版Artifact Classic画法的Dota英雄技能插画。前面的官方英雄渲染与既有单位原图提供角色身份与造型，末尾两张Classic无框原画提供可见手绘笔触、自然材质、大明暗、边缘虚实与空间层次。保留每位英雄的原版面貌、非人头形或发型、标志衣装、武器和配色，把角色与目标一同重新绘制进本张动作场景。技能方向、受力姿态、召唤关系或状态变化清楚，技能作用点最亮最精细，其他位置保留松紧笔触与自然受光，角色可半身或局部入画，画面主题是正在发生的技能。画满到四边，没有卡框、文字、数字、技能图标、UI、漫画分格、气泡、logo、水印或白边。 本张有2张角色造型参考，顺序为凤凰、斧王。末尾两张是Classic画风参考。镜头为低角度仰看燃烧恒星，斧王在下方举斧靠近，主色为金橙恒星、凤凰红金焰、斧王赤红、深灰暮空，用光为恒星为主要光源，周围人物受暖反光。官方技能说明为凤凰十分乐意终结自己现在的生命来换取重生。将自己变为一颗燃烧的恒星，灼烧附近一大片区域内的敌人。恒星拥有若干格生命。非英雄单位和幻象对恒星造成25%伤害。经过%abilityduration%秒后恒星将会爆炸，眩晕周围所有敌人。而凤凰的生命和魔法值都会回到满状态，并且所有技能的冷却时间都会刷新。\n\n驱散类型：强驱散",
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-phoenix.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-axe.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10334.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10315.jpg"
+      ],
+      "subject": [
+        "phoenix",
+        "axe"
+      ],
+      "cast": [
+        {
+          "name": "凤凰",
+          "source_image": "output/dota-hero-art-references/valve/phoenix.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-phoenix.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "斧王",
+          "source_image": "output/dota-hero-art-references/valve/axe.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-axe.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "prop_references": [],
+      "classic_art_ids": [
+        "10334",
+        "10315"
+      ],
+      "camera": "低角度仰看燃烧恒星，斧王在下方举斧靠近",
+      "palette": "金橙恒星、凤凰红金焰、斧王赤红、深灰暮空",
+      "light": "恒星为主要光源，周围人物受暖反光"
+    },
+    {
+      "slug": "13-vengefulspirit-nether-swap",
+      "name": "复仇之魂·移形换位",
+      "hero": "复仇之魂",
+      "hero_key": "vengefulspirit",
+      "skill_name": "移形换位",
+      "ability_key": "vengefulspirit_nether_swap",
+      "ability_description": "与一个目标英雄瞬间交换位置，不论敌我。移形换位会打断目标的持续施法。敌方英雄被交换后受到伤害。复仇之魂和被交换的友方英雄都会获得等同于造成伤害的护盾。",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=20",
+      "kind": "英雄技能",
+      "description": "为yf-artifact画Dota 2英雄复仇之魂施放「移形换位」的全新技能场景。复仇之魂与帕吉在同一处暖红石院两端发动移形换位，复仇之魂保持官方蓝紫非人面貌、羽翼与衣装，帕吉保持灰白肥厚身躯、围裙和肉钩。画面定格在两人刚交换完成的瞬间，复仇之魂站在原本靠近门口的敌方位置，帕吉被换到院中，两端各留下一个很薄的反向残影，紫白短痕交叉指向对面。高位斜视清楚分开两个站位、地面投影和残影，重点是人物落地后的受力反应。",
+      "notes": "竖幅9:16满版Artifact Classic画法的Dota英雄技能插画。前面的官方英雄渲染与既有单位原图提供角色身份与造型，末尾两张Classic无框原画提供可见手绘笔触、自然材质、大明暗、边缘虚实与空间层次。保留每位英雄的原版面貌、非人头形或发型、标志衣装、武器和配色，把角色与目标一同重新绘制进本张动作场景。技能方向、受力姿态、召唤关系或状态变化清楚，技能作用点最亮最精细，其他位置保留松紧笔触与自然受光，角色可半身或局部入画，画面主题是正在发生的技能。画满到四边，没有卡框、文字、数字、技能图标、UI、漫画分格、气泡、logo、水印或白边。 本张有2张角色造型参考，顺序为复仇之魂、帕吉。末尾两张是Classic画风参考。镜头为高位斜看两端位置，互换的两位英雄与两道残影交错，主色为复仇之魂蓝紫羽翼、帕吉灰白皮、暖红石地，用光为傍晚侧光，换位边缘只有少量紫白亮痕。官方技能说明为与一个目标英雄瞬间交换位置，不论敌我。移形换位会打断目标的持续施法。敌方英雄被交换后受到伤害。复仇之魂和被交换的友方英雄都会获得等同于造成伤害的护盾。",
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-vengefulspirit.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-pudge.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10355.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10298.jpg"
+      ],
+      "subject": [
+        "vengefulspirit",
+        "pudge"
+      ],
+      "cast": [
+        {
+          "name": "复仇之魂",
+          "source_image": "output/dota-hero-art-references/valve/vengefulspirit.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-vengefulspirit.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "帕吉",
+          "source_image": "output/dota-hero-art-references/valve/pudge.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-pudge.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "prop_references": [],
+      "classic_art_ids": [
+        "10355",
+        "10298"
+      ],
+      "camera": "高位斜看两端位置，互换的两位英雄与两道残影交错",
+      "palette": "复仇之魂蓝紫羽翼、帕吉灰白皮、暖红石地",
+      "light": "傍晚侧光，换位边缘只有少量紫白亮痕"
+    },
+    {
+      "slug": "14-disruptor-kinetic-field",
+      "name": "干扰者·动能力场",
+      "hero": "干扰者",
+      "hero_key": "disruptor",
+      "skill_name": "动能力场",
+      "ability_key": "disruptor_kinetic_field",
+      "ability_description": "在短暂的构造时间后，创造一个敌人无法通过的环形动能屏障。",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=87",
+      "kind": "英雄技能",
+      "description": "为yf-artifact画Dota 2英雄干扰者施放「动能力场」的全新技能场景。干扰者位于左后方，保留官方蓝发、红色衣装、器具与爬行动物坐骑，举手引导一圈正在闭合的动能力场。场内灰蓝獠牙门卫前掌抵住边缘试图出去，白鬃巡兽压低身子急停；场边数根短而细的蓝白电栅沿地面环起，电栅之间有空气扭曲。相机从场外低处向内看，近景有一段清楚圆弧，干扰者、目标与边界位置明确，浅赭石场衬出小面积电光。",
+      "notes": "竖幅9:16满版Artifact Classic画法的Dota英雄技能插画。前面的官方英雄渲染与既有单位原图提供角色身份与造型，末尾两张Classic无框原画提供可见手绘笔触、自然材质、大明暗、边缘虚实与空间层次。保留每位英雄的原版面貌、非人头形或发型、标志衣装、武器和配色，把角色与目标一同重新绘制进本张动作场景。技能方向、受力姿态、召唤关系或状态变化清楚，技能作用点最亮最精细，其他位置保留松紧笔触与自然受光，角色可半身或局部入画，画面主题是正在发生的技能。画满到四边，没有卡框、文字、数字、技能图标、UI、漫画分格、气泡、logo、水印或白边。 本张有3张角色造型参考，顺序为干扰者、獠牙门卫、暮坡嗅迹兽。末尾两张是Classic画风参考。镜头为外侧低机位看闭合场边，干扰者在边缘施法，主色为干扰者蓝发红衣与坐骑、淡蓝电栅、浅赭石地，用光为晴天自然光，栅栏细亮，地面投影清楚。官方技能说明为在短暂的构造时间后，创造一个敌人无法通过的环形动能屏障。",
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-disruptor.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-fanged-guard.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-maned-beast.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10412.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10347.jpg"
+      ],
+      "subject": [
+        "disruptor",
+        "fanged-guard",
+        "maned-beast"
+      ],
+      "cast": [
+        {
+          "name": "干扰者",
+          "source_image": "output/dota-hero-art-references/valve/disruptor.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-disruptor.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "獠牙门卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/06-fanged-gate-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-fanged-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        },
+        {
+          "name": "暮坡嗅迹兽",
+          "source_image": "assets/migoo/comic-npc-batch-05/01-evening-trail-sniffer/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-maned-beast.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "prop_references": [],
+      "classic_art_ids": [
+        "10412",
+        "10347"
+      ],
+      "camera": "外侧低机位看闭合场边，干扰者在边缘施法",
+      "palette": "干扰者蓝发红衣与坐骑、淡蓝电栅、浅赭石地",
+      "light": "晴天自然光，栅栏细亮，地面投影清楚"
+    },
+    {
+      "slug": "15-dark-seer-vacuum",
+      "name": "黑暗贤者·真空",
+      "hero": "黑暗贤者",
+      "hero_key": "dark_seer",
+      "skill_name": "真空",
+      "ability_key": "dark_seer_vacuum",
+      "ability_description": "黑暗贤者在目标区域制造一个真空环境，将周围的敌方单位吸入，具有打断效果并造成伤害。",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=55",
+      "kind": "英雄技能",
+      "description": "为yf-artifact画Dota 2英雄黑暗贤者施放「真空」的全新技能场景。黑暗贤者位于画面左下，保留官方巨大的紫色头形、白须与衣装，一只手向掌心收拢。中间砂地上一小片空气被真空技能压缩，帕吉和白鬃巡兽分别从两侧被拉向中心，衣摆、铁链、尾巴和尘土都朝同一点倾。用收束的地面拖痕、卷入中心的枯叶和身体姿态交代吸力，中心保留地面纹理与一个透明空气凹陷。高位斜俯让两组受力轨迹一眼可读，背景为亮砂褐色旧院。",
+      "notes": "竖幅9:16满版Artifact Classic画法的Dota英雄技能插画。前面的官方英雄渲染与既有单位原图提供角色身份与造型，末尾两张Classic无框原画提供可见手绘笔触、自然材质、大明暗、边缘虚实与空间层次。保留每位英雄的原版面貌、非人头形或发型、标志衣装、武器和配色，把角色与目标一同重新绘制进本张动作场景。技能方向、受力姿态、召唤关系或状态变化清楚，技能作用点最亮最精细，其他位置保留松紧笔触与自然受光，角色可半身或局部入画，画面主题是正在发生的技能。画满到四边，没有卡框、文字、数字、技能图标、UI、漫画分格、气泡、logo、水印或白边。 本张有3张角色造型参考，顺序为黑暗贤者、帕吉、暮坡嗅迹兽。末尾两张是Classic画风参考。镜头为高位斜俯，敌人的身体与尘迹向一点收束，主色为黑暗贤者紫皮与白须、帕吉灰白、砂褐地，用光为明亮柔日光，中心空气压缩处只有薄亮边。官方技能说明为黑暗贤者在目标区域制造一个真空环境，将周围的敌方单位吸入，具有打断效果并造成伤害。",
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-dark_seer.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-pudge.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-maned-beast.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10267.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10339.jpg"
+      ],
+      "subject": [
+        "dark_seer",
+        "pudge",
+        "maned-beast"
+      ],
+      "cast": [
+        {
+          "name": "黑暗贤者",
+          "source_image": "output/dota-hero-art-references/valve/dark_seer.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-dark_seer.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "帕吉",
+          "source_image": "output/dota-hero-art-references/valve/pudge.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-pudge.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        },
+        {
+          "name": "暮坡嗅迹兽",
+          "source_image": "assets/migoo/comic-npc-batch-05/01-evening-trail-sniffer/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-maned-beast.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "prop_references": [],
+      "classic_art_ids": [
+        "10267",
+        "10339"
+      ],
+      "camera": "高位斜俯，敌人的身体与尘迹向一点收束",
+      "palette": "黑暗贤者紫皮与白须、帕吉灰白、砂褐地",
+      "light": "明亮柔日光，中心空气压缩处只有薄亮边"
+    },
+    {
+      "slug": "16-lich-chain-frost",
+      "name": "巫妖·连环霜冻",
+      "hero": "巫妖",
+      "hero_key": "lich",
+      "skill_name": "连环霜冻",
+      "ability_key": "lich_chain_frost",
+      "ability_description": "释放一个在敌人间弹跳至多%jumps%次的霜冻之球，每次击中敌人后都会造成伤害和减速效果。每次弹跳后会提升后续的伤害。连环霜冻无法弹跳时会停留在上个目标身上，如果出现新目标可以再次弹跳。",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=31",
+      "kind": "英雄技能",
+      "description": "为yf-artifact画Dota 2英雄巫妖施放「连环霜冻」的全新技能场景。巫妖位于左前方半身，保留官方冰蓝骨面、头部饰件、袍摆与手部造型，刚把连环霜冻送出。近处灰蓝獠牙门卫被一颗大而清楚的冷白霜球撞得缩肩，球的回弹轨迹正指向后方蓝皮营地守卫；后者抬铜铃护脸，脚步踉跄。只保留一颗最明确的实体霜球，先前运动用稀疏冰晶和细冷痕交代，暗赭旧墙与暖灰地面托出冷色作用点。",
+      "notes": "竖幅9:16满版Artifact Classic画法的Dota英雄技能插画。前面的官方英雄渲染与既有单位原图提供角色身份与造型，末尾两张Classic无框原画提供可见手绘笔触、自然材质、大明暗、边缘虚实与空间层次。保留每位英雄的原版面貌、非人头形或发型、标志衣装、武器和配色，把角色与目标一同重新绘制进本张动作场景。技能方向、受力姿态、召唤关系或状态变化清楚，技能作用点最亮最精细，其他位置保留松紧笔触与自然受光，角色可半身或局部入画，画面主题是正在发生的技能。画满到四边，没有卡框、文字、数字、技能图标、UI、漫画分格、气泡、logo、水印或白边。 本张有3张角色造型参考，顺序为巫妖、獠牙门卫、林营铜铃守卫。末尾两张是Classic画风参考。镜头为侧面深透视，一颗霜球及回弹冷痕连接前后目标，主色为巫妖冰蓝骨白、灰蓝与青蓝敌人、暗赭墙，用光为黄昏环境偏暖，霜球边缘冷白透亮。官方技能说明为释放一个在敌人间弹跳至多%jumps%次的霜冻之球，每次击中敌人后都会造成伤害和减速效果。每次弹跳后会提升后续的伤害。连环霜冻无法弹跳时会停留在上个目标身上，如果出现新目标可以再次弹跳。",
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-lich.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-fanged-guard.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-bell-guard.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10318.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10277.jpg"
+      ],
+      "subject": [
+        "lich",
+        "fanged-guard",
+        "bell-guard"
+      ],
+      "cast": [
+        {
+          "name": "巫妖",
+          "source_image": "output/dota-hero-art-references/valve/lich.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-lich.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "獠牙门卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/06-fanged-gate-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-fanged-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        },
+        {
+          "name": "林营铜铃守卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/04-camp-bell-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-bell-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "prop_references": [],
+      "classic_art_ids": [
+        "10318",
+        "10277"
+      ],
+      "camera": "侧面深透视，一颗霜球及回弹冷痕连接前后目标",
+      "palette": "巫妖冰蓝骨白、灰蓝与青蓝敌人、暗赭墙",
+      "light": "黄昏环境偏暖，霜球边缘冷白透亮"
+    },
+    {
+      "slug": "17-mirana-arrow",
+      "name": "米拉娜·月神之箭",
+      "hero": "米拉娜",
+      "hero_key": "mirana",
+      "skill_name": "月神之箭",
+      "ability_key": "mirana_arrow",
+      "ability_description": "射出一支绝对精准的箭矢，对第一个击中的敌人造成伤害并眩晕目标。目标距离越远，眩晕时间越长，最短%arrow_min_stun%秒，最长可达%arrow_max_stun%秒。根据箭矢飞行的距离还将对目标额外造成最多%arrow_bonus_damage%点伤害。若击中的是非远古的普通单位，将直接秒杀。",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=9",
+      "kind": "英雄技能",
+      "description": "为yf-artifact画Dota 2英雄米拉娜施放「月神之箭」的全新技能场景。米拉娜骑在原版白色大型坐骑上，位于左下前景侧身拉弓放箭，保持官方面貌、发饰、蓝金装束与坐骑外形。一支月神之箭沿林间空隙直射右后方刚探出头的沙王，沙王蝎形头、金褐甲壳和钳尾可辨，正侧身躲避。箭的尖端冷白、尾迹细而有方向，弓弦回弹、米拉娜放箭手与远处目标连在一条斜线上，秋叶橙黄背景衬出白虎和蓝金英雄。",
+      "notes": "竖幅9:16满版Artifact Classic画法的Dota英雄技能插画。前面的官方英雄渲染与既有单位原图提供角色身份与造型，末尾两张Classic无框原画提供可见手绘笔触、自然材质、大明暗、边缘虚实与空间层次。保留每位英雄的原版面貌、非人头形或发型、标志衣装、武器和配色，把角色与目标一同重新绘制进本张动作场景。技能方向、受力姿态、召唤关系或状态变化清楚，技能作用点最亮最精细，其他位置保留松紧笔触与自然受光，角色可半身或局部入画，画面主题是正在发生的技能。画满到四边，没有卡框、文字、数字、技能图标、UI、漫画分格、气泡、logo、水印或白边。 本张有2张角色造型参考，顺序为米拉娜、沙王。末尾两张是Classic画风参考。镜头为低位穿过林间空隙，长箭从米拉娜射向沙王，主色为米拉娜蓝金与白虎、沙王金褐、秋叶橙黄，用光为午后林隙斜光，箭尖与弓弦局部清亮。官方技能说明为射出一支绝对精准的箭矢，对第一个击中的敌人造成伤害并眩晕目标。目标距离越远，眩晕时间越长，最短%arrow_min_stun%秒，最长可达%arrow_max_stun%秒。根据箭矢飞行的距离还将对目标额外造成最多%arrow_bonus_damage%点伤害。若击中的是非远古的普通单位，将直接秒杀。",
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-mirana.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-sand_king.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10270.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10313.jpg"
+      ],
+      "subject": [
+        "mirana",
+        "sand_king"
+      ],
+      "cast": [
+        {
+          "name": "米拉娜",
+          "source_image": "output/dota-hero-art-references/valve/mirana.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-mirana.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "沙王",
+          "source_image": "output/dota-hero-art-references/valve/sand_king.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-sand_king.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "prop_references": [],
+      "classic_art_ids": [
+        "10270",
+        "10313"
+      ],
+      "camera": "低位穿过林间空隙，长箭从米拉娜射向沙王",
+      "palette": "米拉娜蓝金与白虎、沙王金褐、秋叶橙黄",
+      "light": "午后林隙斜光，箭尖与弓弦局部清亮"
+    },
+    {
+      "slug": "18-sven-storm-bolt",
+      "name": "斯温·风暴之拳",
+      "hero": "斯温",
+      "hero_key": "sven",
+      "skill_name": "风暴之拳",
+      "ability_key": "sven_storm_bolt",
+      "ability_description": "斯温用他充满魔力的手套对目标周围内所有敌人造成伤害和眩晕。",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=18",
+      "kind": "英雄技能",
+      "description": "为yf-artifact画Dota 2英雄斯温施放「风暴之拳」的全新技能场景。斯温位于左侧前景，保留官方全盔蓝甲、红布与巨大剑，一只戴甲手刚向前掷出一团凝成拳套形的魔力。中央的银白魔力手套带很短电痕，正击中右侧斧王肩前，斧王头向后偏、斧柄失去原角度，脚下散开一个小尘圈。镜头侧看手套飞行与命中，斯温的投掷手势、中央拳形魔力和斧王失衡姿态都清楚，画面以冷灰石场和两位英雄的蓝红形体组织。",
+      "notes": "竖幅9:16满版Artifact Classic画法的Dota英雄技能插画。前面的官方英雄渲染与既有单位原图提供角色身份与造型，末尾两张Classic无框原画提供可见手绘笔触、自然材质、大明暗、边缘虚实与空间层次。保留每位英雄的原版面貌、非人头形或发型、标志衣装、武器和配色，把角色与目标一同重新绘制进本张动作场景。技能方向、受力姿态、召唤关系或状态变化清楚，技能作用点最亮最精细，其他位置保留松紧笔触与自然受光，角色可半身或局部入画，画面主题是正在发生的技能。画满到四边，没有卡框、文字、数字、技能图标、UI、漫画分格、气泡、logo、水印或白边。 本张有2张角色造型参考，顺序为斯温、斧王。末尾两张是Classic画风参考。镜头为侧面中近景，飞出的魔力手套占画面中央，主色为斯温蓝甲红布、斧王红皮、银白雷光、冷灰石地，用光为阴天自然光，魔力手套边缘一小段最亮。官方技能说明为斯温用他充满魔力的手套对目标周围内所有敌人造成伤害和眩晕。",
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-sven.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-axe.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10352.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10360.jpg"
+      ],
+      "subject": [
+        "sven",
+        "axe"
+      ],
+      "cast": [
+        {
+          "name": "斯温",
+          "source_image": "output/dota-hero-art-references/valve/sven.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-sven.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "斧王",
+          "source_image": "output/dota-hero-art-references/valve/axe.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-axe.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "prop_references": [],
+      "classic_art_ids": [
+        "10352",
+        "10360"
+      ],
+      "camera": "侧面中近景，飞出的魔力手套占画面中央",
+      "palette": "斯温蓝甲红布、斧王红皮、银白雷光、冷灰石地",
+      "light": "阴天自然光，魔力手套边缘一小段最亮"
+    },
+    {
+      "slug": "19-tusk-walrus-punch",
+      "name": "巨牙海民·海象神拳！",
+      "hero": "巨牙海民",
+      "hero_key": "tusk",
+      "skill_name": "海象神拳！",
+      "ability_key": "tusk_walrus_punch",
+      "ability_description": "巨牙海民为他强力的海象神拳做好准备，下一次攻击将会造成额外伤害并暴击，同时将目标打到半空中。",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=100",
+      "kind": "英雄技能",
+      "description": "为yf-artifact画Dota 2英雄巨牙海民施放「海象神拳！」的全新技能场景。巨牙海民位于左下近景，保留官方海象面貌、长牙、白毛、帽具与厚实衣装，身体压低后猛向上挥出海象神拳。右上方蓝皮营地守卫被拳势顶离地面，双腿蜷起、铜铃向后飞，脸部惊讶，身体完整。拳与目标下颌前的作用点只用一小团白色冲击与碎雪表现，镜头低仰看清上下力量方向，背景用一面砖红矮墙与大块雪白地拉开体形。",
+      "notes": "竖幅9:16满版Artifact Classic画法的Dota英雄技能插画。前面的官方英雄渲染与既有单位原图提供角色身份与造型，末尾两张Classic无框原画提供可见手绘笔触、自然材质、大明暗、边缘虚实与空间层次。保留每位英雄的原版面貌、非人头形或发型、标志衣装、武器和配色，把角色与目标一同重新绘制进本张动作场景。技能方向、受力姿态、召唤关系或状态变化清楚，技能作用点最亮最精细，其他位置保留松紧笔触与自然受光，角色可半身或局部入画，画面主题是正在发生的技能。画满到四边，没有卡框、文字、数字、技能图标、UI、漫画分格、气泡、logo、水印或白边。 本张有2张角色造型参考，顺序为巨牙海民、林营铜铃守卫。末尾两张是Classic画风参考。镜头为近地仰视，上勾拳从下向上把目标抬起，主色为巨牙白毛蓝皮护具、青蓝目标、雪白与砖红，用光为明亮雪地反光，拳面与獠牙局部受光。官方技能说明为巨牙海民为他强力的海象神拳做好准备，下一次攻击将会造成额外伤害并暴击，同时将目标打到半空中。",
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-tusk.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-bell-guard.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10350.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10421.jpg"
+      ],
+      "subject": [
+        "tusk",
+        "bell-guard"
+      ],
+      "cast": [
+        {
+          "name": "巨牙海民",
+          "source_image": "output/dota-hero-art-references/valve/tusk.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-tusk.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "林营铜铃守卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/04-camp-bell-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-bell-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "prop_references": [],
+      "classic_art_ids": [
+        "10350",
+        "10421"
+      ],
+      "camera": "近地仰视，上勾拳从下向上把目标抬起",
+      "palette": "巨牙白毛蓝皮护具、青蓝目标、雪白与砖红",
+      "light": "明亮雪地反光，拳面与獠牙局部受光"
+    },
+    {
+      "slug": "20-puck-dream-coil",
+      "name": "帕克·梦境缠绕",
+      "hero": "帕克",
+      "hero_key": "puck",
+      "skill_name": "梦境缠绕",
+      "ability_key": "puck_dream_coil",
+      "ability_description": "创造一个变化无常的的魔法梦境来困住敌方英雄，对他们造成伤害和束缚。如果被困住的敌方英雄试图挣脱缠绕走出梦境，将因为梦境破碎而受到眩晕和额外伤害。",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=13",
+      "kind": "英雄技能",
+      "description": "为yf-artifact画Dota 2英雄帕克施放「梦境缠绕」的全新技能场景。帕克位于画面左上方低飞，保留官方蓝色小型仙女龙身体、粉色大翼、面貌和长尾。地面中央出现一枚小而清楚的梦境锚点，紫红细索分别连向右侧莉娜和左下帕吉，两位英雄保持原版外貌与装备，正向相反方向退开而被梦索牵住，手臂和腰身表现拉力。高位斜俯看清中央锚点、两条光索与两个站位，地面是灰绿石板，只有锚点附近一小团珠白亮色，光索以松动细笔画出弹性。",
+      "notes": "竖幅9:16满版Artifact Classic画法的Dota英雄技能插画。前面的官方英雄渲染与既有单位原图提供角色身份与造型，末尾两张Classic无框原画提供可见手绘笔触、自然材质、大明暗、边缘虚实与空间层次。保留每位英雄的原版面貌、非人头形或发型、标志衣装、武器和配色，把角色与目标一同重新绘制进本张动作场景。技能方向、受力姿态、召唤关系或状态变化清楚，技能作用点最亮最精细，其他位置保留松紧笔触与自然受光，角色可半身或局部入画，画面主题是正在发生的技能。画满到四边，没有卡框、文字、数字、技能图标、UI、漫画分格、气泡、logo、水印或白边。 本张有3张角色造型参考，顺序为帕克、莉娜、帕吉。末尾两张是Classic画风参考。镜头为高位斜俯，梦境锚点居中，两名英雄在两端牵动光索，主色为帕克蓝粉翼、莉娜红与帕吉灰白、紫红梦索、灰绿地，用光为暮色柔光，锚点小范围珠白，梦索细亮。官方技能说明为创造一个变化无常的的魔法梦境来困住敌方英雄，对他们造成伤害和束缚。如果被困住的敌方英雄试图挣脱缠绕走出梦境，将因为梦境破碎而受到眩晕和额外伤害。",
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-puck.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-lina.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-pudge.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10422.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10298.jpg"
+      ],
+      "subject": [
+        "puck",
+        "lina",
+        "pudge"
+      ],
+      "cast": [
+        {
+          "name": "帕克",
+          "source_image": "output/dota-hero-art-references/valve/puck.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-puck.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "莉娜",
+          "source_image": "output/dota-hero-art-references/valve/lina.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-lina.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        },
+        {
+          "name": "帕吉",
+          "source_image": "output/dota-hero-art-references/valve/pudge.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-pudge.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "prop_references": [],
+      "classic_art_ids": [
+        "10422",
+        "10298"
+      ],
+      "camera": "高位斜俯，梦境锚点居中，两名英雄在两端牵动光索",
+      "palette": "帕克蓝粉翼、莉娜红与帕吉灰白、紫红梦索、灰绿地",
+      "light": "暮色柔光，锚点小范围珠白，梦索细亮"
+    }
+  ]
+}

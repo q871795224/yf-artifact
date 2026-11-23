@@ -1,0 +1,37 @@
+{
+  "hero": "pudge",
+  "name": "帕吉",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/pudge.png",
+      "sha256": "8853622f2b5dc4b58894abc7ad9b4af11091a916e34a55acee4ace927feb2923"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10024_cropped.png",
+      "sha256": "cd957f8c128298830840f1873be5025aab8a9cd33c87f6183bb64b9a3e434188"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10038_cropped.png",
+      "sha256": "4b81f25a9e3b11ba3cf240847395e16e44175377ef71ff57637b72407e62804a"
+    }
+  ],
+  "prompt_file": "prompt.txt",
+  "notes_file": "notes.txt",
+  "authorized": "User approved Medusa sample and explicitly requested submitting remaining nine together",
+  "batch_balance_before": {
+    "free": 94,
+    "paid": 0
+  },
+  "listed_price": 5.33,
+  "task_id": "mt_cGk0YTBmZGFmZDA2MjA0NjE3MDdlY2EwNzMyZWI4MTIwMmIyYmFkMjI5",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ],
+  "cli_exit_code": 0,
+  "user_review": "User approved all first ten images"
+}

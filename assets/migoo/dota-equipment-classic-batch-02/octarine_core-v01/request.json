@@ -1,0 +1,44 @@
+{
+  "hero": "octarine_core",
+  "kind": "equipment",
+  "name": "玲珑心",
+  "english_name": "Octarine Core",
+  "icon": "output/dota-native-equipment/valve/octarine_core.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/octarine_core.png",
+  "sha256": "c5c5773fe519c748fc8e1e6b56da4d07a276c4e0503368c01d03e5c28c71b1eb",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/octarine_core.png",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/octarine_core.png",
+      "sha256": "c5c5773fe519c748fc8e1e6b56da4d07a276c4e0503368c01d03e5c28c71b1eb"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10220_cropped.png",
+      "media_id": "1459239929078573",
+      "sha256": "94e86bdcca1d7da96e12bef7a63ad6477c49e2fe5e91dc3c8e44eba4a54ec860"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10232_cropped.png",
+      "media_id": "1459239926359306",
+      "sha256": "f9298ce686f7f5c05a82ad42c92b6d08d6dfe6880349aeb1664e566952961ce0"
+    }
+  ],
+  "classic_style_ids": [
+    10220,
+    10232
+  ],
+  "workflow": "Submit and report only; user reviews on Migoo",
+  "authorization": "User approved first ten equipment images and requested twenty additional equipment images",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGlmZTg1Mjk4ZmIyZmYzYzU0NzcwYjQ1YTcxNGVlOTk0ZWNlY2IyOGUx",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "hero": "razor",
+  "name": "剃刀",
+  "english_name": "Razor",
+  "render": "output/dota-hero-art-references/valve/razor.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/razor.png",
+  "sha256": "f4619a4c5b2b5de69c77d949ba47b11944ae316e91cc03202cd26743c18eaef8",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/razor.png",
+      "sha256": "f4619a4c5b2b5de69c77d949ba47b11944ae316e91cc03202cd26743c18eaef8"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10046_cropped.png",
+      "sha256": "2ee670ea907999f2afaf0f134f5d506140562257f25454c3047d29f994f21e7d"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10064_cropped.png",
+      "sha256": "1824b122ea11a72965a178100d872ee132903a4f84f55efff5bc9e9feee69c64"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or visual reviews",
+  "authorization": "User explicitly requested another agent-selected twenty heroes and submission through the reusable script",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk3YTljOTg1ZjdjODdhZDU5MzA5NWEwMzQ4OTQ3OGQ2YjE1NzYwODQ1",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

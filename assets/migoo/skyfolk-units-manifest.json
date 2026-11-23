@@ -1,0 +1,30 @@
+{
+  "target_at_least": 100,
+  "completed": 46,
+  "approved": 10,
+  "generation_pause_on": "2026-11-24",
+  "updated_at": "2026-11-23T00:20:35.832744+08:00",
+  "batches": [
+    {
+      "batch": "skyfolk-unit-batch-01",
+      "count": 10,
+      "approved": 10,
+      "manifest": "assets/migoo/skyfolk-unit-batch-01/manifest.json",
+      "review": "assets/migoo/skyfolk-unit-batch-01/index.html"
+    },
+    {
+      "batch": "skyfolk-unit-batch-02",
+      "count": 16,
+      "approved": 0,
+      "manifest": "assets/migoo/skyfolk-unit-batch-02/manifest.json",
+      "review": "assets/migoo/skyfolk-unit-batch-02/index.html"
+    },
+    {
+      "batch": "skyfolk-unit-batch-03",
+      "count": 20,
+      "approved": 0,
+      "manifest": "assets/migoo/skyfolk-unit-batch-03/manifest.json",
+      "review": "assets/migoo/skyfolk-unit-batch-03/index.html"
+    }
+  ]
+}

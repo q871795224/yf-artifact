@@ -1,0 +1,6 @@
+Migoo 额度：余额 14，免费 14，付费 0，冻结 0。
+Uploading assets/migoo/hero-skill-scenes-02/references/hero-witch_doctor.jpg (120303 bytes)
+Uploading assets/migoo/hero-skill-scenes-02/references/unit-bell-guard.jpg (241639 bytes)
+Uploading assets/migoo/hero-skill-scenes-02/references/summon-witch_doctor_death_ward.png (26398 bytes)
+Uploading assets/migoo/hero-skill-scenes-02/references/classic-10319.jpg (203299 bytes)
+Uploading assets/migoo/hero-skill-scenes-02/references/classic-10353.jpg (139436 bytes)

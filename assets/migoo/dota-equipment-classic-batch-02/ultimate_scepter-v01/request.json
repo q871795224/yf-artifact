@@ -1,0 +1,44 @@
+{
+  "hero": "ultimate_scepter",
+  "kind": "equipment",
+  "name": "阿哈利姆神杖",
+  "english_name": "Aghanim's Scepter",
+  "icon": "output/dota-native-equipment/valve/ultimate_scepter.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/ultimate_scepter.png",
+  "sha256": "a2e37040d90d987932686105567dd963f18caedd498f03ae26f0f10f9e20634f",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/ultimate_scepter.png",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/ultimate_scepter.png",
+      "sha256": "a2e37040d90d987932686105567dd963f18caedd498f03ae26f0f10f9e20634f"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10210_cropped.png",
+      "media_id": "1459240187683645",
+      "sha256": "653d31b394383641fe1dfbff72696ce7107227666e0adf4445fc8474845e57da"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10206_cropped.png",
+      "media_id": "1459239677297466",
+      "sha256": "b8aab6728084de24cb33b6057407e497397b4c6a99b0238c258cd473375e3594"
+    }
+  ],
+  "classic_style_ids": [
+    10210,
+    10206
+  ],
+  "workflow": "Submit and report only; user reviews on Migoo",
+  "authorization": "User approved first ten equipment images and requested twenty additional equipment images",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGljODRmYzM2YzgxZmQ5MDgxYjJiMzFmMjhkODVkZDA2ODk0YjUyZDhm",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

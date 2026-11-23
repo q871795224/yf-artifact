@@ -1,0 +1,44 @@
+{
+  "hero": "rod_of_atos",
+  "kind": "equipment",
+  "name": "阿托斯之棍",
+  "english_name": "Rod of Atos",
+  "icon": "output/dota-native-equipment/rod_of_atos_png.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/rod_of_atos.png",
+  "sha256": "3d446e72f0179dea3d2defc1de63280ed755f1fb8b62cccb16758d2bd3119f0d",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/rod_of_atos_png.png",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/rod_of_atos.png",
+      "sha256": "3d446e72f0179dea3d2defc1de63280ed755f1fb8b62cccb16758d2bd3119f0d"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10210_cropped.png",
+      "media_id": "1459240187683645",
+      "sha256": "653d31b394383641fe1dfbff72696ce7107227666e0adf4445fc8474845e57da"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10256_cropped.png",
+      "media_id": "1459239670531346",
+      "sha256": "c7bfd096b2881379a3ea4ec7c36dd631df9044448a7e3e4afbe97b02c5ee0e42"
+    }
+  ],
+  "classic_style_ids": [
+    10210,
+    10256
+  ],
+  "workflow": "Submit and report only; no generated-output download or inspection",
+  "authorization": "User requested twenty additional equipment images after accepting prior batches",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk0NWIyMDI3MWVjNDI3YzBkZjdjNWEwODViYzlmMjQyZjI0NzlmN2Q4",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

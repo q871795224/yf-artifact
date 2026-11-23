@@ -1,0 +1,22 @@
+{
+  "heroes": [
+    {
+      "hero": "ghost",
+      "name": "幽魂权杖",
+      "source_task": "mt_cGkxMDMxYjg2ODk1OGRiY2RhZTEyZGVkNGNlYmM2ZjQ5MDdhNGRlOGQ4"
+    },
+    {
+      "hero": "force_staff",
+      "name": "原力法杖",
+      "source_task": "mt_cGliMTA5NTY4ZTAwNDI2ZDliNTg2YjI1ZGIxN2FmZDBmZTQyYzJlM2Uy"
+    },
+    {
+      "hero": "cyclone",
+      "name": "Eul的神圣法杖",
+      "source_task": "mt_cGlkOTRiOWYxMTA5YjY1MGUzMDllNDMxMTczMDIwOWVlZGQxMjhiYmFh"
+    }
+  ],
+  "count": 3,
+  "priority": "Submit these three before resuming the unfinished equipment batch",
+  "workflow": "submit_only"
+}

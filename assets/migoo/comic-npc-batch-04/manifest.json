@@ -1,0 +1,254 @@
+{
+  "images": [
+    {
+      "slug": "01-reedbed-stalker",
+      "name": "苇荡伏兽",
+      "image": "01-reedbed-stalker/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "1bd900318cf7b6fd0a8f48aaa71718a6a37955b1fb0bab37df6a664a7719d26f",
+      "task_id": "mt_cGk3YzNhMTQ5N2Q1NjQ2YTg4ZjY0NTAyMjY3OGEyYmZkZWZjYWQ0MzNh",
+      "media_id": "1459227111457595",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-04/references/01-long-maned-prowler.jpg",
+        "assets/migoo/comic-npc-batch-04/references/classic-10082.jpg",
+        "assets/migoo/comic-npc-batch-04/references/classic-10328.jpg"
+      ]
+    },
+    {
+      "slug": "02-crag-leaper",
+      "name": "峭石跃兽",
+      "image": "02-crag-leaper/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "84f7b40a5de39379afcc95f1c99909a02e18143c36830a879415abc13c0d08fe",
+      "task_id": "mt_cGk4NjVhNDFlM2I5MzMyNjhiNjUwN2I2OGQ4ZTRmNDJhMzFlZTE0NDEw",
+      "media_id": "1459227103831268",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-04/references/01-long-maned-prowler.jpg",
+        "assets/migoo/comic-npc-batch-04/references/classic-10087.jpg",
+        "assets/migoo/comic-npc-batch-04/references/classic-10416.jpg"
+      ]
+    },
+    {
+      "slug": "03-ferry-salt-beast",
+      "name": "渡口驮盐兽",
+      "image": "03-ferry-salt-beast/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "ea0f91b0036a47aabcb1bc2eed713057365ba93bedfae689caefdc65c91f380f",
+      "task_id": "mt_cGk4MWJjY2QzYjk4YmRmMTBkZTM0MThlMGY0YWY3NzZiMzU0NThmNjQ3",
+      "media_id": "1459227940791546",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-04/references/02-pack-beast.jpg",
+        "assets/migoo/comic-npc-batch-04/references/classic-10092.jpg",
+        "assets/migoo/comic-npc-batch-04/references/classic-10267.jpg"
+      ]
+    },
+    {
+      "slug": "04-pottery-caravan-beast",
+      "name": "陶罐驮兽",
+      "image": "04-pottery-caravan-beast/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "d2307271730b31d66d8ed04f69c03f4f4ea8510b105b4221f24ff2d8dbfeacf5",
+      "task_id": "mt_cGljMzllYWQ5OTNiYjE0ZWRlYWIxYTZjYWM4ZGM1ODlmYzhmNTM1YmE1",
+      "media_id": "1459227331887910",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-04/references/02-pack-beast.jpg",
+        "assets/migoo/comic-npc-batch-04/references/classic-10177.jpg",
+        "assets/migoo/comic-npc-batch-04/references/classic-10416.jpg"
+      ]
+    },
+    {
+      "slug": "05-ice-shore-pusher",
+      "name": "碎冰推舟兽",
+      "image": "05-ice-shore-pusher/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "4142ab11f68083bbf0d6e6df653b7cf978cea563d61f6e5783f662bff3bc996b",
+      "task_id": "mt_cGlhNDAyNmE4Nzc4OTIwYzhkMjFlMzJlYzM2YjVlMzIxNTIyZjA1OWMx",
+      "media_id": "1459227513636100",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-04/references/03-armored-rhino.jpg",
+        "assets/migoo/comic-npc-batch-04/references/classic-10323.jpg",
+        "assets/migoo/comic-npc-batch-04/references/classic-10360.jpg"
+      ]
+    },
+    {
+      "slug": "06-quarry-sled-hauler",
+      "name": "石场拖橇兽",
+      "image": "06-quarry-sled-hauler/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "1317be55a1d4557d734b2272c752119d1e956e9ada6cc4fc687696271a53d0e5",
+      "task_id": "mt_cGlmZjkwNDYyY2I1MDkwNWJkYTJmY2U4MjVkMGFiYjQ2NWY5YjQ2MzFl",
+      "media_id": "1459228185380094",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-04/references/03-armored-rhino.jpg",
+        "assets/migoo/comic-npc-batch-04/references/classic-10177.jpg",
+        "assets/migoo/comic-npc-batch-04/references/classic-10323.jpg"
+      ]
+    },
+    {
+      "slug": "07-camp-pot-cook",
+      "name": "营地炊事长",
+      "image": "07-camp-pot-cook/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "dbdbd9c57fa48da89099c36ec31d0de8873b9b2e6d44dea8b8eaccd92119bba7",
+      "task_id": "mt_cGkyMGYzZmU3YzhhMDhlZWYxNDdmYmFiODhmMzM3ZGNjYzk3Y2UxYjY5",
+      "media_id": "1459228416550150",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-04/references/04-camp-brute.jpg",
+        "assets/migoo/comic-npc-batch-04/references/classic-10137.jpg",
+        "assets/migoo/comic-npc-batch-04/references/classic-10307.jpg"
+      ]
+    },
+    {
+      "slug": "08-sandbank-rope-puller",
+      "name": "滩口拖缆手",
+      "image": "08-sandbank-rope-puller/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "da4c9d5b13c068228125da0daa9d3320b63585073aa23d2cc7921e79bdf4ae8c",
+      "task_id": "mt_cGkxNGZjY2VmMzc5NWFkMDg3MWU0YmUzNGE3YWM3OTQ5M2E0YzU1OTFj",
+      "media_id": "1459227714446580",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-04/references/04-camp-brute.jpg",
+        "assets/migoo/comic-npc-batch-04/references/classic-10267.jpg",
+        "assets/migoo/comic-npc-batch-04/references/classic-10328.jpg"
+      ]
+    },
+    {
+      "slug": "09-root-mushroom-gatherer",
+      "name": "树根采菌者",
+      "image": "09-root-mushroom-gatherer/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "06c97bf9fca2e377bb4b4627df063370f890486cd4899ad9a5ec4c4a23ce2063",
+      "task_id": "mt_cGliYzYyNWY0NTQ0NzU2YjI3MWNmNGY3M2UyYzZhMzYxMThkYmQ0Njlm",
+      "media_id": "1459228415026002",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-04/references/05-long-limbed-camp-creature.jpg",
+        "assets/migoo/comic-npc-batch-04/references/classic-10082.jpg",
+        "assets/migoo/comic-npc-batch-04/references/classic-10129.jpg"
+      ]
+    },
+    {
+      "slug": "10-rust-gate-wheel-keeper",
+      "name": "旧闸扳轮手",
+      "image": "10-rust-gate-wheel-keeper/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "212ffb7945b9beea20c21950a06adc4ebfbbeaaced75b19c7870ac326f5b2604",
+      "task_id": "mt_cGkzZjg2Yzg2OTI3OTZkNTJhYWMxYWM3MWNjZTRlZjY2ZTBmNDNmMTA5",
+      "media_id": "1459228646286172",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-04/references/06-fanged-guard.jpg",
+        "assets/migoo/comic-npc-batch-04/references/classic-10092.jpg",
+        "assets/migoo/comic-npc-batch-04/references/classic-10177.jpg"
+      ]
+    }
+  ]
+}

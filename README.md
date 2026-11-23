@@ -18,6 +18,9 @@
 
 ## 文档入口
 
+- [卡图生图 skill](.agents/skills/artifact-card-art/SKILL.md)：新会话可直接用 `$artifact-card-art`，按英雄、装备、单位、野怪、法术等类别选参考与写提示词。
+- [卡图资源分类](assets/art-library/README.md)与[参考图归档](references/card-art/README.md)：已有图片、任务、备稿及旧版本集中查找，原始资源保留。
+
 - [文档导航](docs/README.md)：当前规格、历史实验、原作资料与维护约定。
 - [四色设计规范与审阅大纲](docs/design/color-design-guidelines.md)：颜色分工、具体机制、设计模板与审阅反驳方法；后续设计先参照此页，也可据反例修订规范。
 - [当前源码规则](docs/design/growth-implementation.md)：成长、卡池、构筑、状态与仇恨的实现行为及执行边界。

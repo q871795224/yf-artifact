@@ -1,0 +1,44 @@
+{
+  "hero": "ethereal_blade",
+  "kind": "equipment",
+  "name": "虚灵之刃",
+  "english_name": "Ethereal Blade",
+  "icon": "output/dota-native-equipment/valve/ethereal_blade.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/ethereal_blade.png",
+  "sha256": "4c58046da1badb823c34c54a0d1b4af0ec60fb5252db2d624381e527f33629e9",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/ethereal_blade.png",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/ethereal_blade.png",
+      "sha256": "4c58046da1badb823c34c54a0d1b4af0ec60fb5252db2d624381e527f33629e9"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10206_cropped.png",
+      "media_id": "1459239677297466",
+      "sha256": "b8aab6728084de24cb33b6057407e497397b4c6a99b0238c258cd473375e3594"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10256_cropped.png",
+      "media_id": "1459239670531346",
+      "sha256": "c7bfd096b2881379a3ea4ec7c36dd631df9044448a7e3e4afbe97b02c5ee0e42"
+    }
+  ],
+  "classic_style_ids": [
+    10206,
+    10256
+  ],
+  "workflow": "Submit and report only; no generated-output download or inspection",
+  "authorization": "User requested twenty additional equipment images after accepting prior batches",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGkzNzBkNGQzNzhkMmJlYmFiNjFmYzQxODc3OTYzNTYzMmEwY2UzZjNl",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

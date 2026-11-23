@@ -1,0 +1,232 @@
+{
+  "images": [
+    {
+      "name": "背囊狗头人",
+      "image": "kobold-sack-bearer/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "de9f0dbeea86f7a03f1beaab36773e5f4bfbc9bac98eddc11142670afeddc947",
+      "task_id": "mt_cGljMTM4N2NlODcyMmQ4NTdhYzQ3MGVjYTk4NzY1MjExYTk2OWUyY2Yx",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459244832367877",
+      "inspiration": "狗头人"
+    },
+    {
+      "name": "狗头人掘工",
+      "image": "kobold-trench-digger/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "a0a87dac1d4633e116ea7d259ff240a44e674e9a59ce33a835b7e2b24c9f5d48",
+      "task_id": "mt_cGkyMjUyZWNhYjc4ODBkZDQ3YjI5NWE0MDNmMTI1NTk4Mjk1NWQ3Njlk",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459244814992631",
+      "inspiration": "狗头人"
+    },
+    {
+      "name": "狗头人工头",
+      "image": "kobold-rope-overseer/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "1e1704c228d54ea96a7db3190c3dd5abb091b362a8c82e936ce36a5ece7518e3",
+      "task_id": "mt_cGk3NmRkMjFmNzg1ZmY1NDBlN2JjODU5MGJjODYwMTFkZGUyMTFhMjY0",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459245612507959",
+      "inspiration": "狗头人"
+    },
+    {
+      "name": "半人马先行者",
+      "image": "centaur-pass-outrider/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "9d76e094191d50682808d73f18011322cd70f8ea804fc0ca936afc0996d4360b",
+      "task_id": "mt_cGlkZmMyNDQ0ZTQ2ODk4OTVmMDcyODAxYTVhMDkxNmZhZDRiYjNkOTM1",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459245043524838",
+      "inspiration": "半人马"
+    },
+    {
+      "name": "半人马征服者",
+      "image": "centaur-gate-sentinel/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "18061079d035cf4b23cba5af8fbfca37acc41611b29469a3b78ac345439d509e",
+      "task_id": "mt_cGljYmIwOWExY2U4ZmVhMmIyMTE0NjJkMGRkZDU0OGY0NjIyMTA1MDYx",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459245836027132",
+      "inspiration": "半人马"
+    },
+    {
+      "name": "鹰身女妖侦察者",
+      "image": "harpy-perched-scout/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "f9a6d37f5b0ff369d3657ee98eb939a3474e7e467a33614cccb940d84596467e",
+      "task_id": "mt_cGk5NzMzMTc2ZjRhNTVkZjUxZmQwNDI3YWE2MDE1ODE0ZTE2Njk4ZDVj",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459245031646014",
+      "inspiration": "鹰身女妖"
+    },
+    {
+      "name": "鹰身风暴女妖",
+      "image": "harpy-squall-diver/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "f5849933195236a2a0795b4d842f62de821afeff0c6e8c16984a313ecaf4ff25",
+      "task_id": "mt_cGllMGEwNDliYmJmNWU2YzA0NDNjYjRhMzM4NzRmNmU5N2RiZDljOTBl",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459245241697115",
+      "inspiration": "鹰身女妖"
+    },
+    {
+      "name": "萨特诡计者",
+      "image": "satyr-leaf-trickster/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "ec84f78cd99141442ebaa6cd397b00710e35bb6f883e49798a6ef4b1f9bc8584",
+      "task_id": "mt_cGk1MDI3MDgwNWNmZjY4M2Y0NDc2MDQ4ZjllYTQ3MmFhNWU5NzY3NDYw",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459245237879594",
+      "inspiration": "萨特"
+    },
+    {
+      "name": "萨特灵魂盗贼",
+      "image": "satyr-gully-forager/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "555abef50439c4ee510cdf8a11ff26d2678c427f7e418b6c9501a66aeb2d8d7a",
+      "task_id": "mt_cGlhYzVkZDcyZDVlMWI1ZjAzODMyNzdmNTZjZWFjMTg5MDNhNzgzMjZi",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459245253035285",
+      "inspiration": "萨特"
+    },
+    {
+      "name": "萨特地狱使者",
+      "image": "satyr-root-hammer/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "b5495b31f81db587e07a06d835947c41938ebc93f4268e864526ceab75643145",
+      "task_id": "mt_cGlmNTcxOTkzYTk5ZTM5YTRkZGM4MzFhOWI3NThhOGU5ZTI0YjIzY2Fk",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459246076797734",
+      "inspiration": "萨特"
+    },
+    {
+      "name": "森林巨魔狂战士",
+      "image": "forest-troll-drum-fighter/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "cc09b58e60ce816ca05f054decdf8299f5de5d30b93bf3a76519842fc7c1e462",
+      "task_id": "mt_cGkxYWM5NjliNjQ0OTdjOWIxNDA0NWE1NzQ3M2E2Yzg1NmRiZDAxYTc1",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459246275986677",
+      "inspiration": "森林巨魔"
+    },
+    {
+      "name": "森林巨魔高阶祭司",
+      "image": "forest-troll-river-priest/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "cf13010a1fa254d88c4227cd6df6cb8635926e24b11ad2b00e98b746ba368d1d",
+      "task_id": "mt_cGkzMDJmYzk0N2IyYzU1NzFiMzVjNTc2YzY1NGY2ZDljMGRiZWI5NDFl",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "media_id": "1459245428434171",
+      "inspiration": "森林巨魔"
+    }
+  ]
+}

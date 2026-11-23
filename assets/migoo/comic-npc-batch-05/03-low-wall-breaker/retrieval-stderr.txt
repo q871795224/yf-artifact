@@ -1,0 +1,2 @@
+Task mt_cGlmYmQzMTQwMjY1ZjFlNmY1NDc1ZjIwMjMxMDI0MDc5YmI3MjM0NjVl started; if this command is interrupted, run migoo task get mt_cGlmYmQzMTQwMjY1ZjFlNmY1NDc1ZjIwMjMxMDI0MDc5YmI3MjM0NjVl --wait
+Saved assets/migoo/comic-npc-batch-05/03-low-wall-breaker/mt_cGlmYmQzMTQwMjY1ZjFlNmY1NDc1ZjIwMjMxMDI0MDc5YmI3MjM0NjVl_1.png

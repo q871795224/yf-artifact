@@ -1,0 +1,128 @@
+{
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "style": "单张竖版9:16、满版原创奇幻野怪卡图，只画一个成员。灰底原模型截图只用于理解同族身体比例和职业用具，Classic 无框原画只用于理解概括笔触和有层次的明暗。用新的脸、角、羽毛、装束、道具设计和构图，禁止复刻已有角色模型与参考图的姿势。采用明显风格化的造型、扎实大色块、哑光手绘质感。遵守指定方向的主光、投影和机位。最清楚的轮廓集中在中间方形，避免背景抢主体。无文字、卡框、标志、UI、水印和白边。",
+  "jobs": [
+    {
+      "slug": "kobold-sack-bearer",
+      "name": "背囊狗头人",
+      "inspiration": "狗头人",
+      "description": "原有矿道家族的小个子，背浅麻布鼓囊，低低蹲着，一手撑着粗石门槛，伸长扁吻向画外看。正上方偏左俯视，薄荷浅绿皮肤，雨后天井从右侧漏入奶白散射光，身体下投一片向左延伸的湿灰影。地面只有冷灰青石与几小片黄苔。背囊和耳朵在小图里一眼认出。",
+      "references": [
+        "output/dota-neutral-client-render/shots/n_creep_kobold_c-1.png",
+        "output/classic-full-art/set01/full_art/10138_psd.png"
+      ]
+    },
+    {
+      "slug": "kobold-trench-digger",
+      "name": "狗头人掘工",
+      "inspiration": "狗头人",
+      "description": "瘦高掘工半侧身跨开双腿，肩上横架原创短柄双齿凿，向左侧的石层探身。镜头与腰齐平，前景无挡。锈橙砂岩的窄巷，以右后方一线琥珀逆光勾出耳和凿子的剪影，正面深靛阴影，地上投向镜头的斜影。青灰皮肤、褪蓝窄围裙。",
+      "references": [
+        "output/dota-neutral-client-render/shots/n_creep_kobold_b-2.png",
+        "output/classic-full-art/set01/full_art/10092_psd.png"
+      ]
+    },
+    {
+      "slug": "kobold-rope-overseer",
+      "name": "狗头人工头",
+      "inspiration": "狗头人",
+      "description": "宽胸矿道工头单脚踩上低木台，两手正拉开一卷测绳，绳形在胸前形成显眼的圆弧。镜头从斜下方略仰看，冷青皮肤、浅土红短衣，早晨正面斜上方的太阳照亮脸和绳索，台面投下短而清楚的影。背景是清澈蓝天和一整块浅土黄岩坡。",
+      "references": [
+        "output/dota-neutral-client-render/shots/n_creep_kobold_a-2.png",
+        "output/classic-full-art/set01/full_art/10087_psd.png"
+      ]
+    },
+    {
+      "slug": "centaur-pass-outrider",
+      "name": "半人马先行者",
+      "inspiration": "半人马",
+      "description": "浅棕马身、窄肩的四足先行者在斜坡上抬起一只前蹄，伸手握朴素短斧，朝画面左前方准备跃出。远一点的平视侧角，面前是雪后银白天光，后方有稀疏冷蓝崖线。长淡青侧影落向右下角，薄红织带作一点暖色。保留几乎完整的肩背和四足运动轮廓。",
+      "references": [
+        "output/dota-neutral-client-render/shots/n_creep_centaur_med-1.png",
+        "output/classic-full-art/set01/full_art/10082_psd.png"
+      ]
+    },
+    {
+      "slug": "centaur-gate-sentinel",
+      "name": "半人马征服者",
+      "inspiration": "半人马",
+      "description": "厚胸深灰蓝四足半人马站在峡谷边一块平岩上，四蹄站稳，双手把带扁石头的长杖斜抵碎石。近距低视点，右侧落日照亮一只肩和杖头，另一半身体有深紫面影，岩石上是又长又浓的投影。背景用一大片土橙云和少量远山，强调稳定和重量。",
+      "references": [
+        "output/dota-neutral-client-render/shots/n_creep_centaur_lrg-2.png",
+        "output/classic-full-art/set01/full_art/10087_psd.png"
+      ]
+    },
+    {
+      "slug": "harpy-perched-scout",
+      "name": "鹰身女妖侦察者",
+      "inspiration": "鹰身女妖",
+      "description": "纤细的铜赭飞羽侦察者用两只细爪停在深绿礁柱尖顶，翅膀紧贴身体形成窄三角，微转头。长焦般的侧上方视角，朝阳通过浅金海雾从左侧照亮颈羽，礁石上有细长冷影。背景大块粉白地平线和湖绿水面，窄翼剪影优先，避免多余手臂。",
+      "references": [
+        "output/dota-neutral-client-render/shots/n_creep_harpy_a-2.png",
+        "output/classic-full-art/set01/full_art/10082_psd.png"
+      ]
+    },
+    {
+      "slug": "harpy-squall-diver",
+      "name": "鹰身风暴女妖",
+      "inspiration": "鹰身女妖",
+      "description": "身形更大，深梅紫羽翼完全张开，从右上向画面下方俯冲，一只翼面像深色弯刀覆盖大半天空。从石崖下斜仰拍，左后方冷蓝云光打亮主翼边缘，脸部有弱冷反光；斜向飞影压过浅灰浪沫，远空是蓝墨和苍白云，少量淡铜发梢。不加多余手臂或落雷光柱。",
+      "references": [
+        "output/dota-neutral-client-render/shots/n_creep_harpy_b-2.png",
+        "output/classic-full-art/set01/full_art/10138_psd.png"
+      ]
+    },
+    {
+      "slug": "satyr-leaf-trickster",
+      "name": "萨特诡计者",
+      "inspiration": "萨特",
+      "description": "小个浅灰萨特歪坐在横木末端，脚踝交叠，抬起一片比手掌大的圆亮叶挡住半张脸，眼睛从叶沿偷看。近距从右上轻俯视，正前方斑驳林光，背景柠檬黄浅地和暗橄榄绿叶面，横木有短促碎影。小而直的角、窄肩和抬起的叶片构成轮廓。",
+      "references": [
+        "output/dota-neutral-client-render/shots/n_creep_satyr_b-2.png",
+        "output/classic-full-art/set01/full_art/10137_psd.png"
+      ]
+    },
+    {
+      "slug": "satyr-gully-forager",
+      "name": "萨特灵魂盗贼",
+      "inspiration": "萨特",
+      "description": "钴蓝毛皮、长前臂萨特从低拱洞影里弓背走出，手腕垂下拎一束缠绕的藤，四肢拉出明显的 Z 形。中距离侧拍，左侧狭缝投进低位青绿色反光，腹部在深蓝影里，地上笔直压住黑蓝投影。背景用潮湿山壁的石青和浅紫，避免发光法术。",
+      "references": [
+        "output/dota-neutral-client-render/shots/n_creep_satyr_c-2.png",
+        "output/classic-full-art/set01/full_art/10137_psd.png"
+      ]
+    },
+    {
+      "slug": "satyr-root-hammer",
+      "name": "萨特地狱使者",
+      "inspiration": "萨特",
+      "description": "宽肩胭脂紫萨特站在干涸沟谷的高处，膝弯，横扛一把扁根锤，朝远方略转头。镜头从沟底仰看，暖杏黄日落从后上方给角和臂勾一圈轮廓，正面为柔和暗紫，地面长影与姿势斜交。背景仅留金白天幕和远处红土，宽角、厚肩和根锤位置分开。",
+      "references": [
+        "output/dota-neutral-client-render/shots/n_creep_satyr_a-2.png",
+        "output/classic-full-art/set01/full_art/10092_psd.png"
+      ]
+    },
+    {
+      "slug": "forest-troll-drum-fighter",
+      "name": "森林巨魔狂战士",
+      "inspiration": "森林巨魔",
+      "description": "青苔绿的年轻壮实巨魔单膝在倒树上，用一只手把小圆皮鼓举到肩边，另一手握朴素短刃伸向下方。中低三分之四近景，左方斑驳橘金阳光照在鼓皮、长鼻和两颗短牙上，人物影向暗绿地面伸开。背景有赭黄秋叶，鼓的浅圆面形成最鲜明的剪影。",
+      "references": [
+        "output/dota-neutral-client-render/shots/n_creep_forest_troll_berserker-2.png",
+        "output/classic-full-art/set01/full_art/10138_psd.png"
+      ]
+    },
+    {
+      "slug": "forest-troll-river-priest",
+      "name": "森林巨魔高阶祭司",
+      "inspiration": "森林巨魔",
+      "description": "身形明显更修长的淡黄绿巨魔，站在洄水边面朝右，用两手把米白草束系到一根高木杖顶端。平视远中景，天光被薄雾打散，照亮细长前臂和鼻尖，脚下仅有几块柔灰影。背景主色是灰蓝河面和淡粉晨空，杖与瘦身之间留一条亮缝。",
+      "references": [
+        "output/dota-neutral-client-render/shots/n_creep_forest_troll_high_priest-2.png",
+        "output/classic-full-art/set01/full_art/10138_psd.png"
+      ]
+    }
+  ]
+}

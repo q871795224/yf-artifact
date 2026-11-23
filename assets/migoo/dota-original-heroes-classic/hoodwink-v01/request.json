@@ -1,0 +1,36 @@
+{
+  "hero": "hoodwink",
+  "name": "森海飞霞",
+  "english_name": "Hoodwink",
+  "render": "output/dota-hero-art-references/valve/hoodwink.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/hoodwink.png",
+  "sha256": "7b26073df634c0d051b844e931062600016e14a495685d7bb658eca831fb2369",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/hoodwink.png",
+      "sha256": "7b26073df634c0d051b844e931062600016e14a495685d7bb658eca831fb2369"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10036_cropped.png",
+      "sha256": "39fcad1fd65e1bde36d838daa970f343c9548038c8e01a02c14d8b2c3d7e4270"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10023_cropped.png",
+      "sha256": "e0437540e2bf5b079a450d76bad5d6bb0fcd07a7036109410b0d79a0b697c925"
+    }
+  ],
+  "workflow": "submit_only; no generated-art downloads or review",
+  "authorization": "User explicitly requested twenty more agent-selected canonical heroes",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk3MjZkYWZiYjYxNmM1ZDU2NjQ1NWRlN2RiY2ZlMTM4NDU1NWNmZDgy",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "hero": "helm_of_the_dominator",
+  "kind": "equipment",
+  "name": "支配头盔",
+  "english_name": "Helm of the Dominator",
+  "icon": "output/dota-native-equipment/valve/helm_of_the_dominator.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/helm_of_the_dominator.png",
+  "classic_card_id": 10224,
+  "sha256": "4e9a7c4d9ce2c4eb9b996617d9d12518bf990438415d6e9587079980b4aa3334",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/helm_of_the_dominator.png",
+      "sha256": "4e9a7c4d9ce2c4eb9b996617d9d12518bf990438415d6e9587079980b4aa3334",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/helm_of_the_dominator.png"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10224_cropped.png",
+      "sha256": "6d67f5e3bdf3c47cfae2d365ca89cc7d307336e5bb1f4ce51ef48e27698c15e3"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10232_cropped.png",
+      "sha256": "f9298ce686f7f5c05a82ad42c92b6d08d6dfe6880349aeb1664e566952961ce0"
+    }
+  ],
+  "classic_style_ids": [
+    10224,
+    10232
+  ],
+  "workflow": "Submit and report only; user reviews on Migoo; no generated-art download or inspection",
+  "authorization": "User requested an initial ten Dota equipment paintings in Classic style, with agent choosing the items",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGljMmFkZjA5NzdiOWNhOTEyNzJlOTc4YTY1NjVjMDY0OTdkMWU5NDhj",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

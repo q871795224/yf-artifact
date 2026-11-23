@@ -1,0 +1,67 @@
+{
+  "hero": "brewmaster",
+  "name": "酒仙",
+  "english_name": "Brewmaster",
+  "render": "output/dota-hero-art-references/valve/brewmaster.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/brewmaster.png",
+  "sha256": "7ce77ffe06412e1770aee4082d8df08e92d5bf53015b0033d9bc90aebe4498d9",
+  "status": "generating",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/brewmaster.png",
+      "sha256": "7ce77ffe06412e1770aee4082d8df08e92d5bf53015b0033d9bc90aebe4498d9",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/brewmaster.png"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10070_cropped.png",
+      "sha256": "ecb1ed9c3485e1d54a3f0cb5aff2bf989f0e6fe46ec4c69dc35b1185fd8dd503",
+      "media_id": "1459227574215487"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10033_cropped.png",
+      "sha256": "7490de525670351be81c87b3364d56de3af33e4449e71802c1410dad6fc0fea8",
+      "media_id": "1459225499902800"
+    }
+  ],
+  "workflow": "submit_only; no generated-art downloads or review",
+  "authorization": "User explicitly requested twenty more agent-selected canonical heroes",
+  "listed_price": 5.33,
+  "attempt": 4,
+  "cli_exit_code": 0,
+  "actual_models": null,
+  "previous_attempts": [
+    {
+      "task_id": "mt_cGkyNDhiNWI1ODZjODBhOGVmMDFjMGE0MzNhMjQ5MWFhZjRjMTYzYTc3",
+      "error": {
+        "code": "task_failed",
+        "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+        "retryable": true,
+        "reason": "busy"
+      }
+    },
+    {
+      "task_id": "mt_cGljYmFjYzBhMGRmNjE5Zjg5MjY5MGQ0MDAxMDMwN2E0Yjk4YzJhNzZh",
+      "error": {
+        "code": "task_failed",
+        "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+        "retryable": true,
+        "reason": "busy"
+      }
+    },
+    {
+      "task_id": "mt_cGllZjk4NTk5NDhkNTM3OGI4MDIxMTUyNDA5NmIxMTk4NTMwYTYxZjI2",
+      "error": {
+        "code": "task_failed",
+        "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+        "retryable": true,
+        "reason": "busy"
+      },
+      "reason": "Confirmed not started; retry after prior queue finished"
+    }
+  ],
+  "task_id": "mt_cGlkYWRlZGQyYjIyNjZiNGMzYWIyMWQzMTRkZTMzNDM3ZThmZDBjYmE2"
+}

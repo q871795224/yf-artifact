@@ -1,0 +1,44 @@
+{
+  "hero": "faceless_void",
+  "name": "虚空假面",
+  "english_name": "Faceless Void",
+  "render": "output/dota-hero-art-references/valve/faceless_void.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/faceless_void.png",
+  "sha256": "a002b80e9289a5052b0f959d75d9f72040991937fb0a27f315f8288aac0d7878",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/faceless_void.png",
+      "sha256": "a002b80e9289a5052b0f959d75d9f72040991937fb0a27f315f8288aac0d7878"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10046_cropped.png",
+      "sha256": "2ee670ea907999f2afaf0f134f5d506140562257f25454c3047d29f994f21e7d"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10038_cropped.png",
+      "sha256": "4b81f25a9e3b11ba3cf240847395e16e44175377ef71ff57637b72407e62804a"
+    }
+  ],
+  "workflow": "submit_only; no image download or generated-art review",
+  "authorization": "User explicitly delegated selecting twenty and requested submission plus reporting only",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGliMzExZmYyMzRjMDkwYjZhMDlkNWM1NjE5YjU1OTMyNTZhZWNiYzhm",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

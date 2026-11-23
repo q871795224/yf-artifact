@@ -1,0 +1,52 @@
+{
+  "hero": "monkey_king",
+  "name": "齐天大圣",
+  "english_name": "Monkey King",
+  "render": "output/dota-hero-art-references/valve/monkey_king.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/monkey_king.png",
+  "sha256": "9097827d1e6f68bdbfca2b2c898bf1e51d3f64ae3874b7458b360ff54435b7d3",
+  "classic_hero_exists": false,
+  "reference_note": "Official transparent render",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/monkey_king.png",
+      "sha256": "9097827d1e6f68bdbfca2b2c898bf1e51d3f64ae3874b7458b360ff54435b7d3",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/monkey_king.png"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10023_cropped.png",
+      "sha256": "e0437540e2bf5b079a450d76bad5d6bb0fcd07a7036109410b0d79a0b697c925",
+      "media_id": "1459226463437617"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10033_cropped.png",
+      "sha256": "7490de525670351be81c87b3364d56de3af33e4449e71802c1410dad6fc0fea8",
+      "media_id": "1459225499902800"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or review",
+  "authorization": "User requested this additional twenty; agent selected roster and disclosed 18 remaining new heroes plus 2 existing Classic heroes repainted",
+  "listed_price": 5.33,
+  "attempt": 2,
+  "cli_exit_code": 0,
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ],
+  "previous_attempts": [
+    {
+      "task_id": "mt_cGk3OWIyNGZhODI1OWNhY2M0ZWYwZjFhOTc4NmQxZjVlNzQzYTY4OTdk",
+      "error": {
+        "code": "task_failed",
+        "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+        "retryable": true,
+        "reason": "busy"
+      }
+    }
+  ],
+  "task_id": "mt_cGlmZjVkMmU0NTMzNjlhOTdjYTA5YjMzNTkyNDJjMzA3NmVlNDg5MDFm"
+}

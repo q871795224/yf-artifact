@@ -1,0 +1,44 @@
+{
+  "hero": "dragon_knight",
+  "name": "龙骑士",
+  "english_name": "Dragon Knight",
+  "render": "output/dota-hero-art-references/valve/dragon_knight.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/dragon_knight.png",
+  "sha256": "41fa12e0bb12eaa9c7aa542c2f1c54202a132d2cf59a38d1cc425d434735c462",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/dragon_knight.png",
+      "sha256": "41fa12e0bb12eaa9c7aa542c2f1c54202a132d2cf59a38d1cc425d434735c462"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10054_cropped.png",
+      "sha256": "418eaa7727b6bb10467d183a4b968ef662874081dfb97a5b631088d333a5458b"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10033_cropped.png",
+      "sha256": "7490de525670351be81c87b3364d56de3af33e4449e71802c1410dad6fc0fea8"
+    }
+  ],
+  "workflow": "submit_only; no image download or generated-art review",
+  "authorization": "User explicitly delegated selecting twenty and requested submission plus reporting only",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGliYzViM2RiMzkxZTg3ZWZiYjBjN2I3ZTI5ZGEyZmI5MjNlYTI3ZmM2",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

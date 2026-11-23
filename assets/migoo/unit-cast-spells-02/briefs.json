@@ -1,0 +1,536 @@
+{
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "jobs": [
+    {
+      "slug": "01-scorching-sand",
+      "name": "赤砂灼足",
+      "kind": "灼烧",
+      "description": "为yf-artifact绘制一张法术概念插画，工作名「赤砂灼足」。沿用青蓝皮、宽嘴獠牙、大腹和粗臂的林营铜铃守卫，人物只占画面右侧一半，镜头斜俯到脚下。苍白砂岩院落中，一片沙地突然烧成朱砂红，细小热裂从左下向守卫脚下延伸；它一脚急抬，另一脚后退，双手本能张开，腰布向后甩。最亮的是脚掌刚离开热砂时留出的浅色轮廓与少量飞砂，热砂面积清楚而集中。白色院地、红砂与蓝皮形成三个大色块，人物投下锐利斜影，空气只有靠近红砂的一小片热扭曲。",
+      "notes": "单张竖幅9:16满版法术卡牌插画，以Artifact Classic无框原画的可见手绘笔触、自然材质、大色块和虚实边缘组织画面。画面围绕一件正在发生的作用展开，动作方向、受力关系或状态变化清楚，主要作用点的边缘最明确。角色参考提供已经生成的单位脸形、体态、衣装和器物，按本张叙事重新安排姿态、镜头与背景，角色可半身或局部入画。末尾两张Classic原画提供笔触、材质、空间和明暗参考。细节集中在本张作用点，其他地方笔触松紧有别，亮光集中且有自然光向，大明暗与小卡轮廓可读。画满四边，没有文字、数字、卡框、漫画格线、气泡、UI、箭头图标、棋盘、logo、水印或白边。 本张有1张既有单位造型参考，末尾两张是Classic画风参考。镜头为极高位斜俯，接触热砂的脚与扬起的手形成斜线，主色为朱砂红、陶白、低饱和蓝皮，用光为干燥正午硬日光，足边红热局部发亮。",
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-bell-guard.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10424.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10315.jpg"
+      ],
+      "subject": [
+        "bell-guard"
+      ],
+      "cast": [
+        {
+          "name": "林营铜铃守卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/04-camp-bell-guard/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-bell-guard.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10424",
+        "10315"
+      ],
+      "camera": "极高位斜俯，接触热砂的脚与扬起的手形成斜线",
+      "palette": "朱砂红、陶白、低饱和蓝皮",
+      "light": "干燥正午硬日光，足边红热局部发亮"
+    },
+    {
+      "slug": "02-spore-slumber",
+      "name": "孢幕催眠",
+      "kind": "催眠",
+      "description": "为yf-artifact绘制一张法术概念插画，工作名「孢幕催眠」。参考白鬃黑额长尾的暮坡嗅迹兽，画面裁到头、颈与两只前爪。它的头原本抬起，此刻在奶黄色细孢粉里慢慢垂下，眼睛半闭，嘴边的白色硬鬃松弛，前爪抓地的力道正放开。前景一只烟紫色菌盖侧翻，伞下孢粉以疏密两团落向兽鼻，粉尘在鼻端形成一道柔软弧。背景是朦胧浅灰苔地，整个画面安静柔和，最清楚的边缘放在鼻尖、眼皮与几根带粉鬃毛，孢雾用有颗粒的绘画色块表现。",
+      "notes": "单张竖幅9:16满版法术卡牌插画，以Artifact Classic无框原画的可见手绘笔触、自然材质、大色块和虚实边缘组织画面。画面围绕一件正在发生的作用展开，动作方向、受力关系或状态变化清楚，主要作用点的边缘最明确。角色参考提供已经生成的单位脸形、体态、衣装和器物，按本张叙事重新安排姿态、镜头与背景，角色可半身或局部入画。末尾两张Classic原画提供笔触、材质、空间和明暗参考。细节集中在本张作用点，其他地方笔触松紧有别，亮光集中且有自然光向，大明暗与小卡轮廓可读。画满四边，没有文字、数字、卡框、漫画格线、气泡、UI、箭头图标、棋盘、logo、水印或白边。 本张有1张既有单位造型参考，末尾两张是Classic画风参考。镜头为贴近兽头的低位近景，闭眼、垂颈与缓落孢粉，主色为烟藕紫、奶黄、深褐皮毛，用光为均匀雾光，孢粒只有少量柔亮点。",
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-maned-beast.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10377.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10422.jpg"
+      ],
+      "subject": [
+        "maned-beast"
+      ],
+      "cast": [
+        {
+          "name": "暮坡嗅迹兽",
+          "source_image": "assets/migoo/comic-npc-batch-05/01-evening-trail-sniffer/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-maned-beast.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10377",
+        "10422"
+      ],
+      "camera": "贴近兽头的低位近景，闭眼、垂颈与缓落孢粉",
+      "palette": "烟藕紫、奶黄、深褐皮毛",
+      "light": "均匀雾光，孢粒只有少量柔亮点"
+    },
+    {
+      "slug": "03-resonant-repulse",
+      "name": "铃震退敌",
+      "kind": "震退",
+      "description": "为yf-artifact绘制一张法术概念插画，工作名「铃震退敌」。两张单位参考依次为林营铜铃守卫和獠牙门卫，保留它们各自的非人脸形、衣甲与比例。蓝皮大腹的摇铃者在左前景仅露肩、手与一只小铜铃，把铃口猛朝右甩；右后方灰蓝獠牙门卫上身后仰，一只脚离地，手中短戟向外摆。空气震动用铃口前方被压弯的一小片透明空气、同时翻起的枯叶和石地上扩散的一道浅尘弧交代。镜头把铃口放到近景最大，作用方向横过画面中央。背景是浅米色石墙和稀疏金色枯叶，铜铃磨痕、抓握指节和门卫被震离地的脚是焦点。",
+      "notes": "单张竖幅9:16满版法术卡牌插画，以Artifact Classic无框原画的可见手绘笔触、自然材质、大色块和虚实边缘组织画面。画面围绕一件正在发生的作用展开，动作方向、受力关系或状态变化清楚，主要作用点的边缘最明确。角色参考提供已经生成的单位脸形、体态、衣装和器物，按本张叙事重新安排姿态、镜头与背景，角色可半身或局部入画。末尾两张Classic原画提供笔触、材质、空间和明暗参考。细节集中在本张作用点，其他地方笔触松紧有别，亮光集中且有自然光向，大明暗与小卡轮廓可读。画满四边，没有文字、数字、卡框、漫画格线、气泡、UI、箭头图标、棋盘、logo、水印或白边。 本张有2张既有单位造型参考，末尾两张是Classic画风参考。镜头为横向斜侧近景，铜铃在前、受震的守卫在后，主色为陈铜、枯叶金、灰蓝皮、浅米墙，用光为晴天侧光，铃口暗、铃沿亮，尘圈清楚。",
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-bell-guard.jpg",
+        "assets/migoo/unit-cast-spells-02/references/unit-fanged-guard.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10293.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10303.jpg"
+      ],
+      "subject": [
+        "bell-guard",
+        "fanged-guard"
+      ],
+      "cast": [
+        {
+          "name": "林营铜铃守卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/04-camp-bell-guard/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-bell-guard.jpg"
+        },
+        {
+          "name": "獠牙门卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/06-fanged-gate-guard/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-fanged-guard.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10293",
+        "10303"
+      ],
+      "camera": "横向斜侧近景，铜铃在前、受震的守卫在后",
+      "palette": "陈铜、枯叶金、灰蓝皮、浅米墙",
+      "light": "晴天侧光，铃口暗、铃沿亮，尘圈清楚"
+    },
+    {
+      "slug": "04-sand-shell",
+      "name": "砂壳护身",
+      "kind": "护甲",
+      "description": "为yf-artifact绘制一张法术概念插画，工作名「砂壳护身」。沿用灰白厚皮、低头鼻角、护鼻片与短粗四足的浅泥披甲兽，镜头放近到头肩和前足。沙地上升起的粗砂正沿它的肩背凝结成几片薄而粗糙的弧形砂壳，最前一片刚挡住一粒飞来的小碎石。砂从地面到肩甲之间有两道清楚的斜升轨迹，壳面仍能看见粗颗粒和未闭合的裂口，背部皮肤从片隙露出。低角度前侧镜头，以乳白身体和淡赭砂壳形成宽亮面，锈红胸带作一小块色彩，斜阳强调壳边的厚度与石粒冲击点，背景远处沙坡松笔。",
+      "notes": "单张竖幅9:16满版法术卡牌插画，以Artifact Classic无框原画的可见手绘笔触、自然材质、大色块和虚实边缘组织画面。画面围绕一件正在发生的作用展开，动作方向、受力关系或状态变化清楚，主要作用点的边缘最明确。角色参考提供已经生成的单位脸形、体态、衣装和器物，按本张叙事重新安排姿态、镜头与背景，角色可半身或局部入画。末尾两张Classic原画提供笔触、材质、空间和明暗参考。细节集中在本张作用点，其他地方笔触松紧有别，亮光集中且有自然光向，大明暗与小卡轮廓可读。画满四边，没有文字、数字、卡框、漫画格线、气泡、UI、箭头图标、棋盘、logo、水印或白边。 本张有1张既有单位造型参考，末尾两张是Classic画风参考。镜头为近地前侧三分之四，肩背与凝结砂层占大画面，主色为淡赭、乳白厚皮、锈红皮带，用光为低斜日光，砂粒边缘清亮，腹下浓暗。",
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-armored-beast.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10290.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10287.jpg"
+      ],
+      "subject": [
+        "armored-beast"
+      ],
+      "cast": [
+        {
+          "name": "浅泥披甲兽",
+          "source_image": "assets/migoo/comic-npc-batch-03/03-mud-armored-beast/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-armored-beast.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10290",
+        "10287"
+      ],
+      "camera": "近地前侧三分之四，肩背与凝结砂层占大画面",
+      "palette": "淡赭、乳白厚皮、锈红皮带",
+      "light": "低斜日光，砂粒边缘清亮，腹下浓暗"
+    },
+    {
+      "slug": "05-ember-renewal",
+      "name": "薪火复苏",
+      "kind": "复苏",
+      "description": "为yf-artifact绘制一张法术概念插画，工作名「薪火复苏」。沿用暗红叶冠、木节脸、细枝手臂的藤索编结工。画面是一次枯枝复苏法术的近景，树形居民的两只枝手合拢护住一截刚熄灭的焦木，焦木末端仍有一小点橙色余烬，裂开的炭皮里却正在长出两片浅黄绿小叶。角色的木节脸从右上侧低头看，枝指上细小的焦纹正在由暗变浅，几片象牙白灰从新芽旁脱落。主要形体是合拢的两只深色枝手与中央小芽，周围只留很少焦橙亮色。背景是冷灰石地与模糊火塘边，细节集中在余烬、木纤维和嫩叶透光。",
+      "notes": "单张竖幅9:16满版法术卡牌插画，以Artifact Classic无框原画的可见手绘笔触、自然材质、大色块和虚实边缘组织画面。画面围绕一件正在发生的作用展开，动作方向、受力关系或状态变化清楚，主要作用点的边缘最明确。角色参考提供已经生成的单位脸形、体态、衣装和器物，按本张叙事重新安排姿态、镜头与背景，角色可半身或局部入画。末尾两张Classic原画提供笔触、材质、空间和明暗参考。细节集中在本张作用点，其他地方笔触松紧有别，亮光集中且有自然光向，大明暗与小卡轮廓可读。画满四边，没有文字、数字、卡框、漫画格线、气泡、UI、箭头图标、棋盘、logo、水印或白边。 本张有1张既有单位造型参考，末尾两张是Classic画风参考。镜头为双手与木节脸的近景，新芽与余烬在中央交汇，主色为炭黑、焦橙、嫩芽黄绿、象牙白灰，用光为温暖余烬光集中于手，背景是冷灰漫射光。",
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-root-weaver.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10373.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10358.jpg"
+      ],
+      "subject": [
+        "root-weaver"
+      ],
+      "cast": [
+        {
+          "name": "藤索编结工",
+          "source_image": "assets/migoo/comic-npc-batch-05/09-root-rope-weaver/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-root-weaver.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10373",
+        "10358"
+      ],
+      "camera": "双手与木节脸的近景，新芽与余烬在中央交汇",
+      "palette": "炭黑、焦橙、嫩芽黄绿、象牙白灰",
+      "light": "温暖余烬光集中于手，背景是冷灰漫射光"
+    },
+    {
+      "slug": "06-burden-reversal",
+      "name": "重压转嫁",
+      "kind": "转嫁",
+      "description": "为yf-artifact绘制一张法术概念插画，工作名「重压转嫁」。出场对象依次为青蓝红角、背双水瓮的驮水兽和青蓝大腹的营地守卫。画面描绘重量转嫁的一瞬，左前方原本驮重的兽四足微微轻抬，皮挽具松开半圈，背上的灰白水瓮仍完整在架中；右后方普通营地守卫突然弯膝下沉，双脚陷进粉砂地，两臂向外撑住身体。两者脚下的尘土沿一条很细的暗绯红弧轻轻相连，主要叙事依靠一边失重、一边承重的姿态和两组地面压痕。镜头贴近地面，前景兽蹄与后景巨足分开，头部只作较小的身份提示，浅粉砂土保留大片明亮中间调。",
+      "notes": "单张竖幅9:16满版法术卡牌插画，以Artifact Classic无框原画的可见手绘笔触、自然材质、大色块和虚实边缘组织画面。画面围绕一件正在发生的作用展开，动作方向、受力关系或状态变化清楚，主要作用点的边缘最明确。角色参考提供已经生成的单位脸形、体态、衣装和器物，按本张叙事重新安排姿态、镜头与背景，角色可半身或局部入画。末尾两张Classic原画提供笔触、材质、空间和明暗参考。细节集中在本张作用点，其他地方笔触松紧有别，亮光集中且有自然光向，大明暗与小卡轮廓可读。画满四边，没有文字、数字、卡框、漫画格线、气泡、UI、箭头图标、棋盘、logo、水印或白边。 本张有2张既有单位造型参考，末尾两张是Classic画风参考。镜头为低位横穿场景，轻抬的兽蹄与下陷的巨足互为作用点，主色为浅粉砂土、青蓝皮、陶白水瓮、低饱和绯红，用光为明亮阴天天光，脚下两种压痕清楚。",
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-water-beast.jpg",
+        "assets/migoo/unit-cast-spells-02/references/unit-bell-guard.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10403.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10280.jpg"
+      ],
+      "subject": [
+        "water-beast",
+        "bell-guard"
+      ],
+      "cast": [
+        {
+          "name": "山口驮水兽",
+          "source_image": "assets/migoo/comic-npc-batch-05/02-pass-water-carrier/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-water-beast.jpg"
+        },
+        {
+          "name": "林营铜铃守卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/04-camp-bell-guard/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-bell-guard.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10403",
+        "10280"
+      ],
+      "camera": "低位横穿场景，轻抬的兽蹄与下陷的巨足互为作用点",
+      "palette": "浅粉砂土、青蓝皮、陶白水瓮、低饱和绯红",
+      "light": "明亮阴天天光，脚下两种压痕清楚"
+    },
+    {
+      "slug": "07-suspended-disarm",
+      "name": "夺刃悬锋",
+      "kind": "缴械",
+      "description": "为yf-artifact绘制一张法术概念插画，工作名「夺刃悬锋」。两张参考为尖吻折角四肢的机械狗头人和灰蓝獠牙门卫。机械体位于右下半身，双手把一个短铁夹朝左上撑开；灰蓝门卫位于左侧，双手刚被震开，身体后缩。原本握在门卫手里的短戟已经离手，悬在画面正中央，戟柄与手掌之间有清楚空隙，戟刃一端朝向上方小片亮天空。几枚细碎铁屑沿短弧飞向机械铁夹，暗示夺械的力量。低角度斜侧构图，把悬空兵刃画成最清楚的长斜线，两名角色以不同深浅的半身压在两端。背景是暗红布幔与煤黑门洞，门口硬侧光只照兵刃上缘和两双手。",
+      "notes": "单张竖幅9:16满版法术卡牌插画，以Artifact Classic无框原画的可见手绘笔触、自然材质、大色块和虚实边缘组织画面。画面围绕一件正在发生的作用展开，动作方向、受力关系或状态变化清楚，主要作用点的边缘最明确。角色参考提供已经生成的单位脸形、体态、衣装和器物，按本张叙事重新安排姿态、镜头与背景，角色可半身或局部入画。末尾两张Classic原画提供笔触、材质、空间和明暗参考。细节集中在本张作用点，其他地方笔触松紧有别，亮光集中且有自然光向，大明暗与小卡轮廓可读。画满四边，没有文字、数字、卡框、漫画格线、气泡、UI、箭头图标、棋盘、logo、水印或白边。 本张有2张既有单位造型参考，末尾两张是Classic画风参考。镜头为略仰斜侧，飞出的短戟斜贯空隙、两端手势呼应，主色为煤黑铁、铜绿机械、灰蓝皮、暗红布，用光为门口一束硬侧光，悬空铁器上沿清亮。",
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-automaton.jpg",
+        "assets/migoo/unit-cast-spells-02/references/unit-fanged-guard.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10306.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10396.jpg"
+      ],
+      "subject": [
+        "automaton",
+        "fanged-guard"
+      ],
+      "cast": [
+        {
+          "name": "仓场筛砂偶",
+          "source_image": "assets/migoo/comic-npc-batch-05/10-yard-sifting-automaton/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-automaton.jpg"
+        },
+        {
+          "name": "獠牙门卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/06-fanged-gate-guard/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-fanged-guard.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10306",
+        "10396"
+      ],
+      "camera": "略仰斜侧，飞出的短戟斜贯空隙、两端手势呼应",
+      "palette": "煤黑铁、铜绿机械、灰蓝皮、暗红布",
+      "light": "门口一束硬侧光，悬空铁器上沿清亮"
+    },
+    {
+      "slug": "08-shadow-stitch",
+      "name": "缝影禁步",
+      "kind": "定身",
+      "description": "为yf-artifact绘制一张法术概念插画，工作名「缝影禁步」。沿用瘦长褐毛、兽形长脸、弯腿长臂的窄桥探哨。视角很高，画面大半是象牙白石地上一条清楚的长黑影，影子的脚踝部分被三根短而粗的暗铜钉钉进砖缝。真实角色仅占画面上端半身与一只抬起的脚，身体已经向前倾，脚的影子却仍死死留在原处，黑影在腿与足之间被拉成一条细长扭曲带。正午强太阳使铺地亮而简洁，钉头、拉长影边与正在使力的兽脚最清楚，人物脸在远处用松笔保留轮廓。少量碎影像干墨一样翘起，法术通过影子被固定与身体想离开的矛盾受力来表现。",
+      "notes": "单张竖幅9:16满版法术卡牌插画，以Artifact Classic无框原画的可见手绘笔触、自然材质、大色块和虚实边缘组织画面。画面围绕一件正在发生的作用展开，动作方向、受力关系或状态变化清楚，主要作用点的边缘最明确。角色参考提供已经生成的单位脸形、体态、衣装和器物，按本张叙事重新安排姿态、镜头与背景，角色可半身或局部入画。末尾两张Classic原画提供笔触、材质、空间和明暗参考。细节集中在本张作用点，其他地方笔触松紧有别，亮光集中且有自然光向，大明暗与小卡轮廓可读。画满四边，没有文字、数字、卡框、漫画格线、气泡、UI、箭头图标、棋盘、logo、水印或白边。 本张有1张既有单位造型参考，末尾两张是Classic画风参考。镜头为俯视地面的大影子，真实足部在画面上端挣动，主色为象牙白铺地、墨黑影、褐毛、小点暗铜，用光为正午硬太阳，人物与钉住的影子分离清楚。",
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-bridge-scout.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10404.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10298.jpg"
+      ],
+      "subject": [
+        "bridge-scout"
+      ],
+      "cast": [
+        {
+          "name": "窄桥探哨",
+          "source_image": "assets/migoo/comic-npc-batch-05/05-narrow-bridge-scout/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-bridge-scout.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10404",
+        "10298"
+      ],
+      "camera": "俯视地面的大影子，真实足部在画面上端挣动",
+      "palette": "象牙白铺地、墨黑影、褐毛、小点暗铜",
+      "light": "正午硬太阳，人物与钉住的影子分离清楚"
+    },
+    {
+      "slug": "09-muted-conch",
+      "name": "封喉噤声",
+      "kind": "沉默",
+      "description": "为yf-artifact绘制一张法术概念插画，工作名「封喉噤声」。沿用潮沟灯侍的宽鱼嘴、侧鳍、向后翻起的灰紫帽和暗青外套。它正把一只小暗褐海螺举到嘴边吹响，嘴巴鼓起、眼睛张大，但螺口刚冒出的几只透明小气泡被一圈灰白薄蜡封在开口上，气泡停在壳内。近景画到脸、双手和海螺，重点是鼓起的鱼颊、紧握螺壳的指节与被封住的开口。淡黄鱼面由柔侧光照亮，帽后与外套合为一块深暗，背景只留浅灰石墙，整体安静而清楚。法术痕迹是一小片从螺口蔓延到唇边的灰白薄蜡，边缘细腻。",
+      "notes": "单张竖幅9:16满版法术卡牌插画，以Artifact Classic无框原画的可见手绘笔触、自然材质、大色块和虚实边缘组织画面。画面围绕一件正在发生的作用展开，动作方向、受力关系或状态变化清楚，主要作用点的边缘最明确。角色参考提供已经生成的单位脸形、体态、衣装和器物，按本张叙事重新安排姿态、镜头与背景，角色可半身或局部入画。末尾两张Classic原画提供笔触、材质、空间和明暗参考。细节集中在本张作用点，其他地方笔触松紧有别，亮光集中且有自然光向，大明暗与小卡轮廓可读。画满四边，没有文字、数字、卡框、漫画格线、气泡、UI、箭头图标、棋盘、logo、水印或白边。 本张有1张既有单位造型参考，末尾两张是Classic画风参考。镜头为鱼形面部与嘴旁海螺的极近景，静止气泡成为焦点，主色为灰紫帽、淡黄鱼面、暗褐海螺、浅灰背景，用光为柔侧光，面部明亮，帽后深暗。",
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-fish-lamp.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10295.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10326.jpg"
+      ],
+      "subject": [
+        "fish-lamp"
+      ],
+      "cast": [
+        {
+          "name": "潮沟灯侍",
+          "source_image": "assets/migoo/comic-npc-batch-05/08-tidal-lamp-attendant/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-fish-lamp.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10295",
+        "10326"
+      ],
+      "camera": "鱼形面部与嘴旁海螺的极近景，静止气泡成为焦点",
+      "palette": "灰紫帽、淡黄鱼面、暗褐海螺、浅灰背景",
+      "light": "柔侧光，面部明亮，帽后深暗"
+    },
+    {
+      "slug": "10-wayclaim-dash",
+      "name": "夺路抢先",
+      "kind": "加速",
+      "description": "为yf-artifact绘制一张法术概念插画，工作名「夺路抢先」。沿用黑额、白色硬鬃、长尾与粗前爪的普通巡兽。它贴地从画面右后向左前冲过一段麦地石路，身体压低伸展，前爪落在一条刚被暖金色光点亮的石缝上，后足还在前一步扬起的尘迹中。路面裂缝前方几块石头上的金色细亮点按远近依次提前亮起，提示路径已被法术引导。镜头贴近地面从侧后方看，兽头与前爪最清楚，尾巴和后腿稍带松动笔触，麦秆在两侧向后折。画面以浅金麦地和冷灰路面为大色块，法术亮点小而有方向，动作与前后落点是主体。",
+      "notes": "单张竖幅9:16满版法术卡牌插画，以Artifact Classic无框原画的可见手绘笔触、自然材质、大色块和虚实边缘组织画面。画面围绕一件正在发生的作用展开，动作方向、受力关系或状态变化清楚，主要作用点的边缘最明确。角色参考提供已经生成的单位脸形、体态、衣装和器物，按本张叙事重新安排姿态、镜头与背景，角色可半身或局部入画。末尾两张Classic原画提供笔触、材质、空间和明暗参考。细节集中在本张作用点，其他地方笔触松紧有别，亮光集中且有自然光向，大明暗与小卡轮廓可读。画满四边，没有文字、数字、卡框、漫画格线、气泡、UI、箭头图标、棋盘、logo、水印或白边。 本张有1张既有单位造型参考，末尾两张是Classic画风参考。镜头为近地侧后视，兽身低斜冲过一条亮石缝，主色为深褐毛、白鬃、浅金麦地、冷灰路面，用光为低太阳从前侧照来，前爪与鬃毛受光。",
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-maned-beast.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10399.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10313.jpg"
+      ],
+      "subject": [
+        "maned-beast"
+      ],
+      "cast": [
+        {
+          "name": "暮坡嗅迹兽",
+          "source_image": "assets/migoo/comic-npc-batch-05/01-evening-trail-sniffer/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-maned-beast.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10399",
+        "10313"
+      ],
+      "camera": "近地侧后视，兽身低斜冲过一条亮石缝",
+      "palette": "深褐毛、白鬃、浅金麦地、冷灰路面",
+      "light": "低太阳从前侧照来，前爪与鬃毛受光"
+    },
+    {
+      "slug": "11-lifting-taint",
+      "name": "净秽剥离",
+      "kind": "净化",
+      "description": "为yf-artifact绘制一张法术概念插画，工作名「净秽剥离」。沿用暗绿圆腹、高位双眼、宽嘴蹼手和苇黄藤盾的蛙族护篓兵。它的盾臂和手背原本覆着几片墨紫色污垢状咒痕，此刻一层薄如湿布的象牙白光膜从手腕向指尖掀起，把黑垢整片带离皮肤，露出正常的绿色皮面。角色低头看臂，眼神放松，身体只占上半与右侧，中央是翻起的白膜和正脱离的黑色薄片。近景里藤盾仅露边缘供辨认，柔和阴天光照亮面部和手，背景为松笔灰褐木板，细节集中在指蹼、卷起膜边与剥离瞬间的暗亮分界。",
+      "notes": "单张竖幅9:16满版法术卡牌插画，以Artifact Classic无框原画的可见手绘笔触、自然材质、大色块和虚实边缘组织画面。画面围绕一件正在发生的作用展开，动作方向、受力关系或状态变化清楚，主要作用点的边缘最明确。角色参考提供已经生成的单位脸形、体态、衣装和器物，按本张叙事重新安排姿态、镜头与背景，角色可半身或局部入画。末尾两张Classic原画提供笔触、材质、空间和明暗参考。细节集中在本张作用点，其他地方笔触松紧有别，亮光集中且有自然光向，大明暗与小卡轮廓可读。画满四边，没有文字、数字、卡框、漫画格线、气泡、UI、箭头图标、棋盘、logo、水印或白边。 本张有1张既有单位造型参考，末尾两张是Classic画风参考。镜头为蛙兵脸与护盾手臂的近景，剥离黑垢的弧面横过中央，主色为暗绿皮、米黄盾、象牙白光膜、墨紫垢，用光为阴天漫射光，光膜只在翻起边缘稍亮。",
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-frog-shield.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10382.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10340.jpg"
+      ],
+      "subject": [
+        "frog-shield"
+      ],
+      "cast": [
+        {
+          "name": "芦岸护篓兵",
+          "source_image": "assets/migoo/lore-unit-batch-02/03-reedbank-buckler/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-frog-shield.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10382",
+        "10340"
+      ],
+      "camera": "蛙兵脸与护盾手臂的近景，剥离黑垢的弧面横过中央",
+      "palette": "暗绿皮、米黄盾、象牙白光膜、墨紫垢",
+      "light": "阴天漫射光，光膜只在翻起边缘稍亮"
+    },
+    {
+      "slug": "12-dread-projection",
+      "name": "惊魇投影",
+      "kind": "恐惧",
+      "description": "为yf-artifact绘制一张法术概念插画，工作名「惊魇投影」。沿用灰白宽背、低头长角与护鼻片的普通厚皮兽，把镜头放近到它的头肩。兽背靠砖红旧墙，头忽然后扭，眼睛睁大，短耳贴紧，前足急刹。它投在墙上的影子却被惊魇法术拉成远大于身体的细长角形，影中头部的嘴形夸张张开，弯角伸过半幅墙面；现实中的鼻角保持原有短粗尺度。画面大半留给炭黑变形影与暗砖墙，小半是受惊的灰白兽头。低位惨白月光让现实鼻甲和眼睛有两点自然反亮，法术通过不匹配的巨影和动物反应表达，边缘与笔触松紧明确。",
+      "notes": "单张竖幅9:16满版法术卡牌插画，以Artifact Classic无框原画的可见手绘笔触、自然材质、大色块和虚实边缘组织画面。画面围绕一件正在发生的作用展开，动作方向、受力关系或状态变化清楚，主要作用点的边缘最明确。角色参考提供已经生成的单位脸形、体态、衣装和器物，按本张叙事重新安排姿态、镜头与背景，角色可半身或局部入画。末尾两张Classic原画提供笔触、材质、空间和明暗参考。细节集中在本张作用点，其他地方笔触松紧有别，亮光集中且有自然光向，大明暗与小卡轮廓可读。画满四边，没有文字、数字、卡框、漫画格线、气泡、UI、箭头图标、棋盘、logo、水印或白边。 本张有1张既有单位造型参考，末尾两张是Classic画风参考。镜头为侧面兽头近景，背后墙上的巨大变形影占大半画幅，主色为炭黑、灰白兽皮、低饱和砖红、惨白月光，用光为单一低位月反光，怪影边缘清楚、墙角沉暗。",
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/unit-armored-beast.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10379.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10422.jpg"
+      ],
+      "subject": [
+        "armored-beast"
+      ],
+      "cast": [
+        {
+          "name": "浅泥披甲兽",
+          "source_image": "assets/migoo/comic-npc-batch-03/03-mud-armored-beast/original.png",
+          "reference": "assets/migoo/unit-cast-spells-02/references/unit-armored-beast.jpg"
+        }
+      ],
+      "classic_art_ids": [
+        "10379",
+        "10422"
+      ],
+      "camera": "侧面兽头近景，背后墙上的巨大变形影占大半画幅",
+      "palette": "炭黑、灰白兽皮、低饱和砖红、惨白月光",
+      "light": "单一低位月反光，怪影边缘清楚、墙角沉暗"
+    },
+    {
+      "slug": "13-molten-gutter",
+      "name": "熔沟迸流",
+      "kind": "环境法术",
+      "description": "为yf-artifact绘制一张法术概念插画，工作名「熔沟迸流」。废弃锻造院的一条窄石沟被法术突然重新点燃，白热黄色的熔流从半开的炉门底部挤出，沿画面中央弯向前景，推起几块焦黑碎铁。镜头贴地看向炉门，熔流低而厚，边缘结着深绛红的薄壳，前景有一小片灰白炉灰正被热气吹散。门框和铁链只作黑色大形体，熔沟是画面唯一宽亮带，最精细处是表皮皱褶、铁片接触点和一两粒飞溅熔珠，远处炉口以粗笔炭黑与暗红表现。场景表现火法术改变环境的瞬间。",
+      "notes": "单张竖幅9:16满版法术卡牌插画，以Artifact Classic无框原画的可见手绘笔触、自然材质、大色块和虚实边缘组织画面。画面围绕一件正在发生的作用展开，动作方向、受力关系或状态变化清楚，主要作用点的边缘最明确。角色参考提供已经生成的单位脸形、体态、衣装和器物，按本张叙事重新安排姿态、镜头与背景，角色可半身或局部入画。末尾两张Classic原画提供笔触、材质、空间和明暗参考。细节集中在本张作用点，其他地方笔触松紧有别，亮光集中且有自然光向，大明暗与小卡轮廓可读。画满四边，没有文字、数字、卡框、漫画格线、气泡、UI、箭头图标、棋盘、logo、水印或白边。 本张有0张既有单位造型参考，末尾两张是Classic画风参考。镜头为贴地望向炉门，低宽熔流沿裂沟涌出，主色为白热黄、焦黑铁、深绛红、灰白炉灰，用光为熔流是主要光源，周围保留大块浓暗。",
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/classic-10315.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10424.jpg"
+      ],
+      "subject": [],
+      "cast": [],
+      "classic_art_ids": [
+        "10315",
+        "10424"
+      ],
+      "camera": "贴地望向炉门，低宽熔流沿裂沟涌出",
+      "palette": "白热黄、焦黑铁、深绛红、灰白炉灰",
+      "light": "熔流是主要光源，周围保留大块浓暗"
+    },
+    {
+      "slug": "14-iron-core-gathering",
+      "name": "磁屑聚核",
+      "kind": "环境法术",
+      "description": "为yf-artifact绘制一张法术概念插画，工作名「磁屑聚核」。一间空旧铁工房里，散落在砧台上的钉子、薄铁片和断链正在被一枚悬起的黑铁核吸拢。铁核位于中上方偏右，三片较大的铁片斜向靠近并留出清楚空隙，细屑从左下台面离地形成一条不规则偏心弧。俯侧近景，前景砧面有刚被拖过的锈黄擦痕，靠近铁核的金属一面被高窗白光照亮，另一面近黑，背景只留深灰墙和一小段架子。法术靠金属离地、趋向同一点的受力与散屑轨迹表现，最清楚的边缘在中央三片金属断面。",
+      "notes": "单张竖幅9:16满版法术卡牌插画，以Artifact Classic无框原画的可见手绘笔触、自然材质、大色块和虚实边缘组织画面。画面围绕一件正在发生的作用展开，动作方向、受力关系或状态变化清楚，主要作用点的边缘最明确。角色参考提供已经生成的单位脸形、体态、衣装和器物，按本张叙事重新安排姿态、镜头与背景，角色可半身或局部入画。末尾两张Classic原画提供笔触、材质、空间和明暗参考。细节集中在本张作用点，其他地方笔触松紧有别，亮光集中且有自然光向，大明暗与小卡轮廓可读。画满四边，没有文字、数字、卡框、漫画格线、气泡、UI、箭头图标、棋盘、logo、水印或白边。 本张有0张既有单位造型参考，末尾两张是Classic画风参考。镜头为俯侧近景，金属碎片沿偏心弧收向铁核，主色为铅灰、锈黄、乌黑、少量铜白高光，用光为高窗白光，金属断口亮、空间背景深灰。",
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/classic-10268.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10376.jpg"
+      ],
+      "subject": [],
+      "cast": [],
+      "classic_art_ids": [
+        "10268",
+        "10376"
+      ],
+      "camera": "俯侧近景，金属碎片沿偏心弧收向铁核",
+      "palette": "铅灰、锈黄、乌黑、少量铜白高光",
+      "light": "高窗白光，金属断口亮、空间背景深灰"
+    },
+    {
+      "slug": "15-spore-chainburst",
+      "name": "毒蕈连爆",
+      "kind": "环境法术",
+      "description": "为yf-artifact绘制一张法术概念插画，工作名「毒蕈连爆」。一截灰白倒木上，三朵大小不同的烟紫菌盖被毒性法术接连引爆。左边一朵刚胀裂、只留翻卷外皮，中间一朵喷出一团芥末黄色孢雾，右边仍闭合却已经在边缘鼓起。低位斜侧视，三种状态沿从左前到右后的短斜线排列，孢雾在中间形成一个清楚的横向厚色块。倒木裂纹与少量暗橄榄苔藓承托画面，白天自然柔光保持颜色真实。最细处是菌褶、胀裂边缘和粉雾靠近木面的颗粒，远处只留浅灰空地。",
+      "notes": "单张竖幅9:16满版法术卡牌插画，以Artifact Classic无框原画的可见手绘笔触、自然材质、大色块和虚实边缘组织画面。画面围绕一件正在发生的作用展开，动作方向、受力关系或状态变化清楚，主要作用点的边缘最明确。角色参考提供已经生成的单位脸形、体态、衣装和器物，按本张叙事重新安排姿态、镜头与背景，角色可半身或局部入画。末尾两张Classic原画提供笔触、材质、空间和明暗参考。细节集中在本张作用点，其他地方笔触松紧有别，亮光集中且有自然光向，大明暗与小卡轮廓可读。画满四边，没有文字、数字、卡框、漫画格线、气泡、UI、箭头图标、棋盘、logo、水印或白边。 本张有0张既有单位造型参考，末尾两张是Classic画风参考。镜头为低位斜侧看三朵菌依次胀裂，喷粉沿横向推进，主色为芥末黄、烟紫菌盖、灰白枯木、暗橄榄，用光为白天柔光，粉雾有清楚浓淡层，木面局部受光。",
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/classic-10002.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10142.jpg"
+      ],
+      "subject": [],
+      "cast": [],
+      "classic_art_ids": [
+        "10002",
+        "10142"
+      ],
+      "camera": "低位斜侧看三朵菌依次胀裂，喷粉沿横向推进",
+      "palette": "芥末黄、烟紫菌盖、灰白枯木、暗橄榄",
+      "light": "白天柔光，粉雾有清楚浓淡层，木面局部受光"
+    },
+    {
+      "slug": "16-eclipse-stillness",
+      "name": "日蚀静场",
+      "kind": "环境法术",
+      "description": "为yf-artifact绘制一张法术概念插画，工作名「日蚀静场」。一处空集市突然被静场法术罩住，天空里太阳被一枚深黑圆影遮到只剩很细旧金光边，地面的半截红布棚、几片从檐上落下的乳白叶片和一只翻倒小铜碗都停在离地不同高度。相机低位仰看，蚀日在画面上方偏左，下方是宽阔空场与两侧低棚，留出大片沉静天空。地面仍能看到原本日照留下的长影，这些影子朝场地中心轻弯。最清楚的是停住的叶片边缘、铜碗离地的空隙与光环的一小段，整体大明暗块强烈，绘画笔触保留。",
+      "notes": "单张竖幅9:16满版法术卡牌插画，以Artifact Classic无框原画的可见手绘笔触、自然材质、大色块和虚实边缘组织画面。画面围绕一件正在发生的作用展开，动作方向、受力关系或状态变化清楚，主要作用点的边缘最明确。角色参考提供已经生成的单位脸形、体态、衣装和器物，按本张叙事重新安排姿态、镜头与背景，角色可半身或局部入画。末尾两张Classic原画提供笔触、材质、空间和明暗参考。细节集中在本张作用点，其他地方笔触松紧有别，亮光集中且有自然光向，大明暗与小卡轮廓可读。画满四边，没有文字、数字、卡框、漫画格线、气泡、UI、箭头图标、棋盘、logo、水印或白边。 本张有0张既有单位造型参考，末尾两张是Classic画风参考。镜头为低位仰看空集市，巨大蚀日与异常静止的落物分上下层，主色为墨黑、旧金、乳白、暗土红，用光为天空日环硬亮、地面暮暗，物体投影朝中心弯。",
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/classic-10007.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10377.jpg"
+      ],
+      "subject": [],
+      "cast": [],
+      "classic_art_ids": [
+        "10007",
+        "10377"
+      ],
+      "camera": "低位仰看空集市，巨大蚀日与异常静止的落物分上下层",
+      "palette": "墨黑、旧金、乳白、暗土红",
+      "light": "天空日环硬亮、地面暮暗，物体投影朝中心弯"
+    },
+    {
+      "slug": "17-salt-unmaking",
+      "name": "盐蚀散械",
+      "kind": "环境法术",
+      "description": "为yf-artifact绘制一张法术概念插画，工作名「盐蚀散械」。一张表现消解装备的法术插画，一顶普通旧铁头盔和两片松动甲片放在浅粉石台上，左半仍是哑黑铁与铁锈褐，右半正被法术化成奶白粗盐晶体并沿台缘散落。金属向盐转变的边界是一条破碎不齐的脊，铆钉的一半仍是铁、另一半已经成了颗粒。镜头贴近桌面斜看，把头盔弧面与散晶横过画面中央，背景是被干燥斜阳照暖的浅墙。盐晶呈粗糙不透明颗粒，少量棱角刺亮，铁面保持哑光，最清楚的是转变界线与一枚脱落的半盐铆钉。",
+      "notes": "单张竖幅9:16满版法术卡牌插画，以Artifact Classic无框原画的可见手绘笔触、自然材质、大色块和虚实边缘组织画面。画面围绕一件正在发生的作用展开，动作方向、受力关系或状态变化清楚，主要作用点的边缘最明确。角色参考提供已经生成的单位脸形、体态、衣装和器物，按本张叙事重新安排姿态、镜头与背景，角色可半身或局部入画。末尾两张Classic原画提供笔触、材质、空间和明暗参考。细节集中在本张作用点，其他地方笔触松紧有别，亮光集中且有自然光向，大明暗与小卡轮廓可读。画满四边，没有文字、数字、卡框、漫画格线、气泡、UI、箭头图标、棋盘、logo、水印或白边。 本张有0张既有单位造型参考，末尾两张是Classic画风参考。镜头为桌面极近景，头盔从旧铁向粗盐碎晶渐变，主色为奶白盐晶、铁锈褐、哑黑、浅粉石台，用光为干燥午后斜光，粗盐颗粒有少量刺亮点。",
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/classic-10142.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10305.jpg"
+      ],
+      "subject": [],
+      "cast": [],
+      "classic_art_ids": [
+        "10142",
+        "10305"
+      ],
+      "camera": "桌面极近景，头盔从旧铁向粗盐碎晶渐变",
+      "palette": "奶白盐晶、铁锈褐、哑黑、浅粉石台",
+      "light": "干燥午后斜光，粗盐颗粒有少量刺亮点"
+    },
+    {
+      "slug": "18-paper-bird-wayfinding",
+      "name": "纸鸢引路",
+      "kind": "环境法术",
+      "description": "为yf-artifact绘制一张法术概念插画，工作名「纸鸢引路」。旧驿站石廊里，一张朱红色纸被引路法术折成一只清楚的纸鸟，悬在近景；后面两只越来越小的折鸟沿石廊飞向右上方转角，尾端带很短的折纸碎片。镜头从深暗檐下看向明亮雨后天光，近处纸鸟的翅角和折缝是画面最清楚的形体，远处廊柱逐渐淡入珍珠灰天空。地面有浅水反光，几片散红纸正从湿石上抬起，纸面朴素没有字迹。法术用纸张从平铺到折起再到飞行的状态变化表现，红纸在浅褐石廊里形成鲜明的小面积色彩节奏。",
+      "notes": "单张竖幅9:16满版法术卡牌插画，以Artifact Classic无框原画的可见手绘笔触、自然材质、大色块和虚实边缘组织画面。画面围绕一件正在发生的作用展开，动作方向、受力关系或状态变化清楚，主要作用点的边缘最明确。角色参考提供已经生成的单位脸形、体态、衣装和器物，按本张叙事重新安排姿态、镜头与背景，角色可半身或局部入画。末尾两张Classic原画提供笔触、材质、空间和明暗参考。细节集中在本张作用点，其他地方笔触松紧有别，亮光集中且有自然光向，大明暗与小卡轮廓可读。画满四边，没有文字、数字、卡框、漫画格线、气泡、UI、箭头图标、棋盘、logo、水印或白边。 本张有0张既有单位造型参考，末尾两张是Classic画风参考。镜头为从廊下向远处看，红纸折鸟依次飞向转角，主色为朱红纸、珍珠灰天空、浅褐廊柱、少量暗青，用光为雨后亮天光，纸面柔亮，檐下深暗。",
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/classic-10307.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10334.jpg"
+      ],
+      "subject": [],
+      "cast": [],
+      "classic_art_ids": [
+        "10307",
+        "10334"
+      ],
+      "camera": "从廊下向远处看，红纸折鸟依次飞向转角",
+      "palette": "朱红纸、珍珠灰天空、浅褐廊柱、少量暗青",
+      "light": "雨后亮天光，纸面柔亮，檐下深暗"
+    },
+    {
+      "slug": "19-refracted-maze",
+      "name": "折光迷径",
+      "kind": "环境法术",
+      "description": "为yf-artifact绘制一张法术概念插画，工作名「折光迷径」。一个由折光法术扭曲的空石廊，近景是几级真实冷灰石阶，到了中景却被一片斜立的银白薄镜面折向上方，镜中廊柱似乎接到另一段反向台阶，形成一条可看出不可能连接的路径。画面斜向深透视，左下实体石阶边缘粗糙，右上假廊的边缘稍淡、色偏烟玫瑰，中间薄镜只留两三段清楚的折光边。晴天反射光让银白、浅铜柱脚和冷石地保持明亮，细节集中在真实台阶与镜面接缝，远处廊柱松笔淡去。空间变化是主体，画面为空廊。",
+      "notes": "单张竖幅9:16满版法术卡牌插画，以Artifact Classic无框原画的可见手绘笔触、自然材质、大色块和虚实边缘组织画面。画面围绕一件正在发生的作用展开，动作方向、受力关系或状态变化清楚，主要作用点的边缘最明确。角色参考提供已经生成的单位脸形、体态、衣装和器物，按本张叙事重新安排姿态、镜头与背景，角色可半身或局部入画。末尾两张Classic原画提供笔触、材质、空间和明暗参考。细节集中在本张作用点，其他地方笔触松紧有别，亮光集中且有自然光向，大明暗与小卡轮廓可读。画满四边，没有文字、数字、卡框、漫画格线、气泡、UI、箭头图标、棋盘、logo、水印或白边。 本张有0张既有单位造型参考，末尾两张是Classic画风参考。镜头为斜向深透视，近处真实台阶与远处折返假廊衔接，主色为银白、浅铜、烟玫瑰、冷石灰，用光为晴天柔反射光，玻璃断缘少量高亮，阴影清楚。",
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/classic-10298.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10307.jpg"
+      ],
+      "subject": [],
+      "cast": [],
+      "classic_art_ids": [
+        "10298",
+        "10307"
+      ],
+      "camera": "斜向深透视，近处真实台阶与远处折返假廊衔接",
+      "palette": "银白、浅铜、烟玫瑰、冷石灰",
+      "light": "晴天柔反射光，玻璃断缘少量高亮，阴影清楚"
+    },
+    {
+      "slug": "20-well-star-call",
+      "name": "枯井唤星",
+      "kind": "环境法术",
+      "description": "为yf-artifact绘制一张法术概念插画，工作名「枯井唤星」。一口干涸的旧石井被召星法术唤醒，镜头正从井口上方俯看，深井底部出现一小簇暖白星点，几枚大小不同的光粒正沿不规则螺旋缓缓向上升起。井沿占画面四周形成厚重旧石赭色环，内部是很深的海军蓝，底部星点照出井壁最下面几道石缝，上方只有一段井沿被柔暖晨光照到。前景半截旧麻绳垂进井里，绳尾轻轻朝星簇偏移，暗示正在聚集的力量。最精细处是深井里两三枚星点、被照亮的石缝和绳纤维，其他暗部保留宽松画笔。",
+      "notes": "单张竖幅9:16满版法术卡牌插画，以Artifact Classic无框原画的可见手绘笔触、自然材质、大色块和虚实边缘组织画面。画面围绕一件正在发生的作用展开，动作方向、受力关系或状态变化清楚，主要作用点的边缘最明确。角色参考提供已经生成的单位脸形、体态、衣装和器物，按本张叙事重新安排姿态、镜头与背景，角色可半身或局部入画。末尾两张Classic原画提供笔触、材质、空间和明暗参考。细节集中在本张作用点，其他地方笔触松紧有别，亮光集中且有自然光向，大明暗与小卡轮廓可读。画满四边，没有文字、数字、卡框、漫画格线、气泡、UI、箭头图标、棋盘、logo、水印或白边。 本张有0张既有单位造型参考，末尾两张是Classic画风参考。镜头为从井口正上方俯看，深井里的星点向上升起，主色为深海军蓝、旧石赭、暖白星点、低饱和紫，用光为井底星光照内壁，井口有一段柔暖晨光。",
+      "references": [
+        "assets/migoo/unit-cast-spells-02/references/classic-10334.jpg",
+        "assets/migoo/unit-cast-spells-02/references/classic-10319.jpg"
+      ],
+      "subject": [],
+      "cast": [],
+      "classic_art_ids": [
+        "10334",
+        "10319"
+      ],
+      "camera": "从井口正上方俯看，深井里的星点向上升起",
+      "palette": "深海军蓝、旧石赭、暖白星点、低饱和紫",
+      "light": "井底星光照内壁，井口有一段柔暖晨光"
+    }
+  ]
+}

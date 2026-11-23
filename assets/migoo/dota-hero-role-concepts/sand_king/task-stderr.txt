@@ -1,0 +1,6 @@
+Migoo 额度：余额 99，免费 99，付费 0，冻结 0。
+Uploading output/dota-hero-art-references/valve/sand_king.png (1146321 bytes)
+Uploading output/classic-full-art/set01/full_art/10070_psd.png (1331816 bytes)
+Uploading output/classic-full-art/set01/full_art/10033_psd.png (1250039 bytes)
+Task mt_cGkwZDZlNWY3YjBiNmMxM2UzYmJhNDg2OGU1YmRlMDVkNTU2N2UwYTI3 started; if this command is interrupted, run migoo task get mt_cGkwZDZlNWY3YjBiNmMxM2UzYmJhNDg2OGU1YmRlMDVkNTU2N2UwYTI3 --wait
+Saved assets/migoo/dota-hero-role-concepts/sand_king/mt_cGkwZDZlNWY3YjBiNmMxM2UzYmJhNDg2OGU1YmRlMDVkNTU2N2UwYTI3_1.png

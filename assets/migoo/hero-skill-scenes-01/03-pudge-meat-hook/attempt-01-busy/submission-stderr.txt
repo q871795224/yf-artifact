@@ -1,0 +1,5 @@
+Migoo 额度：余额 32，免费 32，付费 0，冻结 0。
+Uploading assets/migoo/hero-skill-scenes-01/references/hero-pudge.jpg (136668 bytes)
+Uploading assets/migoo/hero-skill-scenes-01/references/hero-windrunner.jpg (130672 bytes)
+Uploading assets/migoo/hero-skill-scenes-01/references/classic-10328.jpg (276787 bytes)
+Uploading assets/migoo/hero-skill-scenes-01/references/classic-10416.jpg (378239 bytes)

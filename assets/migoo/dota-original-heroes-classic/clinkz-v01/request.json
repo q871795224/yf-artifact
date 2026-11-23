@@ -1,0 +1,36 @@
+{
+  "hero": "clinkz",
+  "name": "克林克兹",
+  "english_name": "Clinkz",
+  "render": "output/dota-hero-art-references/valve/clinkz.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/clinkz.png",
+  "sha256": "d29236468bc80be446d5f226045583ea2555805c090523497bbd23e2b09229c3",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/clinkz.png",
+      "sha256": "d29236468bc80be446d5f226045583ea2555805c090523497bbd23e2b09229c3"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10047_cropped.png",
+      "sha256": "3571bcb9be23ee305506acecee5c07b942e7b07424a1b57a4ac4a8ff9fc85d7e"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10054_cropped.png",
+      "sha256": "418eaa7727b6bb10467d183a4b968ef662874081dfb97a5b631088d333a5458b"
+    }
+  ],
+  "workflow": "submit_only; no generated-art downloads or review",
+  "authorization": "User explicitly requested twenty more agent-selected canonical heroes",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGliOTkyOWE5MTYxMjkwMWE5ZjIxMzdjYmMyMGM2ZDIwODdlNmRhZmM1",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

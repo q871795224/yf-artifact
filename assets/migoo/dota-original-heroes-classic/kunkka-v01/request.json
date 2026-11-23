@@ -1,0 +1,44 @@
+{
+  "hero": "kunkka",
+  "name": "昆卡",
+  "english_name": "Kunkka",
+  "render": "output/dota-hero-art-references/valve/kunkka.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/kunkka.png",
+  "sha256": "20f344672227bfab0daaac6862ae8ee802d9f2308d955e0f9c04104a324ff109",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/kunkka.png",
+      "sha256": "20f344672227bfab0daaac6862ae8ee802d9f2308d955e0f9c04104a324ff109"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10024_cropped.png",
+      "sha256": "cd957f8c128298830840f1873be5025aab8a9cd33c87f6183bb64b9a3e434188"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10054_cropped.png",
+      "sha256": "418eaa7727b6bb10467d183a4b968ef662874081dfb97a5b631088d333a5458b"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or visual reviews",
+  "authorization": "User explicitly requested another agent-selected twenty heroes and submission through the reusable script",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGljYTYzYmQ2NDQ1YzE0YjNmNzVhZWQwOGE5Y2QxMGIxZWM2MjExNmQy",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

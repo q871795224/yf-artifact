@@ -1,0 +1,52 @@
+{
+  "hero": "snapfire",
+  "name": "电炎绝手",
+  "english_name": "Snapfire",
+  "render": "output/dota-hero-art-references/valve/snapfire.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/snapfire.png",
+  "sha256": "742aa9ef743cacf395f67e5d6fdf595fb4fef8c527fd0dc67f6968cceb7a98b5",
+  "classic_hero_exists": false,
+  "reference_note": "Official transparent render",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/snapfire.png",
+      "sha256": "742aa9ef743cacf395f67e5d6fdf595fb4fef8c527fd0dc67f6968cceb7a98b5",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/snapfire.png"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10022_cropped.png",
+      "sha256": "8f00ae99ac0a79b88f23726228d85d5dbfeaa158bd9a057df686502248ec4731",
+      "media_id": "1459227570545468"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10025_cropped.png",
+      "sha256": "beb16ce1fd3645da63be4f6ff6019fcb1896e626a454f3cdab0213f51071e24a",
+      "media_id": "1459227570668377"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or review",
+  "authorization": "User requested this additional twenty; agent selected roster and disclosed 18 remaining new heroes plus 2 existing Classic heroes repainted",
+  "listed_price": 5.33,
+  "attempt": 2,
+  "cli_exit_code": 0,
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ],
+  "previous_attempts": [
+    {
+      "task_id": "mt_cGk2MzdkNzc4M2QyOTdiMDAwNDRlZWUzZmY4MjVlNzc2MWU1ODI5YzEw",
+      "error": {
+        "code": "task_failed",
+        "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+        "retryable": true,
+        "reason": "busy"
+      }
+    }
+  ],
+  "task_id": "mt_cGk2NmEyNTU4OWIyYjI2YzdjMGQ3YTUwNWQ0OGEwZTRiNGIyNmFkYzNh"
+}

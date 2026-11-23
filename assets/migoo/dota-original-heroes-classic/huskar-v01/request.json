@@ -1,0 +1,36 @@
+{
+  "hero": "huskar",
+  "name": "哈斯卡",
+  "english_name": "Huskar",
+  "render": "output/dota-hero-art-references/valve/huskar.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/huskar.png",
+  "sha256": "9766fc7ae89b0b01da22bb71121fa260b39b3f76ec31656ef4961403277f7819",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/huskar.png",
+      "sha256": "9766fc7ae89b0b01da22bb71121fa260b39b3f76ec31656ef4961403277f7819"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10070_cropped.png",
+      "sha256": "ecb1ed9c3485e1d54a3f0cb5aff2bf989f0e6fe46ec4c69dc35b1185fd8dd503"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10033_cropped.png",
+      "sha256": "7490de525670351be81c87b3364d56de3af33e4449e71802c1410dad6fc0fea8"
+    }
+  ],
+  "workflow": "submit_only; no generated-art downloads or review",
+  "authorization": "User explicitly requested twenty more agent-selected canonical heroes",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGlmODk4MjI0NjlmNDE1YzA1NTA0MDgxOTZlMmIzZGYzYzcxNDU1NGQw",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

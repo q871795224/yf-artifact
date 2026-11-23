@@ -1,0 +1,40 @@
+{
+  "requested": 3,
+  "submitted_count": 3,
+  "failed_count": 0,
+  "workflow": "submit only; status queries release concurrency slots; no downloads",
+  "tasks": [
+    {
+      "hero": "ghost",
+      "name": "幽魂权杖·直头短柄修订",
+      "task_id": "mt_cGlkNmExMjExOGI0NjIxZDkyOWM5ZmFkZjJiMGQxOTA5YTY4NmI2MzAy",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "force_staff",
+      "name": "原力法杖·直头短柄修订",
+      "task_id": "mt_cGk4Mjk4NTFmMDBjYjY3Nzg1MzI3M2NiOWIyMjU3NjExOGViZGUwMmMy",
+      "status": "generating",
+      "model": "gpt-image-26-flare",
+      "actual_models": null,
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "cyclone",
+      "name": "Eul的神圣法杖·直头短柄修订",
+      "task_id": "mt_cGkyOGFlYmZiOGViMWM2NzcxODBlNmQ4ZDFjNjI1MmE5ZjBmNTJlNWFk",
+      "status": "generating",
+      "model": "gpt-image-26-flare",
+      "actual_models": null,
+      "attempt": 1,
+      "cli_exit_code": 0
+    }
+  ]
+}

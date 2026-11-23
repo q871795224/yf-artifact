@@ -1,0 +1,37 @@
+{
+  "hero": "weaver",
+  "name": "编织者",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/weaver.png",
+      "sha256": "d4a3d28976005aff8f5d0bd4c4be68edc005cca46127e97aaf78849c39031c48"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10028_cropped.png",
+      "sha256": "b7c9bc857f51b9cb45d394b66271784a243901a6e157dcad1bfc2604f04bbc81"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10355_cropped.png",
+      "sha256": "d271b9bdae6431e027a602db19f845e19786f8b08d1460873df0c7ef82de1dec"
+    }
+  ],
+  "prompt_file": "prompt.txt",
+  "notes_file": "notes.txt",
+  "authorized": "User approved Medusa sample and explicitly requested submitting remaining nine together",
+  "batch_balance_before": {
+    "free": 94,
+    "paid": 0
+  },
+  "listed_price": 5.33,
+  "task_id": "mt_cGk3ZDNlZjM5YTcwYjMwNWY0YjYyMmY3NDgwNzc1MjFkYTFiZGE5OGU0",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ],
+  "cli_exit_code": 0,
+  "user_review": "User approved all first ten images"
+}

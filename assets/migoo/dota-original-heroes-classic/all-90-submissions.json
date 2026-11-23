@@ -1,0 +1,1530 @@
+{
+  "updated_at": "2026-11-23T00:17:19.254657+08:00",
+  "submitted_heroes": 90,
+  "batch_sizes": [
+    10,
+    20,
+    20,
+    20,
+    20
+  ],
+  "workflow": "Submit only after initial accepted ten; user reviews on Migoo; no generated outputs downloaded or visually inspected for later batches. Status fields are submission-time or last admission observation, not a live completion check.",
+  "model_requested": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "pause_on": "2026-11-24",
+  "pause_timezone": "Asia/Shanghai",
+  "account_snapshot": {
+    "balance": 59,
+    "paid": 0,
+    "free": 59,
+    "frozen": 0
+  },
+  "tasks": [
+    {
+      "batch": 1,
+      "hero": "medusa",
+      "name": "美杜莎",
+      "task_id": "mt_cGlkNmI5YTU5OTE1NGE2ZGM2NjUyZTI2ZmY4MzEwZWE1NzhiYTY0MDRh",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/medusa-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/medusa-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/medusa-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 1,
+      "hero": "morphling",
+      "name": "变体精灵",
+      "task_id": "mt_cGljZTE5ZDc4OTYxMjk1ZWViZDdlYmMxYzBhN2FjYTA4NTQwMzViM2U3",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/morphling-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/morphling-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/morphling-v01/request.json",
+      "prior_not_started_attempts": [
+        {
+          "task_id": "mt_cGljZWI4YTJhZWY5ZTAzYTEzYTc4YzRhMjhlNDczZTQ2NTVkNTRjNWM5",
+          "status": "failed",
+          "reason": "busy; service explicitly confirmed generation did not start",
+          "record": "attempts/01-busy-not-started"
+        }
+      ]
+    },
+    {
+      "batch": 1,
+      "hero": "ancient_apparition",
+      "name": "远古冰魄",
+      "task_id": "mt_cGlmYjRkMTQwYWMzOWI1YjYzMjJkYzc2N2NhZWU2MzdhOWM2OTc0ZTRm",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/ancient_apparition-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/ancient_apparition-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/ancient_apparition-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 1,
+      "hero": "juggernaut",
+      "name": "主宰",
+      "task_id": "mt_cGlmMTU4Mjc3MDk2ZmUxMTM3NDc5MzJjMWUxYzhhYzE3YTkwMjE2YmUz",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/juggernaut-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/juggernaut-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/juggernaut-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 1,
+      "hero": "rattletrap",
+      "name": "发条技师",
+      "task_id": "mt_cGkwNDRmODZjYjVjYzA1Y2ViN2M4OGY2ZjgxMTg3YzdjM2I1MDQxMTBi",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/rattletrap-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/rattletrap-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/rattletrap-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 1,
+      "hero": "sand_king",
+      "name": "沙王",
+      "task_id": "mt_cGliM2Q4NGViNjU2YzhjNGFkNDhkMGQ1ODY5YWQ1MWFkZjliZWM0Nzhj",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/sand_king-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/sand_king-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/sand_king-v01/request.json",
+      "prior_not_started_attempts": [
+        {
+          "task_id": "mt_cGlhZjQ5YjMxOGNiYzk0MmNiYzY1MTdiZTI5MGZhNDAwODg4ZjMxOTk5",
+          "status": "failed",
+          "reason": "busy; service explicitly confirmed generation did not start",
+          "record": "attempts/01-busy-not-started"
+        }
+      ]
+    },
+    {
+      "batch": 1,
+      "hero": "pudge",
+      "name": "帕吉",
+      "task_id": "mt_cGk0YTBmZGFmZDA2MjA0NjE3MDdlY2EwNzMyZWI4MTIwMmIyYmFkMjI5",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/pudge-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/pudge-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/pudge-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 1,
+      "hero": "slark",
+      "name": "斯拉克",
+      "task_id": "mt_cGliMDMzMzY1MDNhODMwOGE2NTVhODlmN2FjOTM1NjIwMzdhYjZmMTk3",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/slark-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/slark-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/slark-v01/request.json",
+      "prior_not_started_attempts": [
+        {
+          "task_id": "mt_cGkzMTZiNzYwY2RiYTE4MGNmOWFkOWYwZWUyZDIzMTdjYTkzMmQ0OWI5",
+          "status": "failed",
+          "reason": "busy; service explicitly confirmed generation did not start",
+          "record": "attempts/01-busy-not-started"
+        }
+      ]
+    },
+    {
+      "batch": 1,
+      "hero": "weaver",
+      "name": "编织者",
+      "task_id": "mt_cGk3ZDNlZjM5YTcwYjMwNWY0YjYyMmY3NDgwNzc1MjFkYTFiZGE5OGU0",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/weaver-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/weaver-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/weaver-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 1,
+      "hero": "visage",
+      "name": "维萨吉",
+      "task_id": "mt_cGlhNTE0MWI1MzBlNmI5NDM2MmQ2NzlkNDJkMWI2OWEzMzVhMTgzMzI2",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/visage-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/visage-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/visage-v01/request.json",
+      "prior_not_started_attempts": [
+        {
+          "task_id": "mt_cGlmMTAyZjlkNzliZTAwNmUwZGVkMzc3NGJjZTliNDdkYmEyMTc2YmU1",
+          "status": "failed",
+          "reason": "busy; service explicitly confirmed generation did not start",
+          "record": "attempts/01-busy-not-started"
+        }
+      ]
+    },
+    {
+      "batch": 2,
+      "hero": "antimage",
+      "name": "敌法师",
+      "task_id": "mt_cGkwZjE1MzUxNTFhZTI2MTM1NGEzMjdjZDBhZDQzZDgwM2M5MWI1NzYx",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/antimage-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/antimage-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/antimage-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 2,
+      "hero": "faceless_void",
+      "name": "虚空假面",
+      "task_id": "mt_cGliMzExZmYyMzRjMDkwYjZhMDlkNWM1NjE5YjU1OTMyNTZhZWNiYzhm",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/faceless_void-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/faceless_void-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/faceless_void-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 2,
+      "hero": "spectre",
+      "name": "幽鬼",
+      "task_id": "mt_cGlhZTA1NjM1NTUwNzUzOTA2NTVjNmU3NzQxMTYxYWQ1Y2I0NTc1ZDlm",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/spectre-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/spectre-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/spectre-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 2,
+      "hero": "phantom_lancer",
+      "name": "幻影长矛手",
+      "task_id": "mt_cGlhNjg3Y2YxZjcwYTIwYmUwZGFiNjUzZWE3MjNjOGVlYzYxZWRlZTMy",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/phantom_lancer-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/phantom_lancer-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/phantom_lancer-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 2,
+      "hero": "naga_siren",
+      "name": "娜迦海妖",
+      "task_id": "mt_cGljN2UyM2QwODFjOTNjNjA1NDRlMjg5ZjM0MDY1ZTM3MmZhNjc2YmQ1",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/naga_siren-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/naga_siren-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/naga_siren-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 2,
+      "hero": "terrorblade",
+      "name": "恐怖利刃",
+      "task_id": "mt_cGk0Y2U5OWNhNDlmMzUxZWVjMzA5M2E5NDhhMTBiNjFhZmVhOGEyZTcy",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/terrorblade-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/terrorblade-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/terrorblade-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 2,
+      "hero": "chaos_knight",
+      "name": "混沌骑士",
+      "task_id": "mt_cGkxMmY3ZmUzNzE5NDk1NjJmMGYyZjI1Y2EyMDUyODY3Y2IyYTkzZTU4",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/chaos_knight-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/chaos_knight-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/chaos_knight-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 2,
+      "hero": "dragon_knight",
+      "name": "龙骑士",
+      "task_id": "mt_cGliYzViM2RiMzkxZTg3ZWZiYjBjN2I3ZTI5ZGEyZmI5MjNlYTI3ZmM2",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/dragon_knight-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/dragon_knight-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/dragon_knight-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 2,
+      "hero": "tiny",
+      "name": "小小",
+      "task_id": "mt_cGk1MTAxZDkwYjdiYTlkN2UxZmYxMzVjMWQ5NTAyOGE0YzI3MzBlMGM2",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/tiny-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/tiny-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/tiny-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 2,
+      "hero": "jakiro",
+      "name": "杰奇洛",
+      "task_id": "mt_cGlkYjNhODhlMGU0NWU4MDhlNGNlYjJjMDgzMzllMzRjODljOWI0NWI1",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/jakiro-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/jakiro-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/jakiro-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 2,
+      "hero": "phoenix",
+      "name": "凤凰",
+      "task_id": "mt_cGk5OWY3ZTM3NWEwYzQwOWI3NDRmYmZmMzhiZWNiOWI2ZTZjZmQzZDRi",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/phoenix-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/phoenix-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/phoenix-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 2,
+      "hero": "enigma",
+      "name": "谜团",
+      "task_id": "mt_cGkwODZiMWY4NTc4YzFhNzgxNDJjNWVkODRlMjcwNDUyOGY3ZjFjM2Mz",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/enigma-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/enigma-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/enigma-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 2,
+      "hero": "night_stalker",
+      "name": "暗夜魔王",
+      "task_id": "mt_cGkzZTVlODE2YjE2N2FmMjdhMzkyMzBlOTFiMmY1NjQzYzUzMmM4OTcw",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/night_stalker-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/night_stalker-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/night_stalker-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 2,
+      "hero": "broodmother",
+      "name": "育母蜘蛛",
+      "task_id": "mt_cGliYzExMjE2NGRjMjM2NjdmMDA5ODE5Njk4ZDg3OTkzMjhhNWI0NjU1",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/broodmother-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/broodmother-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/broodmother-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 2,
+      "hero": "nyx_assassin",
+      "name": "司夜刺客",
+      "task_id": "mt_cGk5YTM4NjUyNjk5MjA5MGYwZjdhYzY3MDhiYjU0NjdjOTE2NTE0MjQw",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/nyx_assassin-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/nyx_assassin-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/nyx_assassin-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 2,
+      "hero": "disruptor",
+      "name": "干扰者",
+      "task_id": "mt_cGk2NTRkZjMzOGZmN2JjZDk3ZGM5YmEyY2EwOWZmYjI1ZTc4YTJhYzM2",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/disruptor-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/disruptor-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/disruptor-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 2,
+      "hero": "witch_doctor",
+      "name": "巫医",
+      "task_id": "mt_cGlhY2RkMjIwMzQ4ZGY3ZWY4MDRkYWU3MmM2MDBhMzhjMTgzZjBiNDYy",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/witch_doctor-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/witch_doctor-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/witch_doctor-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 2,
+      "hero": "shadow_shaman",
+      "name": "暗影萨满",
+      "task_id": "mt_cGllYWM0M2I2MzkxNjM2YzJkODA0ODc3ZDlmYTQzYmE5ZDMyNzQ4YjEx",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/shadow_shaman-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/shadow_shaman-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/shadow_shaman-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 2,
+      "hero": "rubick",
+      "name": "拉比克",
+      "task_id": "mt_cGkyMGI4MjZjMmI2YzlkMDQzNTc1NTZkNWNkM2VlNmU5NDE5ZjdiNWE0",
+      "last_observed_status": "generating",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": null,
+      "prompt": "assets/migoo/dota-original-heroes-classic/rubick-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/rubick-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/rubick-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 2,
+      "hero": "invoker",
+      "name": "祈求者",
+      "task_id": "mt_cGlhZjg3ZWFlZjIzZTA5NDczNzU4MzdkY2Y1MWI0MDdmNGM2ZjE4ODc1",
+      "last_observed_status": "generating",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": null,
+      "prompt": "assets/migoo/dota-original-heroes-classic/invoker-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/invoker-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/invoker-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 3,
+      "hero": "doom_bringer",
+      "name": "末日使者",
+      "task_id": "mt_cGk5NWRlM2ZjZGZjMDBhYzFkZWZlNGY0NmNhMDYzMDcyM2EwYWI5ZmE1",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/doom_bringer-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/doom_bringer-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/doom_bringer-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 3,
+      "hero": "nevermore",
+      "name": "影魔",
+      "task_id": "mt_cGllMWY1ZjNiMmU5YTlkNzk4MzgwOWU5ZmNlZDU2N2MyYWZjYzJmYjFk",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/nevermore-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/nevermore-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/nevermore-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 3,
+      "hero": "razor",
+      "name": "剃刀",
+      "task_id": "mt_cGk3YTljOTg1ZjdjODdhZDU5MzA5NWEwMzQ4OTQ3OGQ2YjE1NzYwODQ1",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/razor-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/razor-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/razor-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 3,
+      "hero": "leshrac",
+      "name": "拉席克",
+      "task_id": "mt_cGkzNmExNTBlNWZlMTI4ZDA1MGZiOWRkZDQ2YmFlNDI2N2Q1ZGM5ODU4",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/leshrac-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/leshrac-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/leshrac-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 3,
+      "hero": "death_prophet",
+      "name": "死亡先知",
+      "task_id": "mt_cGliZDRhZjEzYTdiOTc0YzdjMGU2MDFiODEwYWZlYWNkZTJlZTNlYjgz",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/death_prophet-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/death_prophet-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/death_prophet-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 3,
+      "hero": "vengefulspirit",
+      "name": "复仇之魂",
+      "task_id": "mt_cGlmMjc0NGYwODdiOWU3MWIzZGNmMzI3YzhlYzJmNzIyYjRjZDI3ZjU3",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/vengefulspirit-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/vengefulspirit-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/vengefulspirit-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 3,
+      "hero": "dazzle",
+      "name": "戴泽",
+      "task_id": "mt_cGljN2IwZDNjMzg5MTdhNzg1MWYzYjk3MjM5NzE1MjlhODE2YzUwYmZm",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/dazzle-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/dazzle-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/dazzle-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 3,
+      "hero": "bane",
+      "name": "祸乱之源",
+      "task_id": "mt_cGlmY2RkYjRhNDk1ZDYzYmE1NzAwMWJjNTNmODNhY2ZlNDgxNGVmODY4",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/bane-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/bane-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/bane-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 3,
+      "hero": "puck",
+      "name": "帕克",
+      "task_id": "mt_cGk2ZTRjNmY2NTBmYjM3OWIyYmVkYzg2ZjFjYzg4ZDFiNzVkMmFhZmVk",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/puck-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/puck-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/puck-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 3,
+      "hero": "queenofpain",
+      "name": "痛苦女王",
+      "task_id": "mt_cGk1NGEzYTBjZDJkZmNlYjQyNzM1MjA2YjlhMzQ1MGVmYzVmZjYyMDRi",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/queenofpain-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/queenofpain-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/queenofpain-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 3,
+      "hero": "windrunner",
+      "name": "风行者",
+      "task_id": "mt_cGkyOTQxM2NmYWM0YWJiYzMwMDQ4ZGNkODczODc3ZDAxMTY4YTZiOTll",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/windrunner-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/windrunner-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/windrunner-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 3,
+      "hero": "lina",
+      "name": "莉娜",
+      "task_id": "mt_cGllZWM0Yjc0ZjhjNzUzMWMwY2MxNWRlYWZlZGQyODU0Y2JlMmMzNmEw",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/lina-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/lina-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/lina-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 3,
+      "hero": "kunkka",
+      "name": "昆卡",
+      "task_id": "mt_cGljYTYzYmQ2NDQ1YzE0YjNmNzVhZWQwOGE5Y2QxMGIxZWM2MjExNmQy",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/kunkka-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/kunkka-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/kunkka-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 3,
+      "hero": "slardar",
+      "name": "斯拉达",
+      "task_id": "mt_cGk4ZDJkODE4OTU3ZmVjZTRmOGU5ZTc2OGE2NjRlMjA0OGIxMjljNjRh",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/slardar-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/slardar-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/slardar-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 3,
+      "hero": "tusk",
+      "name": "巨牙海民",
+      "task_id": "mt_cGkwNmJmMDFkZGFmZjQ2OTQ1MzBjNDEwN2I0MDYyZTkwMTE1YTVmMjdk",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/tusk-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/tusk-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/tusk-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 3,
+      "hero": "spirit_breaker",
+      "name": "裂魂人",
+      "task_id": "mt_cGk1NWRlZmU3YTA4YjdlZDgyOTc2NjU4ZmYxMTg5YjQyNjE2NTRiMWZi",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/spirit_breaker-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/spirit_breaker-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/spirit_breaker-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 3,
+      "hero": "alchemist",
+      "name": "炼金术士",
+      "task_id": "mt_cGllMjMxNDBjMjQwYzAwOTg3NDM2NmNkNWQzMTc0ZDEzMDdhYmMwY2Zh",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/alchemist-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/alchemist-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/alchemist-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 3,
+      "hero": "skeleton_king",
+      "name": "冥魂大帝",
+      "task_id": "mt_cGllN2ZkYmJjMzcwODI1OGExNTg5MGM2MDUxNTNhZTFlMTAwZDIxNjFl",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/skeleton_king-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/skeleton_king-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/skeleton_king-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 3,
+      "hero": "undying",
+      "name": "不朽尸王",
+      "task_id": "mt_cGljNGI2YWIwM2QzNDIwODZlMmI0YWRhOTQyMTAxYmQyZGMxNzYzNmUy",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/undying-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/undying-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/undying-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 3,
+      "hero": "life_stealer",
+      "name": "噬魂鬼",
+      "task_id": "mt_cGkzMTI4NmUxNTkxZDg2MzUwYzg3MjQ3ZTBlZjNiZDBmYTc4MTQ0ZGQ5",
+      "last_observed_status": "generating",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": null,
+      "prompt": "assets/migoo/dota-original-heroes-classic/life_stealer-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/life_stealer-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/life_stealer-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 4,
+      "hero": "ember_spirit",
+      "name": "灰烬之灵",
+      "task_id": "mt_cGk1MTBkZDlkMTE5ZWE5NTI0MTdmN2IwZWU3ZmQwZjY4MzNlZDk1YWRl",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/ember_spirit-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/ember_spirit-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/ember_spirit-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 4,
+      "hero": "earth_spirit",
+      "name": "大地之灵",
+      "task_id": "mt_cGlmZDY4MjgwNTE1MDhlNWJjMmYwZTFiMTdlYWI2OTE2YjY1MmIzOTJh",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/earth_spirit-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/earth_spirit-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/earth_spirit-v01/request.json",
+      "prior_not_started_attempts": [
+        {
+          "task_id": "mt_cGk3N2Q3NmJiNGYyNjI5YmIyOTFmNDI1N2EyMzBlN2NhZTdiMzVkM2Jj",
+          "error": {
+            "code": "task_failed",
+            "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+            "retryable": true,
+            "reason": "busy"
+          }
+        }
+      ]
+    },
+    {
+      "batch": 4,
+      "hero": "void_spirit",
+      "name": "虚无之灵",
+      "task_id": "mt_cGlhNTJkZDU5ZWY5ZTYwOTFhZDEwMWIwYWYzNGE2NmRkNmIzY2QxM2I4",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/void_spirit-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/void_spirit-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/void_spirit-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 4,
+      "hero": "wisp",
+      "name": "艾欧",
+      "task_id": "mt_cGkzMDUyOTZhOWU4YTU4ZmVlZmUyYzEzMTQxNDhkMzliYWQ3NWI5Yjdi",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/wisp-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/wisp-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/wisp-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 4,
+      "hero": "oracle",
+      "name": "神谕者",
+      "task_id": "mt_cGk1NDQzOWRlMTU3ZjEyMWMyM2QyMWM4NDFhYjAyNjYxNWRmNDJkNzFj",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/oracle-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/oracle-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/oracle-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 4,
+      "hero": "arc_warden",
+      "name": "天穹守望者",
+      "task_id": "mt_cGkyYTcxOTFkZGQzOTViMTU4YTUzN2M5YjBkMjJmZjRkY2E3NGRkMjAy",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/arc_warden-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/arc_warden-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/arc_warden-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 4,
+      "hero": "brewmaster",
+      "name": "酒仙",
+      "task_id": "mt_cGlkYWRlZGQyYjIyNjZiNGMzYWIyMWQzMTRkZTMzNDM3ZThmZDBjYmE2",
+      "last_observed_status": "generating",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": null,
+      "prompt": "assets/migoo/dota-original-heroes-classic/brewmaster-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/brewmaster-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/brewmaster-v01/request.json",
+      "prior_not_started_attempts": [
+        {
+          "task_id": "mt_cGkyNDhiNWI1ODZjODBhOGVmMDFjMGE0MzNhMjQ5MWFhZjRjMTYzYTc3",
+          "error": {
+            "code": "task_failed",
+            "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+            "retryable": true,
+            "reason": "busy"
+          }
+        },
+        {
+          "task_id": "mt_cGljYmFjYzBhMGRmNjE5Zjg5MjY5MGQ0MDAxMDMwN2E0Yjk4YzJhNzZh",
+          "error": {
+            "code": "task_failed",
+            "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+            "retryable": true,
+            "reason": "busy"
+          }
+        },
+        {
+          "task_id": "mt_cGllZjk4NTk5NDhkNTM3OGI4MDIxMTUyNDA5NmIxMTk4NTMwYTYxZjI2",
+          "error": {
+            "code": "task_failed",
+            "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+            "retryable": true,
+            "reason": "busy"
+          },
+          "reason": "Confirmed not started; retry after prior queue finished"
+        }
+      ]
+    },
+    {
+      "batch": 4,
+      "hero": "batrider",
+      "name": "蝙蝠骑士",
+      "task_id": "mt_cGkzMWJhM2EzZDBjMzUwMDZkMTFhYmQ2NzliYzI4YjQ3NTc3MmM4M2Qy",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/batrider-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/batrider-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/batrider-v01/request.json",
+      "prior_not_started_attempts": [
+        {
+          "task_id": "mt_cGljZmY1MjI5Zjc1YWY5MDEzNjBiMmE2NjVmOTkyMjk0OGY4NzM2ZWMw",
+          "error": {
+            "code": "task_failed",
+            "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+            "retryable": true,
+            "reason": "busy"
+          }
+        },
+        {
+          "task_id": "mt_cGliMGUwOWM4ZmQzOGJmZjZiNDhlNDUwODY1MWFlNmJjNjZhYjQzMzNh",
+          "error": {
+            "code": "task_failed",
+            "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+            "retryable": true,
+            "reason": "busy"
+          }
+        }
+      ]
+    },
+    {
+      "batch": 4,
+      "hero": "clinkz",
+      "name": "克林克兹",
+      "task_id": "mt_cGliOTkyOWE5MTYxMjkwMWE5ZjIxMzdjYmMyMGM2ZDIwODdlNmRhZmM1",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/clinkz-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/clinkz-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/clinkz-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 4,
+      "hero": "riki",
+      "name": "力丸",
+      "task_id": "mt_cGliYWMxNTE1YmVjODAyZWQwMmRkZjQwZjA4ODEyNzkxZTJkYWVkNmY3",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/riki-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/riki-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/riki-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 4,
+      "hero": "templar_assassin",
+      "name": "圣堂刺客",
+      "task_id": "mt_cGlhY2I4ZDgzOTA0YzE4NGFjZjQwYmNhMjY1N2U3M2VlYWRiYzg4OWIw",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/templar_assassin-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/templar_assassin-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/templar_assassin-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 4,
+      "hero": "techies",
+      "name": "工程师",
+      "task_id": "mt_cGk4NzZhZGEwN2E5Yjg0MDY1MGE4MWE4NGM1NjkzYmFjYTIyYjVlM2U5",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/techies-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/techies-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/techies-v01/request.json",
+      "prior_not_started_attempts": [
+        {
+          "task_id": "mt_cGkwM2I2OGVlMWVkYjIzODU0OWZjZDQzN2YxYjg5NmZhNWE0NjUwNmJi",
+          "error": {
+            "code": "task_failed",
+            "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+            "retryable": true,
+            "reason": "busy"
+          }
+        },
+        {
+          "task_id": "mt_cGljOGNkODhkMTdjZjg0NjkzNmI1OGMzNTQ5Njc5M2NjNDc1ZDljYzAw",
+          "error": {
+            "code": "task_failed",
+            "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+            "retryable": true,
+            "reason": "busy"
+          }
+        }
+      ]
+    },
+    {
+      "batch": 4,
+      "hero": "mirana",
+      "name": "米拉娜",
+      "task_id": "mt_cGk4NDUzNjQ2ODY2NjA0MjRiZWIxZjE2NTM5MzJlNDU4YWJkMzM3MDkz",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/mirana-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/mirana-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/mirana-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 4,
+      "hero": "lone_druid",
+      "name": "德鲁伊",
+      "task_id": "mt_cGk4MDI4MmFhZjdiYzE5NmJmNDdlMzhmYzA0OWI0ZTVjNjk2MTdjODI1",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/lone_druid-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/lone_druid-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/lone_druid-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 4,
+      "hero": "furion",
+      "name": "先知",
+      "task_id": "mt_cGkwNzE5MGU4ZWE0ZWZhNjgxMmQ2OTM2MzgxNThjOWExOGM5OGMzZjAy",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/furion-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/furion-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/furion-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 4,
+      "hero": "silencer",
+      "name": "沉默术士",
+      "task_id": "mt_cGljNGJjNzk3YTAwNDhjMzhmNGQwM2RiOGMyMWY5ZjhhZGEwNDQ0ZjZh",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/silencer-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/silencer-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/silencer-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 4,
+      "hero": "hoodwink",
+      "name": "森海飞霞",
+      "task_id": "mt_cGk3MjZkYWZiYjYxNmM1ZDU2NjQ1NWRlN2RiY2ZlMTM4NDU1NWNmZDgy",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/hoodwink-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/hoodwink-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/hoodwink-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 4,
+      "hero": "shadow_demon",
+      "name": "暗影恶魔",
+      "task_id": "mt_cGliMDY2ZDg0NzgwMGFmZGY0ZGI3M2UwYWUzNGM4NDc1Yzc5MGI1NzU3",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/shadow_demon-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/shadow_demon-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/shadow_demon-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 4,
+      "hero": "huskar",
+      "name": "哈斯卡",
+      "task_id": "mt_cGlmODk4MjI0NjlmNDE1YzA1NTA0MDgxOTZlMmIzZGYzYzcxNDU1NGQw",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/huskar-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/huskar-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/huskar-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 4,
+      "hero": "mars",
+      "name": "玛尔斯",
+      "task_id": "mt_cGk2NTA0Yzk2Y2UxOWU1OWFhNjY1OWMxY2MzMjUxNjgwYWJhYWNhOTc4",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/mars-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/mars-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/mars-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 5,
+      "hero": "warlock",
+      "name": "术士",
+      "task_id": "mt_cGlhNzg4MDI1NDYxNDgxYzQwODhjMDQwYzYyNGE2NjBlZGRjNDA5M2U4",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/warlock-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/warlock-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/warlock-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 5,
+      "hero": "gyrocopter",
+      "name": "矮人直升机",
+      "task_id": "mt_cGk2MTY0Y2ZmODlkNGEzNmJhMDdlYjE0NWI5OTI1NGIwNGM1MGFkNjFl",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/gyrocopter-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/gyrocopter-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/gyrocopter-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 5,
+      "hero": "keeper_of_the_light",
+      "name": "光之守卫",
+      "task_id": "mt_cGlmYTE4MWVjMzAwMGQ2YWJiYTNiYmM5NDZhMjJlOTkxMTAxZjVmMmVj",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/keeper_of_the_light-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/keeper_of_the_light-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/keeper_of_the_light-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 5,
+      "hero": "troll_warlord",
+      "name": "巨魔战将",
+      "task_id": "mt_cGllODZmMGY5NzM3MzE1NmIwNGFlNzY5NmQ1OWMwMWZmNWVkOGRhZmM5",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/troll_warlord-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/troll_warlord-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/troll_warlord-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 5,
+      "hero": "elder_titan",
+      "name": "上古巨神",
+      "task_id": "mt_cGk0NGNmNTdkOWFkODMzYTg4OTlhZGQxZjM3MjkzYzk5MjRiNmQ4ZDFl",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/elder_titan-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/elder_titan-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/elder_titan-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 5,
+      "hero": "abyssal_underlord",
+      "name": "孽主",
+      "task_id": "mt_cGkyNjdlM2JmZTkzOTliNzZkZGEyYjNhMzBlNDA2MjdlNGFjOTdlYjlh",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/abyssal_underlord-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/abyssal_underlord-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/abyssal_underlord-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 5,
+      "hero": "monkey_king",
+      "name": "齐天大圣",
+      "task_id": "mt_cGlmZjVkMmU0NTMzNjlhOTdjYTA5YjMzNTkyNDJjMzA3NmVlNDg5MDFm",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/monkey_king-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/monkey_king-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/monkey_king-v01/request.json",
+      "prior_not_started_attempts": [
+        {
+          "task_id": "mt_cGk3OWIyNGZhODI1OWNhY2M0ZWYwZjFhOTc4NmQxZjVlNzQzYTY4OTdk",
+          "error": {
+            "code": "task_failed",
+            "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+            "retryable": true,
+            "reason": "busy"
+          }
+        }
+      ]
+    },
+    {
+      "batch": 5,
+      "hero": "pangolier",
+      "name": "石鳞剑士",
+      "task_id": "mt_cGk3ZDRlMTM2NmVkOTYxYmZjM2U3MDgyYzdmMmFkNDFmNTg0MTYxOGY3",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/pangolier-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/pangolier-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/pangolier-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 5,
+      "hero": "dark_willow",
+      "name": "邪影芳灵",
+      "task_id": "mt_cGlkOWFmNjJkYzRjMGZhZmMzZGM0YWE5M2NhZGNhOWYyNGExNDU1NjY5",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/dark_willow-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/dark_willow-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/dark_willow-v01/request.json",
+      "prior_not_started_attempts": [
+        {
+          "task_id": "mt_cGk5MGExMDk1Y2Y4ZjdlOWNlOTVjYzQ2MGMzNTE3N2FmNzBkOGY1NmQ1",
+          "error": {
+            "code": "task_failed",
+            "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+            "retryable": true,
+            "reason": "busy"
+          }
+        }
+      ]
+    },
+    {
+      "batch": 5,
+      "hero": "grimstroke",
+      "name": "天涯墨客",
+      "task_id": "mt_cGlhOGYwMGUxNjlkMzBlZjcyMzc4NDVmZTEyMDdiNzViN2I2ZDIwNGJi",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/grimstroke-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/grimstroke-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/grimstroke-v01/request.json",
+      "prior_not_started_attempts": [
+        {
+          "task_id": "mt_cGk3OTI5MjFjYWY5NGI3OWNiYjg3YjUxMGYzYzc1N2FmNmUzNDU0NmQw",
+          "error": {
+            "code": "task_failed",
+            "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+            "retryable": true,
+            "reason": "busy"
+          }
+        }
+      ]
+    },
+    {
+      "batch": 5,
+      "hero": "snapfire",
+      "name": "电炎绝手",
+      "task_id": "mt_cGk2NmEyNTU4OWIyYjI2YzdjMGQ3YTUwNWQ0OGEwZTRiNGIyNmFkYzNh",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/snapfire-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/snapfire-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/snapfire-v01/request.json",
+      "prior_not_started_attempts": [
+        {
+          "task_id": "mt_cGk2MzdkNzc4M2QyOTdiMDAwNDRlZWUzZmY4MjVlNzc2MWU1ODI5YzEw",
+          "error": {
+            "code": "task_failed",
+            "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+            "retryable": true,
+            "reason": "busy"
+          }
+        }
+      ]
+    },
+    {
+      "batch": 5,
+      "hero": "dawnbreaker",
+      "name": "破晓辰星",
+      "task_id": "mt_cGk4NzM4NDc2NGYxYzcxMzU4OGQ1ODNjMTAyNmRlODFlMjM0ZjU2YmNk",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/dawnbreaker-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/dawnbreaker-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/dawnbreaker-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 5,
+      "hero": "marci",
+      "name": "玛西",
+      "task_id": "mt_cGllMGQ4YTE5ZWExMmRlMzMxNTVmMzJhYmJhNTgwYTNkOWRkMTQwYTk2",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/marci-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/marci-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/marci-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 5,
+      "hero": "primal_beast",
+      "name": "獸",
+      "task_id": "mt_cGk3MmY2YzlkZDg3ZWJjYWJiYzhmOTg0NzM4YjZjNjI5NjBkZWY2Y2Vk",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/primal_beast-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/primal_beast-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/primal_beast-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 5,
+      "hero": "muerta",
+      "name": "琼英碧灵",
+      "task_id": "mt_cGkyMzMwNzEyZGE2NTk3NWNkYWViYzM4MzJlMTRhNGE0ZjI0M2M4OGFm",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/muerta-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/muerta-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/muerta-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 5,
+      "hero": "ringmaster",
+      "name": "百戏大王",
+      "task_id": "mt_cGk1MjJkYzQ1NTVjYmFjYmVmZTQ4MGIxNWM1NjQ3Nzg5MzI4ZjI0Y2Nl",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/ringmaster-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/ringmaster-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/ringmaster-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 5,
+      "hero": "kez",
+      "name": "凯",
+      "task_id": "mt_cGliN2M0ODhkYjJjYjA4ZTIwMGZmNzdiZmJiYTA4MTdiMjcwYTUzMjM4",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/kez-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/kez-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/kez-v01/request.json",
+      "prior_not_started_attempts": [
+        {
+          "task_id": "mt_cGk2ZDRiMDdmYzVmZDBmMjMxYzVlYjFkZGVlODNjYWU5NzFlZDg0OTBh",
+          "error": {
+            "code": "task_failed",
+            "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+            "retryable": true,
+            "reason": "busy"
+          }
+        }
+      ]
+    },
+    {
+      "batch": 5,
+      "hero": "largo",
+      "name": "拉戈",
+      "task_id": "mt_cGkzYmMzMTliMTdiMTVhYTkzOTlkYTEyZGJmNTM4ZDFiZTljY2NmNzFh",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/largo-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/largo-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/largo-v01/request.json",
+      "prior_not_started_attempts": []
+    },
+    {
+      "batch": 5,
+      "hero": "earthshaker",
+      "name": "撼地者",
+      "task_id": "mt_cGlmM2NlOGU2ZWFmZTdjMzA0MDA1YmU0OWYyMTY2YTk2MzFlMGI3NmM5",
+      "last_observed_status": "completed",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": [
+        "GPT Image 2.6 Flare"
+      ],
+      "prompt": "assets/migoo/dota-original-heroes-classic/earthshaker-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/earthshaker-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/earthshaker-v01/request.json",
+      "prior_not_started_attempts": [
+        {
+          "task_id": "mt_cGk3M2JkYWU0OWZlMDQ0OTI1N2JkMTZkNzlkMmJjZGE5Njg0MDZmNjVk",
+          "error": {
+            "code": "task_failed",
+            "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+            "retryable": true,
+            "reason": "busy"
+          }
+        }
+      ]
+    },
+    {
+      "batch": 5,
+      "hero": "luna",
+      "name": "露娜",
+      "task_id": "mt_cGllMDYzMTExMmM0NWRkNWIyNmNkN2IyOWFiM2JjZGVjZjE2YTRjYzYz",
+      "last_observed_status": "generating",
+      "model_requested": "gpt-image-26-flare",
+      "models_returned": null,
+      "prompt": "assets/migoo/dota-original-heroes-classic/luna-v01/prompt.txt",
+      "notes": "assets/migoo/dota-original-heroes-classic/luna-v01/notes.txt",
+      "request_record": "assets/migoo/dota-original-heroes-classic/luna-v01/request.json",
+      "prior_not_started_attempts": []
+    }
+  ]
+}

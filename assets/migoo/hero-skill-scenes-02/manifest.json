@@ -1,0 +1,1090 @@
+{
+  "images": [
+    {
+      "slug": "01-zuus-thundergods-wrath",
+      "name": "宙斯·雷神之怒",
+      "image": "01-zuus-thundergods-wrath/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "57290d2bff9626d5315a4c9de8acc5df25a08dde4844d6dc1d116e447cc874f9",
+      "task_id": "mt_cGljNzg2OThmNTlmZTZiMGIyMWI1ZmU5YTAyZTQ4OGE5ZWViMTZhMDlk",
+      "media_id": "1459251293995863",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-zuus.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-pudge.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-lina.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10278.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10412.jpg"
+      ],
+      "cast": [
+        {
+          "name": "宙斯",
+          "source_image": "output/dota-hero-art-references/valve/zuus.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-zuus.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "帕吉",
+          "source_image": "output/dota-hero-art-references/valve/pudge.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-pudge.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        },
+        {
+          "name": "莉娜",
+          "source_image": "output/dota-hero-art-references/valve/lina.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-lina.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "classic_art_ids": [
+        "10278",
+        "10412"
+      ],
+      "kind": "英雄技能",
+      "hero": "宙斯",
+      "skill_name": "雷神之怒",
+      "ability_key": "zuus_thundergods_wrath",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=22"
+    },
+    {
+      "slug": "02-crystal-maiden-freezing-field",
+      "name": "水晶室女·极寒领域",
+      "image": "02-crystal-maiden-freezing-field/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "21bbd62252ad7732732d4d904e424dd600afcbc3e8782032e01519b5a013e2da",
+      "task_id": "mt_cGk5YzYxYzk3MzQ5MWQ2YWQ3Y2JlNjZkMDU1MjVkNmM3NWEyOTkzOGQx",
+      "media_id": "1459251370754876",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-crystal_maiden.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-frog-shield.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-fanged-guard.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10011.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10318.jpg"
+      ],
+      "cast": [
+        {
+          "name": "水晶室女",
+          "source_image": "output/dota-hero-art-references/valve/crystal_maiden.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-crystal_maiden.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "芦岸护篓兵",
+          "source_image": "assets/migoo/lore-unit-batch-02/03-reedbank-buckler/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-frog-shield.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        },
+        {
+          "name": "獠牙门卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/06-fanged-gate-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-fanged-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "classic_art_ids": [
+        "10011",
+        "10318"
+      ],
+      "kind": "英雄技能",
+      "hero": "水晶室女",
+      "skill_name": "极寒领域",
+      "ability_key": "crystal_maiden_freezing_field",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=5"
+    },
+    {
+      "slug": "03-lion-finger-of-death",
+      "name": "莱恩·死亡之指",
+      "image": "03-lion-finger-of-death/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "f585610a556ad8240b6a41fab72cdff51b346422486ecaefad5622374cf1d657",
+      "task_id": "mt_cGllOGZmYjU4M2RiMDgxOTk5MjE0MjFmZTEyYzg3NzI2NDBjODcwNTAw",
+      "media_id": "1459251511542584",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-lion.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-bell-guard.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10354.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10315.jpg"
+      ],
+      "cast": [
+        {
+          "name": "莱恩",
+          "source_image": "output/dota-hero-art-references/valve/lion.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-lion.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "林营铜铃守卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/04-camp-bell-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-bell-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "classic_art_ids": [
+        "10354",
+        "10315"
+      ],
+      "kind": "英雄技能",
+      "hero": "莱恩",
+      "skill_name": "死亡之指",
+      "ability_key": "lion_finger_of_death",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=26"
+    },
+    {
+      "slug": "04-shadow-shaman-mass-serpent-ward",
+      "name": "暗影萨满·群蛇守卫",
+      "image": "04-shadow-shaman-mass-serpent-ward/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "6f83b76867e16ef16ea389ae2b6f77c4dc87d4fe46f4a76d890949b680df78a0",
+      "task_id": "mt_cGllZDBkM2U1YWMyNGE1MWVmNTZiZmY0ZTY4OWQ5ODc2ODc4NDUxNTk2",
+      "media_id": "1459251610608909",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-shadow_shaman.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-axe.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/summon-shadow_shaman_mass_serpent_ward.png",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10335.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10417.jpg"
+      ],
+      "cast": [
+        {
+          "name": "暗影萨满",
+          "source_image": "output/dota-hero-art-references/valve/shadow_shaman.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-shadow_shaman.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "斧王",
+          "source_image": "output/dota-hero-art-references/valve/axe.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-axe.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "classic_art_ids": [
+        "10335",
+        "10417"
+      ],
+      "kind": "英雄技能",
+      "hero": "暗影萨满",
+      "skill_name": "群蛇守卫",
+      "ability_key": "shadow_shaman_mass_serpent_ward",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=27"
+    },
+    {
+      "slug": "05-witch-doctor-death-ward",
+      "name": "巫医·死亡守卫",
+      "image": "05-witch-doctor-death-ward/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "c5f365f27e70116f4bcdce09d6dd47eaa45dc40e698f710f11926c21c79313a3",
+      "task_id": "mt_cGk0NWUwMjgxZDk5OGIwZmMwMzdmMjM4NGVkOTliMmJhYmQwOWFkNDk4",
+      "media_id": "1459251660965090",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-witch_doctor.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-bell-guard.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/summon-witch_doctor_death_ward.png",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10319.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10353.jpg"
+      ],
+      "cast": [
+        {
+          "name": "巫医",
+          "source_image": "output/dota-hero-art-references/valve/witch_doctor.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-witch_doctor.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "林营铜铃守卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/04-camp-bell-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-bell-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "classic_art_ids": [
+        "10319",
+        "10353"
+      ],
+      "kind": "英雄技能",
+      "hero": "巫医",
+      "skill_name": "死亡守卫",
+      "ability_key": "witch_doctor_death_ward",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=30"
+    },
+    {
+      "slug": "06-dazzle-shallow-grave",
+      "name": "戴泽·薄葬",
+      "image": "06-dazzle-shallow-grave/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "25edc2c430f129ef57c82383b885035b04c5537cc89e5a9a5680a3666e684ccf",
+      "task_id": "mt_cGk2ZTM2OWU5OGM3YmNkMGY4NjBjNGM4ODMxZDViNzVmMGJhYWViNGRk",
+      "media_id": "1459251788629240",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-dazzle.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-frog-shield.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10370.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10338.jpg"
+      ],
+      "cast": [
+        {
+          "name": "戴泽",
+          "source_image": "output/dota-hero-art-references/valve/dazzle.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-dazzle.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "芦岸护篓兵",
+          "source_image": "assets/migoo/lore-unit-batch-02/03-reedbank-buckler/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-frog-shield.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "classic_art_ids": [
+        "10370",
+        "10338"
+      ],
+      "kind": "英雄技能",
+      "hero": "戴泽",
+      "skill_name": "薄葬",
+      "ability_key": "dazzle_shallow_grave",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=50"
+    },
+    {
+      "slug": "07-kunkka-ghostship",
+      "name": "昆卡·幽灵船",
+      "image": "07-kunkka-ghostship/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "b2a22fc48cdcafc44ae340572df46043b734e6c1713727e4d785d5ac0410444c",
+      "task_id": "mt_cGllODRhYzQ4ZWMyOTA0NGI0MDY0ZTcxZDUyMmNjNWRmOGM0M2Q2ZDVh",
+      "media_id": "1459251862005012",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-kunkka.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-lina.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10355.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10198.jpg"
+      ],
+      "cast": [
+        {
+          "name": "昆卡",
+          "source_image": "output/dota-hero-art-references/valve/kunkka.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-kunkka.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "莉娜",
+          "source_image": "output/dota-hero-art-references/valve/lina.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-lina.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "classic_art_ids": [
+        "10355",
+        "10198"
+      ],
+      "kind": "英雄技能",
+      "hero": "昆卡",
+      "skill_name": "幽灵船",
+      "ability_key": "kunkka_ghostship",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=23"
+    },
+    {
+      "slug": "08-tidehunter-ravage",
+      "name": "潮汐猎人·毁灭",
+      "image": "08-tidehunter-ravage/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "6c6850bda27e9a833b633caf54a8aa1853aa1cb32b5e273162a0a1f0e3e89ac3",
+      "task_id": "mt_cGk3MjMzZWVkMWM3NDAzOGQzNmY0ZDBjYTZjY2JkMmVjN2JmODJhODBl",
+      "media_id": "1459251955492099",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-tidehunter.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-fanged-guard.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-maned-beast.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10323.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10415.jpg"
+      ],
+      "cast": [
+        {
+          "name": "潮汐猎人",
+          "source_image": "output/dota-hero-art-references/valve/tidehunter.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-tidehunter.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "獠牙门卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/06-fanged-gate-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-fanged-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        },
+        {
+          "name": "暮坡嗅迹兽",
+          "source_image": "assets/migoo/comic-npc-batch-05/01-evening-trail-sniffer/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-maned-beast.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "classic_art_ids": [
+        "10323",
+        "10415"
+      ],
+      "kind": "英雄技能",
+      "hero": "潮汐猎人",
+      "skill_name": "毁灭",
+      "ability_key": "tidehunter_ravage",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=29"
+    },
+    {
+      "slug": "09-magnataur-reverse-polarity",
+      "name": "马格纳斯·两极反转",
+      "image": "09-magnataur-reverse-polarity/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "a0f4c11ead03fedaa3395f5fc44498a8c72b6a62e6632d8a98912c615141750b",
+      "task_id": "mt_cGkxNmJkYjJjNWM0YTFmMGI2NzFkNjFlNWNmMTgwNDZmMjYzYTRiYjE0",
+      "media_id": "1459252044784437",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-magnataur.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-juggernaut.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-frog-shield.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10361.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10268.jpg"
+      ],
+      "cast": [
+        {
+          "name": "马格纳斯",
+          "source_image": "output/dota-hero-art-references/valve/magnataur.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-magnataur.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "主宰",
+          "source_image": "output/dota-hero-art-references/valve/juggernaut.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-juggernaut.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        },
+        {
+          "name": "芦岸护篓兵",
+          "source_image": "assets/migoo/lore-unit-batch-02/03-reedbank-buckler/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-frog-shield.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "classic_art_ids": [
+        "10361",
+        "10268"
+      ],
+      "kind": "英雄技能",
+      "hero": "马格纳斯",
+      "skill_name": "两极反转",
+      "ability_key": "magnataur_reverse_polarity",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=97"
+    },
+    {
+      "slug": "10-enigma-black-hole",
+      "name": "谜团·黑洞",
+      "image": "10-enigma-black-hole/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "df638bff6e962765f6b6efece46183603c62a7f0bbdb3503ea794a736222f209",
+      "task_id": "mt_cGk5MDAzZTVmMTM0ZmJhOTc5MmQxYzkyMWUyYjdiOTQ2MTRlZTk2YjA5",
+      "media_id": "1459252108518655",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-enigma.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-sven.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10267.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10315.jpg"
+      ],
+      "cast": [
+        {
+          "name": "谜团",
+          "source_image": "output/dota-hero-art-references/valve/enigma.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-enigma.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "斯温",
+          "source_image": "output/dota-hero-art-references/valve/sven.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-sven.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "classic_art_ids": [
+        "10267",
+        "10315"
+      ],
+      "kind": "英雄技能",
+      "hero": "谜团",
+      "skill_name": "黑洞",
+      "ability_key": "enigma_black_hole",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=33"
+    },
+    {
+      "slug": "11-invoker-sun-strike",
+      "name": "祈求者·阳炎冲击",
+      "image": "11-invoker-sun-strike/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "9b2aa2056874cddef96e58bdfb24c798faab77ee093efb8a3aa1fb87cb7d9ca6",
+      "task_id": "mt_cGliZjczNGQwYTY5NmVmMTQ2NWQ5MWM2ZWViNjE3MjZhZmI2NzcwNjAz",
+      "media_id": "1459252322149160",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-invoker.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-bell-guard.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10353.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10424.jpg"
+      ],
+      "cast": [
+        {
+          "name": "祈求者",
+          "source_image": "output/dota-hero-art-references/valve/invoker.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-invoker.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "林营铜铃守卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/04-camp-bell-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-bell-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "classic_art_ids": [
+        "10353",
+        "10424"
+      ],
+      "kind": "英雄技能",
+      "hero": "祈求者",
+      "skill_name": "阳炎冲击",
+      "ability_key": "invoker_sun_strike",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=74"
+    },
+    {
+      "slug": "12-phoenix-supernova",
+      "name": "凤凰·超新星",
+      "image": "12-phoenix-supernova/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "7c0737aefda3e33ac7a68828e4318b8e53ea7a0c1c94e322c35691a3ed25b287",
+      "task_id": "mt_cGlmMGNlMDYwMTI0MWVjZjU0YTMyYmU4MTZhMzNjMWRmZGI4MGU4ODk1",
+      "media_id": "1459252460692755",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-phoenix.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-axe.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10334.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10315.jpg"
+      ],
+      "cast": [
+        {
+          "name": "凤凰",
+          "source_image": "output/dota-hero-art-references/valve/phoenix.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-phoenix.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "斧王",
+          "source_image": "output/dota-hero-art-references/valve/axe.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-axe.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "classic_art_ids": [
+        "10334",
+        "10315"
+      ],
+      "kind": "英雄技能",
+      "hero": "凤凰",
+      "skill_name": "超新星",
+      "ability_key": "phoenix_supernova",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=110"
+    },
+    {
+      "slug": "13-vengefulspirit-nether-swap",
+      "name": "复仇之魂·移形换位",
+      "image": "13-vengefulspirit-nether-swap/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "2280f77667afeef0d777dc50c8e0a2ef44a4539a1ddbdf68177c49540486b8fc",
+      "task_id": "mt_cGk0M2E4NDY0OGQyMjVlNGEwZGEyMzI2N2JkNjc4OWU5OWY2MzIwYzhj",
+      "media_id": "1459252767900900",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-vengefulspirit.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-pudge.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10355.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10298.jpg"
+      ],
+      "cast": [
+        {
+          "name": "复仇之魂",
+          "source_image": "output/dota-hero-art-references/valve/vengefulspirit.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-vengefulspirit.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "帕吉",
+          "source_image": "output/dota-hero-art-references/valve/pudge.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-pudge.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "classic_art_ids": [
+        "10355",
+        "10298"
+      ],
+      "kind": "英雄技能",
+      "hero": "复仇之魂",
+      "skill_name": "移形换位",
+      "ability_key": "vengefulspirit_nether_swap",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=20"
+    },
+    {
+      "slug": "14-disruptor-kinetic-field",
+      "name": "干扰者·动能力场",
+      "image": "14-disruptor-kinetic-field/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "3c7b3bd8cb1c961d6ebcbaee190c06a1a1527175316d3338590b7995baf30a21",
+      "task_id": "mt_cGliZmNlMzNjYzE2ZDUyMjI5MDE4MjBiMTBkMmVlMDllZWUzN2M4YzM5",
+      "media_id": "1459253050614588",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-disruptor.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-fanged-guard.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-maned-beast.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10412.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10347.jpg"
+      ],
+      "cast": [
+        {
+          "name": "干扰者",
+          "source_image": "output/dota-hero-art-references/valve/disruptor.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-disruptor.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "獠牙门卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/06-fanged-gate-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-fanged-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        },
+        {
+          "name": "暮坡嗅迹兽",
+          "source_image": "assets/migoo/comic-npc-batch-05/01-evening-trail-sniffer/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-maned-beast.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "classic_art_ids": [
+        "10412",
+        "10347"
+      ],
+      "kind": "英雄技能",
+      "hero": "干扰者",
+      "skill_name": "动能力场",
+      "ability_key": "disruptor_kinetic_field",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=87"
+    },
+    {
+      "slug": "15-dark-seer-vacuum",
+      "name": "黑暗贤者·真空",
+      "image": "15-dark-seer-vacuum/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "3014271b481a20a6d1bb9b4f324362a7bbe79c48756bcd4ffebfab6506cada32",
+      "task_id": "mt_cGk0OWUxNGU5NWJmYTE1ZmE5OGY1ZmI5YTVjZTk5NzFmNzU4ZDRhMDRh",
+      "media_id": "1459253335352562",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-dark_seer.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-pudge.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-maned-beast.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10267.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10339.jpg"
+      ],
+      "cast": [
+        {
+          "name": "黑暗贤者",
+          "source_image": "output/dota-hero-art-references/valve/dark_seer.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-dark_seer.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "帕吉",
+          "source_image": "output/dota-hero-art-references/valve/pudge.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-pudge.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        },
+        {
+          "name": "暮坡嗅迹兽",
+          "source_image": "assets/migoo/comic-npc-batch-05/01-evening-trail-sniffer/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-maned-beast.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "classic_art_ids": [
+        "10267",
+        "10339"
+      ],
+      "kind": "英雄技能",
+      "hero": "黑暗贤者",
+      "skill_name": "真空",
+      "ability_key": "dark_seer_vacuum",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=55"
+    },
+    {
+      "slug": "16-lich-chain-frost",
+      "name": "巫妖·连环霜冻",
+      "image": "16-lich-chain-frost/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "07358c5aa6162f6d8458eba379583b7a3d4a785f8e024357cf442525a71bd0a5",
+      "task_id": "mt_cGk1ZDkzOTNmYjc0NGIyMTZiMjhjNTgxYWMyZDEzNzgwNTE4YzIzYjVm",
+      "media_id": "1459253548467033",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-lich.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-fanged-guard.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-bell-guard.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10318.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10277.jpg"
+      ],
+      "cast": [
+        {
+          "name": "巫妖",
+          "source_image": "output/dota-hero-art-references/valve/lich.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-lich.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "獠牙门卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/06-fanged-gate-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-fanged-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        },
+        {
+          "name": "林营铜铃守卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/04-camp-bell-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-bell-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "classic_art_ids": [
+        "10318",
+        "10277"
+      ],
+      "kind": "英雄技能",
+      "hero": "巫妖",
+      "skill_name": "连环霜冻",
+      "ability_key": "lich_chain_frost",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=31"
+    },
+    {
+      "slug": "17-mirana-arrow",
+      "name": "米拉娜·月神之箭",
+      "image": "17-mirana-arrow/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "0648e15cd9a5546064d4f366430c90d6302052f1c94c5a8043f38f9102d615ee",
+      "task_id": "mt_cGliNzE0ZmQ4ZDBmZDc3OTg5YmVkMDU2ZDY0YzM5ZDIyZTNmNzhlMzhi",
+      "media_id": "1459253554865438",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-mirana.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-sand_king.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10270.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10313.jpg"
+      ],
+      "cast": [
+        {
+          "name": "米拉娜",
+          "source_image": "output/dota-hero-art-references/valve/mirana.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-mirana.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "沙王",
+          "source_image": "output/dota-hero-art-references/valve/sand_king.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-sand_king.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "classic_art_ids": [
+        "10270",
+        "10313"
+      ],
+      "kind": "英雄技能",
+      "hero": "米拉娜",
+      "skill_name": "月神之箭",
+      "ability_key": "mirana_arrow",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=9"
+    },
+    {
+      "slug": "18-sven-storm-bolt",
+      "name": "斯温·风暴之拳",
+      "image": "18-sven-storm-bolt/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "5787a635f2dba990a0ed35cf4694a1e8d8772f7d6fae35f34279bfe468d6eb92",
+      "task_id": "mt_cGk1NzVmZjZiNGRjNTgxYjA1M2Y2ZWM0YWY4NGRhMjc3YjgwZmE3MmYx",
+      "media_id": "1459253619344647",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-sven.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-axe.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10352.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10360.jpg"
+      ],
+      "cast": [
+        {
+          "name": "斯温",
+          "source_image": "output/dota-hero-art-references/valve/sven.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-sven.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "斧王",
+          "source_image": "output/dota-hero-art-references/valve/axe.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-axe.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "classic_art_ids": [
+        "10352",
+        "10360"
+      ],
+      "kind": "英雄技能",
+      "hero": "斯温",
+      "skill_name": "风暴之拳",
+      "ability_key": "sven_storm_bolt",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=18"
+    },
+    {
+      "slug": "19-tusk-walrus-punch",
+      "name": "巨牙海民·海象神拳！",
+      "image": "19-tusk-walrus-punch/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "3f8efe2af6114be84cb3d82cbaf50eabe551cd8e019dc96795f1a5e8fab10402",
+      "task_id": "mt_cGlmYjU4ZGE4YTI5Njg4ZTJkMTVlZDE3MWYwNWEyNTA4ZWYyNzRlYWRm",
+      "media_id": "1459253797872439",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-tusk.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/unit-bell-guard.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10350.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10421.jpg"
+      ],
+      "cast": [
+        {
+          "name": "巨牙海民",
+          "source_image": "output/dota-hero-art-references/valve/tusk.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-tusk.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "林营铜铃守卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/04-camp-bell-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/unit-bell-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "classic_art_ids": [
+        "10350",
+        "10421"
+      ],
+      "kind": "英雄技能",
+      "hero": "巨牙海民",
+      "skill_name": "海象神拳！",
+      "ability_key": "tusk_walrus_punch",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=100"
+    },
+    {
+      "slug": "20-puck-dream-coil",
+      "name": "帕克·梦境缠绕",
+      "image": "20-puck-dream-coil/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "cb03f7eaa297cd6b682dfce3e2f1d34a19d781fc0d2921847fe1574d4cb2b864",
+      "task_id": "mt_cGk1ZTljMzg0YzYyZGNiZjZkNDUxZWVlODlmZGRmZDMyNjM1NDg2MjIw",
+      "media_id": "1459253839185126",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-02/references/hero-puck.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-lina.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/hero-pudge.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10422.jpg",
+        "assets/migoo/hero-skill-scenes-02/references/classic-10298.jpg"
+      ],
+      "cast": [
+        {
+          "name": "帕克",
+          "source_image": "output/dota-hero-art-references/valve/puck.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-puck.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "莉娜",
+          "source_image": "output/dota-hero-art-references/valve/lina.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-lina.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        },
+        {
+          "name": "帕吉",
+          "source_image": "output/dota-hero-art-references/valve/pudge.png",
+          "reference": "assets/migoo/hero-skill-scenes-02/references/hero-pudge.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "classic_art_ids": [
+        "10422",
+        "10298"
+      ],
+      "kind": "英雄技能",
+      "hero": "帕克",
+      "skill_name": "梦境缠绕",
+      "ability_key": "puck_dream_coil",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=13"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+Migoo 额度：余额 89，免费 89，付费 0，冻结 0。
+Uploading assets/migoo/lore-unit-batch-02/references/frog-people.png (274743 bytes)
+Uploading assets/migoo/lore-unit-batch-02/references/classic-10082.png (1495786 bytes)
+Uploading assets/migoo/lore-unit-batch-02/references/classic-10322.png (985786 bytes)

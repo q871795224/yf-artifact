@@ -1,0 +1,52 @@
+{
+  "hero": "dark_willow",
+  "name": "邪影芳灵",
+  "english_name": "Dark Willow",
+  "render": "output/dota-hero-art-references/valve/dark_willow.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/dark_willow.png",
+  "sha256": "98fb7268cb1f574b1e54170dc63c9e3f7e6b600cd0a225945c1f5eaa5b85bce3",
+  "classic_hero_exists": false,
+  "reference_note": "Official transparent render",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/dark_willow.png",
+      "sha256": "98fb7268cb1f574b1e54170dc63c9e3f7e6b600cd0a225945c1f5eaa5b85bce3",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/dark_willow.png"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10036_cropped.png",
+      "sha256": "39fcad1fd65e1bde36d838daa970f343c9548038c8e01a02c14d8b2c3d7e4270",
+      "media_id": "1459227574305626"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10047_cropped.png",
+      "sha256": "3571bcb9be23ee305506acecee5c07b942e7b07424a1b57a4ac4a8ff9fc85d7e",
+      "media_id": "1459226674341118"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or review",
+  "authorization": "User requested this additional twenty; agent selected roster and disclosed 18 remaining new heroes plus 2 existing Classic heroes repainted",
+  "listed_price": 5.33,
+  "attempt": 2,
+  "cli_exit_code": 0,
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ],
+  "previous_attempts": [
+    {
+      "task_id": "mt_cGk5MGExMDk1Y2Y4ZjdlOWNlOTVjYzQ2MGMzNTE3N2FmNzBkOGY1NmQ1",
+      "error": {
+        "code": "task_failed",
+        "message": "The task failed. Too many of the user's images were generating at once, so this one did not start. Wait until their other image tasks finish, then create this request again with a new client_request_id.",
+        "retryable": true,
+        "reason": "busy"
+      }
+    }
+  ],
+  "task_id": "mt_cGlkOWFmNjJkYzRjMGZhZmMzZGM0YWE5M2NhZGNhOWYyNGExNDU1NjY5"
+}

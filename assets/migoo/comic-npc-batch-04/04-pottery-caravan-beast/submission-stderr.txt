@@ -1,0 +1,4 @@
+Migoo 额度：余额 89，免费 89，付费 0，冻结 0。
+Uploading assets/migoo/comic-npc-batch-04/references/02-pack-beast.jpg (243082 bytes)
+Uploading assets/migoo/comic-npc-batch-04/references/classic-10177.jpg (217374 bytes)
+Uploading assets/migoo/comic-npc-batch-04/references/classic-10416.jpg (259986 bytes)

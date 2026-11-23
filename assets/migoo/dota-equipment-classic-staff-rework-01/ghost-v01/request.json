@@ -1,0 +1,21 @@
+{
+  "hero": "ghost",
+  "kind": "equipment_revision",
+  "name": "幽魂权杖·直头短柄修订",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "source_task": "mt_cGkxMDMxYjg2ODk1OGRiY2RhZTEyZGVkNGNlYmM2ZjQ5MDdhNGRlOGQ4",
+  "references": [],
+  "user_revision": "Straight coaxial head and shaft; shorten handle about 20%; preserve identity/materials/palette/style",
+  "workflow": "Submit only; user reviews on Migoo",
+  "authorization": "User explicitly requested these three revisions",
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGlkNmExMjExOGI0NjIxZDkyOWM5ZmFkZjJiMGQxOTA5YTY4NmI2MzAy",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

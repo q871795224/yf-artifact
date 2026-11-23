@@ -1,6 +1,6 @@
 # 文档导航
 
-更新于 2026-11-21。线上版本为 **V0.4 成长 Demo**。源码中的扩充玩法、构筑、卡图与工作台见本轮汇总。历史文档以各自日期为准。
+更新于 2026-11-23。线上版本为 **V0.4 成长 Demo**。源码中的扩充玩法、构筑、卡图与工作台见本轮汇总。历史文档以各自日期为准。
 
 ## 当前入口
 
@@ -19,7 +19,8 @@
 | 这轮改什么、以后再改什么 | [路线图](design/roadmap.md) |
 | 为什么这样设计，哪些方案被替代，哪些还没定 | [决策记录](design/decision-log.md) |
 | 遇到的问题、处理办法、启动／发布与排查步骤 | [开发复盘与运维](development/lessons-and-operations.md) |
-| 卡牌插画的模型、参考图、批量出图和入库 | [卡牌插画工作流与试跑记录](development/card-art-workflow.md) · [候选插画索引](../assets/migoo/README.md#11-月-21-日候选插画) |
+| 按类别生图、提示词、经验教训与资源查找 | [项目卡图 skill](../.agents/skills/artifact-card-art/SKILL.md) · [分类资源库](../assets/art-library/README.md) · [参考归档](../references/card-art/README.md) |
+| 早期插画模型对照、试跑与入库沿革 | [卡牌插画工作流与试跑记录](development/card-art-workflow.md) · [原批次索引](../assets/migoo/README.md) |
 | V0.4 测过什么 | [发布验证](releases/v0.4.md) |
 | V0.3 测过什么 | [历史发布验证](releases/v0.3.md)、[V0.3 规则现状](design/current-rules.md) |
 | V0.2 测过什么、结果与局限 | [V0.2 验证归档](releases/v0.2.md) |

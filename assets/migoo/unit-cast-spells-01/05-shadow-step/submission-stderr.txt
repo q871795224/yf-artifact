@@ -1,0 +1,4 @@
+Migoo 额度：余额 50，免费 50，付费 0，冻结 0。
+Uploading assets/migoo/unit-cast-spells-01/references/unit-bridge-scout.jpg (270496 bytes)
+Uploading assets/migoo/unit-cast-spells-01/references/classic-10404.jpg (218487 bytes)
+Uploading assets/migoo/unit-cast-spells-01/references/classic-10355.jpg (299283 bytes)

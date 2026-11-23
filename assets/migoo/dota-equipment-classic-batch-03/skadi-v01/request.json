@@ -1,0 +1,44 @@
+{
+  "hero": "skadi",
+  "kind": "equipment",
+  "name": "斯嘉蒂之眼",
+  "english_name": "Eye of Skadi",
+  "icon": "output/dota-native-equipment/valve/skadi.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/skadi.png",
+  "sha256": "6d57dc0c7d13362216bade9dad71d833d32fdefae8b57e3faea8c6d282120637",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/skadi.png",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/skadi.png",
+      "sha256": "6d57dc0c7d13362216bade9dad71d833d32fdefae8b57e3faea8c6d282120637"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10248_cropped.png",
+      "media_id": "1459238619309329",
+      "sha256": "a542eb3593c412809964a97cffce6fb45483ab995788c060e39a2cf6cf9d5f76"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10232_cropped.png",
+      "media_id": "1459239926359306",
+      "sha256": "f9298ce686f7f5c05a82ad42c92b6d08d6dfe6880349aeb1664e566952961ce0"
+    }
+  ],
+  "classic_style_ids": [
+    10248,
+    10232
+  ],
+  "workflow": "Submit and report only; no generated-output download or inspection",
+  "authorization": "User requested twenty additional equipment images after accepting prior batches",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGlmNGY1NzUxZDliYzFmZjQ0MzdmODQzMGQ4Yjg0OWM5MDFhN2NkOGE3",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

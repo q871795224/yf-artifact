@@ -1,0 +1,44 @@
+{
+  "hero": "dazzle",
+  "name": "戴泽",
+  "english_name": "Dazzle",
+  "render": "output/dota-hero-art-references/valve/dazzle.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/dazzle.png",
+  "sha256": "84bb98fa028cf28bf5da394e1e47ad5f1466f6034fff2b417c783c9a7ca10bb3",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/dazzle.png",
+      "sha256": "84bb98fa028cf28bf5da394e1e47ad5f1466f6034fff2b417c783c9a7ca10bb3"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10038_cropped.png",
+      "sha256": "4b81f25a9e3b11ba3cf240847395e16e44175377ef71ff57637b72407e62804a"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10036_cropped.png",
+      "sha256": "39fcad1fd65e1bde36d838daa970f343c9548038c8e01a02c14d8b2c3d7e4270"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or visual reviews",
+  "authorization": "User explicitly requested another agent-selected twenty heroes and submission through the reusable script",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGljN2IwZDNjMzg5MTdhNzg1MWYzYjk3MjM5NzE1MjlhODE2YzUwYmZm",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

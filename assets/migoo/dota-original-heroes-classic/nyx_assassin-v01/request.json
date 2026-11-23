@@ -1,0 +1,44 @@
+{
+  "hero": "nyx_assassin",
+  "name": "司夜刺客",
+  "english_name": "Nyx Assassin",
+  "render": "output/dota-hero-art-references/valve/nyx_assassin.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/nyx_assassin.png",
+  "sha256": "b02a2c524143291cb208dc4086dd39a7b652dcc7da9dc45c97369345f0389461",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/nyx_assassin.png",
+      "sha256": "b02a2c524143291cb208dc4086dd39a7b652dcc7da9dc45c97369345f0389461"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10028_cropped.png",
+      "sha256": "b7c9bc857f51b9cb45d394b66271784a243901a6e157dcad1bfc2604f04bbc81"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10025_cropped.png",
+      "sha256": "beb16ce1fd3645da63be4f6ff6019fcb1896e626a454f3cdab0213f51071e24a"
+    }
+  ],
+  "workflow": "submit_only; no image download or generated-art review",
+  "authorization": "User explicitly delegated selecting twenty and requested submission plus reporting only",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk5YTM4NjUyNjk5MjA5MGYwZjdhYzY3MDhiYjU0NjdjOTE2NTE0MjQw",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

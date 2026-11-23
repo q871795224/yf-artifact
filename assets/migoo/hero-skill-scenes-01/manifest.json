@@ -1,0 +1,538 @@
+{
+  "images": [
+    {
+      "slug": "01-lina-dragon-slave",
+      "name": "莉娜·龙破斩",
+      "image": "01-lina-dragon-slave/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "8f8136472ab7bb09b41a1fbb4c93d0082f796132683ccb0a8a1998bf4fb6d953",
+      "task_id": "mt_cGlhN2U0MjMwZDZkMzlmNjlkMjQ5NzE3N2YzODYyOTUzZDlkZGI0YjY1",
+      "media_id": "1459245731808093",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-01/references/hero-lina.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/unit-frog-shield.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/classic-10315.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/classic-10353.jpg"
+      ],
+      "cast": [
+        {
+          "name": "莉娜",
+          "source_image": "output/dota-hero-art-references/valve/lina.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/hero-lina.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "芦岸护篓兵",
+          "source_image": "assets/migoo/lore-unit-batch-02/03-reedbank-buckler/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/unit-frog-shield.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "classic_art_ids": [
+        "10315",
+        "10353"
+      ],
+      "kind": "英雄技能",
+      "hero": "莉娜",
+      "skill_name": "龙破斩",
+      "ability_key": "lina_dragon_slave",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=25"
+    },
+    {
+      "slug": "02-earthshaker-fissure",
+      "name": "撼地者·沟壑",
+      "image": "02-earthshaker-fissure/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "10f3f54731f9a26fd29d891a72b3f81ec5ea5c31e0eb2d72e18c539d0127ac03",
+      "task_id": "mt_cGlhMTg1Y2I0YmQ1NmIzMjk3NmUzNDJhZTQ4ZmQ1YjRkM2JmOGMzM2Iw",
+      "media_id": "1459245988520772",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-01/references/hero-earthshaker.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/unit-bell-guard.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/classic-10323.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/classic-10268.jpg"
+      ],
+      "cast": [
+        {
+          "name": "撼地者",
+          "source_image": "output/dota-hero-art-references/valve/earthshaker.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/hero-earthshaker.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "林营铜铃守卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/04-camp-bell-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/unit-bell-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "classic_art_ids": [
+        "10323",
+        "10268"
+      ],
+      "kind": "英雄技能",
+      "hero": "撼地者",
+      "skill_name": "沟壑",
+      "ability_key": "earthshaker_fissure",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=7"
+    },
+    {
+      "slug": "03-pudge-meat-hook",
+      "name": "帕吉·肉钩",
+      "image": "03-pudge-meat-hook/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "b96fd1b14d162edc2aafb119d7b1f4eaad7b1c8224ad9cbcc2bafc52a43c8028",
+      "task_id": "mt_cGk3Mjk4YTExN2IyZmRlMzhhOGM2ZmE0Y2VhMThlNWE2ZjAxN2FiMWZj",
+      "media_id": "1459246498440022",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-01/references/hero-pudge.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/hero-windrunner.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/classic-10328.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/classic-10416.jpg"
+      ],
+      "cast": [
+        {
+          "name": "帕吉",
+          "source_image": "output/dota-hero-art-references/valve/pudge.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/hero-pudge.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "风行者",
+          "source_image": "output/dota-hero-art-references/valve/windrunner.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/hero-windrunner.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "classic_art_ids": [
+        "10328",
+        "10416"
+      ],
+      "kind": "英雄技能",
+      "hero": "帕吉",
+      "skill_name": "肉钩",
+      "ability_key": "pudge_meat_hook",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=14"
+    },
+    {
+      "slug": "04-juggernaut-blade-fury",
+      "name": "主宰·剑刃风暴",
+      "image": "04-juggernaut-blade-fury/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "fa2ecdf2c815b53728b273d744deef61dd5fbfc6cede9266e99fa698fda8c40b",
+      "task_id": "mt_cGk1NWJiMGJlMmQ1ODI5YzQ1MzlhNTU0MWM5ZDIwMzg5ZGIxNjBlZWZi",
+      "media_id": "1459246750171977",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-01/references/hero-juggernaut.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/hero-axe.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/classic-10344.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/classic-10341.jpg"
+      ],
+      "cast": [
+        {
+          "name": "主宰",
+          "source_image": "output/dota-hero-art-references/valve/juggernaut.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/hero-juggernaut.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "斧王",
+          "source_image": "output/dota-hero-art-references/valve/axe.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/hero-axe.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        }
+      ],
+      "classic_art_ids": [
+        "10344",
+        "10341"
+      ],
+      "kind": "英雄技能",
+      "hero": "主宰",
+      "skill_name": "剑刃风暴",
+      "ability_key": "juggernaut_blade_fury",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=8"
+    },
+    {
+      "slug": "05-rubick-telekinesis",
+      "name": "拉比克·隔空取物",
+      "image": "05-rubick-telekinesis/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "846cfa5dc1642b13f213ebc52197b6ae0a4c8b31db3a9d8ecd01cdc5e251df6b",
+      "task_id": "mt_cGk5ZDFjODk1NDFjOGQxMmE5MjUyMDIzODYxMzNhZmMzMjNmMWNmZDA5",
+      "media_id": "1459246929355576",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-01/references/hero-rubick.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/unit-fanged-guard.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/classic-10267.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/classic-10355.jpg"
+      ],
+      "cast": [
+        {
+          "name": "拉比克",
+          "source_image": "output/dota-hero-art-references/valve/rubick.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/hero-rubick.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "獠牙门卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/06-fanged-gate-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/unit-fanged-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "classic_art_ids": [
+        "10267",
+        "10355"
+      ],
+      "kind": "英雄技能",
+      "hero": "拉比克",
+      "skill_name": "隔空取物",
+      "ability_key": "rubick_telekinesis",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=86"
+    },
+    {
+      "slug": "06-windranger-shackleshot",
+      "name": "风行者·束缚击",
+      "image": "06-windranger-shackleshot/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "68415768b8ff5405f54ccad36e891cc85c5b6a0084fa67c4f65f35aa71d2564f",
+      "task_id": "mt_cGlmMTdhMjZkOTFjYTU3NmEzMWJmMDg2NjEzNDBmNTIwNjYyYzFlM2Nl",
+      "media_id": "1459246938547428",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-01/references/hero-windrunner.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/unit-bridge-scout.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/classic-10270.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/classic-10313.jpg"
+      ],
+      "cast": [
+        {
+          "name": "风行者",
+          "source_image": "output/dota-hero-art-references/valve/windrunner.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/hero-windrunner.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "窄桥探哨",
+          "source_image": "assets/migoo/comic-npc-batch-05/05-narrow-bridge-scout/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/unit-bridge-scout.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "classic_art_ids": [
+        "10270",
+        "10313"
+      ],
+      "kind": "英雄技能",
+      "hero": "风行者",
+      "skill_name": "束缚击",
+      "ability_key": "windrunner_shackleshot",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=21"
+    },
+    {
+      "slug": "07-omniknight-guardian-angel",
+      "name": "全能骑士·守护天使",
+      "image": "07-omniknight-guardian-angel/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "e5b91f6cdd19398568c1813293ddfc0385e78bdfe2e5e99708afefba9fe0409f",
+      "task_id": "mt_cGkwYzAzMTEwNmQzMTc0M2JkMzNhNzQ1MTJlZjNmZDlhYTgzNzJlNWU0",
+      "media_id": "1459247243453270",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-01/references/hero-omniknight.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/unit-frog-shield.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/unit-bell-guard.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/classic-10338.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/classic-10340.jpg"
+      ],
+      "cast": [
+        {
+          "name": "全能骑士",
+          "source_image": "output/dota-hero-art-references/valve/omniknight.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/hero-omniknight.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "芦岸护篓兵",
+          "source_image": "assets/migoo/lore-unit-batch-02/03-reedbank-buckler/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/unit-frog-shield.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        },
+        {
+          "name": "林营铜铃守卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/04-camp-bell-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/unit-bell-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "classic_art_ids": [
+        "10338",
+        "10340"
+      ],
+      "kind": "英雄技能",
+      "hero": "全能骑士",
+      "skill_name": "守护天使",
+      "ability_key": "omniknight_guardian_angel",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=57"
+    },
+    {
+      "slug": "08-axe-berserkers-call",
+      "name": "斧王·狂战士之吼",
+      "image": "08-axe-berserkers-call/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "2d144ebff643c339cd6442f6ecfad0eb87524337a2742326971f7f3503ac5a21",
+      "task_id": "mt_cGliNDdjNDBkNmY3MGY5NzMyMGVkZGEwYjhlNDJmMzQ1ODNiZjlmZmRk",
+      "media_id": "1459247299486518",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-01/references/hero-axe.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/unit-fanged-guard.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/unit-frog-shield.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/classic-10288.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/classic-10342.jpg"
+      ],
+      "cast": [
+        {
+          "name": "斧王",
+          "source_image": "output/dota-hero-art-references/valve/axe.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/hero-axe.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "獠牙门卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/06-fanged-gate-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/unit-fanged-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        },
+        {
+          "name": "芦岸护篓兵",
+          "source_image": "assets/migoo/lore-unit-batch-02/03-reedbank-buckler/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/unit-frog-shield.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "classic_art_ids": [
+        "10288",
+        "10342"
+      ],
+      "kind": "英雄技能",
+      "hero": "斧王",
+      "skill_name": "狂战士之吼",
+      "ability_key": "axe_berserkers_call",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=2"
+    },
+    {
+      "slug": "09-faceless-void-chronosphere",
+      "name": "虚空假面·时间结界",
+      "image": "09-faceless-void-chronosphere/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "592c32918faea21dd9eba96e034f8d82efe3a556aedaeaa338f8a26ad07a9c9a",
+      "task_id": "mt_cGkyZTljNmI3ZjE3YjgyNjg0Y2QyYzExMGZhODExMTk4YzNkNGRjMzBj",
+      "media_id": "1459247393572120",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-01/references/hero-faceless_void.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/hero-lina.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/unit-maned-beast.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/classic-10298.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/classic-10334.jpg"
+      ],
+      "cast": [
+        {
+          "name": "虚空假面",
+          "source_image": "output/dota-hero-art-references/valve/faceless_void.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/hero-faceless_void.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "莉娜",
+          "source_image": "output/dota-hero-art-references/valve/lina.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/hero-lina.jpg",
+          "role": "目标或配角",
+          "kind": "hero"
+        },
+        {
+          "name": "暮坡嗅迹兽",
+          "source_image": "assets/migoo/comic-npc-batch-05/01-evening-trail-sniffer/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/unit-maned-beast.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "classic_art_ids": [
+        "10298",
+        "10334"
+      ],
+      "kind": "英雄技能",
+      "hero": "虚空假面",
+      "skill_name": "时间结界",
+      "ability_key": "faceless_void_chronosphere",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=41"
+    },
+    {
+      "slug": "10-sand-king-burrowstrike",
+      "name": "沙王·掘地穿刺",
+      "image": "10-sand-king-burrowstrike/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "daf77f776e14e11ea9a8bcd5d1ee2b81f401da72c241432db609848526a147da",
+      "task_id": "mt_cGkzZDE0NjEyNGIxNWRlYmQ0NTM5NjY5YzI2YWVmOWQyODU2MmI2Mzky",
+      "media_id": "1459247510062345",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/hero-skill-scenes-01/references/hero-sand_king.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/unit-bell-guard.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/classic-10323.jpg",
+        "assets/migoo/hero-skill-scenes-01/references/classic-10421.jpg"
+      ],
+      "cast": [
+        {
+          "name": "沙王",
+          "source_image": "output/dota-hero-art-references/valve/sand_king.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/hero-sand_king.jpg",
+          "role": "施法者",
+          "kind": "hero"
+        },
+        {
+          "name": "林营铜铃守卫",
+          "source_image": "assets/migoo/comic-npc-batch-03/04-camp-bell-guard/original.png",
+          "reference": "assets/migoo/hero-skill-scenes-01/references/unit-bell-guard.jpg",
+          "role": "目标或配角",
+          "kind": "unit"
+        }
+      ],
+      "classic_art_ids": [
+        "10323",
+        "10421"
+      ],
+      "kind": "英雄技能",
+      "hero": "沙王",
+      "skill_name": "掘地穿刺",
+      "ability_key": "sandking_burrowstrike",
+      "official_source": "https://www.dota2.com/datafeed/herodata?language=schinese&hero_id=16"
+    }
+  ]
+}

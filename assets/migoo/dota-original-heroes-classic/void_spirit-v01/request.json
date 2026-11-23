@@ -1,0 +1,36 @@
+{
+  "hero": "void_spirit",
+  "name": "虚无之灵",
+  "english_name": "Void Spirit",
+  "render": "output/dota-hero-art-references/valve/void_spirit.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/void_spirit.png",
+  "sha256": "5cfa9532ae70afb303c81b6c712a88db1fe914c867cf0175ac609dc9ddcb6049",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/void_spirit.png",
+      "sha256": "5cfa9532ae70afb303c81b6c712a88db1fe914c867cf0175ac609dc9ddcb6049"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10047_cropped.png",
+      "sha256": "3571bcb9be23ee305506acecee5c07b942e7b07424a1b57a4ac4a8ff9fc85d7e"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10038_cropped.png",
+      "sha256": "4b81f25a9e3b11ba3cf240847395e16e44175377ef71ff57637b72407e62804a"
+    }
+  ],
+  "workflow": "submit_only; no generated-art downloads or review",
+  "authorization": "User explicitly requested twenty more agent-selected canonical heroes",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGlhNTJkZDU5ZWY5ZTYwOTFhZDEwMWIwYWYzNGE2NmRkNmIzY2QxM2I4",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

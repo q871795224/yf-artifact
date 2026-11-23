@@ -1,0 +1,36 @@
+{
+  "hero": "arc_warden",
+  "name": "天穹守望者",
+  "english_name": "Arc Warden",
+  "render": "output/dota-hero-art-references/valve/arc_warden.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/arc_warden.png",
+  "sha256": "ab0412c52625494b7105731b83a69c402d0500b465ce71af49212941175733fc",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/arc_warden.png",
+      "sha256": "ab0412c52625494b7105731b83a69c402d0500b465ce71af49212941175733fc"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10046_cropped.png",
+      "sha256": "2ee670ea907999f2afaf0f134f5d506140562257f25454c3047d29f994f21e7d"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10025_cropped.png",
+      "sha256": "beb16ce1fd3645da63be4f6ff6019fcb1896e626a454f3cdab0213f51071e24a"
+    }
+  ],
+  "workflow": "submit_only; no generated-art downloads or review",
+  "authorization": "User explicitly requested twenty more agent-selected canonical heroes",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGkyYTcxOTFkZGQzOTViMTU4YTUzN2M5YjBkMjJmZjRkY2E3NGRkMjAy",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

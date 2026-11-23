@@ -1,0 +1,244 @@
+{
+  "requested": 20,
+  "submitted_count": 20,
+  "failed_count": 0,
+  "workflow": "submit only; status queries release concurrency slots; no downloads",
+  "tasks": [
+    {
+      "hero": "force_staff",
+      "name": "原力法杖",
+      "task_id": "mt_cGliMTA5NTY4ZTAwNDI2ZDliNTg2YjI1ZGIxN2FmZDBmZTQyYzJlM2Uy",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "cyclone",
+      "name": "Eul的神圣法杖",
+      "task_id": "mt_cGlkOTRiOWYxMTA5YjY1MGUzMDllNDMxMTczMDIwOWVlZGQxMjhiYmFh",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "ghost",
+      "name": "幽魂权杖",
+      "task_id": "mt_cGkxMDMxYjg2ODk1OGRiY2RhZTEyZGVkNGNlYmM2ZjQ5MDdhNGRlOGQ4",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "glimmer_cape",
+      "name": "微光披风",
+      "task_id": "mt_cGk5OTViMDViMjA2OWJmZmMzMTA1Yzc2NDIzOGIwNzFlZGQwN2JmODkx",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "lotus_orb",
+      "name": "清莲宝珠",
+      "task_id": "mt_cGkwMmMwZmExODEyODc2ZmI1NmIwN2I3OWY3YmMzYzEyZjE1YWNkZjJm",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "sphere",
+      "name": "林肯法球",
+      "task_id": "mt_cGllMmNlM2EwMmRiY2IwNTIwYmIyNzM1MDFiZTZlNWI1MzcwNjFiODcw",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "rod_of_atos",
+      "name": "阿托斯之棍",
+      "task_id": "mt_cGk0NWIyMDI3MWVjNDI3YzBkZjdjNWEwODViYzlmMjQyZjI0NzlmN2Q4",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "desolator",
+      "name": "黯灭",
+      "task_id": "mt_cGlkMmU3NThiZTcxMTdjODU4NzVlYWZmYTc4OGM2Mjc1ZmRjYWUxZmJh",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "hurricane_pike",
+      "name": "飓风长戟",
+      "task_id": "mt_cGk2NDYyOGM0MDgwYTI4MWQ4ZjQzZWRiMzBhNjgyY2VjMjRjZTVlZDNm",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "nullifier",
+      "name": "否决坠饰",
+      "task_id": "mt_cGlmZTA1ZWM0MjRhYTQ2ZmNmNGM2ZjcxNDQ5Yjk3Yzg4Mzc0NWYwZmQz",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "pipe",
+      "name": "洞察烟斗",
+      "task_id": "mt_cGk0NTZhNTUwMjJiZjU0Y2NiZWY2ZGNlOTk0ODhiYjIxZmFjMDFjYmU3",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "crimson_guard",
+      "name": "赤红甲",
+      "task_id": "mt_cGlhZTEyMjQ1MGY0MjU4ZTBmZmNkNmIyMjQ5ZDk5NDAzZTJjYjNjMTlj",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "abyssal_blade",
+      "name": "深渊之刃",
+      "task_id": "mt_cGlhODJhMTEyN2IyYzljMGI4NTYzODJkYzFkYzIwMjAxNDNjYWY1MTBi",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "silver_edge",
+      "name": "白银之锋",
+      "task_id": "mt_cGk2YmU5NGU1M2QwMTlmZWE2YmQwOTM2Mjk0MGZkOGE2NjM3MTVmYmM2",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "skadi",
+      "name": "斯嘉蒂之眼",
+      "task_id": "mt_cGlmNGY1NzUxZDliYzFmZjQ0MzdmODQzMGQ4Yjg0OWM5MDFhN2NkOGE3",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "ethereal_blade",
+      "name": "虚灵之刃",
+      "task_id": "mt_cGkzNzBkNGQzNzhkMmJlYmFiNjFmYzQxODc3OTYzNTYzMmEwY2UzZjNl",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "pavise",
+      "name": "护卫盾",
+      "task_id": "mt_cGk2YTUyNzk1YjkyYjFjOTkxNzljNjFkYjg4YWJhZmI2NzhjNDEwMWU3",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "aeon_disk",
+      "name": "永恒之盘",
+      "task_id": "mt_cGliNGRmZTcyZWNhNmY2ZjUxZWE5MDk2YzQ0YTZiYjJlNzU1YjhlYzc5",
+      "status": "completed",
+      "model": "gpt-image-26-flare",
+      "actual_models": [
+        "GPT Image 2.6 Flare"
+      ],
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "manta",
+      "name": "幻影斧",
+      "task_id": "mt_cGkyMzg0ZjU0OTI0YmU2Mjg1NGU5NTY1Zjc5YmEyMGE5MzFkN2RmYTgy",
+      "status": "generating",
+      "model": "gpt-image-26-flare",
+      "actual_models": null,
+      "attempt": 1,
+      "cli_exit_code": 0
+    },
+    {
+      "hero": "boots_of_bearing",
+      "name": "宽容之靴",
+      "task_id": "mt_cGllOTUyMjY2NThmODg3MTEwNWFlYTNkNjcyNzNlY2YyN2RlZTBlMzA0",
+      "status": "generating",
+      "model": "gpt-image-26-flare",
+      "actual_models": null,
+      "attempt": 1,
+      "cli_exit_code": 0
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "hero": "keeper_of_the_light",
+  "name": "光之守卫",
+  "english_name": "Keeper of the Light",
+  "render": "output/dota-hero-art-references/valve/keeper_of_the_light.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/keeper_of_the_light.png",
+  "sha256": "4011aaca16abd169bbc4630f5bd87c3154752eeac9792e5cab3c079e5746bbcf",
+  "classic_hero_exists": false,
+  "reference_note": "Official transparent render",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/keeper_of_the_light.png",
+      "sha256": "4011aaca16abd169bbc4630f5bd87c3154752eeac9792e5cab3c079e5746bbcf",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/keeper_of_the_light.png"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10064_cropped.png",
+      "sha256": "1824b122ea11a72965a178100d872ee132903a4f84f55efff5bc9e9feee69c64",
+      "media_id": "1459226672956217"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10054_cropped.png",
+      "sha256": "418eaa7727b6bb10467d183a4b968ef662874081dfb97a5b631088d333a5458b",
+      "media_id": "1459226064594197"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or review",
+  "authorization": "User requested this additional twenty; agent selected roster and disclosed 18 remaining new heroes plus 2 existing Classic heroes repainted",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGlmYTE4MWVjMzAwMGQ2YWJiYTNiYmM5NDZhMjJlOTkxMTAxZjVmMmVj",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

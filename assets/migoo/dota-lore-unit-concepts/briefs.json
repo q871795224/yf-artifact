@@ -1,0 +1,108 @@
+{
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "style": "绘制一张竖版 9:16、满幅、无文字的原创奇幻卡牌人物插画。参考图一只用来理解世界里的族群体态、职业或装备材质。参考图二只用来观察手绘色块、光影、色彩和边缘处理。采用原创脸部、服装设计、道具、机位、动作和构图，不复刻参考图的角色面貌、制服纹样、徽记、漫画分镜或姿势。画成带有可见笔触、自然光和大色面的风格化绘画，有一点夸张的比例，远离真人写真、摄影磨皮、3D 渲染和极端 Q 版。单个主角，主体集中，背景概括，关键脸部与招牌器物在中心方形裁切里可读。无对白、卡框、编号、UI、水印和白边。",
+  "jobs": [
+    {
+      "slug": "legion-woodland-spearman",
+      "name": "林地矛兵",
+      "inspiration": "古铜军团",
+      "description": "翠绿树林里，一名普通矛兵略侧身从树荫踏进清亮的路口，斜举一柄细直长矛，矛尖落在头肩旁的浅亮林间空隙。小圆顶黄铜盔，短皮护肩，深青粗布外衣，一小片砖红下摆。林间有斑驳橄榄绿和湿石反光，横向前进的姿势像在巡逻。",
+      "references": [
+        "output/dota-lore-references/user-panels/gold-helmet-spearmen.png",
+        "output/classic-full-art/set01/full_art/10082_psd.png"
+      ]
+    },
+    {
+      "slug": "legion-shield-infantry",
+      "name": "步盾兵",
+      "inspiration": "古铜军团",
+      "description": "浅赭土灰的石拱下，结实的步兵压低重心，正把一面宽阔的平顶木盾向左推开，露出圆盔下一双警觉的眼睛。盾包着几处旧黄铜护角，盾面仅有风化磨痕；衣服是暖白和暗赤。大盾像一块清楚的竖方形，周围简化成日晒的沙墙，无大型甲胄。",
+      "references": [
+        "output/dota-lore-references/client/panorama/images/comics/tipofthespear/002_png.png",
+        "output/classic-full-art/set01/full_art/10092_psd.png"
+      ]
+    },
+    {
+      "slug": "legion-standard-runner",
+      "name": "旗队传令兵",
+      "inspiration": "古铜军团",
+      "description": "谷地风口，一个瘦长轻装斥候跃过低矮界石，单手攥着短杆三角旗，另一手护住斜跨胸前的木制信筒。窄肩轻皮甲、暗红领巾和一点黄铜搭扣。冷灰云层留出明亮缺口，旗帜在头侧被风吹开，形成和前冲身体不同的斜方向。少年感来自轻快和紧张。",
+      "references": [
+        "output/dota-lore-references/user-panels/legion-officer.png",
+        "output/classic-full-art/set01/full_art/10087_psd.png"
+      ]
+    },
+    {
+      "slug": "reed-harbor-punter",
+      "name": "水寨撑篙手",
+      "inspiration": "大屿前来",
+      "description": "清早的浅青水面上，一个大眼宽嘴、手掌宽阔的蛙形船工蹲在小木舟船头，双手把长篙斜撑在前方，把船送离栈道。肤色偏鼠尾草绿，黄灰粗布披肩用一颗大纽扣扣住。斜向竹篙是第一眼的图形，起雾的木栈道退远，船身和人物清楚。",
+      "references": [
+        "output/dota-lore-references/official/largo/004.webp",
+        "output/classic-full-art/set01/full_art/10102_psd.png"
+      ]
+    },
+    {
+      "slug": "reed-shoal-watch",
+      "name": "浅滩巡守",
+      "inspiration": "大屿前来",
+      "description": "黄昏的浅滩，一名紧凑圆滚的蛙形巡守蹲在芦苇丛与湿石之间，满怀警觉地抬头。细短的双齿叉横在胸前，腰上挂粗麻编网。橄榄绿体色、旧棕皮围腰，天空石榴紫和浅金，芦秆在大色块中间有几道简洁竖线。大眼、宽嘴和矮姿比衣装抢眼。",
+      "references": [
+        "output/dota-lore-references/user-panels/frog-villagers.png",
+        "output/classic-full-art/set01/full_art/10102_psd.png"
+      ]
+    },
+    {
+      "slug": "reed-bard-apprentice",
+      "name": "蛙族乐徒",
+      "inspiration": "大屿前来",
+      "description": "青蓝树林透着松散的日光，一名瘦小蛙形乐徒坐在晒白的石栏上，喜悦地抬手拍一面圆形小手鼓。短外衣是褪色珊瑚红，鼓带斜挂，腰边一个装备用鼓绳的小布包。用清晰的金赭鼓面与张开的宽小手形成小图轮廓，画面有跳跃节奏。",
+      "references": [
+        "output/dota-lore-references/user-panels/frog-musician.png",
+        "output/classic-full-art/set01/full_art/10087_psd.png"
+      ]
+    },
+    {
+      "slug": "carnival-kobold-mechanic",
+      "name": "机械狗头人工兵",
+      "inspiration": "暗黑狂欢",
+      "description": "在轨道旁停靠的旧货车下，一只矮小的机械狗头人工兵抬着有活动颚的尖吻得意地看向刚修好的轮轴。身躯是青铜齿轮和氧化青绿薄铜皮，背部两截短管，肩上一个方形工具袋。单手提一把大开口扳手，横跨浅亮雾蓝门缝。背景用少量锈红车轮和天光。",
+      "references": [
+        "output/dota-lore-references/client/panorama/images/events/dark_carnival/visual_novel/portraits/automaton_kobold/automaton_kobold_idle_png.png",
+        "output/classic-full-art/set01/full_art/10092_psd.png"
+      ]
+    },
+    {
+      "slug": "carnival-fish-lamplighter",
+      "name": "鱼人灯吏",
+      "inspiration": "暗黑狂欢",
+      "description": "雨后的夜间岔路，矮身宽鳍的鱼人撩开深靛色短雨衣，从石阶往前伸出一盏乳白玻璃提灯。圆眼、宽而低的头部和半透明背鳍在灯光里能一眼认出。还可用薄荷青反光勾出水洼，远景的车队只留柔软剪影。提灯是宽阔的亮块，衣和皮肤少纹理。",
+      "references": [
+        "output/dota-lore-references/client/panorama/images/events/dark_carnival/visual_novel/portraits/witch_fish/witch_fish_idle_png.png",
+        "output/classic-full-art/set01/full_art/10085_psd.png"
+      ]
+    },
+    {
+      "slug": "carnival-treant-yardhand",
+      "name": "树人车场勤杂",
+      "inspiration": "暗黑狂欢",
+      "description": "第一缕日光照到车场圆形石道，一个细长的树人勤杂用枝条手扶着宽扫帚，正在慢慢把落叶扫成一堆。头冠是三丛低饱和紫红叶子，手臂像浅灰木，让修长身段像一段灰白小树。背景是粉白地面、干黄草与稀疏车轮，扫帚和叶冠离得开。",
+      "references": [
+        "output/dota-lore-references/client/panorama/images/events/dark_carnival/visual_novel/portraits/witch_treant/witch_treant_idle_png.png",
+        "output/classic-full-art/set01/full_art/10087_psd.png"
+      ]
+    },
+    {
+      "slug": "carnival-wagon-patcher",
+      "name": "车队修补匠",
+      "inspiration": "暗黑狂欢",
+      "description": "钴蓝篷布遮住小车修理铺，一位中年修补匠蹲在临街的长凳旁，用小方锤往木车板上一下一下钉铆钉。原创短发女性角色，体型宽，袖口卷起，红赭皮围裙上有两块缝补。近景有一个敞开的浅色铆钉盒，手和小锤是两个最大的动作面，日光切进阴影。",
+      "references": [
+        "output/dota-lore-references/client/panorama/images/events/dark_carnival/visual_novel/portraits/lorenzo/lorenzo_idle_png.png",
+        "output/classic-full-art/set01/full_art/10092_psd.png"
+      ]
+    }
+  ]
+}

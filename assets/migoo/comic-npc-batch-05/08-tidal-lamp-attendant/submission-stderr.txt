@@ -1,0 +1,4 @@
+Migoo 额度：余额 60，免费 60，付费 0，冻结 0。
+Uploading assets/migoo/comic-npc-batch-05/references/fish-witch.jpg (274401 bytes)
+Uploading assets/migoo/comic-npc-batch-05/references/classic-10267.jpg (259463 bytes)
+Uploading assets/migoo/comic-npc-batch-05/references/classic-10354.jpg (270028 bytes)

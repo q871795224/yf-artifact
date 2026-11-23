@@ -1,0 +1,5 @@
+Migoo 额度：余额 4，免费 4，付费 0，冻结 0。
+Uploading assets/migoo/hero-skill-scenes-02/references/hero-sven.jpg (143153 bytes)
+Uploading assets/migoo/hero-skill-scenes-02/references/hero-axe.jpg (128611 bytes)
+Uploading assets/migoo/hero-skill-scenes-02/references/classic-10352.jpg (203658 bytes)
+Uploading assets/migoo/hero-skill-scenes-02/references/classic-10360.jpg (312975 bytes)

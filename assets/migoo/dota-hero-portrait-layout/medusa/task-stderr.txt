@@ -1,0 +1,5 @@
+Migoo 额度：余额 96，免费 96，付费 0，冻结 0。
+Uploading /Users/yifei.chen/sgw/person-project/yf-artifact/output/classic-full-art/set01/full_art/10046_psd.png (1306662 bytes)
+Uploading /Users/yifei.chen/sgw/person-project/yf-artifact/output/classic-full-art/set01/full_art/10267_psd.png (1378077 bytes)
+Task mt_cGk2ZTlkNmViOWFiMzAxNTVkZTRjMGIyZjIxZmM3YjQ5M2I3MjRmNjE0 started; if this command is interrupted, run migoo task get mt_cGk2ZTlkNmViOWFiMzAxNTVkZTRjMGIyZjIxZmM3YjQ5M2I3MjRmNjE0 --wait
+Saved /Users/yifei.chen/sgw/person-project/yf-artifact/assets/migoo/dota-hero-portrait-layout/medusa/mt_cGk2ZTlkNmViOWFiMzAxNTVkZTRjMGIyZjIxZmM3YjQ5M2I3MjRmNjE0_1.png

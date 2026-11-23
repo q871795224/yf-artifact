@@ -1,0 +1,154 @@
+{
+  "images": [
+    {
+      "slug": "01-maned-prowler",
+      "name": "鬃背巡兽",
+      "image": "01-maned-prowler/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "c6645bdbcdd312495bdebc9ed8f25d7a4eb50e80b90748221fba8c8a437dd71f",
+      "task_id": "mt_cGliNTljMWFjZmI3YWZjZjExODAwNWI5NjRlYTlmYWRkOWNjZDRhY2M5",
+      "media_id": "1459222928442600",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-03/references/01-long-maned-prowler.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10082.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10328.jpg"
+      ]
+    },
+    {
+      "slug": "02-horned-pack-beast",
+      "name": "长角驮商兽",
+      "image": "02-horned-pack-beast/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "0fe6051d4f046d67d768c9e547c50de5e1ceb8b031f3079acb6a2672df4104ea",
+      "task_id": "mt_cGk1MDZmNWNhNDRiOTI4ZWI2YzkxNTk5ODFlOTdkMjE5M2ZiZjViNTkw",
+      "media_id": "1459222980789049",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-03/references/02-pack-beast.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10087.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10416.jpg"
+      ]
+    },
+    {
+      "slug": "03-mud-armored-beast",
+      "name": "浅泥披甲兽",
+      "image": "03-mud-armored-beast/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "6a9c68bc8efb50850ad8f475b50a5d618e26336f6ca1491d80b3ae0fbb5aaae3",
+      "task_id": "mt_cGkzNDg5Njc2OTNmNmRhNDgyNGYyZGMzNTM5N2NhYjhiOTI2MjRiMGVi",
+      "media_id": "1459222982624502",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-03/references/03-armored-rhino.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10323.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10267.jpg"
+      ]
+    },
+    {
+      "slug": "04-camp-bell-guard",
+      "name": "林营铜铃守卫",
+      "image": "04-camp-bell-guard/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "f36c1afc98453f18fc3cf293e7f1e26127263df7415a882c5bb578726348c73d",
+      "task_id": "mt_cGk0ZGY0NjRlYWQ3ZTJkZTgzZmViYWIwMDYxZjQwMWUyMTZlZDIxYzA2",
+      "media_id": "1459223156548408",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-03/references/04-camp-brute.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10092.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10137.jpg"
+      ]
+    },
+    {
+      "slug": "05-long-limbed-scavenger",
+      "name": "长肢拾荒者",
+      "image": "05-long-limbed-scavenger/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "b6e9c22ebeefca2e833402bc90260c21fd7bdba4d312f0d651cbfbf0050ff8e3",
+      "task_id": "mt_cGk0YzkzZmQzZWZiZTNhNmE1NmM2YjY1YjJmOWRjNGE4MWE1ZjhiOWM3",
+      "media_id": "1459223221666593",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-03/references/05-long-limbed-camp-creature.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10129.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10328.jpg"
+      ]
+    },
+    {
+      "slug": "06-fanged-gate-guard",
+      "name": "獠牙门卫",
+      "image": "06-fanged-gate-guard/original.png",
+      "size": [
+        768,
+        1360
+      ],
+      "sha256": "ef2faaed848fc53e779de1fdd74097a0a67199023bfaca729f533e9f5150f9ff",
+      "task_id": "mt_cGk3MjU4MjRjNWUxOWE0NDM1OWI5Yzc1NDg5YzQ1NzI2M2IzZjBmNWVm",
+      "media_id": "1459224600462169",
+      "requested_model": "gpt-image-26-flare",
+      "applied": {
+        "models": [
+          "GPT Image 2.6 Flare"
+        ],
+        "resolution": "1K",
+        "aspect_ratio": "9:16"
+      },
+      "references": [
+        "assets/migoo/comic-npc-batch-03/references/06-fanged-guard.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10092.jpg",
+        "assets/migoo/comic-npc-batch-03/references/classic-10360.jpg"
+      ]
+    }
+  ]
+}

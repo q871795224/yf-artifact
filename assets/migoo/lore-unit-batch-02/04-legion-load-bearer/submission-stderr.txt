@@ -1,0 +1,5 @@
+Migoo 额度：余额 88，免费 88，付费 0，冻结 0。
+Uploading assets/migoo/lore-unit-batch-02/references/legion-soldiers.png (1567457 bytes)
+Uploading assets/migoo/lore-unit-batch-02/references/legion-equipment.png (2485074 bytes)
+Uploading assets/migoo/lore-unit-batch-02/references/classic-10087.png (1208838 bytes)
+Uploading assets/migoo/lore-unit-batch-02/references/classic-10416.png (1781277 bytes)

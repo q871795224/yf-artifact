@@ -1,0 +1,44 @@
+{
+  "hero": "alchemist",
+  "name": "炼金术士",
+  "english_name": "Alchemist",
+  "render": "output/dota-hero-art-references/valve/alchemist.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/alchemist.png",
+  "sha256": "d0bf99cebc0d707ce6f520091538d0e1671bbaa9031128f60db499c5631090a6",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/alchemist.png",
+      "sha256": "d0bf99cebc0d707ce6f520091538d0e1671bbaa9031128f60db499c5631090a6"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10025_cropped.png",
+      "sha256": "beb16ce1fd3645da63be4f6ff6019fcb1896e626a454f3cdab0213f51071e24a"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10022_cropped.png",
+      "sha256": "8f00ae99ac0a79b88f23726228d85d5dbfeaa158bd9a057df686502248ec4731"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or visual reviews",
+  "authorization": "User explicitly requested another agent-selected twenty heroes and submission through the reusable script",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGllMjMxNDBjMjQwYzAwOTg3NDM2NmNkNWQzMTc0ZDEzMDdhYmMwY2Zh",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

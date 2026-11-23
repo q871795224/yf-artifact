@@ -1,0 +1,42 @@
+{
+  "hero": "dragon_lance",
+  "kind": "equipment",
+  "name": "魔龙枪",
+  "english_name": "Dragon Lance",
+  "icon": "output/dota-native-equipment/valve/dragon_lance.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/dragon_lance.png",
+  "sha256": "97fbff35dbdefe9b62fe56c5110e814a89691c7e6e6b05fb91c1bc9b82048b47",
+  "status": "generating",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/dragon_lance.png",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/dragon_lance.png",
+      "sha256": "97fbff35dbdefe9b62fe56c5110e814a89691c7e6e6b05fb91c1bc9b82048b47"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10256_cropped.png",
+      "media_id": "1459239670531346",
+      "sha256": "c7bfd096b2881379a3ea4ec7c36dd631df9044448a7e3e4afbe97b02c5ee0e42"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10223_cropped.png",
+      "media_id": "1459240187847486",
+      "sha256": "9c39054e64fd53f1fc77873f123d8604e34c4fa8c4a5c08eb07a135405407649"
+    }
+  ],
+  "classic_style_ids": [
+    10256,
+    10223
+  ],
+  "workflow": "Submit and report only; user reviews on Migoo",
+  "authorization": "User approved first ten equipment images and requested twenty additional equipment images",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGlhNjFhYmY0NjU2ODE0MTg1YWQzNTIwNDgwNjFhOTk1MzZlZDU0ZWU2",
+  "actual_models": null
+}

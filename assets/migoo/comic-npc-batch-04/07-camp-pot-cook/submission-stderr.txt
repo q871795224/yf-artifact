@@ -1,0 +1,4 @@
+Migoo 额度：余额 83，免费 83，付费 0，冻结 0。
+Uploading assets/migoo/comic-npc-batch-04/references/04-camp-brute.jpg (95981 bytes)
+Uploading assets/migoo/comic-npc-batch-04/references/classic-10137.jpg (234142 bytes)
+Uploading assets/migoo/comic-npc-batch-04/references/classic-10307.jpg (272127 bytes)

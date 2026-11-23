@@ -1,0 +1,41 @@
+{
+  "hero": "dawnbreaker",
+  "name": "破晓辰星",
+  "english_name": "Dawnbreaker",
+  "render": "output/dota-hero-art-references/valve/dawnbreaker.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/dawnbreaker.png",
+  "sha256": "6234ef4a55ffd0ad006e57796f7d507efeb4ceafddf457074e4ae1aef94c4ea8",
+  "classic_hero_exists": false,
+  "reference_note": "Official transparent render",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/dawnbreaker.png",
+      "sha256": "6234ef4a55ffd0ad006e57796f7d507efeb4ceafddf457074e4ae1aef94c4ea8",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/dawnbreaker.png"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10054_cropped.png",
+      "sha256": "418eaa7727b6bb10467d183a4b968ef662874081dfb97a5b631088d333a5458b",
+      "media_id": "1459226064594197"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10064_cropped.png",
+      "sha256": "1824b122ea11a72965a178100d872ee132903a4f84f55efff5bc9e9feee69c64",
+      "media_id": "1459226672956217"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or review",
+  "authorization": "User requested this additional twenty; agent selected roster and disclosed 18 remaining new heroes plus 2 existing Classic heroes repainted",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk4NzM4NDc2NGYxYzcxMzU4OGQ1ODNjMTAyNmRlODFlMjM0ZjU2YmNk",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

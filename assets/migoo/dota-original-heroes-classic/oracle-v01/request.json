@@ -1,0 +1,36 @@
+{
+  "hero": "oracle",
+  "name": "神谕者",
+  "english_name": "Oracle",
+  "render": "output/dota-hero-art-references/valve/oracle.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/oracle.png",
+  "sha256": "06212fd064317bfade00666b47b6aaa7db1d974ef2632fe81ab4fe475711b44a",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/oracle.png",
+      "sha256": "06212fd064317bfade00666b47b6aaa7db1d974ef2632fe81ab4fe475711b44a"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10046_cropped.png",
+      "sha256": "2ee670ea907999f2afaf0f134f5d506140562257f25454c3047d29f994f21e7d"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10064_cropped.png",
+      "sha256": "1824b122ea11a72965a178100d872ee132903a4f84f55efff5bc9e9feee69c64"
+    }
+  ],
+  "workflow": "submit_only; no generated-art downloads or review",
+  "authorization": "User explicitly requested twenty more agent-selected canonical heroes",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk1NDQzOWRlMTU3ZjEyMWMyM2QyMWM4NDFhYjAyNjYxNWRmNDJkNzFj",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

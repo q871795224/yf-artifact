@@ -1,0 +1,44 @@
+{
+  "hero": "naga_siren",
+  "name": "娜迦海妖",
+  "english_name": "Naga Siren",
+  "render": "output/dota-hero-art-references/valve/naga_siren.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/naga_siren.png",
+  "sha256": "035ebf7faba4b21e6057cc81179c97011f207657cc2fa58c59fddfca8a760985",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/naga_siren.png",
+      "sha256": "035ebf7faba4b21e6057cc81179c97011f207657cc2fa58c59fddfca8a760985"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10032_cropped.png",
+      "sha256": "8b097f0a16dca85624a45928f24f2781ad358bffd31fefb52605e2caa2688670"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10024_cropped.png",
+      "sha256": "cd957f8c128298830840f1873be5025aab8a9cd33c87f6183bb64b9a3e434188"
+    }
+  ],
+  "workflow": "submit_only; no image download or generated-art review",
+  "authorization": "User explicitly delegated selecting twenty and requested submission plus reporting only",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGljN2UyM2QwODFjOTNjNjA1NDRlMjg5ZjM0MDY1ZTM3MmZhNjc2YmQ1",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

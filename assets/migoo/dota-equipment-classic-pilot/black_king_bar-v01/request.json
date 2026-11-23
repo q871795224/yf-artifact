@@ -1,0 +1,43 @@
+{
+  "hero": "black_king_bar",
+  "kind": "equipment",
+  "name": "黑皇杖",
+  "english_name": "Black King Bar",
+  "icon": "output/dota-native-equipment/valve/black_king_bar.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/black_king_bar.png",
+  "classic_card_id": null,
+  "sha256": "09c7e6cbdaf3c2dff83fbfa04e038e7fc96e71e875eae8fe114e0c3bfe0ee8a6",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-native-equipment/valve/black_king_bar.png",
+      "sha256": "09c7e6cbdaf3c2dff83fbfa04e038e7fc96e71e875eae8fe114e0c3bfe0ee8a6",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/black_king_bar.png"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10224_cropped.png",
+      "sha256": "6d67f5e3bdf3c47cfae2d365ca89cc7d307336e5bb1f4ce51ef48e27698c15e3"
+    },
+    {
+      "path": "output/dota-native-equipment/classic-pilot/classic-cropped/10210_cropped.png",
+      "sha256": "653d31b394383641fe1dfbff72696ce7107227666e0adf4445fc8474845e57da"
+    }
+  ],
+  "classic_style_ids": [
+    10224,
+    10210
+  ],
+  "workflow": "Submit and report only; user reviews on Migoo; no generated-art download or inspection",
+  "authorization": "User requested an initial ten Dota equipment paintings in Classic style, with agent choosing the items",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGliNmJhNjNlYWQ3OTBmZmQwMTAyMThiMDVjMzM4NWQ1ZTM0NWNjOWM2",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

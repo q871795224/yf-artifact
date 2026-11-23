@@ -1,0 +1,44 @@
+{
+  "hero": "chaos_knight",
+  "name": "混沌骑士",
+  "english_name": "Chaos Knight",
+  "render": "output/dota-hero-art-references/valve/chaos_knight.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/chaos_knight.png",
+  "sha256": "bc48d2827500ac8f4bcaed804740026880d5700a969ba43a8c3c43b9c20506e9",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/chaos_knight.png",
+      "sha256": "bc48d2827500ac8f4bcaed804740026880d5700a969ba43a8c3c43b9c20506e9"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10054_cropped.png",
+      "sha256": "418eaa7727b6bb10467d183a4b968ef662874081dfb97a5b631088d333a5458b"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10047_cropped.png",
+      "sha256": "3571bcb9be23ee305506acecee5c07b942e7b07424a1b57a4ac4a8ff9fc85d7e"
+    }
+  ],
+  "workflow": "submit_only; no image download or generated-art review",
+  "authorization": "User explicitly delegated selecting twenty and requested submission plus reporting only",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGkxMmY3ZmUzNzE5NDk1NjJmMGYyZjI1Y2EyMDUyODY3Y2IyYTkzZTU4",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

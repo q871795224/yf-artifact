@@ -1,0 +1,44 @@
+{
+  "hero": "undying",
+  "name": "不朽尸王",
+  "english_name": "Undying",
+  "render": "output/dota-hero-art-references/valve/undying.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/undying.png",
+  "sha256": "6375d8da26b71b109c8ff78de0caf20214ecbbd7e2e3099e728efc51b12879eb",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/undying.png",
+      "sha256": "6375d8da26b71b109c8ff78de0caf20214ecbbd7e2e3099e728efc51b12879eb"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10038_cropped.png",
+      "sha256": "4b81f25a9e3b11ba3cf240847395e16e44175377ef71ff57637b72407e62804a"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10028_cropped.png",
+      "sha256": "b7c9bc857f51b9cb45d394b66271784a243901a6e157dcad1bfc2604f04bbc81"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or visual reviews",
+  "authorization": "User explicitly requested another agent-selected twenty heroes and submission through the reusable script",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGljNGI2YWIwM2QzNDIwODZlMmI0YWRhOTQyMTAxYmQyZGMxNzYzNmUy",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

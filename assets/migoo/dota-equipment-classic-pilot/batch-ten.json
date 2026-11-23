@@ -1,0 +1,118 @@
+{
+  "heroes": [
+    {
+      "hero": "blink",
+      "kind": "equipment",
+      "name": "闪烁匕首",
+      "english_name": "Blink Dagger",
+      "icon": "output/dota-native-equipment/valve/blink.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/blink.png",
+      "classic_card_id": 10206,
+      "sha256": "bc6401dfb8b64e07f4e450a351751755e154f5554f0bb9d14b96a3117092b5ac"
+    },
+    {
+      "hero": "phase_boots",
+      "kind": "equipment",
+      "name": "相位鞋",
+      "english_name": "Phase Boots",
+      "icon": "output/dota-native-equipment/valve/phase_boots.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/phase_boots.png",
+      "classic_card_id": 10203,
+      "sha256": "f194592b0300a80abadcc15e0793ba6c9c85c391b9360d36b39570ca900d55d7"
+    },
+    {
+      "hero": "helm_of_the_dominator",
+      "kind": "equipment",
+      "name": "支配头盔",
+      "english_name": "Helm of the Dominator",
+      "icon": "output/dota-native-equipment/valve/helm_of_the_dominator.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/helm_of_the_dominator.png",
+      "classic_card_id": 10224,
+      "sha256": "4e9a7c4d9ce2c4eb9b996617d9d12518bf990438415d6e9587079980b4aa3334"
+    },
+    {
+      "hero": "shivas_guard",
+      "kind": "equipment",
+      "name": "希瓦的守护",
+      "english_name": "Shiva's Guard",
+      "icon": "output/dota-native-equipment/valve/shivas_guard.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/shivas_guard.png",
+      "classic_card_id": 10248,
+      "sha256": "efe5cb009d650da58a041c5f35dbe6a4bd2be035876f254c82a115b5010631a6"
+    },
+    {
+      "hero": "platemail",
+      "kind": "equipment",
+      "name": "板甲",
+      "english_name": "Platemail",
+      "icon": "output/dota-native-equipment/valve/platemail.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/platemail.png",
+      "classic_card_id": 10237,
+      "sha256": "2b2be346bde57942f70dc243e9714147150a1087579aa28728cf5fd566cdde8a"
+    },
+    {
+      "hero": "black_king_bar",
+      "kind": "equipment",
+      "name": "黑皇杖",
+      "english_name": "Black King Bar",
+      "icon": "output/dota-native-equipment/valve/black_king_bar.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/black_king_bar.png",
+      "classic_card_id": null,
+      "sha256": "09c7e6cbdaf3c2dff83fbfa04e038e7fc96e71e875eae8fe114e0c3bfe0ee8a6"
+    },
+    {
+      "hero": "rapier",
+      "kind": "equipment",
+      "name": "圣剑",
+      "english_name": "Divine Rapier",
+      "icon": "output/dota-native-equipment/valve/rapier.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/rapier.png",
+      "classic_card_id": null,
+      "sha256": "1cd79e31891f7b9ab273c915cfac56d9b86f49a5f78ebd32936ec8701f1d43dc"
+    },
+    {
+      "hero": "butterfly",
+      "kind": "equipment",
+      "name": "蝴蝶",
+      "english_name": "Butterfly",
+      "icon": "output/dota-native-equipment/valve/butterfly.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/butterfly.png",
+      "classic_card_id": null,
+      "sha256": "4d5b67589f5ffc41cb168c9af85d034cba96314272e8e0afc98e314374fc3479"
+    },
+    {
+      "hero": "heart",
+      "kind": "equipment",
+      "name": "恐鳌之心",
+      "english_name": "Heart of Tarrasque",
+      "icon": "output/dota-native-equipment/valve/heart.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/heart.png",
+      "classic_card_id": null,
+      "sha256": "1e391cf72f30b83aceba691c0ecfe095e697316cd5c0045bcef0c6c1794210f1"
+    },
+    {
+      "hero": "mjollnir",
+      "kind": "equipment",
+      "name": "雷神之锤",
+      "english_name": "Mjollnir",
+      "icon": "output/dota-native-equipment/valve/mjollnir.png",
+      "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/items/mjollnir.png",
+      "classic_card_id": null,
+      "sha256": "9436d5938984120cb1a81e7ba5b58df8926a8faf907b907f0285239f58ebdeef"
+    }
+  ],
+  "kind": "equipment",
+  "count": 10,
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "workflow": "Submit only; user reviews on Migoo; no generated-output download or inspection",
+  "pause_on": "2026-11-24",
+  "balance_before": {
+    "free": 55,
+    "paid": 0
+  },
+  "status": "ready_to_submit",
+  "listed_total": 53.3,
+  "review_gate": "Generate exactly these ten; wait for user visual review before expanding equipment batches."
+}

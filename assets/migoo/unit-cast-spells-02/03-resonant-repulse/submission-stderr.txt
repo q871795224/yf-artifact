@@ -1,0 +1,5 @@
+Migoo 额度：余额 45，免费 45，付费 0，冻结 0。
+Uploading assets/migoo/unit-cast-spells-02/references/unit-bell-guard.jpg (254011 bytes)
+Uploading assets/migoo/unit-cast-spells-02/references/unit-fanged-guard.jpg (232977 bytes)
+Uploading assets/migoo/unit-cast-spells-02/references/classic-10293.jpg (212123 bytes)
+Uploading assets/migoo/unit-cast-spells-02/references/classic-10303.jpg (278259 bytes)

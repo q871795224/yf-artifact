@@ -1,0 +1,36 @@
+{
+  "hero": "riki",
+  "name": "力丸",
+  "english_name": "Riki",
+  "render": "output/dota-hero-art-references/valve/riki.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/riki.png",
+  "sha256": "5a7111e1f7226c04c943797618da26b865a439f9356eb0240531c0a9a3a849ad",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/riki.png",
+      "sha256": "5a7111e1f7226c04c943797618da26b865a439f9356eb0240531c0a9a3a849ad"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10047_cropped.png",
+      "sha256": "3571bcb9be23ee305506acecee5c07b942e7b07424a1b57a4ac4a8ff9fc85d7e"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10023_cropped.png",
+      "sha256": "e0437540e2bf5b079a450d76bad5d6bb0fcd07a7036109410b0d79a0b697c925"
+    }
+  ],
+  "workflow": "submit_only; no generated-art downloads or review",
+  "authorization": "User explicitly requested twenty more agent-selected canonical heroes",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGliYWMxNTE1YmVjODAyZWQwMmRkZjQwZjA4ODEyNzkxZTJkYWVkNmY3",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

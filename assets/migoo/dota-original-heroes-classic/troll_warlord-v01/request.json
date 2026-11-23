@@ -1,0 +1,41 @@
+{
+  "hero": "troll_warlord",
+  "name": "巨魔战将",
+  "english_name": "Troll Warlord",
+  "render": "output/dota-hero-art-references/valve/troll_warlord.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/troll_warlord.png",
+  "sha256": "9f39745734f2e3461800cf5bc2564e050a7fae78713834a62619d559eae8850a",
+  "classic_hero_exists": false,
+  "reference_note": "Official transparent render",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/troll_warlord.png",
+      "sha256": "9f39745734f2e3461800cf5bc2564e050a7fae78713834a62619d559eae8850a",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/troll_warlord.png"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10070_cropped.png",
+      "sha256": "ecb1ed9c3485e1d54a3f0cb5aff2bf989f0e6fe46ec4c69dc35b1185fd8dd503",
+      "media_id": "1459227574215487"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10023_cropped.png",
+      "sha256": "e0437540e2bf5b079a450d76bad5d6bb0fcd07a7036109410b0d79a0b697c925",
+      "media_id": "1459226463437617"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or review",
+  "authorization": "User requested this additional twenty; agent selected roster and disclosed 18 remaining new heroes plus 2 existing Classic heroes repainted",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGllODZmMGY5NzM3MzE1NmIwNGFlNzY5NmQ1OWMwMWZmNWVkOGRhZmM5",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

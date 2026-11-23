@@ -1,0 +1,41 @@
+{
+  "hero": "largo",
+  "name": "拉戈",
+  "english_name": "Largo",
+  "render": "output/dota-hero-art-references/valve/largo.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/largo.png",
+  "sha256": "855a0d8194a04c6252b9aa0a898869d5671b863f21e050d497c5e6f2b589ff7f",
+  "classic_hero_exists": false,
+  "reference_note": "Official transparent render",
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/largo.png",
+      "sha256": "855a0d8194a04c6252b9aa0a898869d5671b863f21e050d497c5e6f2b589ff7f",
+      "url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/largo.png"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10036_cropped.png",
+      "sha256": "39fcad1fd65e1bde36d838daa970f343c9548038c8e01a02c14d8b2c3d7e4270",
+      "media_id": "1459227574305626"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10023_cropped.png",
+      "sha256": "e0437540e2bf5b079a450d76bad5d6bb0fcd07a7036109410b0d79a0b697c925",
+      "media_id": "1459226463437617"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or review",
+  "authorization": "User requested this additional twenty; agent selected roster and disclosed 18 remaining new heroes plus 2 existing Classic heroes repainted",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGkzYmMzMTliMTdiMTVhYTkzOTlkYTEyZGJmNTM4ZDFiZTljY2NmNzFh",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}

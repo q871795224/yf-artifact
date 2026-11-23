@@ -1,0 +1,44 @@
+{
+  "hero": "slardar",
+  "name": "斯拉达",
+  "english_name": "Slardar",
+  "render": "output/dota-hero-art-references/valve/slardar.png",
+  "source_url": "https://cdn.akamai.steamstatic.com/apps/dota2/videos/dota_react/heroes/renders/slardar.png",
+  "sha256": "b52a66dd12418d7d6031f3fe746422cdeef7ed4b0211c368551883bc740a43a0",
+  "dimensions": [
+    1440,
+    1440
+  ],
+  "alpha": [
+    0,
+    255
+  ],
+  "status": "completed",
+  "model": "gpt-image-26-flare",
+  "resolution": "1K",
+  "ratio": "9:16",
+  "count": 1,
+  "references": [
+    {
+      "path": "output/dota-hero-art-references/valve/slardar.png",
+      "sha256": "b52a66dd12418d7d6031f3fe746422cdeef7ed4b0211c368551883bc740a43a0"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10024_cropped.png",
+      "sha256": "cd957f8c128298830840f1873be5025aab8a9cd33c87f6183bb64b9a3e434188"
+    },
+    {
+      "path": "output/dota-hero-art-references/review/classic-cropped/10028_cropped.png",
+      "sha256": "b7c9bc857f51b9cb45d394b66271784a243901a6e157dcad1bfc2604f04bbc81"
+    }
+  ],
+  "workflow": "submit_only; no output downloads or visual reviews",
+  "authorization": "User explicitly requested another agent-selected twenty heroes and submission through the reusable script",
+  "listed_price": 5.33,
+  "attempt": 1,
+  "cli_exit_code": 0,
+  "task_id": "mt_cGk4ZDJkODE4OTU3ZmVjZTRmOGU5ZTc2OGE2NjRlMjA0OGIxMjljNjRh",
+  "actual_models": [
+    "GPT Image 2.6 Flare"
+  ]
+}
